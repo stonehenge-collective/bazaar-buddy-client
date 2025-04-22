@@ -8,9 +8,21 @@ import win32gui
 import win32process
 from PIL import ImageGrab
 
+import sys
+from pathlib import Path
+
+def bundle_dir() -> Path:
+    """
+    Return the folder that holds the running script or the frozen .exe.
+    """
+    if getattr(sys, 'frozen', False):          # PyInstaller sets this
+        return Path(sys.executable).resolve().parent
+    return Path(__file__).resolve().parent      # normal (un‑frozen) run
+
+
+OUT_FILE = bundle_dir() / "screenshot.png"
 
 TARGET_PROCESS = "TheBazaar.exe"
-OUT_FILE = Path(__file__).with_suffix(".png")  # screenshot next to the exe
 POLL_INTERVAL = 0.5  # seconds between foreground checks
 TIMEOUT = None  # seconds; set to an int/float to avoid waiting forever
 
@@ -35,7 +47,6 @@ def wait_until_foreground(hwnd: int, poll: float = POLL_INTERVAL, timeout: float
     """
     start = time.time()
     while True:
-        print(win32gui.GetForegroundWindow())
         if win32gui.GetForegroundWindow() == hwnd:
             return True
         if timeout is not None and (time.time() - start) > timeout:
@@ -71,6 +82,7 @@ def main() -> None:
 
     # 4. Capture the screenshot once the window is foreground
     capture_window(hwnd, OUT_FILE)
+    time.sleep(30)
 
 
 if __name__ == "__main__":
