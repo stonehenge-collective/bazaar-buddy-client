@@ -18,18 +18,14 @@ def find_main_hwnd(pid: int) -> int | None:
     """Return the first top‑level window handle belonging to *pid*."""
 
     def callback(hwnd, hwnds):
-        # Skip invisible/minimized windows
-        if win32gui.IsWindowVisible(hwnd) and win32gui.IsWindowEnabled(hwnd):
-            _, win_pid = win32process.GetWindowThreadProcessId(hwnd)
-            if win_pid == pid:
-                hwnds.append(hwnd)
-                return False  # Stop enumeration
+        _, win_pid = win32process.GetWindowThreadProcessId(hwnd)
+        if win_pid == pid:
+            hwnds.append(hwnd)
         return True
 
     hwnds: list[int] = []
     win32gui.EnumWindows(callback, hwnds)
     return hwnds[0] if hwnds else None
-
 
 def wait_until_foreground(hwnd: int, poll: float = POLL_INTERVAL, timeout: float | None = TIMEOUT) -> bool:
     """Poll until *hwnd* is the active (foreground) window.
@@ -64,18 +60,17 @@ def main() -> None:
         sys.exit(f"{TARGET_PROCESS} is not running.")
 
     # 2. Grab the window handle
-    _, win_pid = win32process.GetWindowThreadProcessId(target.pid)
-    # hwnd = find_main_hwnd(target.pid)
-    # if not hwnd:
-    #     sys.exit("Could not find a visible window for the process.")
+    hwnd = find_main_hwnd(target.pid)
+    if not hwnd:
+        sys.exit("Could not find a visible window for the process.")
 
     # 3. Wait for the user to bring the window forward
     print("Waiting for The Bazaar window to become the foreground window … (Ctrl+C to abort)")
-    if not wait_until_foreground(win_pid):
+    if not wait_until_foreground(hwnd):
         sys.exit("Timed out waiting for window to become foreground.")
 
     # 4. Capture the screenshot once the window is foreground
-    capture_window(win_pid, OUT_FILE)
+    capture_window(hwnd, OUT_FILE)
 
 
 if __name__ == "__main__":
