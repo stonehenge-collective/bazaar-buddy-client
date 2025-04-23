@@ -51,14 +51,15 @@ def main() -> None:
     if not poll_function(lambda: check_if_handle_is_foreground(window_handle)):
         sys.exit("Timed out waiting for window to become foreground.")
 
-    print("Taking screenshot...")
-    screenshot = capture_window(window_handle)
-    print("Screenshot taken!")
-    output_location = bundle_dir() / "screenshot.png"
-    print(f"Saving screenshot to {output_location.resolve()}")
-    screenshot.save(output_location)
-    print(f"Screenshot saved to {output_location.resolve()}")
-    time.sleep(30)
+    while True:
+        print("Taking screenshot...")
+        screenshot = capture_window(window_handle)
+        print("Screenshot taken!")
+        output_location = bundle_dir() / "screenshot.png"
+        print(f"Saving screenshot to {output_location.resolve()}")
+        screenshot.save(output_location)
+        print(f"Screenshot saved to {output_location.resolve()}")
+        time.sleep(.5)
 
 if __name__ == "__main__":
     try:

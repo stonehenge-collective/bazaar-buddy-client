@@ -4,8 +4,8 @@
 a = Analysis(
     ['main.py'],
     pathex=[],
-    binaries=[],
-    datas=[],
+    binaries=[('tools\\\\tesseract\\\\tesseract.exe', 'tesseract')],
+    datas=[('tools\\\\tesseract\\\\tessdata', 'tesseract\\\\tessdata')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
