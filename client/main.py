@@ -10,6 +10,7 @@ import psutil
 import sys
 from pathlib import Path
 from typing import Callable, Optional, TypeVar
+from text_extractor import extract_text
 
 T = TypeVar("T")
 
@@ -37,29 +38,43 @@ def poll_function(function: Callable[[], T], poll_frequency: int = .5, timeout: 
             return None
         time.sleep(poll_frequency)
 
-def main() -> None:
-    print("Getting Bazaar process...")
-    bazaar_process = poll_function(lambda: get_process_by_name("TheBazaar.exe"))
-    print(f"Got Bazaar process, {bazaar_process}, getting main window...")
+def take_screenshot(process_name: str):
+    print(f"Getting {process_name} process...")
+    bazaar_process = poll_function(lambda: get_process_by_name(process_name))
+    print(f"Got {process_name} process, {bazaar_process}, getting main window...")
 
     window_handle = find_process_main_window_handle(bazaar_process.pid)
     if not window_handle:
-        sys.exit("Could not find a visible window for the process.")
-    print(f"Got Bazaar window")
+        print("Could not find a visible window for the process.")
+        return None
+    print(f"Got {process_name} window")
 
-    print("Waiting for The Bazaar window to become the foreground window")
-    if not poll_function(lambda: check_if_handle_is_foreground(window_handle)):
-        sys.exit("Timed out waiting for window to become foreground.")
+    print(f"Waiting for {process_name} window to become the foreground window")
+    if not check_if_handle_is_foreground(window_handle):
+        print("Window not in foreground")
+        return None
 
-    while True:
-        print("Taking screenshot...")
-        screenshot = capture_window(window_handle)
-        print("Screenshot taken!")
-        output_location = bundle_dir() / "screenshot.png"
-        print(f"Saving screenshot to {output_location.resolve()}")
-        screenshot.save(output_location)
-        print(f"Screenshot saved to {output_location.resolve()}")
-        time.sleep(.5)
+    print("Taking screenshot...")
+    return capture_window(window_handle)
+
+
+def main() -> None:
+    try:
+        attempt = 0
+        while True:
+            screenshot = take_screenshot("TheBazaar.exe")
+            if screenshot:
+                output_location = bundle_dir() / f"screenshot_{attempt}.png"
+                print(f"Saving screenshot to {output_location.resolve()}")
+                screenshot.save(output_location)
+                print(f"Screenshot saved to {output_location.resolve()}")
+                print(extract_text(screenshot))
+            else:
+                print("Could not take screenshot")
+            attempt += 1
+            time.sleep(1)
+    except Exception as e:
+        
 
 if __name__ == "__main__":
     try:

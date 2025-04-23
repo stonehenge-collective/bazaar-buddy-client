@@ -21,7 +21,6 @@ def find_process_main_window_handle(process_id: int) -> Optional[int]:
     def enum_callback(hwnd, _):
         nonlocal result                      # allow assignment to the outer var
 
-        # Skip invisible/disabled top‑level windows.
         if not win32gui.IsWindowVisible(hwnd) or not win32gui.IsWindowEnabled(hwnd):
             return True                      # keep enumerating
 
