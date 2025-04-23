@@ -1,1 +1,3 @@
-pyinstaller --onefile --noconsole screen_capture.py
+pyinstaller --onefile main.py
+
+optional --no-console to hide console

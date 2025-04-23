@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['screen_capture.py'],
+    ['main.py'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -22,7 +22,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='screen_capture',
+    name='main',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
