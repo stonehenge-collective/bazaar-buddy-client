@@ -57,3 +57,2115 @@ Version: 1.0.3748
 2025-04-23 07:55:27,769 INFO     Window not in foreground
 2025-04-23 07:55:27,769 INFO     Could not take screenshot
 2025-04-23 07:55:28,361 INFO     Aborted by user.
+2025-04-25 07:44:58,806 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:31,257 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:31,259 INFO     Could not find a visible window for the process.
+2025-04-25 07:45:31,259 INFO     Could not take screenshot
+2025-04-25 07:45:32,260 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:32,263 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:32,265 INFO     Could not find a visible window for the process.
+2025-04-25 07:45:32,265 INFO     Could not take screenshot
+2025-04-25 07:45:33,266 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:33,270 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:33,270 INFO     Could not find a visible window for the process.
+2025-04-25 07:45:33,270 INFO     Could not take screenshot
+2025-04-25 07:45:34,272 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:34,277 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:34,277 INFO     Could not find a visible window for the process.
+2025-04-25 07:45:34,279 INFO     Could not take screenshot
+2025-04-25 07:45:35,279 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:35,281 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:35,283 INFO     Could not find a visible window for the process.
+2025-04-25 07:45:35,283 INFO     Could not take screenshot
+2025-04-25 07:45:36,284 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:36,288 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:36,290 INFO     Could not find a visible window for the process.
+2025-04-25 07:45:36,290 INFO     Could not take screenshot
+2025-04-25 07:45:37,291 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:37,296 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:37,296 INFO     Could not find a visible window for the process.
+2025-04-25 07:45:37,297 INFO     Could not take screenshot
+2025-04-25 07:45:38,298 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:38,302 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:38,303 INFO     Could not find a visible window for the process.
+2025-04-25 07:45:38,303 INFO     Could not take screenshot
+2025-04-25 07:45:39,304 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:39,308 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:39,308 INFO     Could not find a visible window for the process.
+2025-04-25 07:45:39,310 INFO     Could not take screenshot
+2025-04-25 07:45:40,311 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:40,325 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:40,327 INFO     Got TheBazaar.exe window.
+2025-04-25 07:45:40,327 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:45:40,328 INFO     Taking screenshot...
+2025-04-25 07:45:40,355 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_9.png
+2025-04-25 07:45:40,555 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_9.png
+2025-04-25 07:45:42,487 INFO     J File Edit Selection view
+| peo
+\ BAUGAR
+
+p > github
+
+> bazaar-entities
+%® > bazaar-schemas
+¥ dient
+> _pycache_
+2 > build
+¥ data
+1) eventsjson
+> dist
+> tools
+= applog
+build.tet
+® mainpy
+= mainspec
+requirements.txt
+screenshot 4.png
+® text extractorpy
+® window manager.py
+> core-infrastructure
+> parameter-store
+> post-data
+© scrapers
+> ste
+\ thebazaar.wiki
+® event scraper.py
+{} events,json
+{} events2,json
+-python-version
+© pyprojecttoml
+@ README.md
+uvlock
+gitignore
+screenshot. png
+
+3
+a)
+
+6]
+
+® b
+
+Ge CHS
+
+> TIMELINE
+B maint @ @oA0
+
+Go
+
+Run
+
+Terminal
+
+Help
+
+©
+
+® mainpy MX
+
+{) eventsjson ..\data
+
+client > @ main.py > @ main
+
+©1 def take_screenshot(process_name: str’
+
+Prancy winuow now
+
+return None
+
+eoomd - a@ x
+
+e> P baugar By
+UO eventsjson ® mainpy Working Tree) M —® text extractorpy «event scraperpy ——_(}-events2json gitignore (0 events json DY %3 OD)
+ab a Noresuts Db Y= i
+ae > murlwood fa ab, No result L=x
+- ao x
+
+2025-04-25 07:45:38,302 INFO
+
+2025-04-25 07:
+2025-04-25 07:
+
+1,388 INFO
+1,318 INFO
+
+THE BAZAAR AWAITS
+
+Welcome To Me
+The Bazaar
+
+AD MORE
+
+a x
+
+powershell
+powershell
+powershell
+Powershell
+python
+
+Got TheBazaar.exe process, psutil.Process(pid-2612, name="TheBazaar.exe", status="running", started="@7:45:31"), getting main window...
+Could not find a visible window for the process.
+Could not take screenshot
+
+Getting TheBazaar.exe process.
+Got TheBazaar.exe process, psutil.Process(pid-2612, name="TheBazaar.exe’, status="running", started="@7:45:31"), getting main window...
+
+Could not find a visible window for the process.
+Could not take screenshot
+
+Ln 128,Col 14 Spaces:4_UTF-8 CRLF _{} Python @ 3.12464-bit O
+
+@ John McGue (2 days ago)
+2025-04-25 07:45:43,491 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:43,498 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:43,498 INFO     Got TheBazaar.exe window.
+2025-04-25 07:45:43,499 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:45:43,499 INFO     Taking screenshot...
+2025-04-25 07:45:43,534 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_10.png
+2025-04-25 07:45:43,639 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_10.png
+2025-04-25 07:45:44,616 INFO     %J File Edit Selection View Go Run Terminal Help <> P baugar By eanud - a x
+
+® mainpy Working Tree) M —® text extractorpy «event scraperpy ——_(}-events2json gitignore events sone DY % OD
+
+| (ror -  @ mainpyM X —( eventsjson ..\dataU_—_( eventsjson
+\ BAUGAR
+
+client > @ main.py > © main
+> murkwood Aa ab * Noresuits TD LY = X oe
+
+p > github 91 def take_screenshot(process_name: str}
+PrANL( wandow NOL An ToOregroul
+
+> bazaar-entities
+return None
+
+te > bazaar-schemas :
+© client - ag x
+
+> _pycache_
+2 > build
+
+¥ data
+1) eventsjson
+> dist
+> tools
+= applog
+build.tet
+® mainpy
+= mainspec
+requirements.txt
+screenshot 4.png
+SS screenshot 9.png
+® text extractorpy
+® window manager.py
+> core-infrastructure
+> parameter-store
+> post-data
+Y scrapers
+> ste
+\ thebazaar.wiki
+® event scraper.py
+{} events,json
+{} events2,json
+= .python-version
+© pyprojecttoml
+@ README.md
+ uvlock
+gitignore
+| screenshot.png (A)
+
+>
+
+3
+a)
+
+THE BAZAAR AWAITS
+
+Welcome To Me
+The Bazaar
+
+AD MORE
+
+6]
+
+® b
+
+a x
+
+powershell
+powershell
+powershell
+Powershell
+python
+
+©
+
+Could not find a visible window for the process.
+Could not take screenshot
+
+@ Ln 128,Col 14 Spaces:4 UTF-8 CRLF _{} Python @ 3.12464-bit 0
+
+> ourune @ John McGue (2 days ago)
+$b 2025-04-25 07:45:43,491 INFO Getting TheBazaar.exe process...
+
+> TIMELINE |
+% mains 0 @oA0 9 John McGue (2 days ago)
+
+Ln 128,Col 14 Spaces:4_UTF-8 CRLF _{} Python @ 3.12464-bit O
+2025-04-25 07:45:45,619 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:45,623 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:45,625 INFO     Got TheBazaar.exe window.
+2025-04-25 07:45:45,625 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:45:45,626 INFO     Taking screenshot...
+2025-04-25 07:45:45,653 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_11.png
+2025-04-25 07:45:45,759 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_11.png
+2025-04-25 07:45:46,749 INFO     %J File Edit Selection View Go Run Terminal Help <> P baugar By eanud - a x
+
+e EXPLORER
+\ BAUGAR
+
+p > github
+> bazaar-entities
+%® > bazaar-schemas
+¥ dient
+
+® mainpy Working Tree) M —® text extractorpy «event scraperpy ——_(}-events2json gitignore events sone DY % OD
+
+® mainpyM X — ( eventsjson ..\dsta U0 eventsjson
+
+client > @ main.py > @ main
+©1 def take_screenshot(process_name: str’ =a MD) Noresuts Vax | Bee
+Pranc( window noL 4n Toregrout coe Bates No results v Hs
+
+return None
+
+> _pycache_
+2 > build
+
+¥ data
+1) eventsjson
+> dist
+> tools
+= applog
+build.tet
+® mainpy
+= mainspec
+requirements.txt
+screenshot 4.png
+SS screenshot 9.png
+ screenshot_10.png
+® text extractorpy
+® window manager.py
+> core-infrastructure
+> parameter-store
+
+>
+
+3
+a)
+
+THE BAZAAR AWAITS
+
+Welcome To Me
+The Bazaar
+
+AD MORE
+
+6]
+
+® b
+
+> post-data
+Y scrapers
+> ste
+\ thebazaar.wiki ats
+© event_scraper.py powershell
+{} eventsjson powershell
+{3 events2,json powershell
+-python-version Vie we ey _ powershell
+© pyprojecttoml o python
+@ README.md
+uvlock
+-gitignore ®
+screenshot. png
+> ourune @ John McGue (2 days ago)
+‘$b 2025-04-25 07:45:43,491 INFO Getting TheBazaar.exe process...
+@ > TIMELINE |
+% mains @ @oR@ 9 John McGue (2 days ago)
+$63 > CTI Ln 128,Col 14 Spaces:4 UTF-8 CRLF _{} Python @ 3.12464-bit 0
+> TIMELINE 0
+4 John McGue (2 days ago) _Ln 128,Col14 Spaces: UTF-8 CRLF _{} Python @ 3.12464-bit O
+
+B maint @ @oA0
+2025-04-25 07:45:47,752 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:47,758 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:47,758 INFO     Got TheBazaar.exe window.
+2025-04-25 07:45:47,758 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:45:47,759 INFO     Taking screenshot...
+2025-04-25 07:45:47,788 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_12.png
+2025-04-25 07:45:47,888 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_12.png
+2025-04-25 07:45:48,919 INFO     J File Edit Selection view
+| peo
+\ BAUGAR
+
+p > github
+
+> bazaar-entities
+%® > bazaar-schemas
+¥ dient
+> _pycache_
+2 > build
+¥ data
+1) eventsjson
+> dist
+> tools
+= applog
+build.tet
+® mainpy
+= mainspec
+requirements.txt
+screenshot 4.png
+SS screenshot 9.png
+ screenshot_10.png
+ screenshot_11.png
+® text extractorpy
+® window manager.py
+> core-infrastructure
+> parameter-store
+> post-data
+© scrapers
+> ste
+\ thebazaar.wiki
+® event scraper.py
+{} events,json
+{} events2,json
+-python-version
+© pyprojecttoml
+@ README.md
+ uvlock
+gitignore
+screenshot. png
+
+3
+a)
+
+6]
+
+® b
+
+@
+gp > oon
+
+> TIMELINE
+B maint @ @oA0
+
+Go
+
+Run
+
+Terminal
+
+Help
+
+>
+
+©
+
+® mainpy MX
+
+<>
+
+{) eventsjson ..\data U
+
+client > @ main.py > @ main
+
+©1 def take_screenshot(process_name: str’
+rant, wingow noU
+
+return None
+
+@ > TIMELINE |
+% mains @ @oR@ 9 John McGue (2 days ago)
+
+$63 > CTT Ln 128,Col 14 Spaces:4 UTF-8 CRLF _{} Python @ 3.12464-bit @
+
+> TIMELINE @
+
+(0 eventsjson
+
+Toregroui
+
+P baugar
+
+® mainpy (Working Tree) M
+
+® text extractorpy
+
+By
+
+® event scraperpy ——_(P-events2json
+
+> murkwood
+
+THE BAZAAR AWAITS
+
+Welcome To
+The Bazaar
+
+AD MORE
+
+.gitignore
+
+Aa ab, No results
+
+4 John McGue (2 days ago) _Ln 128,Col14 Spaces: UTF-8 CRLF _{} Python @ 3.12464-bit 0
+
+Aroenoe=
+
+@ John McGue (2 days ago)
+
+Ln 128, Col 14 Spaces:4UTF-8 CRLF
+
+eoomd - a@ x
+
+{} eventsjsonaw Dy %
+
+a x
+
+powershell
+powershell
+powershell
+Powershell
+python
+
+(0 Python B 3.12464bit O
+2025-04-25 07:45:49,920 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:49,926 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:49,927 INFO     Got TheBazaar.exe window.
+2025-04-25 07:45:49,927 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:45:49,927 INFO     Taking screenshot...
+2025-04-25 07:45:49,949 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_13.png
+2025-04-25 07:45:49,970 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_13.png
+2025-04-25 07:45:50,182 INFO     Press Alt+Z to use GeForce
+SJ experience in-game
+
+overlay
+2025-04-25 07:45:51,183 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:51,190 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:51,191 INFO     Got TheBazaar.exe window.
+2025-04-25 07:45:51,191 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:45:51,191 INFO     Taking screenshot...
+2025-04-25 07:45:51,216 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_14.png
+2025-04-25 07:45:51,342 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_14.png
+2025-04-25 07:45:51,553 INFO     Press Alt+Z to use GeForce
+SJ experience in-game
+
+overlay
+2025-04-25 07:45:52,554 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:52,561 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:52,561 INFO     Got TheBazaar.exe window.
+2025-04-25 07:45:52,561 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:45:52,563 INFO     Taking screenshot...
+2025-04-25 07:45:52,601 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_15.png
+2025-04-25 07:45:52,727 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_15.png
+2025-04-25 07:45:52,938 INFO     Press Alt+Z to use GeForce
+SJ experience in-game
+
+overlay
+2025-04-25 07:45:53,939 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:53,946 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:53,947 INFO     Got TheBazaar.exe window.
+2025-04-25 07:45:53,947 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:45:53,947 INFO     Taking screenshot...
+2025-04-25 07:45:53,987 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_16.png
+2025-04-25 07:45:54,007 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_16.png
+2025-04-25 07:45:54,220 INFO     Press Alt+Z to use GeForce
+SJ experience in-game
+
+overlay
+2025-04-25 07:45:55,220 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:55,228 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:55,228 INFO     Got TheBazaar.exe window.
+2025-04-25 07:45:55,228 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:45:55,229 INFO     Taking screenshot...
+2025-04-25 07:45:55,251 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_17.png
+2025-04-25 07:45:55,271 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_17.png
+2025-04-25 07:45:55,484 INFO     Press Alt+Z to use GeForce
+SJ experience in-game
+
+overlay
+2025-04-25 07:45:56,485 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:56,495 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:56,496 INFO     Got TheBazaar.exe window.
+2025-04-25 07:45:56,496 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:45:56,496 INFO     Taking screenshot...
+2025-04-25 07:45:56,525 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_18.png
+2025-04-25 07:45:56,546 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_18.png
+2025-04-25 07:45:57,753 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:57,758 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:57,759 INFO     Got TheBazaar.exe window.
+2025-04-25 07:45:57,759 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:45:57,759 INFO     Taking screenshot...
+2025-04-25 07:45:57,782 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_19.png
+2025-04-25 07:45:57,800 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_19.png
+2025-04-25 07:45:58,969 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:45:58,975 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:45:58,976 INFO     Got TheBazaar.exe window.
+2025-04-25 07:45:58,976 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:45:58,976 INFO     Taking screenshot...
+2025-04-25 07:45:59,003 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_20.png
+2025-04-25 07:45:59,021 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_20.png
+2025-04-25 07:46:00,195 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:00,202 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:00,202 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:00,203 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:00,203 INFO     Taking screenshot...
+2025-04-25 07:46:00,235 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_21.png
+2025-04-25 07:46:00,510 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_21.png
+2025-04-25 07:46:00,964 INFO     FREE PLAY
+
+ey,
+
+Version: 1.0.3748
+2025-04-25 07:46:01,966 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:01,973 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:01,973 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:01,974 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:01,974 INFO     Window not in foreground
+2025-04-25 07:46:01,974 INFO     Could not take screenshot
+2025-04-25 07:46:02,976 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:02,983 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:02,984 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:02,984 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:02,984 INFO     Window not in foreground
+2025-04-25 07:46:02,984 INFO     Could not take screenshot
+2025-04-25 07:46:03,985 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:03,991 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:03,992 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:03,992 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:03,992 INFO     Window not in foreground
+2025-04-25 07:46:03,992 INFO     Could not take screenshot
+2025-04-25 07:46:04,994 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:05,000 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:05,001 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:05,002 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:05,002 INFO     Window not in foreground
+2025-04-25 07:46:05,002 INFO     Could not take screenshot
+2025-04-25 07:46:06,003 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:06,011 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:06,011 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:06,012 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:06,012 INFO     Window not in foreground
+2025-04-25 07:46:06,012 INFO     Could not take screenshot
+2025-04-25 07:46:07,013 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:07,021 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:07,022 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:07,022 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:07,022 INFO     Window not in foreground
+2025-04-25 07:46:07,022 INFO     Could not take screenshot
+2025-04-25 07:46:08,023 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:08,029 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:08,029 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:08,030 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:08,030 INFO     Window not in foreground
+2025-04-25 07:46:08,030 INFO     Could not take screenshot
+2025-04-25 07:46:09,032 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:09,039 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:09,039 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:09,040 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:09,040 INFO     Window not in foreground
+2025-04-25 07:46:09,040 INFO     Could not take screenshot
+2025-04-25 07:46:10,040 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:10,045 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:10,046 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:10,046 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:10,047 INFO     Window not in foreground
+2025-04-25 07:46:10,047 INFO     Could not take screenshot
+2025-04-25 07:46:11,048 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:11,055 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:11,055 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:11,056 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:11,056 INFO     Window not in foreground
+2025-04-25 07:46:11,056 INFO     Could not take screenshot
+2025-04-25 07:46:12,058 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:12,088 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:12,089 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:12,089 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:12,089 INFO     Window not in foreground
+2025-04-25 07:46:12,089 INFO     Could not take screenshot
+2025-04-25 07:46:13,091 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:13,097 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:13,098 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:13,099 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:13,099 INFO     Window not in foreground
+2025-04-25 07:46:13,099 INFO     Could not take screenshot
+2025-04-25 07:46:14,100 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:14,106 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:14,107 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:14,107 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:14,107 INFO     Window not in foreground
+2025-04-25 07:46:14,108 INFO     Could not take screenshot
+2025-04-25 07:46:15,109 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:15,115 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:15,115 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:15,115 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:15,116 INFO     Window not in foreground
+2025-04-25 07:46:15,116 INFO     Could not take screenshot
+2025-04-25 07:46:16,117 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:16,125 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:16,126 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:16,126 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:16,126 INFO     Window not in foreground
+2025-04-25 07:46:16,126 INFO     Could not take screenshot
+2025-04-25 07:46:17,128 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:17,133 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:17,134 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:17,134 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:17,134 INFO     Window not in foreground
+2025-04-25 07:46:17,135 INFO     Could not take screenshot
+2025-04-25 07:46:18,136 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:18,143 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:18,143 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:18,144 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:18,144 INFO     Window not in foreground
+2025-04-25 07:46:18,144 INFO     Could not take screenshot
+2025-04-25 07:46:19,145 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:19,151 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:19,153 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:19,153 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:19,153 INFO     Window not in foreground
+2025-04-25 07:46:19,153 INFO     Could not take screenshot
+2025-04-25 07:46:20,154 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:20,159 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:20,160 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:20,160 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:20,160 INFO     Window not in foreground
+2025-04-25 07:46:20,161 INFO     Could not take screenshot
+2025-04-25 07:46:21,161 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:21,167 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:21,168 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:21,168 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:21,168 INFO     Window not in foreground
+2025-04-25 07:46:21,168 INFO     Could not take screenshot
+2025-04-25 07:46:22,170 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:22,176 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:22,177 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:22,177 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:22,177 INFO     Window not in foreground
+2025-04-25 07:46:22,178 INFO     Could not take screenshot
+2025-04-25 07:46:23,179 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:23,186 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:23,187 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:23,187 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:23,187 INFO     Window not in foreground
+2025-04-25 07:46:23,187 INFO     Could not take screenshot
+2025-04-25 07:46:24,188 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:24,195 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:24,196 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:24,196 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:24,196 INFO     Window not in foreground
+2025-04-25 07:46:24,196 INFO     Could not take screenshot
+2025-04-25 07:46:25,197 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:25,204 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:25,204 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:25,204 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:25,205 INFO     Window not in foreground
+2025-04-25 07:46:25,205 INFO     Could not take screenshot
+2025-04-25 07:46:26,206 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:26,212 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:26,212 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:26,213 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:26,213 INFO     Window not in foreground
+2025-04-25 07:46:26,213 INFO     Could not take screenshot
+2025-04-25 07:46:27,214 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:27,220 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:27,220 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:27,220 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:27,221 INFO     Window not in foreground
+2025-04-25 07:46:27,221 INFO     Could not take screenshot
+2025-04-25 07:46:28,222 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:28,229 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:28,230 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:28,230 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:28,230 INFO     Window not in foreground
+2025-04-25 07:46:28,230 INFO     Could not take screenshot
+2025-04-25 07:46:29,231 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:29,237 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:29,238 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:29,238 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:29,238 INFO     Window not in foreground
+2025-04-25 07:46:29,239 INFO     Could not take screenshot
+2025-04-25 07:46:30,240 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:30,246 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:30,246 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:30,247 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:30,247 INFO     Window not in foreground
+2025-04-25 07:46:30,247 INFO     Could not take screenshot
+2025-04-25 07:46:31,248 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:31,254 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:31,255 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:31,255 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:31,255 INFO     Window not in foreground
+2025-04-25 07:46:31,256 INFO     Could not take screenshot
+2025-04-25 07:46:32,256 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:32,261 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:32,261 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:32,263 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:32,263 INFO     Window not in foreground
+2025-04-25 07:46:32,263 INFO     Could not take screenshot
+2025-04-25 07:46:33,264 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:33,271 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:33,271 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:33,271 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:33,271 INFO     Window not in foreground
+2025-04-25 07:46:33,271 INFO     Could not take screenshot
+2025-04-25 07:46:34,273 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:34,279 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:34,280 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:34,280 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:34,280 INFO     Window not in foreground
+2025-04-25 07:46:34,280 INFO     Could not take screenshot
+2025-04-25 07:46:35,282 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:35,288 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:35,288 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:35,288 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:35,289 INFO     Window not in foreground
+2025-04-25 07:46:35,289 INFO     Could not take screenshot
+2025-04-25 07:46:36,290 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:36,297 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:36,297 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:36,298 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:36,298 INFO     Window not in foreground
+2025-04-25 07:46:36,298 INFO     Could not take screenshot
+2025-04-25 07:46:37,299 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:37,307 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:37,308 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:37,308 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:37,308 INFO     Window not in foreground
+2025-04-25 07:46:37,308 INFO     Could not take screenshot
+2025-04-25 07:46:38,309 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:38,315 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:38,316 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:38,316 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:38,316 INFO     Window not in foreground
+2025-04-25 07:46:38,316 INFO     Could not take screenshot
+2025-04-25 07:46:39,317 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:39,324 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:39,325 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:39,325 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:39,326 INFO     Window not in foreground
+2025-04-25 07:46:39,326 INFO     Could not take screenshot
+2025-04-25 07:46:40,327 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:40,333 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:40,334 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:40,334 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:40,334 INFO     Window not in foreground
+2025-04-25 07:46:40,335 INFO     Could not take screenshot
+2025-04-25 07:46:41,335 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:41,341 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:41,341 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:41,341 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:41,341 INFO     Window not in foreground
+2025-04-25 07:46:41,343 INFO     Could not take screenshot
+2025-04-25 07:46:42,343 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:42,349 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:42,350 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:42,350 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:42,351 INFO     Window not in foreground
+2025-04-25 07:46:42,351 INFO     Could not take screenshot
+2025-04-25 07:46:43,352 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:43,357 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:43,357 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:43,358 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:43,358 INFO     Window not in foreground
+2025-04-25 07:46:43,358 INFO     Could not take screenshot
+2025-04-25 07:46:44,359 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:44,365 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:44,366 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:44,366 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:44,366 INFO     Window not in foreground
+2025-04-25 07:46:44,366 INFO     Could not take screenshot
+2025-04-25 07:46:45,367 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:45,374 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:45,374 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:45,374 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:45,375 INFO     Window not in foreground
+2025-04-25 07:46:45,375 INFO     Could not take screenshot
+2025-04-25 07:46:46,376 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:46,381 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:46,382 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:46,382 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:46,383 INFO     Window not in foreground
+2025-04-25 07:46:46,383 INFO     Could not take screenshot
+2025-04-25 07:46:47,384 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:47,390 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:47,390 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:47,391 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:47,391 INFO     Window not in foreground
+2025-04-25 07:46:47,391 INFO     Could not take screenshot
+2025-04-25 07:46:48,391 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:48,397 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:48,398 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:48,398 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:48,398 INFO     Window not in foreground
+2025-04-25 07:46:48,398 INFO     Could not take screenshot
+2025-04-25 07:46:49,400 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:49,405 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:49,406 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:49,406 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:49,406 INFO     Window not in foreground
+2025-04-25 07:46:49,406 INFO     Could not take screenshot
+2025-04-25 07:46:50,407 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:50,412 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:50,413 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:50,413 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:50,414 INFO     Window not in foreground
+2025-04-25 07:46:50,414 INFO     Could not take screenshot
+2025-04-25 07:46:51,415 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:51,420 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:51,421 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:51,421 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:51,421 INFO     Window not in foreground
+2025-04-25 07:46:51,422 INFO     Could not take screenshot
+2025-04-25 07:46:52,423 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:52,429 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:52,430 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:52,430 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:52,430 INFO     Window not in foreground
+2025-04-25 07:46:52,430 INFO     Could not take screenshot
+2025-04-25 07:46:53,432 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:53,437 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:53,437 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:53,437 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:53,438 INFO     Window not in foreground
+2025-04-25 07:46:53,438 INFO     Could not take screenshot
+2025-04-25 07:46:54,439 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:54,444 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:54,445 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:54,445 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:54,445 INFO     Window not in foreground
+2025-04-25 07:46:54,445 INFO     Could not take screenshot
+2025-04-25 07:46:55,446 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:55,451 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:55,452 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:55,452 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:55,452 INFO     Window not in foreground
+2025-04-25 07:46:55,452 INFO     Could not take screenshot
+2025-04-25 07:46:56,454 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:56,459 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:56,460 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:56,460 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:56,460 INFO     Window not in foreground
+2025-04-25 07:46:56,461 INFO     Could not take screenshot
+2025-04-25 07:46:57,461 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:57,467 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:57,468 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:57,468 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:57,468 INFO     Window not in foreground
+2025-04-25 07:46:57,468 INFO     Could not take screenshot
+2025-04-25 07:46:58,470 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:58,477 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:58,477 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:58,478 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:58,478 INFO     Window not in foreground
+2025-04-25 07:46:58,478 INFO     Could not take screenshot
+2025-04-25 07:46:59,479 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:46:59,485 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:46:59,486 INFO     Got TheBazaar.exe window.
+2025-04-25 07:46:59,486 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:46:59,486 INFO     Window not in foreground
+2025-04-25 07:46:59,486 INFO     Could not take screenshot
+2025-04-25 07:47:00,488 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:00,493 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:00,494 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:00,494 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:00,494 INFO     Window not in foreground
+2025-04-25 07:47:00,494 INFO     Could not take screenshot
+2025-04-25 07:47:01,495 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:01,501 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:01,502 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:01,502 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:01,503 INFO     Window not in foreground
+2025-04-25 07:47:01,503 INFO     Could not take screenshot
+2025-04-25 07:47:02,503 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:02,514 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:02,515 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:02,515 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:02,515 INFO     Window not in foreground
+2025-04-25 07:47:02,516 INFO     Could not take screenshot
+2025-04-25 07:47:03,517 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:03,522 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:03,523 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:03,523 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:03,523 INFO     Window not in foreground
+2025-04-25 07:47:03,524 INFO     Could not take screenshot
+2025-04-25 07:47:04,525 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:04,530 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:04,531 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:04,531 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:04,531 INFO     Window not in foreground
+2025-04-25 07:47:04,531 INFO     Could not take screenshot
+2025-04-25 07:47:05,532 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:05,537 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:05,538 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:05,538 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:05,538 INFO     Window not in foreground
+2025-04-25 07:47:05,539 INFO     Could not take screenshot
+2025-04-25 07:47:06,540 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:06,606 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:06,607 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:06,607 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:06,607 INFO     Window not in foreground
+2025-04-25 07:47:06,608 INFO     Could not take screenshot
+2025-04-25 07:47:07,609 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:07,614 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:07,615 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:07,615 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:07,615 INFO     Window not in foreground
+2025-04-25 07:47:07,615 INFO     Could not take screenshot
+2025-04-25 07:47:08,617 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:08,622 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:08,623 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:08,623 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:08,623 INFO     Window not in foreground
+2025-04-25 07:47:08,624 INFO     Could not take screenshot
+2025-04-25 07:47:09,624 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:09,632 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:09,632 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:09,632 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:09,632 INFO     Window not in foreground
+2025-04-25 07:47:09,633 INFO     Could not take screenshot
+2025-04-25 07:47:10,634 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:10,639 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:10,640 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:10,640 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:10,640 INFO     Taking screenshot...
+2025-04-25 07:47:10,665 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_90.png
+2025-04-25 07:47:10,835 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_90.png
+2025-04-25 07:47:11,329 INFO     S»
+bs Oman
+
+_ Sew we
+
+2
+
+{
+,
+{
+i
+}
+{
+,
+€
+;
+
+FREE PLAY
+
+ey,
+
+()
+@y
+
+Version: 1.0.3748
+2025-04-25 07:47:12,330 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:12,336 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:12,337 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:12,337 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:12,337 INFO     Taking screenshot...
+2025-04-25 07:47:12,368 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_91.png
+2025-04-25 07:47:12,643 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_91.png
+2025-04-25 07:47:13,106 INFO     I
+
+= = 4 APPRENTICE MERCHANT
+6 johnor
+40 ))
+
+~~
+
+< ©
+
+Version: 1.0.3748
+2025-04-25 07:47:14,106 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:14,113 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:14,114 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:14,114 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:14,114 INFO     Taking screenshot...
+2025-04-25 07:47:14,151 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_92.png
+2025-04-25 07:47:14,425 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_92.png
+2025-04-25 07:47:14,859 INFO     == APPRENTICE MERCHANT
+
+¥
+
+<
+
+Version: 1.0.3748
+
+.
+2025-04-25 07:47:15,860 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:15,865 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:15,866 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:15,866 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:15,867 INFO     Window not in foreground
+2025-04-25 07:47:15,867 INFO     Could not take screenshot
+2025-04-25 07:47:16,868 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:16,875 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:16,876 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:16,876 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:16,876 INFO     Window not in foreground
+2025-04-25 07:47:16,876 INFO     Could not take screenshot
+2025-04-25 07:47:17,877 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:17,883 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:17,883 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:17,884 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:17,884 INFO     Window not in foreground
+2025-04-25 07:47:17,884 INFO     Could not take screenshot
+2025-04-25 07:47:18,885 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:18,892 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:18,892 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:18,892 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:18,892 INFO     Window not in foreground
+2025-04-25 07:47:18,892 INFO     Could not take screenshot
+2025-04-25 07:47:19,894 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:19,900 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:19,900 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:19,900 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:19,902 INFO     Window not in foreground
+2025-04-25 07:47:19,902 INFO     Could not take screenshot
+2025-04-25 07:47:20,903 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:20,909 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:20,910 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:20,910 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:20,910 INFO     Window not in foreground
+2025-04-25 07:47:20,910 INFO     Could not take screenshot
+2025-04-25 07:47:21,912 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:21,919 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:21,919 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:21,920 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:21,920 INFO     Window not in foreground
+2025-04-25 07:47:21,920 INFO     Could not take screenshot
+2025-04-25 07:47:22,920 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:22,951 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:22,951 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:22,951 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:22,952 INFO     Window not in foreground
+2025-04-25 07:47:22,952 INFO     Could not take screenshot
+2025-04-25 07:47:23,953 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:23,958 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:23,959 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:23,959 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:23,959 INFO     Window not in foreground
+2025-04-25 07:47:23,959 INFO     Could not take screenshot
+2025-04-25 07:47:24,961 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:24,967 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:24,968 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:24,968 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:24,968 INFO     Window not in foreground
+2025-04-25 07:47:24,968 INFO     Could not take screenshot
+2025-04-25 07:47:25,969 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:25,974 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:25,974 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:25,975 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:25,975 INFO     Window not in foreground
+2025-04-25 07:47:25,975 INFO     Could not take screenshot
+2025-04-25 07:47:26,976 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:27,049 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:27,050 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:27,050 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:27,050 INFO     Window not in foreground
+2025-04-25 07:47:27,050 INFO     Could not take screenshot
+2025-04-25 07:47:28,051 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:28,056 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:28,057 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:28,057 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:28,057 INFO     Window not in foreground
+2025-04-25 07:47:28,058 INFO     Could not take screenshot
+2025-04-25 07:47:29,058 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:29,063 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:29,064 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:29,064 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:29,064 INFO     Window not in foreground
+2025-04-25 07:47:29,064 INFO     Could not take screenshot
+2025-04-25 07:47:30,066 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:30,070 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:30,072 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:30,072 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:30,072 INFO     Window not in foreground
+2025-04-25 07:47:30,072 INFO     Could not take screenshot
+2025-04-25 07:47:31,073 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:31,134 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:31,135 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:31,135 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:31,135 INFO     Window not in foreground
+2025-04-25 07:47:31,135 INFO     Could not take screenshot
+2025-04-25 07:47:32,136 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:32,141 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:32,142 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:32,143 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:32,143 INFO     Window not in foreground
+2025-04-25 07:47:32,143 INFO     Could not take screenshot
+2025-04-25 07:47:33,144 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:33,149 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:33,149 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:33,150 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:33,150 INFO     Window not in foreground
+2025-04-25 07:47:33,150 INFO     Could not take screenshot
+2025-04-25 07:47:34,151 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:34,156 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:34,156 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:34,156 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:34,156 INFO     Window not in foreground
+2025-04-25 07:47:34,157 INFO     Could not take screenshot
+2025-04-25 07:47:35,158 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:35,232 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:35,232 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:35,232 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:35,232 INFO     Window not in foreground
+2025-04-25 07:47:35,232 INFO     Could not take screenshot
+2025-04-25 07:47:36,234 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:36,237 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:36,238 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:36,238 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:36,238 INFO     Window not in foreground
+2025-04-25 07:47:36,239 INFO     Could not take screenshot
+2025-04-25 07:47:37,240 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:37,244 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:37,245 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:37,245 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:37,245 INFO     Window not in foreground
+2025-04-25 07:47:37,246 INFO     Could not take screenshot
+2025-04-25 07:47:38,247 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:38,252 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:38,253 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:38,253 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:38,253 INFO     Window not in foreground
+2025-04-25 07:47:38,254 INFO     Could not take screenshot
+2025-04-25 07:47:39,254 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:39,309 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:39,310 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:39,310 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:39,310 INFO     Window not in foreground
+2025-04-25 07:47:39,310 INFO     Could not take screenshot
+2025-04-25 07:47:40,311 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:40,318 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:40,319 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:40,319 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:40,319 INFO     Window not in foreground
+2025-04-25 07:47:40,319 INFO     Could not take screenshot
+2025-04-25 07:47:41,321 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:41,326 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:41,327 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:41,327 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:41,327 INFO     Taking screenshot...
+2025-04-25 07:47:41,346 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_118.png
+2025-04-25 07:47:41,622 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_118.png
+2025-04-25 07:47:42,067 INFO     ek APPRENTICE MERCH
+
+Ky johnor
+
+A
+
+<
+
+Version: 1.0.3748
+
+Sa
+
+I
+
+ANT
+
+~~
+2025-04-25 07:47:43,068 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:43,075 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:43,075 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:43,076 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:43,076 INFO     Taking screenshot...
+2025-04-25 07:47:43,098 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_119.png
+2025-04-25 07:47:43,268 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_119.png
+2025-04-25 07:47:43,702 INFO     >
+fs)
+a
+wa
+wy
+o
+a
+
+In: 1.0.3748
+
+Versio!
+2025-04-25 07:47:44,703 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:44,759 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:44,760 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:44,760 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:44,760 INFO     Taking screenshot...
+2025-04-25 07:47:44,782 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_120.png
+2025-04-25 07:47:44,981 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_120.png
+2025-04-25 07:47:46,378 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:46,384 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:46,385 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:46,385 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:46,385 INFO     Taking screenshot...
+2025-04-25 07:47:46,417 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_121.png
+2025-04-25 07:47:46,715 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_121.png
+2025-04-25 07:47:48,113 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:48,118 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:48,119 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:48,119 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:48,119 INFO     Taking screenshot...
+2025-04-25 07:47:48,150 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_122.png
+2025-04-25 07:47:48,454 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_122.png
+2025-04-25 07:47:49,860 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:49,866 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:49,866 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:49,867 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:49,867 INFO     Taking screenshot...
+2025-04-25 07:47:49,899 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_123.png
+2025-04-25 07:47:50,102 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_123.png
+2025-04-25 07:47:51,512 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:51,517 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:51,518 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:51,518 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:51,518 INFO     Taking screenshot...
+2025-04-25 07:47:51,550 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_124.png
+2025-04-25 07:47:51,772 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_124.png
+2025-04-25 07:47:53,193 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:53,199 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:53,200 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:53,200 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:53,201 INFO     Taking screenshot...
+2025-04-25 07:47:53,232 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_125.png
+2025-04-25 07:47:53,475 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_125.png
+2025-04-25 07:47:53,972 INFO     REPORT BUG
+
+Version: 1.0.3748
+2025-04-25 07:47:54,973 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:54,979 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:54,980 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:54,980 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:54,980 INFO     Taking screenshot...
+2025-04-25 07:47:55,015 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_126.png
+2025-04-25 07:47:55,219 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_126.png
+2025-04-25 07:47:56,755 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:56,762 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:56,763 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:56,763 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:56,763 INFO     Taking screenshot...
+2025-04-25 07:47:56,798 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_127.png
+2025-04-25 07:47:57,106 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_127.png
+2025-04-25 07:47:57,658 INFO     REPORT BUG
+
+Version: 1.0.3748
+2025-04-25 07:47:58,660 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:47:58,666 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:47:58,666 INFO     Got TheBazaar.exe window.
+2025-04-25 07:47:58,667 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:47:58,667 INFO     Taking screenshot...
+2025-04-25 07:47:58,699 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_128.png
+2025-04-25 07:47:59,007 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_128.png
+2025-04-25 07:47:59,504 INFO     REPORT BUG
+
+Jungle Ruins
+
+You find abandoned ruins in the
+jungle.
+
+<t o@
+
+Version: 1.0.3748
+2025-04-25 07:47:59,504 INFO     found event! {'name': 'Jungle Ruins', 'options': ['Grab the Loot: Gain 2 Bronze-tier loot items.', 'Enjoy the Scenery: Gain 3 Regeneration.', '(if you are Vanessa) Plunder for Treasure: Gain a Small Silver-tier item.', '(if you are Pygmalien) Setup Tourist Attraction: Gain 2 Income', '(if you are Mak) Hunt for Reagents: Get a Silver-tier Reagent.']}
+2025-04-25 07:48:00,505 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:00,510 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:00,511 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:00,511 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:00,512 INFO     Window not in foreground
+2025-04-25 07:48:00,512 INFO     Could not take screenshot
+2025-04-25 07:48:01,513 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:01,520 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:01,520 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:01,520 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:01,520 INFO     Window not in foreground
+2025-04-25 07:48:01,520 INFO     Could not take screenshot
+2025-04-25 07:48:02,522 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:02,528 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:02,529 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:02,529 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:02,529 INFO     Window not in foreground
+2025-04-25 07:48:02,530 INFO     Could not take screenshot
+2025-04-25 07:48:03,530 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:03,536 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:03,537 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:03,537 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:03,537 INFO     Window not in foreground
+2025-04-25 07:48:03,537 INFO     Could not take screenshot
+2025-04-25 07:48:04,539 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:04,544 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:04,545 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:04,545 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:04,545 INFO     Window not in foreground
+2025-04-25 07:48:04,545 INFO     Could not take screenshot
+2025-04-25 07:48:05,546 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:05,553 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:05,553 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:05,554 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:05,554 INFO     Window not in foreground
+2025-04-25 07:48:05,554 INFO     Could not take screenshot
+2025-04-25 07:48:06,555 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:06,573 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:06,573 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:06,574 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:06,574 INFO     Window not in foreground
+2025-04-25 07:48:06,574 INFO     Could not take screenshot
+2025-04-25 07:48:07,575 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:07,582 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:07,582 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:07,583 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:07,583 INFO     Window not in foreground
+2025-04-25 07:48:07,583 INFO     Could not take screenshot
+2025-04-25 07:48:08,584 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:08,589 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:08,589 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:08,590 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:08,590 INFO     Window not in foreground
+2025-04-25 07:48:08,590 INFO     Could not take screenshot
+2025-04-25 07:48:09,591 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:09,598 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:09,599 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:09,599 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:09,600 INFO     Window not in foreground
+2025-04-25 07:48:09,600 INFO     Could not take screenshot
+2025-04-25 07:48:10,601 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:10,636 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:10,637 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:10,637 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:10,637 INFO     Window not in foreground
+2025-04-25 07:48:10,638 INFO     Could not take screenshot
+2025-04-25 07:48:11,638 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:11,645 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:11,645 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:11,645 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:11,646 INFO     Window not in foreground
+2025-04-25 07:48:11,646 INFO     Could not take screenshot
+2025-04-25 07:48:12,648 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:12,655 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:12,656 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:12,656 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:12,656 INFO     Window not in foreground
+2025-04-25 07:48:12,656 INFO     Could not take screenshot
+2025-04-25 07:48:13,658 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:13,665 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:13,666 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:13,666 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:13,666 INFO     Window not in foreground
+2025-04-25 07:48:13,666 INFO     Could not take screenshot
+2025-04-25 07:48:14,667 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:14,760 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:14,761 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:14,761 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:14,761 INFO     Window not in foreground
+2025-04-25 07:48:14,761 INFO     Could not take screenshot
+2025-04-25 07:48:15,762 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:15,770 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:15,770 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:15,770 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:15,770 INFO     Window not in foreground
+2025-04-25 07:48:15,771 INFO     Could not take screenshot
+2025-04-25 07:48:16,772 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:16,777 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:16,777 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:16,778 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:16,778 INFO     Window not in foreground
+2025-04-25 07:48:16,778 INFO     Could not take screenshot
+2025-04-25 07:48:17,779 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:17,786 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:17,786 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:17,787 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:17,787 INFO     Taking screenshot...
+2025-04-25 07:48:17,812 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_146.png
+2025-04-25 07:48:18,122 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_146.png
+2025-04-25 07:48:19,566 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:19,572 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:19,573 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:19,573 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:19,573 INFO     Taking screenshot...
+2025-04-25 07:48:19,598 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_147.png
+2025-04-25 07:48:19,907 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_147.png
+2025-04-25 07:48:21,544 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:21,550 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:21,551 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:21,551 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:21,551 INFO     Taking screenshot...
+2025-04-25 07:48:21,582 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_148.png
+2025-04-25 07:48:21,784 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_148.png
+2025-04-25 07:48:22,335 INFO     REPORT BUG
+
+Version: 1.0.3748
+2025-04-25 07:48:23,336 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:23,341 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:23,342 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:23,342 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:23,342 INFO     Window not in foreground
+2025-04-25 07:48:23,343 INFO     Could not take screenshot
+2025-04-25 07:48:24,344 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:24,350 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:24,351 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:24,351 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:24,352 INFO     Window not in foreground
+2025-04-25 07:48:24,352 INFO     Could not take screenshot
+2025-04-25 07:48:25,353 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:25,360 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:25,360 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:25,360 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:25,360 INFO     Window not in foreground
+2025-04-25 07:48:25,360 INFO     Could not take screenshot
+2025-04-25 07:48:26,361 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:26,369 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:26,449 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:26,449 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:26,449 INFO     Window not in foreground
+2025-04-25 07:48:26,450 INFO     Could not take screenshot
+2025-04-25 07:48:27,451 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:27,457 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:27,458 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:27,458 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:27,458 INFO     Window not in foreground
+2025-04-25 07:48:27,459 INFO     Could not take screenshot
+2025-04-25 07:48:28,460 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:28,467 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:28,468 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:28,468 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:28,468 INFO     Window not in foreground
+2025-04-25 07:48:28,468 INFO     Could not take screenshot
+2025-04-25 07:48:29,470 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:29,476 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:29,476 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:29,477 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:29,477 INFO     Window not in foreground
+2025-04-25 07:48:29,477 INFO     Could not take screenshot
+2025-04-25 07:48:30,478 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:30,485 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:30,485 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:30,486 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:30,486 INFO     Window not in foreground
+2025-04-25 07:48:30,486 INFO     Could not take screenshot
+2025-04-25 07:48:31,487 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:31,492 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:31,493 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:31,493 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:31,493 INFO     Window not in foreground
+2025-04-25 07:48:31,494 INFO     Could not take screenshot
+2025-04-25 07:48:32,495 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:32,502 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:32,503 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:32,503 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:32,503 INFO     Window not in foreground
+2025-04-25 07:48:32,504 INFO     Could not take screenshot
+2025-04-25 07:48:33,504 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:33,511 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:33,512 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:33,512 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:33,512 INFO     Window not in foreground
+2025-04-25 07:48:33,512 INFO     Could not take screenshot
+2025-04-25 07:48:34,513 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:34,519 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:34,520 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:34,520 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:34,520 INFO     Window not in foreground
+2025-04-25 07:48:34,520 INFO     Could not take screenshot
+2025-04-25 07:48:35,522 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:35,528 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:35,529 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:35,529 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:35,529 INFO     Window not in foreground
+2025-04-25 07:48:35,530 INFO     Could not take screenshot
+2025-04-25 07:48:36,530 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:36,536 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:36,537 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:36,537 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:36,537 INFO     Window not in foreground
+2025-04-25 07:48:36,537 INFO     Could not take screenshot
+2025-04-25 07:48:37,539 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:37,544 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:37,544 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:37,544 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:37,545 INFO     Window not in foreground
+2025-04-25 07:48:37,545 INFO     Could not take screenshot
+2025-04-25 07:48:38,546 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:38,553 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:38,554 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:38,554 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:38,554 INFO     Window not in foreground
+2025-04-25 07:48:38,554 INFO     Could not take screenshot
+2025-04-25 07:48:39,555 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:39,562 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:39,563 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:39,563 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:39,563 INFO     Window not in foreground
+2025-04-25 07:48:39,563 INFO     Could not take screenshot
+2025-04-25 07:48:40,564 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:40,570 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:40,571 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:40,571 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:40,571 INFO     Window not in foreground
+2025-04-25 07:48:40,571 INFO     Could not take screenshot
+2025-04-25 07:48:41,573 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:41,578 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:41,579 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:41,579 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:41,579 INFO     Window not in foreground
+2025-04-25 07:48:41,580 INFO     Could not take screenshot
+2025-04-25 07:48:42,580 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:42,586 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:42,587 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:42,587 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:42,587 INFO     Window not in foreground
+2025-04-25 07:48:42,588 INFO     Could not take screenshot
+2025-04-25 07:48:43,589 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:43,595 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:43,596 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:43,596 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:43,596 INFO     Window not in foreground
+2025-04-25 07:48:43,596 INFO     Could not take screenshot
+2025-04-25 07:48:44,598 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:44,603 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:44,604 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:44,604 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:44,604 INFO     Window not in foreground
+2025-04-25 07:48:44,604 INFO     Could not take screenshot
+2025-04-25 07:48:45,606 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:45,611 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:45,612 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:45,612 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:45,612 INFO     Window not in foreground
+2025-04-25 07:48:45,612 INFO     Could not take screenshot
+2025-04-25 07:48:46,613 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:46,620 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:46,621 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:46,621 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:46,621 INFO     Window not in foreground
+2025-04-25 07:48:46,622 INFO     Could not take screenshot
+2025-04-25 07:48:47,622 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:47,628 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:47,628 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:47,629 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:47,629 INFO     Window not in foreground
+2025-04-25 07:48:47,629 INFO     Could not take screenshot
+2025-04-25 07:48:48,630 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:48,636 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:48,637 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:48,637 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:48,637 INFO     Window not in foreground
+2025-04-25 07:48:48,637 INFO     Could not take screenshot
+2025-04-25 07:48:49,638 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:49,645 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:49,645 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:49,645 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:49,646 INFO     Window not in foreground
+2025-04-25 07:48:49,646 INFO     Could not take screenshot
+2025-04-25 07:48:50,647 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:50,654 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:50,654 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:50,654 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:50,655 INFO     Window not in foreground
+2025-04-25 07:48:50,655 INFO     Could not take screenshot
+2025-04-25 07:48:51,655 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:51,661 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:51,661 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:51,661 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:51,661 INFO     Window not in foreground
+2025-04-25 07:48:51,662 INFO     Could not take screenshot
+2025-04-25 07:48:52,663 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:52,670 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:52,670 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:52,670 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:52,671 INFO     Window not in foreground
+2025-04-25 07:48:52,671 INFO     Could not take screenshot
+2025-04-25 07:48:53,672 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:53,679 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:53,679 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:53,679 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:53,680 INFO     Window not in foreground
+2025-04-25 07:48:53,680 INFO     Could not take screenshot
+2025-04-25 07:48:54,681 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:54,687 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:54,687 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:54,688 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:54,688 INFO     Window not in foreground
+2025-04-25 07:48:54,688 INFO     Could not take screenshot
+2025-04-25 07:48:55,689 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:55,696 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:55,696 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:55,696 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:55,696 INFO     Window not in foreground
+2025-04-25 07:48:55,696 INFO     Could not take screenshot
+2025-04-25 07:48:56,698 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:56,706 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:56,706 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:56,706 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:56,707 INFO     Window not in foreground
+2025-04-25 07:48:56,707 INFO     Could not take screenshot
+2025-04-25 07:48:57,708 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:57,714 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:57,715 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:57,715 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:57,715 INFO     Window not in foreground
+2025-04-25 07:48:57,716 INFO     Could not take screenshot
+2025-04-25 07:48:58,717 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:58,723 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:58,723 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:58,724 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:58,724 INFO     Window not in foreground
+2025-04-25 07:48:58,724 INFO     Could not take screenshot
+2025-04-25 07:48:59,724 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:48:59,742 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:48:59,742 INFO     Got TheBazaar.exe window.
+2025-04-25 07:48:59,743 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:48:59,743 INFO     Window not in foreground
+2025-04-25 07:48:59,743 INFO     Could not take screenshot
+2025-04-25 07:49:00,744 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:00,749 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:00,751 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:00,751 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:00,751 INFO     Window not in foreground
+2025-04-25 07:49:00,752 INFO     Could not take screenshot
+2025-04-25 07:49:01,752 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:01,758 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:01,759 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:01,759 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:01,759 INFO     Window not in foreground
+2025-04-25 07:49:01,759 INFO     Could not take screenshot
+2025-04-25 07:49:02,760 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:02,766 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:02,767 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:02,767 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:02,767 INFO     Window not in foreground
+2025-04-25 07:49:02,768 INFO     Could not take screenshot
+2025-04-25 07:49:03,769 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:03,838 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:03,838 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:03,838 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:03,839 INFO     Window not in foreground
+2025-04-25 07:49:03,839 INFO     Could not take screenshot
+2025-04-25 07:49:04,840 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:04,846 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:04,846 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:04,846 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:04,846 INFO     Window not in foreground
+2025-04-25 07:49:04,846 INFO     Could not take screenshot
+2025-04-25 07:49:05,848 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:05,854 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:05,855 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:05,855 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:05,855 INFO     Window not in foreground
+2025-04-25 07:49:05,856 INFO     Could not take screenshot
+2025-04-25 07:49:06,857 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:06,863 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:06,864 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:06,864 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:06,864 INFO     Window not in foreground
+2025-04-25 07:49:06,865 INFO     Could not take screenshot
+2025-04-25 07:49:07,866 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:07,919 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:07,920 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:07,920 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:07,920 INFO     Window not in foreground
+2025-04-25 07:49:07,920 INFO     Could not take screenshot
+2025-04-25 07:49:08,921 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:08,928 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:08,928 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:08,929 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:08,929 INFO     Window not in foreground
+2025-04-25 07:49:08,929 INFO     Could not take screenshot
+2025-04-25 07:49:09,929 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:09,936 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:09,937 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:09,937 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:09,937 INFO     Window not in foreground
+2025-04-25 07:49:09,937 INFO     Could not take screenshot
+2025-04-25 07:49:10,938 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:10,943 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:10,944 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:10,944 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:10,944 INFO     Window not in foreground
+2025-04-25 07:49:10,944 INFO     Could not take screenshot
+2025-04-25 07:49:11,945 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:11,952 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:11,952 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:11,952 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:11,953 INFO     Window not in foreground
+2025-04-25 07:49:11,953 INFO     Could not take screenshot
+2025-04-25 07:49:12,954 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:12,960 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:12,960 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:12,961 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:12,961 INFO     Window not in foreground
+2025-04-25 07:49:12,961 INFO     Could not take screenshot
+2025-04-25 07:49:13,962 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:13,968 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:13,968 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:13,968 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:13,969 INFO     Window not in foreground
+2025-04-25 07:49:13,969 INFO     Could not take screenshot
+2025-04-25 07:49:14,970 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:14,975 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:14,976 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:14,976 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:14,976 INFO     Window not in foreground
+2025-04-25 07:49:14,976 INFO     Could not take screenshot
+2025-04-25 07:49:15,977 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:15,985 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:15,985 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:15,985 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:15,986 INFO     Window not in foreground
+2025-04-25 07:49:15,986 INFO     Could not take screenshot
+2025-04-25 07:49:16,987 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:16,993 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:16,994 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:16,994 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:16,994 INFO     Window not in foreground
+2025-04-25 07:49:16,994 INFO     Could not take screenshot
+2025-04-25 07:49:17,996 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:18,002 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:18,003 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:18,003 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:18,003 INFO     Window not in foreground
+2025-04-25 07:49:18,003 INFO     Could not take screenshot
+2025-04-25 07:49:19,004 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:19,010 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:19,010 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:19,011 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:19,011 INFO     Window not in foreground
+2025-04-25 07:49:19,011 INFO     Could not take screenshot
+2025-04-25 07:49:20,012 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:20,018 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:20,018 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:20,019 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:20,019 INFO     Window not in foreground
+2025-04-25 07:49:20,019 INFO     Could not take screenshot
+2025-04-25 07:49:21,020 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:21,026 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:21,026 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:21,027 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:21,027 INFO     Window not in foreground
+2025-04-25 07:49:21,027 INFO     Could not take screenshot
+2025-04-25 07:49:22,027 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:22,034 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:22,034 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:22,035 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:22,035 INFO     Window not in foreground
+2025-04-25 07:49:22,035 INFO     Could not take screenshot
+2025-04-25 07:49:23,036 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:23,042 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:23,042 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:23,043 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:23,043 INFO     Window not in foreground
+2025-04-25 07:49:23,043 INFO     Could not take screenshot
+2025-04-25 07:49:24,043 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:24,050 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:24,051 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:24,051 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:24,051 INFO     Window not in foreground
+2025-04-25 07:49:24,051 INFO     Could not take screenshot
+2025-04-25 07:49:25,052 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:25,057 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:25,058 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:25,058 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:25,058 INFO     Window not in foreground
+2025-04-25 07:49:25,058 INFO     Could not take screenshot
+2025-04-25 07:49:26,060 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:26,066 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:26,067 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:26,067 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:26,067 INFO     Window not in foreground
+2025-04-25 07:49:26,067 INFO     Could not take screenshot
+2025-04-25 07:49:27,068 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:27,075 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:27,076 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:27,076 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:27,077 INFO     Window not in foreground
+2025-04-25 07:49:27,077 INFO     Could not take screenshot
+2025-04-25 07:49:28,078 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:28,084 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:28,084 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:28,085 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:28,085 INFO     Window not in foreground
+2025-04-25 07:49:28,085 INFO     Could not take screenshot
+2025-04-25 07:49:29,086 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:29,093 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:29,094 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:29,094 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:29,094 INFO     Window not in foreground
+2025-04-25 07:49:29,094 INFO     Could not take screenshot
+2025-04-25 07:49:30,095 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:30,101 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:30,102 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:30,102 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:30,103 INFO     Window not in foreground
+2025-04-25 07:49:30,103 INFO     Could not take screenshot
+2025-04-25 07:49:31,104 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:31,111 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:31,111 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:31,111 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:31,112 INFO     Taking screenshot...
+2025-04-25 07:49:31,147 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_216.png
+2025-04-25 07:49:31,352 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_216.png
+2025-04-25 07:49:31,913 INFO     REPORT BUG
+
+Version: 1.0.3748
+2025-04-25 07:49:32,915 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:32,920 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:32,921 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:32,921 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:32,921 INFO     Taking screenshot...
+2025-04-25 07:49:32,948 INFO     Saving screenshot to C:\Users\johnm\repos\baugar\client\screenshot_217.png
+2025-04-25 07:49:33,256 INFO     Screenshot saved to C:\Users\johnm\repos\baugar\client\screenshot_217.png
+2025-04-25 07:49:33,914 INFO     REPORT BUG
+
+Version: 1.0.3748
+2025-04-25 07:49:34,915 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:34,921 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:34,921 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:34,922 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:34,922 INFO     Window not in foreground
+2025-04-25 07:49:34,922 INFO     Could not take screenshot
+2025-04-25 07:49:35,923 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:35,930 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:35,931 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:35,931 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:35,932 INFO     Window not in foreground
+2025-04-25 07:49:35,932 INFO     Could not take screenshot
+2025-04-25 07:49:36,933 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:36,940 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:36,940 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:36,940 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:36,941 INFO     Window not in foreground
+2025-04-25 07:49:36,941 INFO     Could not take screenshot
+2025-04-25 07:49:37,941 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:37,949 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:37,949 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:37,949 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:37,950 INFO     Window not in foreground
+2025-04-25 07:49:37,950 INFO     Could not take screenshot
+2025-04-25 07:49:38,951 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:38,957 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:38,958 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:38,958 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:38,959 INFO     Window not in foreground
+2025-04-25 07:49:38,959 INFO     Could not take screenshot
+2025-04-25 07:49:39,960 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:39,967 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:39,968 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:39,968 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:39,968 INFO     Window not in foreground
+2025-04-25 07:49:39,968 INFO     Could not take screenshot
+2025-04-25 07:49:40,969 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:40,975 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:40,975 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:40,975 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:40,976 INFO     Window not in foreground
+2025-04-25 07:49:40,976 INFO     Could not take screenshot
+2025-04-25 07:49:41,977 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:42,000 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:42,000 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:42,000 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:42,001 INFO     Window not in foreground
+2025-04-25 07:49:42,001 INFO     Could not take screenshot
+2025-04-25 07:49:43,001 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:43,007 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:43,007 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:43,008 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:43,008 INFO     Window not in foreground
+2025-04-25 07:49:43,008 INFO     Could not take screenshot
+2025-04-25 07:49:44,009 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:44,016 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:44,017 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:44,017 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:44,017 INFO     Window not in foreground
+2025-04-25 07:49:44,017 INFO     Could not take screenshot
+2025-04-25 07:49:45,018 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:45,025 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:45,025 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:45,025 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:45,025 INFO     Window not in foreground
+2025-04-25 07:49:45,026 INFO     Could not take screenshot
+2025-04-25 07:49:46,026 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:46,088 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:46,088 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:46,088 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:46,089 INFO     Window not in foreground
+2025-04-25 07:49:46,089 INFO     Could not take screenshot
+2025-04-25 07:49:47,090 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:47,097 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:47,097 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:47,098 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:47,098 INFO     Window not in foreground
+2025-04-25 07:49:47,098 INFO     Could not take screenshot
+2025-04-25 07:49:48,099 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:48,106 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:48,106 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:48,107 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:48,107 INFO     Window not in foreground
+2025-04-25 07:49:48,107 INFO     Could not take screenshot
+2025-04-25 07:49:49,108 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:49,114 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:49,115 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:49,115 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:49,116 INFO     Window not in foreground
+2025-04-25 07:49:49,116 INFO     Could not take screenshot
+2025-04-25 07:49:50,117 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:50,181 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:50,182 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:50,182 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:50,182 INFO     Window not in foreground
+2025-04-25 07:49:50,183 INFO     Could not take screenshot
+2025-04-25 07:49:51,184 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:51,190 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:51,190 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:51,191 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:51,191 INFO     Window not in foreground
+2025-04-25 07:49:51,191 INFO     Could not take screenshot
+2025-04-25 07:49:52,192 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:52,198 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:52,199 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:52,199 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:52,199 INFO     Window not in foreground
+2025-04-25 07:49:52,199 INFO     Could not take screenshot
+2025-04-25 07:49:53,200 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:53,206 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:53,207 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:53,207 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:53,207 INFO     Window not in foreground
+2025-04-25 07:49:53,207 INFO     Could not take screenshot
+2025-04-25 07:49:54,208 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:54,262 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:54,263 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:54,263 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:54,263 INFO     Window not in foreground
+2025-04-25 07:49:54,263 INFO     Could not take screenshot
+2025-04-25 07:49:55,264 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:55,269 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:55,271 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:55,271 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:55,271 INFO     Window not in foreground
+2025-04-25 07:49:55,272 INFO     Could not take screenshot
+2025-04-25 07:49:56,272 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:56,278 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:56,278 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:56,279 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:56,279 INFO     Window not in foreground
+2025-04-25 07:49:56,279 INFO     Could not take screenshot
+2025-04-25 07:49:57,280 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:57,287 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:57,288 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:57,288 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:57,288 INFO     Window not in foreground
+2025-04-25 07:49:57,289 INFO     Could not take screenshot
+2025-04-25 07:49:58,289 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:58,353 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:58,353 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:58,353 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:58,354 INFO     Window not in foreground
+2025-04-25 07:49:58,354 INFO     Could not take screenshot
+2025-04-25 07:49:59,355 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:49:59,360 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:49:59,360 INFO     Got TheBazaar.exe window.
+2025-04-25 07:49:59,360 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:49:59,361 INFO     Window not in foreground
+2025-04-25 07:49:59,361 INFO     Could not take screenshot
+2025-04-25 07:50:00,362 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:50:00,368 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:50:00,369 INFO     Got TheBazaar.exe window.
+2025-04-25 07:50:00,369 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:50:00,369 INFO     Window not in foreground
+2025-04-25 07:50:00,369 INFO     Could not take screenshot
+2025-04-25 07:50:01,370 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:50:01,376 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:50:01,376 INFO     Got TheBazaar.exe window.
+2025-04-25 07:50:01,377 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:50:01,377 INFO     Window not in foreground
+2025-04-25 07:50:01,377 INFO     Could not take screenshot
+2025-04-25 07:50:02,378 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:50:02,451 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:50:02,452 INFO     Got TheBazaar.exe window.
+2025-04-25 07:50:02,452 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:50:02,453 INFO     Window not in foreground
+2025-04-25 07:50:02,453 INFO     Could not take screenshot
+2025-04-25 07:50:03,454 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:50:03,460 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:50:03,461 INFO     Got TheBazaar.exe window.
+2025-04-25 07:50:03,461 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:50:03,461 INFO     Window not in foreground
+2025-04-25 07:50:03,462 INFO     Could not take screenshot
+2025-04-25 07:50:04,462 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:50:04,468 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:50:04,469 INFO     Got TheBazaar.exe window.
+2025-04-25 07:50:04,469 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:50:04,469 INFO     Window not in foreground
+2025-04-25 07:50:04,470 INFO     Could not take screenshot
+2025-04-25 07:50:05,471 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:50:05,478 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:50:05,478 INFO     Got TheBazaar.exe window.
+2025-04-25 07:50:05,478 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:50:05,479 INFO     Window not in foreground
+2025-04-25 07:50:05,479 INFO     Could not take screenshot
+2025-04-25 07:50:06,480 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:50:06,534 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:50:06,535 INFO     Got TheBazaar.exe window.
+2025-04-25 07:50:06,535 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:50:06,535 INFO     Window not in foreground
+2025-04-25 07:50:06,535 INFO     Could not take screenshot
+2025-04-25 07:50:07,536 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:50:07,541 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:50:07,541 INFO     Got TheBazaar.exe window.
+2025-04-25 07:50:07,541 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:50:07,541 INFO     Window not in foreground
+2025-04-25 07:50:07,541 INFO     Could not take screenshot
+2025-04-25 07:50:08,543 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:50:08,549 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:50:08,549 INFO     Got TheBazaar.exe window.
+2025-04-25 07:50:08,549 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:50:08,550 INFO     Window not in foreground
+2025-04-25 07:50:08,550 INFO     Could not take screenshot
+2025-04-25 07:50:09,551 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:50:09,558 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:50:09,559 INFO     Got TheBazaar.exe window.
+2025-04-25 07:50:09,559 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:50:09,559 INFO     Window not in foreground
+2025-04-25 07:50:09,559 INFO     Could not take screenshot
+2025-04-25 07:50:10,560 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:50:10,633 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:50:10,634 INFO     Got TheBazaar.exe window.
+2025-04-25 07:50:10,634 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:50:10,634 INFO     Window not in foreground
+2025-04-25 07:50:10,634 INFO     Could not take screenshot
+2025-04-25 07:50:11,636 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:50:11,642 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:50:11,643 INFO     Got TheBazaar.exe window.
+2025-04-25 07:50:11,643 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:50:11,643 INFO     Window not in foreground
+2025-04-25 07:50:11,643 INFO     Could not take screenshot
+2025-04-25 07:50:12,645 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:50:12,652 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:50:12,652 INFO     Got TheBazaar.exe window.
+2025-04-25 07:50:12,652 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:50:12,653 INFO     Window not in foreground
+2025-04-25 07:50:12,653 INFO     Could not take screenshot
+2025-04-25 07:50:13,654 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:50:13,660 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:50:13,661 INFO     Got TheBazaar.exe window.
+2025-04-25 07:50:13,661 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:50:13,661 INFO     Window not in foreground
+2025-04-25 07:50:13,661 INFO     Could not take screenshot
+2025-04-25 07:50:14,662 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:50:14,711 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:50:14,712 INFO     Got TheBazaar.exe window.
+2025-04-25 07:50:14,712 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:50:14,713 INFO     Window not in foreground
+2025-04-25 07:50:14,713 INFO     Could not take screenshot
+2025-04-25 07:50:15,714 INFO     Getting TheBazaar.exe process...
+2025-04-25 07:50:15,720 INFO     Got TheBazaar.exe process, psutil.Process(pid=2612, name='TheBazaar.exe', status='running', started='07:45:31'), getting main window...
+2025-04-25 07:50:15,720 INFO     Got TheBazaar.exe window.
+2025-04-25 07:50:15,720 INFO     Waiting for TheBazaar.exe window to become the foreground window
+2025-04-25 07:50:15,721 INFO     Window not in foreground
+2025-04-25 07:50:15,721 INFO     Could not take screenshot
+2025-04-25 07:50:16,148 INFO     Aborted by user.

@@ -13,6 +13,14 @@ from window_manager import (
 )
 from text_extractor import extract_text
 
+import json
+
+# Path can be absolute or relative; this assumes you have a “data” folder next to your script/notebook
+file_path = Path("data/events.json")
+
+with file_path.open("r", encoding="utf-8") as fp:
+    events = json.load(fp)
+
 T = TypeVar("T")
 
 def bundle_dir() -> Path:
@@ -112,7 +120,11 @@ def main() -> None:
             print(f"Saving screenshot to {output_location.resolve()}")
             screenshot.save(output_location)
             print(f"Screenshot saved to {output_location.resolve()}")
-            print(extract_text(screenshot))
+            screenshot_text = extract_text(screenshot)
+            print(screenshot_text)
+            for event in events:
+                if event.get("name") in screenshot_text:
+                    print(f"found event! {event}")
         else:
             print("Could not take screenshot")
         attempt += 1
