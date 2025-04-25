@@ -3,15 +3,10 @@ import os, sys
 from PIL import Image, ImageFile
 import pytesseract
 
-def resource(rel: str) -> Path:
-    """Return an absolute path that works both frozen & unfrozen."""
-    base = Path(sys._MEIPASS)
-    return base / rel
-
 if getattr(sys, "frozen", False):
-    tess_dir = resource("tesseract")
+    tess_dir = Path(sys._MEIPASS) / "tesseract"
     pytesseract.pytesseract.tesseract_cmd = str(tess_dir / "tesseract.exe")
-    os.environ["TESSDATA_PREFIX"] = str(tess_dir)      # <- very important
+    os.environ["TESSDATA_PREFIX"] = str(tess_dir / "tessdata")      # <- very important
 
 def extract_text(image: Image) -> str:
     return pytesseract.image_to_string(image)
