@@ -150,7 +150,7 @@ def main() -> None:
     # call `poll()` every 1 000 ms
     timer = QTimer()
     timer.timeout.connect(poll)
-    timer.start(1000)
+    timer.start(100)
 
     sys.exit(app.exec_())
 
