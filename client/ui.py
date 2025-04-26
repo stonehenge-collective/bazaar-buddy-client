@@ -147,7 +147,7 @@ class Overlay(QWidget):
 
         # Main layout
         layout = QVBoxLayout(self)
-        layout.setContentsMargins(self.PADDING, self.PADDING, self.PADDING, self.PADDING)
+        layout.setContentsMargins(self.PADDING, self.PADDING, 0, self.PADDING)
         layout.addWidget(self.scroll)
 
         # Four corner size grips

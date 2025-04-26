@@ -8,7 +8,7 @@ from typing import Callable, TypeVar, Optional
 import psutil
 from window_manager import (
     find_process_main_window_handle,
-    capture_window,
+    capture_one_frame,
     check_if_handle_is_foreground,
 )
 from text_extractor import extract_text
@@ -22,10 +22,15 @@ if getattr(sys, 'frozen', False):        # running inside the .exe
 else:                                    # running from source
     system_path = Path(__file__).resolve().parent
 
-file_path = system_path / "data/events.json"
+events_file_path = system_path / "data/events.json"
 
-with file_path.open("r", encoding="utf-8") as fp:
+with events_file_path.open("r", encoding="utf-8") as fp:
     events = json.load(fp)
+
+items_file_path = system_path / "data/items.json"
+
+with items_file_path.open("r", encoding="utf-8") as fp:
+    items = json.load(fp).get("items")
 
 T = TypeVar("T")
 
@@ -115,7 +120,30 @@ def take_screenshot(process_name: str):
         return None
 
     print("Taking screenshot...")
-    return capture_window(window_handle)
+    return capture_one_frame("The Bazaar")
+
+def build_message(screenshot_text: str):
+    for event in events:
+        if event.get("name") in screenshot_text:
+            print(f"found event! {event}")
+            if event.get("display", True):
+                return "\n\n".join(event.get("options"))
+        
+    for item in items:
+        if item.get("name") in screenshot_text:
+            print(f"found item! {item.get("name")}")
+            message = item.get("name")+"\n"
+            message += "\n".join(item.get("unifiedTooltips"))
+            message += "\n\n"
+            enchantments = item.get("enchantments")
+            for i, enchantment in enumerate(enchantments):
+                message += enchantment.get("type") + "\n"
+                message += "\n\n".join(enchantment.get("tooltips"))
+                if i < len(enchantments) - 1:
+                    message += "\n\n"
+            return message
+    
+    return None
 
 def main() -> None:
     app = QApplication(sys.argv)
@@ -125,32 +153,34 @@ def main() -> None:
 
     def poll():
         nonlocal attempt
-        screenshot = take_screenshot("TheBazaar.exe")
-        if not screenshot:
-            print("Could not take screenshot")
+        try:
+            screenshot = take_screenshot("TheBazaar.exe")
+            if not screenshot:
+                print("Could not take screenshot")
+                attempt += 1
+                return
+
+            output_location = bundle_dir() / f"screenshot_{attempt}.png"
+            print(f"Saving screenshot to {output_location.resolve()}")
+            screenshot.save(output_location)
+            print(f"Screenshot saved to {output_location.resolve()}")
+
+            screenshot_text = extract_text(screenshot)
+            print(screenshot_text)
+
+            message = build_message(screenshot_text)
+            
+            if message:
+                overlay.set_message(message)
+
             attempt += 1
-            return
-
-        output_location = bundle_dir() / f"screenshot_{attempt}.png"
-        print(f"Saving screenshot to {output_location.resolve()}")
-        # screenshot.save(output_location)
-        print(f"Screenshot saved to {output_location.resolve()}")
-
-        screenshot_text = extract_text(screenshot)
-        print(screenshot_text)
-
-        for event in events:
-            if event["name"] in screenshot_text:
-                print(f"found event! {event}")
-                if event.get("display", True):
-                    overlay.set_message("\n".join(event["options"]))
-
-        attempt += 1
+        except Exception:                 # catches *everything* except SystemExit/KeyboardInterrupt
+            logger.exception("Unhandled exception in poll()")
 
     # call `poll()` every 1 000 ms
     timer = QTimer()
     timer.timeout.connect(poll)
-    timer.start(100)
+    timer.start(1000)
 
     sys.exit(app.exec_())
 
