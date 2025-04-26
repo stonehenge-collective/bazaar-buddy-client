@@ -12,11 +12,17 @@ from window_manager import (
     check_if_handle_is_foreground,
 )
 from text_extractor import extract_text
+from ui import QApplication, Overlay
+from PyQt5.QtCore import QTimer
 
 import json
 
-# Path can be absolute or relative; this assumes you have a “data” folder next to your script/notebook
-file_path = Path("data/events.json")
+if getattr(sys, 'frozen', False):        # running inside the .exe
+    system_path = Path(sys._MEIPASS)           # type: ignore[attr-defined]
+else:                                    # running from source
+    system_path = Path(__file__).resolve().parent
+
+file_path = system_path / "data/events.json"
 
 with file_path.open("r", encoding="utf-8") as fp:
     events = json.load(fp)
@@ -112,23 +118,41 @@ def take_screenshot(process_name: str):
     return capture_window(window_handle)
 
 def main() -> None:
-    attempt = 0
-    while True:
+    app = QApplication(sys.argv)
+    overlay = Overlay("Welcome")
+
+    attempt = 0                     # capture in an outer-scope var
+
+    def poll():
+        nonlocal attempt
         screenshot = take_screenshot("TheBazaar.exe")
-        if screenshot:
-            output_location = bundle_dir() / f"screenshot_{attempt}.png"
-            print(f"Saving screenshot to {output_location.resolve()}")
-            screenshot.save(output_location)
-            print(f"Screenshot saved to {output_location.resolve()}")
-            screenshot_text = extract_text(screenshot)
-            print(screenshot_text)
-            for event in events:
-                if event.get("name") in screenshot_text:
-                    print(f"found event! {event}")
-        else:
+        if not screenshot:
             print("Could not take screenshot")
+            attempt += 1
+            return
+
+        output_location = bundle_dir() / f"screenshot_{attempt}.png"
+        print(f"Saving screenshot to {output_location.resolve()}")
+        # screenshot.save(output_location)
+        print(f"Screenshot saved to {output_location.resolve()}")
+
+        screenshot_text = extract_text(screenshot)
+        print(screenshot_text)
+
+        for event in events:
+            if event["name"] in screenshot_text:
+                print(f"found event! {event}")
+                if event.get("display", True):
+                    overlay.set_message("\n".join(event["options"]))
+
         attempt += 1
-        time.sleep(1)
+
+    # call `poll()` every 1 000 ms
+    timer = QTimer()
+    timer.timeout.connect(poll)
+    timer.start(1000)
+
+    sys.exit(app.exec_())
 
 if __name__ == "__main__":
     try:
