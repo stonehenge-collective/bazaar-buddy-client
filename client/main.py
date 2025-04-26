@@ -11,10 +11,12 @@ from capture_worker import (
 )
 from text_extractor import extract_text
 from ui import QApplication, Overlay
-from PyQt5.QtCore import QThread, Qt
+from PyQt5.QtCore import QThread, Qt, QTimer
 from PIL import Image
 import json
 import time
+import win32gui
+import win32process
 
 if getattr(sys, 'frozen', False):        # running inside the .exe
     system_path = Path(sys._MEIPASS)           # type: ignore[attr-defined]
@@ -88,24 +90,26 @@ def get_process_by_name(process_name: str):
         None,
     )
 
-def poll_function(function: Callable[[], T], poll_frequency: float = 0.5, timeout: Optional[float] = None) -> Optional[T]:
-    start = time.time()
-    while True:
-        result: T = function()
-        if result:
-            return result
-        if timeout is not None and (time.time() - start) > timeout:
-            return None
-        time.sleep(poll_frequency)
+def find_process_main_window_handle(process_id: int) -> Optional[int]:
+    """
+    Return the handle (HWND) of the first top‑level, visible window that
+    belongs to the given process, or None if nothing is found.
+    """
+    result: Optional[int] = None            # what we'll eventually return
 
-def wait_for_bazaar_to_start(process_name: str = "TheBazaar.exe"):
-    print(f"Getting {process_name} process...")
-    bazaar_process = poll_function(lambda: get_process_by_name(process_name))
-    print(f"Got {process_name} process, {bazaar_process}, getting main window...")
+    def enum_callback(hwnd, _):
+        nonlocal result                      # allow assignment to the outer var
 
-    if bazaar_process is None:
-        print("Process not found.")
-        return None
+        if not win32gui.IsWindowVisible(hwnd) or not win32gui.IsWindowEnabled(hwnd):
+            return True                      # keep enumerating
+
+        _, hwnd_pid = win32process.GetWindowThreadProcessId(hwnd)
+        if hwnd_pid == process_id:
+            result = hwnd                    # stash the handle
+        return True                          # keep looking
+
+    win32gui.EnumWindows(enum_callback, None)
+    return result
 
 def build_message(screenshot_text: str):
     for event in events:
@@ -132,42 +136,111 @@ def build_message(screenshot_text: str):
     
     return None
 
-app     = QApplication(sys.argv)
-overlay = Overlay("Welcome")
+class CaptureController:
+    """Manages *one* CaptureWorker and restarts it while the app is running."""
 
-def process_image(image: Image):
+    def __init__(self, overlay: Overlay, window_title: str = "The Bazaar"):
+        self._overlay = overlay
+        self._window_title = window_title
+        self._thread: Optional[QThread] = None
+        self._worker: Optional[CaptureWorker] = None
+
+    # ---------------------------------------------------------------------
+    #  Public API
+    # ---------------------------------------------------------------------
+    def start(self):
+        """Ensure a worker is active (if not already)."""
+        if self._worker is not None:
+            return  # already running
+
+        logger.info("Starting CaptureWorker …")
+        self._thread = QThread()
+        self._worker = CaptureWorker(self._window_title)
+        self._worker.moveToThread(self._thread)
+
+        # Wire up signals before booting the thread
+        self._thread.started.connect(self._worker.start)
+        self._worker.message_ready.connect(self._process_image, Qt.QueuedConnection)
+        self._worker.error.connect(self._on_worker_error)
+
+        self._thread.start()
+
+    def stop(self):
+        """Terminate and clean‑up the running worker (if any)."""
+        if self._worker is None or self._thread is None:
+            return
+
+        logger.info("Stopping CaptureWorker …")
+        try:
+            self._worker.stop()  # custom method added below
+        except Exception:
+            logger.exception("Error while stopping CaptureWorker")
+
+        self._thread.quit()
+        self._thread.wait(3_000)  # wait up to 3 s for a graceful shutdown
+        self._thread = None
+        self._worker = None
+
+    # ------------------------------------------------------------------
+    #  Internal helpers & slots
+    # ------------------------------------------------------------------
+    def _on_worker_error(self, msg: str):
+        logger.error("Capture error: %s", msg)
+        if "closed" in msg.lower():
+            # Window vanished while streaming — treat as process exit
+            self.stop()
+
+    def _process_image(self, image: Image.Image):
+        try:
+            # Persist a copy for troubleshooting
+            ts = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+            # Disabled by default — uncomment if you need raw dumps
+            # image.save(bundle_dir() / f"screenshot_{ts}.png")
+
+            try:
+                screenshot_text = extract_text(image)
+            except (AttributeError, PermissionError):
+                logger.debug("Transient OCR failure – frame skipped")
+                return
+            logger.info("OCR result: %s", screenshot_text)
+            message = build_message(screenshot_text)
+            if message:
+                self._overlay.set_message(message)
+        except Exception:
+            logger.exception("Unhandled exception while processing frame")
+
+def main() -> None:  # noqa: C901
+    # 1. Start the GUI right away
+    app = QApplication(sys.argv)
+    overlay = Overlay("Waiting for The Bazaar to start...")
+
+    # 2. Build the controller that spins workers up/down
+    controller = CaptureController(overlay, window_title="The Bazaar")
+
+    # 3. Poll timer — runs on the Qt event‑loop every second
+    poll_timer = QTimer()
+    poll_timer.setInterval(1_000)  # 1 s
+
+    def _tick():
+        # Called inside the GUI thread — cheap checks only!
+        bazaar_process = get_process_by_name("TheBazaar.exe")
+        if bazaar_process:
+            window_handle = find_process_main_window_handle(bazaar_process.pid)
+            if window_handle:
+                overlay.set_message("Bazaar process found, watching...")
+                controller.start()
+                return
+        controller.stop()
+        overlay.set_message("Waiting for The Bazaar to start...")
+
+    poll_timer.timeout.connect(_tick)
+    poll_timer.start()
+
+    # Run!
     try:
-        ts = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-        output_location = bundle_dir() / f"screenshot_{ts}.png"
-        print(f"Saving screenshot to {output_location.resolve()}")
-        # image.save(output_location)
-        print(f"Screenshot saved to {output_location.resolve()}")
-
-        screenshot_text = extract_text(image)
-        print(screenshot_text)
-
-        message = build_message(screenshot_text)
-        
-        if message:
-            overlay.set_message(message)
-    except Exception:                 # catches *everything* except SystemExit/KeyboardInterrupt
-        logger.exception("Unhandled exception in poll()")
-
-def main() -> None:
-    try:
-        thread  = QThread()
-        worker  = CaptureWorker("The Bazaar")
-        worker.moveToThread(thread)
-
-        thread.started.connect(worker.start)
-        worker.message_ready.connect(process_image, Qt.QueuedConnection)
-        worker.error.connect(lambda msg: print("capture:", msg))
-        worker.error.connect(app.quit)
-
-        thread.start()
         sys.exit(app.exec_())
-    except Exception:                 # catches *everything* except SystemExit/KeyboardInterrupt
-        logger.exception("Unhandled exception in poll()")
+    finally:
+        controller.stop()  # Ensure clean shutdown on Ctrl‑C
 
 if __name__ == "__main__":
     try:
