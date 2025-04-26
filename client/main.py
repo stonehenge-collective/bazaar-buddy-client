@@ -1,37 +1,17 @@
-from datetime import datetime
 import sys
-import time
 import logging
 from pathlib import Path
 from logging.handlers import RotatingFileHandler
-from typing import Callable, TypeVar, Optional
+from typing import TypeVar, Optional
 import psutil
 from capture_worker import (
     CaptureWorker,
 )
 from text_extractor import extract_text
 from ui import QApplication, Overlay
-from PyQt5.QtCore import QThread, Qt, QTimer
-from PIL import Image
-import json
-import time
+from PyQt5.QtCore import QThread, Qt, QTimer, QObject, pyqtSignal
 import win32gui
 import win32process
-
-if getattr(sys, 'frozen', False):        # running inside the .exe
-    system_path = Path(sys._MEIPASS)           # type: ignore[attr-defined]
-else:                                    # running from source
-    system_path = Path(__file__).resolve().parent
-
-events_file_path = system_path / "data/events.json"
-
-with events_file_path.open("r", encoding="utf-8") as fp:
-    events = json.load(fp)
-
-items_file_path = system_path / "data/items.json"
-
-with items_file_path.open("r", encoding="utf-8") as fp:
-    items = json.load(fp).get("items")
 
 T = TypeVar("T")
 
@@ -111,136 +91,103 @@ def find_process_main_window_handle(process_id: int) -> Optional[int]:
     win32gui.EnumWindows(enum_callback, None)
     return result
 
-def build_message(screenshot_text: str):
-    for event in events:
-        if event.get("name") in screenshot_text:
-            print(f"found event! {event}")
-            message = event.get("name")+"\n"
-            if event.get("display", True):
-                message += "\n\n".join(event.get("options"))
-            return message
-        
-    for item in items:
-        if item.get("name") in screenshot_text:
-            print(f"found item! {item.get("name")}")
-            message = item.get("name")+"\n"
-            message += "\n".join(item.get("unifiedTooltips"))
-            message += "\n\n"
-            enchantments = item.get("enchantments")
-            for i, enchantment in enumerate(enchantments):
-                message += enchantment.get("type") + "\n"
-                message += "\n\n".join(enchantment.get("tooltips"))
-                if i < len(enchantments) - 1:
-                    message += "\n\n"
-            return message
-    
-    return None
+class CaptureController(QObject):
+    """Manages a CaptureWorker and signals when capture stops."""
 
-class CaptureController:
-    """Manages *one* CaptureWorker and restarts it while the app is running."""
+    stopped = pyqtSignal()  # emitted whenever capture ends (graceful or on error)
 
     def __init__(self, overlay: Overlay, window_title: str = "The Bazaar"):
-        self._overlay = overlay
-        self._window_title = window_title
-        self._thread: Optional[QThread] = None
-        self._worker: Optional[CaptureWorker] = None
+        super().__init__()
+        self._overlay       = overlay
+        self._window_title  = window_title
+        self._thread:  Optional[QThread]  = None
+        self._worker:  Optional[CaptureWorker] = None
 
-    # ---------------------------------------------------------------------
-    #  Public API
-    # ---------------------------------------------------------------------
+    # ---------------------------- public API ------------------------------
+    def running(self) -> bool:
+        return self._worker is not None
+
     def start(self):
-        """Ensure a worker is active (if not already)."""
         if self._worker is not None:
             return  # already running
-
         logger.info("Starting CaptureWorker …")
         self._thread = QThread()
         self._worker = CaptureWorker(self._window_title)
         self._worker.moveToThread(self._thread)
 
-        # Wire up signals before booting the thread
+        # wire signals
         self._thread.started.connect(self._worker.start)
-        self._worker.message_ready.connect(self._process_image, Qt.QueuedConnection)
+        self._worker.message_ready.connect(self._display_text, Qt.QueuedConnection)
         self._worker.error.connect(self._on_worker_error)
 
         self._thread.start()
 
     def stop(self):
-        """Terminate and clean‑up the running worker (if any)."""
         if self._worker is None or self._thread is None:
             return
-
         logger.info("Stopping CaptureWorker …")
         try:
-            self._worker.stop()  # custom method added below
-        except Exception:
+            self._worker.stop()
+        except Exception:  # noqa: BLE001
             logger.exception("Error while stopping CaptureWorker")
-
         self._thread.quit()
-        self._thread.wait(3_000)  # wait up to 3 s for a graceful shutdown
-        self._thread = None
-        self._worker = None
+        self._thread.wait(3_000)
+        self._thread  = None
+        self._worker  = None
+        self.stopped.emit()  # let the outside world know we've stopped
 
-    # ------------------------------------------------------------------
-    #  Internal helpers & slots
-    # ------------------------------------------------------------------
+    # ------------------------ internal helpers ----------------------------
     def _on_worker_error(self, msg: str):
         logger.error("Capture error: %s", msg)
-        if "closed" in msg.lower():
-            # Window vanished while streaming — treat as process exit
-            self.stop()
+        # treat any error as a signal to shut down and restart later
+        self.stop()
 
-    def _process_image(self, image: Image.Image):
-        try:
-            # Persist a copy for troubleshooting
-            ts = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-            # Disabled by default — uncomment if you need raw dumps
-            # image.save(bundle_dir() / f"screenshot_{ts}.png")
+    def _display_text(self, text: str):
+        self._overlay.set_message(text)
 
-            try:
-                screenshot_text = extract_text(image)
-            except (AttributeError, PermissionError):
-                logger.debug("Transient OCR failure – frame skipped")
-                return
-            logger.info("OCR result: %s", screenshot_text)
-            message = build_message(screenshot_text)
-            if message:
-                self._overlay.set_message(message)
-        except Exception:
-            logger.exception("Unhandled exception while processing frame")
+def _attempt_start_capture(controller: "CaptureController", overlay: Overlay) -> bool:
+    """Return True if capture launched successfully."""
+    bazaar_proc = get_process_by_name("TheBazaar.exe")
+    if not bazaar_proc:
+        return False
 
-def main() -> None:  # noqa: C901
-    # 1. Start the GUI right away
-    app = QApplication(sys.argv)
-    overlay = Overlay("Waiting for The Bazaar to start...")
+    if find_process_main_window_handle(bazaar_proc.pid):
+        overlay.set_message("Bazaar process found, watching…")
+        controller.start()
+        return True
 
-    # 2. Build the controller that spins workers up/down
-    controller = CaptureController(overlay, window_title="The Bazaar")
+    return False
 
-    # 3. Poll timer — runs on the Qt event‑loop every second
+def main() -> None:
+    app      = QApplication(sys.argv)
+    overlay  = Overlay("Waiting for The Bazaar to start…")
+    controller = CaptureController(overlay)
+
+    # --- stateful timer: only active while NOT capturing ------------------
     poll_timer = QTimer()
-    poll_timer.setInterval(1_000)  # 1 s
+    poll_timer.setInterval(1000)  # 1 s
 
     def _tick():
-        # Called inside the GUI thread — cheap checks only!
-        bazaar_process = get_process_by_name("TheBazaar.exe")
-        if bazaar_process:
-            window_handle = find_process_main_window_handle(bazaar_process.pid)
-            if window_handle:
-                overlay.set_message("Bazaar process found, watching...")
-                controller.start()
-                return
-        controller.stop()
-        overlay.set_message("Waiting for The Bazaar to start...")
+        overlay.set_message("Waiting for The Bazaar to start…")
+        if controller.running():
+            return  # already capturing – skip heavy checks
+        if _attempt_start_capture(controller, overlay):
+            poll_timer.stop()  # stop polling once capture starts
 
     poll_timer.timeout.connect(_tick)
     poll_timer.start()
 
-    # Run!
+    # Restart polling whenever capture ends
+    controller.stopped.connect(lambda: poll_timer.start())
+
+    # Immediate attempt on startup (no 1 s delay for the first check)
+    _tick()
+
+    # -------------------------------------------------------------------
     try:
         sys.exit(app.exec_())
     finally:
-        controller.stop()  # Ensure clean shutdown on Ctrl‑C
+        controller.stop()
 
 if __name__ == "__main__":
     try:
