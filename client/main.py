@@ -1,21 +1,20 @@
+from datetime import datetime
 import sys
 import time
 import logging
 from pathlib import Path
 from logging.handlers import RotatingFileHandler
 from typing import Callable, TypeVar, Optional
-
 import psutil
-from window_manager import (
-    find_process_main_window_handle,
-    capture_one_frame,
-    check_if_handle_is_foreground,
+from capture_worker import (
+    CaptureWorker,
 )
 from text_extractor import extract_text
 from ui import QApplication, Overlay
-from PyQt5.QtCore import QTimer
-
+from PyQt5.QtCore import QThread, Qt
+from PIL import Image
 import json
+import time
 
 if getattr(sys, 'frozen', False):        # running inside the .exe
     system_path = Path(sys._MEIPASS)           # type: ignore[attr-defined]
@@ -99,7 +98,7 @@ def poll_function(function: Callable[[], T], poll_frequency: float = 0.5, timeou
             return None
         time.sleep(poll_frequency)
 
-def take_screenshot(process_name: str):
+def wait_for_bazaar_to_start(process_name: str = "TheBazaar.exe"):
     print(f"Getting {process_name} process...")
     bazaar_process = poll_function(lambda: get_process_by_name(process_name))
     print(f"Got {process_name} process, {bazaar_process}, getting main window...")
@@ -108,26 +107,14 @@ def take_screenshot(process_name: str):
         print("Process not found.")
         return None
 
-    window_handle = find_process_main_window_handle(bazaar_process.pid)
-    if not window_handle:
-        print("Could not find a visible window for the process.")
-        return None
-    print(f"Got {process_name} window.")
-
-    print(f"Waiting for {process_name} window to become the foreground window")
-    if not check_if_handle_is_foreground(window_handle):
-        print("Window not in foreground")
-        return None
-
-    print("Taking screenshot...")
-    return capture_one_frame("The Bazaar")
-
 def build_message(screenshot_text: str):
     for event in events:
         if event.get("name") in screenshot_text:
             print(f"found event! {event}")
+            message = event.get("name")+"\n"
             if event.get("display", True):
-                return "\n\n".join(event.get("options"))
+                message += "\n\n".join(event.get("options"))
+            return message
         
     for item in items:
         if item.get("name") in screenshot_text:
@@ -145,44 +132,42 @@ def build_message(screenshot_text: str):
     
     return None
 
+app     = QApplication(sys.argv)
+overlay = Overlay("Welcome")
+
+def process_image(image: Image):
+    try:
+        ts = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+        output_location = bundle_dir() / f"screenshot_{ts}.png"
+        print(f"Saving screenshot to {output_location.resolve()}")
+        # image.save(output_location)
+        print(f"Screenshot saved to {output_location.resolve()}")
+
+        screenshot_text = extract_text(image)
+        print(screenshot_text)
+
+        message = build_message(screenshot_text)
+        
+        if message:
+            overlay.set_message(message)
+    except Exception:                 # catches *everything* except SystemExit/KeyboardInterrupt
+        logger.exception("Unhandled exception in poll()")
+
 def main() -> None:
-    app = QApplication(sys.argv)
-    overlay = Overlay("Welcome")
+    try:
+        thread  = QThread()
+        worker  = CaptureWorker("The Bazaar")
+        worker.moveToThread(thread)
 
-    attempt = 0                     # capture in an outer-scope var
+        thread.started.connect(worker.start)
+        worker.message_ready.connect(process_image, Qt.QueuedConnection)
+        worker.error.connect(lambda msg: print("capture:", msg))
+        worker.error.connect(app.quit)
 
-    def poll():
-        nonlocal attempt
-        try:
-            screenshot = take_screenshot("TheBazaar.exe")
-            if not screenshot:
-                print("Could not take screenshot")
-                attempt += 1
-                return
-
-            output_location = bundle_dir() / f"screenshot_{attempt}.png"
-            print(f"Saving screenshot to {output_location.resolve()}")
-            screenshot.save(output_location)
-            print(f"Screenshot saved to {output_location.resolve()}")
-
-            screenshot_text = extract_text(screenshot)
-            print(screenshot_text)
-
-            message = build_message(screenshot_text)
-            
-            if message:
-                overlay.set_message(message)
-
-            attempt += 1
-        except Exception:                 # catches *everything* except SystemExit/KeyboardInterrupt
-            logger.exception("Unhandled exception in poll()")
-
-    # call `poll()` every 1 000 ms
-    timer = QTimer()
-    timer.timeout.connect(poll)
-    timer.start(1000)
-
-    sys.exit(app.exec_())
+        thread.start()
+        sys.exit(app.exec_())
+    except Exception:                 # catches *everything* except SystemExit/KeyboardInterrupt
+        logger.exception("Unhandled exception in poll()")
 
 if __name__ == "__main__":
     try:
