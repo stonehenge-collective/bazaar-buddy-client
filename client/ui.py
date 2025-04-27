@@ -167,8 +167,8 @@ class Overlay(QWidget):
         self.resize(QSize(w, h))
 
         # Desired centre point for the window
-        centre_x = int(s_w * 0.9)          # 80 % from the left
-        centre_y = int(s_h * 0.5)          # 50 % (vertical middle)
+        centre_x = int(s_w * 0.9)
+        centre_y = int(s_h * 0.7)
 
         # Convert that centre point to the window’s top-left coordinates,
         # then clamp so we never collide with the screen margin.
@@ -178,9 +178,10 @@ class Overlay(QWidget):
         self.move(x, y)
 
     def set_message(self, text: str) -> None:
+        if text == self.text:
+            return
         self.text = text
         self.label.setText(text)
-        # optional: scroll back to the top every time you change text
         self.scroll.verticalScrollBar().setValue(0)
 
 def main() -> None:

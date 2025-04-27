@@ -23,14 +23,39 @@ items_file_path = system_path / "data/items.json"
 with items_file_path.open("r", encoding="utf-8") as fp:
     items = json.load(fp).get("items")
 
+monsters_file_path = system_path / "data/monsters.json"
+
+with monsters_file_path.open("r", encoding="utf-8") as fp:
+    monsters = json.load(fp)
+
 def build_message(screenshot_text: str):
+    for monster in monsters:
+        if monster.get("name") in screenshot_text:
+            print(f"found monster! {monster.get("name")}")
+            message = monster.get("name")+"\n"
+            message += f"Health: {monster.get("health")}\n\n"
+            if monster.get("items"):
+                message += "Items\n"
+                for item in monster.get("items"):
+                    message += item.get("name")+"\n"
+                    message += "\n".join(item.get("tooltips"))
+                    message += "\n\n"
+            if monster.get("skills"):
+                message += "Skills\n"
+                for i, skill in enumerate(monster.get("skills")):
+                    message += skill.get("name")+"\n"
+                    message += "\n".join(skill.get("tooltips"))
+                    if i < len(monster.get("skills")) - 1:
+                        message += "\n\n"
+            return message
+        
     for event in events:
         if event.get("name") in screenshot_text:
             print(f"found event! {event}")
-            message = event.get("name")+"\n"
             if event.get("display", True):
+                message = event.get("name")+"\n"
                 message += "\n\n".join(event.get("options"))
-            return message
+                return message
         
     for item in items:
         if item.get("name") in screenshot_text:
@@ -45,6 +70,8 @@ def build_message(screenshot_text: str):
                 if i < len(enchantments) - 1:
                     message += "\n\n"
             return message
+        
+    
     
     return None
 
@@ -74,6 +101,7 @@ class CaptureWorker(QObject):
                 image = Image.fromarray(rgb)
                 try:
                     text = extract_text(image)
+                    print(text)
                 except (AttributeError, PermissionError):
                     self._busy = False
                     return
