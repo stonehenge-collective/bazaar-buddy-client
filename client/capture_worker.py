@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Optional
 from PIL import Image
 from windows_capture import WindowsCapture, Frame, CaptureControl
@@ -29,6 +30,9 @@ class CaptureWorker(QObject):
                 # BGRA -> RGB ndarray -> PIL.Image
                 rgb = frame.convert_to_bgr().frame_buffer[..., ::-1].copy()
                 image = Image.fromarray(rgb)
+                # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                # filename = f"frame_{timestamp}.png"
+                # image.save(filename)
                 try:
                     text = extract_text(image)
                     print(text)

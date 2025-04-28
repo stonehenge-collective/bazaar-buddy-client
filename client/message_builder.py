@@ -1,46 +1,44 @@
-import time
-from typing import Optional
-from PIL import Image
-from windows_capture import WindowsCapture, Frame, CaptureControl
-from PyQt5.QtCore import QObject, pyqtSignal
-from text_extractor import extract_text
 import json
 from pathlib import Path
 import sys
+from word_matcher import match_word
 
 if getattr(sys, 'frozen', False):        # running inside the .exe
     system_path = Path(sys._MEIPASS)           # type: ignore[attr-defined]
 else:                                    # running from source
     system_path = Path(__file__).resolve().parent
 
-events_file_path = system_path / "data/events.json"
+# -------------------------------------------------------------------
+# Load data files
+# -------------------------------------------------------------------
 
+events_file_path = system_path / "data/events.json"
 with events_file_path.open("r", encoding="utf-8") as fp:
     events = json.load(fp)
 
 items_file_path = system_path / "data/items.json"
-
 with items_file_path.open("r", encoding="utf-8") as fp:
     items = json.load(fp).get("items")
 
 monsters_file_path = system_path / "data/monsters.json"
-
 with monsters_file_path.open("r", encoding="utf-8") as fp:
     monsters = json.load(fp)
 
-word_list_path = system_path / "data/word_list.json"
-
-with word_list_path.open("r", encoding="utf-8") as fp:
-    word_list = json.load(fp)
+# -------------------------------------------------------------------
+# Build message based on OCR text
+# -------------------------------------------------------------------
 
 def build_message(screenshot_text: str):
-    matches = {word for word in word_list if word in screenshot_text}
+    matched_word = match_word(screenshot_text)
 
-    matched_word = max(matches, key=len) if matches else None
+    if not matched_word:
+        return None
 
+    # ----------------- Monsters -----------------
     for monster in monsters:
         name = monster.get("name")
-        if name == matched_word:
+        alt_text = monster.get("alt_text", None)
+        if name == matched_word or alt_text == matched_word:
             print(f"found monster! {name}")
             message = f"{name}\nHealth: {monster.get('health')}\n\n"
 
@@ -57,6 +55,7 @@ def build_message(screenshot_text: str):
                         message += "\n\n"
             return message
 
+    # ----------------- Events -----------------
     for event in events:
         name = event.get("name")
         if name == matched_word:
@@ -64,6 +63,7 @@ def build_message(screenshot_text: str):
             if event.get("display", True):
                 return f"{name}\n" + "\n\n".join(event["options"])
 
+    # ----------------- Items -----------------
     for item in items:
         name = item.get("name")
         if name == matched_word:

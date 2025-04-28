@@ -58,6 +58,9 @@ for entry in monsters:
     name = entry.get("name")
     if name:
         word_set.add(name)
+    alt_text = entry.get("alt_text")
+    if alt_text:
+        word_set.add(alt_text)
 
 # -------------------------------------------------
 # Write newline-separated word list expected by Tesseract

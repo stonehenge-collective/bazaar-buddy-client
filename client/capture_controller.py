@@ -2,7 +2,7 @@ from typing import Optional
 from capture_worker import (
     CaptureWorker,
 )
-from ui import Overlay
+from overlay import Overlay
 from PyQt5.QtCore import QThread, Qt, QObject, pyqtSignal
 from logging import Logger
 

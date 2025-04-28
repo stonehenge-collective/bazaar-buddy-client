@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 """
-Re-format “monsterEncounterDays” JSON into a flat list:
+Re-format "monsterEncounterDays" JSON into a flat list and optionally attach
+hard‑coded alternative names ("alt_text") for selected monsters.
 
+Output structure:
 [
   {
     "name": <monster cardName>,
+    "alt_text": <alternative text>  # only when available
+    "health": <monster health>,
     "items": [
       {
         "name": "<[enchantmentType ]tierType card.name>",
@@ -25,9 +29,15 @@ Re-format “monsterEncounterDays” JSON into a flat list:
 """
 
 import json
-import argparse
-from pathlib import Path
 from typing import Any, Dict, List
+
+# ---------------------------------------------------------------------------
+# Hard‑coded mapping of monster names to alternative texts. Expand as needed.
+# ---------------------------------------------------------------------------
+ALT_TEXT_MAP: Dict[str, str] = {
+    "Frost Street Champion": "Frost Street Champiox",
+    # "Some Other Monster": "Alternative name here",
+}
 
 
 def build_item_name(tier: str, base_name: str, enchantment: str | None) -> str:
@@ -42,7 +52,7 @@ def build_item_name(tier: str, base_name: str, enchantment: str | None) -> str:
 
 
 def collect_item_tooltips(card: Dict[str, Any], enchantment: str | None) -> List[str]:
-    """Card unifiedTooltips + (matching enchantment’s tooltips, if any)."""
+    """Card unifiedTooltips + matching enchantment's tooltips (if any)."""
     tips: List[str] = list(card.get("unifiedTooltips", []))
     if enchantment:
         for ench in card.get("enchantments", []):
@@ -53,20 +63,25 @@ def collect_item_tooltips(card: Dict[str, Any], enchantment: str | None) -> List
 
 
 def reformat(data: Dict[str, Any]) -> List[Dict[str, Any]]:
-    """Transform entire input structure into the flattened list."""
+    """Transform the entire input structure into the flattened list."""
     result: List[Dict[str, Any]] = []
 
     for day in data.get("monsterEncounterDays", []):
         for group in day.get("groups", []):
             for monster in group:
+                name: str = monster.get("cardName", "")
                 m: Dict[str, Any] = {
-                    "name": monster.get("cardName", ""),
+                    "name": name,
                     "health": monster.get("health", ""),
                     "items": [],
                     "skills": [],
                 }
 
-                # ---- items --------------------------------------------------
+                # Optional alt text ---------------------------------------------------
+                if name in ALT_TEXT_MAP:
+                    m["alt_text"] = ALT_TEXT_MAP[name]
+
+                # ---- items ----------------------------------------------------------
                 for itm in monster.get("items", []):
                     card = itm["card"]
                     tier: str = itm.get("tierType", "").strip()
@@ -79,7 +94,7 @@ def reformat(data: Dict[str, Any]) -> List[Dict[str, Any]]:
                         }
                     )
 
-                # ---- skills -------------------------------------------------
+                # ---- skills ---------------------------------------------------------
                 for skl in monster.get("skills", []):
                     card = skl["card"]
                     tier: str = skl.get("tierType", "").strip()
@@ -96,13 +111,13 @@ def reformat(data: Dict[str, Any]) -> List[Dict[str, Any]]:
 
 
 def main() -> None:
-    with open("monsters_raw.json") as fp:
+    with open("monsters_raw.json", "r", encoding="utf-8") as fp:
         raw = json.load(fp)
 
     formatted = reformat(raw)
 
-    with open("monsters.json", "w") as fp:
-        json.dump(formatted, fp, indent=2)
+    with open("monsters.json", "w", encoding="utf-8") as fp:
+        json.dump(formatted, fp, indent=2, ensure_ascii=False)
 
 
 if __name__ == "__main__":

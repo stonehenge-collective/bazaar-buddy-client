@@ -1,5 +1,5 @@
 import sys
-from ui import QApplication, Overlay
+from overlay import QApplication, Overlay
 from PyQt5.QtCore import QTimer
 from capture_controller import CaptureController
 from logger import logger
