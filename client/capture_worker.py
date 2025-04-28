@@ -1,79 +1,9 @@
-import time
 from typing import Optional
 from PIL import Image
 from windows_capture import WindowsCapture, Frame, CaptureControl
 from PyQt5.QtCore import QObject, pyqtSignal
 from text_extractor import extract_text
-import json
-from pathlib import Path
-import sys
-
-if getattr(sys, 'frozen', False):        # running inside the .exe
-    system_path = Path(sys._MEIPASS)           # type: ignore[attr-defined]
-else:                                    # running from source
-    system_path = Path(__file__).resolve().parent
-
-events_file_path = system_path / "data/events.json"
-
-with events_file_path.open("r", encoding="utf-8") as fp:
-    events = json.load(fp)
-
-items_file_path = system_path / "data/items.json"
-
-with items_file_path.open("r", encoding="utf-8") as fp:
-    items = json.load(fp).get("items")
-
-monsters_file_path = system_path / "data/monsters.json"
-
-with monsters_file_path.open("r", encoding="utf-8") as fp:
-    monsters = json.load(fp)
-
-def build_message(screenshot_text: str):
-    for monster in monsters:
-        if monster.get("name") in screenshot_text:
-            print(f"found monster! {monster.get("name")}")
-            message = monster.get("name")+"\n"
-            message += f"Health: {monster.get("health")}\n\n"
-            if monster.get("items"):
-                message += "Items\n"
-                for item in monster.get("items"):
-                    message += item.get("name")+"\n"
-                    message += "\n".join(item.get("tooltips"))
-                    message += "\n\n"
-            if monster.get("skills"):
-                message += "Skills\n"
-                for i, skill in enumerate(monster.get("skills")):
-                    message += skill.get("name")+"\n"
-                    message += "\n".join(skill.get("tooltips"))
-                    if i < len(monster.get("skills")) - 1:
-                        message += "\n\n"
-            return message
-        
-    for event in events:
-        if event.get("name") in screenshot_text:
-            print(f"found event! {event}")
-            if event.get("display", True):
-                message = event.get("name")+"\n"
-                message += "\n\n".join(event.get("options"))
-                return message
-        
-    for item in items:
-        if item.get("name") in screenshot_text:
-            print(f"found item! {item.get("name")}")
-            message = item.get("name")+"\n"
-            message += "\n".join(item.get("unifiedTooltips"))
-            message += "\n\n"
-            enchantments = item.get("enchantments")
-            for i, enchantment in enumerate(enchantments):
-                message += enchantment.get("type") + "\n"
-                message += "\n\n".join(enchantment.get("tooltips"))
-                if i < len(enchantments) - 1:
-                    message += "\n\n"
-            return message
-        
-    
-    
-    return None
+from message_builder import build_message
 
 class CaptureWorker(QObject):
     """Runs a single WindowsCapture session and pipes out parsed messages."""

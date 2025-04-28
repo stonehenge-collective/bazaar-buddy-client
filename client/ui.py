@@ -1,31 +1,5 @@
-#!/usr/bin/env python
-"""
-overlay_text.py – Always‑on‑top, semi‑transparent text overlay for Windows.
-
-Updates (2025‑04‑25)
---------------------
-* **Fixed initial window size** – starts at 600 × 300 px, independent of text length.
-* **Four‑corner resizing** – every corner now has a `QSizeGrip`, so the overlay can be stretched from any direction.
-* **Improved wrapping** – the label width tracks the viewport, guaranteeing long lines wrap correctly.
-* **Draggable** – click‑and‑drag anywhere in the window with the left mouse button.
-* **Scrollable** – excess text automatically scrolls inside a `QScrollArea`.
-* **Transparent scroll area** – viewport stays transparent so white text is visible on the dark overlay.
-
-Usage
------
-# 1) Install PyQt5 first:
-#    pip install PyQt5
-#
-# 2) Display a message:
-#    python overlay_text.py "Hello, world!"
-#
-#    …or pipe text:
-#    echo Hello | python overlay_text.py
-"""
-
 import signal
 import sys
-import threading
 from typing import Optional
 
 from PyQt5.QtCore import QPoint, QSize, Qt
@@ -43,21 +17,6 @@ from PyQt5.QtWidgets import (
 
 INITIAL_SIZE = QSize(300, 200)  # starting size of the overlay (width × height)
 MARGIN = 20                      # minimal margin to screen edges
-
-
-def get_text() -> str:
-    """Return text from argv, stdin, or an interactive prompt."""
-    if len(sys.argv) > 1:
-        return " ".join(sys.argv[1:]).strip()
-
-    if not sys.stdin.isatty():  # piped data
-        data = sys.stdin.read().strip()
-        if data:
-            return data
-
-    # Fallback prompt
-    return input("Enter text to display: ").strip()
-
 
 class Overlay(QWidget):
     PADDING = 16
@@ -186,10 +145,6 @@ class Overlay(QWidget):
 
 def main() -> None:
     text = "ter text to display:  display: asldfjalskdfj;alskdjf;alksdfj;alkdfj;alksdfj; alskdfj;alksnvzx,mcnv;qoirjtg;alksdjf;zlkjf;alksdjfa;lskdfja;ld"#get_text()
-    if not text:
-        print("No text provided.", file=sys.stderr)
-        sys.exit(1)
-
     app = QApplication(sys.argv)
 
     _ = Overlay(text)  # keep a reference so the window isn't garbage‑collected
