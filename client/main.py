@@ -5,6 +5,8 @@ from capture_controller import CaptureController
 from logger import logger
 from system_handler import get_process_by_name, find_process_main_window_handle
 
+
+#
 def attempt_start_capture(controller: "CaptureController", overlay: Overlay) -> bool:
     """Return True if capture launched successfully."""
     bazaar_proc = get_process_by_name("TheBazaar.exe")
@@ -18,9 +20,10 @@ def attempt_start_capture(controller: "CaptureController", overlay: Overlay) -> 
 
     return False
 
+
 def main() -> None:
-    app      = QApplication(sys.argv)
-    overlay  = Overlay("Waiting for The Bazaar to start…")
+    app = QApplication(sys.argv)
+    overlay = Overlay("Waiting for The Bazaar to start…")
     controller = CaptureController(overlay, logger)
 
     poll_timer = QTimer()
@@ -47,6 +50,7 @@ def main() -> None:
         sys.exit(app.exec_())
     finally:
         controller.stop()
+
 
 if __name__ == "__main__":
     try:
