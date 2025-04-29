@@ -5,7 +5,7 @@ from capture_controller import CaptureController
 from logger import logger
 from system_handler import get_process_by_name, find_process_main_window_handle
 
-#
+
 def attempt_start_capture(controller: "CaptureController", overlay: Overlay) -> bool:
     """Return True if capture launched successfully."""
     bazaar_proc = get_process_by_name("TheBazaar.exe")
