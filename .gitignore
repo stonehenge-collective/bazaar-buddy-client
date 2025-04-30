@@ -1,0 +1,7 @@
+**/.venv
+**/__pycache__
+**/.DS_Store
+**/launch.json
+**/dist
+**/build
+**/app.log

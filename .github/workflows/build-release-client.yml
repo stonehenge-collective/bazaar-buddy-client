@@ -1,0 +1,45 @@
+name: Build and Release Client
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+        working-directory: client
+          
+      - name: Build executable
+        run: |
+          pyinstaller --onefile main.py --add-data "tools\\tesseract;tesseract" --add-data "data;data"
+        working-directory: client
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: client/dist/main.exe
+          name: Release ${{ github.ref_name }}
+          tag_name: ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          body: |
+            Version ${{ github.ref_name }}
+            
+            ### Changes
+            - Initial release
