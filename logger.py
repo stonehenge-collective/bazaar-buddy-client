@@ -2,19 +2,11 @@ import sys
 import logging
 from pathlib import Path
 from logging.handlers import RotatingFileHandler
-
-def bundle_dir() -> Path:
-    """
-    Return the folder that holds the running script or the frozen .exe.
-    """
-    if getattr(sys, 'frozen', False):          # PyInstaller sets this
-        return Path(sys.executable).resolve().parent
-    return Path(__file__).resolve().parent      # normal (un-frozen) run
+from system_handler import SYSTEM_PATH
 
 # === Logging configuration ===
 
-# where to put the log file
-LOG_FILE = bundle_dir() / "app.log"
+LOG_FILE = SYSTEM_PATH / "app.log"
 
 # create logger
 logger = logging.getLogger()

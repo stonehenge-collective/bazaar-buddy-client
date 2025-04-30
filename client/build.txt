@@ -1,7 +1,0 @@
-pyinstaller --onefile main.py
-
-optional --no-console to hide console
-
-pyinstaller --onefile main.py `
-  --add-data "tools\\tesseract;tesseract" `
-  --add-data "data;data"

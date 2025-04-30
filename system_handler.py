@@ -2,6 +2,13 @@ from typing import Optional
 import psutil
 import win32gui
 import win32process
+from pathlib import Path
+import sys
+
+if getattr(sys, 'frozen', False):        # running inside the .exe
+    SYSTEM_PATH = Path(sys._MEIPASS)           # type: ignore[attr-defined]
+else:                                    # running from source
+    SYSTEM_PATH = Path(__file__).resolve().parent
 
 def get_process_by_name(process_name: str):
     return next(

@@ -1,7 +1,6 @@
 import signal
 import sys
 from typing import Optional
-
 from PyQt5.QtCore import QPoint, QSize, Qt
 from PyQt5.QtGui import QColor, QFont, QGuiApplication, QPainter
 from PyQt5.QtWidgets import (
@@ -13,7 +12,6 @@ from PyQt5.QtWidgets import (
     QVBoxLayout,
     QWidget,
 )
-
 
 INITIAL_SIZE = QSize(300, 200)  # starting size of the overlay (width × height)
 MARGIN = 20                      # minimal margin to screen edges

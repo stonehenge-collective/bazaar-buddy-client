@@ -1,10 +1,9 @@
-from datetime import datetime
 from typing import Optional
 from PIL import Image
 from windows_capture import WindowsCapture, Frame, CaptureControl
 from PyQt5.QtCore import QObject, pyqtSignal
 from text_extractor import extract_text
-from message_builder import build_message
+from message_getter import get_message
 
 class CaptureWorker(QObject):
     """Runs a single WindowsCapture session and pipes out parsed messages."""
@@ -35,11 +34,10 @@ class CaptureWorker(QObject):
                 # image.save(filename)
                 try:
                     text = extract_text(image)
-                    print(text)
                 except (AttributeError, PermissionError):
                     self._busy = False
                     return
-                if message := build_message(text):
+                if message := get_message(text):
                     self.message_ready.emit(message)
                 self._busy = False
             except Exception as exc:                  # noqa: BLE001
