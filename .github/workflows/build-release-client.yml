@@ -36,7 +36,7 @@ jobs:
       - name: Package Windows Release
         if: runner.os == 'Windows'
         run: |
-          Compress-Archive -Path "dist/Bazaar Oracle/*" -DestinationPath "BazaarOracle-Windows.zip"
+          Compress-Archive -Path "dist/BazaarOracle/*" -DestinationPath "BazaarOracle-Windows.zip"
 
       - name: Create / update release
         uses: softprops/action-gh-release@v1
@@ -74,7 +74,7 @@ jobs:
       - name: Package macOS Release
         if: runner.os == 'macOS'
         run: |
-          cd dist && zip -r ../BazaarOracle-macOS.zip "Bazaar Oracle.app"
+          cd dist && zip -r ../BazaarOracle-macOS.zip "BazaarOracle.app"
 
       - name: Create / update release
         uses: softprops/action-gh-release@v1
