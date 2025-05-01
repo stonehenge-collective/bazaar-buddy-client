@@ -29,20 +29,20 @@ jobs:
       - name: Build executable
         if: runner.os == 'Windows'
         run: |
-          pyinstaller main.py --noconsole --name "BazaarOracle" `
+          pyinstaller main.py --noconsole --name "BazaarBuddy" `
           --icon "assets\brand_icon.ico" --add-data "tools\windows_tesseract;tesseract" `
           --add-data "entities.json;."
 
       - name: Package Windows Release
         if: runner.os == 'Windows'
         run: |
-          Compress-Archive -Path "dist/BazaarOracle/*" -DestinationPath "BazaarOracle-Windows.zip"
+          Compress-Archive -Path "dist/BazaarBuddy/*" -DestinationPath "BazaarBuddy-Windows.zip"
 
       - name: Create / update release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            BazaarOracle-Windows.zip
+            BazaarBuddy-Windows.zip
           name: Release ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
           draft: false
@@ -67,7 +67,7 @@ jobs:
       - name: Build executable
         if: runner.os == 'macOS'
         run: |
-          pyinstaller main.py --noconsole --name "BazaarOracle" \
+          pyinstaller main.py --noconsole --name "BazaarBuddy" \
           --add-binary "tools/mac_tesseract/bin/tesseract:tools/mac_tesseract/bin" \
           --add-binary "tools/mac_tesseract/lib/*.dylib:tools/mac_tesseract/lib" \
           --add-data "tools/mac_tesseract/share/tessdata:tools/mac_tesseract/share/tessdata" \
@@ -76,13 +76,13 @@ jobs:
       - name: Package macOS Release
         if: runner.os == 'macOS'
         run: |
-          cd dist && zip -r ../BazaarOracle-macOS.zip "BazaarOracle.app"
+          cd dist && zip -r ../BazaarBuddy-macOS.zip "BazaarBuddy.app"
 
       - name: Create / update release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            BazaarOracle-macOS.zip
+            BazaarBuddy-macOS.zip
           name: Release ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
           draft: false
