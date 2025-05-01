@@ -1,28 +1,53 @@
+import platform
+
+operating_system = platform.system()
+
 import sys
 from overlay import QApplication, Overlay
+
 from PyQt5.QtCore import QTimer
 from capture_controller import CaptureController
 from logger import logger
-from system_handler import get_process_by_name, find_process_main_window_handle
+import psutil
+
+from system_handler import get_system_handler
+
 
 def attempt_start_capture(controller: "CaptureController", overlay: Overlay) -> bool:
     """Return True if capture launched successfully."""
-    bazaar_proc = get_process_by_name("TheBazaar.exe")
+    system_handler = get_system_handler()
+    logger.info("Looking for Bazaar process...")
+
+    # On macOS, the process name is different
+    process_name = "TheBazaar.exe" if operating_system == "Windows" else "The Bazaar"
+    bazaar_proc = system_handler.get_process_by_name(process_name)
+
     if not bazaar_proc:
+        logger.info(f"Could not find process with name: {process_name}")
         return False
 
-    if find_process_main_window_handle(bazaar_proc.pid):
-        overlay.set_message("Bazaar process found, watching…")
-        controller.start()
-        return True
+    logger.info(f"Found Bazaar process with PID: {bazaar_proc.pid}")
+    window_handle = system_handler.find_process_main_window_handle(bazaar_proc.pid)
 
-    return False
+    if not window_handle:
+        logger.info("Could not find main window handle for process")
+        return False
+
+    logger.info(f"Found window handle: {window_handle}")
+    overlay.set_message("Bazaar process found, watching…")
+    controller.start()
+    return True
 
 
 def main() -> None:
     app = QApplication(sys.argv)
     overlay = Overlay("Waiting for The Bazaar to start…")
-    controller = CaptureController(overlay, logger)
+
+    # Use the correct window identifier for each platform
+    if operating_system == "Windows":
+        controller = CaptureController(overlay, logger)
+    else:
+        controller = CaptureController(overlay, logger, "The Bazaar")
 
     poll_timer = QTimer()
     poll_timer.setInterval(1000)  # 1 s

@@ -1,3 +1,7 @@
+import platform
+
+operating_system = platform.system()
+
 import signal
 import sys
 from typing import Optional
@@ -14,12 +18,17 @@ from PyQt5.QtWidgets import (
 )
 
 INITIAL_SIZE = QSize(300, 200)  # starting size of the overlay (width × height)
-MARGIN = 20                      # minimal margin to screen edges
+MARGIN = 20  # minimal margin to screen edges
+
 
 class Overlay(QWidget):
     PADDING = 16
     BG_COLOR = QColor(0, 0, 0)  # painted with opacity; see __init__
-    FONT = QFont("Segoe UI", 12)
+
+    if operating_system == "Windows":
+        FONT = QFont("Segoe UI", 12)
+    else:
+        FONT = QFont("Helvetica", 12)
 
     def __init__(self, text: str):
         super().__init__(flags=Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
@@ -119,7 +128,7 @@ class Overlay(QWidget):
         s_w, s_h = screen_geom.width(), screen_geom.height()
 
         # Make sure the window fits on-screen
-        w = min(INITIAL_SIZE.width(),  s_w - 2 * MARGIN)
+        w = min(INITIAL_SIZE.width(), s_w - 2 * MARGIN)
         h = min(INITIAL_SIZE.height(), s_h - 2 * MARGIN)
         self.resize(QSize(w, h))
 
@@ -141,8 +150,9 @@ class Overlay(QWidget):
         self.label.setText(text)
         self.scroll.verticalScrollBar().setValue(0)
 
+
 def main() -> None:
-    text = "ter text to display:  display: asldfjalskdfj;alskdjf;alksdfj;alkdfj;alksdfj; alskdfj;alksnvzx,mcnv;qoirjtg;alksdjf;zlkjf;alksdjfa;lskdfja;ld"#get_text()
+    text = "ter text to display:  display: asldfjalskdfj;alskdjf;alksdfj;alkdfj;alksdfj; alskdfj;alksnvzx,mcnv;qoirjtg;alksdjf;zlkjf;alksdjfa;lskdfja;ld"  # get_text()
     app = QApplication(sys.argv)
 
     _ = Overlay(text)  # keep a reference so the window isn't garbage‑collected

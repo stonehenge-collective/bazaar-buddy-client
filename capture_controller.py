@@ -1,23 +1,23 @@
 from typing import Optional
-from capture_worker import (
-    CaptureWorker,
-)
+import platform
+from capture_worker import WindowsCaptureWorker, MacCaptureWorker, BaseCaptureWorker
 from overlay import Overlay
 from PyQt5.QtCore import QThread, Qt, QObject, pyqtSignal
 from logging import Logger
+
 
 class CaptureController(QObject):
     """Manages a CaptureWorker and signals when capture stops."""
 
     stopped = pyqtSignal()  # emitted whenever capture ends (graceful or on error)
 
-    def __init__(self, overlay: Overlay, logger: Logger, window_title: str = "The Bazaar"):
+    def __init__(self, overlay: Overlay, logger: Logger, window_identifier: str = "The Bazaar"):
         super().__init__()
-        self._overlay       = overlay
-        self._window_title  = window_title
+        self._overlay = overlay
+        self._window_identifier = window_identifier
         self._logger = logger
-        self._thread:  Optional[QThread]  = None
-        self._worker:  Optional[CaptureWorker] = None
+        self._thread: Optional[QThread] = None
+        self._worker: Optional[BaseCaptureWorker] = None
 
     # ---------------------------- public API ------------------------------
     def running(self) -> bool:
@@ -28,7 +28,13 @@ class CaptureController(QObject):
             return  # already running
         self._logger.info("Starting CaptureWorker …")
         self._thread = QThread()
-        self._worker = CaptureWorker(self._window_title)
+
+        # Create platform-specific worker
+        if platform.system() == "Windows":
+            self._worker = WindowsCaptureWorker(self._window_identifier)
+        else:  # macOS
+            self._worker = MacCaptureWorker(self._window_identifier)
+
         self._worker.moveToThread(self._thread)
 
         # wire signals
@@ -44,18 +50,17 @@ class CaptureController(QObject):
         self._logger.info("Stopping CaptureWorker …")
         try:
             self._worker.stop()
-        except Exception:  # noqa: BLE001
+        except Exception:
             self._logger.exception("Error while stopping CaptureWorker")
         self._thread.quit()
         self._thread.wait(3_000)
-        self._thread  = None
-        self._worker  = None
-        self.stopped.emit()  # let the outside world know we've stopped
+        self._thread = None
+        self._worker = None
+        self.stopped.emit()
 
     # ------------------------ internal helpers ----------------------------
     def _on_worker_error(self, msg: str):
         self._logger.error("Capture error: %s", msg)
-        # treat any error as a signal to shut down and restart later
         self.stop()
 
     def _display_text(self, text: str):
