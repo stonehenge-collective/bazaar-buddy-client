@@ -29,7 +29,7 @@ jobs:
       - name: Build executable
         if: runner.os == 'Windows'
         run: |
-          pyinstaller main.py --noconsole --name "Bazaar Oracle" `
+          pyinstaller main.py --noconsole --name "BazaarOracle" `
           --icon "assets\brand_icon.ico" --add-data "tools\windows_tesseract;tesseract" `
           --add-data "entities.json;."
 
@@ -67,7 +67,7 @@ jobs:
       - name: Build executable
         if: runner.os == 'macOS'
         run: |
-          pyinstaller main.py --noconsole --name "Bazaar Oracle" \
+          pyinstaller main.py --noconsole --name "BazaarOracle" \
           --add-data "tools/mac_tesseract:tesseract" \
           --add-data "entities.json:."
 
