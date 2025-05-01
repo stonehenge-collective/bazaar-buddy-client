@@ -70,7 +70,7 @@ jobs:
           pyinstaller main.py --noconsole --name "BazaarOracle" \
           --add-binary "tools/mac_tesseract/bin/tesseract:tools/mac_tesseract/bin" \
           --add-binary "tools/mac_tesseract/lib/*.dylib:." \
-          --add-data "tools/mac_tesseract/share/tessdata:." \
+          --add-data "tools/mac_tesseract/share/tessdata:tools/mac_tesseract/share/tessdata" \
           --add-data "entities.json:." \
           --icon "assets/brand_icon.ico"
       - name: Package macOS Release
