@@ -28,7 +28,7 @@ jobs:
           
       - name: Build executable
         run: |
-          pyinstaller main.py --onefile --noconsole --name "Bazaar Oracle" `
+          pyinstaller main.py --noconsole --name "Bazaar Oracle" `
           --icon "assets\brand_icon.ico" --add-data "tools\windows_tesseract;tesseract" `
           --add-data "entities.json;."
 
@@ -59,9 +59,9 @@ jobs:
           
       - name: Build executable
         run: |
-          pyinstaller main.py --onefile --noconsole --name "Bazaar Oracle" `
-          --icon "assets\brand_icon.ico" --add-data "tools\mac_tesseract;tesseract" `
-          --add-data "entities.json;."
+          pyinstaller main.py --noconsole --name "Bazaar Oracle" \
+          --add-data "tools/mac_tesseract:tesseract" \
+          --add-data "entities.json:."
 
       - name: Create / update release
         uses: softprops/action-gh-release@v1
