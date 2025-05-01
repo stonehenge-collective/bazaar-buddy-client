@@ -21,6 +21,7 @@ if operating_system == "Windows":
 else:
     tess_dir = SYSTEM_PATH / "tools" / "mac_tesseract"
     pytesseract.pytesseract.tesseract_cmd = str(tess_dir / "bin" / "tesseract")
+    os.environ["DYLD_LIBRARY_PATH"] = str(tess_dir / "lib")
     os.environ["TESSDATA_PREFIX"] = str(tess_dir / "share" / "tessdata")  # <- very important
 
 
