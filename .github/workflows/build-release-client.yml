@@ -68,9 +68,9 @@ jobs:
         if: runner.os == 'macOS'
         run: |
           pyinstaller main.py --noconsole --name "BazaarOracle" \
-          --add-binary "tools/mac_tesseract/bin/tesseract:bin" \
-          --add-binary "tools/mac_tesseract/lib/*.dylib:lib" \
-          --add-data "tools/mac_tesseract/share/tessdata:share/tessdata" \
+          --add-binary "tools/mac_tesseract/bin/tesseract:tools/mac_tesseract/bin" \
+          --add-binary "tools/mac_tesseract/lib/*.dylib:tools/mac_tesseract/lib" \
+          --add-data "tools/mac_tesseract/share/tessdata:tools/mac_tesseract/share/tessdata" \
           --add-data "entities.json:." \
           --icon "assets/brand_icon.ico"
       - name: Package macOS Release
