@@ -30,11 +30,11 @@ There are **two** supported ways to get Bazaar Buddy running on your machine. Ch
 ### Prerequisites
 
 * **Git** installed (or just download the ZIP of the repo)  
-* **Python 3.13** (matching the build matrix)  
+* **Python 3.13**
 * Ability to install/compile Python packages  
 
 > **Tip:** On macOS, install Python via `brew install python@3.13`.  
-> On Windows, grab the official installer and **check “Add python.exe to PATH.”**
+> On Windows, grab the official installer from https://www.python.org/downloads/release/python-3133/ and **check “Add python.exe to PATH.”**
 
 ### Step-by-step
 
