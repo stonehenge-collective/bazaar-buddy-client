@@ -40,10 +40,10 @@ There are **two** supported ways to get Bazaar Buddy running on your machine. Ch
 
 |            | **Windows** | **macOS / Linux** |
 |------------|-------------|-------------------|
-| **Clone & enter repo** | powershell:```git clone https://github.com/stonehenge-collective/bazaar-buddy-client.git cd bazaar-buddy-client``` | bash:```git clone https://github.com/stonehenge-collective/bazaar-buddy-client.git cd bazaar-buddy-client``` |
-| **Create & activate virtual env (recommended)** | powershell:```python -m venv venv .\venv\Scripts\activate``` | bash:```python3 -m venv venv source venv/bin/activate``` |
-| **Install dependencies** | powershell:```pip install -r windows_requirements.txt``` | bash:```pip install -r mac_requirements.txt``` |
-| **Run Bazaar Buddy** | powershell:```python main.py``` | bash:```python main.py``` |
+| **Clone & enter repo** | powershell:```git clone https://github.com/stonehenge-collective/bazaar-buddy-client.git``` ```cd bazaar-buddy-client``` | bash:```git clone https://github.com/stonehenge-collective/bazaar-buddy-client.git cd bazaar-buddy-client``` |
+| **Create & activate virtual env (recommended)** | ```python -m venv venv .\venv\Scripts\activate``` | ```python3 -m venv venv source venv/bin/activate``` |
+| **Install dependencies** | ```pip install -r windows_requirements.txt``` | ```pip install -r mac_requirements.txt``` |
+| **Run Bazaar Buddy** | ```python main.py``` | ```python main.py``` |
 
 The overlay window will launch; keep it running while you play **The Bazaar**.
 
