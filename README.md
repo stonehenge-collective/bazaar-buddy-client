@@ -31,8 +31,7 @@ There are **two** supported ways to get Bazaar Buddy running on your machine. Ch
 
 * **Git** installed (or just download the ZIP of the repo)  
 * **Python 3.13**
-* Ability to install/compile Python packages
-* Tesseract installed on system (`brew install tesseract` (mac))   
+* Ability to install/compile Python packages 
 
 > **Tip:** On macOS, install Python via `brew install python@3.13`.  
 > On Windows, grab the official installer from https://www.python.org/downloads/release/python-3133/ and **check “Add python.exe to PATH.”**
