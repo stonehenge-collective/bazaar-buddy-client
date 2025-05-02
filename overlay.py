@@ -1,7 +1,3 @@
-import platform
-
-operating_system = platform.system()
-
 import signal
 import sys
 from typing import Optional
@@ -9,7 +5,6 @@ from typing import Optional
 from PyQt5.QtCore import QPoint, QSize, Qt
 from PyQt5.QtGui import QColor, QFont, QGuiApplication, QPainter
 from PyQt5.QtWidgets import (
-    QApplication,
     QLabel,
     QPushButton,
     QScrollArea,
@@ -18,6 +13,7 @@ from PyQt5.QtWidgets import (
     QVBoxLayout,
     QWidget,
 )
+from system_handler import OPERATING_SYSTEM
 
 INITIAL_SIZE = QSize(300, 200)  # starting size of the overlay (width × height)
 MARGIN = 20  # minimal margin to screen edges
@@ -27,7 +23,7 @@ class Overlay(QWidget):
     PADDING = 10
     BG_COLOR = QColor(0, 0, 0)
 
-    if operating_system == "Windows":
+    if OPERATING_SYSTEM == "Windows":
         FONT = QFont("Segoe UI", 12)
     else:
         FONT = QFont("Helvetica", 12)

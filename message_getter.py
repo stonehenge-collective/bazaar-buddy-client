@@ -26,6 +26,7 @@ def match_keyword(text: str, threshold: int = 80):
     return word
 
 def get_message(screenshot_text: str):
+    print(f"matching screenshot text, {screenshot_text}")
     matched_word = match_keyword(screenshot_text)
 
     if not matched_word:

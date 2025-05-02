@@ -1,44 +1,41 @@
 import sys
 import logging
-from pathlib import Path
 from logging.handlers import RotatingFileHandler
-from system_handler import SYSTEM_PATH
+from pathlib import Path
 
-# === Logging configuration ===
+LOG_FILE = Path(__file__).with_name("app.log")
 
-LOG_FILE = SYSTEM_PATH / "app.log"
-
-# create logger
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-# file handler with rotation (max 5 MB per file, keep 3 backups)
+# 1️⃣  File handler – always safe
 file_handler = RotatingFileHandler(
-    filename=str(LOG_FILE),
+    LOG_FILE,
     maxBytes=5 * 1024 * 1024,
     backupCount=3,
-    encoding='utf-8'
+    encoding="utf-8"
 )
-file_fmt = logging.Formatter("%(asctime)s %(levelname)-8s %(message)s")
-file_handler.setFormatter(file_fmt)
+fmt = logging.Formatter("%(asctime)s %(levelname)-8s %(message)s")
+file_handler.setFormatter(fmt)
 logger.addHandler(file_handler)
 
-# console handler (writes to the original stdout)
-console_handler = logging.StreamHandler(stream=sys.__stdout__)
-console_handler.setFormatter(file_fmt)
-logger.addHandler(console_handler)
+# 2️⃣  Console handler – only if stdout really exists
+if sys.__stdout__ is not None:          # works when you build *without* --noconsole
+    console_handler = logging.StreamHandler(stream=sys.__stdout__)
+    console_handler.setFormatter(fmt)
+    logger.addHandler(console_handler)
 
-# helper to redirect print → logger.info
+# 3️⃣  Helper that redirects print(...) to the logger
 class LoggerWriter:
-    def __init__(self, level: int):
+    def __init__(self, level):
         self.level = level
-    def write(self, message):
-        msg = message.rstrip('\n')
+    def write(self, msg):
+        msg = msg.rstrip("\n")
         if msg:
             logger.log(self.level, msg)
-    def flush(self):
+    def flush(self):                    # required for file-like objects
         pass
 
-# redirect stdout/stderr
+# Redirect the high-level streams (safe even in windowed mode)
 sys.stdout = LoggerWriter(logging.INFO)
 sys.stderr = LoggerWriter(logging.ERROR)

@@ -11,6 +11,7 @@ if getattr(sys, "frozen", False):
 else:
     SYSTEM_PATH = Path(__file__).parent
 
+OPERATING_SYSTEM = platform.system()
 
 class BaseSystemHandler(ABC):
     """Base class for system-specific process and window handling."""
@@ -83,7 +84,7 @@ class MacSystemHandler(BaseSystemHandler):
 
 def get_system_handler() -> BaseSystemHandler:
     """Factory function to get the appropriate system handler for the current platform."""
-    if platform.system() == "Windows":
+    if OPERATING_SYSTEM == "Windows":
         return WindowsSystemHandler()
     else:
         return MacSystemHandler()

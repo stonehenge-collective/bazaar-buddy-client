@@ -1,14 +1,8 @@
 from typing import Optional
 from PIL import Image
-import numpy as np
-from PyQt5.QtCore import QObject, pyqtSignal, QTimer, QRect
-from PyQt5.QtGui import QScreen, QWindow
-from PyQt5.QtWidgets import QApplication
+from PyQt5.QtCore import QObject, pyqtSignal, QTimer
 from text_extractor import extract_text
 from message_getter import get_message
-import logging
-
-logger = logging.getLogger(__name__)
 
 
 class BaseCaptureWorker(QObject):
@@ -111,7 +105,7 @@ class MacCaptureWorker(BaseCaptureWorker):
                         return window.get("kCGWindowNumber")
             return None
         except ImportError:
-            logger.error("Could not import Quartz. Make sure pyobjc is installed")
+            print("Could not import Quartz. Make sure pyobjc is installed")
             return None
 
     def _capture_frame(self) -> None:
@@ -167,7 +161,7 @@ class MacCaptureWorker(BaseCaptureWorker):
                 QTimer.singleShot(0, self._capture_frame)
 
         except Exception as exc:
-            logger.error(f"Capture error: {exc}")
+            print(f"Capture error: {exc}")
             self.error.emit(str(exc))
 
     def start(self) -> None:

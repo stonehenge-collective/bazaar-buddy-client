@@ -1,17 +1,12 @@
-import platform
-
-operating_system = platform.system()
-
 import sys
-from overlay import QApplication, Overlay
-
+from overlay import Overlay
+from PyQt5.QtWidgets import QApplication
+from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import QTimer
 from capture_controller import CaptureController
 from logger import logger
-import psutil
 
-from system_handler import get_system_handler
-
+from system_handler import get_system_handler, OPERATING_SYSTEM, SYSTEM_PATH
 
 def attempt_start_capture(controller: "CaptureController", overlay: Overlay) -> bool:
     """Return True if capture launched successfully."""
@@ -19,7 +14,7 @@ def attempt_start_capture(controller: "CaptureController", overlay: Overlay) -> 
     logger.info("Looking for Bazaar process...")
 
     # On macOS, the process name is different
-    process_name = "TheBazaar.exe" if operating_system == "Windows" else "The Bazaar"
+    process_name = "TheBazaar.exe" if OPERATING_SYSTEM == "Windows" else "The Bazaar"
     bazaar_proc = system_handler.get_process_by_name(process_name)
 
     if not bazaar_proc:
@@ -40,14 +35,15 @@ def attempt_start_capture(controller: "CaptureController", overlay: Overlay) -> 
 
 
 def main() -> None:
+    if OPERATING_SYSTEM == "Windows":
+        import ctypes, sys
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(
+            u"StonehengeCollective.BazaarBuddy")
+        
     app = QApplication(sys.argv)
+    app.setWindowIcon(QIcon(str(SYSTEM_PATH / "assets" / "brand_icon.ico")))
     overlay = Overlay("Waiting for The Bazaar to start…")
-
-    # Use the correct window identifier for each platform
-    if operating_system == "Windows":
-        controller = CaptureController(overlay, logger)
-    else:
-        controller = CaptureController(overlay, logger, "The Bazaar")
+    controller = CaptureController(overlay, logger)
 
     poll_timer = QTimer()
     poll_timer.setInterval(1000)  # 1 s

@@ -1,20 +1,9 @@
-import platform
-import logging
-
-# Set up logging
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
-
-operating_system = platform.system()
-logger.debug(f"Operating system: {operating_system}")
-
-from pathlib import Path
-import os, sys
+import os
 from PIL import Image
 import pytesseract
-from system_handler import SYSTEM_PATH
+from system_handler import SYSTEM_PATH, OPERATING_SYSTEM
 
-if operating_system == "Windows":
+if OPERATING_SYSTEM == "Windows":
     tess_dir = SYSTEM_PATH / "tools" / "windows_tesseract"
     pytesseract.pytesseract.tesseract_cmd = str(tess_dir / "tesseract.exe")
     os.environ["TESSDATA_PREFIX"] = str(tess_dir / "tessdata")  # <- very important
@@ -27,12 +16,12 @@ else:
 
 def extract_text(image: Image) -> str:
     try:
-        logger.debug("Attempting to extract text from image")
+        print("Attempting to extract text from image")
         result = pytesseract.image_to_string(image, lang="eng", config="bazaar_terms")
-        logger.debug(f"Extracted text: {result}")
+        print(f"Extracted text: {result}")
         return result
     except Exception as e:
-        logger.error(f"Error extracting text: {str(e)}")
+        print(f"Error extracting text: {str(e)}")
         raise
 
 

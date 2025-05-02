@@ -25,24 +25,18 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r windows_requirements.txt
-          
-      - name: Build executable
-        if: runner.os == 'Windows'
-        run: |
-          pyinstaller main.py --noconsole --name "BazaarBuddy" `
-          --icon "assets\brand_icon.ico" --add-data "tools\windows_tesseract;tesseract" `
-          --add-data "entities.json;."
 
-      - name: Package Windows Release
-        if: runner.os == 'Windows'
+      - name: Build executable (one-file bundle)
         run: |
-          Compress-Archive -Path "dist/BazaarBuddy/*" -DestinationPath "BazaarBuddy-Windows.zip"
+          pyinstaller main.py --noconsole --noconfirm --onefile --name "Bazaar Buddy" `
+          --icon "assets\\brand_icon.ico" --add-data "tools\\windows_tesseract;tools\\windows_tesseract" `
+          --add-data "entities.json;." --add-data "assets\\brand_icon.ico;assets"
 
       - name: Create / update release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            BazaarBuddy-Windows.zip
+            'dist/Bazaar Buddy.exe'
           name: Release ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
           draft: false
@@ -63,26 +57,21 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r mac_requirements.txt
-          
-      - name: Build executable
-        if: runner.os == 'macOS'
+
+      - name: Build executable (one-file bundle)
         run: |
-          pyinstaller main.py --noconsole --name "BazaarBuddy" \
+          pyinstaller main.py --noconsole --noconfirm --onefile --name "BazaarBuddy" \
           --add-binary "tools/mac_tesseract/bin/tesseract:tools/mac_tesseract/bin" \
           --add-binary "tools/mac_tesseract/lib/*.dylib:tools/mac_tesseract/lib" \
           --add-data "tools/mac_tesseract/share/tessdata:tools/mac_tesseract/share/tessdata" \
           --add-data "entities.json:." \
           --icon "assets/brand_icon.ico"
-      - name: Package macOS Release
-        if: runner.os == 'macOS'
-        run: |
-          cd dist && zip -r ../BazaarBuddy-macOS.zip "BazaarBuddy.app"
 
       - name: Create / update release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            BazaarBuddy-macOS.zip
+            dist/BazaarBuddy.app
           name: Release ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
           draft: false
