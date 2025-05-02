@@ -15,7 +15,7 @@ There are **two** supported ways to get Bazaar Buddy running on your machine. Ch
 |            | **Windows** | **macOS** |
 |------------|-------------|-----------|
 | **Download** | 1. Visit the project’s [GitHub Releases](https://github.com/stonehenge-collective/bazaar-buddy-client/releases) page. 2. Grab the latest `BazaarBuddy.exe`. | 1. Visit the [GitHub Releases](https://github.com/stonehenge-collective/bazaar-buddy-client/releases) page. 2. Download `BazaarBuddy-mac.zip` and unzip it (you’ll get `BazaarBuddy.app`). |
-| **First-run (unsigned binary)** | 1. Double-click the downloaded `.exe`. 2. Windows SmartScreen will pop up → click **“More info”** → **“Run anyway.”** 3. If Windows still blocks it, right-click the file → **Properties** → check **“Unblock,”** then run it again. | 1. Move `BazaarBuddy.app` to **Applications** (optional, but tidy). 2. Control-click **BazaarBuddy.app** → **Open**. Gatekeeper warns it’s from an unidentified developer → click **Open**. macOS remembers your choice; future launches work normally. |
+| **First-run (unsigned binary)** | 1. Double-click the downloaded `.exe`. 2. Windows SmartScreen will pop up → click **“More info”** → **“Run anyway.”** 3. If Windows still blocks it, right-click the file → **Properties** → check **“Unblock,”** then run it again. | 1. Move `BazaarBuddy.app` to **Applications**. 2. Control-click **BazaarBuddy.app** → **Open**. Gatekeeper warns it’s from an unidentified developer. Close the warning, open **System Settings** and click **Privacy and Security** on the left selection pane. Scroll to the bottom in the right pane and you will see `BazaarBuddy.app` with an option to **open anyway**. Click and follow the prompts to open the app. Once the app opens and a Bazaar window is detected you will be prompted to allow `BazaarBuddy.app` to capture your screen (take screenshots of the Bazaar window only). Follow the prompt to open the settings and give `BazaarBuddy` access. It will prompt you to quit and reopen the app. |
 | **That’s it!** | A Bazaar Buddy icon appears in your taskbar/system-tray. Hover an item in-game and watch the overlay pop up. | The app’s icon shows up in the Dock and menu bar. Hover an item in-game to see the overlay. |
 
 ---
@@ -31,7 +31,8 @@ There are **two** supported ways to get Bazaar Buddy running on your machine. Ch
 
 * **Git** installed (or just download the ZIP of the repo)  
 * **Python 3.13**
-* Ability to install/compile Python packages  
+* Ability to install/compile Python packages
+* Tesseract installed on system (`brew install tesseract` (mac))   
 
 > **Tip:** On macOS, install Python via `brew install python@3.13`.  
 > On Windows, grab the official installer from https://www.python.org/downloads/release/python-3133/ and **check “Add python.exe to PATH.”**
