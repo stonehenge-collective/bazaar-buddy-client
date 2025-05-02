@@ -29,7 +29,5 @@ Bazaar Buddy makes it easier to do something you're already doing: reading text 
 
 There's no way Reynad could know that you're using Bazaar Buddy, because it operates entirely outside of The Bazaar. Bazaar Buddy uses only free, publicly available Bazaar data, gathered from public websites like <https://www.howbazaar.gg/>, <https://mobalytics.gg/the-bazaar/>, and <https://thebazaar.wiki.gg/>.
 
-## How large is Bazaar Buddy? Will it use all of my CPU and RAM?
-
 ## What's the long term plan for Bazaar Buddy?
 If Reynad doesn't immediately shut us down, we plan to collect statistics on how player choices correlate with outcomes and then to sell access to advanced statistics via a subscription model. We will never offer features which provide an in-game advantage, like simulated monster fights or board arrangement optimizers. We will make it very clear if/when we add data collection to the client, and there will always be an open source option which does not collect any data.
