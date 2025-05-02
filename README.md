@@ -4,8 +4,57 @@ I got tired of alt-tabbing to howbazaar to look up item upgrades and enchants an
 # What Bazaar Buddy does
 When you hover over an item, event, or monster in game, Bazaar Buddy shows you information about what you're hovering, including item upgrade paths and enchantment effects, event options, and monster health, boards, and skills - all the information you could get from howbazaar, mobalytics, or the wiki. It's completely free and open source, runs entirely locally, does not require an account, and collects no data.
 
-# How to get Bazaar Buddy
-Bazaar Buddy's source code is hosted on a public GitHub repository, which includes instructions on how to run it: <https://github.com/stonehenge-collective/bazaar-buddy-client>. We also have a Discord server for support and feature suggestions: <https://discord.gg/xyakvUqN>.
+# How to use Bazaar Buddy
+
+There are **two** supported ways to get Bazaar Buddy running on your machine. Choose the one that suits you best.
+
+---
+
+## 1. Download a Pre-built Release (No Coding Required)
+
+|            | **Windows** | **macOS** |
+|------------|-------------|-----------|
+| **Download** | 1. Visit the project’s [GitHub Releases](https://github.com/stonehenge-collective/bazaar-buddy-client/releases) page.<br>2. Grab the latest `BazaarBuddy.exe`. | 1. Visit the [GitHub Releases](https://github.com/stonehenge-collective/bazaar-buddy-client/releases) page.<br>2. Download `BazaarBuddy-mac.zip` and unzip it (you’ll get `BazaarBuddy.app`). |
+| **First-run (unsigned binary)** | 1. Double-click the downloaded `.exe`.<br>2. Windows SmartScreen will pop up → click **“More info”** → **“Run anyway.”**<br>3. If Windows still blocks it, right-click the file → **Properties** → check **“Unblock,”** then run it again. | 1. Move `BazaarBuddy.app` to **Applications** (optional, but tidy).<br>2. Control-click **BazaarBuddy.app** → **Open**. Gatekeeper warns it’s from an unidentified developer → click **Open**. macOS remembers your choice; future launches work normally. |
+| **That’s it!** | A Bazaar Buddy icon appears in your taskbar/system-tray. Hover an item in-game and watch the overlay pop up. | The app’s icon shows up in the Dock and menu bar. Hover an item in-game to see the overlay. |
+
+---
+
+## 2. Run from Source (For Developers & Power Users)
+
+> **Why run from source?**  
+> • You want to help develop Bazaar Buddy  
+> • You don’t trust unsigned binaries  
+> • You prefer using the very latest commit
+
+### Prerequisites
+
+* **Git** installed (or just download the ZIP of the repo)  
+* **Python 3.13** (matching the build matrix)  
+* Ability to install/compile Python packages  
+
+> **Tip:** On macOS, install Python via `brew install python@3.13`.  
+> On Windows, grab the official installer and **check “Add python.exe to PATH.”**
+
+### Step-by-step
+
+|            | **Windows** | **macOS / Linux** |
+|------------|-------------|-------------------|
+| **Clone & enter repo** | ```powershell<br>git clone https://github.com/stonehenge-collective/bazaar-buddy-client.git<br>cd bazaar-buddy-client``` | ```bash<br>git clone https://github.com/stonehenge-collective/bazaar-buddy-client.git<br>cd bazaar-buddy-client``` |
+| **Create & activate virtual env (recommended)** | ```powershell<br>python -m venv venv<br>.\venv\Scripts\activate``` | ```bash<br>python3 -m venv venv<br>source venv/bin/activate``` |
+| **Install dependencies** | ```powershell<br>pip install -r windows_requirements.txt``` | ```bash<br>pip install -r mac_requirements.txt``` |
+| **Run Bazaar Buddy** | ```powershell<br>python main.py``` | ```bash<br>python main.py``` |
+
+The overlay window will launch; keep it running while you play **The Bazaar**.
+
+### Security prompts when running from source
+
+* **Windows:** You may get a “Windows Defender SmartScreen” prompt for Python on first launch—choose **“Run anyway.”**
+* **macOS:** The first time you run `python main.py`, macOS may warn that “python” was downloaded from the internet. Go to **System Settings → Privacy & Security** and click **“Allow Anyway.”** Re-run the command.
+
+## Having Trouble?
+
+* **Join our Discord:** <https://discord.gg/xyakvUqN> – we’re happy to help!  
 
 # How Bazaar Buddy works
 Bazaar Buddy takes screenshots of The Bazaar's window, uses AI to extract text from those screenshots, looks that text up in a list of Bazaar terms, and displays information about what it finds in a window on your screen.
