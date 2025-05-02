@@ -36,7 +36,7 @@ def attempt_start_capture(controller: "CaptureController", overlay: Overlay) -> 
 
 def main() -> None:
     if OPERATING_SYSTEM == "Windows":
-        import ctypes, sys
+        import ctypes
         ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(
             u"StonehengeCollective.BazaarBuddy")
         
