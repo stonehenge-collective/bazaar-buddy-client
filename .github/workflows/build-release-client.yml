@@ -60,7 +60,7 @@ jobs:
 
       - name: Build executable (one-file bundle)
         run: |
-          pyinstaller main.py --noconsole --noconfirm --onefile --name "BazaarBuddy" \
+          pyinstaller main.py --noconsole --noconfirm --name "BazaarBuddy" \
           --add-binary "tools/mac_tesseract/bin/tesseract:tools/mac_tesseract/bin" \
           --add-binary "tools/mac_tesseract/lib/*.dylib:tools/mac_tesseract/lib" \
           --add-data "tools/mac_tesseract/share/tessdata:tools/mac_tesseract/share/tessdata" \
