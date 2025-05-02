@@ -14,8 +14,8 @@ There are **two** supported ways to get Bazaar Buddy running on your machine. Ch
 
 |            | **Windows** | **macOS** |
 |------------|-------------|-----------|
-| **Download** | 1. Visit the project’s [GitHub Releases](https://github.com/stonehenge-collective/bazaar-buddy-client/releases) page.<br>2. Grab the latest `BazaarBuddy.exe`. | 1. Visit the [GitHub Releases](https://github.com/stonehenge-collective/bazaar-buddy-client/releases) page.<br>2. Download `BazaarBuddy-mac.zip` and unzip it (you’ll get `BazaarBuddy.app`). |
-| **First-run (unsigned binary)** | 1. Double-click the downloaded `.exe`.<br>2. Windows SmartScreen will pop up → click **“More info”** → **“Run anyway.”**<br>3. If Windows still blocks it, right-click the file → **Properties** → check **“Unblock,”** then run it again. | 1. Move `BazaarBuddy.app` to **Applications** (optional, but tidy).<br>2. Control-click **BazaarBuddy.app** → **Open**. Gatekeeper warns it’s from an unidentified developer → click **Open**. macOS remembers your choice; future launches work normally. |
+| **Download** | 1. Visit the project’s [GitHub Releases](https://github.com/stonehenge-collective/bazaar-buddy-client/releases) page. 2. Grab the latest `BazaarBuddy.exe`. | 1. Visit the [GitHub Releases](https://github.com/stonehenge-collective/bazaar-buddy-client/releases) page. 2. Download `BazaarBuddy-mac.zip` and unzip it (you’ll get `BazaarBuddy.app`). |
+| **First-run (unsigned binary)** | 1. Double-click the downloaded `.exe`. 2. Windows SmartScreen will pop up → click **“More info”** → **“Run anyway.”** 3. If Windows still blocks it, right-click the file → **Properties** → check **“Unblock,”** then run it again. | 1. Move `BazaarBuddy.app` to **Applications** (optional, but tidy). 2. Control-click **BazaarBuddy.app** → **Open**. Gatekeeper warns it’s from an unidentified developer → click **Open**. macOS remembers your choice; future launches work normally. |
 | **That’s it!** | A Bazaar Buddy icon appears in your taskbar/system-tray. Hover an item in-game and watch the overlay pop up. | The app’s icon shows up in the Dock and menu bar. Hover an item in-game to see the overlay. |
 
 ---
@@ -40,10 +40,10 @@ There are **two** supported ways to get Bazaar Buddy running on your machine. Ch
 
 |            | **Windows** | **macOS / Linux** |
 |------------|-------------|-------------------|
-| **Clone & enter repo** | ```powershell<br>git clone https://github.com/stonehenge-collective/bazaar-buddy-client.git<br>cd bazaar-buddy-client``` | ```bash<br>git clone https://github.com/stonehenge-collective/bazaar-buddy-client.git<br>cd bazaar-buddy-client``` |
-| **Create & activate virtual env (recommended)** | ```powershell<br>python -m venv venv<br>.\venv\Scripts\activate``` | ```bash<br>python3 -m venv venv<br>source venv/bin/activate``` |
-| **Install dependencies** | ```powershell<br>pip install -r windows_requirements.txt``` | ```bash<br>pip install -r mac_requirements.txt``` |
-| **Run Bazaar Buddy** | ```powershell<br>python main.py``` | ```bash<br>python main.py``` |
+| **Clone & enter repo** | powershell:```git clone https://github.com/stonehenge-collective/bazaar-buddy-client.git cd bazaar-buddy-client``` | bash:```git clone https://github.com/stonehenge-collective/bazaar-buddy-client.git cd bazaar-buddy-client``` |
+| **Create & activate virtual env (recommended)** | powershell:```python -m venv venv .\venv\Scripts\activate``` | bash:```python3 -m venv venv source venv/bin/activate``` |
+| **Install dependencies** | powershell:```pip install -r windows_requirements.txt``` | bash:```pip install -r mac_requirements.txt``` |
+| **Run Bazaar Buddy** | powershell:```python main.py``` | bash:```python main.py``` |
 
 The overlay window will launch; keep it running while you play **The Bazaar**.
 
@@ -52,7 +52,7 @@ The overlay window will launch; keep it running while you play **The Bazaar**.
 * **Windows:** You may get a “Windows Defender SmartScreen” prompt for Python on first launch—choose **“Run anyway.”**
 * **macOS:** The first time you run `python main.py`, macOS may warn that “python” was downloaded from the internet. Go to **System Settings → Privacy & Security** and click **“Allow Anyway.”** Re-run the command.
 
-## Having Trouble?
+## Having Trouble or want to contribute?
 
 * **Join our Discord:** <https://discord.gg/xyakvUqN> – we’re happy to help!  
 
