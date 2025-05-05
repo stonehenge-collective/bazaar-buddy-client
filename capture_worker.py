@@ -44,11 +44,14 @@ class WindowsCaptureWorker(BaseCaptureWorker):
     def __init__(self, window_identifier: str):
         super().__init__()
         from windows_capture import WindowsCapture, Frame, CaptureControl
+        import sys, platform
+        major, minor, build, *_ = sys.getwindowsversion()
 
+        supports_borderless = build >= 22000      # Win 11
         self._cap = WindowsCapture(
             window_name=window_identifier,
             cursor_capture=False,
-            draw_border=False,
+            draw_border=False if supports_borderless else None
         )
         self._control: Optional[CaptureControl] = None
 

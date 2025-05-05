@@ -31,14 +31,16 @@ def extract_text_from_file(image_path: str) -> str:
 
 
 if __name__ == "__main__":
-    from message_getter import match_keyword
+    from message_getter import match_keyword, get_message
 
     image_name = "the_cult"
     entity_name = "The Cult"
     # image_name = "force_field"
     # entity_name = "Force Field"
-    image_name = "frost_street_champion"
-    entity_name = "Frost Street Champion"
+    # image_name = "frost_street_champion"
+    # entity_name = "Frost Street Champion"
+    image_name = "piano"
+    entity_name = "Piano"
     success_counter = 0
     for x in range(30):
         result = extract_text_from_file(f"screenshot_examples/{image_name}.png")
@@ -47,4 +49,5 @@ if __name__ == "__main__":
         print(matched_word)
         if matched_word == entity_name:
             success_counter += 1
+        print(get_message(result))
     print(success_counter)
