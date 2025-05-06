@@ -13,6 +13,10 @@ else:
 
 OPERATING_SYSTEM = platform.system()
 
+# true is we are running from source (i.e. python main.py)
+IS_LOCAL = getattr(sys, "frozen", False) == False
+
+
 class BaseSystemHandler(ABC):
     """Base class for system-specific process and window handling."""
 

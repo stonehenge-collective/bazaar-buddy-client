@@ -2,7 +2,7 @@ import signal
 import sys
 from typing import Optional
 
-from PyQt5.QtCore import QPoint, QSize, Qt
+from PyQt5.QtCore import QPoint, QSize, Qt, pyqtSignal
 from PyQt5.QtGui import QColor, QFont, QGuiApplication, QPainter
 from PyQt5.QtWidgets import (
     QLabel,
@@ -12,6 +12,7 @@ from PyQt5.QtWidgets import (
     QSizePolicy,
     QVBoxLayout,
     QWidget,
+    QHBoxLayout,
 )
 from system_handler import OPERATING_SYSTEM
 
@@ -27,6 +28,9 @@ class Overlay(QWidget):
         FONT = QFont("Segoe UI", 12)
     else:
         FONT = QFont("Helvetica", 12)
+
+    yes_clicked = pyqtSignal()
+    no_clicked = pyqtSignal()
 
     def __init__(self, text: str):
         super().__init__(flags=Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
@@ -89,8 +93,7 @@ class Overlay(QWidget):
 
     def _build_ui(self) -> None:
         # ----- Text inside a scroll area -----
-        self.label = QLabel(self.text, wordWrap=True,
-                            alignment=Qt.AlignLeft | Qt.AlignTop)
+        self.label = QLabel(self.text, wordWrap=True, alignment=Qt.AlignLeft | Qt.AlignTop)
         self.label.setFont(self.FONT)
         self.label.setStyleSheet("color: white; background: transparent;")
         self.label.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred)
@@ -104,8 +107,7 @@ class Overlay(QWidget):
 
         # ----- Main layout -----
         layout = QVBoxLayout(self)
-        layout.setContentsMargins(self.PADDING, self.PADDING,
-                                  self.PADDING, self.PADDING)
+        layout.setContentsMargins(self.PADDING, self.PADDING, self.PADDING, self.PADDING)
         layout.addWidget(self.scroll)
 
         # ----- Corner size grips -----
@@ -127,7 +129,8 @@ class Overlay(QWidget):
         # ----- Style the vertical scrollbar -----
         bar = self.scroll.verticalScrollBar()
         top_margin = self.close_button.height() + self.PADDING // 2
-        bar.setStyleSheet(f"""
+        bar.setStyleSheet(
+            f"""
             QScrollBar:vertical {{
                 background: transparent;
                 width: 12px;
@@ -150,7 +153,8 @@ class Overlay(QWidget):
             QScrollBar::sub-page:vertical {{
                 background: none;
             }}
-        """)
+        """
+        )
 
     def _layout_overlay(self) -> None:
         screen_geom = QGuiApplication.primaryScreen().geometry()
@@ -182,6 +186,46 @@ class Overlay(QWidget):
         self.text = text
         self.label.setText(text)
         self.scroll.verticalScrollBar().setValue(0)
+
+    def show_prompt_buttons(self, question, yes_text=None, no_text=None):
+        self.set_message(question)
+
+        # Create and position buttons
+        self.button_container = QWidget(self)
+        button_layout = QHBoxLayout(self.button_container)
+
+        if yes_text:
+            yes_button = QPushButton(yes_text, self)
+            yes_button.setStyleSheet("background: #4CAF50; color: white; border-radius: 4px; padding: 6px;")
+            button_layout.addWidget(yes_button)
+            yes_button.clicked.connect(lambda: self._handle_button_click(True))
+
+        if no_text:
+            no_button = QPushButton(no_text, self)
+            no_button.setStyleSheet("background: #F44336; color: white; border-radius: 4px; padding: 6px;")
+            button_layout.addWidget(no_button)
+            no_button.clicked.connect(lambda: self._handle_button_click(False))
+
+        self.button_container.setGeometry(
+            self.PADDING, self.height() - 50 - self.PADDING, self.width() - 2 * self.PADDING, 50
+        )
+        self.button_container.show()
+
+    def _handle_button_click(self, is_yes):
+        if self.button_container:
+            self.button_container.deleteLater()
+            self.button_container = None
+
+        if is_yes:
+            self.yes_clicked.emit()
+        else:
+            self.no_clicked.emit()
+
+    def hide_prompt_buttons(self):
+        if hasattr(self, "button_container") and self.button_container:
+            self.button_container.deleteLater()
+            self.button_container = None
+
 
 def main() -> None:
     text = (
