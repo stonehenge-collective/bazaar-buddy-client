@@ -18,6 +18,10 @@ class BazaarMonitor:
         self.poll_timer.setInterval(1000)
         self.poll_timer.timeout.connect(self._tick)
         self.controller.stopped.connect(self.start_polling)
+        """
+        this is how we trigger the main loop to start polling. When the updater has completed,
+        we emit the update_completed signal and begin the core capture loop.
+        """
         self.updater.update_completed.connect(self.start_polling)
 
     def attempt_start_capture(self) -> bool:
