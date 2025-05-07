@@ -29,7 +29,7 @@ def attempt_start_capture(controller: "CaptureController", overlay: Overlay) -> 
         return False
 
     logger.info(f"Found window handle: {window_handle}")
-    overlay.set_message("Hello")
+    overlay.set_message("Bazaar process found, watching…")
     controller.start()
     return True
 
