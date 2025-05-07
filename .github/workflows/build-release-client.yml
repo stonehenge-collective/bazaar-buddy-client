@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v[0-9]+.[0-9]+.[0-9]+'
+      - 'v[0-9]+.[0-9]+.[0-9]+-beta'
 
 permissions:
   contents: write
@@ -39,7 +40,7 @@ jobs:
             dist/BazaarBuddy.exe
           name: Release ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
-          draft: false
+          draft: ${{ endsWith(github.ref_name, '-beta') }}
           prerelease: false
 
   # ---------- macOS build ----------
@@ -78,3 +79,5 @@ jobs:
             BazaarBuddy-mac.zip
           name: Release ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
+          draft: ${{ endsWith(github.ref_name, '-beta') }}
+          prerelease: false

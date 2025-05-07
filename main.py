@@ -6,7 +6,7 @@ from system_handler import OPERATING_SYSTEM, get_system_handler
 from PyQt5.QtCore import QTimer
 from overlay import Overlay
 from capture_controller import CaptureController
-from bazaar_updater import BazaarUpdater
+from updater import Updater
 from bazaar_buddy import BazaarBuddy
 from system_handler import OPERATING_SYSTEM, SYSTEM_PATH, IS_LOCAL
 from version import VERSION
@@ -23,7 +23,7 @@ def main() -> None:
     app.setWindowIcon(QIcon(str(SYSTEM_PATH / "assets" / "brand_icon.ico")))
 
     overlay  = Overlay("Checking for updates…")
-    updater  = BazaarUpdater(overlay, OPERATING_SYSTEM, SYSTEM_PATH,
+    updater  = Updater(overlay, OPERATING_SYSTEM, SYSTEM_PATH,
                              IS_LOCAL, VERSION, logger)
 
     controller = None
