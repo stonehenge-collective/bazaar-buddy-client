@@ -12,6 +12,7 @@ from PyQt5.QtWidgets import (
     QSizePolicy,
     QVBoxLayout,
     QWidget,
+    QToolButton
 )
 from system_handler import OPERATING_SYSTEM
 
@@ -37,7 +38,7 @@ class Overlay(QWidget):
 
         self._build_ui()
         self._layout_overlay()
-        self._update_close_button_position()
+        self._update_button_positions()
 
         self.show()
         self.raise_()
@@ -82,7 +83,7 @@ class Overlay(QWidget):
         self.size_grips[2].move(0, self.height() - grip_h)
         self.size_grips[3].move(self.width() - grip_w, self.height() - grip_h)
 
-        self._update_close_button_position()
+        self._update_button_positions()
         super().resizeEvent(event)
 
     # ---------- helpers ----------
@@ -101,6 +102,7 @@ class Overlay(QWidget):
         self.scroll.setWidget(self.label)
         self.scroll.setStyleSheet("background: transparent;")
         self.scroll.viewport().setStyleSheet("background: transparent;")
+
 
         # ----- Main layout -----
         layout = QVBoxLayout(self)
@@ -123,6 +125,17 @@ class Overlay(QWidget):
             "QPushButton:hover{background:rgba(255,255,255,0.2);}"
         )
         self.close_button.raise_()
+
+        # ----- Toggle Button -----
+        self.toggle_button = QToolButton(self, checkable=True, checked=False)
+        self.toggle_button.setFixedSize(24,24)
+        self.toggle_button.clicked.connect(self._toggle_content)
+        self.toggle_button.setStyleSheet(
+            "QToolButton { color:white; background:rgba(255,255,255,0);"
+            "border:none;font-weight:bold;}"
+            "QToolButton:hover { background:rgba(255,255,255,0.2); }"
+        )
+        self.toggle_button.setText("-")
 
         # ----- Style the vertical scrollbar -----
         bar = self.scroll.verticalScrollBar()
@@ -169,10 +182,14 @@ class Overlay(QWidget):
 
     # ---------- utility ----------
 
-    def _update_close_button_position(self) -> None:
+    def _update_button_positions(self) -> None:
         """Keep the button glued to the top-right corner (inside padding)."""
         self.close_button.move(
             self.width() - self.close_button.width() - self.PADDING // 2,
+            self.PADDING // 2,
+        )
+        self.toggle_button.move(
+            self.width() - self.toggle_button.width() - self.close_button.width() - self.PADDING // 2,
             self.PADDING // 2,
         )
 
@@ -183,6 +200,18 @@ class Overlay(QWidget):
         self.label.setTextFormat(Qt.RichText)
         self.label.setText(text)
         self.scroll.verticalScrollBar().setValue(0)
+
+    def _toggle_content(self) -> None:
+        if self.toggle_button.isChecked():
+            self.collapsedHeight = self.height()
+            self.setFixedHeight(self.close_button.height() + self.PADDING)
+            self.toggle_button.setText("+")
+        else:
+            if hasattr(self, 'collapsedHeight'):
+                self.setFixedHeight(self.collapsedHeight)
+                self.setMinimumHeight(0)
+                self.setMaximumHeight(16777215)
+            self.toggle_button.setText("-")
 
 def main() -> None:
     text = (
