@@ -180,6 +180,7 @@ class Overlay(QWidget):
         if text == self.text:
             return
         self.text = text
+        self.label.setTextFormat(Qt.RichText)
         self.label.setText(text)
         self.scroll.verticalScrollBar().setValue(0)
 

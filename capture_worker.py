@@ -2,7 +2,7 @@ from typing import Optional
 from PIL import Image
 from PyQt5.QtCore import QObject, pyqtSignal, QTimer
 from text_extractor import extract_text
-from message_getter import get_message
+from message_getter import get_message, decorate_message
 
 
 class BaseCaptureWorker(QObject):
@@ -31,7 +31,8 @@ class BaseCaptureWorker(QObject):
             self._busy = True
             text = extract_text(image)
             if message := get_message(text):
-                self.message_ready.emit(message)
+                decoratedMessage = decorate_message(message)
+                self.message_ready.emit(decoratedMessage)
         except (AttributeError, PermissionError):
             pass
         finally:

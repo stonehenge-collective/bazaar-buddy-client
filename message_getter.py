@@ -1,10 +1,14 @@
-import json
+import json, re
 from rapidfuzz import process, fuzz
 from system_handler import SYSTEM_PATH
 
 entities_path = SYSTEM_PATH / "entities.json"
 with entities_path.open("r", encoding="utf-8") as fp:
     entities = json.load(fp)
+
+decorate_path = SYSTEM_PATH / "decorate.json"
+with decorate_path.open("r", encoding="utf-8") as fp:
+    decorate_words = json.load(fp)
 
 def match_keyword(text: str, threshold: int = 80):
     word_set = set([entity.get("name") for entity in entities])
@@ -41,6 +45,20 @@ def get_message(screenshot_text: str):
             return entity.get("display_message", None)
 
     return None
+
+def decorate_message(message: str):
+    decorated_message = message
+    def _get_replacer(word):
+        def _replacer(match): 
+            original = match.group(0)
+            return word.replace("{word}", original)
+        
+        return _replacer
+    for decorate in decorate_words:
+        decorated_message = re.sub(decorate.get("word"), _get_replacer(decorate.get("decorate")), decorated_message, flags=re.IGNORECASE)
+    
+    return decorated_message
+
 
 if __name__ == "__main__":
     from message_getter import match_keyword
