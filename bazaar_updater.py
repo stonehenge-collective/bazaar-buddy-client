@@ -1,49 +1,29 @@
 import requests
-from version import VERSION
 from PyQt5.QtCore import QObject, pyqtSignal
 import sys
 import subprocess
-from system_handler import OPERATING_SYSTEM, SYSTEM_PATH, IS_LOCAL
-
 
 class BazaarUpdater(QObject):
 
     update_completed = pyqtSignal()
 
-    def __init__(self, overlay, logger):
+    def __init__(self, overlay, operating_system, system_path, is_local, current_version, logger):
         super().__init__()
         self.overlay = overlay
         self.logger = logger
+        self.operating_system = operating_system
+        self.system_path = system_path
+        self.is_local = is_local
+        self.current_version = current_version
         self.new_version = None
 
     def check_and_prompt(self):
-
-        if OPERATING_SYSTEM == "Windows" and not IS_LOCAL:
-            """
-            we currently do no have a windows updater script implemented in the update_scripts folder
-            so we will just emit the update_completed signal and move onto the main loop. When we
-            have a windows updater script implemented, we can remove this check and just use the
-            check_for_updates method.
-            """
-            self.update_completed.emit()
-            return
-
         if self.check_for_updates():
             self.prompt_for_update()
-            """
-            at this point the buttons to update or not update are displayed. We then just return and
-            let the main loop handle the events that are emitted from the overlay when the user chooses to
-            update or not update.
-            """
-            return
-
-        """
-        if we get here, we have no updates or failed to fetch new version from github and we can just emit the update_completed signal and move onto the main loop.
-        """
-        self.update_completed.emit()
+        else:
+            self.update_completed.emit()
 
     def check_for_updates(self):
-
         # get the latest version from github
         response = requests.get(
             "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases/latest"
@@ -52,7 +32,7 @@ class BazaarUpdater(QObject):
         if not latest_version:
             self.logger.error("Failed to get latest version from GitHub")
             return False
-        if VERSION == latest_version:
+        if self.current_version == latest_version:
             return False
         self.new_version = latest_version
         return True
@@ -68,7 +48,7 @@ class BazaarUpdater(QObject):
         executable. Instead we will tell the user to pull the latest changes from the
         Bazaar Buddy Repository.
         """
-        if IS_LOCAL:
+        if self.is_local:
             self.overlay.show_prompt_buttons(
                 "There is a new version of Bazaar Buddy available. You should pull the latest changes from the Bazaar Buddy Repository.",
                 "Acknowledge",
@@ -87,7 +67,7 @@ class BazaarUpdater(QObject):
         self.overlay.yes_clicked.disconnect(self._update_approved)
         self.overlay.no_clicked.disconnect(self._update_declined)
 
-        if IS_LOCAL:
+        if self.is_local:
             self.logger.info("Running locally, skipping update")
             self.update_completed.emit()
             return
@@ -117,8 +97,8 @@ class BazaarUpdater(QObject):
         for asset in assets:
             name = asset.get("name", "").lower()
             print(f"Asset name: {name}")
-            if (OPERATING_SYSTEM == "Windows" and name.endswith(".exe")) or (
-                OPERATING_SYSTEM == "Darwin" and name.endswith(".zip")
+            if (self.operating_system == "Windows" and name.endswith(".exe")) or (
+                self.operating_system == "Darwin" and name.endswith(".zip")
             ):
                 download_url = asset.get("browser_download_url")
                 break
@@ -127,11 +107,11 @@ class BazaarUpdater(QObject):
             self.overlay.set_message("Update failed: No compatible package found")
             return False
         # Launch platform-specific updater
-        if OPERATING_SYSTEM == "Windows":
-            updater_script = SYSTEM_PATH / "update_scripts" / "windows_update.bat"
+        if self.operating_system == "Windows":
+            updater_script = self.system_path / "update_scripts" / "windows_update.bat"
             subprocess.Popen(["cmd", "/c", str(updater_script), download_url])
         else:  # macOS
-            updater_script = SYSTEM_PATH / "update_scripts" / "updater.sh"
+            updater_script = self.system_path / "update_scripts" / "updater.sh"
             subprocess.Popen(["bash", str(updater_script), download_url])
 
         sys.exit(0)

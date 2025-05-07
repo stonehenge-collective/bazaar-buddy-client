@@ -76,9 +76,6 @@ class Overlay(QWidget):
             self.close()
 
     def resizeEvent(self, event):  # noqa: N802
-        new_width = event.size().width()
-        self.label.setFixedWidth(max(0, new_width - 2 * self.PADDING))
-
         grip_w = self.size_grips[0].sizeHint().width()
         grip_h = self.size_grips[0].sizeHint().height()
         self.size_grips[0].move(0, 0)
@@ -96,7 +93,8 @@ class Overlay(QWidget):
         self.label = QLabel(self.text, wordWrap=True, alignment=Qt.AlignLeft | Qt.AlignTop)
         self.label.setFont(self.FONT)
         self.label.setStyleSheet("color: white; background: transparent;")
-        self.label.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred)
+        self.label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+        #self.label.setContentsMargins(0, 0, 10, 0)
 
         self.scroll = QScrollArea(frameShape=QScrollArea.NoFrame)
         self.scroll.setWidgetResizable(True)
