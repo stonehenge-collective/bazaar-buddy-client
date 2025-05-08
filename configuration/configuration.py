@@ -48,9 +48,7 @@ class Configuration(BaseModel):
 
 def get_configuration() -> Configuration:
 
-    if IS_LOCAL and OPERATING_SYSTEM == "Darwin":
-        path = SYSTEM_PATH / "configuration" / "configuration.json"
-    elif not IS_LOCAL and OPERATING_SYSTEM == "Darwin":
+    if not IS_LOCAL and OPERATING_SYSTEM == "Darwin":
         """
         packaged as an app on macOS, the --add-data (in the build process)flag will add the configuration file to the Resources directory automatically. I guess this is standard behavior for macOS apps.
         """

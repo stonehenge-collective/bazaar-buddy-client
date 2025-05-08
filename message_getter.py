@@ -4,11 +4,25 @@ from configuration.configuration import get_configuration
 
 config = get_configuration()
 
-entities_path = config.system_path / "entities.json"
+if config.operating_system == "Darwin" and not config.is_local:
+    """
+    packaged as an app on macOS, the --add-data flag will add the configuration file to the Resources directory automatically. I guess this is standard behavior for macOS apps.
+    """
+    entities_path = config.system_path / "Resources" / "entities.json"
+else:
+    entities_path = config.system_path / "entities.json"
+
 with entities_path.open("r", encoding="utf-8") as fp:
     entities = json.load(fp)
 
-decorate_path = config.system_path / "decorate.json"
+if config.operating_system == "Darwin" and not config.is_local:
+    """
+    packaged as an app on macOS, the --add-data flag will add the configuration file to the Resources directory automatically. I guess this is standard behavior for macOS apps.
+    """
+    decorate_path = config.system_path / "Resources" / "decorate.json"
+else:
+    decorate_path = config.system_path / "decorate.json"
+
 with decorate_path.open("r", encoding="utf-8") as fp:
     decorate_words = json.load(fp)
 
