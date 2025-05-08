@@ -5,7 +5,7 @@ import platform
 from pathlib import Path
 
 if getattr(sys, "frozen", False):
-    SYSTEM_PATH = Path(sys._MEIPASS).parent
+    SYSTEM_PATH = Path(sys._MEIPASS)
 else:
     SYSTEM_PATH = Path(__file__).parent.parent
 
@@ -39,7 +39,7 @@ def get_configuration() -> Configuration:
         """
         packaged as an app on macOS, the --add-data (in the build process)flag will add the configuration file to the Resources directory automatically. I guess this is standard behavior for macOS apps.
         """
-        path = SYSTEM_PATH / "Resources" / "configuration" / "configuration.json"
+        path = SYSTEM_PATH / "configuration" / "configuration.json"
     else:
         path = SYSTEM_PATH / "configuration" / "configuration.json"
 
