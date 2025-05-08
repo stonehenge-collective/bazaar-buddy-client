@@ -7,4 +7,4 @@ PyQt5==5.15.11
 windows-capture==1.4.2
 rapidfuzz==3.13.0
 requests==2.32.3
-pydantic==2.11.14
+pydantic==2.11.4

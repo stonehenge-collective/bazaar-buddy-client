@@ -7,5 +7,5 @@ rapidfuzz==3.13.0
 numpy==2.2.5
 pyobjc-framework-Quartz==11.0.0
 requests==2.32.3
-pydantic==2.11.14
+pydantic==2.11.4
 
