@@ -30,7 +30,7 @@ class Updater(QObject):
                 "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases",
                 headers={"Authorization": f"Bearer {self.config.github_bearer_token}"},
             )
-            latest_release = next((r for r in response.json() if r["draft"]), None)
+            latest_release = next((r for r in response.json() if r["prerelease"]), None)
         else:
             response = requests.get(
                 "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases/latest"
@@ -100,7 +100,7 @@ class Updater(QObject):
             )
             if response.status_code != 200:
                 raise Exception(f"Failed to get latest release from GitHub: {response.status_code}")
-            latest_release = next((r for r in response.json() if r["draft"]), None)
+            latest_release = next((r for r in response.json() if r["prerelease"]), None)
         else:
             response = requests.get(
                 "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases/latest"
