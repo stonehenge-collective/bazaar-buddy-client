@@ -1,0 +1,681 @@
+[
+    {
+        "name": "A Strange Mushroom",
+        "options": [
+            "Trade It for Something: Gain a Neutral Item.",
+            "Sell It: Gain 4 Gold .",
+            "(If you have a Bushel ) Add It to Your Bushel: Add + 20 Heal to your Bushel .",
+            "(If you are Mak) Brew a Potion: Get a small Silver-tier Potion"
+        ]
+    },
+    {
+        "name": "Aerodrome",
+        "options": [
+            "Aero",
+            "Aila",
+            "Ande",
+            "Artisan Dunes",
+            "B1&B2",
+            "Barkun",
+            "BazaarCON",
+            "Bjorn",
+            "Bladeborn Badlands",
+            "Burning Caldera",
+            "C4",
+            "Celestial Conduit",
+            "Chronos",
+            "Cobweb",
+            "Colt",
+            "Curio",
+            "Cymon",
+            "Dabora",
+            "Dooley's Workshop",
+            "Eating Contest",
+            "Eli",
+            "Mr. Tuskari",
+            "Finn's Big Bite",
+            "Flex",
+            "Forja",
+            "Fortis",
+            "Freiya",
+            "Frozen Tomb",
+            "Goldie",
+            "Grandmaster",
+            "Guardian's Gorge",
+            "Gumball Machine",
+            "Hef",
+            "Herma",
+            "Investment Pitch",
+            "Jay Jay",
+            "Jules' Cafe",
+            "Kev's Armory",
+            "Kina",
+            "Knightshade",
+            "Languid Dunes",
+            "Luxe",
+            "Malafang",
+            "Midsworth",
+            "Mittel",
+            "Mr. Morland",
+            "Murkwood Bayou",
+            "Mysterious Portal",
+            "Nautica",
+            "Nufu",
+            "Old Zane",
+            "Orion",
+            "Orlin",
+            "Pearl's Dig Site",
+            "Pol",
+            "Professor Riggle",
+            "Prospero",
+            "Quixel",
+            "Regenald",
+            "Ryukon",
+            "Sanguine Valley",
+            "Serafina",
+            "Shrouded Figure",
+            "Sirocco Steppe",
+            "Slohmor Lumbra",
+            "Street Festival",
+            "The Artist",
+            "The Cult",
+            "Tinker",
+            "Tok's Clocks",
+            "Tranquil Spring",
+            "Vermir",
+            "Zara",
+            "Zurphin's Safari"
+        ]
+    },
+    {
+        "name": "Armory",
+        "options": [
+            "\"Get a Weapon.\""
+        ]
+    },
+    {
+        "name": "Artisan Dunes",
+        "options": [
+            "Apprentice Weaponsmith: Give your leftmost Weapon + 5 Damage .",
+            "Apprentice Flamewright: Your leftmost Burn item gains + 1 Burn .",
+            "Apprentice Banehand: Your leftmost Poison item gains + 1 Poison .",
+            "( 5 ) Find Better Craftsman: Double the effects of the offered options."
+        ]
+    },
+    {
+        "name": "B1&B2",
+        "options": [
+            "Upgrade 1 Bronze-tier item",
+            "Appears on days 1–8."
+        ]
+    },
+    {
+        "name": "Battlefield",
+        "options": [
+            "\"Get a small Weapon.\""
+        ]
+    },
+    {
+        "name": "BazaarCON",
+        "options": [
+            "Artist Alley: Get a Diamond-tier item from the Bazaar.",
+            "Swag Collector: Get 3 Small items from the Bazaar.",
+            "Networking: Gain 2 XP .",
+            "Self promotion: (if you have a Business Card ) Gain 3 XP ."
+        ]
+    },
+    {
+        "name": "Bladeborn Badlands",
+        "options": [
+            "Enchant an item with Deadly."
+        ]
+    },
+    {
+        "name": "Block Party",
+        "options": [
+            "\"Get a Friend.\""
+        ]
+    },
+    {
+        "name": "Borrow",
+        "options": [
+            "\"Lose 1 Income and gain 6 Gold.\""
+        ]
+    },
+    {
+        "name": "Botanical Gardens",
+        "options": [
+            "\"Get a Poison item.\""
+        ]
+    },
+    {
+        "name": "Bounty Hunters Event",
+        "options": [
+            "Bounty Hunters: Fight",
+            "Escape to the sea: (if you have Flagship or Submarine ) Gain 5 XP"
+        ]
+    },
+    {
+        "name": "Burning Caldera",
+        "options": [
+            "Enchant an item with Fiery."
+        ]
+    },
+    {
+        "name": "Cabin Fishing",
+        "options": [
+            "\"Get a small Aquatic item.\""
+        ]
+    },
+    {
+        "name": "Cache of Riches",
+        "options": [
+            "\"Gain 5 Gold.\""
+        ]
+    },
+    {
+        "name": "Candy Stash",
+        "options": [
+            "Get 3 Bronze-tier Chocolate Bars ."
+        ]
+    },
+    {
+        "name": "Celestial Conduit",
+        "options": [
+            "Enchant an item with Cannot be Frozen, Slowed or Destroyed."
+        ]
+    },
+    {
+        "name": "Cinder Chase",
+        "options": [
+            "\"Get a Cinders (+Burn).\""
+        ]
+    },
+    {
+        "name": "Dabora",
+        "options": [
+            "Chit-chat : Gain 1 XP .",
+            "Treasure Location : Get a random item.",
+            "( 5 ) Confidential Information : Gain 2 XP ."
+        ]
+    },
+    {
+        "name": "Deadly Duel",
+        "options": [
+            "Fight a random Monster from your current day or the next day, of any rarity."
+        ]
+    },
+    {
+        "name": "Deep Sea Fishing",
+        "options": [
+            "\"Get an Aquatic item.\""
+        ]
+    },
+    {
+        "name": "Dooley's Workshop (Start Run)",
+        "options": [
+            "\"Your journey begins here\""
+        ]
+    },
+    {
+        "name": "Dooley’s Workshop",
+        "options": [
+            "Find a friend: Choose a free Friend",
+            "Firmware upgrade: Upgrade the Core and gain +10% Max Health .",
+            "Improve Friendship: Upgrade your leftmost Friend ."
+        ]
+    },
+    {
+        "name": "Eating Contest",
+        "options": [
+            "Basic Chocolate Bars: Get 5 bronze Chocolate Bars .",
+            "( 5 ) Deluxe Chocolate Bars: Get 5 silver Chocolate Bars .",
+            "( 10 ) Premium Chocolate Bars: get 5 Gold-tier Chocolate Bars ."
+        ]
+    },
+    {
+        "name": "Economic Seminar",
+        "options": [
+            "Get an Economic item or skill.",
+            "4 Get 2 Economic items or skills."
+        ]
+    },
+    {
+        "name": "Epic Battle",
+        "options": [
+            "Fight a random Monster from your current day or the next day, of any rarity."
+        ]
+    },
+    {
+        "name": "Extract Extract",
+        "options": [
+            "\"Get an Extract (+Poison).\""
+        ]
+    },
+    {
+        "name": "Finn's Big Bite",
+        "options": [
+            "Guardian's Gravy Plate : You gain 5% Max Health and your Shield items gain Shield 10 .",
+            "Restorative Risotto : You gain 5% Max Health and your Heal items gain Heal 10 .",
+            "Vitality Stew : You gain 5% Max Health and 5 Regeneration ."
+        ]
+    },
+    {
+        "name": "Forja",
+        "options": [
+            "\"Upgrade an item.\""
+        ]
+    },
+    {
+        "name": "Form",
+        "options": [
+            "Exploit: Give your leftmost Weapon + 25 % Crit Chance .",
+            "5 Sharpen Weapon: Your Weapons gain 10 Damage .",
+            "10 Upgrade an item: Upgrade your leftmost Weapon .",
+            "20 Engrave: Enchant your leftmost Weapon ."
+        ]
+    },
+    {
+        "name": "Freezer",
+        "options": [
+            "\"Get a Freeze item.\""
+        ]
+    },
+    {
+        "name": "Frozen Tomb",
+        "options": [
+            "Enchant an item with Freeze effects."
+        ]
+    },
+    {
+        "name": "Furnace",
+        "options": [
+            "\"Get a small Burn item.\""
+        ]
+    },
+    {
+        "name": "Futura",
+        "options": [
+            "Fate's Bounty - Gain 20 Gold and 5 XP .",
+            "Fate's Crossroads - Visit a random enchantment location. (Choose either a random Enchantment or The Artist )",
+            "Fate's Legacy - Choose a free Diamond-tier item."
+        ]
+    },
+    {
+        "name": "Genie Lamp Event",
+        "options": [
+            "Wish for Wealth: gain 10 gold.",
+            "Wish for fame: Recover 3 Prestige.",
+            "Wish for Immortality: Gain 5% Max Health ."
+        ]
+    },
+    {
+        "name": "Guard Locker",
+        "options": [
+            "\"Get a small Shield item.\""
+        ]
+    },
+    {
+        "name": "Guardian's Gorge",
+        "options": [
+            "Enchant an item with Shield effects."
+        ]
+    },
+    {
+        "name": "Gumball Machine Event",
+        "options": [
+            "Red Gumball",
+            "Blue Gumball",
+            "Yellow Gumball",
+            "Green Gumball"
+        ]
+    },
+    {
+        "name": "Haddy",
+        "options": [
+            "Bag Of Gold: Gain 20 Gold .",
+            "Enchanted Item: Gain a random enchanted item.",
+            "Gold Skill: Gain a Gold-tier skill.",
+            "Diamond Skill: Gain a Diamond-tier skill.",
+            "Mystery Bundle: Get 3 Diamond-tier Loot Items .",
+            "Magician's Top Hat: Get Magician's Top Hat ."
+        ]
+    },
+    {
+        "name": "Hospital",
+        "options": [
+            "\"Get a Heal or Regeneration item.\""
+        ]
+    },
+    {
+        "name": "House Party",
+        "options": [
+            "\"Get a small Friend.\""
+        ]
+    },
+    {
+        "name": "Invest in Yourself",
+        "options": [
+            "\"Gain 1/2 Income\""
+        ]
+    },
+    {
+        "name": "Investment Pitch",
+        "options": [
+            "Mentors Guidance: Gain 4 XP",
+            "Hard Assets: Upgrade your leftmost Property",
+            "Appreciated Value: Double the value of your leftmost item",
+            "Investment Package: Double your income"
+        ]
+    },
+    {
+        "name": "Jules' Cafe",
+        "options": [
+            "Relax: Gain 10% of your Max Health for the rest of the day.",
+            "Rejuvenating Blend: Your Heal item gain Heal 50 for the rest of the day.",
+            "Strong Brew: Your Weapons gain 25 Damage for the rest of the day."
+        ]
+    },
+    {
+        "name": "Jungle Ruins",
+        "options": [
+            "Grab the Loot : Gain 2 Bronze -tier loot items.",
+            "Enjoy the Scenery : Gain 3 Regeneration .",
+            "(if you are Vanessa ) Plunder for Treasure : Gain a Small Silver -tier item.",
+            "(if you are Pygmalien ) Setup Tourist Attraction : Gain 2 Income",
+            "(if you are Mak ) Hunt for Reagents : Get a Silver -tier Reagent ."
+        ]
+    },
+    {
+        "name": "Languid Dunes",
+        "options": [
+            "Enchant an item with Slow effects."
+        ]
+    },
+    {
+        "name": "Likit",
+        "options": [
+            "Grab Bag : Get 5 small treats .",
+            "4/8 . Candy Mail . Adjacent Shield items permanently gain + Shield 1 / 2 . This permanently loses 1 Max Ammo and destroy this if it has 0 Max Ammo .",
+            "4/8 . Epicurean Chocolate . Adjacent Weapons items permanently gain + 1 / 2 Damage . This permanently loses 1 Max Ammo and destroy this if it has 0 Max Ammo .",
+            "4/8 . Super Syrup . Adjacent items permanently gain 1 / 2 % Crit chance. This permanently loses 1 Max Ammo and destroy this if it has 0 Max Ammo ."
+        ]
+    },
+    {
+        "name": "Look for Spare Change",
+        "options": [
+            "\"Get 3 Spare Change.\""
+        ]
+    },
+    {
+        "name": "Lost and Found",
+        "options": [
+            "\"Get a small non Weapon item.\""
+        ]
+    },
+    {
+        "name": "Mak's Laboratory (Start Run)",
+        "options": [
+            "\"Your journey begins here\""
+        ]
+    },
+    {
+        "name": "Mandala",
+        "options": [
+            "Transform Small: Transform your leftmost Small item into another item of the same size and tier.",
+            "Transform Medium: Transform your leftmost Medium item into another item of the same size and tier.",
+            "Transform Large: Transform your leftmost Large item into another item of the same size and tier."
+        ]
+    },
+    {
+        "name": "Medicine Cabinet",
+        "options": [
+            "\"Get a small Heal or Regeneration item.\""
+        ]
+    },
+    {
+        "name": "Monster Ranch",
+        "options": [
+            "Choose 1 free item from a selection of 5 Loot Items ."
+        ]
+    },
+    {
+        "name": "Mountain Pass",
+        "options": [
+            "Guide the Convoy: Gain 2 Gold and 1 XP",
+            "Work for the Convoy: Gain 5 Gold",
+            "Escort the Convoy: Risky! Anything could happen here. A fight with a monster that can be found on the current day or the next. It was uneventful: Gain 1 XP Treasure Chest: Get an item.",
+            "A fight with a monster that can be found on the current day or the next.",
+            "It was uneventful: Gain 1 XP",
+            "Treasure Chest: Get an item.",
+            "Invest in the Convoy: Pay 1 Gold for 2 Income"
+        ]
+    },
+    {
+        "name": "Murkwood Bayou",
+        "options": [
+            "Enchant an item with Poison effects."
+        ]
+    },
+    {
+        "name": "Mysterious Portal",
+        "options": [
+            "BazaarCON",
+            "Cobweb",
+            "Dooley",
+            "Forja",
+            "Form",
+            "Freiya",
+            "Hef",
+            "Jules",
+            "Luxe",
+            "Mak",
+            "Pygmalien",
+            "Serafina",
+            "Stelle",
+            "The Cult",
+            "Thieves Guild",
+            "Vanessa"
+        ]
+    },
+    {
+        "name": "Obstacle Course",
+        "options": [
+            "\"Get a Slow item.\""
+        ]
+    },
+    {
+        "name": "Pearl's Dig Site",
+        "options": [
+            "Event"
+        ]
+    },
+    {
+        "name": "Procure Medkit",
+        "options": [
+            "\"Get a Med Kit (+Heal).\""
+        ]
+    },
+    {
+        "name": "Pygmalien's Loft (Start Run)",
+        "options": [
+            "\"Your journey begins here\""
+        ]
+    },
+    {
+        "name": "Pyre",
+        "options": [
+            "\"Get a Burn item.\""
+        ]
+    },
+    {
+        "name": "Racetrack",
+        "options": [
+            "\"Get a Haste item.\""
+        ]
+    },
+    {
+        "name": "Recycling Center",
+        "options": [
+            "\"Get a non Weapon item.\""
+        ]
+    },
+    {
+        "name": "Regenerative Tincture",
+        "options": [
+            "\"Gain Regeneration equal to your level.\""
+        ]
+    },
+    {
+        "name": "Relax",
+        "options": [
+            "\"Start your next fight with 100 Shield per Level.\""
+        ]
+    },
+    {
+        "name": "Sanguine Valley",
+        "options": [
+            "Enchant an item with Obsidian."
+        ]
+    },
+    {
+        "name": "Scrap Salvage",
+        "options": [
+            "Event"
+        ]
+    },
+    {
+        "name": "Security Center",
+        "options": [
+            "\"Get a Shield item.\""
+        ]
+    },
+    {
+        "name": "Sharpening Kit",
+        "options": [
+            "\"Get a Sharpening Stone (+Damage).\""
+        ]
+    },
+    {
+        "name": "Shrouded Figure",
+        "options": [
+            "Seek Wealth: Gain 5 to 10 Gold",
+            "10 . Seek Knowledge: Gain 2 to 4 XP",
+            "10 . Seek Health: Gain 200 to 600 Max Health ."
+        ]
+    },
+    {
+        "name": "Sirocco Steppe",
+        "options": [
+            "Enchant an item with Haste effects."
+        ]
+    },
+    {
+        "name": "Snack Time",
+        "options": [
+            "\"Gain 20 Max Health per level.\""
+        ]
+    },
+    {
+        "name": "Start of Run",
+        "options": [
+            "The Start of Run is the first event of the day in the Bazaar and counts as one of the six hours. Each run, players will be offered 3 options to choose from to start their run with:"
+        ]
+    },
+    {
+        "name": "Street Festival",
+        "options": [
+            "Hero 1 : Purchase an item from this Hero",
+            "Hero 2 : Purchase an item from this Hero",
+            "Hero 3 : Purchase an item from this Hero",
+            "Sell Ice Cream at the Street Festival : (if you have an Ice Cream Truck ) Gain 5 Gold and 1 XP ."
+        ]
+    },
+    {
+        "name": "Study",
+        "options": [
+            "Gain 1 XP"
+        ]
+    },
+    {
+        "name": "The Artist",
+        "options": [
+            "Event"
+        ]
+    },
+    {
+        "name": "The Cult",
+        "options": [
+            "Steal Dagger: Get a Gold Ritual Dagger .",
+            "Blood Price: Lose 10% Max Health and gain 25 Regeneration .",
+            "Deadly Covenant: Lose 20% Max Health and enchant your leftmost Weapon with Deadly (Crit Chance).",
+            "Vital Sacrifice: Lose 30% Max Health and get a Diamond-tier Runic Double Bow ."
+        ]
+    },
+    {
+        "name": "The Docks",
+        "options": [
+            "Work as Security: Gain 2 Gold and a Weapon .",
+            "Work as Dockhand: Gain 2 Gold and a Tool .",
+            "Work as Maintenance: Gain 2 Gold and a Shield item.",
+            "Work as Navigator: (if you have an Astrolabe ) Gain 5 Gold and 1 XP .",
+            "Work as Navigator: (if you have an Star Chart ) Gain 5 Gold and 1 XP ."
+        ]
+    },
+    {
+        "name": "The Lost Crate",
+        "options": [
+            "Open It : Get a Medium Item.",
+            "Return It : Get a Skill ."
+        ]
+    },
+    {
+        "name": "Thieves Guild",
+        "options": [
+            "Hostile Takeover: Fight Mr. Moo",
+            "Dodge Taxes: Double your Income.",
+            "Raid the Vault : Grab everything from The Vault"
+        ]
+    },
+    {
+        "name": "Tiny Furry Monster",
+        "options": [
+            "Pet It : Gain 25 Max Health .",
+            "Scare It : Get a Silver -tier Loot item.",
+            "(If you have a Food item) Feed it : Gain 1 XP .",
+            "(If you have a Friend item) Play with it : Gain 1 XP .",
+            "(If you have a Toy ) Play with it : Gain 1 XP ."
+        ]
+    },
+    {
+        "name": "Tranquil Spring",
+        "options": [
+            "Enchant an item with Heal effects."
+        ]
+    },
+    {
+        "name": "Treasure Chest",
+        "options": [
+            "Get an item.",
+            "(if it is Day 10+) Fight Mimic"
+        ]
+    },
+    {
+        "name": "Utility Box",
+        "options": [
+            "Get a small Tool."
+        ]
+    },
+    {
+        "name": "Vanessa's Quarters (Start Run)",
+        "options": [
+            "\"Your journey begins here\""
+        ]
+    },
+    {
+        "name": "Workshop",
+        "options": [
+            "\"Get a Tool.\""
+        ]
+    }
+]
