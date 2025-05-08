@@ -1,7 +1,6 @@
 import signal
 import sys
 from typing import Optional
-
 from PyQt5.QtCore import QPoint, QSize, Qt, pyqtSignal
 from PyQt5.QtGui import QColor, QFont, QGuiApplication, QPainter
 from PyQt5.QtWidgets import (
@@ -12,23 +11,25 @@ from PyQt5.QtWidgets import (
     QSizePolicy,
     QVBoxLayout,
     QWidget,
-    QToolButton
+    QToolButton,
     QHBoxLayout,
 )
-from system_handler import OPERATING_SYSTEM
+
+from configuration.configuration import get_configuration
 
 INITIAL_SIZE = QSize(300, 200)  # starting size of the overlay (width × height)
 MARGIN = 20  # minimal margin to screen edges
+PADDING = 10
+BG_COLOR = QColor(0, 0, 0)
+
+config = get_configuration()
+if config.operating_system == "Windows":
+    FONT = QFont("Segoe UI", 12)
+else:
+    FONT = QFont("Helvetica", 12)
 
 
 class Overlay(QWidget):
-    PADDING = 10
-    BG_COLOR = QColor(0, 0, 0)
-
-    if OPERATING_SYSTEM == "Windows":
-        FONT = QFont("Segoe UI", 12)
-    else:
-        FONT = QFont("Helvetica", 12)
 
     yes_clicked = pyqtSignal()
     no_clicked = pyqtSignal()
@@ -53,7 +54,7 @@ class Overlay(QWidget):
     def paintEvent(self, event):  # noqa: N802
         painter = QPainter(self)
         painter.setRenderHint(QPainter.Antialiasing)
-        painter.setBrush(self.BG_COLOR)
+        painter.setBrush(BG_COLOR)
         painter.setPen(Qt.NoPen)
         painter.drawRoundedRect(self.rect(), 12, 12)
 
@@ -92,10 +93,10 @@ class Overlay(QWidget):
     def _build_ui(self) -> None:
         # ----- Text inside a scroll area -----
         self.label = QLabel(self.text, wordWrap=True, alignment=Qt.AlignLeft | Qt.AlignTop)
-        self.label.setFont(self.FONT)
+        self.label.setFont(FONT)
         self.label.setStyleSheet("color: white; background: transparent;")
         self.label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
-        #self.label.setContentsMargins(0, 0, 10, 0)
+        # self.label.setContentsMargins(0, 0, 10, 0)
 
         self.scroll = QScrollArea(frameShape=QScrollArea.NoFrame)
         self.scroll.setWidgetResizable(True)
@@ -104,10 +105,9 @@ class Overlay(QWidget):
         self.scroll.setStyleSheet("background: transparent;")
         self.scroll.viewport().setStyleSheet("background: transparent;")
 
-
         # ----- Main layout -----
         layout = QVBoxLayout(self)
-        layout.setContentsMargins(self.PADDING, self.PADDING, self.PADDING, self.PADDING)
+        layout.setContentsMargins(PADDING, PADDING, PADDING, PADDING)
         layout.addWidget(self.scroll)
 
         # ----- Corner size grips -----
@@ -128,7 +128,7 @@ class Overlay(QWidget):
 
         # ----- Toggle Button -----
         self.toggle_button = QToolButton(self, checkable=True, checked=False)
-        self.toggle_button.setFixedSize(24,24)
+        self.toggle_button.setFixedSize(24, 24)
         self.toggle_button.clicked.connect(self._toggle_content)
         self.toggle_button.setStyleSheet(
             "QToolButton { color:white; background:rgba(255,255,255,0);"
@@ -139,13 +139,13 @@ class Overlay(QWidget):
 
         # ----- Style the vertical scrollbar -----
         bar = self.scroll.verticalScrollBar()
-        top_margin = self.close_button.height() + self.PADDING // 2
+        top_margin = self.close_button.height() + PADDING // 2
         bar.setStyleSheet(
             f"""
             QScrollBar:vertical {{
                 background: transparent;
                 width: 12px;
-                margin: {top_margin}px 0 {self.PADDING // 2}px 0;
+                margin: {top_margin}px 0 {PADDING // 2}px 0;
                 border: none;
             }}
             QScrollBar::handle:vertical {{
@@ -187,12 +187,12 @@ class Overlay(QWidget):
     def _update_button_positions(self) -> None:
         """Keep the button glued to the top-right corner (inside padding)."""
         self.close_button.move(
-            self.width() - self.close_button.width() - self.PADDING // 2,
-            self.PADDING // 2,
+            self.width() - self.close_button.width() - PADDING // 2,
+            PADDING // 2,
         )
         self.toggle_button.move(
-            self.width() - self.toggle_button.width() - self.close_button.width() - self.PADDING // 2,
-            self.PADDING // 2,
+            self.width() - self.toggle_button.width() - self.close_button.width() - PADDING // 2,
+            PADDING // 2,
         )
 
     def set_message(self, text: str) -> None:
@@ -206,15 +206,15 @@ class Overlay(QWidget):
     def _toggle_content(self) -> None:
         if self.toggle_button.isChecked():
             self.collapsedHeight = self.height()
-            self.setFixedHeight(self.close_button.height() + self.PADDING)
+            self.setFixedHeight(self.close_button.height() + PADDING)
             self.toggle_button.setText("+")
         else:
-            if hasattr(self, 'collapsedHeight'):
+            if hasattr(self, "collapsedHeight"):
                 self.setFixedHeight(self.collapsedHeight)
                 self.setMinimumHeight(0)
                 self.setMaximumHeight(16777215)
             self.toggle_button.setText("-")
-            
+
     def show_prompt_buttons(self, question, yes_text=None, no_text=None):
         self.set_message(question)
 
@@ -234,9 +234,7 @@ class Overlay(QWidget):
             button_layout.addWidget(no_button)
             no_button.clicked.connect(lambda: self._handle_button_click(False))
 
-        self.button_container.setGeometry(
-            self.PADDING, self.height() - 50 - self.PADDING, self.width() - 2 * self.PADDING, 50
-        )
+        self.button_container.setGeometry(PADDING, self.height() - 50 - PADDING, self.width() - 2 * PADDING, 50)
         self.button_container.show()
 
     def _handle_button_click(self, is_yes):

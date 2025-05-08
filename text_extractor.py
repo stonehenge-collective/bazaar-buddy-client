@@ -1,14 +1,16 @@
 import os
 from PIL import Image
 import pytesseract
-from system_handler import SYSTEM_PATH, OPERATING_SYSTEM
+from configuration.configuration import get_configuration
 
-if OPERATING_SYSTEM == "Windows":
-    tess_dir = SYSTEM_PATH / "tools" / "windows_tesseract"
+config = get_configuration()
+
+if config.operating_system == "Windows":
+    tess_dir = config.system_path / "tools" / "windows_tesseract"
     pytesseract.pytesseract.tesseract_cmd = str(tess_dir / "tesseract.exe")
     os.environ["TESSDATA_PREFIX"] = str(tess_dir / "tessdata")  # <- very important
 else:
-    tess_dir = SYSTEM_PATH / "tools" / "mac_tesseract"
+    tess_dir = config.system_path / "tools" / "mac_tesseract"
     pytesseract.pytesseract.tesseract_cmd = str(tess_dir / "bin" / "tesseract")
     os.environ["DYLD_LIBRARY_PATH"] = str(tess_dir / "lib")
     os.environ["TESSDATA_PREFIX"] = str(tess_dir / "share" / "tessdata")  # <- very important

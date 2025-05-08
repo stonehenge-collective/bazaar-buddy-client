@@ -1,14 +1,14 @@
-from system_handler import OPERATING_SYSTEM
 from PyQt5.QtCore import QTimer
 
 
 class BazaarBuddy:
 
-    def __init__(self, overlay, logger, controller, system_handler):
+    def __init__(self, overlay, logger, controller, system_handler, config):
         self.overlay = overlay
         self.logger = logger
         self.controller = controller
         self.system_handler = system_handler
+        self.config = config
 
         self.poll_timer = QTimer()
         self.poll_timer.setInterval(1000)
@@ -20,7 +20,7 @@ class BazaarBuddy:
         self.logger.info("Looking for Bazaar process...")
 
         # On macOS, the process name is different
-        process_name = "TheBazaar.exe" if OPERATING_SYSTEM == "Windows" else "The Bazaar"
+        process_name = "TheBazaar.exe" if self.config.operating_system == "Windows" else "The Bazaar"
         bazaar_proc = self.system_handler.get_process_by_name(process_name)
 
         if not bazaar_proc:

@@ -1,20 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import Optional
-import platform
-import sys
-from pathlib import Path
+from configuration.configuration import get_configuration
 
-# Define SYSTEM_PATH based on whether we're running as a frozen executable or not
-if getattr(sys, "frozen", False):
-    # When frozen, we need to look in the _internal directory
-    SYSTEM_PATH = Path(sys._MEIPASS)
-else:
-    SYSTEM_PATH = Path(__file__).parent
 
-OPERATING_SYSTEM = platform.system()
-
-# true is we are running from source (i.e. python main.py)
-IS_LOCAL = getattr(sys, "frozen", False) == False
+config = get_configuration()
 
 
 class BaseSystemHandler(ABC):
@@ -88,7 +77,7 @@ class MacSystemHandler(BaseSystemHandler):
 
 def get_system_handler() -> BaseSystemHandler:
     """Factory function to get the appropriate system handler for the current platform."""
-    if OPERATING_SYSTEM == "Windows":
+    if config.operating_system == "Windows":
         return WindowsSystemHandler()
     else:
         return MacSystemHandler()

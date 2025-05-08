@@ -3,18 +3,16 @@ from PyQt5.QtCore import QObject, pyqtSignal
 import sys
 import subprocess
 
+
 class Updater(QObject):
 
     update_completed = pyqtSignal()
 
-    def __init__(self, overlay, operating_system, system_path, is_local, current_version, logger):
+    def __init__(self, overlay, logger, config):
         super().__init__()
         self.overlay = overlay
         self.logger = logger
-        self.operating_system = operating_system
-        self.system_path = system_path
-        self.is_local = is_local
-        self.current_version = current_version
+        self.config = config
         self.new_version = None
 
     def check_and_prompt(self):
@@ -32,7 +30,7 @@ class Updater(QObject):
         if not latest_version:
             self.logger.error("Failed to get latest version from GitHub")
             return False
-        if self.current_version == latest_version:
+        if self.config.current_version == latest_version:
             return False
         self.new_version = latest_version
         return True
@@ -48,7 +46,7 @@ class Updater(QObject):
         executable. Instead we will tell the user to pull the latest changes from the
         Bazaar Buddy Repository.
         """
-        if self.is_local:
+        if self.config.is_local:
             self.overlay.show_prompt_buttons(
                 "There is a new version of Bazaar Buddy available. You should pull the latest changes from the Bazaar Buddy Repository.",
                 "Acknowledge",
@@ -67,7 +65,7 @@ class Updater(QObject):
         self.overlay.yes_clicked.disconnect(self._update_approved)
         self.overlay.no_clicked.disconnect(self._update_declined)
 
-        if self.is_local:
+        if self.config.is_local:
             self.logger.info("Running locally, skipping update")
             self.update_completed.emit()
             return
@@ -97,8 +95,8 @@ class Updater(QObject):
         for asset in assets:
             name = asset.get("name", "").lower()
             print(f"Asset name: {name}")
-            if (self.operating_system == "Windows" and name.endswith(".exe")) or (
-                self.operating_system == "Darwin" and name.endswith(".zip")
+            if (self.config.operating_system == "Windows" and name.endswith(".exe")) or (
+                self.config.operating_system == "Darwin" and name.endswith(".zip")
             ):
                 download_url = asset.get("browser_download_url")
                 break
@@ -107,11 +105,11 @@ class Updater(QObject):
             self.overlay.set_message("Update failed: No compatible package found")
             return False
         # Launch platform-specific updater
-        if self.operating_system == "Windows":
-            updater_script = self.system_path / "update_scripts" / "windows_updater.bat"
+        if self.config.operating_system == "Windows":
+            updater_script = self.config.system_path / "update_scripts" / "windows_updater.bat"
             subprocess.Popen(["cmd", "/c", str(updater_script), download_url])
         else:  # macOS
-            updater_script = self.system_path / "update_scripts" / "mac_updater.sh"
+            updater_script = self.config.system_path / "update_scripts" / "mac_updater.sh"
             subprocess.Popen(["bash", str(updater_script), download_url])
 
         sys.exit(0)
