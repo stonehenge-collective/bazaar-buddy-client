@@ -2,13 +2,15 @@ import requests
 from PyQt5.QtCore import QObject, pyqtSignal
 import sys
 import subprocess
+from configuration.configuration import Configuration
+from overlay import Overlay
 
 
 class Updater(QObject):
 
     update_completed = pyqtSignal()
 
-    def __init__(self, overlay, logger, config):
+    def __init__(self, overlay: Overlay, logger, config: Configuration):
         super().__init__()
         self.overlay = overlay
         self.logger = logger
@@ -21,15 +23,27 @@ class Updater(QObject):
         else:
             self.update_completed.emit()
 
-    def check_for_updates(self):
-        # get the latest version from github
-        response = requests.get(
-            "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases/latest"
-        )
-        latest_version = response.json().get("tag_name")
-        if not latest_version:
+    def get_latest_release_tag(self):
+
+        if self.config.update_with_beta:
+            response = requests.get(
+                "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases",
+                headers={"Authorization": f"Bearer {self.config.github_bearer_token}"},
+            )
+            latest_release = next((r for r in response.json() if r["draft"]), None)
+        else:
+            response = requests.get(
+                "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases/latest"
+            )
+            latest_release = response.json()
+        if not latest_release:
             self.logger.error("Failed to get latest version from GitHub")
-            return False
+            raise Exception("Failed to get latest version from GitHub")
+        return latest_release.get("tag_name")
+
+    def check_for_updates(self):
+
+        latest_version = self.get_latest_release_tag()
         if self.config.current_version == latest_version:
             return False
         self.new_version = latest_version
@@ -78,14 +92,32 @@ class Updater(QObject):
         self.overlay.no_clicked.disconnect(self._update_declined)
         self.update_completed.emit()
 
+    def get_latest_release(self):
+        if self.config.update_with_beta:
+            response = requests.get(
+                "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases",
+                headers={"Authorization": f"Bearer {self.config.github_bearer_token}"},
+            )
+            if response.status_code != 200:
+                raise Exception(f"Failed to get latest release from GitHub: {response.status_code}")
+            latest_release = next((r for r in response.json() if r["draft"]), None)
+        else:
+            response = requests.get(
+                "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases/latest"
+            )
+            if response.status_code != 200:
+                raise Exception(f"Failed to get latest release from GitHub: {response.status_code}")
+            latest_release = response.json()
+        if not latest_release:
+            raise Exception("Failed to get latest release from GitHub")
+        return latest_release
+
     def install_update(self):
         self.overlay.set_message("Installing update...")
 
-        response = requests.get(
-            "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases/latest"
-        )
+        latest_release = self.get_latest_release()
 
-        assets = response.json().get("assets", [])
+        assets = latest_release.get("assets", [])
         if not assets:
             self.overlay.set_message("Update failed: No release assets found")
             return False
@@ -107,9 +139,9 @@ class Updater(QObject):
         # Launch platform-specific updater
         if self.config.operating_system == "Windows":
             updater_script = self.config.system_path / "update_scripts" / "windows_updater.bat"
-            subprocess.Popen(["cmd", "/c", str(updater_script), download_url])
+            subprocess.Popen(["cmd", "/c", str(updater_script), download_url, str(self.config.system_path.parent)])
         else:  # macOS
             updater_script = self.config.system_path / "update_scripts" / "mac_updater.sh"
-            subprocess.Popen(["bash", str(updater_script), download_url])
+            subprocess.Popen(["bash", str(updater_script), download_url, str(self.config.system_path.parent.parent)])
 
         sys.exit(0)

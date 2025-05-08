@@ -8,12 +8,12 @@ sleep 1
 curl -L "$1" -o new_bazaar_buddy.zip
 
 # Extract and replace
-APP_PATH=$(dirname "$0")
-unzip -o new_bazaar_buddy.zip -d "$APP_PATH/../.."
+APP_PATH=$(dirname "$2")
+unzip -o new_bazaar_buddy.zip -d "$APP_PATH"
 rm new_bazaar_buddy.zip
 
 # Start the new version
-open "$APP_PATH/../../BazaarBuddy.app"
+open "$APP_PATH/BazaarBuddy.app"
 
 # Exit the updater
 exit 0
