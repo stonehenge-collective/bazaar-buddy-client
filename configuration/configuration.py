@@ -47,16 +47,27 @@ class Configuration(BaseModel):
 
 
 def get_configuration() -> Configuration:
-    with open(SYSTEM_PATH / "configuration" / "configuration.json", "r") as f:
+
+    if IS_LOCAL and OPERATING_SYSTEM == "Darwin":
+        path = SYSTEM_PATH / "configuration" / "configuration.json"
+    elif not IS_LOCAL and OPERATING_SYSTEM == "Darwin":
+        """
+        packaged as an app on macOS, the --add-data (in the build process)flag will add the configuration file to the Resources directory automatically. I guess this is standard behavior for macOS apps.
+        """
+        path = SYSTEM_PATH / "Resources" / "configuration" / "configuration.json"
+    else:
+        path = SYSTEM_PATH / "configuration" / "configuration.json"
+
+    with open(path, "r") as f:
         config = json.load(f)
-        return Configuration(
-            current_version=config["version"],
-            update_with_beta=config["update_with_beta"],
-            github_bearer_token=GITHUB_BEARER_TOKEN,
-            operating_system=OPERATING_SYSTEM,
-            system_path=SYSTEM_PATH,
-            is_local=IS_LOCAL,
-        )
+    return Configuration(
+        current_version=config["version"],
+        update_with_beta=config["update_with_beta"],
+        github_bearer_token=GITHUB_BEARER_TOKEN,
+        operating_system=OPERATING_SYSTEM,
+        system_path=SYSTEM_PATH,
+        is_local=IS_LOCAL,
+    )
 
 
 if __name__ == "__main__":
