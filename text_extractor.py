@@ -10,7 +10,11 @@ if config.operating_system == "Windows":
     pytesseract.pytesseract.tesseract_cmd = str(tess_dir / "tesseract.exe")
     os.environ["TESSDATA_PREFIX"] = str(tess_dir / "tessdata")  # <- very important
 else:
-    tess_dir = config.system_path / "tools" / "mac_tesseract"
+    if config.is_local:
+        tess_dir = config.system_path / "tools" / "mac_tesseract"
+    else:
+        tess_dir = config.system_path / "Resources" / "tools" / "mac_tesseract"
+
     pytesseract.pytesseract.tesseract_cmd = str(tess_dir / "bin" / "tesseract")
     os.environ["DYLD_LIBRARY_PATH"] = str(tess_dir / "lib")
     os.environ["TESSDATA_PREFIX"] = str(tess_dir / "share" / "tessdata")  # <- very important
