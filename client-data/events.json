@@ -4,8 +4,15 @@
         "options": [
             "Trade It for Something: Gain a Neutral Item.",
             "Sell It: Gain 4 Gold .",
-            "(If you have a Bushel ) Add It to Your Bushel: Add + 20 Heal to your Bushel .",
+            "(If you have a Bushel ) Add It to Your Bushel: Add + 3 Regen to your Bushel .",
             "(If you are Mak) Brew a Potion: Get a small Silver-tier Potion"
+        ]
+    },
+    {
+        "name": "Abandoned Property",
+        "options": [
+            "Events",
+            "Pygmalien Events"
         ]
     },
     {
@@ -88,6 +95,15 @@
         ]
     },
     {
+        "name": "Aldric",
+        "options": [
+            "Exploit: Your leftmost Heal or Regen item gains +25% Crit Chance .",
+            "Purify: 5 Your Heal items gain + 30 Heal . Your Regen items gain + 3 Regen .",
+            "Upgrade: 10 Upgrade your leftmost Heal or Regen item.",
+            "Enchant: 20 Enchant your leftmost Heal or Regen item."
+        ]
+    },
+    {
         "name": "Armory",
         "options": [
             "\"Get a Weapon.\""
@@ -146,6 +162,15 @@
         "name": "Botanical Gardens",
         "options": [
             "\"Get a Poison item.\""
+        ]
+    },
+    {
+        "name": "Botul",
+        "options": [
+            "Exploit: Your leftmost Poison item gains +25% Crit Chance .",
+            "New Coating: 5 Your Poison items gain + 3 Poison .",
+            "Upgrade: 10 Upgrade your leftmost Poison item.",
+            "Enchant: 20 Enchant your leftmost Poison item."
         ]
     },
     {
@@ -212,9 +237,12 @@
         ]
     },
     {
-        "name": "Dooley's Workshop (Start Run)",
+        "name": "D'fleck",
         "options": [
-            "\"Your journey begins here\""
+            "Exploit: Your leftmost Shield item gains +25% Crit Chance .",
+            "Reinforce: 5 Your Shield items gain + 30 Shield .",
+            "Upgrade: 10 Upgrade your leftmost Shield item.",
+            "Enchant: 20 Enchant your leftmost Shield item."
         ]
     },
     {
@@ -261,6 +289,15 @@
         ]
     },
     {
+        "name": "Flambé",
+        "options": [
+            "Exploit: Your leftmost Burn item gains +25% Crit Chance .",
+            "Temper: 5 Your Burn items gain + 3 Burn .",
+            "Upgrade: 10 Upgrade your leftmost Burn item.",
+            "Enchant: 20 Enchant your leftmost Burn item."
+        ]
+    },
+    {
         "name": "Forja",
         "options": [
             "\"Upgrade an item.\""
@@ -298,7 +335,7 @@
         "options": [
             "Fate's Bounty - Gain 20 Gold and 5 XP .",
             "Fate's Crossroads - Visit a random enchantment location. (Choose either a random Enchantment or The Artist )",
-            "Fate's Legacy - Choose a free Diamond-tier item."
+            "Fate's Legacy - Upgrade your Bronze-tier and Silver-tier items to Gold-tier."
         ]
     },
     {
@@ -379,7 +416,7 @@
     {
         "name": "Jungle Ruins",
         "options": [
-            "Grab the Loot : Gain 2 Bronze -tier loot items.",
+            "Grab the Loot : Gain 3 loot items.",
             "Enjoy the Scenery : Gain 3 Regeneration .",
             "(if you are Vanessa ) Plunder for Treasure : Gain a Small Silver -tier item.",
             "(if you are Pygmalien ) Setup Tourist Attraction : Gain 2 Income",
@@ -414,9 +451,12 @@
         ]
     },
     {
-        "name": "Mak's Laboratory (Start Run)",
+        "name": "Mad Maddie",
         "options": [
-            "\"Your journey begins here\""
+            "Explosive Ammo: Your leftmost Ammo item gains +25% Crit Chance .",
+            "Extended Magazine: 5 Your Ammo items gain +1 Max Ammo .",
+            "Upgrade: 10 Upgrade your leftmost Ammo item.",
+            "Enchant: 20 Enchant your leftmost Ammo item."
         ]
     },
     {
@@ -442,13 +482,18 @@
     {
         "name": "Mountain Pass",
         "options": [
-            "Guide the Convoy: Gain 2 Gold and 1 XP",
-            "Work for the Convoy: Gain 5 Gold",
-            "Escort the Convoy: Risky! Anything could happen here. A fight with a monster that can be found on the current day or the next. It was uneventful: Gain 1 XP Treasure Chest: Get an item.",
-            "A fight with a monster that can be found on the current day or the next.",
-            "It was uneventful: Gain 1 XP",
-            "Treasure Chest: Get an item.",
-            "Invest in the Convoy: Pay 1 Gold for 2 Income"
+            "25% Chance: Fight a monster from same day",
+            "25% Chance: Fight a monster from next day",
+            "40% Chance: Positive Outcome Get 3 Loot Items . Generous Tip: Gain 10 Gold . Invest in the Convoy: Gain 1 Income . A Routine Job: Gain 1 XP and 5 Gold . Escape to the Sea: Gain 5 XP .",
+            "Get 3 Loot Items .",
+            "Generous Tip: Gain 10 Gold .",
+            "Invest in the Convoy: Gain 1 Income .",
+            "A Routine Job: Gain 1 XP and 5 Gold .",
+            "Escape to the Sea: Gain 5 XP .",
+            "10% Chance: Negative Outcome Gain the Skill Valley Fever Gain the Skill Insect Bite An Ardous Journey: Loose 5% Max Health.",
+            "Gain the Skill Valley Fever",
+            "Gain the Skill Insect Bite",
+            "An Ardous Journey: Loose 5% Max Health."
         ]
     },
     {
@@ -497,12 +542,6 @@
         ]
     },
     {
-        "name": "Pygmalien's Loft (Start Run)",
-        "options": [
-            "\"Your journey begins here\""
-        ]
-    },
-    {
         "name": "Pyre",
         "options": [
             "\"Get a Burn item.\""
@@ -515,15 +554,15 @@
         ]
     },
     {
-        "name": "Recycling Center",
-        "options": [
-            "\"Get a non Weapon item.\""
-        ]
-    },
-    {
         "name": "Regenerative Tincture",
         "options": [
             "\"Gain Regeneration equal to your level.\""
+        ]
+    },
+    {
+        "name": "Recycling Center",
+        "options": [
+            "\"Get a non Weapon item.\""
         ]
     },
     {
@@ -574,12 +613,6 @@
         "name": "Snack Time",
         "options": [
             "\"Gain 20 Max Health per level.\""
-        ]
-    },
-    {
-        "name": "Start of Run",
-        "options": [
-            "The Start of Run is the first event of the day in the Bazaar and counts as one of the six hours. Each run, players will be offered 3 options to choose from to start their run with:"
         ]
     },
     {
@@ -664,12 +697,6 @@
         "name": "Utility Box",
         "options": [
             "Get a small Tool."
-        ]
-    },
-    {
-        "name": "Vanessa's Quarters (Start Run)",
-        "options": [
-            "\"Your journey begins here\""
         ]
     },
     {

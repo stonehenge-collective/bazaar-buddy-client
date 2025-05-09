@@ -2,11 +2,21 @@
   {
     "name": "A Strange Mushroom",
     "type": "event",
-    "display_message": "A Strange Mushroom\nTrade It for Something: Gain a Neutral Item.\n\nSell It: Gain 4 Gold.\n\n(If you have a Bushel) Add It to Your Bushel: Add +20 Heal to your Bushel.\n\n(If you are Mak) Brew a Potion: Get a small Silver-tier Potion"
+    "display_message": "A Strange Mushroom\nTrade It for Something: Gain a Neutral Item.\n\nSell It: Gain 4 Gold.\n\n(If you have a Bushel) Add It to Your Bushel: Add +3 Regen to your Bushel.\n\n(If you are Mak) Brew a Potion: Get a small Silver-tier Potion"
+  },
+  {
+    "name": "Abandoned Property",
+    "type": "event",
+    "display_message": "Abandoned Property\nEvents\n\nPygmalien Events"
   },
   {
     "name": "Aerodrome",
     "type": "event"
+  },
+  {
+    "name": "Aldric",
+    "type": "event",
+    "display_message": "Aldric\nExploit: Your leftmost Heal or Regen item gains +25% Crit Chance.\n\nPurify: 5 Your Heal items gain +30 Heal. Your Regen items gain +3 Regen.\n\nUpgrade: 10 Upgrade your leftmost Heal or Regen item.\n\nEnchant: 20 Enchant your leftmost Heal or Regen item."
   },
   {
     "name": "Armory",
@@ -45,6 +55,11 @@
   {
     "name": "Botanical Gardens",
     "type": "event"
+  },
+  {
+    "name": "Botul",
+    "type": "event",
+    "display_message": "Botul\nExploit: Your leftmost Poison item gains +25% Crit Chance.\n\nNew Coating: 5 Your Poison items gain +3 Poison.\n\nUpgrade: 10 Upgrade your leftmost Poison item.\n\nEnchant: 20 Enchant your leftmost Poison item."
   },
   {
     "name": "Bounty Hunters Event",
@@ -89,8 +104,9 @@
     "type": "event"
   },
   {
-    "name": "Dooley's Workshop (Start Run)",
-    "type": "event"
+    "name": "D'fleck",
+    "type": "event",
+    "display_message": "D'fleck\nExploit: Your leftmost Shield item gains +25% Crit Chance.\n\nReinforce: 5 Your Shield items gain +30 Shield.\n\nUpgrade: 10 Upgrade your leftmost Shield item.\n\nEnchant: 20 Enchant your leftmost Shield item."
   },
   {
     "name": "Dooley’s Workshop",
@@ -120,6 +136,11 @@
     "display_message": "Finn's Big Bite\nGuardian's Gravy Plate: You gain 5% Max Health and your Shield items gain Shield 10.\n\nRestorative Risotto: You gain 5% Max Health and your Heal items gain Heal 10.\n\nVitality Stew: You gain 5% Max Health and 5 Regeneration."
   },
   {
+    "name": "Flambé",
+    "type": "event",
+    "display_message": "Flambé\nExploit: Your leftmost Burn item gains +25% Crit Chance.\n\nTemper: 5 Your Burn items gain +3 Burn.\n\nUpgrade: 10 Upgrade your leftmost Burn item.\n\nEnchant: 20 Enchant your leftmost Burn item."
+  },
+  {
     "name": "Forja",
     "type": "event"
   },
@@ -143,7 +164,7 @@
   {
     "name": "Futura",
     "type": "event",
-    "display_message": "Futura\nFate's Bounty - Gain 20 Gold and 5 XP.\n\nFate's Crossroads - Visit a random enchantment location. (Choose either a random Enchantment or The Artist)\n\nFate's Legacy - Choose a free Diamond-tier item."
+    "display_message": "Futura\nFate's Bounty - Gain 20 Gold and 5 XP.\n\nFate's Crossroads - Visit a random enchantment location. (Choose either a random Enchantment or The Artist)\n\nFate's Legacy - Upgrade your Bronze-tier and Silver-tier items to Gold-tier."
   },
   {
     "name": "Genie Lamp Event",
@@ -192,7 +213,7 @@
   {
     "name": "Jungle Ruins",
     "type": "event",
-    "display_message": "Jungle Ruins\nGrab the Loot: Gain 2 Bronze -tier loot items.\n\nEnjoy the Scenery: Gain 3 Regeneration.\n\n(if you are Vanessa) Plunder for Treasure: Gain a Small Silver -tier item.\n\n(if you are Pygmalien) Setup Tourist Attraction: Gain 2 Income\n\n(if you are Mak) Hunt for Reagents: Get a Silver -tier Reagent."
+    "display_message": "Jungle Ruins\nGrab the Loot: Gain 3 loot items.\n\nEnjoy the Scenery: Gain 3 Regeneration.\n\n(if you are Vanessa) Plunder for Treasure: Gain a Small Silver -tier item.\n\n(if you are Pygmalien) Setup Tourist Attraction: Gain 2 Income\n\n(if you are Mak) Hunt for Reagents: Get a Silver -tier Reagent."
   },
   {
     "name": "Languid Dunes",
@@ -212,8 +233,9 @@
     "type": "event"
   },
   {
-    "name": "Mak's Laboratory (Start Run)",
-    "type": "event"
+    "name": "Mad Maddie",
+    "type": "event",
+    "display_message": "Mad Maddie\nExplosive Ammo: Your leftmost Ammo item gains +25% Crit Chance.\n\nExtended Magazine: 5 Your Ammo items gain +1 Max Ammo.\n\nUpgrade: 10 Upgrade your leftmost Ammo item.\n\nEnchant: 20 Enchant your leftmost Ammo item."
   },
   {
     "name": "Mandala",
@@ -231,7 +253,7 @@
   {
     "name": "Mountain Pass",
     "type": "event",
-    "display_message": "Mountain Pass\nGuide the Convoy: Gain 2 Gold and 1 XP\n\nWork for the Convoy: Gain 5 Gold\n\nEscort the Convoy: Risky! Anything could happen here. A fight with a monster that can be found on the current day or the next. It was uneventful: Gain 1 XP Treasure Chest: Get an item.\n\nA fight with a monster that can be found on the current day or the next.\n\nIt was uneventful: Gain 1 XP\n\nTreasure Chest: Get an item.\n\nInvest in the Convoy: Pay 1 Gold for 2 Income"
+    "display_message": "Mountain Pass\n25% Chance: Fight a monster from same day\n\n25% Chance: Fight a monster from next day\n\n40% Chance: Positive Outcome Get 3 Loot Items. Generous Tip: Gain 10 Gold. Invest in the Convoy: Gain 1 Income. A Routine Job: Gain 1 XP and 5 Gold. Escape to the Sea: Gain 5 XP.\n\nGet 3 Loot Items.\n\nGenerous Tip: Gain 10 Gold.\n\nInvest in the Convoy: Gain 1 Income.\n\nA Routine Job: Gain 1 XP and 5 Gold.\n\nEscape to the Sea: Gain 5 XP.\n\n10% Chance: Negative Outcome Gain the Skill Valley Fever Gain the Skill Insect Bite An Ardous Journey: Loose 5% Max Health.\n\nGain the Skill Valley Fever\n\nGain the Skill Insect Bite\n\nAn Ardous Journey: Loose 5% Max Health."
   },
   {
     "name": "Murkwood Bayou",
@@ -254,10 +276,6 @@
     "type": "event"
   },
   {
-    "name": "Pygmalien's Loft (Start Run)",
-    "type": "event"
-  },
-  {
     "name": "Pyre",
     "type": "event"
   },
@@ -266,11 +284,11 @@
     "type": "event"
   },
   {
-    "name": "Recycling Center",
+    "name": "Regenerative Tincture",
     "type": "event"
   },
   {
-    "name": "Regenerative Tincture",
+    "name": "Recycling Center",
     "type": "event"
   },
   {
@@ -304,10 +322,6 @@
   },
   {
     "name": "Snack Time",
-    "type": "event"
-  },
-  {
-    "name": "Start of Run",
     "type": "event"
   },
   {
@@ -359,10 +373,6 @@
   },
   {
     "name": "Utility Box",
-    "type": "event"
-  },
-  {
-    "name": "Vanessa's Quarters (Start Run)",
     "type": "event"
   },
   {
@@ -432,7 +442,7 @@
   {
     "name": "Antimatter Chamber",
     "type": "item",
-    "display_message": "Antimatter Chamber\nCooldown (30/24) seconds\nDestroy this.\nWhen this is Destroyed, 3 enemy items for the fight.\nWhen you use another Tech, charge this 2 second(s).\n\nHeavy\nSlow 3 items for 3 second(s).\n\nIcy\nFreeze 1 item for 4 second(s).\n\nTurbo\nHaste 3 items for 3 second(s).\n\nShielded\nShield 150.\n\nRestorative\nHeal 225.\n\nToxic\nPoison 15.\n\nFiery\nBurn 22.\n\nShiny\nThis has +1 Multicast.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal 150 Damage."
+    "display_message": "Antimatter Chamber\nCooldown (30/24) seconds\nDestroy this.\nWhen this is Destroyed, destroy 3 enemy items for the fight.\nWhen you use another Tech, charge this 2 second(s).\n\nHeavy\nSlow 3 items for 3 second(s).\n\nIcy\nFreeze 1 item for 4 second(s).\n\nTurbo\nHaste 3 items for 3 second(s).\n\nShielded\nShield 150.\n\nRestorative\nHeal 225.\n\nToxic\nPoison 15.\n\nFiery\nBurn 22.\n\nShiny\nThis has +1 Multicast.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal 150 Damage."
   },
   {
     "name": "Apothecary",
@@ -577,7 +587,7 @@
   {
     "name": "Beehive",
     "type": "item",
-    "display_message": "Beehive\nWhen your enemy uses a weapon, charge your Busy Bees 2 second(s).\nWhen you buy a Property, get a Busy Bee and your Busy Bees gain (+10/+15/+20) damage.\n\nHeavy\n...and Enchant the item with Heavy if able.\n\nIcy\n...and Enchant the item with Icy if able.\n\nTurbo\n...and Enchant the item with Turbo if able.\n\nShielded\n...and Enchant the item with Shielded if able.\n\nRestorative\n...and Enchant the item with Restorative if able.\n\nToxic\n...and Enchant the item with Toxic if able.\n\nFiery\n...and Enchant the item with Fiery if able.\n\nShiny\n...and Enchant the item with Shiny if able.\n\nDeadly\n...and Enchant the item with Deadly if able.\n\nRadiant\n...and Enchant the item with Radiant if able.\n\nObsidian\n...and Enchant the item with Obsidian if able."
+    "display_message": "Beehive\nWhen your enemy uses a weapon, charge your Busy Bees 2 second(s).\nWhen you buy this, get 2 Busy Bees.\nWhen you buy a Property, your Busy Bees gain (+10/+15/+20) damage.\n\nHeavy\nWhen you use a Busy Bee, Slow 1 item for 1 second(s).\n\nIcy\nWhen you use a Busy Bee, Freeze 1 item for 0.5 second(s).\n\nTurbo\nWhen you use a Busy Bee, Haste 1 item for 1 second(s).\n\nShielded\nWhen you use a Busy Bee, Shield equal to the Damage of your strongest Busy Bee.\n\nRestorative\nWhen you use a Busy Bee, Heal equal to the Damage of your strongest Busy Bee.\n\nToxic\nWhen you use a Busy Bee, Poison equal to 10% of the Damage of your strongest Busy Bee.\n\nFiery\nWhen you use a Busy Bee, Burn equal to 10% of the Damage of your strongest Busy Bee.\n\nShiny\nYour Busy Bees have +1 Multicast.\n\nDeadly\nYour Busy Bees have +50% Crit Chance.\n\nObsidian\nYour Busy Bees deal double Damage."
   },
   {
     "name": "Bellelista",
@@ -752,12 +762,12 @@
   {
     "name": "Bushel",
     "type": "item",
-    "display_message": "Bushel\nCooldown 4 seconds\nGain (3/6/12/24) Regen for the fight.\nWhen you Shield, charge this 1 second(s).\n\nHeavy\nSlow 1 item for 2 second(s).\n\nIcy\nFreeze 1 medium or small item for 2 second(s).\n\nTurbo\nHaste 1 item for 2 second(s).\n\nShielded\nShield equal to ten times this item's Regen.\n\nRestorative\nHeal equal to 10 times this item's Regen.\n\nToxic\nPoison equal to this item's Regen.\n\nFiery\nBurn equal to this item's Regen.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal damage equal to ten times this item's Regen."
+    "display_message": "Bushel\nCooldown 5 seconds\nHeal (20/40/60/80).\nGain Regen equal to 10% of this item's Heal for the fight.\nWhen you Shield, charge this 1 second(s).\n\nHeavy\nSlow 1 item for 2 second(s).\n\nIcy\nFreeze 1 medium or small item for 2 second(s).\n\nTurbo\nHaste 1 item for 2 second(s).\n\nShielded\nShield equal to this item's Heal.\n\nRestorative\nThis has double Heal.\n\nToxic\nPoison equal to 10% of this item's Heal.\n\nFiery\nBurn equal to 10% of this item's Heal.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal damage equal to this item's Heal."
   },
   {
     "name": "Business Card",
     "type": "item",
-    "display_message": "Business Card\nWhen you visit a Merchant, this gains (1/2/3) value.\nFor every 5 Merchants you visit, upgrade this.\n\nGolden\nThis has double income bonus.\n\nShiny\nThis has +2 value gain."
+    "display_message": "Business Card\nWhen you visit a Merchant, this gains (1/2/3) value.\nFor every 5 Merchants you visit, upgrade this.\n\nGolden\nThis has double value.\n\nShiny\nThis has +2 value gain."
   },
   {
     "name": "Busy Bee",
@@ -937,7 +947,7 @@
   {
     "name": "Clawrence",
     "type": "item",
-    "display_message": "Clawrence\nCooldown 6 seconds\nDeal 20 damage.\nWhen you use a Friend, this gains (15/20/25) damage for the fight.\n\nHeavy\nSlow 2 items for 2 second(s).\n\nIcy\nFreeze 1 medium or small item for 2 second(s).\n\nTurbo\nHaste 2 items for 2 second(s).\n\nShielded\nShield equal to this item's damage.\n\nRestorative\nHeal equal to this item's Damage.\n\nToxic\nPoison equal to 10% of this item's damage.\n\nFiery\nBurn equal to 10% of this item's damage.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double Damage."
+    "display_message": "Clawrence\nCooldown 6 seconds\nDeal 20 damage.\nWhen you use a Friend, this gains (20/40/60) damage for the fight.\n\nHeavy\nSlow 2 items for 2 second(s).\n\nIcy\nFreeze 1 medium or small item for 2 second(s).\n\nTurbo\nHaste 2 items for 2 second(s).\n\nShielded\nShield equal to this item's damage.\n\nRestorative\nHeal equal to this item's Damage.\n\nToxic\nPoison equal to 10% of this item's damage.\n\nFiery\nBurn equal to 10% of this item's damage.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double Damage."
   },
   {
     "name": "Claws",
@@ -1112,7 +1122,7 @@
   {
     "name": "Cybersecurity",
     "type": "item",
-    "display_message": "Cybersecurity\nCooldown 10 seconds\nDeal (15/30/60) damage for each Weapon or Tech item you have.\nThis deals (2/3/4) times damage if it is your only friend.\n\nHeavy\nSlow 2 items for 4 second(s).\n\nIcy\nFreeze 1 medium or small item for 4 second(s).\n\nTurbo\nHaste 2 items for 4 second(s).\n\nShielded\nShield equal to this item's damage.\n\nRestorative\nHeal equal to this item's Damage.\n\nToxic\nPoison equal to 10% of this item's damage.\n\nFiery\nBurn equal to 10% of this item's damage.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double Damage."
+    "display_message": "Cybersecurity\nCooldown 10 seconds\nDeal (30/40/50) damage for each Weapon or Tech item you have.\nThis deals (2/3/4) times damage if it is your only friend.\n\nHeavy\nSlow 2 items for 4 second(s).\n\nIcy\nFreeze 1 medium or small item for 4 second(s).\n\nTurbo\nHaste 2 items for 4 second(s).\n\nShielded\nShield equal to this item's damage.\n\nRestorative\nHeal equal to this item's Damage.\n\nToxic\nPoison equal to 10% of this item's damage.\n\nFiery\nBurn equal to 10% of this item's damage.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double Damage."
   },
   {
     "name": "Dam",
@@ -1567,7 +1577,7 @@
   {
     "name": "Hogwash",
     "type": "item",
-    "display_message": "Hogwash\nCooldown 5 seconds\nHeal equal to (5%/10%/15%) of your Max Health.\nWhen you Heal or gain Regen, gain (50/100/150) Max Health for the fight.\n\nHeavy\nWhen you Heal or gain Regen, Slow 1 item for 3 second(s).\n\nIcy\nWhen you Heal or gain Regen, Freeze 1 item for 1 second(s).\n\nTurbo\nWhen you Heal or gain Regen, Haste 1 item for 3 second(s).\n\nShielded\nWhen you Heal or gain Regen, Shield equal to this item's Heal.\n\nRestorative\nThis has double Heal.\n\nToxic\nWhen you Heal or gain Regen, Poison equal to 10% of this item's Heal.\n\nFiery\nWhen you Heal or gain Regen, Burn equal to 10% of this item's Heal.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\nWhen you Heal or gain Regen, your items gain +10% Crit Chance for the fight.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nWhen you Heal or gain Regen, deal damage equal to this item's Heal."
+    "display_message": "Hogwash\nCooldown (7/6/5) seconds\nHeal equal to 10% of your Max Health.\nWhen you Heal or gain Regen, gain (50/75/100) Max Health for the fight.\n\nHeavy\nSlow 3 items for 1 second(s).\n\nIcy\nFreeze 2 item for 1 second(s).\n\nTurbo\nHaste 3 items for 1 second(s).\n\nShielded\nShield equal to this item's Heal.\n\nRestorative\nThis has double Heal.\n\nToxic\nPoison equal to 10% of this item's Heal.\n\nFiery\nBurn equal to 10% of this item's Heal.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal damage equal to this item's Heal."
   },
   {
     "name": "Hologram Projector",
@@ -1842,7 +1852,7 @@
   {
     "name": "Lemonade Stand",
     "type": "item",
-    "display_message": "Lemonade Stand\nCooldown 7 seconds\nGain Regen equal to 5% of your Max Health for the fight.\nWhen you sell a Small item, permanently gain (+10/+20/+40) Max Health.\n\nGolden\nYour small items have +1 value\n\nHeavy\nSlow 3 items for 2 second(s).\n\nIcy\nFreeze 1 item for 3 second(s).\n\nTurbo\nHaste 3 items for 2 second(s).\n\nShielded\nShield equal to 5 times this item's Regen.\n\nRestorative\nHeal equal to 10 times this item's Regen.\n\nToxic\nPoison equal to this item's Regen.\n\nFiery\nBurn equal to this item's Regen.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal damage equal to 5 times this item's Regen."
+    "display_message": "Lemonade Stand\nCooldown (12/11/10) seconds\nGain Regen equal to 5% of your Max Health for the fight.\nWhen you sell a Small item, permanently gain (+10/+20/+40) Max Health.\n\nGolden\nYour small items have +1 value\n\nHeavy\nSlow 3 items for 2 second(s).\n\nIcy\nFreeze 1 item for 3 second(s).\n\nTurbo\nHaste 3 items for 2 second(s).\n\nShielded\nShield equal to 5 times this item's Regen.\n\nRestorative\nHeal equal to 10 times this item's Regen.\n\nToxic\nPoison equal to this item's Regen.\n\nFiery\nBurn equal to this item's Regen.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal damage equal to 5 times this item's Regen."
   },
   {
     "name": "Lens",
@@ -1942,7 +1952,7 @@
   {
     "name": "Magnus' Femur",
     "type": "item",
-    "display_message": "Magnus' Femur\nCooldown 13 seconds\nDeal 300 damage.\nWhen you Slow, Charge this 2 second(s) and this gains (+25/+50/+75) Damage for the fight.\n\nHeavy\nSlow 1 item for 4 second(s).\n\nIcy\nFreeze 1 item for 2 second(s).\n\nTurbo\nHaste 1 item for 4 second(s).\n\nShielded\nShield equal to this item's damage.\n\nRestorative\nHeal equal to this item's damage.\n\nToxic\nPoison equal to 10% of this item's damage.\n\nFiery\nBurn equal to 10% of this item's damage.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double Damage."
+    "display_message": "Magnus' Femur\nCooldown (17/15/13) seconds\nDeal 300 damage.\nWhen you Slow, Charge this 2 second(s) and this gains (+25/+50/+75) Damage for the fight.\n\nHeavy\nSlow 1 item for 4 second(s).\n\nIcy\nFreeze 1 item for 2 second(s).\n\nTurbo\nHaste 1 item for 4 second(s).\n\nShielded\nShield equal to this item's damage.\n\nRestorative\nHeal equal to this item's damage.\n\nToxic\nPoison equal to 10% of this item's damage.\n\nFiery\nBurn equal to 10% of this item's damage.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double Damage."
   },
   {
     "name": "Makeshift Barricade",
@@ -2027,7 +2037,7 @@
   {
     "name": "Money Tree",
     "type": "item",
-    "display_message": "Money Tree\nCooldown 3 seconds\nHeal equal to double this item's Value.\nWhen you Level Up and at the start of each day, get a Spare Change.\nWhen you sell a Spare Change, this gains (+2/+4/+6/+8) Value.\n\nGolden\nYour Spare Change(s) have +1 value.\n\nHeavy\nSlow 3 items for 2 second(s).\n\nIcy\nFreeze 1 item for 3 second(s).\n\nTurbo\nHaste 3 items for 2 second(s).\n\nShielded\nShield equal to this item's Heal.\n\nRestorative\nThis has double Heal.\n\nToxic\nPoison equal to 10% of this item's Heal.\n\nFiery\nBurn equal to 10% of this item's Heal.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal damage equal to this item's Heal."
+    "display_message": "Money Tree\nCooldown 3 seconds\nHeal equal to double this item's Value.\nWhen you Level Up and at the start of each day, get a Spare Change.\nWhen you sell a Spare Change, this gains (+2/+4/+6/+8) Value.\n\nGolden\nYour Spare Change(s) have +1 value.\n\nHeavy\nSlow 2 items for 1 second(s).\n\nIcy\nFreeze 2 item for 0.5 second(s).\n\nTurbo\nHaste 2 items for 1 second(s).\n\nShielded\nShield equal to this item's Heal.\n\nRestorative\nThis has double Heal.\n\nToxic\nPoison equal to 10% of this item's Heal.\n\nFiery\nBurn equal to 10% of this item's Heal.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal damage equal to this item's Heal."
   },
   {
     "name": "Monitor Lizard",
@@ -2347,12 +2357,12 @@
   {
     "name": "Power Drill",
     "type": "item",
-    "display_message": "Power Drill\nCooldown 10 seconds\nDeal (50/75/100/125) damage.\nWhen you Haste, Slow, Freeze, Poison, or Burn, charge this 2 second(s).\n\nHeavy\nSlow 1 items for 2 second(s).\n\nIcy\nFreeze 1 medium or small item for 1 second(s).\n\nTurbo\nHaste 1 item for 2 second(s).\n\nShielded\nShield equal to this item's damage.\n\nRestorative\nHeal equal to this item's Damage.\n\nToxic\nPoison equal to 10% of this item's damage.\n\nFiery\nBurn equal to 10% of this item's damage.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double Damage."
+    "display_message": "Power Drill\nCooldown (15/14/13/12) seconds\nDeal 100 damage.\nWhen you Haste, Slow, Freeze, Poison, or Burn, charge this 2 second(s).\n\nHeavy\nSlow 1 items for 2 second(s).\n\nIcy\nFreeze 1 medium or small item for 1 second(s).\n\nTurbo\nHaste 1 item for 2 second(s).\n\nShielded\nShield equal to this item's damage.\n\nRestorative\nHeal equal to this item's Damage.\n\nToxic\nPoison equal to 10% of this item's damage.\n\nFiery\nBurn equal to 10% of this item's damage.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double Damage."
   },
   {
     "name": "Power Sander",
     "type": "item",
-    "display_message": "Power Sander\nCooldown 8 seconds\nHaste the item to the right of this for (1/2/3/4) second(s).\nSlow the item to the left of this for 1 second(s).\n\nHeavy\nThis has half Slow duration.\n\nIcy\nFreeze 1 small item for 1 second(s).\n\nTurbo\nThis has double Haste duration.\n\nShielded\nShield 20.\n\nRestorative\nHeal 30.\n\nToxic\nPoison 2.\n\nFiery\nBurn 3.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\nThe item to the right of this gains 20% Crit chance for the fight.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal 20 Damage."
+    "display_message": "Power Sander\nCooldown 5 seconds\nHaste the item to the right of this for (1/2/3/4) second(s).\nSlow the item to the left of this for 1 second(s).\n\nHeavy\nThis has half Slow duration.\n\nIcy\nFreeze 1 small item for 1 second(s).\n\nTurbo\nThis has double Haste duration.\n\nShielded\nShield 20.\n\nRestorative\nHeal 30.\n\nToxic\nPoison 2.\n\nFiery\nBurn 3.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\nThe item to the right of this gains 20% Crit chance for the fight.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal 20 Damage."
   },
   {
     "name": "Private Hot Springs",
@@ -2362,7 +2372,7 @@
   {
     "name": "Proboscis",
     "type": "item",
-    "display_message": "Proboscis\nWhen you Slow, deal (4/8/12/16) damage.\n\nIcy\nWhen you Slow, Freeze 1 small item for 1 second(s).\n\nTurbo\nWhen you Slow, Haste 1 item for 1 second(s).\n\nShielded\nWhen you Slow, Shield equal to this item's damage.\n\nRestorative\nWhen you Slow, Heal equal to this item's damage.\n\nToxic\nWhen you Slow, Poison equal to 10% of this item's damage.\n\nFiery\nWhen you Slow, Burn equal to 10% of this item's damage.\n\nShiny\nThis has double Damage.\n\nObsidian\nThis has double Damage."
+    "display_message": "Proboscis\nCooldown 4 seconds\nDeal (4/8/12/16) damage.\nWhen you Slow, Charge this 1 second.\n\nHeavy\nSlow 1 item for 1 second(s).\n\nIcy\nFreeze 1 small item for 1 second(s).\n\nTurbo\nHaste 1 item for 1 second(s).\n\nShielded\nShield equal to this item's damage.\n\nRestorative\nHeal equal to this item's damage.\n\nToxic\nPoison equal to 10% of this item's damage.\n\nFiery\nBurn equal to 10% of this item's damage.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double Damage."
   },
   {
     "name": "Propane Tank",
@@ -2382,7 +2392,7 @@
   {
     "name": "Pyg's Gym",
     "type": "item",
-    "display_message": "Pyg's Gym\nCooldown 6 seconds\nYour weapons gain Damage equal to this item's value for the fight.\nWhen you buy a weapon, this gains (3/6/9) value and you gain (20/50/100) max health.\n\nGolden\nThis has double value.\n\nHeavy\nSlow 3 items for 2 second(s).\n\nIcy\nFreeze 1 item for 3 second(s).\n\nTurbo\nHaste 3 items for 2 second(s).\n\nShielded\nYour Shield items gain Shield equal to this item's value for the fight.\n\nRestorative\nYour Heal items gain Heal equal to this item's value for the fight.\n\nToxic\nYour Poison items gain Poison equal to 10% of this item's value for the fight.\n\nFiery\nYour Burn items gain Burn equal to 15% of this item's value for the fight.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\nYour items gain Crit Chance equal to this item's value for the fight.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double damage bonus."
+    "display_message": "Pyg's Gym\nCooldown (12/10/8) seconds\nYour weapons gain Damage equal to this item's value for the fight.\nWhen you buy a weapon, this gains (2/4/6) value and you gain (20/50/100) max health.\n\nGolden\nThis has double value.\n\nHeavy\nSlow 3 items for 2 second(s).\n\nIcy\nFreeze 1 item for 3 second(s).\n\nTurbo\nHaste 3 items for 2 second(s).\n\nShielded\nYour Shield items gain Shield equal to this item's value for the fight.\n\nRestorative\nYour Heal items gain Heal equal to this item's value for the fight.\n\nToxic\nYour Poison items gain Poison equal to 10% of this item's value for the fight.\n\nFiery\nYour Burn items gain Burn equal to 15% of this item's value for the fight.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\nYour items gain Crit Chance equal to this item's value for the fight.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double damage bonus."
   },
   {
     "name": "Pygmalien's Dagger",
@@ -2742,7 +2752,7 @@
   {
     "name": "Shot Glasses",
     "type": "item",
-    "display_message": "Shot Glasses\nCooldown 3 seconds\nAmmo (2/3/4)\nHaste your items for 1 second(s).\nSlow your items for 1 second(s).\n\nHeavy\nThis has half Slow duration.\n\nIcy\nFreeze 1 small item for 1 second(s).\n\nTurbo\nThis has double Haste duration.\n\nShielded\nShield 20.\n\nRestorative\nHeal 30.\n\nToxic\nPoison 2.\n\nFiery\nBurn 2.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\nYour small items have +25% Crit Chance.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal 20 damage."
+    "display_message": "Shot Glasses\nCooldown 4 seconds\nAmmo (2/3/4)\nHaste your items for 1 second(s).\nSlow your items for 1 second(s).\n\nHeavy\nThis has half Slow duration.\n\nIcy\nFreeze 1 small item for 1 second(s).\n\nTurbo\nThis has double Haste duration.\n\nShielded\nShield 20.\n\nRestorative\nHeal 30.\n\nToxic\nPoison 2.\n\nFiery\nBurn 2.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\nYour small items have +25% Crit Chance.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal 20 damage."
   },
   {
     "name": "Shovel",
@@ -3152,7 +3162,7 @@
   {
     "name": "Uwashiwali Bird",
     "type": "item",
-    "display_message": "Uwashiwali Bird\nCooldown 5 seconds\nHeal (20/30/40/50).\nGain (1/2/3/4) Regen for the fight.\nThis has +1 Multicast for each Property you have.\n\nHeavy\nSlow 1 item for 1 second(s).\n\nIcy\nFreeze 1 small item for 1 second(s).\n\nTurbo\nHaste 1 item for 1 second(s).\n\nShielded\nShield equal to this item's Heal.\n\nRestorative\nThis has double Heal.\n\nToxic\nPoison equal to 10% of this item's Heal.\n\nFiery\nBurn equal to 10% of this item's Heal.\n\nShiny\nThis has +1 Multicast for each Property you have.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal damage equal to this item's Heal."
+    "display_message": "Uwashiwali Bird\nCooldown 5 seconds\nHeal (20/30/40/50).\nThis has +1 Multicast for each Property you have.\n\nHeavy\nSlow 1 item for 1 second(s).\n\nIcy\nFreeze 1 small item for 1 second(s).\n\nTurbo\nHaste 1 item for 1 second(s).\n\nShielded\nShield equal to this item's Heal.\n\nRestorative\nThis has double Heal.\n\nToxic\nPoison equal to 10% of this item's Heal.\n\nFiery\nBurn equal to 10% of this item's Heal.\n\nShiny\nThis has +1 Multicast for each Property you have.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal damage equal to this item's Heal."
   },
   {
     "name": "Uzi",
@@ -3217,7 +3227,7 @@
   {
     "name": "Virus",
     "type": "item",
-    "display_message": "Virus\nCooldown 6 seconds\nPoison yourself (1/2/3/4) for each Virus on your board.\nTransform another non-legendary small item on each player's board into Virus for the rest of the fight.\n\nHeavy\nSlow 1 of your items for 4 second(s).\n\nIcy\nFreeze 1 of your small items for 2 second(s).\n\nTurbo\nHaste 1 enemy item(s) for 4 second(s).\n\nShielded\nShield your opponent equal to 10 times this item's Poison.\n\nRestorative\nHeal your opponent equal to 10 times this item's Poison.\n\nToxic\nThis has double Poison.\n\nFiery\nBurn yourself equal to this item's Poison.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal damage to yourself equal to 10 times this item's Poison."
+    "display_message": "Virus\nCooldown (9/8/7/6) seconds\nPoison yourself (1/2/3/4) for each Virus on your board.\nTransform another non-legendary small item on each player's board into Virus for the rest of the fight.\n\nHeavy\nSlow 1 of your items for 4 second(s).\n\nIcy\nFreeze 1 of your small items for 2 second(s).\n\nTurbo\nHaste 1 enemy item(s) for 4 second(s).\n\nShielded\nShield your opponent equal to 10 times this item's Poison.\n\nRestorative\nHeal your opponent equal to 10 times this item's Poison.\n\nToxic\nThis has double Poison.\n\nFiery\nBurn yourself equal to this item's Poison.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal damage to yourself equal to 10 times this item's Poison."
   },
   {
     "name": "Vitality Potion",
@@ -3322,7 +3332,7 @@
   {
     "name": "Wrist Warrior",
     "type": "item",
-    "display_message": "Wrist Warrior\nCooldown 5 seconds\nAdjacent items gain (+5/+10/+15/+20) Shield for the fight.\nWhen the item to the left of this Shields, deal (5/10/15/20) damage.\n\nHeavy\nWhen the item to the left of this Shields, Slow 1 items for 1 second(s).\n\nIcy\nWhen the item to the left of this Shields, Freeze 1 small item for 1 second(s).\n\nTurbo\nWhen the item to the left of this Shields, Haste 1 item for 1 second(s).\n\nShielded\nWhen the item to the left of this Shields, Shield equal to this item's damage.\n\nRestorative\nWhen the item to the left of this Shields, Heal equal to this item's Damage.\n\nToxic\nWhen the item to the left of this Shields, Poison equal to 10% of this item's damage.\n\nFiery\nWhen the item to the left of this Shields, Burn equal to 10% of this item's damage.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\nThe Shield item to the left of this has +50% Crit Chance.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double Damage."
+    "display_message": "Wrist Warrior\nCooldown 5 seconds\nAdjacent items gain (+5/+10/+15/+20) Shield for the fight.\nWhen the item to the left of this Shields, deal (5/10/15/20) damage.\n\nHeavy\nWhen the item to the left of this Shields, Slow 1 items for 1 second(s).\n\nIcy\nFreeze 1 small item for 2 second(s).\n\nTurbo\nWhen the item to the left of this Shields, Haste 1 item for 1 second(s).\n\nShielded\nWhen the item to the left of this Shields, Shield equal to this item's damage.\n\nRestorative\nWhen the item to the left of this Shields, Heal equal to this item's Damage.\n\nToxic\nWhen the item to the left of this Shields, Poison equal to 10% of this item's damage.\n\nFiery\nWhen the item to the left of this Shields, Burn equal to 10% of this item's damage.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\nThe Shield item to the left of this has +50% Crit Chance.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double Damage."
   },
   {
     "name": "Yellow Gumball",
@@ -3417,7 +3427,7 @@
   {
     "name": "Giant Mosquito",
     "type": "monster",
-    "display_message": "Giant Mosquito\nHealth: 250\n\nItems\nSilver Insect Wing\nWhen you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%).\n\nSilver Proboscis\nWhen you Slow, deal (4/8/12/16) damage.\n\nSilver Amber\nCooldown 6 seconds\nSlow (1/2/3) item(s) for 3 second(s).\nYour other Slow items have +1 Slow.\n\nSilver Insect Wing\nWhen you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%).\n\nSkills\nBronze Rush\nAt the start of each fight, Haste a weapon (3/5/7/9) second(s).\n\nBronze Keen Eye\nYour items have (+4%/+8%/+12%/+16%) Crit chance."
+    "display_message": "Giant Mosquito\nHealth: 250\n\nItems\nSilver Insect Wing\nWhen you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%).\n\nSilver Proboscis\nCooldown 4 seconds\nDeal (4/8/12/16) damage.\nWhen you Slow, Charge this 1 second.\n\nSilver Amber\nCooldown 6 seconds\nSlow (1/2/3) item(s) for 3 second(s).\nYour other Slow items have +1 Slow.\n\nSilver Insect Wing\nWhen you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%).\n\nSkills\nBronze Rush\nThe first time you use an item, Haste 1 Weapon (3/4/5/6) seconds.\n\nBronze Keen Eye\nYour items have (+4%/+8%/+12%/+16%) Crit chance."
   },
   {
     "name": "Covetous Thief",
@@ -3427,7 +3437,7 @@
   {
     "name": "Rogue Scrapper",
     "type": "monster",
-    "display_message": "Rogue Scrapper\nHealth: 350\n\nItems\nGold Scrap\nWhen you sell this, your leftmost Shield item gains (+3/+6/+12/+24) Shield.\n\nBronze Gearnola Bar\nCooldown 5 seconds\nAmmo 2\nShield (30/60/90/120).\nWhen you sell a Tool, this gains +1 Max Ammo.\n\nSilver Junkyard Club\nCooldown 11 seconds\nDeal (30/60/120/240) damage.\nWhen you sell this, your weapons gain (4/6/8/10) damage.\n\nSilver Junkyard Repairbot\nCooldown 8 seconds\nHeal (30/60/120/240).\nWhen you sell this, your leftmost Heal item gains (+5/+15/+30/+50) Heal.\n\nSilver Barbed Wire\nCooldown 5 seconds\nDeal 10 damage.\nWhen you Shield, this gains (5/10/15) Damage for the fight.\n\nGold Med Kit\nWhen you sell this, your leftmost Heal item gains (5/10/20/40) Heal.\n\nSkills\nBronze Rust\nAt the start of each fight, slow 1 item(s) for (3/5/7/9) second(s)."
+    "display_message": "Rogue Scrapper\nHealth: 350\n\nItems\nGold Scrap\nWhen you sell this, your leftmost Shield item gains (+3/+6/+12/+24) Shield.\n\nBronze Gearnola Bar\nCooldown 5 seconds\nAmmo 2\nShield (30/60/90/120).\nWhen you sell a Tool, this gains +1 Max Ammo.\n\nSilver Junkyard Club\nCooldown 11 seconds\nDeal (30/60/120/240) damage.\nWhen you sell this, your weapons gain (4/6/8/10) damage.\n\nSilver Junkyard Repairbot\nCooldown 8 seconds\nHeal (30/60/120/240).\nWhen you sell this, your leftmost Heal item gains (+5/+15/+30/+50) Heal.\n\nSilver Barbed Wire\nCooldown 5 seconds\nDeal 10 damage.\nWhen you Shield, this gains (5/10/15) Damage for the fight.\n\nGold Med Kit\nWhen you sell this, your leftmost Heal item gains (5/10/20/40) Heal.\n\nSkills\nBronze Rust\nThe first time you use an item each fight, slow 1 item(s) for (3/4/5/6) second(s)."
   },
   {
     "name": "Boarrior",
@@ -3448,7 +3458,7 @@
   {
     "name": "Rogue Scrapper",
     "type": "monster",
-    "display_message": "Rogue Scrapper\nHealth: 350\n\nItems\nGold Scrap\nWhen you sell this, your leftmost Shield item gains (+3/+6/+12/+24) Shield.\n\nBronze Gearnola Bar\nCooldown 5 seconds\nAmmo 2\nShield (30/60/90/120).\nWhen you sell a Tool, this gains +1 Max Ammo.\n\nSilver Junkyard Club\nCooldown 11 seconds\nDeal (30/60/120/240) damage.\nWhen you sell this, your weapons gain (4/6/8/10) damage.\n\nSilver Junkyard Repairbot\nCooldown 8 seconds\nHeal (30/60/120/240).\nWhen you sell this, your leftmost Heal item gains (+5/+15/+30/+50) Heal.\n\nSilver Barbed Wire\nCooldown 5 seconds\nDeal 10 damage.\nWhen you Shield, this gains (5/10/15) Damage for the fight.\n\nGold Med Kit\nWhen you sell this, your leftmost Heal item gains (5/10/20/40) Heal.\n\nSkills\nBronze Rust\nAt the start of each fight, slow 1 item(s) for (3/5/7/9) second(s)."
+    "display_message": "Rogue Scrapper\nHealth: 350\n\nItems\nGold Scrap\nWhen you sell this, your leftmost Shield item gains (+3/+6/+12/+24) Shield.\n\nBronze Gearnola Bar\nCooldown 5 seconds\nAmmo 2\nShield (30/60/90/120).\nWhen you sell a Tool, this gains +1 Max Ammo.\n\nSilver Junkyard Club\nCooldown 11 seconds\nDeal (30/60/120/240) damage.\nWhen you sell this, your weapons gain (4/6/8/10) damage.\n\nSilver Junkyard Repairbot\nCooldown 8 seconds\nHeal (30/60/120/240).\nWhen you sell this, your leftmost Heal item gains (+5/+15/+30/+50) Heal.\n\nSilver Barbed Wire\nCooldown 5 seconds\nDeal 10 damage.\nWhen you Shield, this gains (5/10/15) Damage for the fight.\n\nGold Med Kit\nWhen you sell this, your leftmost Heal item gains (5/10/20/40) Heal.\n\nSkills\nBronze Rust\nThe first time you use an item each fight, slow 1 item(s) for (3/4/5/6) second(s)."
   },
   {
     "name": "Frost Street Challenger",
@@ -3456,9 +3466,9 @@
     "display_message": "Frost Street Challenger\nHealth: 450\n\nItems\nBronze Icicle\nAt the start of each fight, freeze 1 item(s) for (3/4/5/6) second(s).\n\nBronze Weights\nCooldown 6 seconds\nYour weapons gain (+10/+15/+20/+25) Damage and your Heal items gain (+10/+15/+20/+25) Heal for the fight.\nWhen you Over-heal, charge this 1 second(s).\n\nSilver Handaxe\nCooldown 8 seconds\nDeal (10/15/20/25) damage.\nYour weapons have (+6/+9/+12/+15) damage.\n\nSilver Frozen Bludgeon\nCooldown 13 seconds\nDeal (15/30/60/120) damage.\nFreeze 1 item for (1/2/3/4) second(s).\nWhen you Freeze, your weapons gain (4/6/8/10) damage for the fight.\n\nSilver Snow Globe\nCooldown 7 seconds\nFreeze 1 item for (1/1.5/2) second(s).\nThis has +1 Multicast for each adjacent Property.\n\nSkills\nBronze Snowstorm\nWhen you freeze, your weapons gain (2/4/6/8) damage for the fight."
   },
   {
-    "name": "Degenerate",
+    "name": "Street Gamer",
     "type": "monster",
-    "display_message": "Degenerate\nHealth: 450\n\nItems\nSilver Red Piggles R\nCooldown 4 seconds\nThe weapon to the right of this gains (+4/+8/+12/+16) damage for the fight.\n\nBronze Yo-Yo\nCooldown 4 seconds\nDeal 1 damage.\nWhen you use an adjacent item, charge this (1/2/3/4) second(s).\n\nSilver Blue Piggles L\nCooldown 4 seconds\nThe item to the left of this gains (4%/8%/12%/16%) Crit Chance for the fight.\n\nGold Piggles\nCooldown 8 seconds\nCharge adjacent Small items (1/2/3/4) second(s).\nWhen you win a fight, get a Piggle.\nAt the start of each day, upgrade a random Piggle.\n\nSilver Red Piggles X\nCooldown 4 seconds\nYour weapons gain (1/2/3/4) damage for the fight.\n\nSkills\nBronze Small Refresh\nWhen you use a small item, heal (5/10/15/20)."
+    "display_message": "Street Gamer\nHealth: 450\n\nItems\nSilver Red Piggles R\nCooldown 4 seconds\nThe weapon to the right of this gains (+4/+8/+12/+16) damage for the fight.\n\nBronze Yo-Yo\nCooldown 4 seconds\nDeal 1 damage.\nWhen you use an adjacent item, charge this (1/2/3/4) second(s).\n\nSilver Blue Piggles L\nCooldown 4 seconds\nThe item to the left of this gains (4%/8%/12%/16%) Crit Chance for the fight.\n\nGold Piggles\nCooldown 8 seconds\nCharge adjacent Small items (1/2/3/4) second(s).\nWhen you win a fight, get a Piggle.\nAt the start of each day, upgrade a random Piggle.\n\nSilver Red Piggles X\nCooldown 4 seconds\nYour weapons gain (1/2/3/4) damage for the fight.\n\nSkills\nBronze Small Refresh\nWhen you use a small item, heal (5/10/15/20)."
   },
   {
     "name": "Hooverbike Hooligan",
@@ -3468,7 +3478,7 @@
   {
     "name": "Eccentric Etherwright",
     "type": "monster",
-    "display_message": "Eccentric Etherwright\nHealth: 650\n\nItems\nGold Scrap\nWhen you sell this, your leftmost Shield item gains (+3/+6/+12/+24) Shield.\n\nSilver Force Field\nCooldown 5 seconds\nShield (30/40/50).\nDeal damage equal to your shield.\n\nSilver Goggles\nCooldown 8 seconds\nShield (15/30/60/120).\nWhen this gains Haste, your items gain (+2%/+4%/+6%/+8%) Crit chance for the fight.\n\nSilver Barbed Wire\nCooldown 5 seconds\nDeal 10 damage.\nWhen you Shield, this gains (5/10/15) Damage for the fight.\n\nSkills\nBronze Rigged\nAt the start of each fight, Haste (2/3/4/5) items for 3 second(s)."
+    "display_message": "Eccentric Etherwright\nHealth: 650\n\nItems\nGold Scrap\nWhen you sell this, your leftmost Shield item gains (+3/+6/+12/+24) Shield.\n\nSilver Force Field\nCooldown 5 seconds\nShield (30/40/50).\nDeal damage equal to your shield.\n\nSilver Goggles\nCooldown 8 seconds\nShield (15/30/60/120).\nWhen this gains Haste, your items gain (+2%/+4%/+6%/+8%) Crit chance for the fight.\n\nSilver Barbed Wire\nCooldown 5 seconds\nDeal 10 damage.\nWhen you Shield, this gains (5/10/15) Damage for the fight.\n\nSkills\nSilver Rigged\nThe first time you use an item each fight, Haste your items for (1/2/3) second(s)."
   },
   {
     "name": "Boilerroom Brawler",
@@ -3483,7 +3493,7 @@
   {
     "name": "Retiree",
     "type": "monster",
-    "display_message": "Retiree\nHealth: 650\n\nItems\nDiamond Spare Change\nSells for gold\n\nSilver Succulents\nCooldown 5 seconds\nHeal (1/2/3/4).\nThis permanently gains (+1/+2/+3/+4) Heal.\n\nSilver Golf Clubs\nCooldown 7 seconds\nDeal 50 damage.\nWhen you Heal or gain Regen, this gains (10/20/30/40) damage for the fight.\n\nBronze Bushel\nCooldown 4 seconds\nGain (3/6/12/24) Regen for the fight.\nWhen you Shield, charge this 1 second(s).\n\nSilver Bandages\nCooldown 5 seconds\nHeal (5/10/20/40).\nShield (5/10/20/40).\n\nGold Med Kit\nWhen you sell this, your leftmost Heal item gains (5/10/20/40) Heal.\n\nSkills\nBronze Extreme Comfort\nWhen you heal, your Shield items gain (1/2/3/4) shield for the fight."
+    "display_message": "Retiree\nHealth: 650\n\nItems\nDiamond Spare Change\nSells for gold\n\nSilver Succulents\nCooldown 5 seconds\nHeal (1/2/3/4).\nThis permanently gains (+1/+2/+3/+4) Heal.\n\nSilver Golf Clubs\nCooldown 7 seconds\nDeal 50 damage.\nWhen you Heal or gain Regen, this gains (10/20/30/40) damage for the fight.\n\nBronze Bushel\nCooldown 5 seconds\nHeal (20/40/60/80).\nGain Regen equal to 10% of this item's Heal for the fight.\nWhen you Shield, charge this 1 second(s).\n\nSilver Bandages\nCooldown 5 seconds\nHeal (5/10/20/40).\nShield (5/10/20/40).\n\nGold Med Kit\nWhen you sell this, your leftmost Heal item gains (5/10/20/40) Heal.\n\nSkills\nBronze Extreme Comfort\nWhen you heal, your Shield items gain (1/2/3/4) shield for the fight."
   },
   {
     "name": "Bloodreef Raider",
@@ -3498,12 +3508,17 @@
   {
     "name": "Ahexa",
     "type": "monster",
-    "display_message": "Ahexa\nHealth: 900\n\nItems\nSilver Crypto\nAt the start of each hour, set this item's value to a number between 0 and (5/10/20/40).\n\nSilver Nitro\nCooldown 4 seconds\nBurn both players (4/6/8).\nCharge 1 item (1/2/3) second(s).\n\nSilver Virus\nCooldown 6 seconds\nPoison yourself (1/2/3/4) for each Virus on your board.\nTransform another non-legendary small item on each player's board into Virus for the rest of the fight.\n\nSilver Solar Farm\nCooldown 9 seconds\nHaste your other items for (1/2/3) second(s).\nGain (6/9/12) Regen for the fight.\nWhen you Burn, charge this 2 seconds.\n\nSilver Virus\nCooldown 6 seconds\nPoison yourself (1/2/3/4) for each Virus on your board.\nTransform another non-legendary small item on each player's board into Virus for the rest of the fight.\n\nSilver Crypto\nAt the start of each hour, set this item's value to a number between 0 and (5/10/20/40)."
+    "display_message": "Ahexa\nHealth: 900\n\nItems\nSilver Crypto\nAt the start of each hour, set this item's value to a number between 0 and (5/10/20/40).\n\nSilver Rapid Injection System\nWhen you poison yourself, Poison (4/8/12).\nWhen you use an adjacent item, Poison yourself (4/8/12) and gain (2/4/6) Regen for the fight.\n\nSilver Virus\nCooldown (9/8/7/6) seconds\nPoison yourself (1/2/3/4) for each Virus on your board.\nTransform another non-legendary small item on each player's board into Virus for the rest of the fight.\n\nSilver Solar Farm\nCooldown 9 seconds\nHaste your other items for (1/2/3) second(s).\nGain (6/9/12) Regen for the fight.\nWhen you Burn, charge this 2 seconds.\n\nSilver Crypto\nAt the start of each hour, set this item's value to a number between 0 and (5/10/20/40)."
   },
   {
     "name": "Hellbilly",
     "type": "monster",
     "display_message": "Hellbilly\nHealth: 900\n\nItems\nGold Med Kit\nWhen you sell this, your leftmost Heal item gains (5/10/20/40) Heal.\n\nSilver Haladie\nCooldown 7 seconds\nMulticast 2\nDeal (4/8/16/32) damage.\n\nSilver Ganjo\nCooldown 5 seconds\nAdjacent weapons gain (10/15/20/25) Damage for the fight.\nAdjacent Heal items gain (10/15/20/25) Heal for the fight.\nAdjacent Shield items gain (10/15/20/25) Shield for the fight.\n\nSilver Textiles\nCooldown 5 seconds\nHeal equal to your Shield.\nWhen you Over-heal, Shield (20/30/40/50).\n\nDiamond Scrap\nWhen you sell this, your leftmost Shield item gains (+3/+6/+12/+24) Shield.\n\nSkills\nSilver Left-Handed\nYour leftmost Weapon deals (+20/+30/+40/+50) Damage."
+  },
+  {
+    "name": "Prince Marianas",
+    "type": "monster",
+    "display_message": "Prince Marianas\nHealth: 900\n\nItems\nDiamond Coconut\nWhen you sell this, permanently gain (10/20/30/40) Max Health.\n\nSilver Chum\nCooldown 5 seconds\nYour Aquatic items gain (+4%/+6%/+8%/+10%) Crit Chance for the fight.\nWhen you buy this, get a Piranha.\n\nSilver Piranha\nCooldown 6 seconds\nCrit Chance 20%\nDeal (6/12/18/24) damage.\nThis deals double Crit damage.\n\nBronze IllusoRay\nCooldown 8 seconds\nSlow 1 item(s) for (1/2/3/4) second(s).\nFor each adjacent Friend or Ray, this has +1 Multicast.\n\nSilver Narwhal\nCooldown 4 seconds\nDeal (10/20/30/40) damage.\n\nSilver Electric Eels\nCooldown 6 seconds\nDeal 50 Damage.\nSlow 1 item for 2 second(s).\nWhen your enemy uses an item, Charge this (1/2/3) second(s).\n\nDiamond Citrus\nWhen you sell this, permanently gain (1/2/3/4) Regen.\n\nSkills\nGold Slowed Targets\nWhen you Slow, your items gain (+1%/+2%/+3%) Crit Chance for the fight.\n\nGold Slow and Steady\nWhen you Slow, your weapons gain (2/4/6) damage for the fight."
   },
   {
     "name": "Preening Duelist",
@@ -3568,7 +3583,7 @@
   {
     "name": "Dire Mosquito",
     "type": "monster",
-    "display_message": "Dire Mosquito\nHealth: 900\n\nItems\nSilver Insect Wing\nWhen you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%).\n\nSilver Insect Wing\nWhen you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%).\n\nSilver Amber\nCooldown 6 seconds\nSlow (1/2/3) item(s) for 3 second(s).\nYour other Slow items have +1 Slow.\n\nSilver Proboscis\nWhen you Slow, deal (4/8/12/16) damage.\n\nSilver Neural Toxin\nWhen you use an adjacent Weapon, Slow 1 item(s) for (1/2/3) second(s).\n\nGold Stinger\nCooldown 10 seconds\nLifesteal\nDeal (5/10/20/40) damage.\nSlow 1 item for (1/2/3/4) second(s).\n\nSilver Insect Wing\nWhen you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%).\n\nSilver Insect Wing\nWhen you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%).\n\nSkills\nGold Paralyzing Rush\nWhen you Slow, Haste a Weapon (1/2) second(s)."
+    "display_message": "Dire Mosquito\nHealth: 900\n\nItems\nSilver Insect Wing\nWhen you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%).\n\nSilver Insect Wing\nWhen you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%).\n\nSilver Amber\nCooldown 6 seconds\nSlow (1/2/3) item(s) for 3 second(s).\nYour other Slow items have +1 Slow.\n\nSilver Proboscis\nCooldown 4 seconds\nDeal (4/8/12/16) damage.\nWhen you Slow, Charge this 1 second.\n\nSilver Neural Toxin\nWhen you use an adjacent Weapon, Slow 1 item(s) for (1/2/3) second(s).\n\nGold Stinger\nCooldown 10 seconds\nLifesteal\nDeal (5/10/20/40) damage.\nSlow 1 item for (1/2/3/4) second(s).\n\nSilver Insect Wing\nWhen you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%).\n\nSilver Insect Wing\nWhen you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%).\n\nSkills\nGold Paralyzing Rush\nWhen you Slow, Haste a Weapon (1/2) second(s)."
   },
   {
     "name": "Trash Golem",
@@ -3578,7 +3593,7 @@
   {
     "name": "Foreman",
     "type": "monster",
-    "display_message": "Foreman\nHealth: 1200\n\nItems\nGold Scrap\nWhen you sell this, your leftmost Shield item gains (+3/+6/+12/+24) Shield.\n\nSilver Chris Army Knife\nCooldown (7/6/5/4) seconds\nDeal 15 damage.\nShield 15.\n\nSilver Power Sander\nCooldown 8 seconds\nHaste the item to the right of this for (1/2/3/4) second(s).\nSlow the item to the left of this for 1 second(s).\n\nGold Crane\nCooldown 11 seconds\nDeal (100/200) damage.\nWhen you use an adjacent Large item, this gains (30%/60%) damage for the fight.\nWhen you use an adjacent Medium item, this gains (20%/40%) damage for the fight.\n\nGold Forklift\nCooldown 10 seconds\nDeal 100 damage.\nWhen you use an Adjacent item, Charge this (1/1.5/2) second(s).\nIf you have another Tool, Apparel, Tech, Weapon, or Friend, this has (+50/+100/+150) Damage for each.\n\nSilver Cog\nCooldown 4 seconds\nHaste 1 adjacent item for (1/2/3) second(s).\n\nSkills\nGold Flashy Mechanic\nWhen you use a Tool, items adjacent to it gain (3%/6%/9%) Crit chance."
+    "display_message": "Foreman\nHealth: 1200\n\nItems\nGold Scrap\nWhen you sell this, your leftmost Shield item gains (+3/+6/+12/+24) Shield.\n\nSilver Chris Army Knife\nCooldown (7/6/5/4) seconds\nDeal 15 damage.\nShield 15.\n\nSilver Power Sander\nCooldown 5 seconds\nHaste the item to the right of this for (1/2/3/4) second(s).\nSlow the item to the left of this for 1 second(s).\n\nGold Crane\nCooldown 11 seconds\nDeal (100/200) damage.\nWhen you use an adjacent Large item, this gains (30%/60%) damage for the fight.\nWhen you use an adjacent Medium item, this gains (20%/40%) damage for the fight.\n\nGold Forklift\nCooldown 10 seconds\nDeal 100 damage.\nWhen you use an Adjacent item, Charge this (1/1.5/2) second(s).\nIf you have another Tool, Apparel, Tech, Weapon, or Friend, this has (+50/+100/+150) Damage for each.\n\nSilver Cog\nCooldown 4 seconds\nHaste 1 adjacent item for (1/2/3) second(s).\n\nSkills\nGold Flashy Mechanic\nWhen you use a Tool, items adjacent to it gain (3%/6%/9%) Crit chance."
   },
   {
     "name": "Enclave Weeper",
@@ -3608,7 +3623,7 @@
   {
     "name": "Sergeant Suds",
     "type": "monster",
-    "display_message": "Sergeant Suds\nHealth: 1200\n\nItems\nGold Dishwasher\nCooldown 9 seconds\nHaste your tools for (1/2/3/4) second(s).\nYour Weapons gain (+10/+20/+40/+80) damage for the fight.\n\nGold Hogwash\nCooldown 5 seconds\nHeal equal to (5%/10%/15%) of your Max Health.\nWhen you Heal or gain Regen, gain (50/100/150) Max Health for the fight.\n\nGold Rivet Gun\nCooldown 10 seconds\nDeal (20/40) Damage.\nWhen you use the item to the right of this, Charge the item to the left of this (1/2) second(s).\n\nGold Orbital Polisher\nCooldown 8 seconds\nAdjacent Weapons gain (5/10) Damage for the fight.\nAdjacent Shield items gain (5/10) Shield for the fight.\n\nSilver Hydraulic Squeezer\nCooldown 10 seconds\nDeal (30/60/120) damage.\nYour weapons gain (3/6/9) damage for the fight.\nWhen you use another Tool, Charge this 1 second(s).\n\nSkills\nSilver Clean Storefront\nYour leftmost item has (+15/+30/+50) value during combat."
+    "display_message": "Sergeant Suds\nHealth: 1200\n\nItems\nGold Dishwasher\nCooldown 9 seconds\nHaste your tools for (1/2/3/4) second(s).\nYour Weapons gain (+10/+20/+40/+80) damage for the fight.\n\nGold Hogwash\nCooldown (7/6/5) seconds\nHeal equal to 10% of your Max Health.\nWhen you Heal or gain Regen, gain (50/75/100) Max Health for the fight.\n\nGold Rivet Gun\nCooldown 10 seconds\nDeal (20/40) Damage.\nWhen you use the item to the right of this, Charge the item to the left of this (1/2) second(s).\n\nGold Orbital Polisher\nCooldown 8 seconds\nAdjacent Weapons gain (5/10) Damage for the fight.\nAdjacent Shield items gain (5/10) Shield for the fight.\n\nSilver Hydraulic Squeezer\nCooldown 10 seconds\nDeal (30/60/120) damage.\nYour weapons gain (3/6/9) damage for the fight.\nWhen you use another Tool, Charge this 1 second(s).\n\nSkills\nSilver Clean Storefront\nYour leftmost item has (+15/+30/+50) value during combat."
   },
   {
     "name": "Cosmic Roc",
@@ -3618,7 +3633,7 @@
   {
     "name": "Joyful Jack",
     "type": "monster",
-    "display_message": "Joyful Jack\nHealth: 1550\n\nItems\nGold Extract\nWhen you sell this, your leftmost Poison item gains (+1/+2/+3/+4) Poison.\n\nGold Black Rose\nCooldown 8 seconds\nGain 4 Regen for the fight.\nWhen you Poison, this gains (+1/+2/+3) Regen for the fight.\n\nSilver Poppy Field\nWhen you use a Weapon, Poison (4/5/6).\nYour Weapons have +Damage equal to (50%/75%/100%) of the Poison on your enemy.\n\nSilver Floor Spike\nCooldown 9 seconds\nDeal (20/40/60) damage.\nPoison (2/4/6).\nWhen either player uses a weapon, charge this 1 second(s).\n\nSilver Bushel\nCooldown 4 seconds\nGain (3/6/12/24) Regen for the fight.\nWhen you Shield, charge this 1 second(s).\n\nToxic Silver Succulents\nCooldown 5 seconds\nHeal (1/2/3/4).\nThis permanently gains (+1/+2/+3/+4) Heal.\nPoison equal to 10% of this item's Heal.\n\nGold Extract\nWhen you sell this, your leftmost Poison item gains (+1/+2/+3/+4) Poison.\n\nSkills\nDiamond Equivalent Exchange\nWhen you Heal, charge 1 Poison item 1 second(s).\n\nSilver Critical Aid\nYour Heal items have (+5%/+10%/+15%/+20%) Crit chance."
+    "display_message": "Joyful Jack\nHealth: 1550\n\nItems\nGold Extract\nWhen you sell this, your leftmost Poison item gains (+1/+2/+3/+4) Poison.\n\nGold Black Rose\nCooldown 8 seconds\nGain 4 Regen for the fight.\nWhen you Poison, this gains (+1/+2/+3) Regen for the fight.\n\nSilver Poppy Field\nWhen you use a Weapon, Poison (4/5/6).\nYour Weapons have +Damage equal to (50%/75%/100%) of the Poison on your enemy.\n\nSilver Floor Spike\nCooldown 9 seconds\nDeal (20/40/60) damage.\nPoison (2/4/6).\nWhen either player uses a weapon, charge this 1 second(s).\n\nSilver Bushel\nCooldown 5 seconds\nHeal (20/40/60/80).\nGain Regen equal to 10% of this item's Heal for the fight.\nWhen you Shield, charge this 1 second(s).\n\nToxic Silver Succulents\nCooldown 5 seconds\nHeal (1/2/3/4).\nThis permanently gains (+1/+2/+3/+4) Heal.\nPoison equal to 10% of this item's Heal.\n\nGold Extract\nWhen you sell this, your leftmost Poison item gains (+1/+2/+3/+4) Poison.\n\nSkills\nDiamond Equivalent Exchange\nWhen you Heal, charge 1 Poison item 1 second(s).\n\nSilver Critical Aid\nYour Heal items have (+5%/+10%/+15%/+20%) Crit chance."
   },
   {
     "name": "Thug",
@@ -3658,7 +3673,7 @@
   {
     "name": "Joyful Jack",
     "type": "monster",
-    "display_message": "Joyful Jack\nHealth: 1550\n\nItems\nGold Extract\nWhen you sell this, your leftmost Poison item gains (+1/+2/+3/+4) Poison.\n\nGold Black Rose\nCooldown 8 seconds\nGain 4 Regen for the fight.\nWhen you Poison, this gains (+1/+2/+3) Regen for the fight.\n\nSilver Poppy Field\nWhen you use a Weapon, Poison (4/5/6).\nYour Weapons have +Damage equal to (50%/75%/100%) of the Poison on your enemy.\n\nSilver Floor Spike\nCooldown 9 seconds\nDeal (20/40/60) damage.\nPoison (2/4/6).\nWhen either player uses a weapon, charge this 1 second(s).\n\nSilver Bushel\nCooldown 4 seconds\nGain (3/6/12/24) Regen for the fight.\nWhen you Shield, charge this 1 second(s).\n\nToxic Silver Succulents\nCooldown 5 seconds\nHeal (1/2/3/4).\nThis permanently gains (+1/+2/+3/+4) Heal.\nPoison equal to 10% of this item's Heal.\n\nGold Extract\nWhen you sell this, your leftmost Poison item gains (+1/+2/+3/+4) Poison.\n\nSkills\nDiamond Equivalent Exchange\nWhen you Heal, charge 1 Poison item 1 second(s).\n\nSilver Critical Aid\nYour Heal items have (+5%/+10%/+15%/+20%) Crit chance."
+    "display_message": "Joyful Jack\nHealth: 1550\n\nItems\nGold Extract\nWhen you sell this, your leftmost Poison item gains (+1/+2/+3/+4) Poison.\n\nGold Black Rose\nCooldown 8 seconds\nGain 4 Regen for the fight.\nWhen you Poison, this gains (+1/+2/+3) Regen for the fight.\n\nSilver Poppy Field\nWhen you use a Weapon, Poison (4/5/6).\nYour Weapons have +Damage equal to (50%/75%/100%) of the Poison on your enemy.\n\nSilver Floor Spike\nCooldown 9 seconds\nDeal (20/40/60) damage.\nPoison (2/4/6).\nWhen either player uses a weapon, charge this 1 second(s).\n\nSilver Bushel\nCooldown 5 seconds\nHeal (20/40/60/80).\nGain Regen equal to 10% of this item's Heal for the fight.\nWhen you Shield, charge this 1 second(s).\n\nToxic Silver Succulents\nCooldown 5 seconds\nHeal (1/2/3/4).\nThis permanently gains (+1/+2/+3/+4) Heal.\nPoison equal to 10% of this item's Heal.\n\nGold Extract\nWhen you sell this, your leftmost Poison item gains (+1/+2/+3/+4) Poison.\n\nSkills\nDiamond Equivalent Exchange\nWhen you Heal, charge 1 Poison item 1 second(s).\n\nSilver Critical Aid\nYour Heal items have (+5%/+10%/+15%/+20%) Crit chance."
   },
   {
     "name": "Infernal Frigate",
@@ -3673,7 +3688,7 @@
   {
     "name": "Bouncertron",
     "type": "monster",
-    "display_message": "Bouncertron\nHealth: 1925\n\nItems\nGold Cybersecurity\nCooldown 10 seconds\nDeal (15/30/60) damage for each Weapon or Tech item you have.\nThis deals (2/3/4) times damage if it is your only friend.\n\nGold Pulse Rifle\nCooldown 5 seconds\nDeal (10/20/30/40) damage.\nThis has +1 Multicast if it is adjacent to a Friend. Double this if it is your only Friend.\n\nGold Katana\nCooldown 2 seconds\nDeal (5/10/15/20) damage.\n\nGold Laser Pistol\nCooldown 4 seconds\nDeal (8/16/24/32) damage.\n\nGold Sunderer\nCooldown 5 seconds\nDeal (10/20/30/40) damage.\nYour enemy's Shield items lose (5/10/15/20) Shield for the fight.\n\nGold Gatling Gun\nCooldown 5 seconds\nDeal (50/100) damage.\nReduce this item's cooldown by (10%/20%) for the fight.\n\nSkills\nGold Sharpened Steel\nWhen you use a Weapon, Adjacent items gain (4%/8%/12%) Crit Chance for the fight."
+    "display_message": "Bouncertron\nHealth: 1925\n\nItems\nGold Cybersecurity\nCooldown 10 seconds\nDeal (30/40/50) damage for each Weapon or Tech item you have.\nThis deals (2/3/4) times damage if it is your only friend.\n\nGold Pulse Rifle\nCooldown 5 seconds\nDeal (10/20/30/40) damage.\nThis has +1 Multicast if it is adjacent to a Friend. Double this if it is your only Friend.\n\nGold Katana\nCooldown 2 seconds\nDeal (5/10/15/20) damage.\n\nGold Laser Pistol\nCooldown 4 seconds\nDeal (8/16/24/32) damage.\n\nGold Sunderer\nCooldown 5 seconds\nDeal (10/20/30/40) damage.\nYour enemy's Shield items lose (5/10/15/20) Shield for the fight.\n\nGold Gatling Gun\nCooldown 5 seconds\nDeal (50/100) damage.\nReduce this item's cooldown by (10%/20%) for the fight.\n\nSkills\nGold Sharpened Steel\nWhen you use a Weapon, Adjacent items gain (4%/8%/12%) Crit Chance for the fight."
   },
   {
     "name": "Dr. Vortex",
@@ -3698,7 +3713,7 @@
   {
     "name": "Oasis Guardian",
     "type": "monster",
-    "display_message": "Oasis Guardian\nHealth: 2325\n\nItems\nGold Ouroboros Statue\nCooldown 6 seconds\nPoison (4/6/8).\nWhen you Poison, gain (2/6/10) Regen for the fight.\n\nGold Venomander\nCooldown 6 seconds\nPoison (1/2/3/4).\nGain (1/2/3/4) Regen for the fight.\n\nSilver Sleeping Potion\nCooldown 4 seconds\nAmmo 1\nSlow the slowest enemy item for (3/4/5/6) second(s).\n\nSilver Incense\nCooldown 6 seconds\nSlow (1/2/3/4) item(s) for 1 second(s).\nGain (1/3/5/7) Regen for the fight.\n\nGold Magnus' Femur\nCooldown 13 seconds\nDeal 300 damage.\nWhen you Slow, Charge this 2 second(s) and this gains (+25/+50/+75) Damage for the fight.\n\nGold Nightshade\nCooldown 6 seconds\nPoison 6.\nWhen you Heal or gain Regen, this gains (+2/+4/+6/+8) Poison for the fight.\nWhen this is transformed, enchant it with Toxic if able.\n\nSkills\nSilver Waters of Infinity\nYou have (+10/+15/+20) Regen for each non-weapon item you have."
+    "display_message": "Oasis Guardian\nHealth: 2325\n\nItems\nGold Ouroboros Statue\nCooldown 6 seconds\nPoison (4/6/8).\nWhen you Poison, gain (2/6/10) Regen for the fight.\n\nGold Venomander\nCooldown 6 seconds\nPoison (1/2/3/4).\nGain (1/2/3/4) Regen for the fight.\n\nSilver Sleeping Potion\nCooldown 4 seconds\nAmmo 1\nSlow the slowest enemy item for (3/4/5/6) second(s).\n\nSilver Incense\nCooldown 6 seconds\nSlow (1/2/3/4) item(s) for 1 second(s).\nGain (1/3/5/7) Regen for the fight.\n\nGold Magnus' Femur\nCooldown (17/15/13) seconds\nDeal 300 damage.\nWhen you Slow, Charge this 2 second(s) and this gains (+25/+50/+75) Damage for the fight.\n\nGold Nightshade\nCooldown 6 seconds\nPoison 6.\nWhen you Heal or gain Regen, this gains (+2/+4/+6/+8) Poison for the fight.\nWhen this is transformed, enchant it with Toxic if able.\n\nSkills\nSilver Waters of Infinity\nYou have (+10/+15/+20) Regen for each non-weapon item you have."
   },
   {
     "name": "Bloodreef Captain",
@@ -3713,7 +3728,7 @@
   {
     "name": "Oasis Guardian",
     "type": "monster",
-    "display_message": "Oasis Guardian\nHealth: 2325\n\nItems\nGold Ouroboros Statue\nCooldown 6 seconds\nPoison (4/6/8).\nWhen you Poison, gain (2/6/10) Regen for the fight.\n\nGold Venomander\nCooldown 6 seconds\nPoison (1/2/3/4).\nGain (1/2/3/4) Regen for the fight.\n\nSilver Sleeping Potion\nCooldown 4 seconds\nAmmo 1\nSlow the slowest enemy item for (3/4/5/6) second(s).\n\nSilver Incense\nCooldown 6 seconds\nSlow (1/2/3/4) item(s) for 1 second(s).\nGain (1/3/5/7) Regen for the fight.\n\nGold Magnus' Femur\nCooldown 13 seconds\nDeal 300 damage.\nWhen you Slow, Charge this 2 second(s) and this gains (+25/+50/+75) Damage for the fight.\n\nGold Nightshade\nCooldown 6 seconds\nPoison 6.\nWhen you Heal or gain Regen, this gains (+2/+4/+6/+8) Poison for the fight.\nWhen this is transformed, enchant it with Toxic if able.\n\nSkills\nSilver Waters of Infinity\nYou have (+10/+15/+20) Regen for each non-weapon item you have."
+    "display_message": "Oasis Guardian\nHealth: 2325\n\nItems\nGold Ouroboros Statue\nCooldown 6 seconds\nPoison (4/6/8).\nWhen you Poison, gain (2/6/10) Regen for the fight.\n\nGold Venomander\nCooldown 6 seconds\nPoison (1/2/3/4).\nGain (1/2/3/4) Regen for the fight.\n\nSilver Sleeping Potion\nCooldown 4 seconds\nAmmo 1\nSlow the slowest enemy item for (3/4/5/6) second(s).\n\nSilver Incense\nCooldown 6 seconds\nSlow (1/2/3/4) item(s) for 1 second(s).\nGain (1/3/5/7) Regen for the fight.\n\nGold Magnus' Femur\nCooldown (17/15/13) seconds\nDeal 300 damage.\nWhen you Slow, Charge this 2 second(s) and this gains (+25/+50/+75) Damage for the fight.\n\nGold Nightshade\nCooldown 6 seconds\nPoison 6.\nWhen you Heal or gain Regen, this gains (+2/+4/+6/+8) Poison for the fight.\nWhen this is transformed, enchant it with Toxic if able.\n\nSkills\nSilver Waters of Infinity\nYou have (+10/+15/+20) Regen for each non-weapon item you have."
   },
   {
     "name": "Roaming Isle",
@@ -3728,7 +3743,7 @@
   {
     "name": "Weapons Platform",
     "type": "monster",
-    "display_message": "Weapons Platform\nHealth: 2750\n\nItems\nGold Cog\nCooldown 4 seconds\nHaste 1 adjacent item for (1/2/3) second(s).\n\nGold Kinetic Cannon\nCooldown 9 seconds\nDeal 100 damage.\nWhen you use a Small item, this gains (25/50/75) damage for the fight.\n\nGold Battery\nCooldown 4 seconds\nAmmo 4\nCharge the item to the left of this (1/2/3/4) second(s).\n\nGold Coolant\nCooldown 5 seconds\nFreeze (1/2/3) item(s) for 1 second(s).\nCleanse half your Burn.\n\nGold First Aiden\nCooldown 4 seconds\nHeal (20/30/40/50).\nHaste 1 item for (1/2/3/4) second(s).\n\nGold Laser Pistol\nCooldown 4 seconds\nDeal (8/16/24/32) damage.\n\nGold Power Sander\nCooldown 8 seconds\nHaste the item to the right of this for (1/2/3/4) second(s).\nSlow the item to the left of this for 1 second(s).\n\nGold Uzi\nCooldown 2 seconds\nAmmo (6/8/10/12)\nDeal 10 damage.\n\nSkills\nGold Distributed Systems\nWhen you use a large item, haste (2/3) small items for (2/3) second(s).\n\nGold Keen Eye\nYour items have (+4%/+8%/+12%/+16%) Crit chance."
+    "display_message": "Weapons Platform\nHealth: 2750\n\nItems\nGold Cog\nCooldown 4 seconds\nHaste 1 adjacent item for (1/2/3) second(s).\n\nGold Kinetic Cannon\nCooldown 9 seconds\nDeal 100 damage.\nWhen you use a Small item, this gains (25/50/75) damage for the fight.\n\nGold Battery\nCooldown 4 seconds\nAmmo 4\nCharge the item to the left of this (1/2/3/4) second(s).\n\nGold Coolant\nCooldown 5 seconds\nFreeze (1/2/3) item(s) for 1 second(s).\nCleanse half your Burn.\n\nGold First Aiden\nCooldown 4 seconds\nHeal (20/30/40/50).\nHaste 1 item for (1/2/3/4) second(s).\n\nGold Laser Pistol\nCooldown 4 seconds\nDeal (8/16/24/32) damage.\n\nGold Power Sander\nCooldown 5 seconds\nHaste the item to the right of this for (1/2/3/4) second(s).\nSlow the item to the left of this for 1 second(s).\n\nGold Uzi\nCooldown 2 seconds\nAmmo (6/8/10/12)\nDeal 10 damage.\n\nSkills\nGold Distributed Systems\nWhen you use a large item, haste (2/3) small items for (2/3) second(s).\n\nGold Keen Eye\nYour items have (+4%/+8%/+12%/+16%) Crit chance."
   },
   {
     "name": "Enclave Revenant",
@@ -3778,7 +3793,7 @@
   {
     "name": "Frost Street Champion",
     "type": "monster",
-    "display_message": "Frost Street Champion\nHealth: 3675\n\nItems\nGold Iceberg\nWhen your enemy uses an item, Freeze it for (0.5/1) second(s).\n\nGold Nitrogen Hammer\nCooldown 10 seconds\nDeal 200 damage.\nFreeze 1 item for (1/2) second(s).\nWhen you freeze, charge this 1 second and this gains (100/200) damage for the fight.\n\nSilver Sapphire\nCooldown 9 seconds\nFreeze (1/2/3) item(s) for 1 second(s).\nYour other Freeze items have +1 Freeze duration.\n\nGold Frozen Bludgeon\nCooldown 13 seconds\nDeal (15/30/60/120) damage.\nFreeze 1 item for (1/2/3/4) second(s).\nWhen you Freeze, your weapons gain (4/6/8/10) damage for the fight.\n\nGold Frost Potion\nCooldown 6 seconds\nAmmo 1\nFreeze (1/2/3) item(s) for 1 second(s).\n\nDiamond Snowflake\nWhen you sell this, your leftmost Freeze item gains +0.5 Freeze duration.\n\nSkills\nGold Blizzard\nAt the start of each fight, Freeze all non-weapon items for (2/3) second(s).\n\nGold Invigorating Cold\nThe first time you Freeze each fight, Haste (1/2/3) item(s) for 2 second(s).",
+    "display_message": "Frost Street Champion\nHealth: 3675\n\nItems\nGold Iceberg\nWhen your enemy uses an item, Freeze it for (0.5/1) second(s).\n\nGold Nitrogen Hammer\nCooldown 10 seconds\nDeal 200 damage.\nFreeze 1 item for (1/2) second(s).\nWhen you freeze, charge this 1 second and this gains (100/200) damage for the fight.\n\nSilver Sapphire\nCooldown 9 seconds\nFreeze (1/2/3) item(s) for 1 second(s).\nYour other Freeze items have +1 Freeze duration.\n\nGold Frozen Bludgeon\nCooldown 13 seconds\nDeal (15/30/60/120) damage.\nFreeze 1 item for (1/2/3/4) second(s).\nWhen you Freeze, your weapons gain (4/6/8/10) damage for the fight.\n\nGold Frost Potion\nCooldown 6 seconds\nAmmo 1\nFreeze (1/2/3) item(s) for 1 second(s).\n\nDiamond Snowflake\nWhen you sell this, your leftmost Freeze item gains +0.5 Freeze duration.\n\nSkills\nGold Blizzard\nThe first time you use an item each fight, Freeze all non-weapon items for (2/3) second(s).\n\nGold Invigorating Cold\nThe first time you Freeze each fight, Haste (1/2/3) item(s) for 2 second(s).",
     "alt_text": "Frost Street Champiox"
   },
   {

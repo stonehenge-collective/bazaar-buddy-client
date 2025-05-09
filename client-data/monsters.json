@@ -1,5 +1,5 @@
 {
-  "version": "4da37d24",
+  "version": "de623082",
   "monsterEncounterDays": [
     {
       "day": 1,
@@ -3162,22 +3162,30 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "When you Slow, deal 4 damage."
+                        "Cooldown 4 seconds",
+                        "Deal 4 damage.",
+                        "When you Slow, Charge this 1 second."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "When you Slow, deal 8 damage."
+                        "Cooldown 4 seconds",
+                        "Deal 8 damage.",
+                        "When you Slow, Charge this 1 second."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "When you Slow, deal 12 damage."
+                        "Cooldown 4 seconds",
+                        "Deal 12 damage.",
+                        "When you Slow, Charge this 1 second."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you Slow, deal 16 damage."
+                        "Cooldown 4 seconds",
+                        "Deal 16 damage.",
+                        "When you Slow, Charge this 1 second."
                       ]
                     },
                     "Legendary": {
@@ -3198,45 +3206,63 @@
                   ],
                   "enchantments": [
                     {
+                      "type": "Heavy",
+                      "tooltips": [
+                        "Slow 1 item for 1 second(s)."
+                      ]
+                    },
+                    {
                       "type": "Icy",
                       "tooltips": [
-                        "When you Slow, Freeze 1 small item for 1 second(s)."
+                        "Freeze 1 small item for 1 second(s)."
                       ]
                     },
                     {
                       "type": "Turbo",
                       "tooltips": [
-                        "When you Slow, Haste 1 item for 1 second(s)."
+                        "Haste 1 item for 1 second(s)."
                       ]
                     },
                     {
                       "type": "Shielded",
                       "tooltips": [
-                        "When you Slow, Shield equal to this item's damage."
+                        "Shield equal to this item's damage."
                       ]
                     },
                     {
                       "type": "Restorative",
                       "tooltips": [
-                        "When you Slow, Heal equal to this item's damage."
+                        "Heal equal to this item's damage."
                       ]
                     },
                     {
                       "type": "Toxic",
                       "tooltips": [
-                        "When you Slow, Poison equal to 10% of this item's damage."
+                        "Poison equal to 10% of this item's damage."
                       ]
                     },
                     {
                       "type": "Fiery",
                       "tooltips": [
-                        "When you Slow, Burn equal to 10% of this item's damage."
+                        "Burn equal to 10% of this item's damage."
                       ]
                     },
                     {
                       "type": "Shiny",
                       "tooltips": [
-                        "This has double Damage."
+                        "This has +1 Multicast."
+                      ]
+                    },
+                    {
+                      "type": "Deadly",
+                      "tooltips": [
+                        "+50% Crit Chance"
+                      ]
+                    },
+                    {
+                      "type": "Radiant",
+                      "tooltips": [
+                        "This cannot be Frozen, Slowed or Destroyed."
                       ]
                     },
                     {
@@ -3247,7 +3273,9 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you Slow, deal (4/8/12/16) damage."
+                    "Cooldown 4 seconds",
+                    "Deal (4/8/12/16) damage.",
+                    "When you Slow, Charge this 1 second."
                   ],
                   "remarks": [],
                   "packId": "Core",
@@ -3485,22 +3513,22 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "At the start of each fight, Haste a weapon 3 second(s)."
+                        "The first time you use an item, Haste 1 Weapon 3 seconds."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "At the start of each fight, Haste a weapon 5 second(s)."
+                        "The first time you use an item, Haste 1 Weapon 4 seconds."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "At the start of each fight, Haste a weapon 7 second(s)."
+                        "The first time you use an item, Haste 1 Weapon 5 seconds."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "At the start of each fight, Haste a weapon 9 second(s)."
+                        "The first time you use an item, Haste 1 Weapon 6 seconds."
                       ]
                     },
                     "Legendary": {
@@ -3520,7 +3548,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_MegaDrain_01.png",
                   "unifiedTooltips": [
-                    "At the start of each fight, Haste a weapon (3/5/7/9) second(s)."
+                    "The first time you use an item, Haste 1 Weapon (3/4/5/6) seconds."
                   ],
                   "remarks": [],
                   "packId": "Core",
@@ -4951,22 +4979,22 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "At the start of each fight, slow 1 item(s) for 3 second(s)."
+                        "The first time you use an item each fight, slow 1 item(s) for 3 second(s)."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "At the start of each fight, slow 1 item(s) for 5 second(s)."
+                        "The first time you use an item each fight, slow 1 item(s) for 4 second(s)."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "At the start of each fight, slow 1 item(s) for 7 second(s)."
+                        "The first time you use an item each fight, slow 1 item(s) for 5 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "At the start of each fight, slow 1 item(s) for 9 second(s)."
+                        "The first time you use an item each fight, slow 1 item(s) for 6 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -4984,7 +5012,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_RogueScrapper_01.png",
                   "unifiedTooltips": [
-                    "At the start of each fight, slow 1 item(s) for (3/5/7/9) second(s)."
+                    "The first time you use an item each fight, slow 1 item(s) for (3/4/5/6) second(s)."
                   ],
                   "remarks": [],
                   "packId": "Core",
@@ -7874,22 +7902,22 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "At the start of each fight, slow 1 item(s) for 3 second(s)."
+                        "The first time you use an item each fight, slow 1 item(s) for 3 second(s)."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "At the start of each fight, slow 1 item(s) for 5 second(s)."
+                        "The first time you use an item each fight, slow 1 item(s) for 4 second(s)."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "At the start of each fight, slow 1 item(s) for 7 second(s)."
+                        "The first time you use an item each fight, slow 1 item(s) for 5 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "At the start of each fight, slow 1 item(s) for 9 second(s)."
+                        "The first time you use an item each fight, slow 1 item(s) for 6 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -7907,7 +7935,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_RogueScrapper_01.png",
                   "unifiedTooltips": [
-                    "At the start of each fight, slow 1 item(s) for (3/5/7/9) second(s)."
+                    "The first time you use an item each fight, slow 1 item(s) for (3/4/5/6) second(s)."
                   ],
                   "remarks": [],
                   "packId": "Core",
@@ -8608,7 +8636,7 @@
           },
           {
             "cardId": "4101117c-9cb0-480e-bfac-814da069ec80",
-            "cardName": "Degenerate",
+            "cardName": "Street Gamer",
             "level": 4,
             "health": 450,
             "items": [
@@ -10718,26 +10746,24 @@
                 "card": {
                   "id": "51cec489-1988-48ff-95af-0235b374803e",
                   "name": "Rigged",
-                  "startingTier": "Bronze",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
-                      "tooltips": [
-                        "At the start of each fight, Haste 2 items for 3 second(s)."
-                      ]
+                      "tooltips": []
                     },
                     "Silver": {
                       "tooltips": [
-                        "At the start of each fight, Haste 3 items for 3 second(s)."
+                        "The first time you use an item each fight, Haste your items for 1 second(s)."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "At the start of each fight, Haste 4 items for 3 second(s)."
+                        "The first time you use an item each fight, Haste your items for 2 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "At the start of each fight, Haste 5 items for 3 second(s)."
+                        "The first time you use an item each fight, Haste your items for 3 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -10755,13 +10781,13 @@
                   ],
                   "artKey": "Icon_Skill_MON_Rigged.png",
                   "unifiedTooltips": [
-                    "At the start of each fight, Haste (2/3/4/5) items for 3 second(s)."
+                    "The first time you use an item each fight, Haste your items for (1/2/3) second(s)."
                   ],
                   "remarks": [],
                   "packId": "Core",
                   "combatEncounters": []
                 },
-                "tierType": "Bronze"
+                "tierType": "Silver"
               }
             ],
             "day": 3
@@ -12719,29 +12745,33 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
-                        "Gain 3 Regen for the fight.",
+                        "Cooldown 5 seconds",
+                        "Heal 20.",
+                        "Gain Regen equal to 10% of this item's Heal for the fight.",
                         "When you Shield, charge this 1 second(s)."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
-                        "Gain 6 Regen for the fight.",
+                        "Cooldown 5 seconds",
+                        "Heal 40.",
+                        "Gain Regen equal to 10% of this item's Heal for the fight.",
                         "When you Shield, charge this 1 second(s)."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
-                        "Gain 12 Regen for the fight.",
+                        "Cooldown 5 seconds",
+                        "Heal 60.",
+                        "Gain Regen equal to 10% of this item's Heal for the fight.",
                         "When you Shield, charge this 1 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
-                        "Gain 24 Regen for the fight.",
+                        "Cooldown 5 seconds",
+                        "Heal 80.",
+                        "Gain Regen equal to 10% of this item's Heal for the fight.",
                         "When you Shield, charge this 1 second(s)."
                       ]
                     },
@@ -12754,6 +12784,7 @@
                   ],
                   "hiddenTags": [
                     "Regen",
+                    "Heal",
                     "ShieldReference"
                   ],
                   "customTags": [],
@@ -12783,25 +12814,25 @@
                     {
                       "type": "Shielded",
                       "tooltips": [
-                        "Shield equal to ten times this item's Regen."
+                        "Shield equal to this item's Heal."
                       ]
                     },
                     {
                       "type": "Restorative",
                       "tooltips": [
-                        "Heal equal to 10 times this item's Regen."
+                        "This has double Heal."
                       ]
                     },
                     {
                       "type": "Toxic",
                       "tooltips": [
-                        "Poison equal to this item's Regen."
+                        "Poison equal to 10% of this item's Heal."
                       ]
                     },
                     {
                       "type": "Fiery",
                       "tooltips": [
-                        "Burn equal to this item's Regen."
+                        "Burn equal to 10% of this item's Heal."
                       ]
                     },
                     {
@@ -12825,13 +12856,14 @@
                     {
                       "type": "Obsidian",
                       "tooltips": [
-                        "Deal damage equal to ten times this item's Regen."
+                        "Deal damage equal to this item's Heal."
                       ]
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 4 seconds",
-                    "Gain (3/6/12/24) Regen for the fight.",
+                    "Cooldown 5 seconds",
+                    "Heal (20/40/60/80).",
+                    "Gain Regen equal to 10% of this item's Heal for the fight.",
                     "When you Shield, charge this 1 second(s)."
                   ],
                   "remarks": [],
@@ -14594,8 +14626,8 @@
               },
               {
                 "card": {
-                  "id": "ae039b3e-ef98-4dc7-a97c-1e06d2627e57",
-                  "name": "Nitro",
+                  "id": "8451b8d1-2b0f-433f-bf88-36054ff4525f",
+                  "name": "Rapid Injection System",
                   "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
@@ -14603,23 +14635,20 @@
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
-                        "Burn both players 4.",
-                        "Charge 1 item 1 second(s)."
+                        "When you poison yourself, Poison 4.",
+                        "When you use an adjacent item, Poison yourself 4 and gain 2 Regen for the fight."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
-                        "Burn both players 6.",
-                        "Charge 1 item 2 second(s)."
+                        "When you poison yourself, Poison 8.",
+                        "When you use an adjacent item, Poison yourself 8 and gain 4 Regen for the fight."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
-                        "Burn both players 8.",
-                        "Charge 1 item 3 second(s)."
+                        "When you poison yourself, Poison 12.",
+                        "When you use an adjacent item, Poison yourself 12 and gain 6 Regen for the fight."
                       ]
                     },
                     "Legendary": {
@@ -14627,92 +14656,86 @@
                     }
                   },
                   "tags": [
-                    "Tech"
+                    "Tool"
                   ],
                   "hiddenTags": [
-                    "Burn",
-                    "Charge"
+                    "Poison",
+                    "Regen"
                   ],
                   "customTags": [],
-                  "size": "Small",
+                  "size": "Medium",
                   "heroes": [
-                    "Dooley"
+                    "Mak"
                   ],
                   "enchantments": [
                     {
                       "type": "Heavy",
                       "tooltips": [
-                        "Slow 1 item for 1 second(s)."
+                        "When you Poison yourself, Slow 1 items for 2 second(s)."
                       ]
                     },
                     {
                       "type": "Icy",
                       "tooltips": [
-                        "Freeze 1 small item for 1 second(s)."
+                        "When you Poison yourself, Freeze 1 medium or small item for 1 second(s)."
                       ]
                     },
                     {
                       "type": "Turbo",
                       "tooltips": [
-                        "Haste 1 item for 1 second(s)."
+                        "When you Poison yourself, Haste 1 items for 2 second(s)."
                       ]
                     },
                     {
                       "type": "Shielded",
                       "tooltips": [
-                        "Shield equal to 10 times this item's Burn."
+                        "When you Poison yourself, Shield equal to 10 times this item's Poison."
                       ]
                     },
                     {
                       "type": "Restorative",
                       "tooltips": [
-                        "Heal equal to 10 times this item's Burn."
+                        "When you Poison yourself, Heal equal to 10 times this item's Poison."
                       ]
                     },
                     {
                       "type": "Toxic",
                       "tooltips": [
-                        "Poison equal to this item's Burn."
+                        "This has double Poison."
                       ]
                     },
                     {
                       "type": "Fiery",
                       "tooltips": [
-                        "This has double Burn."
+                        "When you Poison yourself, Burn 0."
                       ]
                     },
                     {
                       "type": "Shiny",
                       "tooltips": [
-                        "This has +1 Multicast."
+                        "This has double Regen.",
+                        "This has double Poison."
                       ]
                     },
                     {
                       "type": "Deadly",
                       "tooltips": [
-                        "+50% Crit Chance"
-                      ]
-                    },
-                    {
-                      "type": "Radiant",
-                      "tooltips": [
-                        "This cannot be Frozen, Slowed or Destroyed."
+                        "Adjacent items have +25% Crit Chance."
                       ]
                     },
                     {
                       "type": "Obsidian",
                       "tooltips": [
-                        "Deal damage equal to 10 times this item's Burn."
+                        "When you Poison yourself, Deal damage equal to 10 times this item's Poison."
                       ]
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 4 seconds",
-                    "Burn both players (4/6/8).",
-                    "Charge 1 item (1/2/3) second(s)."
+                    "When you poison yourself, Poison (4/8/12).",
+                    "When you use an adjacent item, Poison yourself (4/8/12) and gain (2/4/6) Regen for the fight."
                   ],
                   "remarks": [],
-                  "packId": "Dooley_Core",
+                  "packId": "Mak_Dangerous_Experiments",
                   "combatEncounters": []
                 },
                 "tierType": "Silver"
@@ -14725,21 +14748,21 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Cooldown 6 seconds",
+                        "Cooldown 9 seconds",
                         "Poison yourself 1 for each Virus on your board.",
                         "Transform another non-legendary small item on each player's board into Virus for the rest of the fight."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 6 seconds",
+                        "Cooldown 8 seconds",
                         "Poison yourself 2 for each Virus on your board.",
                         "Transform another non-legendary small item on each player's board into Virus for the rest of the fight."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 6 seconds",
+                        "Cooldown 7 seconds",
                         "Poison yourself 3 for each Virus on your board.",
                         "Transform another non-legendary small item on each player's board into Virus for the rest of the fight."
                       ]
@@ -14835,7 +14858,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 6 seconds",
+                    "Cooldown (9/8/7/6) seconds",
                     "Poison yourself (1/2/3/4) for each Virus on your board.",
                     "Transform another non-legendary small item on each player's board into Virus for the rest of the fight."
                   ],
@@ -14969,134 +14992,6 @@
                     "Haste your other items for (1/2/3) second(s).",
                     "Gain (6/9/12) Regen for the fight.",
                     "When you Burn, charge this 2 seconds."
-                  ],
-                  "remarks": [],
-                  "packId": "Dooley_Core",
-                  "combatEncounters": []
-                },
-                "tierType": "Silver"
-              },
-              {
-                "card": {
-                  "id": "020a0ec0-21e6-41af-899f-063573ba9ca5",
-                  "name": "Virus",
-                  "startingTier": "Bronze",
-                  "tiers": {
-                    "Bronze": {
-                      "tooltips": [
-                        "Cooldown 6 seconds",
-                        "Poison yourself 1 for each Virus on your board.",
-                        "Transform another non-legendary small item on each player's board into Virus for the rest of the fight."
-                      ]
-                    },
-                    "Silver": {
-                      "tooltips": [
-                        "Cooldown 6 seconds",
-                        "Poison yourself 2 for each Virus on your board.",
-                        "Transform another non-legendary small item on each player's board into Virus for the rest of the fight."
-                      ]
-                    },
-                    "Gold": {
-                      "tooltips": [
-                        "Cooldown 6 seconds",
-                        "Poison yourself 3 for each Virus on your board.",
-                        "Transform another non-legendary small item on each player's board into Virus for the rest of the fight."
-                      ]
-                    },
-                    "Diamond": {
-                      "tooltips": [
-                        "Cooldown 6 seconds",
-                        "Poison yourself 4 for each Virus on your board.",
-                        "Transform another non-legendary small item on each player's board into Virus for the rest of the fight."
-                      ]
-                    },
-                    "Legendary": {
-                      "tooltips": []
-                    }
-                  },
-                  "tags": [
-                    "Tech"
-                  ],
-                  "hiddenTags": [
-                    "Poison"
-                  ],
-                  "customTags": [],
-                  "size": "Small",
-                  "heroes": [
-                    "Dooley"
-                  ],
-                  "enchantments": [
-                    {
-                      "type": "Heavy",
-                      "tooltips": [
-                        "Slow 1 of your items for 4 second(s)."
-                      ]
-                    },
-                    {
-                      "type": "Icy",
-                      "tooltips": [
-                        "Freeze 1 of your small items for 2 second(s)."
-                      ]
-                    },
-                    {
-                      "type": "Turbo",
-                      "tooltips": [
-                        "Haste 1 enemy item(s) for 4 second(s)."
-                      ]
-                    },
-                    {
-                      "type": "Shielded",
-                      "tooltips": [
-                        "Shield your opponent equal to 10 times this item's Poison."
-                      ]
-                    },
-                    {
-                      "type": "Restorative",
-                      "tooltips": [
-                        "Heal your opponent equal to 10 times this item's Poison."
-                      ]
-                    },
-                    {
-                      "type": "Toxic",
-                      "tooltips": [
-                        "This has double Poison."
-                      ]
-                    },
-                    {
-                      "type": "Fiery",
-                      "tooltips": [
-                        "Burn yourself equal to this item's Poison."
-                      ]
-                    },
-                    {
-                      "type": "Shiny",
-                      "tooltips": [
-                        "This has +1 Multicast."
-                      ]
-                    },
-                    {
-                      "type": "Deadly",
-                      "tooltips": [
-                        "+50% Crit Chance"
-                      ]
-                    },
-                    {
-                      "type": "Radiant",
-                      "tooltips": [
-                        "This cannot be Frozen, Slowed or Destroyed."
-                      ]
-                    },
-                    {
-                      "type": "Obsidian",
-                      "tooltips": [
-                        "Deal damage to yourself equal to 10 times this item's Poison."
-                      ]
-                    }
-                  ],
-                  "unifiedTooltips": [
-                    "Cooldown 6 seconds",
-                    "Poison yourself (1/2/3/4) for each Virus on your board.",
-                    "Transform another non-legendary small item on each player's board into Virus for the rest of the fight."
                   ],
                   "remarks": [],
                   "packId": "Dooley_Core",
@@ -15831,6 +15726,983 @@
                   "combatEncounters": []
                 },
                 "tierType": "Silver"
+              }
+            ],
+            "day": 4
+          },
+          {
+            "cardId": "5253c1ef-af51-43ac-a307-4e707e5747a6",
+            "cardName": "Prince Marianas",
+            "level": 7,
+            "health": 900,
+            "items": [
+              {
+                "card": {
+                  "id": "9ad15f24-4def-4d82-8545-d73794cfbaf2",
+                  "name": "Coconut",
+                  "startingTier": "Bronze",
+                  "tiers": {
+                    "Bronze": {
+                      "tooltips": [
+                        "When you sell this, permanently gain 10 Max Health."
+                      ]
+                    },
+                    "Silver": {
+                      "tooltips": [
+                        "When you sell this, permanently gain 20 Max Health."
+                      ]
+                    },
+                    "Gold": {
+                      "tooltips": [
+                        "When you sell this, permanently gain 30 Max Health."
+                      ]
+                    },
+                    "Diamond": {
+                      "tooltips": [
+                        "When you sell this, permanently gain 40 Max Health."
+                      ]
+                    },
+                    "Legendary": {
+                      "tooltips": []
+                    }
+                  },
+                  "tags": [
+                    "Food"
+                  ],
+                  "hiddenTags": [
+                    "Health"
+                  ],
+                  "customTags": [],
+                  "size": "Small",
+                  "heroes": [
+                    "Common"
+                  ],
+                  "enchantments": [
+                    {
+                      "type": "Heavy",
+                      "tooltips": [
+                        "When you sell this, your leftmost Slow item gains +0.2 Slow duration."
+                      ]
+                    },
+                    {
+                      "type": "Icy",
+                      "tooltips": [
+                        "When you sell this, your leftmost Freeze item gains +0.1 Freeze duration."
+                      ]
+                    },
+                    {
+                      "type": "Turbo",
+                      "tooltips": [
+                        "When you sell this, your leftmost Haste item gains +0.2 Haste duration."
+                      ]
+                    },
+                    {
+                      "type": "Shielded",
+                      "tooltips": [
+                        "When you sell this, your leftmost Shield item gains +10 Shield."
+                      ]
+                    },
+                    {
+                      "type": "Restorative",
+                      "tooltips": [
+                        "When you sell this, your leftmost Heal item gains +15 Heal."
+                      ]
+                    },
+                    {
+                      "type": "Toxic",
+                      "tooltips": [
+                        "When you sell this, your leftmost Poison item gains +1 Poison."
+                      ]
+                    },
+                    {
+                      "type": "Fiery",
+                      "tooltips": [
+                        "When you sell this, your leftmost Burn item gains +1 Burn."
+                      ]
+                    },
+                    {
+                      "type": "Deadly",
+                      "tooltips": [
+                        "When you sell this, your leftmost item gains 2% Crit Chance."
+                      ]
+                    },
+                    {
+                      "type": "Obsidian",
+                      "tooltips": [
+                        "When you sell this, your leftmost Weapon item gains +10 damage."
+                      ]
+                    }
+                  ],
+                  "unifiedTooltips": [
+                    "When you sell this, permanently gain (10/20/30/40) Max Health."
+                  ],
+                  "remarks": [],
+                  "packId": "Core",
+                  "combatEncounters": []
+                },
+                "tierType": "Diamond"
+              },
+              {
+                "card": {
+                  "id": "c7435ab5-dd8b-4c78-a5a4-6b2795dacaf3",
+                  "name": "Chum",
+                  "startingTier": "Bronze",
+                  "tiers": {
+                    "Bronze": {
+                      "tooltips": [
+                        "Cooldown 5 seconds",
+                        "Your Aquatic items gain +4% Crit Chance for the fight.",
+                        "When you buy this, get a Piranha."
+                      ]
+                    },
+                    "Silver": {
+                      "tooltips": [
+                        "Cooldown 5 seconds",
+                        "Your Aquatic items gain +6% Crit Chance for the fight.",
+                        "When you buy this, get a Piranha."
+                      ]
+                    },
+                    "Gold": {
+                      "tooltips": [
+                        "Cooldown 5 seconds",
+                        "Your Aquatic items gain +8% Crit Chance for the fight.",
+                        "When you buy this, get a Piranha."
+                      ]
+                    },
+                    "Diamond": {
+                      "tooltips": [
+                        "Cooldown 5 seconds",
+                        "Your Aquatic items gain +10% Crit Chance for the fight.",
+                        "When you buy this, get a Piranha."
+                      ]
+                    },
+                    "Legendary": {
+                      "tooltips": []
+                    }
+                  },
+                  "tags": [
+                    "Aquatic"
+                  ],
+                  "hiddenTags": [
+                    "Crit"
+                  ],
+                  "customTags": [],
+                  "size": "Small",
+                  "heroes": [
+                    "Vanessa"
+                  ],
+                  "enchantments": [
+                    {
+                      "type": "Heavy",
+                      "tooltips": [
+                        "Slow 1 item for 1 second(s)."
+                      ]
+                    },
+                    {
+                      "type": "Icy",
+                      "tooltips": [
+                        "Freeze 1 small item for 1 second(s)."
+                      ]
+                    },
+                    {
+                      "type": "Turbo",
+                      "tooltips": [
+                        "Haste 1 item for 1 second(s)."
+                      ]
+                    },
+                    {
+                      "type": "Shielded",
+                      "tooltips": [
+                        "Shield 20."
+                      ]
+                    },
+                    {
+                      "type": "Restorative",
+                      "tooltips": [
+                        "Heal 30."
+                      ]
+                    },
+                    {
+                      "type": "Toxic",
+                      "tooltips": [
+                        "Poison 2."
+                      ]
+                    },
+                    {
+                      "type": "Fiery",
+                      "tooltips": [
+                        "Burn 3."
+                      ]
+                    },
+                    {
+                      "type": "Shiny",
+                      "tooltips": [
+                        "This has +1 Multicast."
+                      ]
+                    },
+                    {
+                      "type": "Deadly",
+                      "tooltips": [
+                        "This has double Crit Chance bonus."
+                      ]
+                    },
+                    {
+                      "type": "Radiant",
+                      "tooltips": [
+                        "This cannot be Frozen, Slowed or Destroyed."
+                      ]
+                    },
+                    {
+                      "type": "Obsidian",
+                      "tooltips": [
+                        "Your Aquatic Weapons gain +5 damage for the fight."
+                      ]
+                    }
+                  ],
+                  "unifiedTooltips": [
+                    "Cooldown 5 seconds",
+                    "Your Aquatic items gain (+4%/+6%/+8%/+10%) Crit Chance for the fight.",
+                    "When you buy this, get a Piranha."
+                  ],
+                  "remarks": [],
+                  "packId": "Vanessa_Core",
+                  "combatEncounters": []
+                },
+                "tierType": "Silver"
+              },
+              {
+                "card": {
+                  "id": "840b6bc5-4786-40bc-b864-cc5c2b78641a",
+                  "name": "Piranha",
+                  "startingTier": "Bronze",
+                  "tiers": {
+                    "Bronze": {
+                      "tooltips": [
+                        "Cooldown 6 seconds",
+                        "Crit Chance 20%",
+                        "Deal 6 damage.",
+                        "This deals double Crit damage."
+                      ]
+                    },
+                    "Silver": {
+                      "tooltips": [
+                        "Cooldown 6 seconds",
+                        "Crit Chance 20%",
+                        "Deal 12 damage.",
+                        "This deals double Crit damage."
+                      ]
+                    },
+                    "Gold": {
+                      "tooltips": [
+                        "Cooldown 6 seconds",
+                        "Crit Chance 20%",
+                        "Deal 18 damage.",
+                        "This deals double Crit damage."
+                      ]
+                    },
+                    "Diamond": {
+                      "tooltips": [
+                        "Cooldown 6 seconds",
+                        "Crit Chance 20%",
+                        "Deal 24 damage.",
+                        "This deals double Crit damage."
+                      ]
+                    },
+                    "Legendary": {
+                      "tooltips": []
+                    }
+                  },
+                  "tags": [
+                    "Aquatic",
+                    "Weapon",
+                    "Friend"
+                  ],
+                  "hiddenTags": [
+                    "Damage",
+                    "CritReference"
+                  ],
+                  "customTags": [],
+                  "size": "Small",
+                  "heroes": [
+                    "Vanessa"
+                  ],
+                  "enchantments": [
+                    {
+                      "type": "Heavy",
+                      "tooltips": [
+                        "Slow 1 item for 1 second(s)."
+                      ]
+                    },
+                    {
+                      "type": "Icy",
+                      "tooltips": [
+                        "Freeze 1 small item for 1 second(s)."
+                      ]
+                    },
+                    {
+                      "type": "Turbo",
+                      "tooltips": [
+                        "Haste 1 item for 1 second(s)."
+                      ]
+                    },
+                    {
+                      "type": "Shielded",
+                      "tooltips": [
+                        "Shield equal to this item's damage."
+                      ]
+                    },
+                    {
+                      "type": "Restorative",
+                      "tooltips": [
+                        "Heal equal to this item's Damage."
+                      ]
+                    },
+                    {
+                      "type": "Toxic",
+                      "tooltips": [
+                        "Poison equal to 10% of this item's damage."
+                      ]
+                    },
+                    {
+                      "type": "Fiery",
+                      "tooltips": [
+                        "Burn equal to 10% of this item's damage."
+                      ]
+                    },
+                    {
+                      "type": "Shiny",
+                      "tooltips": [
+                        "This has +1 Multicast."
+                      ]
+                    },
+                    {
+                      "type": "Deadly",
+                      "tooltips": [
+                        "+50% Crit Chance"
+                      ]
+                    },
+                    {
+                      "type": "Radiant",
+                      "tooltips": [
+                        "This cannot be Frozen, Slowed or Destroyed."
+                      ]
+                    },
+                    {
+                      "type": "Obsidian",
+                      "tooltips": [
+                        "This has double Damage."
+                      ]
+                    }
+                  ],
+                  "unifiedTooltips": [
+                    "Cooldown 6 seconds",
+                    "Crit Chance 20%",
+                    "Deal (6/12/18/24) damage.",
+                    "This deals double Crit damage."
+                  ],
+                  "remarks": [],
+                  "packId": "Vanessa_Core",
+                  "combatEncounters": []
+                },
+                "tierType": "Silver"
+              },
+              {
+                "card": {
+                  "id": "e75ea50a-e67c-47e4-a4b1-304b87b90cf9",
+                  "name": "IllusoRay",
+                  "startingTier": "Bronze",
+                  "tiers": {
+                    "Bronze": {
+                      "tooltips": [
+                        "Cooldown 8 seconds",
+                        "Slow 1 item(s) for 1 second(s).",
+                        "For each adjacent Friend or Ray, this has +1 Multicast."
+                      ]
+                    },
+                    "Silver": {
+                      "tooltips": [
+                        "Cooldown 8 seconds",
+                        "Slow 1 item(s) for 2 second(s).",
+                        "For each adjacent Friend or Ray, this has +1 Multicast."
+                      ]
+                    },
+                    "Gold": {
+                      "tooltips": [
+                        "Cooldown 8 seconds",
+                        "Slow 1 item(s) for 3 second(s).",
+                        "For each adjacent Friend or Ray, this has +1 Multicast."
+                      ]
+                    },
+                    "Diamond": {
+                      "tooltips": [
+                        "Cooldown 8 seconds",
+                        "Slow 1 item(s) for 4 second(s).",
+                        "For each adjacent Friend or Ray, this has +1 Multicast."
+                      ]
+                    },
+                    "Legendary": {
+                      "tooltips": []
+                    }
+                  },
+                  "tags": [
+                    "Aquatic",
+                    "Friend",
+                    "Ray"
+                  ],
+                  "hiddenTags": [
+                    "Slow"
+                  ],
+                  "customTags": [],
+                  "size": "Small",
+                  "heroes": [
+                    "Vanessa"
+                  ],
+                  "enchantments": [
+                    {
+                      "type": "Heavy",
+                      "tooltips": [
+                        "This has double Slow duration."
+                      ]
+                    },
+                    {
+                      "type": "Icy",
+                      "tooltips": [
+                        "Freeze 1 small item for 1 second(s)."
+                      ]
+                    },
+                    {
+                      "type": "Turbo",
+                      "tooltips": [
+                        "Haste 1 item for 2 second(s)."
+                      ]
+                    },
+                    {
+                      "type": "Shielded",
+                      "tooltips": [
+                        "Shield 35."
+                      ]
+                    },
+                    {
+                      "type": "Restorative",
+                      "tooltips": [
+                        "Heal 50."
+                      ]
+                    },
+                    {
+                      "type": "Toxic",
+                      "tooltips": [
+                        "Poison 3."
+                      ]
+                    },
+                    {
+                      "type": "Fiery",
+                      "tooltips": [
+                        "Burn 5."
+                      ]
+                    },
+                    {
+                      "type": "Shiny",
+                      "tooltips": [
+                        "This has +1 Multicast."
+                      ]
+                    },
+                    {
+                      "type": "Deadly",
+                      "tooltips": [
+                        "Adjacent Friends have +50% Crit Chance."
+                      ]
+                    },
+                    {
+                      "type": "Radiant",
+                      "tooltips": [
+                        "This cannot be Frozen, Slowed or Destroyed."
+                      ]
+                    },
+                    {
+                      "type": "Obsidian",
+                      "tooltips": [
+                        "Deal 35 Damage."
+                      ]
+                    }
+                  ],
+                  "unifiedTooltips": [
+                    "Cooldown 8 seconds",
+                    "Slow 1 item(s) for (1/2/3/4) second(s).",
+                    "For each adjacent Friend or Ray, this has +1 Multicast."
+                  ],
+                  "remarks": [],
+                  "packId": "Vanessa_Core",
+                  "combatEncounters": []
+                },
+                "tierType": "Bronze"
+              },
+              {
+                "card": {
+                  "id": "00e3a7ff-af5e-47ce-a2c0-2d4ec31ac7d7",
+                  "name": "Narwhal",
+                  "startingTier": "Bronze",
+                  "tiers": {
+                    "Bronze": {
+                      "tooltips": [
+                        "Cooldown 4 seconds",
+                        "Deal 10 damage."
+                      ]
+                    },
+                    "Silver": {
+                      "tooltips": [
+                        "Cooldown 4 seconds",
+                        "Deal 20 damage."
+                      ]
+                    },
+                    "Gold": {
+                      "tooltips": [
+                        "Cooldown 4 seconds",
+                        "Deal 30 damage."
+                      ]
+                    },
+                    "Diamond": {
+                      "tooltips": [
+                        "Cooldown 4 seconds",
+                        "Deal 40 damage."
+                      ]
+                    },
+                    "Legendary": {
+                      "tooltips": []
+                    }
+                  },
+                  "tags": [
+                    "Aquatic",
+                    "Weapon",
+                    "Friend"
+                  ],
+                  "hiddenTags": [
+                    "Damage"
+                  ],
+                  "customTags": [],
+                  "size": "Small",
+                  "heroes": [
+                    "Vanessa"
+                  ],
+                  "enchantments": [
+                    {
+                      "type": "Heavy",
+                      "tooltips": [
+                        "Slow 1 item for 1 second(s)."
+                      ]
+                    },
+                    {
+                      "type": "Icy",
+                      "tooltips": [
+                        "Freeze 1 small item for 1 second(s)."
+                      ]
+                    },
+                    {
+                      "type": "Turbo",
+                      "tooltips": [
+                        "Haste 1 item for 1 second(s)."
+                      ]
+                    },
+                    {
+                      "type": "Shielded",
+                      "tooltips": [
+                        "Shield equal to this item's damage."
+                      ]
+                    },
+                    {
+                      "type": "Restorative",
+                      "tooltips": [
+                        "Heal equal to this item's Damage."
+                      ]
+                    },
+                    {
+                      "type": "Toxic",
+                      "tooltips": [
+                        "Poison equal to 10% of this item's damage."
+                      ]
+                    },
+                    {
+                      "type": "Fiery",
+                      "tooltips": [
+                        "Burn equal to 10% of this item's damage."
+                      ]
+                    },
+                    {
+                      "type": "Shiny",
+                      "tooltips": [
+                        "This has +1 Multicast."
+                      ]
+                    },
+                    {
+                      "type": "Deadly",
+                      "tooltips": [
+                        "+50% Crit Chance"
+                      ]
+                    },
+                    {
+                      "type": "Radiant",
+                      "tooltips": [
+                        "This cannot be Frozen, Slowed or Destroyed."
+                      ]
+                    },
+                    {
+                      "type": "Obsidian",
+                      "tooltips": [
+                        "This has double Damage."
+                      ]
+                    }
+                  ],
+                  "unifiedTooltips": [
+                    "Cooldown 4 seconds",
+                    "Deal (10/20/30/40) damage."
+                  ],
+                  "remarks": [],
+                  "packId": "Vanessa_Core",
+                  "combatEncounters": []
+                },
+                "tierType": "Silver"
+              },
+              {
+                "card": {
+                  "id": "c6ab4982-da6c-4a1a-934d-820c45014646",
+                  "name": "Electric Eels",
+                  "startingTier": "Silver",
+                  "tiers": {
+                    "Bronze": {
+                      "tooltips": []
+                    },
+                    "Silver": {
+                      "tooltips": [
+                        "Cooldown 6 seconds",
+                        "Deal 50 Damage.",
+                        "Slow 1 item for 2 second(s).",
+                        "When your enemy uses an item, Charge this 1 second(s)."
+                      ]
+                    },
+                    "Gold": {
+                      "tooltips": [
+                        "Cooldown 6 seconds",
+                        "Deal 50 Damage.",
+                        "Slow 1 item for 2 second(s).",
+                        "When your enemy uses an item, Charge this 2 second(s)."
+                      ]
+                    },
+                    "Diamond": {
+                      "tooltips": [
+                        "Cooldown 6 seconds",
+                        "Deal 50 Damage.",
+                        "Slow 1 item for 2 second(s).",
+                        "When your enemy uses an item, Charge this 3 second(s)."
+                      ]
+                    },
+                    "Legendary": {
+                      "tooltips": []
+                    }
+                  },
+                  "tags": [
+                    "Aquatic",
+                    "Weapon",
+                    "Friend"
+                  ],
+                  "hiddenTags": [
+                    "Damage",
+                    "Slow"
+                  ],
+                  "customTags": [],
+                  "size": "Large",
+                  "heroes": [
+                    "Vanessa"
+                  ],
+                  "enchantments": [
+                    {
+                      "type": "Heavy",
+                      "tooltips": [
+                        "This has double Slow duration."
+                      ]
+                    },
+                    {
+                      "type": "Icy",
+                      "tooltips": [
+                        "Freeze 1 item for 2 second(s)."
+                      ]
+                    },
+                    {
+                      "type": "Turbo",
+                      "tooltips": [
+                        "Haste 1 item for 3 second(s)."
+                      ]
+                    },
+                    {
+                      "type": "Shielded",
+                      "tooltips": [
+                        "Shield equal to this item's damage."
+                      ]
+                    },
+                    {
+                      "type": "Restorative",
+                      "tooltips": [
+                        "Heal equal to this item's Damage."
+                      ]
+                    },
+                    {
+                      "type": "Toxic",
+                      "tooltips": [
+                        "Poison equal to 10% of this item's Damage."
+                      ]
+                    },
+                    {
+                      "type": "Fiery",
+                      "tooltips": [
+                        "Burn equal to 10% of this item's Damage."
+                      ]
+                    },
+                    {
+                      "type": "Shiny",
+                      "tooltips": [
+                        "This has +1 Multicast."
+                      ]
+                    },
+                    {
+                      "type": "Deadly",
+                      "tooltips": [
+                        "+50% Crit Chance"
+                      ]
+                    },
+                    {
+                      "type": "Obsidian",
+                      "tooltips": [
+                        "This has double Damage."
+                      ]
+                    },
+                    {
+                      "type": "Radiant",
+                      "tooltips": [
+                        "This cannot be Frozen, Slowed or Destroyed."
+                      ]
+                    }
+                  ],
+                  "unifiedTooltips": [
+                    "Cooldown 6 seconds",
+                    "Deal 50 Damage.",
+                    "Slow 1 item for 2 second(s).",
+                    "When your enemy uses an item, Charge this (1/2/3) second(s)."
+                  ],
+                  "remarks": [],
+                  "packId": "Vanessa_Core",
+                  "combatEncounters": []
+                },
+                "tierType": "Silver"
+              },
+              {
+                "card": {
+                  "id": "deaad0b0-27bc-4800-928f-0fdf443d2c2d",
+                  "name": "Citrus",
+                  "startingTier": "Bronze",
+                  "tiers": {
+                    "Bronze": {
+                      "tooltips": [
+                        "When you sell this, permanently gain 1 Regen."
+                      ]
+                    },
+                    "Silver": {
+                      "tooltips": [
+                        "When you sell this, permanently gain 2 Regen."
+                      ]
+                    },
+                    "Gold": {
+                      "tooltips": [
+                        "When you sell this, permanently gain 3 Regen."
+                      ]
+                    },
+                    "Diamond": {
+                      "tooltips": [
+                        "When you sell this, permanently gain 4 Regen."
+                      ]
+                    },
+                    "Legendary": {
+                      "tooltips": []
+                    }
+                  },
+                  "tags": [
+                    "Food"
+                  ],
+                  "hiddenTags": [
+                    "Regen"
+                  ],
+                  "customTags": [],
+                  "size": "Small",
+                  "heroes": [
+                    "Common"
+                  ],
+                  "enchantments": [
+                    {
+                      "type": "Heavy",
+                      "tooltips": [
+                        "When you sell this, your leftmost Slow item gains +0.2 Slow duration."
+                      ]
+                    },
+                    {
+                      "type": "Icy",
+                      "tooltips": [
+                        "When you sell this, your leftmost Freeze item gains +0.1 Freeze duration."
+                      ]
+                    },
+                    {
+                      "type": "Turbo",
+                      "tooltips": [
+                        "When you sell this, your leftmost Haste item gains +0.2 Haste duration."
+                      ]
+                    },
+                    {
+                      "type": "Shielded",
+                      "tooltips": [
+                        "When you sell this, your leftmost Shield item gains +10 Shield."
+                      ]
+                    },
+                    {
+                      "type": "Restorative",
+                      "tooltips": [
+                        "When you sell this, your leftmost Heal item gains +15 Heal."
+                      ]
+                    },
+                    {
+                      "type": "Toxic",
+                      "tooltips": [
+                        "When you sell this, your leftmost Poison item gains +1 Poison."
+                      ]
+                    },
+                    {
+                      "type": "Fiery",
+                      "tooltips": [
+                        "When you sell this, your leftmost Burn item gains +1 Burn."
+                      ]
+                    },
+                    {
+                      "type": "Deadly",
+                      "tooltips": [
+                        "When you sell this, your leftmost item gains 2% Crit Chance."
+                      ]
+                    },
+                    {
+                      "type": "Obsidian",
+                      "tooltips": [
+                        "When you sell this, your leftmost Weapon item gains +10 damage."
+                      ]
+                    }
+                  ],
+                  "unifiedTooltips": [
+                    "When you sell this, permanently gain (1/2/3/4) Regen."
+                  ],
+                  "remarks": [],
+                  "packId": "Core",
+                  "combatEncounters": []
+                },
+                "tierType": "Diamond"
+              }
+            ],
+            "skills": [
+              {
+                "card": {
+                  "id": "1448f669-4c0f-4f86-a23c-00fb647b1153",
+                  "name": "Slowed Targets",
+                  "startingTier": "Silver",
+                  "tiers": {
+                    "Bronze": {
+                      "tooltips": []
+                    },
+                    "Silver": {
+                      "tooltips": [
+                        "When you Slow, your items gain +1% Crit Chance for the fight."
+                      ]
+                    },
+                    "Gold": {
+                      "tooltips": [
+                        "When you Slow, your items gain +2% Crit Chance for the fight."
+                      ]
+                    },
+                    "Diamond": {
+                      "tooltips": [
+                        "When you Slow, your items gain +3% Crit Chance for the fight."
+                      ]
+                    },
+                    "Legendary": {
+                      "tooltips": []
+                    }
+                  },
+                  "tags": [],
+                  "hiddenTags": [
+                    "SlowReference",
+                    "Crit"
+                  ],
+                  "customTags": [],
+                  "size": "Medium",
+                  "heroes": [
+                    "Vanessa",
+                    "Dooley",
+                    "Stelle",
+                    "Mak"
+                  ],
+                  "artKey": "Icon_Skill_SlowedTargets.png",
+                  "unifiedTooltips": [
+                    "When you Slow, your items gain (+1%/+2%/+3%) Crit Chance for the fight."
+                  ],
+                  "remarks": [],
+                  "packId": "Vanessa_Core",
+                  "combatEncounters": []
+                },
+                "tierType": "Gold"
+              },
+              {
+                "card": {
+                  "id": "61c83a38-2976-45d1-95c7-cafe4f34ed51",
+                  "name": "Slow and Steady",
+                  "startingTier": "Silver",
+                  "tiers": {
+                    "Bronze": {
+                      "tooltips": []
+                    },
+                    "Silver": {
+                      "tooltips": [
+                        "When you Slow, your weapons gain 2 damage for the fight."
+                      ]
+                    },
+                    "Gold": {
+                      "tooltips": [
+                        "When you Slow, your weapons gain 4 damage for the fight."
+                      ]
+                    },
+                    "Diamond": {
+                      "tooltips": [
+                        "When you Slow, your weapons gain 6 damage for the fight."
+                      ]
+                    },
+                    "Legendary": {
+                      "tooltips": []
+                    }
+                  },
+                  "tags": [
+                    "Weapon"
+                  ],
+                  "hiddenTags": [
+                    "DamageReference",
+                    "SlowReference"
+                  ],
+                  "customTags": [],
+                  "size": "Medium",
+                  "heroes": [
+                    "Vanessa",
+                    "Dooley",
+                    "Stelle",
+                    "Mak"
+                  ],
+                  "artKey": "Icon_Skill_SlowandSteady.png",
+                  "unifiedTooltips": [
+                    "When you Slow, your weapons gain (2/4/6) damage for the fight."
+                  ],
+                  "remarks": [],
+                  "packId": "Vanessa_Core",
+                  "combatEncounters": []
+                },
+                "tierType": "Gold"
               }
             ],
             "day": 4
@@ -25550,22 +26422,30 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "When you Slow, deal 4 damage."
+                        "Cooldown 4 seconds",
+                        "Deal 4 damage.",
+                        "When you Slow, Charge this 1 second."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "When you Slow, deal 8 damage."
+                        "Cooldown 4 seconds",
+                        "Deal 8 damage.",
+                        "When you Slow, Charge this 1 second."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "When you Slow, deal 12 damage."
+                        "Cooldown 4 seconds",
+                        "Deal 12 damage.",
+                        "When you Slow, Charge this 1 second."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you Slow, deal 16 damage."
+                        "Cooldown 4 seconds",
+                        "Deal 16 damage.",
+                        "When you Slow, Charge this 1 second."
                       ]
                     },
                     "Legendary": {
@@ -25586,45 +26466,63 @@
                   ],
                   "enchantments": [
                     {
+                      "type": "Heavy",
+                      "tooltips": [
+                        "Slow 1 item for 1 second(s)."
+                      ]
+                    },
+                    {
                       "type": "Icy",
                       "tooltips": [
-                        "When you Slow, Freeze 1 small item for 1 second(s)."
+                        "Freeze 1 small item for 1 second(s)."
                       ]
                     },
                     {
                       "type": "Turbo",
                       "tooltips": [
-                        "When you Slow, Haste 1 item for 1 second(s)."
+                        "Haste 1 item for 1 second(s)."
                       ]
                     },
                     {
                       "type": "Shielded",
                       "tooltips": [
-                        "When you Slow, Shield equal to this item's damage."
+                        "Shield equal to this item's damage."
                       ]
                     },
                     {
                       "type": "Restorative",
                       "tooltips": [
-                        "When you Slow, Heal equal to this item's damage."
+                        "Heal equal to this item's damage."
                       ]
                     },
                     {
                       "type": "Toxic",
                       "tooltips": [
-                        "When you Slow, Poison equal to 10% of this item's damage."
+                        "Poison equal to 10% of this item's damage."
                       ]
                     },
                     {
                       "type": "Fiery",
                       "tooltips": [
-                        "When you Slow, Burn equal to 10% of this item's damage."
+                        "Burn equal to 10% of this item's damage."
                       ]
                     },
                     {
                       "type": "Shiny",
                       "tooltips": [
-                        "This has double Damage."
+                        "This has +1 Multicast."
+                      ]
+                    },
+                    {
+                      "type": "Deadly",
+                      "tooltips": [
+                        "+50% Crit Chance"
+                      ]
+                    },
+                    {
+                      "type": "Radiant",
+                      "tooltips": [
+                        "This cannot be Frozen, Slowed or Destroyed."
                       ]
                     },
                     {
@@ -25635,7 +26533,9 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you Slow, deal (4/8/12/16) damage."
+                    "Cooldown 4 seconds",
+                    "Deal (4/8/12/16) damage.",
+                    "When you Slow, Charge this 1 second."
                   ],
                   "remarks": [],
                   "packId": "Core",
@@ -27373,28 +28273,28 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Cooldown 8 seconds",
+                        "Cooldown 5 seconds",
                         "Haste the item to the right of this for 1 second(s).",
                         "Slow the item to the left of this for 1 second(s)."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 8 seconds",
+                        "Cooldown 5 seconds",
                         "Haste the item to the right of this for 2 second(s).",
                         "Slow the item to the left of this for 1 second(s)."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 8 seconds",
+                        "Cooldown 5 seconds",
                         "Haste the item to the right of this for 3 second(s).",
                         "Slow the item to the left of this for 1 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 8 seconds",
+                        "Cooldown 5 seconds",
                         "Haste the item to the right of this for 4 second(s).",
                         "Slow the item to the left of this for 1 second(s)."
                       ]
@@ -27484,7 +28384,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 8 seconds",
+                    "Cooldown 5 seconds",
                     "Haste the item to the right of this for (1/2/3/4) second(s).",
                     "Slow the item to the left of this for 1 second(s)."
                   ],
@@ -33010,23 +33910,23 @@
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 5 seconds",
-                        "Heal equal to 5% of your Max Health.",
+                        "Cooldown 7 seconds",
+                        "Heal equal to 10% of your Max Health.",
                         "When you Heal or gain Regen, gain 50 Max Health for the fight."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 5 seconds",
+                        "Cooldown 6 seconds",
                         "Heal equal to 10% of your Max Health.",
-                        "When you Heal or gain Regen, gain 100 Max Health for the fight."
+                        "When you Heal or gain Regen, gain 75 Max Health for the fight."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
                         "Cooldown 5 seconds",
-                        "Heal equal to 15% of your Max Health.",
-                        "When you Heal or gain Regen, gain 150 Max Health for the fight."
+                        "Heal equal to 10% of your Max Health.",
+                        "When you Heal or gain Regen, gain 100 Max Health for the fight."
                       ]
                     },
                     "Legendary": {
@@ -33050,25 +33950,25 @@
                     {
                       "type": "Heavy",
                       "tooltips": [
-                        "When you Heal or gain Regen, Slow 1 item for 3 second(s)."
+                        "Slow 3 items for 1 second(s)."
                       ]
                     },
                     {
                       "type": "Icy",
                       "tooltips": [
-                        "When you Heal or gain Regen, Freeze 1 item for 1 second(s)."
+                        "Freeze 2 item for 1 second(s)."
                       ]
                     },
                     {
                       "type": "Turbo",
                       "tooltips": [
-                        "When you Heal or gain Regen, Haste 1 item for 3 second(s)."
+                        "Haste 3 items for 1 second(s)."
                       ]
                     },
                     {
                       "type": "Shielded",
                       "tooltips": [
-                        "When you Heal or gain Regen, Shield equal to this item's Heal."
+                        "Shield equal to this item's Heal."
                       ]
                     },
                     {
@@ -33080,13 +33980,13 @@
                     {
                       "type": "Toxic",
                       "tooltips": [
-                        "When you Heal or gain Regen, Poison equal to 10% of this item's Heal."
+                        "Poison equal to 10% of this item's Heal."
                       ]
                     },
                     {
                       "type": "Fiery",
                       "tooltips": [
-                        "When you Heal or gain Regen, Burn equal to 10% of this item's Heal."
+                        "Burn equal to 10% of this item's Heal."
                       ]
                     },
                     {
@@ -33098,7 +33998,7 @@
                     {
                       "type": "Deadly",
                       "tooltips": [
-                        "When you Heal or gain Regen, your items gain +10% Crit Chance for the fight."
+                        "+50% Crit Chance"
                       ]
                     },
                     {
@@ -33110,14 +34010,14 @@
                     {
                       "type": "Obsidian",
                       "tooltips": [
-                        "When you Heal or gain Regen, deal damage equal to this item's Heal."
+                        "Deal damage equal to this item's Heal."
                       ]
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 5 seconds",
-                    "Heal equal to (5%/10%/15%) of your Max Health.",
-                    "When you Heal or gain Regen, gain (50/100/150) Max Health for the fight."
+                    "Cooldown (7/6/5) seconds",
+                    "Heal equal to 10% of your Max Health.",
+                    "When you Heal or gain Regen, gain (50/75/100) Max Health for the fight."
                   ],
                   "remarks": [],
                   "packId": "Pygmalien_Core",
@@ -35109,29 +36009,33 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
-                        "Gain 3 Regen for the fight.",
+                        "Cooldown 5 seconds",
+                        "Heal 20.",
+                        "Gain Regen equal to 10% of this item's Heal for the fight.",
                         "When you Shield, charge this 1 second(s)."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
-                        "Gain 6 Regen for the fight.",
+                        "Cooldown 5 seconds",
+                        "Heal 40.",
+                        "Gain Regen equal to 10% of this item's Heal for the fight.",
                         "When you Shield, charge this 1 second(s)."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
-                        "Gain 12 Regen for the fight.",
+                        "Cooldown 5 seconds",
+                        "Heal 60.",
+                        "Gain Regen equal to 10% of this item's Heal for the fight.",
                         "When you Shield, charge this 1 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
-                        "Gain 24 Regen for the fight.",
+                        "Cooldown 5 seconds",
+                        "Heal 80.",
+                        "Gain Regen equal to 10% of this item's Heal for the fight.",
                         "When you Shield, charge this 1 second(s)."
                       ]
                     },
@@ -35144,6 +36048,7 @@
                   ],
                   "hiddenTags": [
                     "Regen",
+                    "Heal",
                     "ShieldReference"
                   ],
                   "customTags": [],
@@ -35173,25 +36078,25 @@
                     {
                       "type": "Shielded",
                       "tooltips": [
-                        "Shield equal to ten times this item's Regen."
+                        "Shield equal to this item's Heal."
                       ]
                     },
                     {
                       "type": "Restorative",
                       "tooltips": [
-                        "Heal equal to 10 times this item's Regen."
+                        "This has double Heal."
                       ]
                     },
                     {
                       "type": "Toxic",
                       "tooltips": [
-                        "Poison equal to this item's Regen."
+                        "Poison equal to 10% of this item's Heal."
                       ]
                     },
                     {
                       "type": "Fiery",
                       "tooltips": [
-                        "Burn equal to this item's Regen."
+                        "Burn equal to 10% of this item's Heal."
                       ]
                     },
                     {
@@ -35215,13 +36120,14 @@
                     {
                       "type": "Obsidian",
                       "tooltips": [
-                        "Deal damage equal to ten times this item's Regen."
+                        "Deal damage equal to this item's Heal."
                       ]
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 4 seconds",
-                    "Gain (3/6/12/24) Regen for the fight.",
+                    "Cooldown 5 seconds",
+                    "Heal (20/40/60/80).",
+                    "Gain Regen equal to 10% of this item's Heal for the fight.",
                     "When you Shield, charge this 1 second(s)."
                   ],
                   "remarks": [],
@@ -42710,29 +43616,33 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
-                        "Gain 3 Regen for the fight.",
+                        "Cooldown 5 seconds",
+                        "Heal 20.",
+                        "Gain Regen equal to 10% of this item's Heal for the fight.",
                         "When you Shield, charge this 1 second(s)."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
-                        "Gain 6 Regen for the fight.",
+                        "Cooldown 5 seconds",
+                        "Heal 40.",
+                        "Gain Regen equal to 10% of this item's Heal for the fight.",
                         "When you Shield, charge this 1 second(s)."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
-                        "Gain 12 Regen for the fight.",
+                        "Cooldown 5 seconds",
+                        "Heal 60.",
+                        "Gain Regen equal to 10% of this item's Heal for the fight.",
                         "When you Shield, charge this 1 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
-                        "Gain 24 Regen for the fight.",
+                        "Cooldown 5 seconds",
+                        "Heal 80.",
+                        "Gain Regen equal to 10% of this item's Heal for the fight.",
                         "When you Shield, charge this 1 second(s)."
                       ]
                     },
@@ -42745,6 +43655,7 @@
                   ],
                   "hiddenTags": [
                     "Regen",
+                    "Heal",
                     "ShieldReference"
                   ],
                   "customTags": [],
@@ -42774,25 +43685,25 @@
                     {
                       "type": "Shielded",
                       "tooltips": [
-                        "Shield equal to ten times this item's Regen."
+                        "Shield equal to this item's Heal."
                       ]
                     },
                     {
                       "type": "Restorative",
                       "tooltips": [
-                        "Heal equal to 10 times this item's Regen."
+                        "This has double Heal."
                       ]
                     },
                     {
                       "type": "Toxic",
                       "tooltips": [
-                        "Poison equal to this item's Regen."
+                        "Poison equal to 10% of this item's Heal."
                       ]
                     },
                     {
                       "type": "Fiery",
                       "tooltips": [
-                        "Burn equal to this item's Regen."
+                        "Burn equal to 10% of this item's Heal."
                       ]
                     },
                     {
@@ -42816,13 +43727,14 @@
                     {
                       "type": "Obsidian",
                       "tooltips": [
-                        "Deal damage equal to ten times this item's Regen."
+                        "Deal damage equal to this item's Heal."
                       ]
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 4 seconds",
-                    "Gain (3/6/12/24) Regen for the fight.",
+                    "Cooldown 5 seconds",
+                    "Heal (20/40/60/80).",
+                    "Gain Regen equal to 10% of this item's Heal for the fight.",
                     "When you Shield, charge this 1 second(s)."
                   ],
                   "remarks": [],
@@ -44966,21 +45878,21 @@
                     "Silver": {
                       "tooltips": [
                         "Cooldown 10 seconds",
-                        "Deal 15 damage for each Weapon or Tech item you have.",
+                        "Deal 30 damage for each Weapon or Tech item you have.",
                         "This deals 2 times damage if it is your only friend."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
                         "Cooldown 10 seconds",
-                        "Deal 30 damage for each Weapon or Tech item you have.",
+                        "Deal 40 damage for each Weapon or Tech item you have.",
                         "This deals 3 times damage if it is your only friend."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
                         "Cooldown 10 seconds",
-                        "Deal 60 damage for each Weapon or Tech item you have.",
+                        "Deal 50 damage for each Weapon or Tech item you have.",
                         "This deals 4 times damage if it is your only friend."
                       ]
                     },
@@ -45070,7 +45982,7 @@
                   ],
                   "unifiedTooltips": [
                     "Cooldown 10 seconds",
-                    "Deal (15/30/60) damage for each Weapon or Tech item you have.",
+                    "Deal (30/40/50) damage for each Weapon or Tech item you have.",
                     "This deals (2/3/4) times damage if it is your only friend."
                   ],
                   "remarks": [],
@@ -49371,14 +50283,14 @@
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 13 seconds",
+                        "Cooldown 17 seconds",
                         "Deal 300 damage.",
                         "When you Slow, Charge this 2 second(s) and this gains +25 Damage for the fight."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 13 seconds",
+                        "Cooldown 15 seconds",
                         "Deal 300 damage.",
                         "When you Slow, Charge this 2 second(s) and this gains +50 Damage for the fight."
                       ]
@@ -49476,7 +50388,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 13 seconds",
+                    "Cooldown (17/15/13) seconds",
                     "Deal 300 damage.",
                     "When you Slow, Charge this 2 second(s) and this gains (+25/+50/+75) Damage for the fight."
                   ],
@@ -52062,14 +52974,14 @@
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 13 seconds",
+                        "Cooldown 17 seconds",
                         "Deal 300 damage.",
                         "When you Slow, Charge this 2 second(s) and this gains +25 Damage for the fight."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 13 seconds",
+                        "Cooldown 15 seconds",
                         "Deal 300 damage.",
                         "When you Slow, Charge this 2 second(s) and this gains +50 Damage for the fight."
                       ]
@@ -52167,7 +53079,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 13 seconds",
+                    "Cooldown (17/15/13) seconds",
                     "Deal 300 damage.",
                     "When you Slow, Charge this 2 second(s) and this gains (+25/+50/+75) Damage for the fight."
                   ],
@@ -55519,28 +56431,28 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Cooldown 8 seconds",
+                        "Cooldown 5 seconds",
                         "Haste the item to the right of this for 1 second(s).",
                         "Slow the item to the left of this for 1 second(s)."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 8 seconds",
+                        "Cooldown 5 seconds",
                         "Haste the item to the right of this for 2 second(s).",
                         "Slow the item to the left of this for 1 second(s)."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 8 seconds",
+                        "Cooldown 5 seconds",
                         "Haste the item to the right of this for 3 second(s).",
                         "Slow the item to the left of this for 1 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 8 seconds",
+                        "Cooldown 5 seconds",
                         "Haste the item to the right of this for 4 second(s).",
                         "Slow the item to the left of this for 1 second(s)."
                       ]
@@ -55630,7 +56542,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 8 seconds",
+                    "Cooldown 5 seconds",
                     "Haste the item to the right of this for (1/2/3/4) second(s).",
                     "Slow the item to the left of this for 1 second(s)."
                   ],
@@ -63471,9 +64383,7 @@
                     "Freeze",
                     "Shield"
                   ],
-                  "customTags": [
-                    "Unpurchasable"
-                  ],
+                  "customTags": [],
                   "size": "Medium",
                   "heroes": [
                     "Common"
@@ -64971,12 +65881,12 @@
                     },
                     "Gold": {
                       "tooltips": [
-                        "At the start of each fight, Freeze all non-weapon items for 2 second(s)."
+                        "The first time you use an item each fight, Freeze all non-weapon items for 2 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "At the start of each fight, Freeze all non-weapon items for 3 second(s)."
+                        "The first time you use an item each fight, Freeze all non-weapon items for 3 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -64994,7 +65904,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_IcicleAmmo_03.png",
                   "unifiedTooltips": [
-                    "At the start of each fight, Freeze all non-weapon items for (2/3) second(s)."
+                    "The first time you use an item each fight, Freeze all non-weapon items for (2/3) second(s)."
                   ],
                   "remarks": [],
                   "packId": "Core",
