@@ -125,6 +125,7 @@ ITEMS_PATH           = CURRENT_DIR / "items.json"
 MONSTERS_PATH    = CURRENT_DIR / "monsters.json"
 
 ENTITY_OUT_PATH      = ROOT_DIR / "entities.json"
+DECORATOR_PATH = ROOT_DIR / "decorate.json"
 
 WINDOWS_TESSDATA_PATH = ROOT_DIR / "tools" / "windows_tesseract" / "tessdata"
 MAC_TESSDATA_PATH = ROOT_DIR / "tools" / "mac_tesseract" / "share" / "tessdata"
@@ -270,7 +271,7 @@ def build_event_message(event: Dict[str, Any]) -> Optional[str]:
 # --------------------------------------------------------------------------- #
 def main() -> None:
     # ─── Ensure output dirs exist ───────────────────────────────────────────
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    ENTITY_OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
     # ─── Load input JSON ────────────────────────────────────────────────────
     with EVENTS_PATH.open(encoding="utf-8") as fp:
