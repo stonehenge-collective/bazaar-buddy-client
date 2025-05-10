@@ -3,20 +3,22 @@ from PIL import Image
 from PyQt5.QtCore import QObject, pyqtSignal, QTimer
 from text_extractor import TextExtractor
 from message_builder import MessageBuilder
-
+from logging import Logger
+from configuration import Configuration
 
 class BaseCaptureWorker(QObject):
     """Base class for capture workers."""
 
     message_ready = pyqtSignal(str)
     error = pyqtSignal(str)
-    _message_builder: MessageBuilder
 
-    def __init__(self, message_builder: MessageBuilder, text_extractor: TextExtractor):
+    def __init__(self, message_builder: MessageBuilder, text_extractor: TextExtractor, logger: Logger, configuration: Configuration):
         super().__init__()
         self._busy = False
         self._message_builder = message_builder
         self._text_extractor = text_extractor
+        self._logger = logger
+        self._configuration = configuration
 
     def start(self) -> None:
         """Start the capture process."""
@@ -32,8 +34,14 @@ class BaseCaptureWorker(QObject):
             return
         try:
             self._busy = True
+            if self._configuration.save_images:
+                from datetime import datetime
+                filename = datetime.now().strftime("%Y%m%d_%H%M%S_%f") + ".png"
+                image.save(self._configuration.system_path / filename)
             text = self._text_extractor.extract_text(image)
+            self._logger.info(f"parsed text: {text}")
             if message := self._message_builder.get_message(text):
+                self._logger.info(f"built message: {message}")
                 self.message_ready.emit(message)
         except (AttributeError, PermissionError):
             pass
@@ -44,8 +52,8 @@ class BaseCaptureWorker(QObject):
 class WindowsCaptureWorker(BaseCaptureWorker):
     """Windows-specific capture implementation."""
 
-    def __init__(self, window_identifier: str, message_builder: MessageBuilder, text_extractor: TextExtractor):
-        super().__init__(message_builder, text_extractor)
+    def __init__(self, window_identifier: str, message_builder: MessageBuilder, text_extractor: TextExtractor, logger: Logger, configuration: Configuration):
+        super().__init__(message_builder, text_extractor, logger, configuration)
         from windows_capture import WindowsCapture, Frame, CaptureControl
         import sys, platform
         major, minor, build, *_ = sys.getwindowsversion()
@@ -91,8 +99,8 @@ class WindowsCaptureWorker(BaseCaptureWorker):
 class MacCaptureWorker(BaseCaptureWorker):
     """Mac-specific capture implementation using CoreGraphics."""
 
-    def __init__(self, window_identifier: str, message_builder: MessageBuilder, text_extractor: TextExtractor):
-        super().__init__(message_builder, text_extractor)
+    def __init__(self, window_identifier: str, message_builder: MessageBuilder, text_extractor: TextExtractor, logger: Logger, configuration: Configuration):
+        super().__init__(message_builder, text_extractor, logger, configuration)
         self.window_identifier = window_identifier
         self._target_window_id = None
         self._running = False

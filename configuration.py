@@ -22,6 +22,7 @@ class Configuration(BaseModel):
     operating_system: str
     system_path: Path
     is_local: bool
+    save_images: bool
 
     def __init__(self):  # type: ignore[override]
         """Populate the model from disk and runtime context.
@@ -66,6 +67,7 @@ class Configuration(BaseModel):
             operating_system=operating_system,
             system_path=system_path,
             is_local=is_local,
+            save_images=cfg.get("save_images", False)
         )
 
         super().__init__(**auto_values)

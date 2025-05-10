@@ -36,7 +36,7 @@ def main() -> None:
 
     def continue_startup() -> None:
         nonlocal controller, bazaar_buddy
-        controller = CaptureController(overlay, logger, message_builder, text_extractor)
+        controller = CaptureController(overlay, logger, message_builder, text_extractor, configuration)
         bazaar_buddy = BazaarBuddy(overlay, logger, controller, system_handler, configuration)
         bazaar_buddy.start_polling()
 

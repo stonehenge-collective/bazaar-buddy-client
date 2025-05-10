@@ -1,4 +1,5 @@
 {
     "version": "v0.0.7",
-    "update_with_beta": false
+    "update_with_beta": false,
+    "save_images": false
 }

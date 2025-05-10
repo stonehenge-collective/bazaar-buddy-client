@@ -6,6 +6,7 @@ from PyQt5.QtCore import QThread, Qt, QObject, pyqtSignal
 from logging import Logger
 from message_builder import MessageBuilder
 from text_extractor import TextExtractor
+from configuration import Configuration
 
 
 class CaptureController(QObject):
@@ -13,7 +14,7 @@ class CaptureController(QObject):
 
     stopped = pyqtSignal()  # emitted whenever capture ends (graceful or on error)
 
-    def __init__(self, overlay: Overlay, logger: Logger, message_builder: MessageBuilder, text_extractor: TextExtractor, window_identifier: str = "The Bazaar"):
+    def __init__(self, overlay: Overlay, logger: Logger, message_builder: MessageBuilder, text_extractor: TextExtractor, configuration: Configuration, window_identifier: str = "The Bazaar"):
         super().__init__()
         self._overlay = overlay
         self._window_identifier = window_identifier
@@ -22,6 +23,7 @@ class CaptureController(QObject):
         self._worker: Optional[BaseCaptureWorker] = None
         self._message_builder: MessageBuilder = message_builder
         self._text_extractor: TextExtractor = text_extractor
+        self._configuration = configuration
 
     # ---------------------------- public API ------------------------------
     def running(self) -> bool:
@@ -35,9 +37,9 @@ class CaptureController(QObject):
 
         # Create platform-specific worker
         if platform.system() == "Windows":
-            self._worker = WindowsCaptureWorker(self._window_identifier, self._message_builder, self._text_extractor)
+            self._worker = WindowsCaptureWorker(self._window_identifier, self._message_builder, self._text_extractor, self._logger, self._configuration)
         else:  # macOS
-            self._worker = MacCaptureWorker(self._window_identifier, self._message_builder, self._text_extractor)
+            self._worker = MacCaptureWorker(self._window_identifier, self._message_builder, self._text_extractor, self._logger, self._configuration)
 
         self._worker.moveToThread(self._thread)
 
