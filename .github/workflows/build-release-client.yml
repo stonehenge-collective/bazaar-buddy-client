@@ -41,7 +41,8 @@ jobs:
             dist/BazaarBuddy.exe
           name: Release ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
-          prerelease: ${{ endsWith(github.ref_name, '-beta') }}
+          draft: ${{ endsWith(github.ref_name, '-beta') }}
+          prerelease: false
 
   # ---------- macOS build ----------
   build-macos:
@@ -81,4 +82,5 @@ jobs:
             BazaarBuddy-mac.zip
           name: Release ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
-          prerelease: ${{ endsWith(github.ref_name, '-beta') }}
+          draft: ${{ endsWith(github.ref_name, '-beta') }}
+          prerelease: false
