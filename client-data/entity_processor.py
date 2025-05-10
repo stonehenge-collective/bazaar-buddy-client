@@ -123,9 +123,9 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 EVENTS_PATH          = CURRENT_DIR / "events.json"
 ITEMS_PATH           = CURRENT_DIR / "items.json"
 MONSTERS_PATH    = CURRENT_DIR / "monsters.json"
+DECORATOR_PATH = CURRENT_DIR / "decorate.json"
 
 ENTITY_OUT_PATH      = ROOT_DIR / "entities.json"
-DECORATOR_PATH = ROOT_DIR / "decorate.json"
 
 WINDOWS_TESSDATA_PATH = ROOT_DIR / "tools" / "windows_tesseract" / "tessdata"
 MAC_TESSDATA_PATH = ROOT_DIR / "tools" / "mac_tesseract" / "share" / "tessdata"
@@ -168,8 +168,18 @@ def decorate_display_message(text: str, rules: list[dict]) -> str:
             return decorateSpan.format(word=original)
         
         return _replacer
-    for rule in rules: 
-        decorated_message = re.sub(rule.get("word"), _get_replacer(rule.get("decorate")), decorated_message, flags=re.IGNORECASE)
+    for rule in rules:
+        word = rule.get("word")
+        decorate_span = rule.get("decorate")
+
+        # Match the word only when it appears as a standalone word (case‑insensitive).
+        pattern = rf"\b{word}\b"
+        decorated_message = re.sub(
+            pattern,
+            _get_replacer(decorate_span),
+            decorated_message,
+            flags=re.IGNORECASE,
+        )
 
     return decorated_message
 
