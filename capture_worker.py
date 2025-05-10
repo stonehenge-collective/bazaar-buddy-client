@@ -2,7 +2,7 @@ from typing import Optional
 from PIL import Image
 from PyQt5.QtCore import QObject, pyqtSignal, QTimer
 from text_extractor import extract_text
-from message_getter import get_message, decorate_message
+from message_builder import get_message, decorate_message
 
 
 class BaseCaptureWorker(QObject):

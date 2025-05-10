@@ -9,11 +9,11 @@ from overlay import Overlay
 from capture_controller import CaptureController
 from updater import Updater
 from bazaar_buddy import BazaarBuddy
-from configuration.configuration import get_configuration
+from configuration.configuration import Configuration
 
 
 def main() -> None:
-    config = get_configuration()
+    config = Configuration()
 
     if config.operating_system == "Windows":
         import ctypes

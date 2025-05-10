@@ -33,7 +33,7 @@ def extract_text_from_file(image_path: str) -> str:
 
 
 if __name__ == "__main__":
-    from message_getter import match_keyword, get_message
+    from message_builder import match_keyword, get_message
 
     image_name = "the_cult"
     entity_name = "The Cult"

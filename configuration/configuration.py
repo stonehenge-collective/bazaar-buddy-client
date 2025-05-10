@@ -1,29 +1,20 @@
-from pydantic import BaseModel, model_validator
+from pydantic import BaseModel
 import json
 import sys
 import platform
 from pathlib import Path
 
-if getattr(sys, "frozen", False):
-    SYSTEM_PATH = Path(sys._MEIPASS)
-else:
-    SYSTEM_PATH = Path(__file__).parent.parent
-
-OPERATING_SYSTEM = platform.system()
-
-# true is we are running from source (i.e. python main.py)
-IS_LOCAL = getattr(sys, "frozen", False) == False
-
 
 class Configuration(BaseModel):
-    """Configuration model for Bazaar Buddy client.
+    """Runtime configuration for the Bazaar Buddy client.
 
-    Attributes:
-        current_version: The version of the client that is currently running.
-        update_with_beta: If True, the updater will download the latest beta release.
-        operating_system: The operating system of the host machine.
-        system_path: Path object pointing to the client installation directory.
-        is_local: True if the client is running from source code rather than a compiled executable.
+    Instantiating ``Configuration()`` with no arguments will automatically load
+    the values stored in ``configuration/configuration.json`` and augment them
+    with information gathered at runtime (operating‑system, install path, and
+    whether the program is running from source or a frozen binary).
+
+    Keyword arguments can be supplied to override any of the auto‑detected or
+    file‑based values – useful for testing.
     """
 
     current_version: str
@@ -32,28 +23,55 @@ class Configuration(BaseModel):
     system_path: Path
     is_local: bool
 
+    def __init__(self):  # type: ignore[override]
+        """Populate the model from disk and runtime context.
 
-def get_configuration() -> Configuration:
-
-    if not IS_LOCAL and OPERATING_SYSTEM == "Darwin":
+        Any keyword arguments provided will override the values discovered at
+        runtime / loaded from JSON, allowing consumers to tweak selected fields
+        as needed (e.g., in unit tests).
         """
-        packaged as an app on macOS, the --add-data (in the build process)flag will add the configuration file to the Resources directory automatically. I guess this is standard behavior for macOS apps.
-        """
-        path = SYSTEM_PATH / "configuration" / "configuration.json"
-    else:
-        path = SYSTEM_PATH / "configuration" / "configuration.json"
+        # ──────────────────────────────────────────────────────────────────────
+        # Runtime‑derived information
+        # ──────────────────────────────────────────────────────────────────────
+        operating_system = platform.system()
 
-    with open(path, "r") as f:
-        config = json.load(f)
-    return Configuration(
-        current_version=config["version"],
-        update_with_beta=config["update_with_beta"],
-        operating_system=OPERATING_SYSTEM,
-        system_path=SYSTEM_PATH,
-        is_local=IS_LOCAL,
-    )
+        if getattr(sys, "frozen", False):
+            # Running from a PyInstaller bundle
+            system_path = Path(sys._MEIPASS)  # type: ignore[attr-defined]
+        else:
+            system_path = Path(__file__).parent.parent
 
+        is_local = not getattr(sys, "frozen", False)
+
+        # ──────────────────────────────────────────────────────────────────────
+        # Locate and load the JSON configuration file
+        # ──────────────────────────────────────────────────────────────────────
+        config_path = system_path / "configuration" / "configuration.json"
+
+        try:
+            with open(config_path, "r", encoding="utf-8") as fp:
+                cfg = json.load(fp)
+        except FileNotFoundError as exc:
+            raise FileNotFoundError(
+                f"Configuration file not found at {config_path!s}."
+            ) from exc
+
+        # ──────────────────────────────────────────────────────────────────────
+        # Assemble the final data dictionary, giving priority to user‑supplied
+        # overrides (``data``)
+        # ──────────────────────────────────────────────────────────────────────
+        auto_values = dict(
+            current_version=cfg.get("version", "0.0.0"),
+            update_with_beta=cfg.get("update_with_beta", False),
+            operating_system=operating_system,
+            system_path=system_path,
+            is_local=is_local,
+        )
+
+        super().__init__(**auto_values)
 
 if __name__ == "__main__":
-    config = get_configuration()
-    print(config)
+    # Creating an instance now automatically loads everything we need.
+    config = Configuration()
+    # Pretty‑print the resulting model for quick verification.
+    print(config.model_dump_json(indent=2))
