@@ -125,6 +125,7 @@ ITEMS_PATH           = CURRENT_DIR / "items.json"
 MONSTERS_PATH    = CURRENT_DIR / "monsters.json"
 
 ENTITY_OUT_PATH      = ROOT_DIR / "entities.json"
+DECORATOR_PATH = ROOT_DIR / "decorate.json"
 
 WINDOWS_TESSDATA_PATH = ROOT_DIR / "tools" / "windows_tesseract" / "tessdata"
 MAC_TESSDATA_PATH = ROOT_DIR / "tools" / "mac_tesseract" / "share" / "tessdata"
@@ -157,6 +158,20 @@ def collect_item_tooltips(card: Dict[str, Any], enchantment: Optional[str]) -> L
                 tips.extend(ench.get("tooltips", []))
                 break
     return tips
+
+def decorate_display_message(text: str, rules: list[dict]) -> str:
+    """Apply decorators so Rich Text can parse and add color to certain keywords"""
+    decorated_message = text
+    def _get_replacer(decorateSpan):
+        def _replacer(match): 
+            original = match.group(0)
+            return decorateSpan.format(word=original)
+        
+        return _replacer
+    for rule in rules: 
+        decorated_message = re.sub(rule.get("word"), _get_replacer(rule.get("decorate")), decorated_message, flags=re.IGNORECASE)
+
+    return decorated_message
 
 
 # ------------------------------ Monsters ----------------------------------- #
@@ -229,7 +244,7 @@ def build_monster_message(m: Dict[str, Any]) -> str:
     # Strip any trailing blank lines
     while msg and msg[-1] == "":
         msg.pop()
-    return "\n".join(msg)
+    return "<br>".join(msg)
 
 
 def build_item_message(item: Dict[str, Any]) -> str:
@@ -242,19 +257,22 @@ def build_item_message(item: Dict[str, Any]) -> str:
     # Remove trailing blank lines
     while msg and msg[-1] == "":
         msg.pop()
-    return "\n".join(msg)
+    return "<br>".join(msg)
 
 
 def build_event_message(event: Dict[str, Any]) -> Optional[str]:
     if not event.get("display", True):
         return None
-    return f"{event['name']}\n" + "\n\n".join(event["options"])
+    return f"{event['name']}<br>" + "<br><br>".join(event["options"])
 
 
 # --------------------------------------------------------------------------- #
 #                            ---- main routine ----                           #
 # --------------------------------------------------------------------------- #
 def main() -> None:
+    # ─── Ensure output dirs exist ───────────────────────────────────────────
+    ENTITY_OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+
     # ─── Load input JSON ────────────────────────────────────────────────────
     with EVENTS_PATH.open(encoding="utf-8") as fp:
         events = json.load(fp)
@@ -264,6 +282,9 @@ def main() -> None:
 
     with MONSTERS_PATH.open(encoding="utf-8") as fp:
         monsters = json.load(fp)
+
+    with DECORATOR_PATH.open(encoding="utf-8") as fp:
+        decorate_rules = json.load(fp)
 
     monsters: List[Dict[str, Any]] = reformat_monsters(monsters)
 
@@ -300,8 +321,10 @@ def main() -> None:
         entities.append(ent)
 
     for entity in entities:
-        entity["display_message"] = cleanup_display_message(entity["display_message"])
+        msg = cleanup_display_message(entity["display_message"])
 
+        entity["display_message"] = decorate_display_message(msg, decorate_rules)
+        
         entity_name = entity.get("name")
         if entity_name in ALT_TEXT_MAP:
             entity["alt_text"] = ALT_TEXT_MAP[entity_name]

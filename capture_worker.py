@@ -31,8 +31,7 @@ class BaseCaptureWorker(QObject):
             self._busy = True
             text = extract_text(image)
             if message := get_message(text):
-                decoratedMessage = decorate_message(message)
-                self.message_ready.emit(decoratedMessage)
+                self.message_ready.emit(message)
         except (AttributeError, PermissionError):
             pass
         finally:

@@ -52,22 +52,22 @@ def get_message(screenshot_text: str):
     return None
 
 
-def decorate_message(message: str):
-    decorated_message = message
+# def decorate_message(message: str): No longer need this if entities.json has the decoration already
+#     decorated_message = message
 
-    def _get_replacer(word):
-        def _replacer(match):
-            original = match.group(0)
-            return word.replace("{word}", original)
+#     def _get_replacer(word):
+#         def _replacer(match):
+#             original = match.group(0)
+#             return word.replace("{word}", original)
 
-        return _replacer
+#         return _replacer
 
-    for decorate in decorate_words:
-        decorated_message = re.sub(
-            decorate.get("word"), _get_replacer(decorate.get("decorate")), decorated_message, flags=re.IGNORECASE
-        )
+#     for decorate in decorate_words:
+#         decorated_message = re.sub(
+#             decorate.get("word"), _get_replacer(decorate.get("decorate")), decorated_message, flags=re.IGNORECASE
+#         )
 
-    return decorated_message
+#     return decorated_message
 
 
 if __name__ == "__main__":

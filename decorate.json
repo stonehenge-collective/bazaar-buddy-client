@@ -1,75 +1,83 @@
 [
   {
+    "word": "Burned",
+    "decorate": "<span style='color:#fa943e;'>{word}</span>"
+  },
+  {
     "word": "Burn",
-    "decorate": "<span style=\"color:#fa943e;\">{word}</span>"
+    "decorate": "<span style='color:#fa943e;'>{word}</span>"
   },
   {
     "word": "Fiery",
-    "decorate": "<span style=\"color:#fa943e;\">{word}</span>"
+    "decorate": "<span style='color:#fa943e;'>{word}</span>"
   },
   {
     "word": "Damage",
-    "decorate": "<span style=\"color:#f5523c;\">{word}</span>"
+    "decorate": "<span style='color:#f5523c;'>{word}</span>"
   },
   {
     "word": "Deadly",
-    "decorate": "<span style=\"color:#f5523c;\">{word}</span>"
+    "decorate": "<span style='color:#f5523c;'>{word}</span>"
   },
   {
     "word": "Crit",
-    "decorate": "<span style=\"color:#f5523c;\">{word}</span>"
+    "decorate": "<span style='color:#f5523c;'>{word}</span>"
+  },
+  {
+    "word": "Poisoned",
+    "decorate": "<span style='color:#0ebe4e;'>{word}</span>"
   },
   {
     "word": "Poison",
-    "decorate": "<span style=\"color:#0ebe4e;\">{word}</span>"
+    "decorate": "<span style='color:#0ebe4e;'>{word}</span>"
   },
   {
     "word": "Toxic",
-    "decorate": "<span style=\"color:#0ebe4e;\">{word}</span>"
+    "decorate": "<span style='color:#0ebe4e;'>{word}</span>"
   },
   {
     "word": "Haste",
-    "decorate": "<span style=\"color:#00eac2;\">{word}</span>"
+    "decorate": "<span style='color:#00eac2;'>{word}</span>"
   },
   {
     "word": "Turbo",
-    "decorate": "<span style=\"color:#00eac2;\">{word}</span>"
+    "decorate": "<span style='color:#00eac2;'>{word}</span>"
   },
   {
     "word": "Freeze",
-    "decorate": "<span style=\"color:#3ec8f8;\">{word}</span>"
+    "decorate": "<span style='color:#3ec8f8;'>{word}</span>"
   },
   {
     "word": "Icy",
-    "decorate": "<span style=\"color:#3ec8f8;\">{word}</span>"
+    "decorate": "<span style='color:#3ec8f8;'>{word}</span>"
   },
   {
     "word": "Heavy",
-    "decorate": "<span style=\"color:#cca06e;\">{word}</span>"
+    "decorate": "<span style='color:#cca06e;'>{word}</span>"
   },
   {
     "word": "Slowed",
-    "decorate": "<span style=\"color:#cca06e;\">{word}</span>"
+    "decorate": "<span style='color:#cca06e;'>{word}</span>"
   },
   {
     "word": "Slow",
-    "decorate": "<span style=\"color:#cca06e;\">{word}</span>"
+    "decorate": "<span style='color:#cca06e;'>{word}</span>"
   },
   {
     "word": "Shielded",
-    "decorate": "<span style=\"color:#f4d021;\">{word}</span>"
+    "decorate": "<span style='color:#f4d021;'>{word}</span>"
   },
   {
     "word": "Shield",
-    "decorate": "<span style=\"color:#f4d021;\">{word}</span>"
+    "decorate": "<span style='color:#f4d021;'>{word}</span>"
   },
   {
     "word": "Restorative",
-    "decorate": "<span style=\"color:#8fea31;\">{word}</span>"
+    "decorate": "<span style='color:#8fea31;'>{word}</span>"
   },
   {
     "word": "Heal",
-    "decorate": "<span style=\"color:#8fea31;\">{word}</span>"
+    "decorate": "<span style='color:#8fea31;'>{word}</span>"
   },
   {
     "word": "\n",
