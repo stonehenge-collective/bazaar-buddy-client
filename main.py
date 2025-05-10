@@ -4,36 +4,40 @@ from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import QTimer
 
 from logger import logger
-from system_handler import get_system_handler
+from system_handler import WindowsSystemHandler, MacSystemHandler
 from overlay import Overlay
 from capture_controller import CaptureController
 from updater import Updater
 from bazaar_buddy import BazaarBuddy
-from configuration.configuration import Configuration
+from configuration import Configuration
+from message_builder import MessageBuilder
+from text_extractor import TextExtractor
 
 
 def main() -> None:
-    config = Configuration()
+    configuration = Configuration()
+    message_builder = MessageBuilder(configuration)
+    text_extractor = TextExtractor(configuration, logger)
+    system_handler = WindowsSystemHandler() if configuration.operating_system == "Windows" else MacSystemHandler()
 
-    if config.operating_system == "Windows":
+    if configuration.operating_system == "Windows":
         import ctypes
 
         ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("StonehengeCollective.BazaarBuddy")
 
     app = QApplication(sys.argv)
-    app.setWindowIcon(QIcon(str(config.system_path / "assets" / "brand_icon.ico")))
+    app.setWindowIcon(QIcon(str(configuration.system_path / "assets" / "brand_icon.ico")))
 
-    overlay = Overlay("Checking for updates…")
-    updater = Updater(overlay, logger, config)
+    overlay = Overlay("Checking for updates…", configuration)
+    updater = Updater(overlay, logger, configuration)
 
     controller = None
     bazaar_buddy = None
 
     def continue_startup() -> None:
         nonlocal controller, bazaar_buddy
-        controller = CaptureController(overlay, logger)
-        system_handler = get_system_handler()
-        bazaar_buddy = BazaarBuddy(overlay, logger, controller, system_handler, config)
+        controller = CaptureController(overlay, logger, message_builder, text_extractor)
+        bazaar_buddy = BazaarBuddy(overlay, logger, controller, system_handler, configuration)
         bazaar_buddy.start_polling()
 
     updater.update_completed.connect(continue_startup)

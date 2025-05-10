@@ -49,8 +49,8 @@ def cleanup_display_message(text: str) -> str:
 
 # Hard-coded mapping of names → alternative OCR spellings
 ALT_TEXT_MAP: Dict[str, str] = {
-    "Frost Street Champion": "Frost Street Champiox",
-    "Tempest Flamedancer": "Tempest Flamedancex",
+    "Frost Street Champion": ["Frost Street Champiox", "Frost Street Champio"],
+    "Tempest Flamedancer": ["Tempest Flamedancex"],
 }
 
 DO_NOT_DISPLAY: Dict[str] = [
@@ -341,8 +341,9 @@ def main() -> None:
 
     for e in entities:
         word_set.add(e["name"])
-        if e.get("alt_text"):
-            word_set.add(e["alt_text"])
+        alt = e.get("alt_text")
+        if alt:
+            word_set.update(alt) 
 
     # eng.bazaar_terms  (newline-separated words)
     with WINDOWS_TERMS_PATH.open("w", encoding="utf-8") as fp:

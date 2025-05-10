@@ -15,18 +15,12 @@ from PyQt5.QtWidgets import (
     QHBoxLayout,
 )
 
-from configuration.configuration import get_configuration
+from configuration import Configuration
 
 INITIAL_SIZE = QSize(300, 200)  # starting size of the overlay (width × height)
 MARGIN = 20  # minimal margin to screen edges
 PADDING = 10
 BG_COLOR = QColor(0, 0, 0)
-
-config = get_configuration()
-if config.operating_system == "Windows":
-    FONT = QFont("Segoe UI", 12)
-else:
-    FONT = QFont("Helvetica", 12)
 
 
 class Overlay(QWidget):
@@ -34,10 +28,15 @@ class Overlay(QWidget):
     yes_clicked = pyqtSignal()
     no_clicked = pyqtSignal()
 
-    def __init__(self, text: str):
+    def __init__(self, text: str, configuration: Configuration):
         super().__init__(flags=Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
         self.setWindowOpacity(0.85)
 
+        self._font: QFont = None
+        if configuration.operating_system == "Windows":
+            self._font = QFont("Segoe UI", 12)
+        else:
+            self._font = QFont("Helvetica", 12)
         self.text = text
         self._drag_pos: Optional[QPoint] = None
 
@@ -93,7 +92,7 @@ class Overlay(QWidget):
     def _build_ui(self) -> None:
         # ----- Text inside a scroll area -----
         self.label = QLabel(self.text, wordWrap=True, alignment=Qt.AlignLeft | Qt.AlignTop)
-        self.label.setFont(FONT)
+        self.label.setFont(self._font)
         self.label.setStyleSheet("color: white; background: transparent;")
         self.label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
         # self.label.setContentsMargins(0, 0, 10, 0)

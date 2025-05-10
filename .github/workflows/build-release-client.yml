@@ -32,7 +32,7 @@ jobs:
           pyinstaller main.py --noconsole --noconfirm --onefile --name "BazaarBuddy" `
           --icon "assets\\brand_icon.ico" --add-data "tools\\windows_tesseract;tools\\windows_tesseract" `
           --add-data "entities.json;." --add-data "decorate.json;." --add-data "assets\\brand_icon.ico;assets" `
-          --add-data "configuration/configuration.json;configuration"
+          --add-data "configuration.json;."
 
       - name: Create / update release
         uses: softprops/action-gh-release@v1
@@ -67,7 +67,7 @@ jobs:
           --add-data "tools/mac_tesseract/share/tessdata:tools/mac_tesseract/share/tessdata" \
           --add-data "entities.json:." \
           --add-data "decorate.json:." \
-          --add-data "configuration/configuration.json:configuration" \
+          --add-data "configuration.json:." \
           --icon "assets/brand_icon.ico"
 
       - name: Package app bundle

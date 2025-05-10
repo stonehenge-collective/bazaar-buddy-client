@@ -1,10 +1,5 @@
 from abc import ABC, abstractmethod
 from typing import Optional
-from configuration.configuration import get_configuration
-
-
-config = get_configuration()
-
 
 class BaseSystemHandler(ABC):
     """Base class for system-specific process and window handling."""
@@ -73,11 +68,3 @@ class MacSystemHandler(BaseSystemHandler):
         # On macOS, we return the process ID itself as the "handle"
         # since we'll use it with Qt's window management
         return process_id
-
-
-def get_system_handler() -> BaseSystemHandler:
-    """Factory function to get the appropriate system handler for the current platform."""
-    if config.operating_system == "Windows":
-        return WindowsSystemHandler()
-    else:
-        return MacSystemHandler()

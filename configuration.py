@@ -39,14 +39,14 @@ class Configuration(BaseModel):
             # Running from a PyInstaller bundle
             system_path = Path(sys._MEIPASS)  # type: ignore[attr-defined]
         else:
-            system_path = Path(__file__).parent.parent
+            system_path = Path(__file__).parent
 
         is_local = not getattr(sys, "frozen", False)
 
         # ──────────────────────────────────────────────────────────────────────
         # Locate and load the JSON configuration file
         # ──────────────────────────────────────────────────────────────────────
-        config_path = system_path / "configuration" / "configuration.json"
+        config_path = system_path / "configuration.json"
 
         try:
             with open(config_path, "r", encoding="utf-8") as fp:
@@ -61,7 +61,7 @@ class Configuration(BaseModel):
         # overrides (``data``)
         # ──────────────────────────────────────────────────────────────────────
         auto_values = dict(
-            current_version=cfg.get("version", "0.0.0"),
+            current_version=cfg.get("version"),
             update_with_beta=cfg.get("update_with_beta", False),
             operating_system=operating_system,
             system_path=system_path,

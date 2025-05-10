@@ -1,14 +1,17 @@
 from PyQt5.QtCore import QTimer
-
+from logging import Logger
+from overlay import Overlay
+from capture_controller import CaptureController
+from system_handler import BaseSystemHandler
+from configuration import Configuration
 
 class BazaarBuddy:
-
-    def __init__(self, overlay, logger, controller, system_handler, config):
+    def __init__(self, overlay: Overlay, logger: Logger, controller: CaptureController, system_handler: BaseSystemHandler, configuration: Configuration):
         self.overlay = overlay
         self.logger = logger
         self.controller = controller
         self.system_handler = system_handler
-        self.config = config
+        self.configuration = configuration
 
         self.poll_timer = QTimer()
         self.poll_timer.setInterval(1000)
@@ -20,7 +23,7 @@ class BazaarBuddy:
         self.logger.info("Looking for Bazaar process...")
 
         # On macOS, the process name is different
-        process_name = "TheBazaar.exe" if self.config.operating_system == "Windows" else "The Bazaar"
+        process_name = "TheBazaar.exe" if self.configuration.operating_system == "Windows" else "The Bazaar"
         bazaar_proc = self.system_handler.get_process_by_name(process_name)
 
         if not bazaar_proc:
