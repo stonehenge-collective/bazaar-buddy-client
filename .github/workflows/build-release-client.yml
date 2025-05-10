@@ -31,7 +31,7 @@ jobs:
         run: |
           pyinstaller main.py --noconsole --noconfirm --onefile --name "BazaarBuddy" `
           --icon "assets\\brand_icon.ico" --add-data "tools\\windows_tesseract;tools\\windows_tesseract" `
-          --add-data "entities.json;." --add-data "clent-data\\decorate.json;client-data" --add-data "assets\\brand_icon.ico;assets" `
+          --add-data "entities.json;." --add-data "client-data\\decorate.json;client-data" --add-data "assets\\brand_icon.ico;assets" `
           --add-data "configuration.json;."
 
       - name: Create / update release
