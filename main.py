@@ -16,7 +16,7 @@ from text_extractor import TextExtractor
 
 def main() -> None:
     configuration = Configuration()
-    message_builder = MessageBuilder(configuration)
+    message_builder = MessageBuilder(configuration, logger)
     text_extractor = TextExtractor(configuration, logger)
     system_handler = WindowsSystemHandler() if configuration.operating_system == "Windows" else MacSystemHandler()
 

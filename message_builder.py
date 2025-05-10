@@ -2,17 +2,12 @@
 from __future__ import annotations
 
 import json
-import logging
+from logging import Logger
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence
 
-from rapidfuzz import fuzz, process
 
 from configuration import Configuration
-
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-
 
 class MessageBuilder:
     """Identify entities in OCR text and build decorated display messages.
@@ -28,9 +23,10 @@ class MessageBuilder:
         considered a hit.
     """
 
-    def __init__(self, configuration: Configuration, *, threshold: int = 80) -> None:
+    def __init__(self, configuration: Configuration, logger: Logger, threshold: int = 90) -> None:
         self._configuration = configuration
         self._threshold = threshold
+        self._logger = logger
 
         self._entities: List[Dict[str, Any]] = self._load_json(
             configuration.system_path / "entities.json",
@@ -45,38 +41,48 @@ class MessageBuilder:
     # --------------------------------------------------------------------- #
 
     def match_keyword(self, text: str) -> Optional[str]:
-        """Return the best‑matched keyword in *text*, or ``None`` if nothing
-        clears :pyattr:`_threshold`."""
-        result = process.extractOne(
-            query=text,
-            choices=list(self._keyword_set),
-            scorer=fuzz.token_set_ratio,
-            processor=str.lower,
-            score_cutoff=self._threshold,
-        )
-        if result is None:
+        """Return the *first* keyword appearing in *text*.
+
+        The search is **case‑insensitive** and looks for *substring* matches.
+        If multiple keywords are present, the one that appears earliest in the
+        string is returned (based on its starting index).  If no keyword is
+        found, ``None`` is returned.
+        """
+        text_lower = text.lower()
+        # Collect all hits as (position, keyword) pairs
+        hits: List[tuple[int, str]] = []
+        for kw in self._keyword_set:
+            pos = text_lower.find(kw.lower())
+            if pos != -1:
+                hits.append((pos, kw))
+
+        self._logger.debug(f"Found hits: {hits}")
+
+        if not hits:  # Nothing matched at all
+            self._logger.debug("No keyword found in OCR text")
             return None
 
-        word, score, _ = result
-        logger.debug("Matched %r with score %d", word, score)
-        return word
+        # Choose the keyword with the earliest position in the text
+        pos, kw = min(hits, key=lambda item: item[0])
+        self._logger.debug("Matched %r at position %d", kw, pos)
+        return kw
 
     def get_message(self, ocr_text: str) -> Optional[str]:
         """Look up and return the *display_message* for the entity referenced
         somewhere in *ocr_text*.  Returns ``None`` if no entity matches."""
-        logger.debug("Searching entities for OCR text %r", ocr_text)
+        self._logger.debug("Searching entities for OCR text %r", ocr_text)
 
         matched = self.match_keyword(ocr_text)
         if matched is None:
-            logger.debug("No keyword cleared threshold")
+            self._logger.debug("No keyword cleared threshold")
             return None
 
         for entity in self._entities:
             if matched in {entity.get("name"), entity.get("alt_text")}:
-                logger.debug("Found entity %r", entity.get("name"))
+                self._logger.debug("Found entity %r", entity.get("name"))
                 return entity.get("display_message")
 
-        logger.warning("Matched keyword %r but no entity carried that name", matched)
+        self._logger.warning("Matched keyword %r but no entity carried that name", matched)
         return None
 
     # ------------------------------------------------------------------ #
@@ -109,11 +115,19 @@ if __name__ == "__main__":
 
     # Create configuration exactly once, then share it
     cfg = Configuration()
+    import logging
+    from logger import logger
+    logger.setLevel(logging.DEBUG)
 
-    builder = MessageBuilder(cfg)
+    builder = MessageBuilder(cfg, logger)
 
-    test_ocr = "The cult of personality strikes again."  # ← OCR text
-    raw_message = builder.get_message(test_ocr)
+    examples = [
+        "REPORT BUG SMALL AQUATIC TOOL APPAREL Dive Weights Se i Haste 1 items for 39 1 seconds. For each adjacent Aquatic item. reduce this item's Cooldown by 1 second. This has Multicast equal to its anil OW - lial 9 a he Hf 4 s lek o a Y4 yy - ww a Ze sy ZA 4 o vy Cz en t 4 ty a J S I A ae all - nN Version 1.0.434",
+        "MEDIUM Toxic Calcinator Burn Poison equal to this item's Burn. 4 Crit 4 When you transform a this permanently gains Burn. At the start of each day spend 3 Gold to get a Chunk of Lead. Bank amount of gold you have."
+    ]
 
-    print("Matched entity message:")
-    pprint(raw_message)
+    print(builder.match_keyword(examples[1]))
+    # raw_message = builder.get_message(test_ocr)
+
+    # print("Matched entity message:")
+    # pprint(raw_message)

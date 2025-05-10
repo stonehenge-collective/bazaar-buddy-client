@@ -371,7 +371,8 @@ def main() -> None:
         "load_freq_dawg       F\n"
         "user_words_suffix    bazaar_terms\n"
         f"tessedit_char_whitelist {whitelist} \n"
-        "tessedit_pageseg_mode 11"
+        "tessedit_pageseg_mode 11\n"
+        "oem 1"
     )
     with WINDOWS_CHAR_SET_PATH.open("w", encoding="utf-8") as fp:
         fp.write(config_body)
