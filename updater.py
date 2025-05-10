@@ -2,14 +2,24 @@ import requests
 from PyQt5.QtCore import QObject, pyqtSignal
 import sys
 import subprocess
+
 from configuration import Configuration
 from overlay import Overlay
 from logging import Logger
 
 
-class Updater(QObject):
+class BaseUpdater(QObject):
 
     update_completed = pyqtSignal()
+
+    def __init__(self):
+        super().__init__()
+
+    def check_and_prompt(self):
+        raise NotImplementedError("function must be implemented by subclass")
+
+
+class Updater(BaseUpdater):
 
     def __init__(self, overlay: Overlay, logger: Logger, configuration: Configuration):
         super().__init__()
@@ -138,9 +148,25 @@ class Updater(QObject):
         # Launch platform-specific updater
         if self.configuration.operating_system == "Windows":
             updater_script = self.configuration.system_path / "update_scripts" / "windows_updater.bat"
-            subprocess.Popen(["cmd", "/c", str(updater_script), download_url, str(self.configuration.system_path.parent)])
+            subprocess.Popen(
+                ["cmd", "/c", str(updater_script), download_url, str(self.configuration.system_path.parent)]
+            )
         else:  # macOS
             updater_script = self.configuration.system_path / "update_scripts" / "mac_updater.sh"
-            subprocess.Popen(["bash", str(updater_script), download_url, str(self.configuration.system_path.parent.parent)])
+            subprocess.Popen(
+                ["bash", str(updater_script), download_url, str(self.configuration.system_path.parent.parent)]
+            )
 
         sys.exit(0)
+
+
+class MockUpdater(BaseUpdater):
+    """
+    This class can be used to skip the entire auto updating flow.
+    """
+
+    def __init__(self, overlay: Overlay, logger: Logger, configuration: Configuration):
+        super().__init__()
+
+    def check_and_prompt(self):
+        self.update_completed.emit()

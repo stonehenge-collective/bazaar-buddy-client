@@ -7,7 +7,7 @@ from logger import logger
 from system_handler import WindowsSystemHandler, MacSystemHandler
 from overlay import Overlay
 from capture_controller import CaptureController
-from updater import Updater
+from updater import MockUpdater
 from bazaar_buddy import BazaarBuddy
 from configuration import Configuration
 from message_builder import MessageBuilder
@@ -29,7 +29,7 @@ def main() -> None:
     app.setWindowIcon(QIcon(str(configuration.system_path / "assets" / "brand_icon.ico")))
 
     overlay = Overlay("Checking for updates…", configuration)
-    updater = Updater(overlay, logger, configuration)
+    updater = MockUpdater(overlay, logger, configuration)
 
     controller = None
     bazaar_buddy = None
