@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 env:
-  TARGET_REPO: ${{ endsWith(github.ref_name, '-test') && 'bazaar-buddy-client-test' || 'bazaar-buddy-client' }}
+  TARGET_REPO: ${{ endsWith(github.ref_name, '-test') && 'stonehenge-collective/bazaar-buddy-client-test' || 'stonehenge-collective/bazaar-buddy-client' }}
 
 jobs:
   # ---------- Windows build ----------
