@@ -277,7 +277,7 @@ class Updater(BaseUpdater):
             )
         else:
             updater_script = self.configuration.system_path / "update_scripts" / "mac_updater.sh"
-            process = subprocess.Popen(
+            subprocess.Popen(
                 ["bash", str(updater_script), download_url, str(self.configuration.system_path.parent.parent)]
             )
 
