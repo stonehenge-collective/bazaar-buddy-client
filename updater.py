@@ -277,9 +277,16 @@ class Updater(BaseUpdater):
             )
         else:
             updater_script = self.configuration.system_path / "update_scripts" / "mac_updater.sh"
-            subprocess.Popen(
-                ["bash", str(updater_script), download_url, str(self.configuration.system_path.parent.parent)]
+            process = subprocess.Popen(
+                ["bash", str(updater_script), download_url, str(self.configuration.system_path.parent.parent)],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                universal_newlines=True,
             )
+
+            # Read output in real-time
+            for line in process.stdout:
+                print(line.strip())
 
         sys.exit(0)
 
