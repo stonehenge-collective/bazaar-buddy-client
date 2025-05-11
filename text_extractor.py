@@ -93,6 +93,6 @@ if __name__ == "__main__":  # pragma: no cover
     cfg = Configuration()
     extractor = TextExtractor(cfg, logger)
 
-    sample_file = Path("screenshot_examples/bad_pelt.png")
+    sample_file = Path("ocr_tests/fire_claw.png")
     text = extractor.extract_text_from_file(sample_file)
     print(text)

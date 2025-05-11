@@ -5,7 +5,7 @@ import json
 from logging import Logger
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence
-
+import re
 
 from configuration import Configuration
 
@@ -41,48 +41,60 @@ class MessageBuilder:
     # --------------------------------------------------------------------- #
 
     def match_keyword(self, text: str) -> Optional[str]:
-        """Return the *first* keyword appearing in *text*.
+        """Return the *first* keyword/phrase that appears in *text*.
 
-        The search is **case‑insensitive** and looks for *substring* matches.
-        If multiple keywords are present, the one that appears earliest in the
-        string is returned (based on its starting index).  If no keyword is
-        found, ``None`` is returned.
+        The search is **case‑insensitive** and only considers *whole* words or
+        phrases.  A match is accepted only when the keyword is **not** embedded
+        inside another word (i.e. the characters immediately before and after
+        are *not* word characters).  Multi‑word phrases are fully supported.
+
+        If several keywords are present, the one with the earliest start index
+        is returned.  If none are found, ``None`` is returned.
         """
-        text_lower = text.lower()
-        # Collect all hits as (position, keyword) pairs
-        hits: List[tuple[int, str]] = []
+        hits: List[Tuple[int, str]] = []
+
         for kw in self._keyword_set:
-            pos = text_lower.find(kw.lower())
-            if pos != -1:
-                hits.append((pos, kw))
+            # (?<!\w)  → the char before is start‑of‑string OR a non‑word
+            # (?!\w)   → the char after  is end‑of‑string   OR a non‑word
+            pattern = re.compile(rf"(?<!\w){re.escape(kw)}(?!\w)", re.IGNORECASE)
+            m = pattern.search(text)
+            if m:
+                hits.append((m.start(), kw))
 
-        self._logger.debug(f"Found hits: {hits}")
+        self._logger.debug("Found hits: %s", hits)
 
-        if not hits:  # Nothing matched at all
+        if not hits:               # nothing matched at all
             self._logger.debug("No keyword found in OCR text")
             return None
 
-        # Choose the keyword with the earliest position in the text
-        pos, kw = min(hits, key=lambda item: item[0])
+        pos, kw = min(hits, key=lambda item: item[0])   # earliest occurrence wins
         self._logger.debug("Matched %r at position %d", kw, pos)
         return kw
-
-    def get_message(self, ocr_text: str) -> Optional[str]:
-        """Look up and return the *display_message* for the entity referenced
-        somewhere in *ocr_text*.  Returns ``None`` if no entity matches."""
+    
+    def match_entity(self, ocr_text: str) -> Optional[Dict[str, Any]]:
         self._logger.debug("Searching entities for OCR text %r", ocr_text)
 
         matched = self.match_keyword(ocr_text)
         if matched is None:
             self._logger.debug("No keyword cleared threshold")
             return None
-
+        
         for entity in self._entities:
-            if matched in {entity.get("name"), entity.get("alt_text")}:
+            if matched == entity.get("name") or matched in entity.get("alt_text", []):
                 self._logger.debug("Found entity %r", entity.get("name"))
-                return entity.get("display_message")
-
+                return entity
+        
         self._logger.warning("Matched keyword %r but no entity carried that name", matched)
+        return None
+
+
+    def get_message(self, ocr_text: str) -> Optional[str]:
+        matched_entity = self.match_entity(ocr_text)
+
+        if matched_entity:
+            self._logger.debug("Found entity %r", matched_entity.get("name"))
+            return matched_entity.get("display_message")
+
         return None
 
     # ------------------------------------------------------------------ #
