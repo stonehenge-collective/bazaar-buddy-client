@@ -5,8 +5,16 @@ from capture_controller import CaptureController
 from system_handler import BaseSystemHandler
 from configuration import Configuration
 
+
 class BazaarBuddy:
-    def __init__(self, overlay: Overlay, logger: Logger, controller: CaptureController, system_handler: BaseSystemHandler, configuration: Configuration):
+    def __init__(
+        self,
+        overlay: Overlay,
+        logger: Logger,
+        controller: CaptureController,
+        system_handler: BaseSystemHandler,
+        configuration: Configuration,
+    ):
         self.overlay = overlay
         self.logger = logger
         self.controller = controller
@@ -43,7 +51,7 @@ class BazaarBuddy:
         return True
 
     def _tick(self):
-        self.overlay.set_message("Waiting for The Bazaar to start…")
+        self.overlay.set_message("Waiting for The Bazaar to start from updated client…")
         if self.controller.running():
             return  # already capturing – skip heavy checks
         if self.attempt_start_capture():
