@@ -51,7 +51,7 @@ class BazaarBuddy:
         return True
 
     def _tick(self):
-        self.overlay.set_message("Waiting for The Bazaar to start from the updated client...")
+        self.overlay.set_message("Waiting for The Bazaar to start...")
         if self.controller.running():
             return  # already capturing – skip heavy checks
         if self.attempt_start_capture():
