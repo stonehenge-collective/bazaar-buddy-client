@@ -188,6 +188,7 @@ class Updater(BaseUpdater):
 
     def check_for_update(self):
         if self._update_available():
+            self.logger.info("Update available")
             self.prompt_for_update()
         else:
             self.update_completed.emit()
@@ -266,6 +267,8 @@ class Updater(BaseUpdater):
             self.overlay.set_message("Update failed: No compatible package found. Skipping update.")
             self.update_completed.emit()
             return
+
+        self.logger.info(f"Downloading update from {download_url}")
 
         if self.configuration.operating_system == "Windows":
             updater_script = self.configuration.system_path / "update_scripts" / "windows_updater.bat"
