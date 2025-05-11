@@ -44,10 +44,9 @@ jobs:
             dist/BazaarBuddy.exe
           name: Release ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
-          draft: ${{ endsWith(github.ref_name, '-test') }}
-          prerelease: false
           repository: ${{ env.TARGET_REPO }}
-
+          token: ${{ secrets.TEST_RELEASE_PAT }}
+          
   # ---------- macOS build ----------
   build-macos:
     runs-on: macos-latest
@@ -85,7 +84,6 @@ jobs:
             BazaarBuddy-mac.zip
           name: Release ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
-          draft: ${{ endsWith(github.ref_name, '-test') }}
-          prerelease: false
           repository: ${{ env.TARGET_REPO }}
+          token: ${{ secrets.TEST_RELEASE_PAT }}
 
