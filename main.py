@@ -7,11 +7,11 @@ from logger import logger
 from system_handler import WindowsSystemHandler, MacSystemHandler
 from overlay import Overlay
 from capture_controller import CaptureController
-from updater import MockUpdater
 from bazaar_buddy import BazaarBuddy
 from configuration import Configuration
 from message_builder import MessageBuilder
 from text_extractor import TextExtractor
+from updater import TestUpdateSource, ProductionUpdateSource, Updater, MockUpdater, MockUpdateSource
 
 
 def main() -> None:
@@ -19,6 +19,9 @@ def main() -> None:
     message_builder = MessageBuilder(configuration, logger)
     text_extractor = TextExtractor(configuration, logger)
     system_handler = WindowsSystemHandler() if configuration.operating_system == "Windows" else MacSystemHandler()
+    update_source = (
+        TestUpdateSource(logger) if configuration.update_with_test_release else ProductionUpdateSource(logger)
+    )
 
     if configuration.operating_system == "Windows":
         import ctypes
@@ -29,7 +32,7 @@ def main() -> None:
     app.setWindowIcon(QIcon(str(configuration.system_path / "assets" / "brand_icon.ico")))
 
     overlay = Overlay("Checking for updates…", configuration)
-    updater = MockUpdater(overlay, logger, configuration)
+    updater = Updater(overlay, logger, configuration, update_source.latest_release)
 
     controller = None
     bazaar_buddy = None
@@ -44,7 +47,7 @@ def main() -> None:
 
     # Kick off the check once the event loop is running so the overlay
     # repaints before the (blocking) HTTP call.
-    QTimer.singleShot(0, updater.check_and_prompt)
+    QTimer.singleShot(0, updater.check_for_update)
 
     try:
         sys.exit(app.exec_())

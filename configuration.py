@@ -18,7 +18,7 @@ class Configuration(BaseModel):
     """
 
     current_version: str
-    update_with_beta: bool
+    update_with_test_release: bool
     operating_system: str
     system_path: Path
     is_local: bool
@@ -53,9 +53,7 @@ class Configuration(BaseModel):
             with open(config_path, "r", encoding="utf-8") as fp:
                 cfg = json.load(fp)
         except FileNotFoundError as exc:
-            raise FileNotFoundError(
-                f"Configuration file not found at {config_path!s}."
-            ) from exc
+            raise FileNotFoundError(f"Configuration file not found at {config_path!s}.") from exc
 
         # ──────────────────────────────────────────────────────────────────────
         # Assemble the final data dictionary, giving priority to user‑supplied
@@ -63,14 +61,15 @@ class Configuration(BaseModel):
         # ──────────────────────────────────────────────────────────────────────
         auto_values = dict(
             current_version=cfg.get("version"),
-            update_with_beta=cfg.get("update_with_beta", False),
+            update_with_test_release=cfg.get("update_with_test_release", False),
             operating_system=operating_system,
             system_path=system_path,
             is_local=is_local,
-            save_images=cfg.get("save_images", False)
+            save_images=cfg.get("save_images", False),
         )
 
         super().__init__(**auto_values)
+
 
 if __name__ == "__main__":
     # Creating an instance now automatically loads everything we need.
