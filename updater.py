@@ -277,22 +277,9 @@ class Updater(BaseUpdater):
             )
         else:
             updater_script = self.configuration.system_path / "update_scripts" / "mac_updater.sh"
-            self.logger.info(f"Running updater script with path {str(self.configuration.system_path.parent.parent)}")
-
-            # Check permissions
-            permission_check = subprocess.run(["ls", "-l", str(updater_script)], capture_output=True, text=True)
-            self.logger.info(f"Updater script permissions: {permission_check.stdout.strip()}")
-
             process = subprocess.Popen(
-                ["bash", str(updater_script), download_url, str(self.configuration.system_path.parent.parent)],
-                stdout=subprocess.PIPE,
-                stderr=subprocess.STDOUT,
-                universal_newlines=True,
+                ["bash", str(updater_script), download_url, str(self.configuration.system_path.parent.parent)]
             )
-
-            # Read output in real-time
-            for line in process.stdout:
-                print(line.strip())
 
         sys.exit(0)
 

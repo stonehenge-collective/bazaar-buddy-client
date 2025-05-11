@@ -19,8 +19,8 @@ echo "Installing update..."
 unzip -o "$TEMP_DIR/new_bazaar_buddy.zip" -d "$APP_PATH"
 rm "$TEMP_DIR/new_bazaar_buddy.zip"
 
-# Start the new version
-open "$APP_PATH/BazaarBuddy.app"
+# Start the new version in background
+nohup "$APP_PATH/BazaarBuddy.app/Contents/MacOS/BazaarBuddy" > /dev/null 2>&1 &
 
 # Exit the updater
 exit 0
