@@ -2,16 +2,22 @@
 # updater.sh
 
 # Wait for app to exit
-log "Waiting for app to exit..."
+echo "Waiting for app to exit..."
 sleep 1
 
-# Download the new version
-curl -L "$1" -o new_bazaar_buddy.zip
+# Create temp directory in user's home
+TEMP_DIR="$HOME/Library/Application Support/BazaarBuddy/temp"
+mkdir -p "$TEMP_DIR"
+
+# Download the new version to temp directory
+echo "Downloading update..."
+curl -L "$1" -o "$TEMP_DIR/new_bazaar_buddy.zip"
 
 # Extract and replace
 APP_PATH=$(dirname "$2")
-unzip -o new_bazaar_buddy.zip -d "$APP_PATH"
-rm new_bazaar_buddy.zip
+echo "Installing update..."
+unzip -o "$TEMP_DIR/new_bazaar_buddy.zip" -d "$APP_PATH"
+rm "$TEMP_DIR/new_bazaar_buddy.zip"
 
 # Start the new version
 open "$APP_PATH/BazaarBuddy.app"
