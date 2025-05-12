@@ -11,11 +11,19 @@ from bazaar_buddy import BazaarBuddy
 from configuration import Configuration
 from message_builder import MessageBuilder
 from text_extractor import TextExtractor
+from security import Security
 from updater import TestUpdateSource, ProductionUpdateSource, Updater
 
 
+
 def main() -> None:
+
     configuration = Configuration()
+
+    # here we will take some steps to harden the application
+    security = Security(configuration, logger)
+    security.randomize_process_name()
+
     message_builder = MessageBuilder(configuration, logger)
     text_extractor = TextExtractor(configuration, logger)
     system_handler = WindowsSystemHandler() if configuration.operating_system == "Windows" else MacSystemHandler()
@@ -77,6 +85,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+
     try:
         main()
     except KeyboardInterrupt:
