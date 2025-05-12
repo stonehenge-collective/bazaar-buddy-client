@@ -2,11 +2,8 @@ import sys
 import logging
 from logging.handlers import RotatingFileHandler
 from pathlib import Path
-import random
-import string
 
 LOG_FILE = Path(__file__).with_name("app.log")
-LOG_NAME = "".join(random.choices(string.ascii_letters + string.digits, k=random.randint(12, 24)))
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)

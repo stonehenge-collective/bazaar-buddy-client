@@ -4,6 +4,8 @@ import setproctitle
 from configuration import Configuration
 from logging import Logger
 
+RANDOM_GLOBAL_VALUE = "".join(random.choices(string.ascii_letters + string.digits, k=random.randint(12, 16)))
+
 
 class Security:
     def __init__(self, configuration: Configuration, logger: Logger):
@@ -14,7 +16,7 @@ class Security:
         """
         used to ensure the process name is not easily identifiable
         """
-        random_name = "".join(random.choices(string.ascii_letters + string.digits, k=12))
-        self.logger.info(f"Randomizing process name to {random_name}")
-        setproctitle.setproctitle(random_name)
+
+        self.logger.info(f"Randomizing process name to {RANDOM_GLOBAL_VALUE}")
+        setproctitle.setproctitle(RANDOM_GLOBAL_VALUE)
         return
