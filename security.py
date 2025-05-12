@@ -9,14 +9,13 @@ class Security:
         self.configuration = configuration
 
     def randomize_process_name(self):
-
         random_name = "".join(random.choices(string.ascii_letters + string.digits, k=12))
 
         if self.configuration.operating_system == "Darwin":
             import ctypes
 
             libc = ctypes.CDLL("libc.dylib")
-            libc.prctl(15, random_name.encode(), 0, 0, 0)
+            libc.setprogname(random_name.encode())
         elif self.configuration.operating_system == "Windows":
             import ctypes
 
