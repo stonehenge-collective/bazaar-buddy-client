@@ -20,7 +20,7 @@ def main() -> None:
     configuration = Configuration()
 
     # here we will take some steps to harden the application
-    security = Security(configuration)
+    security = Security(configuration, logger)
     security.randomize_process_name()
 
     message_builder = MessageBuilder(configuration, logger)
