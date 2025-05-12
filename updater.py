@@ -1,15 +1,14 @@
-import requests
 from PyQt5.QtCore import QObject, pyqtSignal
-import sys
+import requests, tempfile, subprocess, sys
 import subprocess
 from abc import ABC, abstractmethod
 
 from configuration import Configuration
 from overlay import Overlay
 from logging import Logger
-import requests, shutil, tempfile, subprocess, sys, time, os
 from pathlib import Path
 from PyQt5.QtWidgets import QApplication
+
 
 class BaseUpdateSource(ABC):
 
@@ -48,124 +47,6 @@ class TestUpdateSource(BaseUpdateSource):
             self.logger.error("Failed to get latest version from GitHub")
             raise Exception("Failed to get latest version from GitHub")
         return response.json()
-
-
-class MockUpdateSource(BaseUpdateSource):
-    def __init__(self, logger: Logger):
-        super().__init__(logger)
-
-    def _get_latest_release(self) -> dict:
-        return {
-            "url": "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases/217663198",
-            "assets_url": "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases/217663198/assets",
-            "upload_url": "https://uploads.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases/217663198/assets{?name,label}",
-            "html_url": "https://github.com/stonehenge-collective/bazaar-buddy-client/releases/tag/v0.0.7",
-            "id": 217663198,
-            "author": {
-                "login": "github-actions[bot]",
-                "id": 41898282,
-                "node_id": "MDM6Qm90NDE4OTgyODI=",
-                "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-                "gravatar_id": "",
-                "url": "https://api.github.com/users/github-actions%5Bbot%5D",
-                "html_url": "https://github.com/apps/github-actions",
-                "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
-                "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
-                "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
-                "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
-                "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
-                "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
-                "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
-                "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
-                "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
-                "type": "Bot",
-                "user_view_type": "public",
-                "site_admin": False,
-            },
-            "node_id": "RE_kwDOOiDlvc4M-Ube",
-            "tag_name": "v0.0.7",
-            "target_commitish": "main",
-            "name": "Release v0.0.7",
-            "draft": False,
-            "prerelease": False,
-            "created_at": "2025-05-09T17:40:26Z",
-            "published_at": "2025-05-09T17:41:49Z",
-            "assets": [
-                {
-                    "url": "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases/assets/253262650",
-                    "id": 253262650,
-                    "node_id": "RA_kwDOOiDlvc4PGHs6",
-                    "name": "BazaarBuddy-mac.zip",
-                    "label": "",
-                    "uploader": {
-                        "login": "github-actions[bot]",
-                        "id": 41898282,
-                        "node_id": "MDM6Qm90NDE4OTgyODI=",
-                        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-                        "gravatar_id": "",
-                        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
-                        "html_url": "https://github.com/apps/github-actions",
-                        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
-                        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
-                        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
-                        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
-                        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
-                        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
-                        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
-                        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
-                        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
-                        "type": "Bot",
-                        "user_view_type": "public",
-                        "site_admin": False,
-                    },
-                    "content_type": "application/zip",
-                    "state": "uploaded",
-                    "size": 46463847,
-                    "download_count": 0,
-                    "created_at": "2025-05-09T17:41:50Z",
-                    "updated_at": "2025-05-09T17:41:52Z",
-                    "browser_download_url": "https://github.com/stonehenge-collective/bazaar-buddy-client/releases/download/v0.0.7/BazaarBuddy-mac.zip",
-                },
-                {
-                    "url": "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases/assets/253262805",
-                    "id": 253262805,
-                    "node_id": "RA_kwDOOiDlvc4PGHvV",
-                    "name": "BazaarBuddy.exe",
-                    "label": "",
-                    "uploader": {
-                        "login": "github-actions[bot]",
-                        "id": 41898282,
-                        "node_id": "MDM6Qm90NDE4OTgyODI=",
-                        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-                        "gravatar_id": "",
-                        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
-                        "html_url": "https://github.com/apps/github-actions",
-                        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
-                        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
-                        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
-                        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
-                        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
-                        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
-                        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
-                        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
-                        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
-                        "type": "Bot",
-                        "user_view_type": "public",
-                        "site_admin": False,
-                    },
-                    "content_type": "application/octet-stream",
-                    "state": "uploaded",
-                    "size": 158826459,
-                    "download_count": 5,
-                    "created_at": "2025-05-09T17:43:28Z",
-                    "updated_at": "2025-05-09T17:43:33Z",
-                    "browser_download_url": "https://github.com/stonehenge-collective/bazaar-buddy-client/releases/download/v0.0.7/BazaarBuddy.exe",
-                },
-            ],
-            "tarball_url": "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/tarball/v0.0.7",
-            "zipball_url": "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/zipball/v0.0.7",
-            "body": "",
-        }
 
 
 class BaseUpdater(QObject):
@@ -262,12 +143,12 @@ class Updater(BaseUpdater):
 
             with open(target, "wb") as f:
                 for chunk in r.iter_content(chunk_size=8192):
-                    if not chunk:        # keep‑alive
+                    if not chunk:  # keep‑alive
                         continue
                     f.write(chunk)
                     downloaded += len(chunk)
 
-                    if total:            # avoid div‑by‑zero
+                    if total:  # avoid div‑by‑zero
                         percent = int(downloaded * 100 / total)
                         if percent != last_percent:
                             last_percent = percent
@@ -278,7 +159,7 @@ class Updater(BaseUpdater):
         self.overlay.set_message("Downloading update… 100 %")
         QApplication.processEvents()
         return target
-      
+
     def install_update(self):
         self.overlay.set_message("Downloading update…")
         QApplication.processEvents()
@@ -308,22 +189,26 @@ class Updater(BaseUpdater):
             return
 
         self.logger.info(f"Downloading update from {download_url}")
-        
+
         local_download_location = self.download_asset(download_url)
         self.overlay.set_message("Installing update…")
         QApplication.processEvents()
         # Launch platform-specific updater
         if self.configuration.operating_system == "Windows":
             updater_script = self.configuration.system_path / "update_scripts" / "windows_updater.bat"
-            subprocess.Popen([
-                "cmd", "/c", str(updater_script),
-                str(local_download_location),
-                str(self.configuration.executable_path)   # install dir
-            ])
+            subprocess.Popen(
+                [
+                    "cmd",
+                    "/c",
+                    str(updater_script),
+                    str(local_download_location),
+                    str(self.configuration.executable_path),
+                ]
+            )
         else:  # macOS
             updater_script = self.configuration.system_path / "update_scripts" / "mac_updater.sh"
             subprocess.Popen(
-                ["bash", str(updater_script), download_url, str(self.configuration.system_path.parent.parent)]
+                ["bash", str(updater_script), str(local_download_location), str(self.configuration.executable_path)]
             )
 
         sys.exit(0)
@@ -339,6 +224,7 @@ class MockUpdater(BaseUpdater):
 
     def check_and_prompt(self):
         self.update_completed.emit()
+
 
 if __name__ == "__main__":  # pragma: no cover
     from logger import logger
