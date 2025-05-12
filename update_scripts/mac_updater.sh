@@ -2,18 +2,18 @@
 # updater.sh
 
 # Wait for app to exit
+echo "Waiting for app to exit..."
 sleep 1
-
-# Download the new version
-curl -L "$1" -o new_bazaar_buddy.zip
 
 # Extract and replace
 APP_PATH=$(dirname "$2")
-unzip -o new_bazaar_buddy.zip -d "$APP_PATH"
-rm new_bazaar_buddy.zip
+echo "Executable path: $APP_PATH"
 
-# Start the new version
-open "$APP_PATH/BazaarBuddy.app"
+echo "Unzipping update from $1 to $APP_PATH"
+unzip -o "$1" -d "$APP_PATH"
+
+# Start the new version in background
+nohup "$APP_PATH/BazaarBuddy.app/Contents/MacOS/BazaarBuddy" > /dev/null 2>&1 &
 
 # Exit the updater
 exit 0

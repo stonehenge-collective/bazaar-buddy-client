@@ -1,14 +1,53 @@
-import requests
 from PyQt5.QtCore import QObject, pyqtSignal
-import sys
+import requests, tempfile, subprocess, sys
 import subprocess
+from abc import ABC, abstractmethod
 
 from configuration import Configuration
 from overlay import Overlay
 from logging import Logger
-import requests, shutil, tempfile, subprocess, sys, time, os
 from pathlib import Path
 from PyQt5.QtWidgets import QApplication
+
+
+class BaseUpdateSource(ABC):
+
+    def __init__(self, logger: Logger):
+        self.logger = logger
+        self.latest_release = self._get_latest_release()
+
+    @abstractmethod
+    def _get_latest_release(self) -> dict:
+        raise NotImplementedError("function must be implemented by subclass")
+
+
+class ProductionUpdateSource(BaseUpdateSource):
+    def __init__(self, logger: Logger):
+        super().__init__(logger)
+
+    def _get_latest_release(self) -> dict:
+        response = requests.get(
+            "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases/latest"
+        )
+        if response.status_code != 200:
+            self.logger.error("Failed to get latest version from GitHub")
+            raise Exception("Failed to get latest version from GitHub")
+        return response.json()
+
+
+class TestUpdateSource(BaseUpdateSource):
+    def __init__(self, logger: Logger):
+        super().__init__(logger)
+
+    def _get_latest_release(self) -> dict:
+        response = requests.get(
+            "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client-test/releases/latest"
+        )
+        if response.status_code != 200:
+            self.logger.error("Failed to get latest version from GitHub")
+            raise Exception("Failed to get latest version from GitHub")
+        return response.json()
+
 
 class BaseUpdater(QObject):
 
@@ -17,45 +56,37 @@ class BaseUpdater(QObject):
     def __init__(self):
         super().__init__()
 
-    def check_and_prompt(self):
+    def check_for_update(self):
         raise NotImplementedError("function must be implemented by subclass")
 
 
 class Updater(BaseUpdater):
 
-    def __init__(self, overlay: Overlay, logger: Logger, configuration: Configuration):
+    def __init__(self, overlay: Overlay, logger: Logger, configuration: Configuration, latest_release: dict):
         super().__init__()
         self.overlay = overlay
         self.logger = logger
         self.configuration = configuration
-        self.new_version = None
+        self.latest_release = latest_release
 
-    def check_and_prompt(self):
-        if self.check_for_updates():
+    def check_for_update(self):
+        if self._update_available():
+            self.logger.info("Update available")
             self.prompt_for_update()
         else:
             self.update_completed.emit()
 
-    def get_latest_release_tag(self):
-        latest_release = self.get_latest_release()
-        if not latest_release:
-            self.logger.error("Failed to get latest version from GitHub")
-            return None
-        else:
-            return latest_release.get("tag_name")
-
-    def check_for_updates(self):
-        latest_version = self.get_latest_release_tag()
+    def _update_available(self):
+        latest_version = self.latest_release.get("tag_name", "")
         if not latest_version:
+            self.logger.error("Failed to get latest tag from GitHub API response")
             return False
         if self.configuration.current_version == latest_version:
             return False
-        self.new_version = latest_version
         return True
 
     def prompt_for_update(self):
 
-        # Connect to signals
         self.overlay.yes_clicked.connect(self._update_approved)
         self.overlay.no_clicked.connect(self._update_declined)
 
@@ -69,15 +100,12 @@ class Updater(BaseUpdater):
                 "There is a new version of Bazaar Buddy available. You should pull the latest changes from the Bazaar Buddy Repository.",
                 "Acknowledge",
             )
-            return
-
-        # Show buttons
-        self.overlay.show_prompt_buttons(
-            f"Version {self.new_version} of Bazaar Buddy is available. Would you like to update now?",
-            "Update",
-            "Not Now",
-        )
-        return
+        else:
+            self.overlay.show_prompt_buttons(
+                f"Version {self.latest_release.get('tag_name')} of Bazaar Buddy is available. Would you like to update now?",
+                "Update",
+                "Not Now",
+            )
 
     def _update_approved(self):
         self.overlay.yes_clicked.disconnect(self._update_approved)
@@ -95,25 +123,6 @@ class Updater(BaseUpdater):
         self.overlay.yes_clicked.disconnect(self._update_approved)
         self.overlay.no_clicked.disconnect(self._update_declined)
         self.update_completed.emit()
-
-    def get_latest_release(self):
-        if self.configuration.update_with_beta:
-            response = requests.get(
-                "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client-test/releases/latest",
-            )
-            if response.status_code != 200:
-                raise Exception(f"Failed to get latest release from GitHub: {response.status_code}")
-            latest_release = response.json()
-        else:
-            response = requests.get(
-                "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases/latest"
-            )
-            if response.status_code != 200:
-                raise Exception(f"Failed to get latest release from GitHub: {response.status_code}")
-            latest_release = response.json()
-        if not latest_release:
-            raise Exception("Failed to get latest release from GitHub")
-        return latest_release
 
     def download_asset(self, url: str) -> Path:
         """
@@ -134,12 +143,12 @@ class Updater(BaseUpdater):
 
             with open(target, "wb") as f:
                 for chunk in r.iter_content(chunk_size=8192):
-                    if not chunk:        # keep‑alive
+                    if not chunk:  # keep‑alive
                         continue
                     f.write(chunk)
                     downloaded += len(chunk)
 
-                    if total:            # avoid div‑by‑zero
+                    if total:  # avoid div‑by‑zero
                         percent = int(downloaded * 100 / total)
                         if percent != last_percent:
                             last_percent = percent
@@ -155,12 +164,12 @@ class Updater(BaseUpdater):
         self.overlay.set_message("Downloading update…")
         QApplication.processEvents()
 
-        latest_release = self.get_latest_release()
-
-        assets = latest_release.get("assets", [])
+        assets = self.latest_release.get("assets", [])
         if not assets:
-            self.overlay.set_message("Update failed: No release assets found")
-            return False
+            self.logger.error("No release assets found, skipping update")
+            self.overlay.set_message("Update failed: No release assets found. Skipping update.")
+            self.update_completed.emit()
+            return
 
         # Find executable for current platform
         download_url = None
@@ -174,23 +183,40 @@ class Updater(BaseUpdater):
                 break
 
         if not download_url:
-            self.overlay.set_message("Update failed: No compatible package found")
-            return False
+            self.logger.error("No compatible package found, skipping update")
+            self.overlay.set_message("Update failed: No compatible package found. Skipping update.")
+            self.update_completed.emit()
+            return
+
+        self.logger.info(f"Downloading update from {download_url}")
+
         local_download_location = self.download_asset(download_url)
         self.overlay.set_message("Installing update…")
         QApplication.processEvents()
         # Launch platform-specific updater
         if self.configuration.operating_system == "Windows":
             updater_script = self.configuration.system_path / "update_scripts" / "windows_updater.bat"
-            subprocess.Popen([
-                "cmd", "/c", str(updater_script),
-                str(local_download_location),
-                str(self.configuration.executable_path)   # install dir
-            ])
+            subprocess.Popen(
+                [
+                    "cmd",
+                    "/c",
+                    str(updater_script),
+                    str(local_download_location),
+                    str(self.configuration.executable_path),
+                ]
+            )
         else:  # macOS
             updater_script = self.configuration.system_path / "update_scripts" / "mac_updater.sh"
+            print(f"local download location: {local_download_location}")
+            print(f"system path: {self.configuration.system_path}")
+            print(f"executable path: {self.configuration.executable_path.parent.parent}")
             subprocess.Popen(
-                ["bash", str(updater_script), download_url, str(self.configuration.system_path.parent.parent)]
+                [
+                    "bash",
+                    str(updater_script),
+                    str(local_download_location),
+                    str(self.configuration.executable_path.parent.parent),
+                ]
             )
 
         sys.exit(0)
@@ -201,11 +227,12 @@ class MockUpdater(BaseUpdater):
     This class can be used to skip the entire auto updating flow.
     """
 
-    def __init__(self, overlay: Overlay, logger: Logger, configuration: Configuration):
+    def __init__(self, overlay: Overlay, logger: Logger, configuration: Configuration, latest_release: dict):
         super().__init__()
 
     def check_and_prompt(self):
         self.update_completed.emit()
+
 
 if __name__ == "__main__":  # pragma: no cover
     from logger import logger
