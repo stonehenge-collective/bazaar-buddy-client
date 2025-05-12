@@ -11,6 +11,9 @@ class Security:
         self.logger = logger
 
     def randomize_process_name(self):
+        """
+        used to ensure the process name is not easily identifiable
+        """
         random_name = "".join(random.choices(string.ascii_letters + string.digits, k=12))
         self.logger.info(f"Randomizing process name to {random_name}")
         setproctitle.setproctitle(random_name)
