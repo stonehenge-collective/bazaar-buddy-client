@@ -207,6 +207,9 @@ class Updater(BaseUpdater):
             )
         else:  # macOS
             updater_script = self.configuration.system_path / "update_scripts" / "mac_updater.sh"
+            print(f"local download location: {local_download_location}")
+            print(f"system path: {self.configuration.system_path}")
+            print(f"executable path: {self.configuration.executable_path}")
             subprocess.Popen(
                 ["bash", str(updater_script), str(local_download_location), str(self.configuration.executable_path)]
             )
