@@ -6,7 +6,9 @@ import subprocess
 from configuration import Configuration
 from overlay import Overlay
 from logging import Logger
-
+import requests, shutil, tempfile, subprocess, sys, time, os
+from pathlib import Path
+from PyQt5.QtWidgets import QApplication
 
 class BaseUpdater(QObject):
 
@@ -35,25 +37,17 @@ class Updater(BaseUpdater):
             self.update_completed.emit()
 
     def get_latest_release_tag(self):
-
-        if self.configuration.update_with_beta:
-            response = requests.get(
-                "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases",
-            )
-            latest_release = next((r for r in response.json() if r["prerelease"]), None)
-        else:
-            response = requests.get(
-                "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases/latest"
-            )
-            latest_release = response.json()
+        latest_release = self.get_latest_release()
         if not latest_release:
             self.logger.error("Failed to get latest version from GitHub")
-            raise Exception("Failed to get latest version from GitHub")
-        return latest_release.get("tag_name")
+            return None
+        else:
+            return latest_release.get("tag_name")
 
     def check_for_updates(self):
-
         latest_version = self.get_latest_release_tag()
+        if not latest_version:
+            return False
         if self.configuration.current_version == latest_version:
             return False
         self.new_version = latest_version
@@ -105,11 +99,11 @@ class Updater(BaseUpdater):
     def get_latest_release(self):
         if self.configuration.update_with_beta:
             response = requests.get(
-                "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases",
+                "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client-test/releases/latest",
             )
             if response.status_code != 200:
                 raise Exception(f"Failed to get latest release from GitHub: {response.status_code}")
-            latest_release = next((r for r in response.json() if r["prerelease"]), None)
+            latest_release = response.json()
         else:
             response = requests.get(
                 "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client/releases/latest"
@@ -121,8 +115,45 @@ class Updater(BaseUpdater):
             raise Exception("Failed to get latest release from GitHub")
         return latest_release
 
+    def download_asset(self, url: str) -> Path:
+        """
+        Stream the asset to a temp file and return its path, emitting
+        progress (%) to the overlay as we go.
+        """
+        tmp_dir = Path(tempfile.mkdtemp(prefix="bb_update_"))
+        target = tmp_dir / url.split("/")[-1]
+
+        self.overlay.set_message("Downloading update… 0 %")
+        QApplication.processEvents()
+
+        with requests.get(url, stream=True, timeout=30) as r:
+            r.raise_for_status()
+            total = int(r.headers.get("content-length", 0))
+            downloaded = 0
+            last_percent = -1
+
+            with open(target, "wb") as f:
+                for chunk in r.iter_content(chunk_size=8192):
+                    if not chunk:        # keep‑alive
+                        continue
+                    f.write(chunk)
+                    downloaded += len(chunk)
+
+                    if total:            # avoid div‑by‑zero
+                        percent = int(downloaded * 100 / total)
+                        if percent != last_percent:
+                            last_percent = percent
+                            self.overlay.set_message(f"Downloading update… {percent} %")
+                            QApplication.processEvents()
+
+        # guarantee a final 100 %
+        self.overlay.set_message("Downloading update… 100 %")
+        QApplication.processEvents()
+        return target
+
     def install_update(self):
-        self.overlay.set_message("Installing update...")
+        self.overlay.set_message("Downloading update…")
+        QApplication.processEvents()
 
         latest_release = self.get_latest_release()
 
@@ -145,12 +176,17 @@ class Updater(BaseUpdater):
         if not download_url:
             self.overlay.set_message("Update failed: No compatible package found")
             return False
+        local_download_location = self.download_asset(download_url)
+        self.overlay.set_message("Installing update…")
+        QApplication.processEvents()
         # Launch platform-specific updater
         if self.configuration.operating_system == "Windows":
             updater_script = self.configuration.system_path / "update_scripts" / "windows_updater.bat"
-            subprocess.Popen(
-                ["cmd", "/c", str(updater_script), download_url, str(self.configuration.system_path.parent)]
-            )
+            subprocess.Popen([
+                "cmd", "/c", str(updater_script),
+                str(local_download_location),
+                str(self.configuration.executable_path)   # install dir
+            ])
         else:  # macOS
             updater_script = self.configuration.system_path / "update_scripts" / "mac_updater.sh"
             subprocess.Popen(
@@ -170,3 +206,9 @@ class MockUpdater(BaseUpdater):
 
     def check_and_prompt(self):
         self.update_completed.emit()
+
+if __name__ == "__main__":  # pragma: no cover
+    from logger import logger
+
+    cfg = Configuration()
+    updater = Updater()
