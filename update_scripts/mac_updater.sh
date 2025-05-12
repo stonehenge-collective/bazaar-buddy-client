@@ -7,7 +7,9 @@ sleep 1
 
 # Extract and replace
 APP_PATH=$(dirname "$2")
-echo "Installing update..."
+echo "Executable path: $APP_PATH"
+
+echo "Unzipping update from $1 to $APP_PATH"
 unzip -o "$1" -d "$APP_PATH"
 
 # Start the new version in background
