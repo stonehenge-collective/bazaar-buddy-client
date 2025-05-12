@@ -43,7 +43,7 @@ class Configuration(BaseModel):
             executable_path = Path(sys.executable).resolve().parent
         else:
             system_path = Path(__file__).parent
-            executable_path = Path(__file__).parent.parent.parent
+            executable_path = system_path
 
         is_local = not getattr(sys, "frozen", False)
 

@@ -211,7 +211,12 @@ class Updater(BaseUpdater):
             print(f"system path: {self.configuration.system_path}")
             print(f"executable path: {self.configuration.executable_path}")
             subprocess.Popen(
-                ["bash", str(updater_script), str(local_download_location), str(self.configuration.executable_path)]
+                [
+                    "bash",
+                    str(updater_script),
+                    str(local_download_location),
+                    str(self.configuration.executable_path.parent.parent.parent),
+                ]
             )
 
         sys.exit(0)
