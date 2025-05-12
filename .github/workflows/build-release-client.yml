@@ -87,4 +87,3 @@ jobs:
           tag_name: ${{ github.ref_name }}
           repository: ${{ env.TARGET_REPO }}
           token: ${{ secrets.TEST_RELEASE_PAT }}
-

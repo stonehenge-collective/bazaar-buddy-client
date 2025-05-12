@@ -7,7 +7,9 @@ from abc import ABC, abstractmethod
 from configuration import Configuration
 from overlay import Overlay
 from logging import Logger
-
+import requests, shutil, tempfile, subprocess, sys, time, os
+from pathlib import Path
+from PyQt5.QtWidgets import QApplication
 
 class BaseUpdateSource(ABC):
 
@@ -241,8 +243,45 @@ class Updater(BaseUpdater):
         self.overlay.no_clicked.disconnect(self._update_declined)
         self.update_completed.emit()
 
+    def download_asset(self, url: str) -> Path:
+        """
+        Stream the asset to a temp file and return its path, emitting
+        progress (%) to the overlay as we go.
+        """
+        tmp_dir = Path(tempfile.mkdtemp(prefix="bb_update_"))
+        target = tmp_dir / url.split("/")[-1]
+
+        self.overlay.set_message("Downloading update… 0 %")
+        QApplication.processEvents()
+
+        with requests.get(url, stream=True, timeout=30) as r:
+            r.raise_for_status()
+            total = int(r.headers.get("content-length", 0))
+            downloaded = 0
+            last_percent = -1
+
+            with open(target, "wb") as f:
+                for chunk in r.iter_content(chunk_size=8192):
+                    if not chunk:        # keep‑alive
+                        continue
+                    f.write(chunk)
+                    downloaded += len(chunk)
+
+                    if total:            # avoid div‑by‑zero
+                        percent = int(downloaded * 100 / total)
+                        if percent != last_percent:
+                            last_percent = percent
+                            self.overlay.set_message(f"Downloading update… {percent} %")
+                            QApplication.processEvents()
+
+        # guarantee a final 100 %
+        self.overlay.set_message("Downloading update… 100 %")
+        QApplication.processEvents()
+        return target
+      
     def install_update(self):
-        self.overlay.set_message("Installing update...")
+        self.overlay.set_message("Downloading update…")
+        QApplication.processEvents()
 
         assets = self.latest_release.get("assets", [])
         if not assets:
@@ -269,13 +308,19 @@ class Updater(BaseUpdater):
             return
 
         self.logger.info(f"Downloading update from {download_url}")
-
+        
+        local_download_location = self.download_asset(download_url)
+        self.overlay.set_message("Installing update…")
+        QApplication.processEvents()
+        # Launch platform-specific updater
         if self.configuration.operating_system == "Windows":
             updater_script = self.configuration.system_path / "update_scripts" / "windows_updater.bat"
-            subprocess.Popen(
-                ["cmd", "/c", str(updater_script), download_url, str(self.configuration.system_path.parent)]
-            )
-        else:
+            subprocess.Popen([
+                "cmd", "/c", str(updater_script),
+                str(local_download_location),
+                str(self.configuration.executable_path)   # install dir
+            ])
+        else:  # macOS
             updater_script = self.configuration.system_path / "update_scripts" / "mac_updater.sh"
             subprocess.Popen(
                 ["bash", str(updater_script), download_url, str(self.configuration.system_path.parent.parent)]
@@ -294,3 +339,9 @@ class MockUpdater(BaseUpdater):
 
     def check_and_prompt(self):
         self.update_completed.emit()
+
+if __name__ == "__main__":  # pragma: no cover
+    from logger import logger
+
+    cfg = Configuration()
+    updater = Updater()

@@ -21,6 +21,7 @@ class Configuration(BaseModel):
     update_with_test_release: bool
     operating_system: str
     system_path: Path
+    executable_path: Path
     is_local: bool
     save_images: bool
 
@@ -39,8 +40,10 @@ class Configuration(BaseModel):
         if getattr(sys, "frozen", False):
             # Running from a PyInstaller bundle
             system_path = Path(sys._MEIPASS)  # type: ignore[attr-defined]
+            executable_path = Path(sys.executable).resolve().parent
         else:
             system_path = Path(__file__).parent
+            executable_path = system_path
 
         is_local = not getattr(sys, "frozen", False)
 
@@ -64,6 +67,7 @@ class Configuration(BaseModel):
             update_with_test_release=cfg.get("update_with_test_release", False),
             operating_system=operating_system,
             system_path=system_path,
+            executable_path=executable_path,
             is_local=is_local,
             save_images=cfg.get("save_images", False),
         )
