@@ -4,7 +4,7 @@ from __future__ import annotations
 import json
 from logging import Logger
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Sequence
+from typing import Any, Dict, List, Optional, Sequence, Tuple
 import re
 
 from configuration import Configuration
