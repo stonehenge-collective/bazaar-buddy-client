@@ -5,8 +5,16 @@ from capture_controller import CaptureController
 from system_handler import BaseSystemHandler
 from configuration import Configuration
 
+
 class BazaarBuddy:
-    def __init__(self, overlay: Overlay, logger: Logger, controller: CaptureController, system_handler: BaseSystemHandler, configuration: Configuration):
+    def __init__(
+        self,
+        overlay: Overlay,
+        logger: Logger,
+        controller: CaptureController,
+        system_handler: BaseSystemHandler,
+        configuration: Configuration,
+    ):
         self.overlay = overlay
         self.logger = logger
         self.controller = controller
