@@ -12,6 +12,7 @@ permissions:
 
 env:
   TARGET_REPO: ${{ endsWith(github.ref_name, '-test') && 'stonehenge-collective/bazaar-buddy-client-test' || 'stonehenge-collective/bazaar-buddy-client' }}
+  TOKEN: ${{ endsWith(github.ref_name, '-test') && secrets.TEST_RELEASE_PAT || secrets.GITHUB_TOKEN }}
 
 jobs:
   # ---------- Windows build ----------
@@ -45,7 +46,7 @@ jobs:
           name: Release ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
           repository: ${{ env.TARGET_REPO }}
-          token: ${{ secrets.TEST_RELEASE_PAT }}
+          token: ${{ env.TOKEN }}
           
   # ---------- macOS build ----------
   build-macos:
@@ -86,4 +87,4 @@ jobs:
           name: Release ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
           repository: ${{ env.TARGET_REPO }}
-          token: ${{ secrets.TEST_RELEASE_PAT }}
+          token: ${{ env.TOKEN }}
