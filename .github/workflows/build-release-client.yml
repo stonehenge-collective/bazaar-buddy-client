@@ -67,7 +67,11 @@ jobs:
       - name: Build executable (one-file bundle)
         run: |
           pyinstaller main.py --noconsole --noconfirm \
-          --hidden-import=['dependency_injector', 'dependency_injector.containers', 'dependency_injector.providers', 'dependency_injector.wiring', 'dependency_injector.errors'] \
+          --hidden-import dependency_injector \
+          --hidden-import dependency_injector.containers \
+          --hidden-import dependency_injector.providers \
+          --hidden-import dependency_injector.wiring \
+          --hidden-import dependency_injector.errors \
           --name "BazaarBuddy" \
           --add-binary "tools/mac_tesseract/bin/tesseract:tools/mac_tesseract/bin" \
           --add-binary "tools/mac_tesseract/lib/*.dylib:tools/mac_tesseract/lib" \
