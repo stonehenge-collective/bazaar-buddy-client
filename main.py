@@ -22,6 +22,8 @@ from dependency_injector.wiring import inject, Provide
 def main(
     configuration: Configuration = Provide[Container.configuration],
     security: Security = Provide[Container.security],
+    message_builder: MessageBuilder = Provide[Container.message_builder],
+    text_extractor: TextExtractor = Provide[Container.text_extractor],
 ) -> None:
 
     print(configuration)
@@ -29,8 +31,6 @@ def main(
     # here we will take some steps to harden the application
     security.randomize_process_name()
 
-    message_builder = MessageBuilder(configuration, logger)
-    text_extractor = TextExtractor(configuration, logger)
     system_handler = WindowsSystemHandler() if configuration.operating_system == "Windows" else MacSystemHandler()
     update_source = (
         TestUpdateSource(logger) if configuration.update_with_test_release else ProductionUpdateSource(logger)
