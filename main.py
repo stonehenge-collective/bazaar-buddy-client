@@ -14,14 +14,19 @@ from text_extractor import TextExtractor
 from security import Security
 from updater import TestUpdateSource, ProductionUpdateSource, Updater
 
+from container import Container
+from dependency_injector.wiring import inject, Provide
 
 
-def main() -> None:
+@inject
+def main(
+    configuration: Configuration = Provide[Container.configuration],
+    security: Security = Provide[Container.security],
+) -> None:
 
-    configuration = Configuration()
+    print(configuration)
 
     # here we will take some steps to harden the application
-    security = Security(configuration, logger)
     security.randomize_process_name()
 
     message_builder = MessageBuilder(configuration, logger)
@@ -36,13 +41,16 @@ def main() -> None:
 
         ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("StonehengeCollective.BazaarBuddy")
 
+    app = QApplication(sys.argv)
+
     def excepthook(exc_type, exc_value, tb):
+        nonlocal app
         # 1 – show the traceback (or log it)
         traceback.print_exception(exc_type, exc_value, tb)
 
         # 2 – tell Qt to leave the event‑loop
-        if QApplication is not None:  # qApp is None before QApplication is created
-            QApplication.exit(1)  # value returned by app.exec_()
+        if app is not None:  # qApp is None before QApplication is created
+            app.exit(1)  # value returned by app.exec_()
 
         # 3 – make the *process* exit with the same non‑zero code
         #     (this also prevents your finally‑block running if that is desirable)
@@ -50,7 +58,6 @@ def main() -> None:
 
     sys.excepthook = excepthook
 
-    app = QApplication(sys.argv)
     app.setWindowIcon(QIcon(str(configuration.system_path / "assets" / "brand_icon.ico")))
 
     overlay = Overlay("Checking for updates…", configuration)
@@ -70,7 +77,7 @@ def main() -> None:
     # Kick off the check once the event loop is running so the overlay
     # repaints before the (blocking) HTTP call.
 
-    QApplication.processEvents()
+    app.processEvents()
     QTimer.singleShot(0, updater.check_for_update)
 
     try:
@@ -85,6 +92,8 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    container = Container()
+    container.wire(modules=[__name__])
 
     try:
         main()
