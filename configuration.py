@@ -1,3 +1,4 @@
+from typing import Optional
 from pydantic import BaseModel
 import json
 import sys
@@ -24,6 +25,7 @@ class Configuration(BaseModel):
     executable_path: Path
     is_local: bool
     save_images: bool
+    target_test_release: Optional[str]
 
     def __init__(self):  # type: ignore[override]
         """Populate the model from disk and runtime context.
@@ -70,6 +72,7 @@ class Configuration(BaseModel):
             executable_path=executable_path,
             is_local=is_local,
             save_images=cfg.get("save_images", False),
+            target_test_release=cfg.get("target_test_release", None)
         )
 
         super().__init__(**auto_values)

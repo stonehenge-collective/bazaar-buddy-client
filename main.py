@@ -19,6 +19,7 @@ from updater import TestUpdateSource, ProductionUpdateSource, Updater
 def main() -> None:
 
     configuration = Configuration()
+    configuration.is_local=False
 
     # here we will take some steps to harden the application
     security = Security(configuration, logger)
@@ -28,7 +29,7 @@ def main() -> None:
     text_extractor = TextExtractor(configuration, logger)
     system_handler = WindowsSystemHandler() if configuration.operating_system == "Windows" else MacSystemHandler()
     update_source = (
-        TestUpdateSource(logger) if configuration.update_with_test_release else ProductionUpdateSource(logger)
+        TestUpdateSource(logger, configuration.target_test_release) if configuration.update_with_test_release else ProductionUpdateSource(logger)
     )
 
     if configuration.operating_system == "Windows":

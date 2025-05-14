@@ -237,9 +237,7 @@ class Overlay(QWidget):
         self.button_container.show()
 
     def _handle_button_click(self, is_yes):
-        if self.button_container:
-            self.button_container.deleteLater()
-            self.button_container = None
+        self.hide_prompt_buttons()
 
         if is_yes:
             self.yes_clicked.emit()
@@ -247,7 +245,8 @@ class Overlay(QWidget):
             self.no_clicked.emit()
 
     def hide_prompt_buttons(self):
-        if hasattr(self, "button_container") and self.button_container:
+        if self.button_container:
+            self.button_container.hide()
             self.button_container.deleteLater()
             self.button_container = None
 
