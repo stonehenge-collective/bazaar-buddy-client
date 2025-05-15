@@ -220,11 +220,19 @@ class MacCaptureWorker(BaseCaptureWorker):
 
 
 class CaptureWorkerFactory:
-    @staticmethod
-    def create(
-        config: Configuration, message_builder: MessageBuilder, text_extractor: TextExtractor, logger: Logger
-    ) -> BaseCaptureWorker:
-        if config.operating_system == "Windows":
-            return WindowsCaptureWorker("The Bazaar", message_builder, text_extractor, logger, config)
+
+    def __init__(
+        self, config: Configuration, message_builder: MessageBuilder, text_extractor: TextExtractor, logger: Logger
+    ):
+        self.config = config
+        self.message_builder = message_builder
+        self.text_extractor = text_extractor
+        self.logger = logger
+
+    def create(self) -> BaseCaptureWorker:
+        if self.config.operating_system == "Windows":
+            return WindowsCaptureWorker(
+                "The Bazaar", self.message_builder, self.text_extractor, self.logger, self.config
+            )
         else:
-            return MacCaptureWorker("The Bazaar", message_builder, text_extractor, logger, config)
+            return MacCaptureWorker("The Bazaar", self.message_builder, self.text_extractor, self.logger, self.config)

@@ -48,7 +48,7 @@ class Container:
             self.message_builder,
             self.text_extractor,
             self.configuration,
-            self.capture_worker,
+            self.capture_worker_factory,
         )
 
         self.bazaar_buddy: BazaarBuddy = BazaarBuddy(
@@ -60,8 +60,8 @@ class Container:
         )
 
     @property
-    def capture_worker(self) -> BaseCaptureWorker:
-        return CaptureWorkerFactory.create(self.configuration, self.message_builder, self.text_extractor, self.logger)
+    def capture_worker_factory(self) -> CaptureWorkerFactory:
+        return CaptureWorkerFactory(self.configuration, self.message_builder, self.text_extractor, self.logger)
 
 
 container = Container()

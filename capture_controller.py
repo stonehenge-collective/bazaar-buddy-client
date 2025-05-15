@@ -1,5 +1,5 @@
 from typing import Optional
-from capture_worker import BaseCaptureWorker
+from capture_worker import BaseCaptureWorker, CaptureWorkerFactory
 from overlay import Overlay
 from PyQt5.QtCore import QThread, Qt, QObject, pyqtSignal
 from logging import Logger
@@ -20,13 +20,13 @@ class CaptureController(QObject):
         message_builder: MessageBuilder,
         text_extractor: TextExtractor,
         configuration: Configuration,
-        capture_worker: BaseCaptureWorker,
+        capture_worker_factory: CaptureWorkerFactory,
     ):
         super().__init__()
         self._overlay = overlay
         self._logger = logger
         self._thread: Optional[QThread] = None
-        self._capture_worker: BaseCaptureWorker = capture_worker
+        self._capture_worker_factory: CaptureWorkerFactory = capture_worker_factory
         self._current_worker: Optional[BaseCaptureWorker] = None
         self._message_builder: MessageBuilder = message_builder
         self._text_extractor: TextExtractor = text_extractor
@@ -41,7 +41,7 @@ class CaptureController(QObject):
             return  # already running
         self._logger.info("Starting CaptureWorker …")
         self._thread = QThread()
-        self._current_worker = self._capture_worker
+        self._current_worker = self._capture_worker_factory.create()
         self._current_worker.moveToThread(self._thread)
 
         # wire signals
