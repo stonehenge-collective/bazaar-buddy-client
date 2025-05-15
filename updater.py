@@ -1,3 +1,4 @@
+from typing import Optional
 from PyQt5.QtCore import QObject, pyqtSignal
 import requests, tempfile, subprocess, sys
 import subprocess
@@ -36,13 +37,20 @@ class ProductionUpdateSource(BaseUpdateSource):
 
 
 class TestUpdateSource(BaseUpdateSource):
-    def __init__(self, logger: Logger):
+    def __init__(self, logger: Logger, specific_version: Optional[str] = None):
+        self._specific_version = specific_version
         super().__init__(logger)
 
     def _get_latest_release(self) -> dict:
-        response = requests.get(
-            "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client-test/releases/latest"
-        )
+        if self._specific_version:
+            print(f"https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client-test/releases/{self._specific_version}")
+            response = requests.get(
+                f"https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client-test/releases/{self._specific_version}"
+            )
+        else:
+            response = requests.get(
+                "https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client-test/releases/latest"
+            )
         if response.status_code != 200:
             self.logger.error("Failed to get latest version from GitHub")
             raise Exception("Failed to get latest version from GitHub")
@@ -131,7 +139,7 @@ class Updater(BaseUpdater):
         """
         tmp_dir = Path(tempfile.mkdtemp(prefix="bb_update_"))
         target = tmp_dir / url.split("/")[-1]
-
+        self.overlay.hide_prompt_buttons()
         self.overlay.set_message("Downloading update… 0 %")
         QApplication.processEvents()
 
@@ -195,7 +203,13 @@ class Updater(BaseUpdater):
         QApplication.processEvents()
         # Launch platform-specific updater
         if self.configuration.operating_system == "Windows":
+            import os
             updater_script = self.configuration.system_path / "update_scripts" / "windows_updater.bat"
+            print(f"updater script: {updater_script}")
+            print(f"local download location: {local_download_location}")
+            print(f"executable path: {self.configuration.executable_path}")
+            env = os.environ.copy()
+            env["PYINSTALLER_RESET_ENVIRONMENT"] = "1"
             subprocess.Popen(
                 [
                     "cmd",
@@ -203,7 +217,8 @@ class Updater(BaseUpdater):
                     str(updater_script),
                     str(local_download_location),
                     str(self.configuration.executable_path),
-                ]
+                ],
+                env=env,
             )
         else:  # macOS
             updater_script = self.configuration.system_path / "update_scripts" / "mac_updater.sh"
@@ -220,7 +235,6 @@ class Updater(BaseUpdater):
             )
 
         sys.exit(0)
-
 
 class MockUpdater(BaseUpdater):
     """
