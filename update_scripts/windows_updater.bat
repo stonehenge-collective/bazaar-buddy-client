@@ -1,6 +1,6 @@
 @echo on
 setlocal EnableExtensions EnableDelayedExpansion
-
+SLEEP 10
 rem ---------------------------------------------------------------
 rem Parameters (supplied by main.py)
 rem   %1  = full path to the freshly‑downloaded package (BazaarBuddy‑x.y.z.exe)
@@ -10,7 +10,6 @@ set "PKG=%~f1"
 set "TARGETDIR=%~f2"
 set "TARGETEXE=%TARGETDIR%\BazaarBuddy.exe"
 set "BACKUP=%TARGETDIR%\BazaarBuddy.old"
-
 rem ---- basic sanity checks --------------------------------------
 if not exist "%PKG%" (
     echo ERROR: Source file not found: "%PKG%"
@@ -31,7 +30,7 @@ rem the binary open.  When the rename succeeds the file is free and we
 rem can finish the update.
 rem =================================================================
 :wait_loop
-move /y "%TARGETEXE%" "%BACKUP%" >nul 2>&1
+if exist "%TARGETEXE%" move /y "%TARGETEXE%" "%BACKUP%" >nul 2>&1
 if errorlevel 1 (
     call :sleep 1
     goto :wait_loop
@@ -51,7 +50,7 @@ call :sleep 2
 echo Relaunching …
 start "" /d "%TARGETDIR%" "%TARGETEXE%"
 
-if exist "%BACKUP%" del /q "%BACKUP%" 2>nul
+start "" cmd /c "ping 127.0.0.1 -n 2 >nul & del /f /q "%BACKUP%""
 endlocal
 exit /b 0
 
@@ -64,9 +63,7 @@ rem ----------------------------------------------------------------
 :sleep
 set /a _secs=%~1
 if %_secs% lss 1 set /a _secs=1
-
-rem -- corrected tight‑loop “busy wait” ----------------------------
 for /l %%S in (1,1,%_secs%) do (
-    for /l %%i in (1,1,2) do rem nop
+    for /l %%i in (1,1,30) do rem nop
 )
 exit /b
