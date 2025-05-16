@@ -48,6 +48,10 @@
     "decorate": "<span style='color:#3ec8f8;'>{word}</span>"
   },
   {
+    "word": "Frozen",
+    "decorate": "<span style='color:#3ec8f8;'>{word}</span>"
+  },
+  {
     "word": "Icy",
     "decorate": "<span style='color:#3ec8f8;'>{word}</span>"
   },
