@@ -6,13 +6,20 @@ from message_builder import MessageBuilder
 from logging import Logger
 from configuration import Configuration
 
+
 class BaseCaptureWorker(QObject):
     """Base class for capture workers."""
 
     message_ready = pyqtSignal(str)
     error = pyqtSignal(str)
 
-    def __init__(self, message_builder: MessageBuilder, text_extractor: TextExtractor, logger: Logger, configuration: Configuration):
+    def __init__(
+        self,
+        message_builder: MessageBuilder,
+        text_extractor: TextExtractor,
+        logger: Logger,
+        configuration: Configuration,
+    ):
         super().__init__()
         self._busy = False
         self._message_builder = message_builder
@@ -36,6 +43,7 @@ class BaseCaptureWorker(QObject):
             self._busy = True
             if self._configuration.save_images:
                 from datetime import datetime
+
                 filename = datetime.now().strftime("%Y%m%d_%H%M%S_%f") + ".png"
                 image.save(self._configuration.system_path / filename)
             text = self._text_extractor.extract_text(image)
@@ -52,17 +60,23 @@ class BaseCaptureWorker(QObject):
 class WindowsCaptureWorker(BaseCaptureWorker):
     """Windows-specific capture implementation."""
 
-    def __init__(self, window_identifier: str, message_builder: MessageBuilder, text_extractor: TextExtractor, logger: Logger, configuration: Configuration):
+    def __init__(
+        self,
+        window_identifier: str,
+        message_builder: MessageBuilder,
+        text_extractor: TextExtractor,
+        logger: Logger,
+        configuration: Configuration,
+    ):
         super().__init__(message_builder, text_extractor, logger, configuration)
         from windows_capture import WindowsCapture, Frame, CaptureControl
         import sys, platform
+
         major, minor, build, *_ = sys.getwindowsversion()
 
-        supports_borderless = build >= 22000      # Win 11
+        supports_borderless = build >= 22000  # Win 11
         self._cap = WindowsCapture(
-            window_name=window_identifier,
-            cursor_capture=False,
-            draw_border=False if supports_borderless else None
+            window_name=window_identifier, cursor_capture=False, draw_border=False if supports_borderless else None
         )
         self._control: Optional[CaptureControl] = None
 
@@ -99,7 +113,14 @@ class WindowsCaptureWorker(BaseCaptureWorker):
 class MacCaptureWorker(BaseCaptureWorker):
     """Mac-specific capture implementation using CoreGraphics."""
 
-    def __init__(self, window_identifier: str, message_builder: MessageBuilder, text_extractor: TextExtractor, logger: Logger, configuration: Configuration):
+    def __init__(
+        self,
+        window_identifier: str,
+        message_builder: MessageBuilder,
+        text_extractor: TextExtractor,
+        logger: Logger,
+        configuration: Configuration,
+    ):
         super().__init__(message_builder, text_extractor, logger, configuration)
         self.window_identifier = window_identifier
         self._target_window_id = None
