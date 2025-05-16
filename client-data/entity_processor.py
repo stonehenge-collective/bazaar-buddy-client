@@ -234,7 +234,7 @@ def reformat_monsters(raw: Dict[str, Any]) -> List[Dict[str, Any]]:
 
 # --------------------------- Message builders ------------------------------ #
 def build_monster_message(m: Dict[str, Any]) -> str:
-    msg: List[str] = [f"{m['name']}", f"Health: {m['health']}"]
+    msg: List[str] = [f"<b>{m['name']}</b><br>", f"Health: {m['health']}"]
 
     if m["items"]:
         msg.append("")        # blank line
@@ -258,7 +258,7 @@ def build_monster_message(m: Dict[str, Any]) -> str:
 
 
 def build_item_message(item: Dict[str, Any]) -> str:
-    msg: List[str] = [item["name"], *item["unifiedTooltips"], ""]
+    msg: List[str] = [f"<b>{item["name"]}</b><br>", *item["unifiedTooltips"], ""]
     for i, ench in enumerate(item.get("enchantments", [])):
         msg.append(ench["type"])
         msg.extend(ench["tooltips"])
@@ -273,7 +273,7 @@ def build_item_message(item: Dict[str, Any]) -> str:
 def build_event_message(event: Dict[str, Any]) -> Optional[str]:
     if not event.get("display", True):
         return None
-    return f"{event['name']}<br>" + "<br><br>".join(event["options"])
+    return f"<b>{event['name']}</b><br><br>" + "<br><br>".join(event["options"])
 
 
 # --------------------------------------------------------------------------- #

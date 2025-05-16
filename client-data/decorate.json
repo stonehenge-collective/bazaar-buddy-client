@@ -76,8 +76,20 @@
     "decorate": "<span style='color:#8fea31;'>{word}</span>"
   },
   {
+    "word": "Health",
+    "decorate": "<span style='color:#8fea31;'>{word}</span>"
+  },
+  {
     "word": "Heal",
     "decorate": "<span style='color:#8fea31;'>{word}</span>"
+  },
+  {
+    "word": "Ammo",
+    "decorate": "<span style='color:#ff8e00;'>{word}</span>"
+  },
+  {
+    "word": "Lifesteal",
+    "decorate": "<span style='color:#E4A0F7'>{word}</span>"
   },
   {
     "word": "\n",
