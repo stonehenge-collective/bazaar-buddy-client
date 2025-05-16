@@ -193,18 +193,26 @@ def build_decorated_tier_message(item: dict[str, Any]):
 
             tooltip_groups[standardized].append({
                 'tier': tier,
-                'value': value
+                'value': value,
+                'original_tooltip': tooltip
             })
 
     unified_tooltips = []
     for template, values in tooltip_groups.items():
-        span_string = '/'.join(
-            f"<span style='color:{tier_colors[val['tier']]}'>{val['value']}</span>"
-            for val in values
-        )
-        unified = template.replace('{{val}}', span_string)
-        unified_tooltips.append(unified)
-
+        unique_values = set(v['value'] for v in values if v['value'])
+        if len(unique_values) == 1:
+            # All values are the same → just output that value (no color)
+            # Join by / to match your pattern (e.g., 5/5/5) or just one value?
+            # You can join or just show one since all same:
+            unified_tooltips.append(template.replace('{{val}}', unique_values.pop()))
+        else:
+            # Values differ → color each one
+            span_string = ' > '.join(
+                f"<span style='color:{tier_colors[val['tier']]}'>{val['value']}</span>"
+                for val in values
+            )
+            unified = template.replace('{{val}}', span_string)
+            unified_tooltips.append(unified)
     return unified_tooltips
 
 def decorate_display_message(text: str, rules: list[dict]) -> str:
