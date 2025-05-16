@@ -217,3 +217,22 @@ class MacCaptureWorker(BaseCaptureWorker):
         """Stop the capture process."""
         self._running = False
         self._target_window_id = None
+
+
+class CaptureWorkerFactory:
+
+    def __init__(
+        self, config: Configuration, message_builder: MessageBuilder, text_extractor: TextExtractor, logger: Logger
+    ):
+        self.config = config
+        self.message_builder = message_builder
+        self.text_extractor = text_extractor
+        self.logger = logger
+
+    def create(self) -> BaseCaptureWorker:
+        if self.config.operating_system == "Windows":
+            return WindowsCaptureWorker(
+                "The Bazaar", self.message_builder, self.text_extractor, self.logger, self.config
+            )
+        else:
+            return MacCaptureWorker("The Bazaar", self.message_builder, self.text_extractor, self.logger, self.config)
