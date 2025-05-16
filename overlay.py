@@ -90,6 +90,15 @@ class Overlay(QWidget):
     # ---------- helpers ----------
 
     def _build_ui(self) -> None:
+        # ----- Draggable top bar -----
+        self.top_label = QLabel("Bazaar Buddy", self)
+        self.top_label.setFont(self._font)
+        self.top_label.setStyleSheet("color: white;")
+        self.top_label.setFixedHeight(24)
+        self.top_label.setAlignment(Qt.AlignLeft | Qt.AlignTop)
+        self.top_label.setContentsMargins(5, 4, 0, 0)
+
+
         # ----- Text inside a scroll area -----
         self.label = QLabel(self.text, wordWrap=True, alignment=Qt.AlignLeft | Qt.AlignTop)
         self.label.setFont(self._font)
@@ -107,12 +116,14 @@ class Overlay(QWidget):
         # ----- Main layout -----
         layout = QVBoxLayout(self)
         layout.setContentsMargins(PADDING, PADDING, PADDING, PADDING)
+        layout.addWidget(self.top_label)
         layout.addWidget(self.scroll)
 
         # ----- Corner size grips -----
         self.size_grips = [QSizeGrip(self) for _ in range(4)]
         for g in self.size_grips:
             g.setStyleSheet("background: transparent;")
+            g.raise_()
 
         # ----- Close button -----
         self.close_button = QPushButton("✕", self, toolTip="Close (Esc or Q)")
@@ -204,11 +215,13 @@ class Overlay(QWidget):
 
     def _toggle_content(self) -> None:
         if self.toggle_button.isChecked():
+            self.scroll.hide()
             self.collapsedHeight = self.height()
-            self.setFixedHeight(self.close_button.height() + PADDING)
+            self.setFixedHeight(self.top_label.height() + PADDING)
             self.toggle_button.setText("+")
         else:
             if hasattr(self, "collapsedHeight"):
+                self.scroll.show()
                 self.setFixedHeight(self.collapsedHeight)
                 self.setMinimumHeight(0)
                 self.setMaximumHeight(16777215)
