@@ -442,7 +442,7 @@
   {
     "name": "Antimatter Chamber",
     "type": "item",
-    "display_message": "Antimatter Chamber\nCooldown (30/24) seconds\nDestroy this.\nWhen this is Destroyed, destroy 3 enemy items for the fight.\nWhen you use another Tech, charge this 2 second(s).\n\nHeavy\nSlow 3 items for 3 second(s).\n\nIcy\nFreeze 1 item for 4 second(s).\n\nTurbo\nHaste 3 items for 3 second(s).\n\nShielded\nShield 150.\n\nRestorative\nHeal 225.\n\nToxic\nPoison 15.\n\nFiery\nBurn 22.\n\nShiny\nThis has +1 Multicast.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal 150 Damage."
+    "display_message": "Antimatter Chamber\nCooldown (30/24) seconds\nDestroy this.\nWhen this is Destroyed, destroy 3 enemy items for the fight.\nWhen you use another Tech, charge this 2 second(s).\n\nHeavy\nSlow 3 items for 3 second(s).\n\nIcy\nFreeze 1 item for 4 second(s).\n\nTurbo\nHaste 3 items for 3 second(s).\n\nShielded\nShield 150.\n\nRestorative\nHeal 225.\n\nToxic\nPoison 15.\n\nFiery\nBurn 22.\n\nShiny\nThis has +1 Multicast.\n\nObsidian\nDeal 150 Damage."
   },
   {
     "name": "Apothecary",
@@ -587,7 +587,7 @@
   {
     "name": "Beehive",
     "type": "item",
-    "display_message": "Beehive\nWhen your enemy uses a weapon, charge your Busy Bees 2 second(s).\nWhen you buy this, get 2 Busy Bees.\nWhen you buy a Property, your Busy Bees gain (+10/+15/+20) damage.\n\nHeavy\nWhen you use a Busy Bee, Slow 1 item for 1 second(s).\n\nIcy\nWhen you use a Busy Bee, Freeze 1 item for 0.5 second(s).\n\nTurbo\nWhen you use a Busy Bee, Haste 1 item for 1 second(s).\n\nShielded\nWhen you use a Busy Bee, Shield equal to the Damage of your strongest Busy Bee.\n\nRestorative\nWhen you use a Busy Bee, Heal equal to the Damage of your strongest Busy Bee.\n\nToxic\nWhen you use a Busy Bee, Poison equal to 10% of the Damage of your strongest Busy Bee.\n\nFiery\nWhen you use a Busy Bee, Burn equal to 10% of the Damage of your strongest Busy Bee.\n\nShiny\nYour Busy Bees have +1 Multicast.\n\nDeadly\nYour Busy Bees have +50% Crit Chance.\n\nObsidian\nYour Busy Bees deal double Damage."
+    "display_message": "Beehive\nWhen your enemy uses a weapon, charge your Busy Bees 2 second(s).\nWhen you buy this, get 2 Busy Bees.\nWhen you buy a Property, your Busy Bees gain (+10/+15/+20) damage.\n\nHeavy\nWhen you use a Busy Bee, Slow 1 item for 1 second(s).\n\nIcy\nWhen you use a Busy Bee, Freeze 1 item for 0.5 second(s).\n\nTurbo\nWhen you use a Busy Bee, Haste 1 item for 1 second(s).\n\nShielded\nWhen one of your Busy Bees deals damage, Shield equal to the Damage dealt.\n\nRestorative\nWhen one of your Busy Bees deals damage, Heal equal to the Damage dealt.\n\nToxic\nWhen one of your Busy Bees deals damage, Poison equal to 10% of the Damage dealt.\n\nFiery\nWhen one of your Busy Bees deals damage, Burn equal to 10% of the Damage dealt.\n\nShiny\nYour Busy Bees have +1 Multicast.\n\nDeadly\nYour Busy Bees have +50% Crit Chance.\n\nObsidian\nYour Busy Bees deal double Damage."
   },
   {
     "name": "Bellelista",
@@ -937,7 +937,7 @@
   {
     "name": "Clamera",
     "type": "item",
-    "display_message": "Clamera\nCooldown 10 seconds\nSlow (1/2/3/4) item(s) for 1 second(s).\nAt the start of each fight, use this.\n\nHeavy\nThis has double Slow duration.\n\nIcy\nFreeze 1 small item for 1 second(s).\n\nTurbo\nHaste 1 item for 2 second(s).\n\nShielded\nShield 30.\n\nRestorative\nHeal 45.\n\nToxic\nPoison 3.\n\nFiery\nBurn 4.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\nYour items have +10% Crit Chance.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal 30 Damage."
+    "display_message": "Clamera\nCooldown (7/6/5/4) seconds\nSlow 1 item(s) for 3 second(s).\nAt the start of each fight, use this.\n\nHeavy\nThis has double Slow duration.\n\nIcy\nFreeze 1 small item for 1 second(s).\n\nTurbo\nHaste 1 item for 2 second(s).\n\nShielded\nShield 30.\n\nRestorative\nHeal 45.\n\nToxic\nPoison 3.\n\nFiery\nBurn 4.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\nYour items have +10% Crit Chance.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal 30 Damage."
   },
   {
     "name": "Claw Arm",
@@ -1527,7 +1527,7 @@
   {
     "name": "Haladie",
     "type": "item",
-    "display_message": "Haladie\nCooldown 7 seconds\nMulticast 2\nDeal (4/8/16/32) damage.\n\nHeavy\nSlow 1 item for 1 second(s).\n\nIcy\nFreeze 1 small item for 1 second(s).\n\nTurbo\nHaste 1 item for 1 second(s).\n\nShielded\nShield equal to this item's damage.\n\nRestorative\nHeal equal to this item's Damage.\n\nToxic\nPoison equal to 10% of this item's damage.\n\nFiery\nBurn equal to 10% of this item's damage.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double Damage."
+    "display_message": "Haladie\nCooldown (7/6/5/4) seconds\nMulticast 2\nDeal 5 damage.\n\nHeavy\nSlow 1 item for 1 second(s).\n\nIcy\nFreeze 1 small item for 1 second(s).\n\nTurbo\nHaste 1 item for 1 second(s).\n\nShielded\nShield equal to this item's damage.\n\nRestorative\nHeal equal to this item's Damage.\n\nToxic\nPoison equal to 10% of this item's damage.\n\nFiery\nBurn equal to 10% of this item's damage.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double Damage."
   },
   {
     "name": "Hammer",
@@ -2212,7 +2212,7 @@
   {
     "name": "Peacewrought",
     "type": "item",
-    "display_message": "Peacewrought\nCooldown (7/6/5/4) seconds\nGain 2 Regen for the fight.\nWhen you visit a Merchant, permanently destroy the item to the left of this to increase this item's Regen by its Value.\n\nHeavy\nSlow 2 items for 2 second(s).\n\nIcy\nFreeze 1 medium or small item for 2 second(s).\n\nTurbo\nHaste 2 items for 2 second(s).\n\nShielded\nShield equal to 10 times this item's Regen.\n\nRestorative\nHeal equal to 10 times this item's Regen.\n\nToxic\nPoison equal to this item's Regen.\n\nFiery\nBurn equal to this item's Regen.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal damage equal to 10 times this item's Regen."
+    "display_message": "Peacewrought\nCooldown (7/6/5/4) seconds\nGain 2 Regen for the fight.\nWhen you visit a Merchant, permanently destroy the item to the left of this to increase this item's Regen by its Value, then get a Chunk of Lead.\n\nHeavy\nSlow 2 items for 2 second(s).\n\nIcy\nFreeze 1 medium or small item for 2 second(s).\n\nTurbo\nHaste 2 items for 2 second(s).\n\nShielded\nShield equal to 10 times this item's Regen.\n\nRestorative\nHeal equal to 10 times this item's Regen.\n\nToxic\nPoison equal to this item's Regen.\n\nFiery\nBurn equal to this item's Regen.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal damage equal to 10 times this item's Regen."
   },
   {
     "name": "Pearl",
@@ -2372,7 +2372,7 @@
   {
     "name": "Proboscis",
     "type": "item",
-    "display_message": "Proboscis\nCooldown 4 seconds\nDeal (4/8/12/16) damage.\nWhen you Slow, Charge this 1 second.\n\nHeavy\nSlow 1 item for 1 second(s).\n\nIcy\nFreeze 1 small item for 1 second(s).\n\nTurbo\nHaste 1 item for 1 second(s).\n\nShielded\nShield equal to this item's damage.\n\nRestorative\nHeal equal to this item's damage.\n\nToxic\nPoison equal to 10% of this item's damage.\n\nFiery\nBurn equal to 10% of this item's damage.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double Damage."
+    "display_message": "Proboscis\nWhen you Slow, deal (8/12/16) damage.\n\nHeavy\nSlow 1 item for 1 second(s).\n\nIcy\nWhen you Slow, Freeze 1 small item for 1 second(s).\n\nTurbo\nWhen you Slow, Haste 1 item for 1 second(s).\n\nShielded\nWhen you Slow, Shield equal to this item's damage.\n\nRestorative\nWhen you Slow, Heal equal to this item's damage.\n\nToxic\nWhen you Slow, Poison equal to 10% of this item's damage.\n\nFiery\nWhen you Slow, Burn equal to 10% of this item's damage.\n\nShiny\nThis has double Damage.\n\nObsidian\nThis has double Damage."
   },
   {
     "name": "Propane Tank",
@@ -2392,7 +2392,7 @@
   {
     "name": "Pyg's Gym",
     "type": "item",
-    "display_message": "Pyg's Gym\nCooldown (12/10/8) seconds\nYour weapons gain Damage equal to this item's value for the fight.\nWhen you buy a weapon, this gains (2/4/6) value and you gain (20/50/100) max health.\n\nGolden\nThis has double value.\n\nHeavy\nSlow 3 items for 2 second(s).\n\nIcy\nFreeze 1 item for 3 second(s).\n\nTurbo\nHaste 3 items for 2 second(s).\n\nShielded\nYour Shield items gain Shield equal to this item's value for the fight.\n\nRestorative\nYour Heal items gain Heal equal to this item's value for the fight.\n\nToxic\nYour Poison items gain Poison equal to 10% of this item's value for the fight.\n\nFiery\nYour Burn items gain Burn equal to 15% of this item's value for the fight.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\nYour items gain Crit Chance equal to this item's value for the fight.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double damage bonus."
+    "display_message": "Pyg's Gym\nCooldown (11/9/7) seconds\nYour weapons gain Damage equal to this item's value for the fight.\nWhen you buy a weapon, this gains (3/5/7) value and you gain (20/50/100) max health.\n\nGolden\nThis has double value.\n\nHeavy\nSlow 3 items for 2 second(s).\n\nIcy\nFreeze 1 item for 3 second(s).\n\nTurbo\nHaste 3 items for 2 second(s).\n\nShielded\nYour Shield items gain Shield equal to this item's value for the fight.\n\nRestorative\nYour Heal items gain Heal equal to this item's value for the fight.\n\nToxic\nYour Poison items gain Poison equal to 10% of this item's value for the fight.\n\nFiery\nYour Burn items gain Burn equal to 15% of this item's value for the fight.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\nYour items gain Crit Chance equal to this item's value for the fight.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double damage bonus."
   },
   {
     "name": "Pygmalien's Dagger",
@@ -2887,7 +2887,7 @@
   {
     "name": "Speedrunner",
     "type": "item",
-    "display_message": "Speedrunner\nCooldown 6 seconds\nCharge 1 non-Toy item(s) (1/2/3/4) second(s).\nWhen you use another Toy, charge this 1 second.\n\nHeavy\nSlow 1 item for 2 second(s).\n\nIcy\nFreeze 1 small item for 1 second(s).\n\nTurbo\nHaste 1 item for 2 second(s).\n\nShielded\nShield 10.\n\nRestorative\nHeal 15.\n\nToxic\nPoison 2.\n\nFiery\nBurn 2.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\nYour non-Toy items have +25% Crit Chance.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal 10 Damage."
+    "display_message": "Speedrunner\nCooldown 6 seconds\nCharge 1 non-Toy item(s) (1/2/3) second(s).\nWhen you use an adjacent Toy, charge this 1 second.\n\nHeavy\nSlow 1 item for 2 second(s).\n\nIcy\nFreeze 1 small item for 1 second(s).\n\nTurbo\nHaste 1 item for 2 second(s).\n\nShielded\nShield 10.\n\nRestorative\nHeal 15.\n\nToxic\nPoison 2.\n\nFiery\nBurn 2.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\nYour non-Toy items have +25% Crit Chance.\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal 10 Damage."
   },
   {
     "name": "Spices",
@@ -3037,7 +3037,7 @@
   {
     "name": "Textiles",
     "type": "item",
-    "display_message": "Textiles\nCooldown 5 seconds\nHeal equal to your Shield.\nWhen you Over-heal, Shield (20/30/40/50).\n\nHeavy\nSlow 2 items for 2 second(s).\n\nIcy\nFreeze 1 medium or small item for 2 second(s).\n\nTurbo\nHaste 2 items for 2 second(s).\n\nShielded\nThis has double Shield.\n\nRestorative\nThis has double Heal.\n\nToxic\nPoison equal to 10% of this item's Shield.\n\nFiery\nBurn equal to 10% of this item's Shield.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal damage equal to this item's Shield."
+    "display_message": "Textiles\nCooldown 5 seconds\nHeal equal to your Shield.\nWhen you Over-heal, Shield (20/30/40/50).\n\nHeavy\nSlow 2 items for 2 second(s).\n\nIcy\nFreeze 1 medium or small item for 2 second(s).\n\nTurbo\nHaste 2 items for 2 second(s).\n\nShielded\nThis has double Shield.\n\nRestorative\nThis has double Heal.\n\nToxic\nPoison equal to 10% of this item's Heal.\n\nFiery\nBurn equal to 10% of this item's Heal.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nDeal damage equal to this item's Heal."
   },
   {
     "name": "The Boulder",
@@ -3112,7 +3112,7 @@
   {
     "name": "Tortuga",
     "type": "item",
-    "display_message": "Tortuga\nCooldown (12/11/10) seconds\nDeal (300/600/900) damage.\nHaste your other items 1 second(s).\nWhen you use another Friend, charge this 2 second(s).\n\nHeavy\nSlow 1 item for 2 second(s).\n\nIcy\nFreeze 1 item for 1 second(s).\n\nTurbo\nThis has double Haste duration.\n\nShielded\nShield equal to this item's damage.\n\nRestorative\nHeal equal to this item's Damage.\n\nToxic\nPoison equal to 10% of this item's Damage.\n\nFiery\nBurn equal to 10% of this item's Damage.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double Damage."
+    "display_message": "Tortuga\nCooldown (14/12/10) seconds\nDeal (200/400/800) damage.\nHaste your other items 1 second(s).\nWhen you use another Friend, charge this 2 second(s).\n\nHeavy\nSlow 1 item for 2 second(s).\n\nIcy\nFreeze 1 item for 1 second(s).\n\nTurbo\nThis has double Haste duration.\n\nShielded\nShield equal to this item's damage.\n\nRestorative\nHeal equal to this item's Damage.\n\nToxic\nPoison equal to 10% of this item's Damage.\n\nFiery\nBurn equal to 10% of this item's Damage.\n\nShiny\nThis has +1 Multicast.\n\nDeadly\n+50% Crit Chance\n\nRadiant\nThis cannot be Frozen, Slowed or Destroyed.\n\nObsidian\nThis has double Damage."
   },
   {
     "name": "Tourist Chariot",
