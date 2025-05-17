@@ -47,7 +47,7 @@ class Container:
 
         self.capture_worker = (
             MacCaptureWorker(
-                "Mac Capture Worker",
+                "mac-capture-worker",
                 self.logger,
                 "The Bazaar",
                 self.message_builder,
@@ -56,7 +56,7 @@ class Container:
             )
             if self.configuration.operating_system == "Darwin"
             else WindowsCaptureWorkerV2(
-                "Windows Capture Worker",
+                "windows-capture-worker",
                 self.logger,
                 "The Bazaar",
                 self.message_builder,
@@ -65,7 +65,7 @@ class Container:
             )
         )
 
-        self.timer_worker = TimerWorker(self.logger, 500, "bazaar-buddy-start-timer")
+        self.half_second_timer = TimerWorker(self.logger, 500, "half-second-timer")
 
         self.thread_controller = ThreadController(self.logger)
 
@@ -74,7 +74,7 @@ class Container:
             self.logger,
             self.thread_controller,
             self.capture_worker,
-            self.timer_worker,
+            self.half_second_timer,
             self.system_handler,
             self.configuration,
         )

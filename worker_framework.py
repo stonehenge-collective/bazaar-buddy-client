@@ -88,7 +88,7 @@ class ThreadController:
 
     def __init__(self, logger: logging.Logger):
         """Initialize the thread controller"""
-        self.workers = {}
+        self.workers: dict[str, dict[str, Worker | QThread]] = {}
         self._logger = logger
         self._logger.info(f"[{threading.current_thread().name}] Thread controller initialized")
 
@@ -194,3 +194,10 @@ class ThreadController:
                 worker_data["thread"].terminate()
                 worker_data["thread"].wait()
             self.workers.pop(worker_name, None)
+
+    def get_worker_by_name(self, worker_name) -> Worker | None:
+        """Get a worker by name"""
+        worker_data = self.workers.get(worker_name, None)
+        if not worker_data:
+            raise ValueError(f"No worker named '{worker_name}' found")
+        return worker_data.get("worker", None)
