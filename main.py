@@ -1,12 +1,13 @@
 import sys, traceback
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import QTimer
+import threading
+
 from container import container as c
 
 
 def main() -> None:
 
-    # here we will take some steps to harden the application
     c.security.randomize_process_name()
 
     if c.configuration.operating_system == "Windows":
@@ -35,21 +36,22 @@ def main() -> None:
 
     c.updater.update_completed.connect(continue_startup)
 
-    # Kick off the check once the event loop is running so the overlay
-    # repaints before the (blocking) HTTP call.
-
     c.app.processEvents()
     QTimer.singleShot(0, c.updater.check_for_update)
 
-    try:
-        sys.exit(c.app.exec_())
-    finally:
-        # If continue_startup never ran, controller isn't defined—guard it.
-        try:
-            if c.bazaar_buddy:
-                c.bazaar_buddy.controller.stop()
-        except NameError:
-            pass
+    def shutdown():
+        c.logger.info(f"[{threading.current_thread().name}] Shutting down...")
+        c.thread_controller.stop_all()
+        QTimer.singleShot(1000, c.app.quit)
+
+    c.overlay.about_to_close.connect(shutdown)
+
+    return_code = c.app.exec_()
+
+    # cleanup anything that didn't stop cleanly
+    c.thread_controller.cleanup()
+
+    return return_code
 
 
 if __name__ == "__main__":

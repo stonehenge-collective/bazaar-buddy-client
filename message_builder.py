@@ -9,6 +9,7 @@ import re
 
 from configuration import Configuration
 
+
 class MessageBuilder:
     """Identify entities in OCR text and build decorated display messages.
 
@@ -63,14 +64,14 @@ class MessageBuilder:
 
         self._logger.debug("Found hits: %s", hits)
 
-        if not hits:               # nothing matched at all
+        if not hits:  # nothing matched at all
             self._logger.debug("No keyword found in OCR text")
             return None
 
-        pos, kw = min(hits, key=lambda item: item[0])   # earliest occurrence wins
+        pos, kw = min(hits, key=lambda item: item[0])  # earliest occurrence wins
         self._logger.debug("Matched %r at position %d", kw, pos)
         return kw
-    
+
     def match_entity(self, ocr_text: str) -> Optional[Dict[str, Any]]:
         self._logger.debug("Searching entities for OCR text %r", ocr_text)
 
@@ -78,15 +79,14 @@ class MessageBuilder:
         if matched is None:
             self._logger.debug("No keyword cleared threshold")
             return None
-        
+
         for entity in self._entities:
             if matched == entity.get("name") or matched in entity.get("alt_text", []):
                 self._logger.debug("Found entity %r", entity.get("name"))
                 return entity
-        
+
         self._logger.warning("Matched keyword %r but no entity carried that name", matched)
         return None
-
 
     def get_message(self, ocr_text: str) -> Optional[str]:
         matched_entity = self.match_entity(ocr_text)
@@ -129,13 +129,14 @@ if __name__ == "__main__":
     cfg = Configuration()
     import logging
     from logger import logger
+
     logger.setLevel(logging.DEBUG)
 
     builder = MessageBuilder(cfg, logger)
 
     examples = [
         "REPORT BUG SMALL AQUATIC TOOL APPAREL Dive Weights Se i Haste 1 items for 39 1 seconds. For each adjacent Aquatic item. reduce this item's Cooldown by 1 second. This has Multicast equal to its anil OW - lial 9 a he Hf 4 s lek o a Y4 yy - ww a Ze sy ZA 4 o vy Cz en t 4 ty a J S I A ae all - nN Version 1.0.434",
-        "MEDIUM Toxic Calcinator Burn Poison equal to this item's Burn. 4 Crit 4 When you transform a this permanently gains Burn. At the start of each day spend 3 Gold to get a Chunk of Lead. Bank amount of gold you have."
+        "MEDIUM Toxic Calcinator Burn Poison equal to this item's Burn. 4 Crit 4 When you transform a this permanently gains Burn. At the start of each day spend 3 Gold to get a Chunk of Lead. Bank amount of gold you have.",
     ]
 
     print(builder.match_keyword(examples[1]))
