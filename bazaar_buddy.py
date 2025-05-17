@@ -16,7 +16,7 @@ class BazaarBuddy:
         logger: Logger,
         thread_controller: ThreadController,
         capture_worker: CaptureWorker,
-        timer_worker: TimerWorker,
+        half_second_timer: TimerWorker,
         system_handler: BaseSystemHandler,
         configuration: Configuration,
     ):
@@ -24,17 +24,17 @@ class BazaarBuddy:
         self.logger = logger
         self.thread_controller = thread_controller
         self.capture_worker = capture_worker
-        self.timer_worker = timer_worker
+        self.half_second_timer = half_second_timer
         self.system_handler = system_handler
         self.configuration = configuration
         self.thread_name = threading.current_thread().name
 
     def start_polling(self):
         self.overlay.set_message("Waiting for The Bazaar to start…")
-        self.thread_controller.add_worker(self.timer_worker)
+        self.thread_controller.add_worker(self.half_second_timer)
         # saving connection so we can disconnect later
-        self.attempt_start_connection = self.timer_worker.timer_tick.connect(self._attempt_start)
-        self.thread_controller.start_worker(self.timer_worker.name)
+        self.attempt_start_connection = self.half_second_timer.timer_tick.connect(self._attempt_start)
+        self.thread_controller.start_worker(self.half_second_timer.name)
 
     def _attempt_start(self):
 
@@ -61,11 +61,11 @@ class BazaarBuddy:
         self.logger.info(f"[{self.thread_name}] Bazaar process found")
 
         self.logger.info(f"[{self.thread_name}] stopping trying to _attempt_start")
-        self.timer_worker.disconnect(self.attempt_start_connection)
+        self.half_second_timer.disconnect(self.attempt_start_connection)
 
         self.logger.info(f"[{self.thread_name}] Starting capture worker…")
         self.thread_controller.add_worker(self.capture_worker)
-        self.timer_worker.timer_tick.connect(self.capture_worker._run)
+        self.half_second_timer.timer_tick.connect(self.capture_worker._run)
         self.capture_worker.message_ready.connect(self.overlay.set_message)
         self.capture_worker.error.connect(self.logger.error)
         self.logger.info(f"[{self.thread_name}] starting capture worker")

@@ -180,13 +180,15 @@ class MacCaptureWorker(CaptureWorker):
         try:
             self._target_window_id = self._find_target_window()
             if not self._target_window_id:
-                self.error.emit(f"Could not find window for identifier: {self.window_identifier}")
+                self.logger.info(
+                    f"[{threading.current_thread().name}] Could not find window for identifier: {self.window_identifier}"
+                )
                 return
 
             self._capture_frame()
 
         except Exception as exc:
-            self.error.emit(f"[{threading.current_thread().name}] Capture failed: {exc}")
+            self.logger.error(f"[{threading.current_thread().name}] Capture failed: {exc}")
 
     def _on_stop_requested(self):
         self._target_window_id = None
