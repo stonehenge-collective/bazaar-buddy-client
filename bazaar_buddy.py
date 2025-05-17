@@ -5,7 +5,7 @@ from overlay import Overlay
 from system_handler import BaseSystemHandler
 from configuration import Configuration
 from worker_framework import ThreadController
-from capture_worker import CaptureWorker
+from capture_worker import BaseCaptureWorker
 from timer_worker import TimerWorker
 
 
@@ -15,7 +15,7 @@ class BazaarBuddy:
         overlay: Overlay,
         logger: Logger,
         thread_controller: ThreadController,
-        capture_worker: CaptureWorker,
+        capture_worker: BaseCaptureWorker,
         half_second_timer: TimerWorker,
         system_handler: BaseSystemHandler,
         configuration: Configuration,

@@ -10,7 +10,7 @@ from configuration import Configuration
 from worker_framework import Worker
 
 
-class CaptureWorker(Worker):
+class BaseCaptureWorker(Worker):
 
     message_ready = pyqtSignal(str)
 
@@ -44,7 +44,7 @@ class CaptureWorker(Worker):
             pass
 
 
-class WindowsCaptureWorkerV2(CaptureWorker):
+class WindowsCaptureWorkerV2(BaseCaptureWorker):
 
     def __init__(
         self,
@@ -97,7 +97,7 @@ class WindowsCaptureWorkerV2(CaptureWorker):
             self.error.emit(f"Failed to stop: {exc}")
 
 
-class MacCaptureWorker(CaptureWorker):
+class MacCaptureWorker(BaseCaptureWorker):
     def __init__(
         self,
         worker_name: str,
