@@ -7,10 +7,10 @@ class TimerWorker(Worker):
     """Worker that runs a timer on its own thread
 
     Signals:
-        timer_tick: Emitted on each timer tick with tick count
+        timer_tick: Emitted on each timer tick
     """
 
-    timer_tick = pyqtSignal(int)
+    timer_tick = pyqtSignal()
 
     def __init__(self, logger: logging.Logger, interval=1000, name=None):
         """Initialize a timer worker
@@ -22,8 +22,7 @@ class TimerWorker(Worker):
         super().__init__(logger, name=name)
         self.interval = interval
         self.timer = QTimer()
-        self.timer.moveToThread(None)  # Initially not in any thread
-        self.counter = 0
+        self.timer.moveToThread(None)
 
     def _run(self):
         """Set up and start the timer"""
@@ -46,4 +45,4 @@ class TimerWorker(Worker):
 
     def _on_timeout(self):
         """Handle timer timeout events"""
-        self.timer_tick.emit(self.counter)
+        self.timer_tick.emit()

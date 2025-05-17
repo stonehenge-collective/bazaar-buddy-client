@@ -38,23 +38,23 @@ class BazaarBuddy:
 
     def _attempt_start(self):
 
-        self.logger.info(f"[{self.thread_name}] Attempting to find the Bazaar process…")
+        self.logger.info(f"[{self.thread_name}] attempting to find the Bazaar process…")
 
         process_name = "TheBazaar.exe" if self.configuration.operating_system == "Windows" else "The Bazaar"
         bazaar_proc = self.system_handler.get_process_by_name(process_name)
 
         if not bazaar_proc:
-            self.logger.info(f"[{self.thread_name}] Could not find process with name: {process_name}")
+            self.logger.info(f"[{self.thread_name}] could not find process with name: {process_name}")
             return
 
-        self.logger.info(f"[{self.thread_name}] Found Bazaar process with PID: {bazaar_proc.pid}")
+        self.logger.info(f"[{self.thread_name}] found Bazaar process with PID: {bazaar_proc.pid}")
         window_handle = self.system_handler.find_process_main_window_handle(bazaar_proc.pid)
 
         if not window_handle:
-            self.logger.info(f"[{self.thread_name}] Could not find main window handle for process")
+            self.logger.info(f"[{self.thread_name}] could not find main window handle for process")
             return
 
-        self.logger.info(f"[{self.thread_name}] Found window handle: {window_handle}")
+        self.logger.info(f"[{self.thread_name}] found window handle: {window_handle}")
 
         self.overlay.set_message("Bazaar process found, watching…")
 
@@ -63,10 +63,8 @@ class BazaarBuddy:
         self.logger.info(f"[{self.thread_name}] stopping trying to _attempt_start")
         self.half_second_timer.disconnect(self.attempt_start_connection)
 
-        self.logger.info(f"[{self.thread_name}] Starting capture worker…")
         self.thread_controller.add_worker(self.capture_worker)
         self.half_second_timer.timer_tick.connect(self.capture_worker._run)
         self.capture_worker.message_ready.connect(self.overlay.set_message)
-        self.capture_worker.error.connect(self.logger.error)
         self.logger.info(f"[{self.thread_name}] starting capture worker")
         self.thread_controller.start_worker(self.capture_worker.name)
