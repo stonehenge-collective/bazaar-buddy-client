@@ -159,6 +159,62 @@ def collect_item_tooltips(card: Dict[str, Any], enchantment: Optional[str]) -> L
                 break
     return tips
 
+def build_decorated_tier_message(item: dict[str, Any]):
+    tier_order = ['Bronze', 'Silver', 'Gold', 'Diamond', 'Legendary']
+    tier_colors = {
+        "Bronze": '#cd7f32',
+        "Silver": '#aaa',
+        "Gold": '#e4b60e',
+        "Diamond": '#02a3d8',
+        "Legendary": '#fa3'
+    }
+
+    start_index = tier_order.index(item['startingTier'])
+    active_tiers = tier_order[start_index:] # gets only available tiers
+    tooltip_groups = {}
+
+    for tier in active_tiers:
+        tier_data = item['tiers'].get(tier, {})
+        tooltips = tier_data.get('tooltips', [])
+
+        for tooltip in tooltips:
+            if not tooltip.strip():
+                continue  # skip empty tooltips
+
+            # Standardize the tooltip with a placeholder
+            standardized = re.sub(r'([-+]?\d+(?:\.\d+)?)', '{{val}}', tooltip)
+
+            # Extract value
+            match = re.search(r'([-+]?\d+(?:\.\d+)?)', tooltip)
+            value = match.group(1) if match else ''
+
+            if standardized not in tooltip_groups:
+                tooltip_groups[standardized] = []
+
+            tooltip_groups[standardized].append({
+                'tier': tier,
+                'value': value,
+                'original_tooltip': tooltip
+            })
+
+    unified_tooltips = []
+    for template, values in tooltip_groups.items():
+        unique_values = set(v['value'] for v in values if v['value'])
+        if len(unique_values) == 1:
+            # All values are the same → just output that value (no color)
+            # Join by / to match your pattern (e.g., 5/5/5) or just one value?
+            # You can join or just show one since all same:
+            unified_tooltips.append(template.replace('{{val}}', unique_values.pop()))
+        else:
+            # Values differ → color each one
+            span_string = ' > '.join(
+                f"<span style='color:{tier_colors[val['tier']]}'>{val['value']}</span>"
+                for val in values
+            )
+            unified = template.replace('{{val}}', span_string)
+            unified_tooltips.append(unified)
+    return unified_tooltips
+
 def decorate_display_message(text: str, rules: list[dict]) -> str:
     """Apply decorators so Rich Text can parse and add color to certain keywords"""
     decorated_message = text
@@ -234,7 +290,7 @@ def reformat_monsters(raw: Dict[str, Any]) -> List[Dict[str, Any]]:
 
 # --------------------------- Message builders ------------------------------ #
 def build_monster_message(m: Dict[str, Any]) -> str:
-    msg: List[str] = [f"{m['name']}", f"Health: {m['health']}"]
+    msg: List[str] = [f"<b>{m['name']}</b><br>", f"Health: {m['health']}"]
 
     if m["items"]:
         msg.append("")        # blank line
@@ -258,7 +314,8 @@ def build_monster_message(m: Dict[str, Any]) -> str:
 
 
 def build_item_message(item: Dict[str, Any]) -> str:
-    msg: List[str] = [item["name"], *item["unifiedTooltips"], ""]
+    msg: List[str] = [f"<b>{item["name"]}</b><br>", ""]
+    msg.extend(build_decorated_tier_message(item))
     for i, ench in enumerate(item.get("enchantments", [])):
         msg.append(ench["type"])
         msg.extend(ench["tooltips"])
@@ -273,7 +330,7 @@ def build_item_message(item: Dict[str, Any]) -> str:
 def build_event_message(event: Dict[str, Any]) -> Optional[str]:
     if not event.get("display", True):
         return None
-    return f"{event['name']}<br>" + "<br><br>".join(event["options"])
+    return f"<b>{event['name']}</b><br><br>" + "<br><br>".join(event["options"])
 
 
 # --------------------------------------------------------------------------- #
