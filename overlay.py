@@ -27,6 +27,7 @@ class Overlay(QWidget):
 
     yes_clicked = pyqtSignal()
     no_clicked = pyqtSignal()
+    about_to_close = pyqtSignal()  # New signal for cleanup
 
     def __init__(self, text: str, configuration: Configuration):
         super().__init__(flags=Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
@@ -74,6 +75,7 @@ class Overlay(QWidget):
 
     def keyPressEvent(self, event):  # noqa: N802
         if event.key() in (Qt.Key_Escape, Qt.Key_Q):
+            self.about_to_close.emit()
             self.close()
 
     def resizeEvent(self, event):  # noqa: N802
@@ -97,7 +99,6 @@ class Overlay(QWidget):
         self.top_label.setFixedHeight(24)
         self.top_label.setAlignment(Qt.AlignLeft | Qt.AlignTop)
         self.top_label.setContentsMargins(5, 4, 0, 0)
-
 
         # ----- Text inside a scroll area -----
         self.label = QLabel(self.text, wordWrap=True, alignment=Qt.AlignLeft | Qt.AlignTop)
@@ -129,6 +130,7 @@ class Overlay(QWidget):
         self.close_button = QPushButton("✕", self, toolTip="Close (Esc or Q)")
         self.close_button.setFixedSize(24, 24)
         self.close_button.clicked.connect(self.close)
+        self.close_button.clicked.connect(self._handle_close)
         self.close_button.setStyleSheet(
             "QPushButton{color:white;background:rgba(255,255,255,0);"
             "border:none;font-weight:bold;}"
@@ -169,7 +171,7 @@ class Overlay(QWidget):
                 height: 0px;
                 width: 0px;
             }}
-            /* no coloured “pages” above/below the handle */
+            /* no coloured "pages" above/below the handle */
             QScrollBar::add-page:vertical,
             QScrollBar::sub-page:vertical {{
                 background: none;
@@ -262,6 +264,9 @@ class Overlay(QWidget):
             self.button_container.hide()
             self.button_container.deleteLater()
             self.button_container = None
+
+    def _handle_close(self):
+        self.about_to_close.emit()
 
 
 def main() -> None:

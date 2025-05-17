@@ -12,6 +12,7 @@ extractor.
 import os
 from pathlib import Path
 from typing import List
+import threading
 
 from PIL import Image
 import pytesseract
@@ -19,6 +20,7 @@ from pytesseract import Output
 
 from configuration import Configuration
 from logging import Logger
+
 
 class TextExtractor:
     """Thin wrapper around *pytesseract*.
@@ -68,9 +70,7 @@ class TextExtractor:
             Any Tesseract word candidate below this value (0‑100) is thrown
             away.  Default is **80**.
         """
-        self._logger.debug(
-            "Extracting text (conf>=%d)", confidence_threshold
-        )
+        self._logger.debug(f"[{threading.current_thread().name}] Extracting text (conf>=%d)", confidence_threshold)
 
         tesser_data = pytesseract.image_to_data(
             image,
@@ -92,7 +92,7 @@ class TextExtractor:
     ) -> str:
         """Convenience wrapper around :py:meth:`extract_text`."""
         path = Path(image_path)
-        self._logger.debug("Opening image file %s", path)
+        self._logger.debug(f"[{threading.current_thread().name}] Opening image file {path}")
         with Image.open(path) as img:
             return self.extract_text(img)
 
@@ -110,7 +110,7 @@ class TextExtractor:
             os.environ["TESSDATA_PREFIX"] = str(tess_dir / "share" / "tessdata")
 
         self._logger.debug(
-            "Configured Tesseract binary: %s", pytesseract.pytesseract.tesseract_cmd
+            f"[{threading.current_thread().name}] Configured Tesseract binary: {pytesseract.pytesseract.tesseract_cmd}"
         )
 
 
