@@ -31,6 +31,7 @@ class BazaarBuddy:
     def start_polling(self):
         self.overlay.set_message("Waiting for The Bazaar to start…")
         self.thread_controller.add_worker(self.timer_worker)
+        # saving connection so we can disconnect later
         self.attempt_start_connection = self.timer_worker.timer_tick.connect(self._attempt_start)
         self.thread_controller.start_worker(self.timer_worker.name)
 
