@@ -98,7 +98,7 @@ class Overlay(QWidget):
         self.top_label.setStyleSheet("color: white;")
         self.top_label.setFixedHeight(24)
         self.top_label.setAlignment(Qt.AlignLeft | Qt.AlignTop)
-        self.top_label.setContentsMargins(5, 4, 0, 0)
+        self.top_label.setContentsMargins(0, 4, 0, 0)
 
         # ----- Text inside a scroll area -----
         self.label = QLabel(self.text, wordWrap=True, alignment=Qt.AlignLeft | Qt.AlignTop)
