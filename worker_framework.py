@@ -47,6 +47,14 @@ class Worker(QObject):
         """Check if stop has been requested"""
         return self._stop_requested
 
+    def _run(self):
+        """Internal method that should be overridden by subclasses"""
+        raise NotImplementedError("Subclasses must implement this method")
+
+    def _on_stop_requested(self):
+        """Override this method to handle any custom cleanup logic"""
+        pass
+
     def start_work(self):
         """Main work method that gets called when thread starts.
 
@@ -61,10 +69,6 @@ class Worker(QObject):
             self._logger.debug(traceback.format_exc())
             self.error.emit(str(e))
 
-    def _run(self):
-        """Internal method that should be overridden by subclasses"""
-        raise NotImplementedError("Subclasses must implement this method")
-
     def stop_work(self):
         """Request the worker to stop.
 
@@ -73,10 +77,6 @@ class Worker(QObject):
         """
         self._stop_requested = True
         self._on_stop_requested()
-
-    def _on_stop_requested(self):
-        """Override this method to handle stop requests"""
-        pass
 
     def _thread_name(self):
         """Get the current thread name"""
