@@ -47,7 +47,6 @@ class Worker(QObject):
         """Check if stop has been requested"""
         return self._stop_requested
 
-    @pyqtSlot()
     def start_work(self):
         """Main work method that gets called when thread starts.
 
@@ -66,14 +65,12 @@ class Worker(QObject):
         """Internal method that should be overridden by subclasses"""
         raise NotImplementedError("Subclasses must implement this method")
 
-    @pyqtSlot()
     def stop_work(self):
         """Request the worker to stop.
 
         This sets the stop flag which should be checked by the worker's
         _run method to terminate cleanly.
         """
-        self._logger.info(f"[{threading.current_thread().name}] Stop requested")
         self._stop_requested = True
         self._on_stop_requested()
 
