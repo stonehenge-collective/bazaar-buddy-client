@@ -1,9 +1,12 @@
-from PyQt5.QtCore import QTimer
+import threading
+
 from logging import Logger
 from overlay import Overlay
-from capture_controller import CaptureController
 from system_handler import BaseSystemHandler
 from configuration import Configuration
+from worker_framework import ThreadController
+from capture_worker import BaseCaptureWorker
+from timer_worker import TimerWorker
 
 
 class BazaarBuddy:
@@ -11,54 +14,57 @@ class BazaarBuddy:
         self,
         overlay: Overlay,
         logger: Logger,
-        controller: CaptureController,
+        thread_controller: ThreadController,
+        capture_worker: BaseCaptureWorker,
+        half_second_timer: TimerWorker,
         system_handler: BaseSystemHandler,
         configuration: Configuration,
     ):
         self.overlay = overlay
         self.logger = logger
-        self.controller = controller
+        self.thread_controller = thread_controller
+        self.capture_worker = capture_worker
+        self.half_second_timer = half_second_timer
         self.system_handler = system_handler
         self.configuration = configuration
+        self.thread_name = threading.current_thread().name
 
-        self.poll_timer = QTimer()
-        self.poll_timer.setInterval(1000)
-        self.poll_timer.timeout.connect(self._tick)
-        self.controller.stopped.connect(self.start_polling)
+    def start_polling(self):
+        self.overlay.set_message("Waiting for The Bazaar to start…")
+        self.thread_controller.add_worker(self.half_second_timer)
+        # saving connection so we can disconnect later
+        self.attempt_start_connection = self.half_second_timer.timer_tick.connect(self._attempt_start)
+        self.thread_controller.start_worker(self.half_second_timer.name)
 
-    def attempt_start_capture(self) -> bool:
-        """Return True if capture launched successfully."""
-        self.logger.info("Looking for Bazaar process...")
+    def _attempt_start(self):
 
-        # On macOS, the process name is different
+        self.logger.info(f"[{self.thread_name}] attempting to find the Bazaar process…")
+
         process_name = "TheBazaar.exe" if self.configuration.operating_system == "Windows" else "The Bazaar"
         bazaar_proc = self.system_handler.get_process_by_name(process_name)
 
         if not bazaar_proc:
-            self.logger.info(f"Could not find process with name: {process_name}")
-            return False
+            self.logger.info(f"[{self.thread_name}] could not find process with name: {process_name}")
+            return
 
-        self.logger.info(f"Found Bazaar process with PID: {bazaar_proc.pid}")
+        self.logger.info(f"[{self.thread_name}] found Bazaar process with PID: {bazaar_proc.pid}")
         window_handle = self.system_handler.find_process_main_window_handle(bazaar_proc.pid)
 
         if not window_handle:
-            self.logger.info("Could not find main window handle for process")
-            return False
+            self.logger.info(f"[{self.thread_name}] could not find main window handle for process")
+            return
 
-        self.logger.info(f"Found window handle: {window_handle}")
+        self.logger.info(f"[{self.thread_name}] found window handle: {window_handle}")
+
         self.overlay.set_message("Bazaar process found, watching…")
-        self.controller.start()
-        return True
 
-    def _tick(self):
-        self.overlay.set_message("Waiting for The Bazaar to start…")
-        if self.controller.running():
-            return  # already capturing – skip heavy checks
-        if self.attempt_start_capture():
-            self.stop_polling()  # stop polling once capture starts
+        self.logger.info(f"[{self.thread_name}] Bazaar process found")
 
-    def start_polling(self):
-        self.poll_timer.start()
+        self.logger.info(f"[{self.thread_name}] stopping trying to _attempt_start")
+        self.half_second_timer.disconnect(self.attempt_start_connection)
 
-    def stop_polling(self):
-        self.poll_timer.stop()
+        self.thread_controller.add_worker(self.capture_worker)
+        self.half_second_timer.timer_tick.connect(self.capture_worker._run)
+        self.capture_worker.message_ready.connect(self.overlay.set_message)
+        self.logger.info(f"[{self.thread_name}] starting capture worker")
+        self.thread_controller.start_worker(self.capture_worker.name)

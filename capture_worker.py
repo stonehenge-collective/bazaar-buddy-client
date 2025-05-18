@@ -1,74 +1,61 @@
 from typing import Optional
 from PIL import Image
-from PyQt5.QtCore import QObject, pyqtSignal, QTimer
+from PyQt5.QtCore import pyqtSignal
+import threading
+
 from text_extractor import TextExtractor
 from message_builder import MessageBuilder
 from logging import Logger
 from configuration import Configuration
+from worker_framework import Worker
 
 
-class BaseCaptureWorker(QObject):
-    """Base class for capture workers."""
+class BaseCaptureWorker(Worker):
 
     message_ready = pyqtSignal(str)
-    error = pyqtSignal(str)
 
     def __init__(
         self,
+        name: str,
+        logger: Logger,
         message_builder: MessageBuilder,
         text_extractor: TextExtractor,
-        logger: Logger,
         configuration: Configuration,
     ):
-        super().__init__()
-        self._busy = False
+        super().__init__(logger, name)
         self._message_builder = message_builder
         self._text_extractor = text_extractor
-        self._logger = logger
         self._configuration = configuration
-
-    def start(self) -> None:
-        """Start the capture process."""
-        raise NotImplementedError("Subclasses must implement start()")
-
-    def stop(self) -> None:
-        """Stop the capture process."""
-        raise NotImplementedError("Subclasses must implement stop()")
 
     def _process_frame(self, image: Image.Image) -> None:
         """Process a captured frame and emit messages."""
-        if self._busy:
-            return
         try:
-            self._busy = True
             if self._configuration.save_images:
                 from datetime import datetime
 
                 filename = datetime.now().strftime("%Y%m%d_%H%M%S_%f") + ".png"
                 image.save(self._configuration.system_path / filename)
             text = self._text_extractor.extract_text(image)
-            self._logger.info(f"parsed text: {text}")
+            self._logger.info(f"[{threading.current_thread().name}] parsed text: {text}")
             if message := self._message_builder.get_message(text):
-                self._logger.info(f"built message: {message}")
+                self._logger.info(f"[{threading.current_thread().name}] built message: {message}")
                 self.message_ready.emit(message)
         except (AttributeError, PermissionError):
             pass
-        finally:
-            self._busy = False
 
 
-class WindowsCaptureWorker(BaseCaptureWorker):
-    """Windows-specific capture implementation."""
+class WindowsCaptureWorkerV2(BaseCaptureWorker):
 
     def __init__(
         self,
+        worker_name: str,
+        logger: Logger,
         window_identifier: str,
         message_builder: MessageBuilder,
         text_extractor: TextExtractor,
-        logger: Logger,
         configuration: Configuration,
     ):
-        super().__init__(message_builder, text_extractor, logger, configuration)
+        super().__init__(worker_name, logger, message_builder, text_extractor, configuration)
         from windows_capture import WindowsCapture, Frame, CaptureControl
         import sys, platform
 
@@ -94,13 +81,13 @@ class WindowsCaptureWorker(BaseCaptureWorker):
         def on_closed():
             self.error.emit("Capture window closed")
 
-    def start(self) -> None:
+    def _run(self):
         try:
             self._control = self._cap.start_free_threaded()
         except Exception as exc:
             self.error.emit(f"Capture failed: {exc}")
 
-    def stop(self) -> None:
+    def _on_stop_requested(self):
         try:
             if self._control:
                 self._control.stop()
@@ -111,20 +98,18 @@ class WindowsCaptureWorker(BaseCaptureWorker):
 
 
 class MacCaptureWorker(BaseCaptureWorker):
-    """Mac-specific capture implementation using CoreGraphics."""
-
     def __init__(
         self,
+        worker_name: str,
+        logger: Logger,
         window_identifier: str,
         message_builder: MessageBuilder,
         text_extractor: TextExtractor,
-        logger: Logger,
         configuration: Configuration,
     ):
-        super().__init__(message_builder, text_extractor, logger, configuration)
+        super().__init__(worker_name, logger, message_builder, text_extractor, configuration)
         self.window_identifier = window_identifier
         self._target_window_id = None
-        self._running = False
 
     def _find_target_window(self) -> Optional[int]:
         """Find the window matching our identifier using CoreGraphics."""
@@ -140,14 +125,13 @@ class MacCaptureWorker(BaseCaptureWorker):
                         return window.get("kCGWindowNumber")
             return None
         except ImportError:
-            print("Could not import Quartz. Make sure pyobjc is installed")
+            self.error.emit(
+                f"[{threading.current_thread().name}] Could not import Quartz. Make sure pyobjc is installed"
+            )
             return None
 
     def _capture_frame(self) -> None:
         """Capture a frame from the target window using CoreGraphics."""
-        if not self._target_window_id or not self._running:
-            return
-
         try:
             from Quartz import (
                 CGWindowListCreateImage,
@@ -159,7 +143,6 @@ class MacCaptureWorker(BaseCaptureWorker):
                 CGImageGetDataProvider,
                 CGDataProviderCopyData,
                 CGImageGetBytesPerRow,
-                CGImageGetBitsPerPixel,
             )
             from CoreFoundation import CFDataGetBytes, CFDataGetLength
             import numpy as np
@@ -175,7 +158,6 @@ class MacCaptureWorker(BaseCaptureWorker):
             width = CGImageGetWidth(image)
             height = CGImageGetHeight(image)
             bytes_per_row = CGImageGetBytesPerRow(image)
-            bits_per_pixel = CGImageGetBitsPerPixel(image)
 
             # Get raw pixel data
             provider = CGImageGetDataProvider(image)
@@ -191,48 +173,22 @@ class MacCaptureWorker(BaseCaptureWorker):
             pil_image = Image.fromarray(arr)
             self._process_frame(pil_image)
 
-            # Schedule next capture
-            if self._running:
-                QTimer.singleShot(0, self._capture_frame)
-
         except Exception as exc:
-            print(f"Capture error: {exc}")
-            self.error.emit(str(exc))
+            self.error.emit(f"[{threading.current_thread().name}] Capture error: {exc}")
 
-    def start(self) -> None:
-        """Start the capture process."""
+    def _run(self):
         try:
             self._target_window_id = self._find_target_window()
             if not self._target_window_id:
-                self.error.emit(f"Could not find window for identifier: {self.window_identifier}")
+                self.logger.info(
+                    f"[{threading.current_thread().name}] Could not find window for identifier: {self.window_identifier}"
+                )
                 return
 
-            self._running = True
             self._capture_frame()
 
         except Exception as exc:
-            self.error.emit(f"Capture failed: {exc}")
+            self.logger.error(f"[{threading.current_thread().name}] Capture failed: {exc}")
 
-    def stop(self) -> None:
-        """Stop the capture process."""
-        self._running = False
+    def _on_stop_requested(self):
         self._target_window_id = None
-
-
-class CaptureWorkerFactory:
-
-    def __init__(
-        self, config: Configuration, message_builder: MessageBuilder, text_extractor: TextExtractor, logger: Logger
-    ):
-        self.config = config
-        self.message_builder = message_builder
-        self.text_extractor = text_extractor
-        self.logger = logger
-
-    def create(self) -> BaseCaptureWorker:
-        if self.config.operating_system == "Windows":
-            return WindowsCaptureWorker(
-                "The Bazaar", self.message_builder, self.text_extractor, self.logger, self.config
-            )
-        else:
-            return MacCaptureWorker("The Bazaar", self.message_builder, self.text_extractor, self.logger, self.config)

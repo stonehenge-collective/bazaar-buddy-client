@@ -3,6 +3,7 @@ from PyQt5.QtCore import QObject, pyqtSignal
 import requests, tempfile, subprocess, sys
 import subprocess
 from abc import ABC, abstractmethod
+import threading
 
 from configuration import Configuration
 from overlay import Overlay
@@ -43,7 +44,9 @@ class TestUpdateSource(BaseUpdateSource):
 
     def _get_latest_release(self) -> dict:
         if self._specific_version:
-            print(f"https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client-test/releases/{self._specific_version}")
+            print(
+                f"https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client-test/releases/{self._specific_version}"
+            )
             response = requests.get(
                 f"https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client-test/releases/{self._specific_version}"
             )
@@ -76,10 +79,11 @@ class Updater(BaseUpdater):
         self.logger = logger
         self.configuration = configuration
         self.latest_release = latest_release
+        self.thread_name = threading.current_thread().name
 
     def check_for_update(self):
         if self._update_available():
-            self.logger.info("Update available")
+            self.logger.info(f"[{self.thread_name}] Update available")
             self.prompt_for_update()
         else:
             self.update_completed.emit()
@@ -87,7 +91,7 @@ class Updater(BaseUpdater):
     def _update_available(self):
         latest_version = self.latest_release.get("tag_name", "")
         if not latest_version:
-            self.logger.error("Failed to get latest tag from GitHub API response")
+            self.logger.error(f"[{self.thread_name}] Failed to get latest tag from GitHub API response")
             return False
         if self.configuration.current_version == latest_version:
             return False
@@ -120,7 +124,7 @@ class Updater(BaseUpdater):
         self.overlay.no_clicked.disconnect(self._update_declined)
 
         if self.configuration.is_local:
-            self.logger.info("Running locally, skipping update")
+            self.logger.info(f"[{self.thread_name}] Running locally, skipping update")
             self.update_completed.emit()
             return
         else:
@@ -174,7 +178,7 @@ class Updater(BaseUpdater):
 
         assets = self.latest_release.get("assets", [])
         if not assets:
-            self.logger.error("No release assets found, skipping update")
+            self.logger.error(f"[{self.thread_name}] No release assets found, skipping update")
             self.overlay.set_message("Update failed: No release assets found. Skipping update.")
             self.update_completed.emit()
             return
@@ -191,12 +195,12 @@ class Updater(BaseUpdater):
                 break
 
         if not download_url:
-            self.logger.error("No compatible package found, skipping update")
+            self.logger.error(f"[{self.thread_name}] No compatible package found, skipping update")
             self.overlay.set_message("Update failed: No compatible package found. Skipping update.")
             self.update_completed.emit()
             return
 
-        self.logger.info(f"Downloading update from {download_url}")
+        self.logger.info(f"[{self.thread_name}] Downloading update from {download_url}")
 
         local_download_location = self.download_asset(download_url)
         self.overlay.set_message("Installing update…")
@@ -204,10 +208,8 @@ class Updater(BaseUpdater):
         # Launch platform-specific updater
         if self.configuration.operating_system == "Windows":
             import os
+
             updater_script = self.configuration.system_path / "update_scripts" / "windows_updater.bat"
-            print(f"updater script: {updater_script}")
-            print(f"local download location: {local_download_location}")
-            print(f"executable path: {self.configuration.executable_path}")
             env = os.environ.copy()
             env["PYINSTALLER_RESET_ENVIRONMENT"] = "1"
             subprocess.Popen(
@@ -222,9 +224,6 @@ class Updater(BaseUpdater):
             )
         else:  # macOS
             updater_script = self.configuration.system_path / "update_scripts" / "mac_updater.sh"
-            print(f"local download location: {local_download_location}")
-            print(f"system path: {self.configuration.system_path}")
-            print(f"executable path: {self.configuration.executable_path.parent.parent}")
             subprocess.Popen(
                 [
                     "bash",
@@ -235,6 +234,7 @@ class Updater(BaseUpdater):
             )
 
         sys.exit(0)
+
 
 class MockUpdater(BaseUpdater):
     """

@@ -1,3 +1,7 @@
+import sys
+from PyQt5.QtWidgets import QApplication
+
+
 from logger import logger
 from configuration import Configuration
 from security import Security
@@ -6,11 +10,10 @@ from text_extractor import TextExtractor
 from system_handler import WindowsSystemHandler, MacSystemHandler, BaseSystemHandler
 from updater import TestUpdateSource, ProductionUpdateSource, Updater, BaseUpdateSource
 from overlay import Overlay
-from capture_controller import CaptureController
-from capture_worker import BaseCaptureWorker, CaptureWorkerFactory
+from capture_worker import MacCaptureWorker, WindowsCaptureWorkerV2
 from bazaar_buddy import BazaarBuddy
-from PyQt5.QtWidgets import QApplication
-import sys
+from worker_framework import ThreadController
+from timer_worker import TimerWorker
 
 
 class Container:
@@ -42,26 +45,39 @@ class Container:
             self.overlay, self.logger, self.configuration, self.update_source.latest_release
         )
 
-        self.controller: CaptureController = CaptureController(
-            self.overlay,
-            self.logger,
-            self.message_builder,
-            self.text_extractor,
-            self.configuration,
-            self.capture_worker_factory,
+        self.capture_worker = (
+            MacCaptureWorker(
+                "mac-capture-worker",
+                self.logger,
+                "The Bazaar",
+                self.message_builder,
+                self.text_extractor,
+                self.configuration,
+            )
+            if self.configuration.operating_system == "Darwin"
+            else WindowsCaptureWorkerV2(
+                "windows-capture-worker",
+                self.logger,
+                "The Bazaar",
+                self.message_builder,
+                self.text_extractor,
+                self.configuration,
+            )
         )
+
+        self.half_second_timer = TimerWorker(self.logger, 500, "half-second-timer")
+
+        self.thread_controller = ThreadController(self.logger)
 
         self.bazaar_buddy: BazaarBuddy = BazaarBuddy(
             self.overlay,
             self.logger,
-            self.controller,
+            self.thread_controller,
+            self.capture_worker,
+            self.half_second_timer,
             self.system_handler,
             self.configuration,
         )
-
-    @property
-    def capture_worker_factory(self) -> CaptureWorkerFactory:
-        return CaptureWorkerFactory(self.configuration, self.message_builder, self.text_extractor, self.logger)
 
 
 container = Container()
