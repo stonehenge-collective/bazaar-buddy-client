@@ -1,12 +1,14 @@
 from __future__ import annotations
 
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
-from abc import ABC, abstractmethod
+from abc import ABC, ABCMeta, abstractmethod
 from pathlib import Path
-from typing import Optional
+import time
+from typing import Optional, Union
 
 import requests
 from PyQt5.QtCore import QObject, pyqtSignal
@@ -73,7 +75,11 @@ class TestUpdateSource(BaseUpdateSource):
 #                    Updater class hierarchy
 # ───────────────────────────────────────────────────────────────
 
-class BaseUpdater(QObject, ABC):
+class MetaQObjectABC(type(QObject), ABCMeta): # type: ignore
+    """Metaclass that inherits from both pyqtWrapperType and ABCMeta."""
+    pass
+
+class BaseUpdater(QObject, metaclass=MetaQObjectABC):
     """
     Houses every bit of behaviour that is **identical** across platforms.
     Concrete subclasses only implement :pymeth:`install_update()`.
@@ -143,7 +149,7 @@ class BaseUpdater(QObject, ABC):
             self.update_completed.emit()
             return
 
-        self.install_update()
+        self._download_and_install_update()
         self.update_completed.emit()
 
     def _update_declined(self) -> None:
@@ -196,7 +202,7 @@ class BaseUpdater(QObject, ABC):
                 return asset.get("browser_download_url")
         return None
 
-    def download_and_install_update(self) -> None:  # pragma: no cover
+    def _download_and_install_update(self) -> None:  # pragma: no cover
         """
         • Pick the correct release asset for the platform
         • Download it (using :py:meth:`_download_asset`)
@@ -223,38 +229,89 @@ class BaseUpdater(QObject, ABC):
         sys.exit(0)
 
     @abstractmethod
-    def _install_update(self) -> None:
+    def _install_update(self,
+        downloaded_exe_path: Path) -> None:
         ...
 
 class WindowsUpdater(BaseUpdater):
     """Handles ``.exe`` assets and launches *windows_updater.bat*."""
 
     _ASSET_SUFFIX = ".exe"
+    _MOVEFILE_DELAY_UNTIL_REBOOT = 0x00000004
 
-    def _install_update(self, downloaded_exe_path: Path) -> None:
-        updater_script = (
-            self.configuration.system_path
-            / "update_scripts"
-            / "windows_updater.bat"
-        )
+    def _install_update(
+        self,
+        downloaded_exe_path: Path,
+        attempts: int = 5,
+        backoff: float = 0.4,
+    ) -> None:
+        """
+        Replace a running PyInstaller one-file exe with an already-downloaded
+        new build.
 
-        self.logger.info(
-            "Launching Windows updater: %s", updater_script.as_posix()
-        )
-        env = os.environ.copy()
-        env["PYINSTALLER_RESET_ENVIRONMENT"] = "1"
+        Parameters
+        ----------
+        new_exe      Path to the *downloaded* (not-yet-running) executable.
+        running_exe  Path to the *currently running* executable.
+        attempts     How many times to retry the initial rename if something
+                    (AV, backup, etc.) holds the file open without SHARE_DELETE.
+        backoff      Seconds to wait between retries.
 
-        subprocess.Popen(
-            [
-                "cmd",
-                "/c",
-                str(updater_script),
-                str(downloaded_exe_path),
-                str(self.configuration.executable_path),
-            ],
-            env=env,
-        )
-        return
+        Raises
+        ------
+        OSError if the swap cannot be completed (after rollback, the original exe
+        is back in place).
+        """
+        import ctypes
+        downloaded_exe_path  =downloaded_exe_path.resolve()
+        current_exe_path      = (self.configuration.executable_path / "BazaarBuddy.exe").resolve()
+        bak_path     = current_exe_path.with_suffix(".bak")
+
+        if not current_exe_path.is_file():
+            raise FileNotFoundError(f"New exe not found: {current_exe_path}")
+
+        # 1) rename running exe → .bak  (atomic on NTFS)
+        last_error = None
+        for _ in range(attempts):
+            try:
+                os.replace(current_exe_path, bak_path)       # atomic directory entry swap
+                break
+            except OSError as e:
+                last_error = e
+                time.sleep(backoff)
+        else:
+            raise last_error or RuntimeError("Unable to rename running exe")
+
+        try:
+            # 2) copy new file into the old location
+            #    (shutil.copy2 preserves timestamps; use copyfile if you prefer speed)
+            shutil.copy2(downloaded_exe_path, current_exe_path)
+            try:
+                ctypes.windll.kernel32.MoveFileExW(
+                    str(bak_path),           # existing file
+                    None,                    # -> delete
+                    self._MOVEFILE_DELAY_UNTIL_REBOOT,
+                )
+            except Exception as e:
+                # Non-fatal: log but proceed
+                print(f"Warning: could not schedule {bak_path} for deletion: {e}", file=sys.stderr)
+            env = os.environ.copy()
+            env["PYINSTALLER_RESET_ENVIRONMENT"] = "1"
+            subprocess.Popen([str(current_exe_path)], close_fds=True, env=env)
+
+        except Exception as copy_error:
+            # 3) rollback: restore the original exe name
+            try:
+                os.replace(bak_path, current_exe_path)
+            except Exception as restore_error:
+                raise RuntimeError(
+                    f"Copy failed ({copy_error}) and rollback failed ({restore_error}). "
+                    "Application may not start."
+                ) from restore_error
+            raise copy_error         # propagate the original copy failure
+
+        else:
+            return
     
 
 
@@ -302,7 +359,7 @@ class MockUpdater(BaseUpdater):
     def check_for_update(self) -> None:  # noqa: D401
         self.update_completed.emit()
 
-    def download_and_install_update(self) -> None:  # pragma: no cover
+    def _download_and_install_update(self) -> None:  # pragma: no cover
         pass
 # ───────────────────────────────────────────────────────────────
 #                       Example bootstrap
