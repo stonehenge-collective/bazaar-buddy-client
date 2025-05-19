@@ -7,14 +7,13 @@ import sys
 import tempfile
 from abc import ABC, ABCMeta, abstractmethod
 from pathlib import Path
-import time
-from typing import Optional, Union
+from typing import Optional
 
 import requests
 from PyQt5.QtCore import QObject, pyqtSignal
 import requests, tempfile, subprocess, sys
 import subprocess
-from abc import ABC, abstractmethod
+from PyQt5.QtWidgets import QApplication
 import threading
 
 from configuration import Configuration
@@ -56,11 +55,9 @@ class TestUpdateSource(BaseUpdateSource):
 
     def _get_latest_release(self) -> dict:
         if self._specific_version:
-            print(
-                f"https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client-test/releases/{self._specific_version}"
-            )
-            response = requests.get(
-                f"https://api.github.com/repos/stonehenge-collective/bazaar-buddy-client-test/releases/{self._specific_version}"
+            url = (
+                "https://api.github.com/repos/stonehenge-collective/"
+                f"bazaar-buddy-client-test/releases/{self._specific_version}"
             )
         else:
             url = (
@@ -107,10 +104,13 @@ class BaseUpdater(QObject, metaclass=MetaQObjectABC):
         self.latest_release = latest_release
         self.thread_name = threading.current_thread().name
 
-    def check_for_update(self):
+    # ───────────── public façade ─────────────
+
+    def check_for_update(self) -> None:
+        """Entry-point: determine whether to prompt and (possibly) update."""
         if self._update_available():
             self.logger.info(f"[{self.thread_name}] Update available")
-            self.prompt_for_update()
+            self._prompt_for_update()
         else:
             self.update_completed.emit()
 
@@ -215,64 +215,106 @@ class BaseUpdater(QObject, metaclass=MetaQObjectABC):
         self.overlay.set_message("Downloading update…")
         QApplication.processEvents()
 
-        assets = self.latest_release.get("assets", [])
-        if not assets:
-            self.logger.error(f"[{self.thread_name}] No release assets found, skipping update")
-            self.overlay.set_message("Update failed: No release assets found. Skipping update.")
-            self.update_completed.emit()
-            return
-
-        # Find executable for current platform
-        download_url = None
-        for asset in assets:
-            name = asset.get("name", "").lower()
-            print(f"Asset name: {name}")
-            if (self.configuration.operating_system == "Windows" and name.endswith(".exe")) or (
-                self.configuration.operating_system == "Darwin" and name.endswith(".zip")
-            ):
-                download_url = asset.get("browser_download_url")
-                break
-
+        download_url = self._find_asset_url()
         if not download_url:
             self.logger.error(f"[{self.thread_name}] No compatible package found, skipping update")
-            self.overlay.set_message("Update failed: No compatible package found. Skipping update.")
+            self.overlay.set_message(
+                "Update failed: no release package found. Skipping."
+            )
             self.update_completed.emit()
             return
 
         self.logger.info(f"[{self.thread_name}] Downloading update from {download_url}")
-
-        local_download_location = self.download_asset(download_url)
+        downloaded_exe_path = self._download_asset(download_url)
         self.overlay.set_message("Installing update…")
         QApplication.processEvents()
-        # Launch platform-specific updater
-        if self.configuration.operating_system == "Windows":
-            import os
 
-            updater_script = self.configuration.system_path / "update_scripts" / "windows_updater.bat"
-            env = os.environ.copy()
-            env["PYINSTALLER_RESET_ENVIRONMENT"] = "1"
-            subprocess.Popen(
-                [
-                    "cmd",
-                    "/c",
-                    str(updater_script),
-                    str(local_download_location),
-                    str(self.configuration.executable_path),
-                ],
-                env=env,
-            )
-        else:  # macOS
-            updater_script = self.configuration.system_path / "update_scripts" / "mac_updater.sh"
-            subprocess.Popen(
-                [
-                    "bash",
-                    str(updater_script),
-                    str(local_download_location),
-                    str(self.configuration.executable_path.parent.parent),
-                ]
-            )
+        self._install_update(downloaded_exe_path)
 
         sys.exit(0)
+
+    @abstractmethod
+    def _install_update(self,
+        downloaded_exe_path: Path) -> None:
+        ...
+
+class WindowsUpdater(BaseUpdater):
+    """Handles ``.exe`` assets and launches *windows_updater.bat*."""
+
+    _ASSET_SUFFIX = ".exe"
+
+    def _install_update(
+        self,
+        downloaded_exe_path: Path,
+    ) -> None:
+        """
+        Replace a running PyInstaller one-file exe with an already-downloaded
+        new build.
+
+        Parameters
+        ----------
+        new_exe      Path to the *downloaded* (not-yet-running) executable.
+        running_exe  Path to the *currently running* executable.
+        attempts     How many times to retry the initial rename if something
+                    (AV, backup, etc.) holds the file open without SHARE_DELETE.
+        backoff      Seconds to wait between retries.
+
+        Raises
+        ------
+        OSError if the swap cannot be completed (after rollback, the original exe
+        is back in place).
+        """
+        downloaded_exe_path  =downloaded_exe_path.resolve()
+        current_exe_path      = (self.configuration.executable_path / "BazaarBuddy.exe").resolve()
+        bak_path     = current_exe_path.with_suffix(".bak")
+
+        if not current_exe_path.is_file():
+            raise FileNotFoundError(f"New exe not found: {current_exe_path}")
+
+        os.replace(current_exe_path, bak_path)
+
+        try:
+            shutil.copy2(downloaded_exe_path, current_exe_path)
+            env = os.environ.copy()
+            env["PYINSTALLER_RESET_ENVIRONMENT"] = "1"
+            subprocess.Popen([str(current_exe_path)], close_fds=True, env=env)
+        except Exception as copy_error:
+            try:
+                os.replace(bak_path, current_exe_path)
+            except Exception as restore_error:
+                raise RuntimeError(
+                    f"Copy failed ({copy_error}) and rollback failed ({restore_error}). "
+                    "Application may not start."
+                ) from restore_error
+            raise copy_error         # propagate the original copy failure
+
+        else:
+            return
+    
+
+
+class MacUpdater(BaseUpdater):
+    """Handles ``.zip`` assets and launches *mac_updater.sh*."""
+
+    _ASSET_SUFFIX = ".zip"
+
+    def _install_update(self, downloaded_exe_path: Path) -> None:
+        updater_script = (
+            self.configuration.system_path
+            / "update_scripts"
+            / "mac_updater.sh"
+        )
+
+        self.logger.info("Launching macOS updater: %s", updater_script)
+        subprocess.Popen(
+            [
+                "bash",
+                str(updater_script),
+                str(downloaded_exe_path),
+                str(self.configuration.executable_path.parent.parent),
+            ]
+        )
+        return
 
 
 class MockUpdater(BaseUpdater):
@@ -306,3 +348,4 @@ if __name__ == "__main__":  # pragma: no cover
 
     cfg = Configuration()
     source = ProductionUpdateSource(logger)
+    
