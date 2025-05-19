@@ -237,13 +237,10 @@ class WindowsUpdater(BaseUpdater):
     """Handles ``.exe`` assets and launches *windows_updater.bat*."""
 
     _ASSET_SUFFIX = ".exe"
-    _MOVEFILE_DELAY_UNTIL_REBOOT = 0x00000004
 
     def _install_update(
         self,
         downloaded_exe_path: Path,
-        attempts: int = 5,
-        backoff: float = 0.4,
     ) -> None:
         """
         Replace a running PyInstaller one-file exe with an already-downloaded
@@ -262,7 +259,6 @@ class WindowsUpdater(BaseUpdater):
         OSError if the swap cannot be completed (after rollback, the original exe
         is back in place).
         """
-        import ctypes
         downloaded_exe_path  =downloaded_exe_path.resolve()
         current_exe_path      = (self.configuration.executable_path / "BazaarBuddy.exe").resolve()
         bak_path     = current_exe_path.with_suffix(".bak")
@@ -270,37 +266,14 @@ class WindowsUpdater(BaseUpdater):
         if not current_exe_path.is_file():
             raise FileNotFoundError(f"New exe not found: {current_exe_path}")
 
-        # 1) rename running exe → .bak  (atomic on NTFS)
-        last_error = None
-        for _ in range(attempts):
-            try:
-                os.replace(current_exe_path, bak_path)       # atomic directory entry swap
-                break
-            except OSError as e:
-                last_error = e
-                time.sleep(backoff)
-        else:
-            raise last_error or RuntimeError("Unable to rename running exe")
+        os.replace(current_exe_path, bak_path)
 
         try:
-            # 2) copy new file into the old location
-            #    (shutil.copy2 preserves timestamps; use copyfile if you prefer speed)
             shutil.copy2(downloaded_exe_path, current_exe_path)
-            try:
-                ctypes.windll.kernel32.MoveFileExW(
-                    str(bak_path),           # existing file
-                    None,                    # -> delete
-                    self._MOVEFILE_DELAY_UNTIL_REBOOT,
-                )
-            except Exception as e:
-                # Non-fatal: log but proceed
-                print(f"Warning: could not schedule {bak_path} for deletion: {e}", file=sys.stderr)
             env = os.environ.copy()
             env["PYINSTALLER_RESET_ENVIRONMENT"] = "1"
             subprocess.Popen([str(current_exe_path)], close_fds=True, env=env)
-
         except Exception as copy_error:
-            # 3) rollback: restore the original exe name
             try:
                 os.replace(bak_path, current_exe_path)
             except Exception as restore_error:
