@@ -13,6 +13,7 @@ from worker_framework import Worker
 class BaseCaptureWorker(Worker):
 
     message_ready = pyqtSignal(str)
+    capture_window_closed = pyqtSignal()
 
     def __init__(
         self,
@@ -66,33 +67,44 @@ class WindowsCaptureWorkerV2(BaseCaptureWorker):
             window_name=window_identifier, cursor_capture=False, draw_border=False if supports_borderless else None
         )
         self._control: Optional[CaptureControl] = None
+        self._busy = False
 
         @self._cap.event
         def on_frame_arrived(frame: Frame, control):
+            if self._busy:
+                return
             try:
+                self._busy = True
                 # BGRA -> RGB ndarray -> PIL.Image
                 rgb = frame.convert_to_bgr().frame_buffer[..., ::-1].copy()
                 image = Image.fromarray(rgb)
                 self._process_frame(image)
             except Exception as exc:
                 self.error.emit(str(exc))
+            finally:
+                self._busy = False
 
         @self._cap.event
         def on_closed():
-            self.error.emit("Capture window closed")
+            self._logger.info("Capture worker closed")
+            self._on_stop_requested()
 
     def _run(self):
+        if self._control is not None:      # already capturing
+            return
         try:
             self._control = self._cap.start_free_threaded()
         except Exception as exc:
             self.error.emit(f"Capture failed: {exc}")
 
     def _on_stop_requested(self):
+        self._logger.info("Stop Requested in windows capture worker")
         try:
             if self._control:
                 self._control.stop()
                 self._control.wait()
                 self._control = None
+            self.capture_window_closed.emit()
         except Exception as exc:
             self.error.emit(f"Failed to stop: {exc}")
 

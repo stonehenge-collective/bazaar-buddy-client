@@ -6,7 +6,7 @@ import threading
 from container import container as c
 
 
-def main() -> None:
+def main() -> int:
 
     c.security.randomize_process_name()
 

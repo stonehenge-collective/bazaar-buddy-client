@@ -7,7 +7,7 @@ from configuration import Configuration
 from worker_framework import ThreadController
 from capture_worker import BaseCaptureWorker
 from timer_worker import TimerWorker
-
+from PyQt5.QtCore import Qt
 
 class BazaarBuddy:
     def __init__(
@@ -30,6 +30,7 @@ class BazaarBuddy:
         self.thread_name = threading.current_thread().name
 
     def start_polling(self):
+        self.logger.info("Start Polling")
         self.overlay.set_message("Waiting for The Bazaar to start…")
         self.thread_controller.add_worker(self.half_second_timer)
         # saving connection so we can disconnect later
@@ -64,7 +65,11 @@ class BazaarBuddy:
         self.half_second_timer.disconnect(self.attempt_start_connection)
 
         self.thread_controller.add_worker(self.capture_worker)
-        self.half_second_timer.timer_tick.connect(self.capture_worker._run)
+        if self.configuration.operating_system == "Darwin": #mac capture worker captures on command; windows has its own event loop
+            self.half_second_timer.timer_tick.connect(self.capture_worker._run)
+        elif self.configuration.operating_system == "Windows":
+            self.capture_worker._run()
         self.capture_worker.message_ready.connect(self.overlay.set_message)
+        # self.capture_worker.capture_window_closed.connect(self.start_polling, Qt.ConnectionType.DirectConnection)
         self.logger.info(f"[{self.thread_name}] starting capture worker")
         self.thread_controller.start_worker(self.capture_worker.name)
