@@ -8,7 +8,7 @@ from security import Security
 from message_builder import MessageBuilder
 from text_extractor import TextExtractor
 from system_handler import WindowsSystemHandler, MacSystemHandler, BaseSystemHandler
-from updater import TestUpdateSource, ProductionUpdateSource, Updater, BaseUpdateSource
+from updater import TestUpdateSource, ProductionUpdateSource, BaseUpdater, WindowsUpdater, MacUpdater, BaseUpdateSource
 from overlay import Overlay
 from capture_worker import MacCaptureWorker, WindowsCaptureWorkerV2
 from bazaar_buddy import BazaarBuddy
@@ -41,9 +41,14 @@ class Container:
 
         self.overlay: Overlay = Overlay("Checking for updates…", self.configuration)
 
-        self.updater: Updater = Updater(
-            self.overlay, self.logger, self.configuration, self.update_source.latest_release
-        )
+        if self.configuration.operating_system == "Windows":
+            self.updater: BaseUpdater = WindowsUpdater(
+                self.overlay, self.logger, self.configuration, self.update_source.latest_release
+            )
+        else:
+            self.updater: BaseUpdater = MacUpdater(
+                self.overlay, self.logger, self.configuration, self.update_source.latest_release
+            )
 
         self.capture_worker = (
             MacCaptureWorker(

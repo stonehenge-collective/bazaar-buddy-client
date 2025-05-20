@@ -1,6 +1,5 @@
 {
-  "version": "v0.0.7",
-  "update_with_test_release": false,
-  "save_images": false,
-  "target_test_release": "217882247"
+  "version": "v0.0.11",
+  "update_with_test_release": true,
+  "save_images": false
 }

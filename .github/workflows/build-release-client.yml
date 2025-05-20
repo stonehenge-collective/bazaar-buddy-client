@@ -36,7 +36,7 @@ jobs:
           pyinstaller main.py --noconsole --noconfirm --onefile --name "BazaarBuddy" `
           --icon "assets\\brand_icon.ico" --add-data "tools\\windows_tesseract;tools\\windows_tesseract" `
           --add-data "entities.json;." --add-data "assets\\brand_icon.ico;assets" `
-          --add-data "configuration.json;." --add-data "update_scripts\\windows_updater.bat;update_scripts"
+          --add-data "configuration.json;."
 
       - name: Create / update release
         uses: softprops/action-gh-release@v1
