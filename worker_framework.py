@@ -5,11 +5,12 @@ Worker Thread Framework
 A flexible framework for managing worker threads in PyQt applications.
 """
 
-from PyQt5.QtCore import QObject, QThread, pyqtSignal, pyqtSlot
+from PyQt6.QtCore import QObject, QThread, pyqtSignal, pyqtSlot
 import threading
 import logging
 import uuid
 import traceback
+from typing import TypedDict
 
 
 class Worker(QObject):
@@ -79,15 +80,18 @@ class Worker(QObject):
 
     def _thread_name(self):
         """Get the current thread name"""
-        return QThread.currentThread().objectName() or threading.current_thread().name
+        return QThread.currentThread().objectName() or threading.current_thread().name #type: ignore
 
+class WorkerRecord(TypedDict):
+    worker: Worker
+    thread: QThread
 
 class ThreadController:
     """Manages worker threads with proper lifecycle management"""
 
     def __init__(self, logger: logging.Logger):
         """Initialize the thread controller"""
-        self.workers: dict[str, dict[str, Worker | QThread]] = {}
+        self.workers: dict[str, WorkerRecord] = {}
         self._logger = logger
         self._thread_name = threading.current_thread().name
 
@@ -120,7 +124,7 @@ class ThreadController:
         worker.moveToThread(thread)
 
         # Store worker and thread
-        self.workers[worker.name] = {"worker": worker, "thread": thread}
+        self.workers[worker.name] = WorkerRecord(worker=worker, thread=thread)
 
         self._logger.info(f"[[{self._thread_name}]] added worker: {worker.name}")
 

@@ -1,6 +1,6 @@
 from typing import Optional
 from PIL import Image
-from PyQt5.QtCore import pyqtSignal
+from PyQt6.QtCore import pyqtSignal
 import threading
 
 from text_extractor import TextExtractor
@@ -13,7 +13,6 @@ from worker_framework import Worker
 class BaseCaptureWorker(Worker):
 
     message_ready = pyqtSignal(str)
-    capture_window_closed = pyqtSignal()
 
     def __init__(
         self,
@@ -58,7 +57,7 @@ class WindowsCaptureWorkerV2(BaseCaptureWorker):
     ):
         super().__init__(worker_name, logger, message_builder, text_extractor, configuration)
         from windows_capture import WindowsCapture, Frame, CaptureControl
-        import sys, platform
+        import sys
 
         major, minor, build, *_ = sys.getwindowsversion()
 
@@ -67,47 +66,32 @@ class WindowsCaptureWorkerV2(BaseCaptureWorker):
             window_name=window_identifier, cursor_capture=False, draw_border=False if supports_borderless else None
         )
         self._control: Optional[CaptureControl] = None
-        self._busy = False
 
-        @self._cap.event
-        def on_frame_arrived(frame: Frame, control):
-            if self._busy:
-                return
+        @self._cap.event # type: ignore
+        def on_frame_arrived(frame: Frame, control: CaptureControl):
             try:
-                self._busy = True
                 # BGRA -> RGB ndarray -> PIL.Image
                 rgb = frame.convert_to_bgr().frame_buffer[..., ::-1].copy()
                 image = Image.fromarray(rgb)
                 self._process_frame(image)
+                control.stop()
+                self._control = None
             except Exception as exc:
                 self.error.emit(str(exc))
-            finally:
-                self._busy = False
 
-        @self._cap.event
+        @self._cap.event #type: ignore
         def on_closed():
             self._logger.info("Capture worker closed")
-            self._on_stop_requested()
+            self._control = None
 
     def _run(self):
         if self._control is not None:      # already capturing
+            self._logger.info("already capturing")
             return
         try:
             self._control = self._cap.start_free_threaded()
         except Exception as exc:
             self.error.emit(f"Capture failed: {exc}")
-
-    def _on_stop_requested(self):
-        self._logger.info("Stop Requested in windows capture worker")
-        try:
-            if self._control:
-                self._control.stop()
-                self._control.wait()
-                self._control = None
-            self.capture_window_closed.emit()
-        except Exception as exc:
-            self.error.emit(f"Failed to stop: {exc}")
-
 
 class MacCaptureWorker(BaseCaptureWorker):
     def __init__(
@@ -126,7 +110,7 @@ class MacCaptureWorker(BaseCaptureWorker):
     def _find_target_window(self) -> Optional[int]:
         """Find the window matching our identifier using CoreGraphics."""
         try:
-            from Quartz import CGWindowListCopyWindowInfo, kCGWindowListOptionOnScreenOnly, kCGNullWindowID
+            from Quartz import CGWindowListCopyWindowInfo, kCGWindowListOptionOnScreenOnly, kCGNullWindowID #type: ignore
 
             windows = CGWindowListCopyWindowInfo(kCGWindowListOptionOnScreenOnly, kCGNullWindowID)
             for window in windows:
@@ -145,7 +129,7 @@ class MacCaptureWorker(BaseCaptureWorker):
     def _capture_frame(self) -> None:
         """Capture a frame from the target window using CoreGraphics."""
         try:
-            from Quartz import (
+            from Quartz import ( #type: ignore
                 CGWindowListCreateImage,
                 CGRectNull,
                 kCGWindowImageDefault,
@@ -156,7 +140,7 @@ class MacCaptureWorker(BaseCaptureWorker):
                 CGDataProviderCopyData,
                 CGImageGetBytesPerRow,
             )
-            from CoreFoundation import CFDataGetBytes, CFDataGetLength
+            from CoreFoundation import CFDataGetBytes, CFDataGetLength #type: ignore
             import numpy as np
 
             image = CGWindowListCreateImage(
@@ -192,7 +176,7 @@ class MacCaptureWorker(BaseCaptureWorker):
         try:
             self._target_window_id = self._find_target_window()
             if not self._target_window_id:
-                self.logger.info(
+                self._logger.info(
                     f"[{threading.current_thread().name}] Could not find window for identifier: {self.window_identifier}"
                 )
                 return
@@ -200,7 +184,7 @@ class MacCaptureWorker(BaseCaptureWorker):
             self._capture_frame()
 
         except Exception as exc:
-            self.logger.error(f"[{threading.current_thread().name}] Capture failed: {exc}")
+            self._logger.error(f"[{threading.current_thread().name}] Capture failed: {exc}")
 
     def _on_stop_requested(self):
         self._target_window_id = None

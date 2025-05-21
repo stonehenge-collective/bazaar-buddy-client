@@ -10,10 +10,10 @@ from pathlib import Path
 from typing import Optional
 
 import requests
-from PyQt5.QtCore import QObject, pyqtSignal
+from PyQt6.QtCore import QObject, pyqtSignal
 import requests, tempfile, subprocess, sys
 import subprocess
-from PyQt5.QtWidgets import QApplication
+from PyQt6.QtWidgets import QApplication
 import threading
 
 from configuration import Configuration
