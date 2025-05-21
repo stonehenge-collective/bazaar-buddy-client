@@ -8,7 +8,6 @@ from worker_framework import ThreadController
 from capture_worker import BaseCaptureWorker
 from timer_worker import TimerWorker
 
-
 class BazaarBuddy:
     def __init__(
         self,
@@ -65,10 +64,8 @@ class BazaarBuddy:
         self.half_second_timer.disconnect(self.attempt_start_connection)
 
         self.thread_controller.add_worker(self.capture_worker)
-        if (
-            self.configuration.operating_system == "Darwin"
-        ):  # mac capture worker captures on command; windows has its own event loop
-            self.half_second_timer.timer_tick.connect(self.capture_worker._run)
+
+        self.half_second_timer.timer_tick.connect(self.capture_worker._run)
         self.capture_worker.message_ready.connect(self.overlay.set_message)
         # self.capture_worker.capture_window_closed.connect(self.start_polling, Qt.ConnectionType.DirectConnection)
         self.logger.info(f"[{self.thread_name}] starting capture worker")

@@ -5,11 +5,12 @@ Worker Thread Framework
 A flexible framework for managing worker threads in PyQt applications.
 """
 
-from PyQt5.QtCore import QObject, QThread, pyqtSignal, pyqtSlot
+from PyQt6.QtCore import QObject, QThread, pyqtSignal, pyqtSlot
 import threading
 import logging
 import uuid
 import traceback
+from typing import TypedDict
 
 
 class Worker(QObject):
@@ -79,15 +80,18 @@ class Worker(QObject):
 
     def _thread_name(self):
         """Get the current thread name"""
-        return QThread.currentThread().objectName() or threading.current_thread().name
+        return QThread.currentThread().objectName() or threading.current_thread().name #type: ignore
 
+class WorkerRecord(TypedDict):
+    worker: Worker
+    thread: QThread
 
 class ThreadController:
     """Manages worker threads with proper lifecycle management"""
 
     def __init__(self, logger: logging.Logger):
         """Initialize the thread controller"""
-        self.workers: dict[str, dict[str, Worker | QThread]] = {}
+        self.workers: dict[str, WorkerRecord] = {}
         self._logger = logger
         self._thread_name = threading.current_thread().name
 
@@ -120,9 +124,9 @@ class ThreadController:
         worker.moveToThread(thread)
 
         # Store worker and thread
-        self.workers[worker.name] = {"worker": worker, "thread": thread}
+        self.workers[worker.name] = WorkerRecord(worker=worker, thread=thread)
 
-        self._logger.info(f"[[{self._thread_name}]] added worker: {worker.name}")
+        self._logger.info(f"[{self._thread_name}] added worker: {worker.name}")
 
         if auto_start:
             self.start_worker(worker.name)
@@ -146,7 +150,7 @@ class ThreadController:
 
         worker_data = self.workers[worker_name]
         worker_data["thread"].start()
-        self._logger.info(f"[[{self._thread_name}]] started worker: {worker_name}")
+        self._logger.info(f"[{self._thread_name}] started worker: {worker_name}")
         return True
 
     def stop_worker(self, worker_name):
@@ -167,29 +171,29 @@ class ThreadController:
         success = worker_data["thread"].wait(3000)
 
         if success:
-            self._logger.info(f"[[{self._thread_name}]] stopped worker: {worker_name}")
+            self._logger.info(f"[{self._thread_name}] stopped worker: {worker_name}")
             self.workers.pop(worker_name, None)
         else:
-            self._logger.warning(f"[[{self._thread_name}]] worker did not stop cleanly: {worker_name}")
+            self._logger.warning(f"[{self._thread_name}] worker did not stop cleanly: {worker_name}")
 
     def start_all(self):
         """Start all worker threads"""
-        self._logger.info(f"[[{self._thread_name}]] starting all workers")
+        self._logger.info(f"[{self._thread_name}] starting all workers")
         for worker_name in self.workers:
             self.start_worker(worker_name)
 
     def stop_all(self):
         """Stop all worker threads"""
-        self._logger.info(f"[[{self._thread_name}]] stopping all workers")
+        self._logger.info(f"[{self._thread_name}] stopping all workers")
         for worker_name in list(self.workers.keys()):
             self.stop_worker(worker_name)
 
     def cleanup(self):
         """Force cleanup of threads that haven't stopped properly"""
-        self._logger.info(f"[[{self._thread_name}]] performing final cleanup")
+        self._logger.info(f"[{self._thread_name}] performing final cleanup")
         for worker_name, worker_data in list(self.workers.items()):
             if worker_data["thread"].isRunning():
-                self._logger.warning(f"[[{self._thread_name}]] forcing thread to terminate: {worker_name}")
+                self._logger.warning(f"[{self._thread_name}] forcing thread to terminate: {worker_name}")
                 worker_data["thread"].terminate()
                 worker_data["thread"].wait()
             self.workers.pop(worker_name, None)

@@ -113,8 +113,8 @@ class MessageBuilder:
 
     @staticmethod
     def _build_keyword_set(entities: Sequence[Dict[str, Any]]) -> set[str]:
-        kw: set[str] = {e.get("name") for e in entities if e.get("name")}
-        for alt in (e.get("alt_text") for e in entities if e.get("alt_text")):
+        kw: set[str] = {e["name"] for e in entities}
+        for alt in (e["alt_text"] for e in entities if e.get("alt_text")):
             kw.update(alt)
         return kw
 
