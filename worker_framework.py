@@ -62,7 +62,9 @@ class Worker(QObject):
         Override this method in subclasses to implement worker logic.
         """
         try:
-            self._logger.info(f"[{threading.current_thread().name}] Starting work on thread: {self._thread_name()}")
+            self._logger.info(
+                f"[{threading.current_thread().name}] {self._name}: starting work on thread: {self._thread_name()}"
+            )
             self.started.emit()
             self._run()
         except Exception as e:
@@ -80,11 +82,13 @@ class Worker(QObject):
 
     def _thread_name(self):
         """Get the current thread name"""
-        return QThread.currentThread().objectName() or threading.current_thread().name #type: ignore
+        return QThread.currentThread().objectName() or threading.current_thread().name  # type: ignore
+
 
 class WorkerRecord(TypedDict):
     worker: Worker
     thread: QThread
+
 
 class ThreadController:
     """Manages worker threads with proper lifecycle management"""

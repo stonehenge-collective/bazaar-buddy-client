@@ -17,9 +17,12 @@ import threading
 from PIL import Image
 import pytesseract
 from pytesseract import Output
+from PyQt6.QtCore import pyqtSignal
 
 from configuration import Configuration
 from logging import Logger
+from worker_framework import Worker
+from message_builder import MessageBuilder
 
 
 class TextExtractor:
@@ -112,6 +115,45 @@ class TextExtractor:
         self._logger.debug(
             f"[{threading.current_thread().name}] Configured Tesseract binary: {pytesseract.pytesseract.tesseract_cmd}"
         )
+
+
+class TextExtractorWorker(Worker):
+
+    message_ready = pyqtSignal(str)
+
+    def __init__(
+        self,
+        name: str,
+        configuration: Configuration,
+        message_builder: MessageBuilder,
+        text_extractor: TextExtractor,
+        logger: Logger,
+    ):
+        super().__init__(logger, name)
+        self._message_builder = message_builder
+        self._text_extractor = text_extractor
+        self._configuration = configuration
+
+    def process_frame(self, image: Image.Image) -> None:
+        try:
+            if self._configuration.save_images:
+                from datetime import datetime
+
+                filename = datetime.now().strftime("%Y%m%d_%H%M%S_%f") + ".png"
+                image.save(self._configuration.system_path / filename)
+            text = self._text_extractor.extract_text(image)
+            self._logger.info(f"[{threading.current_thread().name}] parsed text: {text}")
+            if message := self._message_builder.get_message(text):
+                self._logger.info(f"[{threading.current_thread().name}] built message: {message}")
+                self.message_ready.emit(message)
+        except (AttributeError, PermissionError):
+            pass
+
+    def _run(self):
+        pass
+
+    def _on_stop_requested(self):
+        pass
 
 
 # --------------------------------------------------------------------- #
