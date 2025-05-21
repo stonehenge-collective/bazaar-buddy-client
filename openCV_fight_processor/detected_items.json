@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Nanobot",
+    "x_coord": 105,
+    "y_coord": 540,
+    "score": 0.7064481973648071,
+    "board": "your_board",
+    "position": 1
+  },
+  {
+    "name": "Nanobot",
+    "x_coord": 228,
+    "y_coord": 549,
+    "score": 0.7064481973648071,
+    "board": "your_board",
+    "position": 2
+  },
+  {
+    "name": "Cutlass",
+    "x_coord": 697,
+    "y_coord": 541,
+    "score": 0.7858558297157288,
+    "board": "your_board",
+    "position": 3
+  },
+  {
+    "name": "Mantis Shrimp",
+    "x_coord": 1066,
+    "y_coord": 535,
+    "score": 0.7294595241546631,
+    "board": "your_board",
+    "position": 4
+  },
+  {
+    "name": "Switchblade",
+    "x_coord": 1461,
+    "y_coord": 543,
+    "score": 0.7132904529571533,
+    "board": "your_board",
+    "position": 5
+  },
+  {
+    "name": "Katana",
+    "x_coord": 324,
+    "y_coord": 136,
+    "score": 0.8204053640365601,
+    "board": "enemies_board",
+    "position": 1
+  },
+  {
+    "name": "Piranha",
+    "x_coord": 692,
+    "y_coord": 136,
+    "score": 0.68116295337677,
+    "board": "enemies_board",
+    "position": 2
+  },
+  {
+    "name": "Trebuchet",
+    "x_coord": 881,
+    "y_coord": 139,
+    "score": 0.8389077186584473,
+    "board": "enemies_board",
+    "position": 3
+  }
+]
