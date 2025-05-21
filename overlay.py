@@ -15,6 +15,7 @@ from PyQt6.QtWidgets import (
     QToolButton,
     QVBoxLayout,
     QWidget,
+    QLineEdit,
 )
 
 # ──────────────────────────  constants  ──────────────────────────
@@ -98,7 +99,7 @@ class Overlay(QWidget):
         grip_w = self.size_grips[0].sizeHint().width()
         grip_h = self.size_grips[0].sizeHint().height()
 
-        self.size_grips[0].move(0, 0)
+        self.size_grips[0].move(-grip_w, -grip_h)
         self.size_grips[1].move(self.width() - grip_w, 0)
         self.size_grips[2].move(0, self.height() - grip_h)
         self.size_grips[3].move(self.width() - grip_w, self.height() - grip_h)
@@ -108,13 +109,23 @@ class Overlay(QWidget):
 
     # ─────────────────────────  UI building  ─────────────────────
     def _build_ui(self) -> None:
-        # ── title bar ──
-        self.top_label = QLabel("Bazaar Buddy", self)
-        self.top_label.setFont(self._font)
-        self.top_label.setStyleSheet("color:white;")
-        self.top_label.setFixedHeight(24)
-        self.top_label.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignTop)
-        self.top_label.setContentsMargins(0, 4, 0, 0)
+        self.search_bar = QLineEdit(self)
+        self.search_bar.setFont(self._font)
+        self.search_bar.setPlaceholderText("Search...")
+        self.search_bar.setFixedHeight(24)
+        self.search_bar.setStyleSheet(
+            """
+            QLineEdit {
+                color: white;
+                background: rgba(255,255,255,0.10);
+                border: 1px solid rgba(255,255,255,0.40);
+                border-radius: 4px;
+            }
+            QLineEdit::placeholder {
+                color: rgba(255,255,255,0.50);   /* semi-transparent */
+            }
+            """
+        )
 
         # ── main text inside scroll-area ──
         self.label = QLabel(
@@ -136,8 +147,8 @@ class Overlay(QWidget):
 
         # ── container layout ──
         layout = QVBoxLayout(self)
-        layout.setContentsMargins(PADDING, PADDING, PADDING, PADDING)
-        layout.addWidget(self.top_label)
+        layout.setContentsMargins(PADDING, PADDING, PADDING + 2*24, PADDING)
+        layout.addWidget(self.search_bar)
         layout.addWidget(self.scroll_area) #type: ignore
 
         # ── corner size-grips ──
@@ -214,11 +225,8 @@ class Overlay(QWidget):
 
     # ──────────────────────  internal helpers  ───────────────────
     def _update_button_positions(self) -> None:
-        self.close_button.move(self.width() - self.close_button.width() - PADDING // 2,
-                               PADDING // 2)
-        self.toggle_button.move(self.width() - self.toggle_button.width()
-                                - self.close_button.width() - PADDING // 2,
-                                PADDING // 2)
+        self.close_button.move(self.width() - self.close_button.width() - PADDING // 2, self.search_bar.y())
+        self.toggle_button.move(self.width() - self.toggle_button.width() - self.close_button.width() - PADDING // 2, self.search_bar.y())
 
     def set_message(self, text: str) -> None:
         if text == self.text:
@@ -232,7 +240,7 @@ class Overlay(QWidget):
         if self.toggle_button.isChecked():
             self.scroll_area.hide()
             self._collapsed_height = self.height()
-            self.setFixedHeight(self.top_label.height() + PADDING)
+            self.setFixedHeight(self.search_bar.height() + PADDING*2)
             self.toggle_button.setText("+")
         else:
             if hasattr(self, "_collapsed_height"):
