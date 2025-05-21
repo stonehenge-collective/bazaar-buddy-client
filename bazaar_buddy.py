@@ -8,7 +8,7 @@ from worker_framework import ThreadController
 from capture_worker import BaseCaptureWorker
 from timer_worker import TimerWorker
 from text_extractor_worker import TextExtractorWorker
-
+from PyQt6 import QtCore
 
 class BazaarBuddy:
     def __init__(
@@ -40,6 +40,11 @@ class BazaarBuddy:
         self.attempt_start_connection = self.one_second_timer.timer_tick.connect(self._attempt_start)
         self.thread_controller.start_worker(self.one_second_timer.name)
 
+    def restart_polling(self):
+        self.logger.info(f"[{self.thread_name}] Restarting Polling")
+        self.one_second_timer.disconnect(self.capture_connection)
+        self.attempt_start_connection = self.one_second_timer.timer_tick.connect(self._attempt_start)
+
     def _attempt_start(self):
 
         self.logger.info(f"[{self.thread_name}] attempting to find the Bazaar process…")
@@ -68,11 +73,11 @@ class BazaarBuddy:
         self.one_second_timer.disconnect(self.attempt_start_connection)
 
         self.thread_controller.add_worker(self.capture_worker)
-        self.one_second_timer.timer_tick.connect(self.capture_worker._run)
+        self.capture_connection = self.one_second_timer.timer_tick.connect(self.capture_worker._run)
         self.thread_controller.add_worker(self.text_extractor_worker)
         self.capture_worker.image_captured.connect(self.text_extractor_worker.process_frame)
         self.text_extractor_worker.message_ready.connect(self.overlay.set_message)
-        # self.capture_worker.capture_window_closed.connect(self.start_polling, Qt.ConnectionType.DirectConnection)
+        self.capture_worker.window_closed.connect(self.restart_polling)
         self.logger.info(f"[{self.thread_name}] starting capture worker")
         self.thread_controller.start_worker(self.capture_worker.name)
         self.logger.info(f"[{self.thread_name}] starting text extractor worker")

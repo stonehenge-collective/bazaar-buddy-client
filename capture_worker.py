@@ -10,6 +10,7 @@ from worker_framework import Worker
 class BaseCaptureWorker(Worker):
 
     image_captured = pyqtSignal(Image.Image)
+    window_closed = pyqtSignal()
 
     def __init__(
         self,
@@ -64,6 +65,9 @@ class WindowsCaptureWorkerV2(BaseCaptureWorker):
             self._control = self._cap.start_free_threaded()
         except Exception as exc:
             self.error.emit(f"Capture failed: {exc}")
+            if "Failed To Find Window" in str(exc):
+                self.window_closed.emit()
+
 
 
 class MacCaptureWorker(BaseCaptureWorker):
