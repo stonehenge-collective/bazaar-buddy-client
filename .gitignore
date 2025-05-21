@@ -4,6 +4,6 @@
 **/launch.json
 **/dist
 **/build
-**/app.log
+**/**.log
 **/*.spec
 **/*.exe
