@@ -1,6 +1,6 @@
 import sys, traceback
-from PyQt5.QtGui import QIcon
-from PyQt5.QtCore import QTimer
+from PyQt6.QtGui import QIcon
+from PyQt6.QtCore import QTimer
 import threading
 
 from container import container as c
@@ -46,7 +46,7 @@ def main() -> int:
 
     c.overlay.about_to_close.connect(shutdown)
 
-    return_code = c.app.exec_()
+    return_code = c.app.exec()
 
     # cleanup anything that didn't stop cleanly
     c.thread_controller.cleanup()

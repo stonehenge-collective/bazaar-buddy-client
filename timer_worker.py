@@ -1,4 +1,4 @@
-from PyQt5.QtCore import QTimer, QMetaObject, pyqtSignal, QThread, Q_ARG
+from PyQt6.QtCore import QTimer, QMetaObject, pyqtSignal, QThread, Q_ARG
 from worker_framework import Worker
 import logging
 
@@ -27,9 +27,9 @@ class TimerWorker(Worker):
     def _run(self):
         """Set up and start the timer"""
         # Ensure timer is in the current thread
-        self.timer.moveToThread(QThread.currentThread())
+        self.timer.moveToThread(QThread.currentThread()) #type: ignore
         # Connect timeout in the current thread's context
-        self.timer.timeout.connect(self._on_timeout)
+        self.timer.timeout.connect(self._on_timeout) #type: ignore
         # Start timer safely using QMetaObject
         QMetaObject.invokeMethod(self.timer, "start", Q_ARG(int, self.interval))
 

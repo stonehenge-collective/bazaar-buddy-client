@@ -7,7 +7,8 @@ from configuration import Configuration
 from worker_framework import ThreadController
 from capture_worker import BaseCaptureWorker
 from timer_worker import TimerWorker
-from PyQt5.QtCore import Qt
+from text_extractor_worker import TextExtractorWorker
+from PyQt6 import QtCore
 
 class BazaarBuddy:
     def __init__(
@@ -16,7 +17,8 @@ class BazaarBuddy:
         logger: Logger,
         thread_controller: ThreadController,
         capture_worker: BaseCaptureWorker,
-        half_second_timer: TimerWorker,
+        text_extractor_worker: TextExtractorWorker,
+        one_second_timer: TimerWorker,
         system_handler: BaseSystemHandler,
         configuration: Configuration,
     ):
@@ -24,18 +26,24 @@ class BazaarBuddy:
         self.logger = logger
         self.thread_controller = thread_controller
         self.capture_worker = capture_worker
-        self.half_second_timer = half_second_timer
+        self.text_extractor_worker = text_extractor_worker
+        self.one_second_timer = one_second_timer
         self.system_handler = system_handler
         self.configuration = configuration
         self.thread_name = threading.current_thread().name
 
     def start_polling(self):
-        self.logger.info("Start Polling")
+        self.logger.info(f"[{self.thread_name}] Start Polling")
         self.overlay.set_message("Waiting for The Bazaar to start…")
-        self.thread_controller.add_worker(self.half_second_timer)
+        self.thread_controller.add_worker(self.one_second_timer)
         # saving connection so we can disconnect later
-        self.attempt_start_connection = self.half_second_timer.timer_tick.connect(self._attempt_start)
-        self.thread_controller.start_worker(self.half_second_timer.name)
+        self.attempt_start_connection = self.one_second_timer.timer_tick.connect(self._attempt_start)
+        self.thread_controller.start_worker(self.one_second_timer.name)
+
+    def restart_polling(self):
+        self.logger.info(f"[{self.thread_name}] Restarting Polling")
+        self.one_second_timer.disconnect(self.capture_connection)
+        self.attempt_start_connection = self.one_second_timer.timer_tick.connect(self._attempt_start)
 
     def _attempt_start(self):
 
@@ -62,14 +70,15 @@ class BazaarBuddy:
         self.logger.info(f"[{self.thread_name}] Bazaar process found")
 
         self.logger.info(f"[{self.thread_name}] stopping trying to _attempt_start")
-        self.half_second_timer.disconnect(self.attempt_start_connection)
+        self.one_second_timer.disconnect(self.attempt_start_connection)
 
         self.thread_controller.add_worker(self.capture_worker)
-        if self.configuration.operating_system == "Darwin": #mac capture worker captures on command; windows has its own event loop
-            self.half_second_timer.timer_tick.connect(self.capture_worker._run)
-        elif self.configuration.operating_system == "Windows":
-            self.capture_worker._run()
-        self.capture_worker.message_ready.connect(self.overlay.set_message)
-        # self.capture_worker.capture_window_closed.connect(self.start_polling, Qt.ConnectionType.DirectConnection)
+        self.capture_connection = self.one_second_timer.timer_tick.connect(self.capture_worker._run)
+        self.thread_controller.add_worker(self.text_extractor_worker)
+        self.capture_worker.image_captured.connect(self.text_extractor_worker.process_frame)
+        self.text_extractor_worker.message_ready.connect(self.overlay.set_message)
+        self.capture_worker.window_closed.connect(self.restart_polling)
         self.logger.info(f"[{self.thread_name}] starting capture worker")
         self.thread_controller.start_worker(self.capture_worker.name)
+        self.logger.info(f"[{self.thread_name}] starting text extractor worker")
+        self.thread_controller.start_worker(self.text_extractor_worker.name)

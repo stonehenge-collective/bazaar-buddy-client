@@ -5,7 +5,7 @@ import logging
 import sys
 
 from configuration import Configuration
-from text_extractor import TextExtractor
+from text_extractor_worker import TextExtractor
 from message_builder import MessageBuilder
 from logger import logger
 

@@ -1,13 +1,17 @@
 from abc import ABC, abstractmethod
+from psutil import Process
 from typing import Optional
+from psutil import process_iter
 
 class BaseSystemHandler(ABC):
     """Base class for system-specific process and window handling."""
 
-    @abstractmethod
-    def get_process_by_name(self, process_name: str) -> Optional[dict]:
+    def get_process_by_name(self, process_name: str) -> Optional[Process]:
         """Find a process by its name."""
-        pass
+        return next(
+            (p for p in process_iter(["name", "pid"]) if p.info["name"] == process_name),
+            None,
+        )
 
     @abstractmethod
     def find_process_main_window_handle(self, process_id: int) -> Optional[int]:
@@ -19,19 +23,11 @@ class WindowsSystemHandler(BaseSystemHandler):
     """Windows-specific system handler."""
 
     def __init__(self):
-        import psutil
         import win32gui
         import win32process
 
-        self.psutil = psutil
         self.win32gui = win32gui
         self.win32process = win32process
-
-    def get_process_by_name(self, process_name: str) -> Optional[dict]:
-        return next(
-            (p for p in self.psutil.process_iter(["name", "pid"]) if p.info["name"] == process_name),
-            None,
-        )
 
     def find_process_main_window_handle(self, process_id: int) -> Optional[int]:
         result: Optional[int] = None
@@ -51,18 +47,6 @@ class WindowsSystemHandler(BaseSystemHandler):
 
 class MacSystemHandler(BaseSystemHandler):
     """Mac-specific system handler."""
-
-    def __init__(self):
-        import psutil
-
-        self.psutil = psutil
-
-    def get_process_by_name(self, process_name: str) -> Optional[dict]:
-        # On macOS, we can use bundle ID or process name
-        return next(
-            (p for p in self.psutil.process_iter(["name", "pid"]) if p.info["name"] == process_name),
-            None,
-        )
 
     def find_process_main_window_handle(self, process_id: int) -> Optional[int]:
         # On macOS, we return the process ID itself as the "handle"

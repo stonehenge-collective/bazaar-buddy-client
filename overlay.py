@@ -1,45 +1,49 @@
-import signal
-import sys
+from __future__ import annotations
+
 from typing import Optional
-from PyQt5.QtCore import QPoint, QSize, Qt, pyqtSignal
-from PyQt5.QtGui import QColor, QFont, QGuiApplication, QPainter
-from PyQt5.QtWidgets import (
+
+from PyQt6.QtCore import QPoint, QSize, Qt, pyqtSignal
+from PyQt6.QtGui import QColor, QFont, QGuiApplication, QPainter, QPaintEvent, QMouseEvent, QKeyEvent, QResizeEvent
+from PyQt6.QtWidgets import (
+    QFrame,
+    QHBoxLayout,
     QLabel,
     QPushButton,
     QScrollArea,
     QSizeGrip,
     QSizePolicy,
+    QToolButton,
     QVBoxLayout,
     QWidget,
-    QToolButton,
-    QHBoxLayout,
 )
 
-from configuration import Configuration
-
-INITIAL_SIZE = QSize(300, 200)  # starting size of the overlay (width × height)
-MARGIN = 20  # minimal margin to screen edges
-PADDING = 10
-BG_COLOR = QColor(0, 0, 0)
+# ──────────────────────────  constants  ──────────────────────────
+INITIAL_SIZE = QSize(300, 200)          # starting overlay size
+MARGIN        = 20                      # min distance to screen edge (px)
+PADDING       = 10
+BG_COLOR      = QColor(0, 0, 0)         # semi-transparent black
+# ─────────────────────────────────────────────────────────────────
 
 
 class Overlay(QWidget):
+    """Always-on-top, frameless, draggable, resizable overlay with
+    optional ‘Yes/No’ prompt buttons."""
 
-    yes_clicked = pyqtSignal()
-    no_clicked = pyqtSignal()
-    about_to_close = pyqtSignal()  # New signal for cleanup
+    yes_clicked     = pyqtSignal()
+    no_clicked      = pyqtSignal()
+    about_to_close  = pyqtSignal()
 
-    def __init__(self, text: str, configuration: Configuration):
-        super().__init__(flags=Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
+    # ──────────────────────────  life-cycle  ─────────────────────
+    def __init__(self, text: str, configuration) -> None:
+        super().__init__(
+            flags=Qt.WindowType.WindowStaysOnTopHint
+            | Qt.WindowType.FramelessWindowHint
+        )
         self.setWindowOpacity(0.85)
 
-        self._font: QFont = None
-        if configuration.operating_system == "Windows":
-            self._font = QFont("Segoe UI", 12)
-        else:
-            self._font = QFont("Helvetica", 12)
-        self.text = text
-        self._drag_pos: Optional[QPoint] = None
+        self._font      = QFont("Segoe UI" if configuration.operating_system == "Windows" else "Helvetica", 12)
+        self.text       = text
+        self._drag_pos: Optional[QPoint] = None     # start corner while dragging
 
         self._build_ui()
         self._layout_overlay()
@@ -49,38 +53,51 @@ class Overlay(QWidget):
         self.raise_()
         self.activateWindow()
 
-    # ---------- QWidget overrides ----------
-
-    def paintEvent(self, event):  # noqa: N802
+    # ──────────────────────────  paint  ──────────────────────────
+    def paintEvent(self, event: QPaintEvent) -> None:      #type: ignore[override]
         painter = QPainter(self)
-        painter.setRenderHint(QPainter.Antialiasing)
+        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
         painter.setBrush(BG_COLOR)
-        painter.setPen(Qt.NoPen)
+        painter.setPen(Qt.PenStyle.NoPen)
         painter.drawRoundedRect(self.rect(), 12, 12)
 
-    # ––– dragging –––
-    def mousePressEvent(self, event):  # noqa: N802
-        if event.button() == Qt.LeftButton:
-            self._drag_pos = event.globalPos() - self.frameGeometry().topLeft()
+     # ──────────────────────  mouse interaction  ─────────────────
+    def mousePressEvent(self, event: QMouseEvent) -> None:     #type: ignore[override]
+        if event.button() == Qt.MouseButton.LeftButton:
+            # globalPosition() → QPointF in Qt 6; convert to QPoint for arithmetic
+            self._drag_pos = event.globalPosition().toPoint() - self.frameGeometry().topLeft()
             event.accept()
+        else:
+            super().mousePressEvent(event)
 
-    def mouseMoveEvent(self, event):  # noqa: N802
-        if self._drag_pos and event.buttons() & Qt.LeftButton:
-            self.move(event.globalPos() - self._drag_pos)
+    def mouseMoveEvent(self, event: QMouseEvent) -> None: #type: ignore[override]
+        if (
+            self._drag_pos is not None
+            and (event.buttons() & Qt.MouseButton.LeftButton)
+        ):
+            self.move(event.globalPosition().toPoint() - self._drag_pos)
             event.accept()
+        else:
+            super().mouseMoveEvent(event)
 
-    def mouseReleaseEvent(self, event):  # noqa: N802
+    def mouseReleaseEvent(self, event: QMouseEvent) -> None: #type: ignore[override]
         self._drag_pos = None
         super().mouseReleaseEvent(event)
 
-    def keyPressEvent(self, event):  # noqa: N802
-        if event.key() in (Qt.Key_Escape, Qt.Key_Q):
-            self.about_to_close.emit()
+    # ───────────────────────  key handling  ────────────────────
+    def keyPressEvent(self, event: QKeyEvent) -> None: #type: ignore[override]
+        if event.key() in (Qt.Key.Key_Escape, Qt.Key.Key_Q):
+            self.about_to_close.emit()          # type: ignore[attr-defined]
             self.close()
+        else:
+            super().keyPressEvent(event)
 
-    def resizeEvent(self, event):  # noqa: N802
+    # ───────────────────────  resize handling  ─────────────────
+    def resizeEvent(self, event: QResizeEvent) -> None: #type: ignore[override]
+        """Keep the size-grips & buttons where they belong."""
         grip_w = self.size_grips[0].sizeHint().width()
         grip_h = self.size_grips[0].sizeHint().height()
+
         self.size_grips[0].move(0, 0)
         self.size_grips[1].move(self.width() - grip_w, 0)
         self.size_grips[2].move(0, self.height() - grip_h)
@@ -89,101 +106,102 @@ class Overlay(QWidget):
         self._update_button_positions()
         super().resizeEvent(event)
 
-    # ---------- helpers ----------
-
+    # ─────────────────────────  UI building  ─────────────────────
     def _build_ui(self) -> None:
-        # ----- Draggable top bar -----
+        # ── title bar ──
         self.top_label = QLabel("Bazaar Buddy", self)
         self.top_label.setFont(self._font)
-        self.top_label.setStyleSheet("color: white;")
+        self.top_label.setStyleSheet("color:white;")
         self.top_label.setFixedHeight(24)
-        self.top_label.setAlignment(Qt.AlignLeft | Qt.AlignTop)
+        self.top_label.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignTop)
         self.top_label.setContentsMargins(0, 4, 0, 0)
 
-        # ----- Text inside a scroll area -----
-        self.label = QLabel(self.text, wordWrap=True, alignment=Qt.AlignLeft | Qt.AlignTop)
+        # ── main text inside scroll-area ──
+        self.label = QLabel(
+            self.text,
+        )
+        self.label.setWordWrap(True)
+        self.label.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignTop)
         self.label.setFont(self._font)
-        self.label.setStyleSheet("color: white; background: transparent;")
-        self.label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
-        # self.label.setContentsMargins(0, 0, 10, 0)
+        self.label.setStyleSheet("color:white;background:transparent;")
+        self.label.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
 
-        self.scroll = QScrollArea(frameShape=QScrollArea.NoFrame)
-        self.scroll.setWidgetResizable(True)
-        self.scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.scroll.setWidget(self.label)
-        self.scroll.setStyleSheet("background: transparent;")
-        self.scroll.viewport().setStyleSheet("background: transparent;")
+        self.scroll_area = QScrollArea()
+        self.scroll_area.setFrameShape(QFrame.Shape.NoFrame)
+        self.scroll_area.setWidgetResizable(True)
+        self.scroll_area.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.scroll_area.setWidget(self.label)
+        self.scroll_area.setStyleSheet("background:transparent;")
+        self.scroll_area.viewport().setStyleSheet("background:transparent;") #type: ignore
 
-        # ----- Main layout -----
+        # ── container layout ──
         layout = QVBoxLayout(self)
         layout.setContentsMargins(PADDING, PADDING, PADDING, PADDING)
         layout.addWidget(self.top_label)
-        layout.addWidget(self.scroll)
+        layout.addWidget(self.scroll_area) #type: ignore
 
-        # ----- Corner size grips -----
+        # ── corner size-grips ──
         self.size_grips = [QSizeGrip(self) for _ in range(4)]
         for g in self.size_grips:
-            g.setStyleSheet("background: transparent;")
+            g.setStyleSheet("background:transparent;")
             g.raise_()
 
-        # ----- Close button -----
-        self.close_button = QPushButton("✕", self, toolTip="Close (Esc or Q)")
+        # ── close button ──
+        self.close_button = QPushButton("✕", self)
+        self.close_button.setToolTip("Close (Esc or Q)")
         self.close_button.setFixedSize(24, 24)
         self.close_button.clicked.connect(self.close)
         self.close_button.clicked.connect(self._handle_close)
         self.close_button.setStyleSheet(
-            "QPushButton{color:white;background:rgba(255,255,255,0);"
-            "border:none;font-weight:bold;}"
+            "QPushButton{color:white;background:rgba(255,255,255,0);border:none;font-weight:bold;}"
             "QPushButton:hover{background:rgba(255,255,255,0.2);}"
         )
         self.close_button.raise_()
 
-        # ----- Toggle Button -----
-        self.toggle_button = QToolButton(self, checkable=True, checked=False)
+        # ── collapse/expand button ──
+        self.toggle_button = QToolButton(self)
+        self.toggle_button.setCheckable(True)
+        self.toggle_button.setChecked(False)
         self.toggle_button.setFixedSize(24, 24)
         self.toggle_button.clicked.connect(self._toggle_content)
         self.toggle_button.setStyleSheet(
-            "QToolButton { color:white; background:rgba(255,255,255,0);"
-            "border:none;font-weight:bold;}"
-            "QToolButton:hover { background:rgba(255,255,255,0.2); }"
+            "QToolButton{color:white;background:rgba(255,255,255,0);border:none;font-weight:bold;}"
+            "QToolButton:hover{background:rgba(255,255,255,0.2);}"
         )
         self.toggle_button.setText("-")
 
-        # ----- Style the vertical scrollbar -----
-        bar = self.scroll.verticalScrollBar()
-        top_margin = self.close_button.height() + PADDING // 2
-        bar.setStyleSheet(
+        # ── custom scroll-bar style ──
+        bar         = self.scroll_area.verticalScrollBar()
+        top_margin  = self.close_button.height() + PADDING // 2
+        bar.setStyleSheet( #type: ignore
             f"""
             QScrollBar:vertical {{
-                background: transparent;
-                width: 12px;
-                margin: {top_margin}px 0 {PADDING // 2}px 0;
-                border: none;
+                background:transparent;
+                width:12px;
+                margin:{top_margin}px 0 {PADDING // 2}px 0;
+                border:none;
             }}
             QScrollBar::handle:vertical {{
-                background: rgba(255,255,255,0.35);
-                min-height: 20px;
-                border-radius: 6px;
+                background:rgba(255,255,255,0.35);
+                min-height:20px;
+                border-radius:6px;
             }}
-            /* hide arrow buttons */
             QScrollBar::add-line:vertical,
             QScrollBar::sub-line:vertical {{
-                height: 0px;
-                width: 0px;
+                height:0px; width:0px;                     /* hide arrows   */
             }}
-            /* no coloured "pages" above/below the handle */
             QScrollBar::add-page:vertical,
             QScrollBar::sub-page:vertical {{
-                background: none;
-            }}
-        """
+                background:none;                           /* hide ‘pages’ */
+            }}"""
         )
 
+    # ──────────────────────────  geometry  ───────────────────────
     def _layout_overlay(self) -> None:
-        screen_geom = QGuiApplication.primaryScreen().geometry()
-        s_w, s_h = screen_geom.width(), screen_geom.height()
+        screen   = QGuiApplication.primaryScreen().geometry() #type: ignore
+        s_w, s_h = screen.width(), screen.height()
 
-        w = min(INITIAL_SIZE.width(), s_w - 2 * MARGIN)
+        w = min(INITIAL_SIZE.width(),  s_w - 2 * MARGIN)
         h = min(INITIAL_SIZE.height(), s_h - 2 * MARGIN)
         self.resize(QSize(w, h))
 
@@ -194,95 +212,68 @@ class Overlay(QWidget):
         y = max(MARGIN, min(s_h - h - MARGIN, centre_y - h // 2))
         self.move(x, y)
 
-    # ---------- utility ----------
-
+    # ──────────────────────  internal helpers  ───────────────────
     def _update_button_positions(self) -> None:
-        """Keep the button glued to the top-right corner (inside padding)."""
-        self.close_button.move(
-            self.width() - self.close_button.width() - PADDING // 2,
-            PADDING // 2,
-        )
-        self.toggle_button.move(
-            self.width() - self.toggle_button.width() - self.close_button.width() - PADDING // 2,
-            PADDING // 2,
-        )
+        self.close_button.move(self.width() - self.close_button.width() - PADDING // 2,
+                               PADDING // 2)
+        self.toggle_button.move(self.width() - self.toggle_button.width()
+                                - self.close_button.width() - PADDING // 2,
+                                PADDING // 2)
 
     def set_message(self, text: str) -> None:
         if text == self.text:
             return
         self.text = text
-        self.label.setTextFormat(Qt.RichText)
+        self.label.setTextFormat(Qt.TextFormat.RichText)
         self.label.setText(text)
-        self.scroll.verticalScrollBar().setValue(0)
+        self.scroll_area.verticalScrollBar().setValue(0) #type: ignore
 
     def _toggle_content(self) -> None:
         if self.toggle_button.isChecked():
-            self.scroll.hide()
-            self.collapsedHeight = self.height()
+            self.scroll_area.hide()
+            self._collapsed_height = self.height()
             self.setFixedHeight(self.top_label.height() + PADDING)
             self.toggle_button.setText("+")
         else:
-            if hasattr(self, "collapsedHeight"):
-                self.scroll.show()
-                self.setFixedHeight(self.collapsedHeight)
+            if hasattr(self, "_collapsed_height"):
+                self.scroll_area.show()
+                self.setFixedHeight(self._collapsed_height)
                 self.setMinimumHeight(0)
                 self.setMaximumHeight(16777215)
             self.toggle_button.setText("-")
 
-    def show_prompt_buttons(self, question, yes_text=None, no_text=None):
+    # ───── prompt-button public API ─────
+    def show_prompt_buttons(self, question: str, yes_text: str | None = None, no_text: str | None = None) -> None:
         self.set_message(question)
 
-        # Create and position buttons
         self.button_container = QWidget(self)
-        button_layout = QHBoxLayout(self.button_container)
+        button_layout         = QHBoxLayout(self.button_container)
 
         if yes_text:
-            yes_button = QPushButton(yes_text, self)
-            yes_button.setStyleSheet("background: #4CAF50; color: white; border-radius: 4px; padding: 6px;")
-            button_layout.addWidget(yes_button)
-            yes_button.clicked.connect(lambda: self._handle_button_click(True))
+            yes_btn = QPushButton(yes_text, self)
+            yes_btn.setStyleSheet("background:#4CAF50;color:white;border-radius:4px;padding:6px;")
+            yes_btn.clicked.connect(lambda: self._handle_button_click(True))
+            button_layout.addWidget(yes_btn)
 
         if no_text:
-            no_button = QPushButton(no_text, self)
-            no_button.setStyleSheet("background: #F44336; color: white; border-radius: 4px; padding: 6px;")
-            button_layout.addWidget(no_button)
-            no_button.clicked.connect(lambda: self._handle_button_click(False))
+            no_btn = QPushButton(no_text, self)
+            no_btn.setStyleSheet("background:#F44336;color:white;border-radius:4px;padding:6px;")
+            no_btn.clicked.connect(lambda: self._handle_button_click(False))
+            button_layout.addWidget(no_btn)
 
-        self.button_container.setGeometry(PADDING, self.height() - 50 - PADDING, self.width() - 2 * PADDING, 50)
+        self.button_container.setGeometry(PADDING, self.height() - 50 - PADDING,
+                                          self.width() - 2 * PADDING, 50)
         self.button_container.show()
 
-    def _handle_button_click(self, is_yes):
+    def _handle_button_click(self, is_yes: bool) -> None:
         self.hide_prompt_buttons()
+        (self.yes_clicked if is_yes else self.no_clicked).emit()
 
-        if is_yes:
-            self.yes_clicked.emit()
-        else:
-            self.no_clicked.emit()
-
-    def hide_prompt_buttons(self):
-        if self.button_container:
+    def hide_prompt_buttons(self) -> None:
+        if hasattr(self, "button_container") and self.button_container:
             self.button_container.hide()
             self.button_container.deleteLater()
             self.button_container = None
 
-    def _handle_close(self):
+    def _handle_close(self) -> None:
         self.about_to_close.emit()
-
-
-def main() -> None:
-    text = (
-        "ter text to display:  display: asldfjalskdfj;alskdjf;alksdfj;alkdfj;alksdfj; "
-        "alskdfj;alksnvzx,mcnv;qoirjtg;alksdjf;zlkjf;alksdjfa;lskdfja;ld"
-    )  # get_text()
-    app = QApplication(sys.argv)
-
-    _ = Overlay(text)  # keep a reference so the window isn’t garbage‑collected
-
-    # Allow Ctrl‑C to terminate from console
-    signal.signal(signal.SIGINT, signal.SIG_DFL)
-
-    sys.exit(app.exec_())
-
-
-if __name__ == "__main__":
-    main()

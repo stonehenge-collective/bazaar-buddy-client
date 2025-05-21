@@ -1,12 +1,11 @@
 import sys
-from PyQt5.QtWidgets import QApplication
+from PyQt6.QtWidgets import QApplication
 
 
 from logger import logger
 from configuration import Configuration
 from security import Security
 from message_builder import MessageBuilder
-from text_extractor import TextExtractor
 from system_handler import WindowsSystemHandler, MacSystemHandler, BaseSystemHandler
 from updater import TestUpdateSource, ProductionUpdateSource, BaseUpdater, WindowsUpdater, MacUpdater, BaseUpdateSource
 from overlay import Overlay
@@ -14,6 +13,7 @@ from capture_worker import MacCaptureWorker, WindowsCaptureWorkerV2
 from bazaar_buddy import BazaarBuddy
 from worker_framework import ThreadController
 from timer_worker import TimerWorker
+from text_extractor_worker import TextExtractorWorker, TextExtractor
 
 
 class Container:
@@ -28,7 +28,9 @@ class Container:
         self.security = Security(self.configuration, self.logger)
         self.message_builder = MessageBuilder(self.configuration, self.logger)
         self.text_extractor = TextExtractor(self.configuration, self.logger)
-
+        self.text_extractor_worker = TextExtractorWorker(
+            "text-extractor-worker", self.configuration, self.message_builder, self.text_extractor, self.logger
+        )
         self.system_handler: BaseSystemHandler = (
             WindowsSystemHandler() if self.configuration.operating_system == "Windows" else MacSystemHandler()
         )
@@ -55,22 +57,16 @@ class Container:
                 "mac-capture-worker",
                 self.logger,
                 "The Bazaar",
-                self.message_builder,
-                self.text_extractor,
-                self.configuration,
             )
             if self.configuration.operating_system == "Darwin"
             else WindowsCaptureWorkerV2(
                 "windows-capture-worker",
                 self.logger,
                 "The Bazaar",
-                self.message_builder,
-                self.text_extractor,
-                self.configuration,
             )
         )
 
-        self.half_second_timer = TimerWorker(self.logger, 500, "half-second-timer")
+        self.one_second_timer = TimerWorker(self.logger, 1000, "one-second-timer")
 
         self.thread_controller = ThreadController(self.logger)
 
@@ -79,7 +75,8 @@ class Container:
             self.logger,
             self.thread_controller,
             self.capture_worker,
-            self.half_second_timer,
+            self.text_extractor_worker,
+            self.one_second_timer,
             self.system_handler,
             self.configuration,
         )
