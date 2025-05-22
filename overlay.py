@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Optional
 
-from PyQt6.QtCore import QPoint, QSize, Qt, pyqtSignal
+from PyQt6.QtCore import QPoint, QSize, Qt, pyqtSignal, QEvent, QObject
 from PyQt6.QtGui import QColor, QFont, QGuiApplication, QPainter, QPaintEvent, QMouseEvent, QKeyEvent, QResizeEvent
 from PyQt6.QtWidgets import (
     QFrame,
@@ -47,12 +47,48 @@ class Overlay(QWidget):
         self._drag_pos: Optional[QPoint] = None     # start corner while dragging
 
         self._build_ui()
+        self.label.installEventFilter(self)
+        self.scroll_area.viewport().installEventFilter(self) # type: ignore
+
         self._layout_overlay()
         self._update_button_positions()
 
         self.show()
         self.raise_()
         self.activateWindow()
+
+        # ───────────────────────  event filter  ───────────────────────
+    def eventFilter(self, obj: QObject, event: QEvent) -> bool:   # type: ignore[override]
+        from PyQt6.QtGui import QMouseEvent                        # local import to avoid circular issues
+
+        if (
+            obj in (self.label, self.scroll_area.viewport())
+            and isinstance(event, QMouseEvent)                     # ensure we have a mouse event
+        ):
+            if (
+                event.type() == QEvent.Type.MouseButtonPress
+                and event.button() == Qt.MouseButton.LeftButton
+            ):
+                self._drag_pos = event.globalPosition().toPoint() - self.frameGeometry().topLeft()
+                event.accept()
+                return True
+
+            if (
+                event.type() == QEvent.Type.MouseMove
+                and self._drag_pos is not None
+                and (event.buttons() & Qt.MouseButton.LeftButton)
+            ):
+                self.move(event.globalPosition().toPoint() - self._drag_pos)
+                event.accept()
+                return True
+
+            if event.type() == QEvent.Type.MouseButtonRelease:
+                self._drag_pos = None
+                event.accept()
+                return True
+
+        return super().eventFilter(obj, event)
+
 
     # ──────────────────────────  paint  ──────────────────────────
     def paintEvent(self, event: QPaintEvent) -> None:      #type: ignore[override]
@@ -126,6 +162,7 @@ class Overlay(QWidget):
             }
             """
         )
+        self.search_bar.hide()
 
         # ── main text inside scroll-area ──
         self.label = QLabel(
@@ -183,13 +220,12 @@ class Overlay(QWidget):
 
         # ── custom scroll-bar style ──
         bar         = self.scroll_area.verticalScrollBar()
-        top_margin  = self.close_button.height() + PADDING // 2
         bar.setStyleSheet( #type: ignore
             f"""
             QScrollBar:vertical {{
                 background:transparent;
                 width:12px;
-                margin:{top_margin}px 0 {PADDING // 2}px 0;
+                margin:0px 0 0px 0;
                 border:none;
             }}
             QScrollBar::handle:vertical {{
