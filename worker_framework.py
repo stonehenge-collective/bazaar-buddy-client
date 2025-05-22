@@ -113,7 +113,7 @@ class ThreadController:
             ValueError: If a worker with the same name already exists
         """
         if worker.name in self.workers:
-            raise ValueError(f"Worker with name '{worker.name}' already exists")
+            return worker.name
 
         # Create thread and set name
         thread = QThread()
