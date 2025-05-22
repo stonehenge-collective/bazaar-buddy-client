@@ -216,28 +216,34 @@ def build_decorated_tier_message(item: dict[str, Any]):
     return unified_tooltips
 
 def decorate_display_message(text: str, rules: list[dict]) -> str:
-    """Apply decorators so Rich Text can parse and add color to certain keywords"""
-    decorated_message = text
-    def _get_replacer(decorateSpan):
-        def _replacer(match): 
-            original = match.group(0)
-            return decorateSpan.format(word=original)
-        
-        return _replacer
-    for rule in rules:
-        word = rule.get("word")
-        decorate_span = rule.get("decorate")
+    """Apply decorators so Rich Text can parse and add colour to certain keywords,
+    but leave anything wrapped in <b>…</b> (entity names) untouched."""
+    # Split into “keep-as-is” bold segments and everything else
+    segments = re.split(r'(<b>.*?</b>)', text, flags=re.IGNORECASE | re.DOTALL)
 
-        # Match the word only when it appears as a standalone word (case‑insensitive).
-        pattern = rf"\b{word}\b"
-        decorated_message = re.sub(
-            pattern,
-            _get_replacer(decorate_span),
-            decorated_message,
-            flags=re.IGNORECASE,
-        )
+    for i, seg in enumerate(segments):
+        # Skip bold segments – they contain the entity names
+        if seg.lower().startswith('<b>'):
+            continue
 
-    return decorated_message
+        def _make_replacer(span: str):
+            def _replacer(m: re.Match[str]) -> str:
+                return span.format(word=m.group(0))
+            return _replacer
+
+        for rule in rules:
+            pattern = rf"\b{re.escape(rule['word'])}\b"
+            seg = re.sub(
+                pattern,
+                _make_replacer(rule['decorate']),
+                seg,
+                flags=re.IGNORECASE,
+            )
+
+        segments[i] = seg
+
+    return "".join(segments)
+
 
 
 # ------------------------------ Monsters ----------------------------------- #
@@ -290,7 +296,7 @@ def reformat_monsters(raw: Dict[str, Any]) -> List[Dict[str, Any]]:
 
 # --------------------------- Message builders ------------------------------ #
 def build_monster_message(m: Dict[str, Any]) -> str:
-    msg: List[str] = [f"<b>{m['name']}</b><br>", f"Health: {m['health']}"]
+    msg: List[str] = [f"<b>{m['name']}</b>", f"Health: {m['health']}"]
 
     if m["items"]:
         msg.append("")        # blank line
@@ -314,8 +320,9 @@ def build_monster_message(m: Dict[str, Any]) -> str:
 
 
 def build_item_message(item: Dict[str, Any]) -> str:
-    msg: List[str] = [f"<b>{item["name"]}</b><br>", ""]
+    msg: List[str] = [f"<b>{item["name"]}</b>"]
     msg.extend(build_decorated_tier_message(item))
+    msg.extend([""])
     for i, ench in enumerate(item.get("enchantments", [])):
         msg.append(ench["type"])
         msg.extend(ench["tooltips"])

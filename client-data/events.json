@@ -675,9 +675,9 @@
         "options": [
             "Pet It : Gain 25 Max Health .",
             "Scare It : Get a Silver -tier Loot item.",
-            "(If you have a Food item) Feed it : Gain 1 XP .",
-            "(If you have a Friend item) Play with it : Gain 1 XP .",
-            "(If you have a Toy ) Play with it : Gain 1 XP ."
+            "(If you have a Food item) Feed it: Pick 1 of 2 skills.",
+            "(If you have a Friend item) Play with it : Pick 1 of 2 skills.",
+            "(If you have a Toy ) Play with it : Pick 1 of 2 skills."
         ]
     },
     {

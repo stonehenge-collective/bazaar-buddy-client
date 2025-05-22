@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Optional
 
-from PyQt6.QtCore import QPoint, QSize, Qt, pyqtSignal
+from PyQt6.QtCore import QPoint, QSize, Qt, pyqtSignal, QEvent, QObject
 from PyQt6.QtGui import QColor, QFont, QGuiApplication, QPainter, QPaintEvent, QMouseEvent, QKeyEvent, QResizeEvent
 from PyQt6.QtWidgets import (
     QFrame,
@@ -15,6 +15,7 @@ from PyQt6.QtWidgets import (
     QToolButton,
     QVBoxLayout,
     QWidget,
+    QLineEdit,
 )
 
 # ──────────────────────────  constants  ──────────────────────────
@@ -46,12 +47,48 @@ class Overlay(QWidget):
         self._drag_pos: Optional[QPoint] = None     # start corner while dragging
 
         self._build_ui()
+        self.label.installEventFilter(self)
+        self.scroll_area.viewport().installEventFilter(self) # type: ignore
+
         self._layout_overlay()
         self._update_button_positions()
 
         self.show()
         self.raise_()
         self.activateWindow()
+
+        # ───────────────────────  event filter  ───────────────────────
+    def eventFilter(self, obj: QObject, event: QEvent) -> bool:   # type: ignore[override]
+        from PyQt6.QtGui import QMouseEvent                        # local import to avoid circular issues
+
+        if (
+            obj in (self.label, self.scroll_area.viewport())
+            and isinstance(event, QMouseEvent)                     # ensure we have a mouse event
+        ):
+            if (
+                event.type() == QEvent.Type.MouseButtonPress
+                and event.button() == Qt.MouseButton.LeftButton
+            ):
+                self._drag_pos = event.globalPosition().toPoint() - self.frameGeometry().topLeft()
+                event.accept()
+                return True
+
+            if (
+                event.type() == QEvent.Type.MouseMove
+                and self._drag_pos is not None
+                and (event.buttons() & Qt.MouseButton.LeftButton)
+            ):
+                self.move(event.globalPosition().toPoint() - self._drag_pos)
+                event.accept()
+                return True
+
+            if event.type() == QEvent.Type.MouseButtonRelease:
+                self._drag_pos = None
+                event.accept()
+                return True
+
+        return super().eventFilter(obj, event)
+
 
     # ──────────────────────────  paint  ──────────────────────────
     def paintEvent(self, event: QPaintEvent) -> None:      #type: ignore[override]
@@ -98,7 +135,7 @@ class Overlay(QWidget):
         grip_w = self.size_grips[0].sizeHint().width()
         grip_h = self.size_grips[0].sizeHint().height()
 
-        self.size_grips[0].move(0, 0)
+        self.size_grips[0].move(-grip_w, -grip_h)
         self.size_grips[1].move(self.width() - grip_w, 0)
         self.size_grips[2].move(0, self.height() - grip_h)
         self.size_grips[3].move(self.width() - grip_w, self.height() - grip_h)
@@ -108,13 +145,24 @@ class Overlay(QWidget):
 
     # ─────────────────────────  UI building  ─────────────────────
     def _build_ui(self) -> None:
-        # ── title bar ──
-        self.top_label = QLabel("Bazaar Buddy", self)
-        self.top_label.setFont(self._font)
-        self.top_label.setStyleSheet("color:white;")
-        self.top_label.setFixedHeight(24)
-        self.top_label.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignTop)
-        self.top_label.setContentsMargins(0, 4, 0, 0)
+        self.search_bar = QLineEdit(self)
+        self.search_bar.setFont(self._font)
+        self.search_bar.setPlaceholderText("Search...")
+        self.search_bar.setFixedHeight(24)
+        self.search_bar.setStyleSheet(
+            """
+            QLineEdit {
+                color: white;
+                background: rgba(255,255,255,0.10);
+                border: 1px solid rgba(255,255,255,0.40);
+                border-radius: 4px;
+            }
+            QLineEdit::placeholder {
+                color: rgba(255,255,255,0.50);   /* semi-transparent */
+            }
+            """
+        )
+        self.search_bar.hide()
 
         # ── main text inside scroll-area ──
         self.label = QLabel(
@@ -136,9 +184,9 @@ class Overlay(QWidget):
 
         # ── container layout ──
         layout = QVBoxLayout(self)
-        layout.setContentsMargins(PADDING, PADDING, PADDING, PADDING)
-        layout.addWidget(self.top_label)
-        layout.addWidget(self.scroll_area) #type: ignore
+        layout.setContentsMargins(PADDING, PADDING, PADDING, PADDING)   # right margin now = PADDING
+        layout.addWidget(self.search_bar)
+        layout.addWidget(self.scroll_area)  # type: ignore
 
         # ── corner size-grips ──
         self.size_grips = [QSizeGrip(self) for _ in range(4)]
@@ -172,13 +220,12 @@ class Overlay(QWidget):
 
         # ── custom scroll-bar style ──
         bar         = self.scroll_area.verticalScrollBar()
-        top_margin  = self.close_button.height() + PADDING // 2
         bar.setStyleSheet( #type: ignore
             f"""
             QScrollBar:vertical {{
                 background:transparent;
                 width:12px;
-                margin:{top_margin}px 0 {PADDING // 2}px 0;
+                margin:0px 0 0px 0;
                 border:none;
             }}
             QScrollBar::handle:vertical {{
@@ -214,11 +261,15 @@ class Overlay(QWidget):
 
     # ──────────────────────  internal helpers  ───────────────────
     def _update_button_positions(self) -> None:
-        self.close_button.move(self.width() - self.close_button.width() - PADDING // 2,
-                               PADDING // 2)
-        self.toggle_button.move(self.width() - self.toggle_button.width()
-                                - self.close_button.width() - PADDING // 2,
-                                PADDING // 2)
+        # ── position the two buttons ──
+        right_edge = self.width() - PADDING // 2
+        self.close_button.move(right_edge - self.close_button.width(), self.search_bar.y())
+        self.toggle_button.move(self.close_button.x() - self.toggle_button.width(), self.search_bar.y())
+
+        # ── keep the search bar clear of the buttons ──
+        available_w = self.toggle_button.x() - PADDING          # leave the normal left margin
+        self.search_bar.setFixedWidth(available_w)
+
 
     def set_message(self, text: str) -> None:
         if text == self.text:
@@ -232,7 +283,7 @@ class Overlay(QWidget):
         if self.toggle_button.isChecked():
             self.scroll_area.hide()
             self._collapsed_height = self.height()
-            self.setFixedHeight(self.top_label.height() + PADDING)
+            self.setFixedHeight(self.search_bar.height() + PADDING*2)
             self.toggle_button.setText("+")
         else:
             if hasattr(self, "_collapsed_height"):
