@@ -147,9 +147,9 @@ class Overlay(QWidget):
 
         # ── container layout ──
         layout = QVBoxLayout(self)
-        layout.setContentsMargins(PADDING, PADDING, PADDING + 2*24, PADDING)
+        layout.setContentsMargins(PADDING, PADDING, PADDING, PADDING)   # right margin now = PADDING
         layout.addWidget(self.search_bar)
-        layout.addWidget(self.scroll_area) #type: ignore
+        layout.addWidget(self.scroll_area)  # type: ignore
 
         # ── corner size-grips ──
         self.size_grips = [QSizeGrip(self) for _ in range(4)]
@@ -225,8 +225,15 @@ class Overlay(QWidget):
 
     # ──────────────────────  internal helpers  ───────────────────
     def _update_button_positions(self) -> None:
-        self.close_button.move(self.width() - self.close_button.width() - PADDING // 2, self.search_bar.y())
-        self.toggle_button.move(self.width() - self.toggle_button.width() - self.close_button.width() - PADDING // 2, self.search_bar.y())
+        # ── position the two buttons ──
+        right_edge = self.width() - PADDING // 2
+        self.close_button.move(right_edge - self.close_button.width(), self.search_bar.y())
+        self.toggle_button.move(self.close_button.x() - self.toggle_button.width(), self.search_bar.y())
+
+        # ── keep the search bar clear of the buttons ──
+        available_w = self.toggle_button.x() - PADDING          # leave the normal left margin
+        self.search_bar.setFixedWidth(available_w)
+
 
     def set_message(self, text: str) -> None:
         if text == self.text:
