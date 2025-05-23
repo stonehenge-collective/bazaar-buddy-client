@@ -185,34 +185,38 @@ def build_decorated_tier_message(item: dict[str, Any]):
             standardized = re.sub(r'([-+]?\d+(?:\.\d+)?)', '{{val}}', tooltip)
 
             # Extract value
-            match = re.search(r'([-+]?\d+(?:\.\d+)?)', tooltip)
-            value = match.group(1) if match else ''
+            values = re.findall(r'([-+]?\d+(?:\.\d+)?)', tooltip)
 
             if standardized not in tooltip_groups:
                 tooltip_groups[standardized] = []
 
             tooltip_groups[standardized].append({
                 'tier': tier,
-                'value': value,
+                'values': values,
                 'original_tooltip': tooltip
             })
 
     unified_tooltips = []
     for template, values in tooltip_groups.items():
-        unique_values = set(v['value'] for v in values if v['value'])
-        if len(unique_values) == 1:
-            # All values are the same → just output that value (no color)
-            # Join by / to match your pattern (e.g., 5/5/5) or just one value?
-            # You can join or just show one since all same:
-            unified_tooltips.append(template.replace('{{val}}', unique_values.pop()))
-        else:
-            # Values differ → color each one
-            span_string = ' > '.join(
-                f"<span style='color:{tier_colors[val['tier']]}'>{val['value']}</span>"
-                for val in values
-            )
-            unified = template.replace('{{val}}', span_string)
-            unified_tooltips.append(unified)
+        all_values_by_pos = list(zip(*(v['values'] for v in values)))
+        replaced = template
+
+        # For each number position, decide if values differ
+        for i, values_at_pos in enumerate(all_values_by_pos):
+            unique_vals = set(values_at_pos)
+            if len(unique_vals) == 1:
+                # Same value for this number in all tiers: just replace with that value
+                replaced = replaced.replace('{{val}}', unique_vals.pop(), 1)
+            else:
+                # Values differ across tiers, colorize each value by tier
+                span_string = ' > '.join(
+                    f"<span style='color:{tier_colors[val['tier']]}'>{val['values'][i]}</span>"
+                    for val in values
+                )
+                replaced = replaced.replace('{{val}}', span_string, 1)
+
+        unified_tooltips.append(replaced)
+
     return unified_tooltips
 
 def decorate_display_message(text: str, rules: list[dict]) -> str:
