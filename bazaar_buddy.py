@@ -43,8 +43,6 @@ class BazaarBuddy:
 
         try:
             self.thread_controller.stop_worker(self.text_extractor_worker.name)
-            self.text_extractor_worker.message_ready.disconnect()
-            self.text_extractor_worker.window_closed.disconnect()
             self.text_extractor_worker = None
         except Exception as e:
             self.logger.warning(f"[{self.thread_name}] Error stopping text extractor: {e}")

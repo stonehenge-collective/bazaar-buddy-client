@@ -150,6 +150,7 @@ class ThreadController:
             raise ValueError(f"No worker named '{worker_name}' found")
 
         worker_data = self.workers[worker_name]
+        worker_data["worker"]._stop_requested = False
 
         # Connect signals and slots
         worker_data["thread"].started.connect(lambda: QTimer.singleShot(0, worker_data["worker"].start_work))
@@ -168,10 +169,13 @@ class ThreadController:
             ValueError: If worker is not found
         """
         if worker_name not in self.workers:
-            raise ValueError(f"No worker named '{worker_name}' found")
+            return None
 
         worker_data = self.workers[worker_name]
         worker_data["worker"].stop_work()
+        worker_data["worker"].error.disconnect()
+        worker_data["thread"].started.disconnect()
+
         worker_data["thread"].quit()
         success = worker_data["thread"].wait(3000)
 

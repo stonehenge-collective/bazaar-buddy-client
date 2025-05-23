@@ -171,7 +171,8 @@ class TextExtractorWorker(Worker):
                 raise exc
 
     def _on_stop_requested(self):
-        pass
+        self.message_ready.disconnect()
+        self.window_closed.disconnect()
 
 
 class TextExtractorWorkerFactory:
