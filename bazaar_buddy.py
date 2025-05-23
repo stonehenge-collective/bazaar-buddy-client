@@ -5,10 +5,9 @@ from overlay import Overlay
 from system_handler import BaseSystemHandler
 from configuration import Configuration
 from worker_framework import ThreadController
-from capture_worker import BaseCaptureWorker
 from timer_worker import TimerWorker
-from text_extractor_worker import TextExtractorWorker
-from PyQt6 import QtCore
+from text_extractor_worker import TextExtractorWorkerFactory
+
 
 class BazaarBuddy:
     def __init__(
@@ -16,8 +15,7 @@ class BazaarBuddy:
         overlay: Overlay,
         logger: Logger,
         thread_controller: ThreadController,
-        capture_worker: BaseCaptureWorker,
-        text_extractor_worker: TextExtractorWorker,
+        text_extractor_worker_factory: TextExtractorWorkerFactory,
         one_second_timer: TimerWorker,
         system_handler: BaseSystemHandler,
         configuration: Configuration,
@@ -25,8 +23,8 @@ class BazaarBuddy:
         self.overlay = overlay
         self.logger = logger
         self.thread_controller = thread_controller
-        self.capture_worker = capture_worker
-        self.text_extractor_worker = text_extractor_worker
+        self.text_extractor_worker_factory = text_extractor_worker_factory
+        self.text_extractor_worker = None
         self.one_second_timer = one_second_timer
         self.system_handler = system_handler
         self.configuration = configuration
@@ -42,7 +40,15 @@ class BazaarBuddy:
 
     def restart_polling(self):
         self.logger.info(f"[{self.thread_name}] Restarting Polling")
-        self.one_second_timer.disconnect(self.capture_connection)
+
+        try:
+            self.thread_controller.stop_worker(self.text_extractor_worker.name)
+            self.text_extractor_worker.message_ready.disconnect()
+            self.text_extractor_worker.window_closed.disconnect()
+            self.text_extractor_worker = None
+        except Exception as e:
+            self.logger.warning(f"[{self.thread_name}] Error stopping text extractor: {e}")
+
         self.attempt_start_connection = self.one_second_timer.timer_tick.connect(self._attempt_start)
 
     def _attempt_start(self):
@@ -72,13 +78,10 @@ class BazaarBuddy:
         self.logger.info(f"[{self.thread_name}] stopping trying to _attempt_start")
         self.one_second_timer.disconnect(self.attempt_start_connection)
 
-        self.thread_controller.add_worker(self.capture_worker)
-        self.capture_connection = self.one_second_timer.timer_tick.connect(self.capture_worker._run)
+        self.text_extractor_worker = self.text_extractor_worker_factory.create("text-extractor-worker")
+
         self.thread_controller.add_worker(self.text_extractor_worker)
-        self.capture_worker.image_captured.connect(self.text_extractor_worker.process_frame)
         self.text_extractor_worker.message_ready.connect(self.overlay.set_message)
-        self.capture_worker.window_closed.connect(self.restart_polling)
-        self.logger.info(f"[{self.thread_name}] starting capture worker")
-        self.thread_controller.start_worker(self.capture_worker.name)
+        self.text_extractor_worker.window_closed.connect(self.restart_polling)
         self.logger.info(f"[{self.thread_name}] starting text extractor worker")
         self.thread_controller.start_worker(self.text_extractor_worker.name)

@@ -1,5 +1,6 @@
 import sys
 from PyQt6.QtWidgets import QApplication
+import threading
 
 
 from logger import logger
@@ -13,7 +14,7 @@ from capture_worker import MacCaptureWorker, WindowsCaptureWorkerV2
 from bazaar_buddy import BazaarBuddy
 from worker_framework import ThreadController
 from timer_worker import TimerWorker
-from text_extractor_worker import TextExtractorWorker, TextExtractor
+from text_extractor_worker import TextExtractor, TextExtractorWorkerFactory
 
 
 class Container:
@@ -28,9 +29,27 @@ class Container:
         self.security = Security(self.configuration, self.logger)
         self.message_builder = MessageBuilder(self.configuration, self.logger)
         self.text_extractor = TextExtractor(self.configuration, self.logger)
-        self.text_extractor_worker = TextExtractorWorker(
-            "text-extractor-worker", self.configuration, self.message_builder, self.text_extractor, self.logger
+
+        self.capture_worker = (
+            MacCaptureWorker(
+                self.logger,
+                "The Bazaar",
+            )
+            if self.configuration.operating_system == "Darwin"
+            else WindowsCaptureWorkerV2(
+                self.logger,
+                "The Bazaar",
+            )
         )
+
+        self.text_extractor_worker_factory = TextExtractorWorkerFactory(
+            self.configuration,
+            self.message_builder,
+            self.text_extractor,
+            self.capture_worker,
+            self.logger,
+        )
+
         self.system_handler: BaseSystemHandler = (
             WindowsSystemHandler() if self.configuration.operating_system == "Windows" else MacSystemHandler()
         )
@@ -52,20 +71,6 @@ class Container:
                 self.overlay, self.logger, self.configuration, self.update_source.latest_release
             )
 
-        self.capture_worker = (
-            MacCaptureWorker(
-                "mac-capture-worker",
-                self.logger,
-                "The Bazaar",
-            )
-            if self.configuration.operating_system == "Darwin"
-            else WindowsCaptureWorkerV2(
-                "windows-capture-worker",
-                self.logger,
-                "The Bazaar",
-            )
-        )
-
         self.one_second_timer = TimerWorker(self.logger, 1000, "one-second-timer")
 
         self.thread_controller = ThreadController(self.logger)
@@ -74,8 +79,7 @@ class Container:
             self.overlay,
             self.logger,
             self.thread_controller,
-            self.capture_worker,
-            self.text_extractor_worker,
+            self.text_extractor_worker_factory,
             self.one_second_timer,
             self.system_handler,
             self.configuration,
