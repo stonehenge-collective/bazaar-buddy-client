@@ -15,8 +15,23 @@ env:
   TOKEN: ${{ endsWith(github.ref_name, '-test') && secrets.TEST_RELEASE_PAT || secrets.GITHUB_TOKEN }}
 
 jobs:
+  # ---------- Version validation ----------
+  validate-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+          
+      - name: Validate version
+        run: python .github/scripts/validate_version.py
+
   # ---------- Windows build ----------
   build-windows:
+    needs: validate-version
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
@@ -50,6 +65,7 @@ jobs:
           
   # ---------- macOS build ----------
   build-macos:
+    needs: validate-version
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
