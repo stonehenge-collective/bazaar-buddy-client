@@ -5,7 +5,7 @@ Worker Thread Framework
 A flexible framework for managing worker threads in PyQt applications.
 """
 
-from PyQt6.QtCore import QObject, QThread, pyqtSignal, pyqtSlot
+from PyQt6.QtCore import QObject, QThread, pyqtSignal, pyqtSlot, QTimer
 import threading
 import logging
 import uuid
@@ -82,7 +82,7 @@ class Worker(QObject):
 
     def _thread_name(self):
         """Get the current thread name"""
-        return QThread.currentThread().objectName() or threading.current_thread().name  # type: ignore
+        return threading.current_thread().name
 
 
 class WorkerRecord(TypedDict):
@@ -119,12 +119,9 @@ class ThreadController:
         thread = QThread()
         thread.setObjectName(f"thread-{worker.name}")
 
-        # Connect signals and slots
-        thread.started.connect(worker.start_work)
         worker.error.connect(lambda e: self._logger.error(f"[[{self._thread_name}]] {worker.name} error: {e}"))
         worker.finished.connect(lambda: self.stop_worker(worker.name))
 
-        # Move worker to thread
         worker.moveToThread(thread)
 
         # Store worker and thread
@@ -153,6 +150,11 @@ class ThreadController:
             raise ValueError(f"No worker named '{worker_name}' found")
 
         worker_data = self.workers[worker_name]
+        worker_data["worker"]._stop_requested = False
+
+        # Connect signals and slots
+        worker_data["thread"].started.connect(lambda: QTimer.singleShot(0, worker_data["worker"].start_work))
+
         worker_data["thread"].start()
         self._logger.info(f"[{self._thread_name}] started worker: {worker_name}")
         return True
@@ -167,10 +169,13 @@ class ThreadController:
             ValueError: If worker is not found
         """
         if worker_name not in self.workers:
-            raise ValueError(f"No worker named '{worker_name}' found")
+            return None
 
         worker_data = self.workers[worker_name]
         worker_data["worker"].stop_work()
+        worker_data["worker"].error.disconnect()
+        worker_data["thread"].started.disconnect()
+
         worker_data["thread"].quit()
         success = worker_data["thread"].wait(3000)
 

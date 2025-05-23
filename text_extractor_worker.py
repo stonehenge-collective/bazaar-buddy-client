@@ -23,6 +23,7 @@ from configuration import Configuration
 from logging import Logger
 from worker_framework import Worker
 from message_builder import MessageBuilder
+from capture_worker import BaseCaptureWorker, FailedToFindWindowError
 
 
 class TextExtractor:
@@ -120,6 +121,7 @@ class TextExtractor:
 class TextExtractorWorker(Worker):
 
     message_ready = pyqtSignal(str)
+    window_closed = pyqtSignal()
 
     def __init__(
         self,
@@ -127,12 +129,14 @@ class TextExtractorWorker(Worker):
         configuration: Configuration,
         message_builder: MessageBuilder,
         text_extractor: TextExtractor,
+        capture_worker: BaseCaptureWorker,
         logger: Logger,
     ):
         super().__init__(logger, name)
         self._message_builder = message_builder
         self._text_extractor = text_extractor
         self._configuration = configuration
+        self._capture_worker = capture_worker
 
     def process_frame(self, image: Image.Image) -> None:
         try:
@@ -150,10 +154,51 @@ class TextExtractorWorker(Worker):
             pass
 
     def _run(self):
-        pass
+        while not self.is_stopping:
+            try:
+                image = self._capture_worker.capture_image_sync()
+                if image is None:
+                    self._logger.info(f"[{threading.current_thread().name}] No image captured")
+                    continue
+                self.process_frame(image)
+            except FailedToFindWindowError:
+                self._logger.info(f"[{threading.current_thread().name}] Failed to find window to capture, stopping")
+                self.window_closed.emit()
+                break
+            except Exception as exc:
+                self.message_ready.emit("An internalerror occurred while capturing the image and extracting text")
+                self._logger.error(f"[{threading.current_thread().name}] Error capturing image: {exc}")
+                raise exc
 
     def _on_stop_requested(self):
-        pass
+        self.message_ready.disconnect()
+        self.window_closed.disconnect()
+
+
+class TextExtractorWorkerFactory:
+    def __init__(
+        self,
+        configuration: Configuration,
+        message_builder: MessageBuilder,
+        text_extractor: TextExtractor,
+        capture_worker: BaseCaptureWorker,
+        logger: Logger,
+    ):
+        self.configuration = configuration
+        self.message_builder = message_builder
+        self.text_extractor = text_extractor
+        self.capture_worker = capture_worker
+        self.logger = logger
+
+    def create(self, name: str):
+        return TextExtractorWorker(
+            name,
+            self.configuration,
+            self.message_builder,
+            self.text_extractor,
+            self.capture_worker,
+            self.logger,
+        )
 
 
 # --------------------------------------------------------------------- #
