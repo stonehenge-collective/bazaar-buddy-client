@@ -4,7 +4,6 @@ import json, sys, os, re
 def main():
 
     tag_version = os.getenv("GITHUB_REF_NAME")
-    tag_version = "v0.10.0"
 
     # Validate version format: vn.n.n or vn.n.n-test
     version_pattern = r"^v\d+\.\d+\.\d+(-test)?$"
@@ -55,4 +54,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
