@@ -46,7 +46,7 @@ class WindowsCaptureWorkerV2(BaseCaptureWorker):
         self._capture_image: Image.Image | None = None
         self._capture_error: str | None = None
 
-        @self._cap.event
+        @self._cap.event # type: ignore
         def on_frame_arrived(frame: Frame, control: CaptureControl):
             try:
                 # BGRA -> RGB ndarray -> PIL.Image
