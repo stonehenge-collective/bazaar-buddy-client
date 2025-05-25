@@ -46,14 +46,16 @@ class WindowsCaptureWorkerV2(BaseCaptureWorker):
         self._capture_image: Image.Image | None = None
         self._capture_error: str | None = None
 
-        @self._cap.event # type: ignore
+        @self._cap.event  # type: ignore
         def on_frame_arrived(frame: Frame, control: CaptureControl):
             try:
                 # BGRA -> RGB ndarray -> PIL.Image
+                self._logger.info(f"[{threading.current_thread().name}] Frame arrived, converting to RGB")
                 rgb = frame.convert_to_bgr().frame_buffer[..., ::-1].copy()
+                self._logger.info(f"[{threading.current_thread().name}] Converted to RGB, creating PIL.Image")
                 image = Image.fromarray(rgb)
                 self._capture_image = image
-                self._logger.info(f"[{threading.current_thread().name}] Frame arrived, setting capture event")
+                self._logger.info(f"[{threading.current_thread().name}] PIL.Image created, setting capture image")
             except Exception as exc:
                 self._capture_error = str(exc)
             finally:
@@ -104,6 +106,11 @@ class WindowsCaptureWorkerV2(BaseCaptureWorker):
                 if "Failed To Find Window" in str(exc):
                     self._logger.info(
                         f"[{threading.current_thread().name}] Failed to find window, raising FailedToFindWindowError"
+                    )
+                    raise FailedToFindWindowError()
+                if "Failed to convert item to GraphicsCaptureItem" in str(exc):
+                    self._logger.info(
+                        f"[{threading.current_thread().name}] Graphics capture failed - window may be minimized or transitioning"
                     )
                     raise FailedToFindWindowError()
                 self._logger.error(f"[{threading.current_thread().name}] Capture failed: {exc}")

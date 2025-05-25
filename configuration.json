@@ -1,5 +1,5 @@
 {
-  "version": "v0.1.0",
-  "update_with_test_release": false,
+  "version": "v0.14.0-test",
+  "update_with_test_release": true,
   "save_images": false
 }
