@@ -119,7 +119,7 @@ class ThreadController:
         thread = QThread()
         thread.setObjectName(f"thread-{worker.name}")
 
-        worker.error.connect(lambda e: self._logger.error(f"[[{self._thread_name}]] {worker.name} error: {e}"))
+        worker.error.connect(lambda e: self._logger.error(f"[{self._thread_name}] {worker.name} threw an error: {e}"))
         worker.finished.connect(lambda: self.stop_worker(worker.name))
 
         worker.moveToThread(thread)

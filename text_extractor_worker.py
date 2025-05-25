@@ -176,7 +176,7 @@ class TextExtractorWorker(Worker):
                     f"[{threading.current_thread().name}] An error occurred while capturing the image and extracting text. This is attempt {internal_capture_error_count} of 10"
                 )
                 arr_of_errors.append(exc)
-                if internal_capture_error_count > 10:
+                if internal_capture_error_count >= 10:
                     self.message_ready.emit(
                         "An internal error occurred while capturing a screenshot and extracting text. Please visit the Bazaar Buddy discord server and report this issue."
                     )
