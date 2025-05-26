@@ -170,22 +170,34 @@ def build_decorated_tier_message(item: dict[str, Any]):
     }
 
     start_index = tier_order.index(item['startingTier'])
-    active_tiers = tier_order[start_index:] # gets only available tiers
+    active_tiers = tier_order[start_index:] if item['startingTier'] == "Legendary" else tier_order[start_index:4]
     tooltip_groups = {}
+
+    quantity_words = ["double", "triple", "quadruple"]
+    quantity_word_pattern = r'(' + '|'.join(re.escape(q) for q in quantity_words) + r')'
+    number_pattern = r'([-+]?\d+(?:\.\d+)?)'
+    value_pattern = f'{number_pattern}|{quantity_word_pattern}'
 
     for tier in active_tiers:
         tier_data = item['tiers'].get(tier, {})
         tooltips = tier_data.get('tooltips', [])
 
         for tooltip in tooltips:
-            if not tooltip.strip():
-                continue  # skip empty tooltips
+            tooltip = tooltip.strip()
+            if not tooltip:
+                continue  # Skip empty or static tooltips
 
-            # Standardize the tooltip with a placeholder
-            standardized = re.sub(r'([-+]?\d+(?:\.\d+)?)', '{{val}}', tooltip)
+            # Replace number/word values with placeholder
+            standardized = re.sub(value_pattern, '{{val}}', tooltip, flags=re.IGNORECASE)
 
-            # Extract value
-            values = re.findall(r'([-+]?\d+(?:\.\d+)?)', tooltip)
+            # Extract values (either numbers or words)
+            raw_values = re.findall(value_pattern, tooltip, flags=re.IGNORECASE)
+            values = []
+            for num, word in raw_values:
+                if num:
+                    values.append(num)
+                elif word:
+                    values.append(word)
 
             if standardized not in tooltip_groups:
                 tooltip_groups[standardized] = []
@@ -196,26 +208,45 @@ def build_decorated_tier_message(item: dict[str, Any]):
                 'original_tooltip': tooltip
             })
 
+    for group_key in list(tooltip_groups.keys()): #Delete tooltip that matches with one that we are changing
+        if '{{val}}' not in group_key:
+            for placeholder_key in tooltip_groups:
+                if '{{val}}' in placeholder_key:
+                    normalized_placeholder = re.sub(r'\{\{val\}\}', '', placeholder_key)
+                    normalized_placeholder = re.sub(r'\s+', ' ', normalized_placeholder).strip()
+                    current_group_normalized = re.sub(r'\s+', ' ', group_key).strip()
+                    if normalized_placeholder == current_group_normalized:
+                        del tooltip_groups[group_key]
+                        break
+
     unified_tooltips = []
+    seen_tooltips = set()
     for template, values in tooltip_groups.items():
-        all_values_by_pos = list(zip(*(v['values'] for v in values)))
-        replaced = template
+        if not values or not values[0]['values']:
+            tooltip_text = values[0]['original_tooltip']
+        else: 
+            all_values_by_pos = list(zip(*(v['values'] for v in values)))
+            
+            tooltip_text = template
 
-        # For each number position, decide if values differ
-        for i, values_at_pos in enumerate(all_values_by_pos):
-            unique_vals = set(values_at_pos)
-            if len(unique_vals) == 1:
-                # Same value for this number in all tiers: just replace with that value
-                replaced = replaced.replace('{{val}}', unique_vals.pop(), 1)
-            else:
-                # Values differ across tiers, colorize each value by tier
-                span_string = ' > '.join(
-                    f"<span style='color:{tier_colors[val['tier']]}'>{val['values'][i]}</span>"
-                    for val in values
-                )
-                replaced = replaced.replace('{{val}}', span_string, 1)
+            # For each number position, decide if values differ
+            for i, values_at_pos in enumerate(all_values_by_pos):
+                unique_vals = set(values_at_pos)
+                if len(unique_vals) == 1:
+                    # Same value for this number in all tiers: just replace with that value
+                    tooltip_text = tooltip_text.replace('{{val}}', unique_vals.pop(), 1)
+                else:
+                    # Values differ across tiers, colorize each value by tier
+                    span_string = ' > '.join(
+                        f"<span style='color:{tier_colors[val['tier']]}'>{val['values'][i]}</span>"
+                        for val in values
+                    )
+                    tooltip_text = tooltip_text.replace('{{val}}', span_string, 1)
 
-        unified_tooltips.append(replaced)
+        if tooltip_text not in seen_tooltips:
+            unified_tooltips.append(tooltip_text)
+            seen_tooltips.add(tooltip_text)
+
     return unified_tooltips
 
 def decorate_display_message(text: str, rules: list[dict]) -> str:
