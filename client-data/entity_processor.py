@@ -216,7 +216,6 @@ def build_decorated_tier_message(item: dict[str, Any]):
                 replaced = replaced.replace('{{val}}', span_string, 1)
 
         unified_tooltips.append(replaced)
-
     return unified_tooltips
 
 def decorate_display_message(text: str, rules: list[dict]) -> str:

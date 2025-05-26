@@ -154,21 +154,40 @@ class TextExtractorWorker(Worker):
             pass
 
     def _run(self):
+        internal_capture_error_count = 0
+        arr_of_errors = []
         while not self.is_stopping:
             try:
                 image = self._capture_worker.capture_image_sync()
                 if image is None:
                     self._logger.info(f"[{threading.current_thread().name}] No image captured")
                     continue
+                self._logger.info(f"[{threading.current_thread().name}] Captured image, processing frame")
                 self.process_frame(image)
+                self._logger.info(f"[{threading.current_thread().name}] Frame processed")
+                internal_capture_error_count = 0
             except FailedToFindWindowError:
                 self._logger.info(f"[{threading.current_thread().name}] Failed to find window to capture, stopping")
                 self.window_closed.emit()
                 break
             except Exception as exc:
-                self.message_ready.emit("An internalerror occurred while capturing the image and extracting text")
-                self._logger.error(f"[{threading.current_thread().name}] Error capturing image: {exc}")
-                raise exc
+                internal_capture_error_count += 1
+                self._logger.error(
+                    f"[{threading.current_thread().name}] An error occurred while capturing the image and extracting text. This is attempt {internal_capture_error_count} of 10"
+                )
+                arr_of_errors.append(exc)
+                if internal_capture_error_count >= 10:
+                    self.message_ready.emit(
+                        "An internal error occurred while capturing a screenshot and extracting text. Please visit the Bazaar Buddy discord server and report this issue."
+                    )
+                    self._logger.error(
+                        f"[{threading.current_thread().name}] Too many internal capture errors, printing out all errors and raising most recent error as exception"
+                    )
+                    for index, error in enumerate(arr_of_errors):
+                        self._logger.error(f"[{threading.current_thread().name}] Error ({index}): {error}")
+                    raise exc
+                # continue trying to capture the image
+                continue
 
     def _on_stop_requested(self):
         self.message_ready.disconnect()
