@@ -162,6 +162,7 @@ class Overlay(QWidget):
             }
             """
         )
+        self.search_bar.hide()
 
         # ── main text inside scroll-area ──
         self.label = QLabel(

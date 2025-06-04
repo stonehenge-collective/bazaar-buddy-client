@@ -1,5 +1,5 @@
 {
-  "version": "d18e6fca",
+  "version": "1df75ce9",
   "monsterEncounterDays": [
     {
       "day": 1,
@@ -417,26 +417,24 @@
                 "card": {
                   "id": "4826832f-f3a5-4c40-b8fa-737f002074fa",
                   "name": "Insect Wing",
-                  "startingTier": "Bronze",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
+                      "tooltips": []
+                    },
+                    "Silver": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 3%."
                       ]
                     },
-                    "Silver": {
+                    "Gold": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 6%."
                       ]
                     },
-                    "Gold": {
-                      "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 9%."
-                      ]
-                    },
                     "Diamond": {
                       "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 12%."
+                        "When you sell this, reduce your leftmost item's cooldown by 9%."
                       ]
                     },
                     "Legendary": {
@@ -509,12 +507,12 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%)."
+                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
                 },
-                "tierType": "Bronze"
+                "tierType": "Silver"
               },
               {
                 "card": {
@@ -688,7 +686,8 @@
                     }
                   },
                   "tags": [
-                    "Weapon"
+                    "Weapon",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Damage"
@@ -889,22 +888,22 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "When you slow, a weapon gains +5 damage for the fight."
+                        "When you Slow, your Weapons gain +5 Damage for the fight."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "When you slow, a weapon gains +10 damage for the fight."
+                        "When you Slow, your Weapons gain +10 Damage for the fight."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "When you slow, a weapon gains +15 damage for the fight."
+                        "When you Slow, your Weapons gain +15 Damage for the fight."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you slow, a weapon gains +20 damage for the fight."
+                        "When you Slow, your Weapons gain +20 Damage for the fight."
                       ]
                     },
                     "Legendary": {
@@ -923,7 +922,7 @@
                   "heroes": [],
                   "artKey": "Icon_Skill_MON_Trained.png",
                   "unifiedTooltips": [
-                    "When you slow, a weapon gains (+5/+10/+15/+20) damage for the fight."
+                    "When you Slow, your Weapons gain (+5/+10/+15/+20) Damage for the fight."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -947,22 +946,22 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "When you sell this, you gain 1 Regen."
+                        "When you sell this, permanently gain 1 Regen."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "When you sell this, you gain 2 Regen."
+                        "When you sell this, permanently gain 2 Regen."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "When you sell this, you gain 3 Regen."
+                        "When you sell this, permanently gain 3 Regen."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you sell this, you gain 4 Regen."
+                        "When you sell this, permanently gain 4 Regen."
                       ]
                     },
                     "Legendary": {
@@ -1035,7 +1034,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you sell this, you gain (1/2/3/4) Regen."
+                    "When you sell this, permanently gain (1/2/3/4) Regen."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -1445,7 +1444,7 @@
           },
           {
             "cardId": "1d24717f-7bfb-48e9-9320-6a69d72e233e",
-            "cardName": "Banannabal",
+            "cardName": "Banannibal",
             "level": 1,
             "health": 100,
             "items": [
@@ -1805,7 +1804,7 @@
               {
                 "card": {
                   "id": "721fa7ca-3451-4bbd-ac17-ffcff4a31ac6",
-                  "name": "Overheal Haste",
+                  "name": "Healthy Jolt",
                   "startingTier": "Gold",
                   "tiers": {
                     "Bronze": {
@@ -3024,26 +3023,24 @@
                 "card": {
                   "id": "4826832f-f3a5-4c40-b8fa-737f002074fa",
                   "name": "Insect Wing",
-                  "startingTier": "Bronze",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
+                      "tooltips": []
+                    },
+                    "Silver": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 3%."
                       ]
                     },
-                    "Silver": {
+                    "Gold": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 6%."
                       ]
                     },
-                    "Gold": {
-                      "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 9%."
-                      ]
-                    },
                     "Diamond": {
                       "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 12%."
+                        "When you sell this, reduce your leftmost item's cooldown by 9%."
                       ]
                     },
                     "Legendary": {
@@ -3116,7 +3113,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%)."
+                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -3164,12 +3161,6 @@
                     "Common"
                   ],
                   "enchantments": [
-                    {
-                      "type": "Heavy",
-                      "tooltips": [
-                        "Slow 1 item for 1 second(s)."
-                      ]
-                    },
                     {
                       "type": "Icy",
                       "tooltips": [
@@ -3240,28 +3231,30 @@
                       "tooltips": [
                         "Cooldown 6 seconds",
                         "Slow 1 item(s) for 3 second(s).",
-                        "Your other Slow items have +1 Slow."
+                        "Your items Slow for 1 more second."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
                         "Cooldown 6 seconds",
                         "Slow 2 item(s) for 3 second(s).",
-                        "Your other Slow items have +1 Slow."
+                        "Your items Slow for 1 more second."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
                         "Cooldown 6 seconds",
                         "Slow 3 item(s) for 3 second(s).",
-                        "Your other Slow items have +1 Slow."
+                        "Your items Slow for 1 more second."
                       ]
                     },
                     "Legendary": {
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Slow"
                   ],
@@ -3335,7 +3328,7 @@
                   "unifiedTooltips": [
                     "Cooldown 6 seconds",
                     "Slow (1/2/3) item(s) for 3 second(s).",
-                    "Your other Slow items have +1 Slow."
+                    "Your items Slow for 1 more second."
                   ],
                   "packId": "Mak_Core",
                   "combatEncounters": []
@@ -3346,26 +3339,24 @@
                 "card": {
                   "id": "4826832f-f3a5-4c40-b8fa-737f002074fa",
                   "name": "Insect Wing",
-                  "startingTier": "Bronze",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
+                      "tooltips": []
+                    },
+                    "Silver": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 3%."
                       ]
                     },
-                    "Silver": {
+                    "Gold": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 6%."
                       ]
                     },
-                    "Gold": {
-                      "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 9%."
-                      ]
-                    },
                     "Diamond": {
                       "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 12%."
+                        "When you sell this, reduce your leftmost item's cooldown by 9%."
                       ]
                     },
                     "Legendary": {
@@ -3438,7 +3429,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%)."
+                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -3765,7 +3756,7 @@
                     {
                       "type": "Golden",
                       "tooltips": [
-                        "This has double value gain."
+                        "This has double gold gain gain."
                       ]
                     },
                     {
@@ -5104,7 +5095,8 @@
                   },
                   "tags": [
                     "Weapon",
-                    "Apparel"
+                    "Apparel",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Damage",
@@ -5453,36 +5445,36 @@
               },
               {
                 "card": {
-                  "id": "8391a75d-56e7-4206-a16e-62dbd986925f",
-                  "name": "Shoe Blade",
+                  "id": "b02a2b57-da9c-4ad6-88ac-219b3bfec103",
+                  "name": "Handaxe",
                   "startingTier": "Bronze",
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Cooldown 7 seconds",
-                        "Crit Chance 15%",
-                        "Deal 20 damage."
+                        "Cooldown 8 seconds",
+                        "Deal 10 damage.",
+                        "Your weapons have +6 damage."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 7 seconds",
-                        "Crit Chance 30%",
-                        "Deal 40 damage."
+                        "Cooldown 8 seconds",
+                        "Deal 15 damage.",
+                        "Your weapons have +9 damage."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 7 seconds",
-                        "Crit Chance 50%",
-                        "Deal 60 damage."
+                        "Cooldown 8 seconds",
+                        "Deal 20 damage.",
+                        "Your weapons have +12 damage."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 7 seconds",
-                        "Crit Chance 100%",
-                        "Deal 80 damage."
+                        "Cooldown 8 seconds",
+                        "Deal 25 damage.",
+                        "Your weapons have +15 damage."
                       ]
                     },
                     "Legendary": {
@@ -5490,11 +5482,11 @@
                     }
                   },
                   "tags": [
-                    "Weapon",
-                    "Apparel"
+                    "Weapon"
                   ],
                   "hiddenTags": [
-                    "Damage"
+                    "Damage",
+                    "DamageReference"
                   ],
                   "customTags": [],
                   "size": "Small",
@@ -5523,25 +5515,29 @@
                     {
                       "type": "Shielded",
                       "tooltips": [
-                        "Shield equal to this item's Damage."
+                        "Shield equal to this item's damage.",
+                        "Your other Shield items have +10 Shield."
                       ]
                     },
                     {
                       "type": "Restorative",
                       "tooltips": [
-                        "Heal equal to this item's Damage."
+                        "Heal equal to this item's damage.",
+                        "Your other Heal items have +10 Heal."
                       ]
                     },
                     {
                       "type": "Toxic",
                       "tooltips": [
-                        "Poison equal to 10% of this item's damage."
+                        "Poison equal to 10% of this item's damage.",
+                        "Your other Poison items have +1 Poison."
                       ]
                     },
                     {
                       "type": "Fiery",
                       "tooltips": [
-                        "Burn equal to 10% of this item's damage."
+                        "Burn to 10% of this item's damage.",
+                        "Your other Burn items have +2 Burn."
                       ]
                     },
                     {
@@ -5553,7 +5549,7 @@
                     {
                       "type": "Deadly",
                       "tooltips": [
-                        "This has double Crit damage."
+                        "+50% Crit Chance"
                       ]
                     },
                     {
@@ -5570,9 +5566,9 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 7 seconds",
-                    "Crit Chance (15%/30%/50%/100%)",
-                    "Deal (20/40/60/80) damage."
+                    "Cooldown 8 seconds",
+                    "Deal (10/15/20/25) damage.",
+                    "Your weapons have (+6/+9/+12/+15) damage."
                   ],
                   "packId": "Vanessa_Core",
                   "combatEncounters": []
@@ -5622,7 +5618,8 @@
                     }
                   },
                   "tags": [
-                    "Weapon"
+                    "Weapon",
+                    "Aquatic"
                   ],
                   "hiddenTags": [
                     "Damage"
@@ -5709,7 +5706,7 @@
                   "packId": "Pygmalien_Core",
                   "combatEncounters": []
                 },
-                "tierType": "Bronze"
+                "tierType": "Silver"
               },
               {
                 "card": {
@@ -5866,7 +5863,7 @@
                   "packId": "Pygmalien_Core",
                   "combatEncounters": []
                 },
-                "tierType": "Silver"
+                "tierType": "Bronze"
               }
             ],
             "day": 2
@@ -5880,7 +5877,7 @@
         [
           {
             "cardId": "04b60df4-91d9-4065-94e0-f9f462a3b104",
-            "cardName": "Tempest Flamedancer",
+            "cardName": "Tempest Bravo",
             "level": 3,
             "health": 300,
             "items": [
@@ -6460,22 +6457,22 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Your Burn items have +5% Crit Chance."
+                        "Your Burn items have +10% Crit Chance."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Your Burn items have +10% Crit Chance."
+                        "Your Burn items have +15% Crit Chance."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Your Burn items have +15% Crit Chance."
+                        "Your Burn items have +20% Crit Chance."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Your Burn items have +20% Crit Chance."
+                        "Your Burn items have +25% Crit Chance."
                       ]
                     },
                     "Legendary": {
@@ -6493,7 +6490,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_FlameWall_01",
                   "unifiedTooltips": [
-                    "Your Burn items have (+5%/+10%/+15%/+20%) Crit Chance."
+                    "Your Burn items have (+10%/+15%/+20%/+25%) Crit Chance."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -6743,10 +6740,12 @@
                     }
                   },
                   "tags": [
-                    "Weapon"
+                    "Weapon",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Damage",
+                    "PotionReference",
                     "AmmoReference"
                   ],
                   "customTags": [],
@@ -7025,22 +7024,22 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "The first time you fall below 50% health each fight, Reload 2 items."
+                        "The first time you fall below 50% health each fight, Reload 1 item(s) and Charge 1 Ammo items 1 second."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "The first time you fall below 50% health each fight, Reload 4 items."
+                        "The first time you fall below 50% health each fight, Reload 2 item(s) and Charge 2 Ammo items 1 second."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "The first time you fall below 50% health each fight, Reload 6 items."
+                        "The first time you fall below 50% health each fight, Reload 3 item(s) and Charge 3 Ammo items 1 second."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "The first time you fall below 50% health each fight, Reload 8 items."
+                        "The first time you fall below 50% health each fight, Reload 4 item(s) and Charge 4 Ammo items 1 second."
                       ]
                     },
                     "Legendary": {
@@ -7058,7 +7057,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_DabblingApprentice_01.png",
                   "unifiedTooltips": [
-                    "The first time you fall below 50% health each fight, Reload (2/4/6/8) items."
+                    "The first time you fall below 50% health each fight, Reload (1/2/3/4) item(s) and Charge (1/2/3/4) Ammo items 1 second."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -8482,29 +8481,31 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "When you freeze, your weapons gain 2 damage for the fight."
+                        "When you freeze, your Weapons gain +30 damage for the fight."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "When you freeze, your weapons gain 4 damage for the fight."
+                        "When you freeze, your Weapons gain +60 damage for the fight."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "When you freeze, your weapons gain 6 damage for the fight."
+                        "When you freeze, your Weapons gain +90 damage for the fight."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you freeze, your weapons gain 8 damage for the fight."
+                        "When you freeze, your Weapons gain +120 damage for the fight."
                       ]
                     },
                     "Legendary": {
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Weapon"
+                  ],
                   "hiddenTags": [
                     "FreezeReference",
                     "DamageReference"
@@ -8516,7 +8517,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_TheColdShoulder_01.png",
                   "unifiedTooltips": [
-                    "When you freeze, your weapons gain (2/4/6/8) damage for the fight."
+                    "When you freeze, your Weapons gain (+30/+60/+90/+120) damage for the fight."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -8654,7 +8655,7 @@
                   "packId": "Core",
                   "combatEncounters": []
                 },
-                "tierType": "Silver"
+                "tierType": "Gold"
               },
               {
                 "card": {
@@ -8906,7 +8907,7 @@
                   "packId": "Core",
                   "combatEncounters": []
                 },
-                "tierType": "Silver"
+                "tierType": "Gold"
               },
               {
                 "card": {
@@ -9038,7 +9039,7 @@
                   "packId": "Pygmalien_Core",
                   "combatEncounters": []
                 },
-                "tierType": "Gold"
+                "tierType": "Silver"
               },
               {
                 "card": {
@@ -9162,7 +9163,7 @@
                   "packId": "Core",
                   "combatEncounters": []
                 },
-                "tierType": "Silver"
+                "tierType": "Gold"
               }
             ],
             "skills": [
@@ -9174,22 +9175,22 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "When you use a small item, heal 5."
+                        "The first 5 times you use a small item each fight, Heal 5."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "When you use a small item, heal 10."
+                        "The first 10 times you use a small item each fight, Heal 10."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "When you use a small item, heal 15."
+                        "The first 15 times you use a small item each fight, Heal 15."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you use a small item, heal 20."
+                        "The first 20 times you use a small item each fight, Heal 20."
                       ]
                     },
                     "Legendary": {
@@ -9207,7 +9208,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_SmallRefresh.png",
                   "unifiedTooltips": [
-                    "When you use a small item, heal (5/10/15/20)."
+                    "The first (5/10/15/20) times you use a small item each fight, Heal (5/10/15/20)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -9221,7 +9222,7 @@
         [
           {
             "cardId": "38936647-a688-49d1-8e5c-9c2c79f18a18",
-            "cardName": "Hooverbike Hooligan",
+            "cardName": "Hoverbike Hooligan",
             "level": 5,
             "health": 650,
             "items": [
@@ -9852,28 +9853,28 @@
                       "tooltips": [
                         "Cooldown 7 seconds",
                         "Deal 12 damage.",
-                        "Slow 1 item for 2 second(s)."
+                        "Slow 1 item(s) for 1 second(s)."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
                         "Cooldown 7 seconds",
                         "Deal 18 damage.",
-                        "Slow 1 item for 3 second(s)."
+                        "Slow 2 item(s) for 1 second(s)."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
                         "Cooldown 7 seconds",
                         "Deal 24 damage.",
-                        "Slow 1 item for 4 second(s)."
+                        "Slow 3 item(s) for 1 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
                         "Cooldown 7 seconds",
                         "Deal 32 damage.",
-                        "Slow 1 item for 5 second(s)."
+                        "Slow 4 item(s) for 1 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -9964,7 +9965,7 @@
                   "unifiedTooltips": [
                     "Cooldown 7 seconds",
                     "Deal (12/18/24/32) damage.",
-                    "Slow 1 item for (2/3/4/5) second(s)."
+                    "Slow (1/2/3/4) item(s) for 1 second(s)."
                   ],
                   "packId": "Vanessa_Core",
                   "combatEncounters": []
@@ -12964,22 +12965,22 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "When you heal, your Shield items gain 1 shield for the fight."
+                        "When you Heal or gain Regen, your Shield items gain 3 shield for the fight."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "When you heal, your Shield items gain 2 shield for the fight."
+                        "When you Heal or gain Regen, your Shield items gain 6 shield for the fight."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "When you heal, your Shield items gain 3 shield for the fight."
+                        "When you Heal or gain Regen, your Shield items gain 9 shield for the fight."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you heal, your Shield items gain 4 shield for the fight."
+                        "When you Heal or gain Regen, your Shield items gain 12 shield for the fight."
                       ]
                     },
                     "Legendary": {
@@ -12989,7 +12990,8 @@
                   "tags": [],
                   "hiddenTags": [
                     "HealReference",
-                    "ShieldReference"
+                    "ShieldReference",
+                    "RegenReference"
                   ],
                   "customTags": [],
                   "size": "Medium",
@@ -12998,7 +13000,7 @@
                   ],
                   "artKey": "Icon_SKILL_MON_ExtremeComfort.png",
                   "unifiedTooltips": [
-                    "When you heal, your Shield items gain (1/2/3/4) shield for the fight."
+                    "When you Heal or gain Regen, your Shield items gain (3/6/9/12) shield for the fight."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -13110,25 +13112,25 @@
                     {
                       "type": "Heavy",
                       "tooltips": [
-                        "When you crit with a Weapon, slow 1 item for 4 second(s)."
+                        "When you crit with a Weapon, slow 1 item for 2 second(s)."
                       ]
                     },
                     {
                       "type": "Icy",
                       "tooltips": [
-                        "When you crit with a weapon, Freeze 1 small item for 2 second(s)."
+                        "When you crit with a weapon, Freeze 1 item for 1 second(s)."
                       ]
                     },
                     {
                       "type": "Turbo",
                       "tooltips": [
-                        "When you crit with a weapon, haste 1 item for 4 second(s)."
+                        "When you crit with a weapon, haste 1 item for 2 second(s)."
                       ]
                     },
                     {
                       "type": "Shielded",
                       "tooltips": [
-                        "When you crit with a weapon, shield 40."
+                        "When you crit with a weapon, shield 60."
                       ]
                     },
                     {
@@ -13140,7 +13142,7 @@
                     {
                       "type": "Toxic",
                       "tooltips": [
-                        "When you crit with a weapon, poison 4"
+                        "When you crit with a weapon, poison 6"
                       ]
                     },
                     {
@@ -13180,7 +13182,7 @@
               {
                 "card": {
                   "id": "03e4c71d-5317-4c35-a0fb-5348356edc03",
-                  "name": "Powder Flask",
+                  "name": "Powder Horn",
                   "startingTier": "Bronze",
                   "tiers": {
                     "Bronze": {
@@ -14645,13 +14647,13 @@
                     {
                       "type": "Shielded",
                       "tooltips": [
-                        "Shield your opponent equal to 10 times this item's Poison."
+                        "Shield your enemy equal to 10 times this item's Poison."
                       ]
                     },
                     {
                       "type": "Restorative",
                       "tooltips": [
-                        "Heal your opponent equal to 10 times this item's Poison."
+                        "Heal your enemy equal to 10 times this item's Poison."
                       ]
                     },
                     {
@@ -15015,28 +15017,28 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Cooldown 7 seconds",
+                        "Cooldown 8 seconds",
                         "Multicast 2",
                         "Deal 5 damage."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 6 seconds",
+                        "Cooldown 7 seconds",
                         "Multicast 2",
                         "Deal 5 damage."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 5 seconds",
+                        "Cooldown 6 seconds",
                         "Multicast 2",
                         "Deal 5 damage."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
+                        "Cooldown 5 seconds",
                         "Multicast 2",
                         "Deal 5 damage."
                       ]
@@ -15125,7 +15127,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown (7/6/5/4) seconds",
+                    "Cooldown (8/7/6/5) seconds",
                     "Multicast 2",
                     "Deal 5 damage."
                   ],
@@ -16192,15 +16194,15 @@
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 6 seconds",
+                        "Cooldown 8 seconds",
                         "Deal 50 Damage.",
                         "Slow 1 item for 2 second(s).",
-                        "When your enemy uses an item, Charge this 1 second(s)."
+                        "When your enemy uses an item, Charge this 2 second(s)."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 6 seconds",
+                        "Cooldown 7 seconds",
                         "Deal 50 Damage.",
                         "Slow 1 item for 2 second(s).",
                         "When your enemy uses an item, Charge this 2 second(s)."
@@ -16211,7 +16213,7 @@
                         "Cooldown 6 seconds",
                         "Deal 50 Damage.",
                         "Slow 1 item for 2 second(s).",
-                        "When your enemy uses an item, Charge this 3 second(s)."
+                        "When your enemy uses an item, Charge this 2 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -16301,10 +16303,10 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 6 seconds",
+                    "Cooldown (8/7/6) seconds",
                     "Deal 50 Damage.",
                     "Slow 1 item for 2 second(s).",
-                    "When your enemy uses an item, Charge this (1/2/3) second(s)."
+                    "When your enemy uses an item, Charge this 2 second(s)."
                   ],
                   "packId": "Vanessa_Core",
                   "combatEncounters": []
@@ -16642,7 +16644,7 @@
               {
                 "card": {
                   "id": "03e4c71d-5317-4c35-a0fb-5348356edc03",
-                  "name": "Powder Flask",
+                  "name": "Powder Horn",
                   "startingTier": "Bronze",
                   "tiers": {
                     "Bronze": {
@@ -17370,22 +17372,24 @@
                 "card": {
                   "id": "64727f7e-adfd-4f25-aa4e-1f127b9d5b70",
                   "name": "All Talk",
-                  "startingTier": "Gold",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
                       "tooltips": []
                     },
                     "Silver": {
-                      "tooltips": []
+                      "tooltips": [
+                        "While you have more than half Health, your Weapons have +30 damage."
+                      ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "While you have more than half Health, your weapons have +25 damage."
+                        "While you have more than half Health, your Weapons have +60 damage."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "While you have more than half Health, your weapons have +50 damage."
+                        "While you have more than half Health, your Weapons have +90 damage."
                       ]
                     },
                     "Legendary": {
@@ -17404,12 +17408,12 @@
                   ],
                   "artKey": "Icon_Skill_MON_AllTalk_02.png",
                   "unifiedTooltips": [
-                    "While you have more than half Health, your weapons have (+25/+50) damage."
+                    "While you have more than half Health, your Weapons have (+30/+60/+90) damage."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
                 },
-                "tierType": "Gold"
+                "tierType": "Silver"
               }
             ],
             "day": 5
@@ -18044,22 +18048,22 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Your Small Diamond-tier items have their cooldowns reduced by 30%."
+                        "Your Small Diamond-tier items have their cooldowns reduced by 20%."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Your Small Diamond-tier items have their cooldowns reduced by 40%."
+                        "Your Small Diamond-tier items have their cooldowns reduced by 30%."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Your Small Diamond-tier items have their cooldowns reduced by 50%."
+                        "Your Small Diamond-tier items have their cooldowns reduced by 40%."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Your Small Diamond-tier items have their cooldowns reduced by 60%."
+                        "Your Small Diamond-tier items have their cooldowns reduced by 50%."
                       ]
                     },
                     "Legendary": {
@@ -18077,7 +18081,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_DiamondFangs.png",
                   "unifiedTooltips": [
-                    "Your Small Diamond-tier items have their cooldowns reduced by (30%/40%/50%/60%)."
+                    "Your Small Diamond-tier items have their cooldowns reduced by (20%/30%/40%/50%)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -20213,26 +20217,24 @@
                 "card": {
                   "id": "4826832f-f3a5-4c40-b8fa-737f002074fa",
                   "name": "Insect Wing",
-                  "startingTier": "Bronze",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
+                      "tooltips": []
+                    },
+                    "Silver": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 3%."
                       ]
                     },
-                    "Silver": {
+                    "Gold": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 6%."
                       ]
                     },
-                    "Gold": {
-                      "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 9%."
-                      ]
-                    },
                     "Diamond": {
                       "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 12%."
+                        "When you sell this, reduce your leftmost item's cooldown by 9%."
                       ]
                     },
                     "Legendary": {
@@ -20305,7 +20307,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%)."
+                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -20804,26 +20806,24 @@
                 "card": {
                   "id": "4826832f-f3a5-4c40-b8fa-737f002074fa",
                   "name": "Insect Wing",
-                  "startingTier": "Bronze",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
+                      "tooltips": []
+                    },
+                    "Silver": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 3%."
                       ]
                     },
-                    "Silver": {
+                    "Gold": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 6%."
                       ]
                     },
-                    "Gold": {
-                      "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 9%."
-                      ]
-                    },
                     "Diamond": {
                       "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 12%."
+                        "When you sell this, reduce your leftmost item's cooldown by 9%."
                       ]
                     },
                     "Legendary": {
@@ -20896,7 +20896,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%)."
+                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -20909,33 +20909,29 @@
                 "card": {
                   "id": "c5bff6ad-5d13-4cf3-9941-98f3cf913949",
                   "name": "Counterstrike",
-                  "startingTier": "Silver",
+                  "startingTier": "Gold",
                   "tiers": {
                     "Bronze": {
                       "tooltips": []
                     },
                     "Silver": {
-                      "tooltips": [
-                        "The first 5 times your enemy uses a weapon, Charge 1 item(s) 1 second(s)."
-                      ]
+                      "tooltips": []
                     },
                     "Gold": {
                       "tooltips": [
-                        "The first 5 times your enemy uses a weapon, Charge 2 item(s) 1 second(s)."
+                        "The first time your enemy uses a Weapon, Charge your items 1 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "The first 5 times your enemy uses a weapon, Charge 3 item(s) 1 second(s)."
+                        "The first time your enemy uses a Weapon, Charge your items 2 second(s)."
                       ]
                     },
                     "Legendary": {
                       "tooltips": []
                     }
                   },
-                  "tags": [
-                    "Weapon"
-                  ],
+                  "tags": [],
                   "hiddenTags": [
                     "Charge"
                   ],
@@ -20946,12 +20942,12 @@
                   ],
                   "artKey": "Icon_Skill_MON_Counterattack.png",
                   "unifiedTooltips": [
-                    "The first 5 times your enemy uses a weapon, Charge (1/2/3) item(s) 1 second(s)."
+                    "The first time your enemy uses a Weapon, Charge your items (1/2) second(s)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
                 },
-                "tierType": "Silver"
+                "tierType": "Gold"
               }
             ],
             "day": 5
@@ -21163,28 +21159,28 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Cooldown 7 seconds",
+                        "Cooldown 6 seconds",
                         "Deal 15 damage.",
                         "Shield 15."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 6 seconds",
+                        "Cooldown 5 seconds",
                         "Deal 15 damage.",
                         "Shield 15."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 5 seconds",
+                        "Cooldown 4 seconds",
                         "Deal 15 damage.",
                         "Shield 15."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
+                        "Cooldown 3 seconds",
                         "Deal 15 damage.",
                         "Shield 15."
                       ]
@@ -21196,6 +21192,7 @@
                   "tags": [
                     "Friend",
                     "Weapon",
+                    "Tech",
                     "Tool"
                   ],
                   "hiddenTags": [
@@ -21276,7 +21273,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown (7/6/5/4) seconds",
+                    "Cooldown (6/5/4/3) seconds",
                     "Deal 15 damage.",
                     "Shield 15."
                   ],
@@ -21306,16 +21303,16 @@
                       "tooltips": [
                         "Cooldown 6 seconds",
                         "Deal 20 damage.",
-                        "When you use another Friend, this gains 20 damage for the fight.",
-                        "Your other Friends' cooldowns are reduced by 20%."
+                        "When you use another Friend, this gains 15 damage for the fight.",
+                        "Your other Friends' cooldowns are reduced by 15%."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
                         "Cooldown 6 seconds",
                         "Deal 40 damage.",
-                        "When you use another Friend, this gains 30 damage for the fight.",
-                        "Your other Friends' cooldowns are reduced by 30%."
+                        "When you use another Friend, this gains 20 damage for the fight.",
+                        "Your other Friends' cooldowns are reduced by 20%."
                       ]
                     },
                     "Legendary": {
@@ -21407,8 +21404,8 @@
                   "unifiedTooltips": [
                     "Cooldown 6 seconds",
                     "Deal (10/20/40) damage.",
-                    "When you use another Friend, this gains (10/20/30) damage for the fight.",
-                    "Your other Friends' cooldowns are reduced by (10%/20%/30%)."
+                    "When you use another Friend, this gains (10/15/20) damage for the fight.",
+                    "Your other Friends' cooldowns are reduced by (10%/15%/20%)."
                   ],
                   "packId": "Dooley_Core",
                   "combatEncounters": []
@@ -22387,7 +22384,8 @@
                     }
                   },
                   "tags": [
-                    "Weapon"
+                    "Weapon",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Damage",
@@ -24970,22 +24968,22 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "When you use a Weapon, it gains +2% crit Chance for the fight."
+                        "When you use a Weapon, it gains +3% Crit Chance for the fight."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "When you use a Weapon, it gains +4% crit Chance for the fight."
+                        "When you use a Weapon, it gains +6% Crit Chance for the fight."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "When you use a Weapon, it gains +6% crit Chance for the fight."
+                        "When you use a Weapon, it gains +9% Crit Chance for the fight."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you use a Weapon, it gains +8% crit Chance for the fight."
+                        "When you use a Weapon, it gains +12% Crit Chance for the fight."
                       ]
                     },
                     "Legendary": {
@@ -25005,7 +25003,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_PackLoyalty_04.png",
                   "unifiedTooltips": [
-                    "When you use a Weapon, it gains (+2%/+4%/+6%/+8%) crit Chance for the fight."
+                    "When you use a Weapon, it gains (+3%/+6%/+9%/+12%) Crit Chance for the fight."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -25760,22 +25758,24 @@
                 "card": {
                   "id": "570a7c19-0dab-459f-b545-6ade12a69312",
                   "name": "Toxic Friendship",
-                  "startingTier": "Gold",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
                       "tooltips": []
                     },
                     "Silver": {
-                      "tooltips": []
-                    },
-                    "Gold": {
                       "tooltips": [
                         "When you use a Friend, Poison 1."
                       ]
                     },
-                    "Diamond": {
+                    "Gold": {
                       "tooltips": [
                         "When you use a Friend, Poison 2."
+                      ]
+                    },
+                    "Diamond": {
+                      "tooltips": [
+                        "When you use a Friend, Poison 3."
                       ]
                     },
                     "Legendary": {
@@ -25795,7 +25795,7 @@
                   ],
                   "artKey": "Icon_SKILL_MON_ToxicFriendship.png",
                   "unifiedTooltips": [
-                    "When you use a Friend, Poison (1/2)."
+                    "When you use a Friend, Poison (1/2/3)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -25815,26 +25815,24 @@
                 "card": {
                   "id": "4826832f-f3a5-4c40-b8fa-737f002074fa",
                   "name": "Insect Wing",
-                  "startingTier": "Bronze",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
+                      "tooltips": []
+                    },
+                    "Silver": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 3%."
                       ]
                     },
-                    "Silver": {
+                    "Gold": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 6%."
                       ]
                     },
-                    "Gold": {
-                      "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 9%."
-                      ]
-                    },
                     "Diamond": {
                       "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 12%."
+                        "When you sell this, reduce your leftmost item's cooldown by 9%."
                       ]
                     },
                     "Legendary": {
@@ -25907,7 +25905,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%)."
+                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -25918,26 +25916,24 @@
                 "card": {
                   "id": "4826832f-f3a5-4c40-b8fa-737f002074fa",
                   "name": "Insect Wing",
-                  "startingTier": "Bronze",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
+                      "tooltips": []
+                    },
+                    "Silver": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 3%."
                       ]
                     },
-                    "Silver": {
+                    "Gold": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 6%."
                       ]
                     },
-                    "Gold": {
-                      "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 9%."
-                      ]
-                    },
                     "Diamond": {
                       "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 12%."
+                        "When you sell this, reduce your leftmost item's cooldown by 9%."
                       ]
                     },
                     "Legendary": {
@@ -26010,7 +26006,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%)."
+                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -26030,28 +26026,30 @@
                       "tooltips": [
                         "Cooldown 6 seconds",
                         "Slow 1 item(s) for 3 second(s).",
-                        "Your other Slow items have +1 Slow."
+                        "Your items Slow for 1 more second."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
                         "Cooldown 6 seconds",
                         "Slow 2 item(s) for 3 second(s).",
-                        "Your other Slow items have +1 Slow."
+                        "Your items Slow for 1 more second."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
                         "Cooldown 6 seconds",
                         "Slow 3 item(s) for 3 second(s).",
-                        "Your other Slow items have +1 Slow."
+                        "Your items Slow for 1 more second."
                       ]
                     },
                     "Legendary": {
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Slow"
                   ],
@@ -26125,7 +26123,7 @@
                   "unifiedTooltips": [
                     "Cooldown 6 seconds",
                     "Slow (1/2/3) item(s) for 3 second(s).",
-                    "Your other Slow items have +1 Slow."
+                    "Your items Slow for 1 more second."
                   ],
                   "packId": "Mak_Core",
                   "combatEncounters": []
@@ -26173,12 +26171,6 @@
                     "Common"
                   ],
                   "enchantments": [
-                    {
-                      "type": "Heavy",
-                      "tooltips": [
-                        "Slow 1 item for 1 second(s)."
-                      ]
-                    },
                     {
                       "type": "Icy",
                       "tooltips": [
@@ -26476,26 +26468,24 @@
                 "card": {
                   "id": "4826832f-f3a5-4c40-b8fa-737f002074fa",
                   "name": "Insect Wing",
-                  "startingTier": "Bronze",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
+                      "tooltips": []
+                    },
+                    "Silver": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 3%."
                       ]
                     },
-                    "Silver": {
+                    "Gold": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 6%."
                       ]
                     },
-                    "Gold": {
-                      "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 9%."
-                      ]
-                    },
                     "Diamond": {
                       "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 12%."
+                        "When you sell this, reduce your leftmost item's cooldown by 9%."
                       ]
                     },
                     "Legendary": {
@@ -26568,7 +26558,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%)."
+                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -26579,26 +26569,24 @@
                 "card": {
                   "id": "4826832f-f3a5-4c40-b8fa-737f002074fa",
                   "name": "Insect Wing",
-                  "startingTier": "Bronze",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
+                      "tooltips": []
+                    },
+                    "Silver": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 3%."
                       ]
                     },
-                    "Silver": {
+                    "Gold": {
                       "tooltips": [
                         "When you sell this, reduce your leftmost item's cooldown by 6%."
                       ]
                     },
-                    "Gold": {
-                      "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 9%."
-                      ]
-                    },
                     "Diamond": {
                       "tooltips": [
-                        "When you sell this, reduce your leftmost item's cooldown by 12%."
+                        "When you sell this, reduce your leftmost item's cooldown by 9%."
                       ]
                     },
                     "Legendary": {
@@ -26671,7 +26659,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%/12%)."
+                    "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -26881,34 +26869,34 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
+                        "Cooldown 6 seconds",
                         "Ammo 1",
-                        "Burn both players 5.",
+                        "Burn both players 10.",
                         "Slow all enemy items for 1 second(s)."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
-                        "Ammo 1",
+                        "Cooldown 6 seconds",
+                        "Ammo 2",
                         "Burn both players 10.",
-                        "Slow all enemy items for 2 second(s)."
+                        "Slow all enemy items for 1 second(s)."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
-                        "Ammo 1",
-                        "Burn both players 15.",
-                        "Slow all enemy items for 3 second(s)."
+                        "Cooldown 6 seconds",
+                        "Ammo 3",
+                        "Burn both players 10.",
+                        "Slow all enemy items for 1 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
-                        "Ammo 1",
-                        "Burn both players 20.",
-                        "Slow all enemy items for 4 second(s)."
+                        "Cooldown 6 seconds",
+                        "Ammo 4",
+                        "Burn both players 10.",
+                        "Slow all enemy items for 1 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -26995,10 +26983,10 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 9 seconds",
-                    "Ammo 1",
-                    "Burn both players (5/10/15/20).",
-                    "Slow all enemy items for (1/2/3/4) second(s)."
+                    "Cooldown 6 seconds",
+                    "Ammo (1/2/3/4)",
+                    "Burn both players 10.",
+                    "Slow all enemy items for 1 second(s)."
                   ],
                   "packId": "Dooley_Core",
                   "combatEncounters": []
@@ -27821,28 +27809,28 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Cooldown 7 seconds",
+                        "Cooldown 6 seconds",
                         "Deal 15 damage.",
                         "Shield 15."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 6 seconds",
+                        "Cooldown 5 seconds",
                         "Deal 15 damage.",
                         "Shield 15."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 5 seconds",
+                        "Cooldown 4 seconds",
                         "Deal 15 damage.",
                         "Shield 15."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
+                        "Cooldown 3 seconds",
                         "Deal 15 damage.",
                         "Shield 15."
                       ]
@@ -27854,6 +27842,7 @@
                   "tags": [
                     "Friend",
                     "Weapon",
+                    "Tech",
                     "Tool"
                   ],
                   "hiddenTags": [
@@ -27934,7 +27923,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown (7/6/5/4) seconds",
+                    "Cooldown (6/5/4/3) seconds",
                     "Deal 15 damage.",
                     "Shield 15."
                   ],
@@ -28199,10 +28188,15 @@
                 "card": {
                   "id": "74d0780a-4d98-478e-b136-f1810bc88346",
                   "name": "Forklift",
-                  "startingTier": "Silver",
+                  "startingTier": "Bronze",
                   "tiers": {
                     "Bronze": {
-                      "tooltips": []
+                      "tooltips": [
+                        "Cooldown 10 seconds",
+                        "Deal 100 damage.",
+                        "When you use an Adjacent item, Charge this 0.5 second(s).",
+                        "If you have another Tool, Apparel, Tech, Weapon, or Friend, this has +25 Damage for each."
+                      ]
                     },
                     "Silver": {
                       "tooltips": [
@@ -28238,6 +28232,7 @@
                     "Weapon"
                   ],
                   "hiddenTags": [
+                    "TechReference",
                     "Damage"
                   ],
                   "customTags": [],
@@ -28261,31 +28256,31 @@
                     {
                       "type": "Turbo",
                       "tooltips": [
-                        "This has double Haste duration."
+                        "Haste 3 items for 3 second(s)."
                       ]
                     },
                     {
                       "type": "Shielded",
                       "tooltips": [
-                        "Shield 1 for each item to the left of this."
+                        "Shield equal to this item's damage."
                       ]
                     },
                     {
                       "type": "Restorative",
                       "tooltips": [
-                        "Heal 1 for each item to the left of this."
+                        "Heal equal to this item's damage."
                       ]
                     },
                     {
                       "type": "Toxic",
                       "tooltips": [
-                        "Poison 0.1 for each item to the left of this."
+                        "Poison equal to 10% of this item's damage."
                       ]
                     },
                     {
                       "type": "Fiery",
                       "tooltips": [
-                        "Burn 0.1 for each item to the left of this."
+                        "Burn equal to 10% of this item's damage."
                       ]
                     },
                     {
@@ -28316,8 +28311,8 @@
                   "unifiedTooltips": [
                     "Cooldown 10 seconds",
                     "Deal 100 damage.",
-                    "When you use an Adjacent item, Charge this (1/1.5/2) second(s).",
-                    "If you have another Tool, Apparel, Tech, Weapon, or Friend, this has (+50/+100/+150) Damage for each."
+                    "When you use an Adjacent item, Charge this (0.5/1/1.5/2) second(s).",
+                    "If you have another Tool, Apparel, Tech, Weapon, or Friend, this has (+25/+50/+100/+150) Damage for each."
                   ],
                   "packId": "Dooley_Core",
                   "combatEncounters": []
@@ -28355,7 +28350,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Haste"
                   ],
@@ -28499,7 +28496,7 @@
         [
           {
             "cardId": "962bf2b2-fc1b-4ad3-9526-15d76d3bb0de",
-            "cardName": "Enclave Weeper",
+            "cardName": "Foundation Weeper",
             "level": 8,
             "health": 1550,
             "items": [
@@ -30140,22 +30137,24 @@
                 "card": {
                   "id": "09c4c894-0397-47e5-9635-7b1f4c49527a",
                   "name": "Power Broker",
-                  "startingTier": "Gold",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
                       "tooltips": []
                     },
                     "Silver": {
-                      "tooltips": []
+                      "tooltips": [
+                        "Your weapons have +Damage equal 1 times to your income."
+                      ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Your weapons have + damage equal to your income."
+                        "Your weapons have +Damage equal 2 times to your income."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Your weapons have + damage equal to double your income."
+                        "Your weapons have +Damage equal 3 times to your income."
                       ]
                     },
                     "Legendary": {
@@ -30176,7 +30175,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_MoneyIsPower_02.png",
                   "unifiedTooltips": [
-                    "Your weapons have + damage equal to (1x/2x) your income."
+                    "Your weapons have +Damage equal (1/2/3) times to your income."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -30588,7 +30587,8 @@
                     }
                   },
                   "tags": [
-                    "Weapon"
+                    "Weapon",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Damage",
@@ -30815,7 +30815,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Burn"
                   ],
@@ -31015,22 +31017,22 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "When you Burn, your Weapons gain +2 damage for the fight."
+                        "When you Burn, your Weapons gain +5 damage for the fight."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "When you Burn, your Weapons gain +4 damage for the fight."
+                        "When you Burn, your Weapons gain +10 damage for the fight."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "When you Burn, your Weapons gain +6 damage for the fight."
+                        "When you Burn, your Weapons gain +15 damage for the fight."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you Burn, your Weapons gain +8 damage for the fight."
+                        "When you Burn, your Weapons gain +20 damage for the fight."
                       ]
                     },
                     "Legendary": {
@@ -31051,7 +31053,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_DisdainForLife_01",
                   "unifiedTooltips": [
-                    "When you Burn, your Weapons gain (+2/+4/+6/+8) damage for the fight."
+                    "When you Burn, your Weapons gain (+5/+10/+15/+20) damage for the fight."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -31555,7 +31557,9 @@
                       ]
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Poison",
                     "Regen"
@@ -31778,7 +31782,8 @@
                     }
                   },
                   "tags": [
-                    "Toy"
+                    "Toy",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Charge"
@@ -31897,7 +31902,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Poison"
                   ],
@@ -32015,7 +32022,8 @@
                     }
                   },
                   "tags": [
-                    "Apparel"
+                    "Apparel",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Poison",
@@ -32164,17 +32172,17 @@
                     },
                     "Silver": {
                       "tooltips": [
-                        "The first time you Freeze each fight, Slow all enemy items for 3 second(s)."
+                        "The first time you Freeze each fight, Slow all enemy items for 1 second(s)."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "The first time you Freeze each fight, Slow all enemy items for 5 second(s)."
+                        "The first time you Freeze each fight, Slow all enemy items for 2 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "The first time you Freeze each fight, Slow all enemy items for 7 second(s)."
+                        "The first time you Freeze each fight, Slow all enemy items for 3 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -32193,7 +32201,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_ChillingTouch.png",
                   "unifiedTooltips": [
-                    "The first time you Freeze each fight, Slow all enemy items for (3/5/7) second(s)."
+                    "The first time you Freeze each fight, Slow all enemy items for (1/2/3) second(s)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -32224,22 +32232,22 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "When you sell this, you gain 1 Regen."
+                        "When you sell this, permanently gain 1 Regen."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "When you sell this, you gain 2 Regen."
+                        "When you sell this, permanently gain 2 Regen."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "When you sell this, you gain 3 Regen."
+                        "When you sell this, permanently gain 3 Regen."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you sell this, you gain 4 Regen."
+                        "When you sell this, permanently gain 4 Regen."
                       ]
                     },
                     "Legendary": {
@@ -32312,7 +32320,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you sell this, you gain (1/2/3/4) Regen."
+                    "When you sell this, permanently gain (1/2/3/4) Regen."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -32681,7 +32689,8 @@
                     }
                   },
                   "tags": [
-                    "Weapon"
+                    "Weapon",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Damage",
@@ -32882,28 +32891,28 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Cooldown 7 seconds",
+                        "Cooldown 6 seconds",
                         "Poison 3.",
                         "Shield 15."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 6 seconds",
+                        "Cooldown 5 seconds",
                         "Poison 3.",
                         "Shield 15."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 5 seconds",
+                        "Cooldown 4 seconds",
                         "Poison 3.",
                         "Shield 15."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
+                        "Cooldown 3 seconds",
                         "Poison 3.",
                         "Shield 15."
                       ]
@@ -32993,7 +33002,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown (7/6/5/4) seconds",
+                    "Cooldown (6/5/4/3) seconds",
                     "Poison 3.",
                     "Shield 15."
                   ],
@@ -33241,22 +33250,22 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "When you sell this, you gain 1 Regen."
+                        "When you sell this, permanently gain 1 Regen."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "When you sell this, you gain 2 Regen."
+                        "When you sell this, permanently gain 2 Regen."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "When you sell this, you gain 3 Regen."
+                        "When you sell this, permanently gain 3 Regen."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you sell this, you gain 4 Regen."
+                        "When you sell this, permanently gain 4 Regen."
                       ]
                     },
                     "Legendary": {
@@ -33329,7 +33338,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you sell this, you gain (1/2/3/4) Regen."
+                    "When you sell this, permanently gain (1/2/3/4) Regen."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -34031,17 +34040,17 @@
                     },
                     "Silver": {
                       "tooltips": [
-                        "Your leftmost item has +15 value during combat."
+                        "Your leftmost item has +20 value during combat."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Your leftmost item has +30 value during combat."
+                        "Your leftmost item has +40 value during combat."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Your leftmost item has +50 value during combat."
+                        "Your leftmost item has +60 value during combat."
                       ]
                     },
                     "Legendary": {
@@ -34059,7 +34068,7 @@
                   ],
                   "artKey": "Icon_SKILL_MON_CleanStorefront.png",
                   "unifiedTooltips": [
-                    "Your leftmost item has (+15/+30/+50) value during combat."
+                    "Your leftmost item has (+20/+40/+60) value during combat."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -34081,26 +34090,24 @@
                 "card": {
                   "id": "55f11b65-77fa-4d70-9250-8a40d03961ad",
                   "name": "Feather",
-                  "startingTier": "Bronze",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
+                      "tooltips": []
+                    },
+                    "Silver": {
                       "tooltips": [
                         "When you sell this, reduce your items' cooldowns by 2%."
                       ]
                     },
-                    "Silver": {
+                    "Gold": {
                       "tooltips": [
                         "When you sell this, reduce your items' cooldowns by 4%."
                       ]
                     },
-                    "Gold": {
-                      "tooltips": [
-                        "When you sell this, reduce your items' cooldowns by 6%."
-                      ]
-                    },
                     "Diamond": {
                       "tooltips": [
-                        "When you sell this, reduce your items' cooldowns by 8%."
+                        "When you sell this, reduce your items' cooldowns by 6%."
                       ]
                     },
                     "Legendary": {
@@ -34173,7 +34180,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you sell this, reduce your items' cooldowns by (2%/4%/6%/8%)."
+                    "When you sell this, reduce your items' cooldowns by (2%/4%/6%)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -34210,7 +34217,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Shield",
                     "Crit",
@@ -34335,7 +34344,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "CritReference",
                     "ShieldReference",
@@ -34714,7 +34725,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "CritReference",
                     "ShieldReference",
@@ -34835,7 +34848,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Shield",
                     "Crit",
@@ -34930,26 +34945,24 @@
                 "card": {
                   "id": "55f11b65-77fa-4d70-9250-8a40d03961ad",
                   "name": "Feather",
-                  "startingTier": "Bronze",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
+                      "tooltips": []
+                    },
+                    "Silver": {
                       "tooltips": [
                         "When you sell this, reduce your items' cooldowns by 2%."
                       ]
                     },
-                    "Silver": {
+                    "Gold": {
                       "tooltips": [
                         "When you sell this, reduce your items' cooldowns by 4%."
                       ]
                     },
-                    "Gold": {
-                      "tooltips": [
-                        "When you sell this, reduce your items' cooldowns by 6%."
-                      ]
-                    },
                     "Diamond": {
                       "tooltips": [
-                        "When you sell this, reduce your items' cooldowns by 8%."
+                        "When you sell this, reduce your items' cooldowns by 6%."
                       ]
                     },
                     "Legendary": {
@@ -35022,7 +35035,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you sell this, reduce your items' cooldowns by (2%/4%/6%/8%)."
+                    "When you sell this, reduce your items' cooldowns by (2%/4%/6%)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -35989,7 +36002,7 @@
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you Heal, charge 1 Poison item 1 second(s)."
+                        "When you Heal or gain Regen, Charge 1 Poison item 1 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -35999,7 +36012,8 @@
                   "tags": [],
                   "hiddenTags": [
                     "Poison",
-                    "HealReference"
+                    "HealReference",
+                    "RegenReference"
                   ],
                   "customTags": [],
                   "size": "Medium",
@@ -36008,7 +36022,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_SpreadingInfection_02.png",
                   "unifiedTooltips": [
-                    "When you Heal, charge 1 Poison item 1 second(s)."
+                    "When you Heal or gain Regen, Charge 1 Poison item 1 second(s)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -36168,7 +36182,7 @@
                     {
                       "type": "Golden",
                       "tooltips": [
-                        "This has double value gain."
+                        "This has double gold gain gain."
                       ]
                     },
                     {
@@ -37663,28 +37677,28 @@
                     "Bronze": {
                       "tooltips": [
                         "Cooldown 7 seconds",
-                        "Slow 1 item(s) for 3 second(s).",
+                        "Slow 1 item for 3 second(s).",
                         "At the start of each fight, use this."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
                         "Cooldown 6 seconds",
-                        "Slow 1 item(s) for 3 second(s).",
+                        "Slow 1 item for 3 second(s).",
                         "At the start of each fight, use this."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
                         "Cooldown 5 seconds",
-                        "Slow 1 item(s) for 3 second(s).",
+                        "Slow 1 item for 3 second(s).",
                         "At the start of each fight, use this."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
                         "Cooldown 4 seconds",
-                        "Slow 1 item(s) for 3 second(s).",
+                        "Slow 1 item for 3 second(s).",
                         "At the start of each fight, use this."
                       ]
                     },
@@ -37725,25 +37739,25 @@
                     {
                       "type": "Shielded",
                       "tooltips": [
-                        "Shield 30."
+                        "Shield 40."
                       ]
                     },
                     {
                       "type": "Restorative",
                       "tooltips": [
-                        "Heal 45."
+                        "Heal 200."
                       ]
                     },
                     {
                       "type": "Toxic",
                       "tooltips": [
-                        "Poison 3."
+                        "Poison 2."
                       ]
                     },
                     {
                       "type": "Fiery",
                       "tooltips": [
-                        "Burn 4."
+                        "Burn 2."
                       ]
                     },
                     {
@@ -37767,13 +37781,13 @@
                     {
                       "type": "Obsidian",
                       "tooltips": [
-                        "Deal 30 Damage."
+                        "Deal 40 Damage."
                       ]
                     }
                   ],
                   "unifiedTooltips": [
                     "Cooldown (7/6/5/4) seconds",
-                    "Slow 1 item(s) for 3 second(s).",
+                    "Slow 1 item for 3 second(s).",
                     "At the start of each fight, use this."
                   ],
                   "packId": "Vanessa_Core",
@@ -37888,17 +37902,17 @@
                     },
                     "Silver": {
                       "tooltips": [
-                        "The first time you fall below half health each fight, Shield equal to 30% of your Max Health."
+                        "When the Sandstorm starts you take 25% less damage for the rest of the fight."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "The first time you fall below half health each fight, Shield equal to 50% of your Max Health."
+                        "When the Sandstorm starts you take 50% less damage for the rest of the fight."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "The first time you fall below half health each fight, Shield equal to 80% of your Max Health."
+                        "When the Sandstorm starts you take 75% less damage for the rest of the fight."
                       ]
                     },
                     "Legendary": {
@@ -37906,10 +37920,7 @@
                     }
                   },
                   "tags": [],
-                  "hiddenTags": [
-                    "Shield",
-                    "HealthReference"
-                  ],
+                  "hiddenTags": [],
                   "customTags": [],
                   "size": "Medium",
                   "heroes": [
@@ -37917,7 +37928,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_GlidedShell_03.png",
                   "unifiedTooltips": [
-                    "The first time you fall below half health each fight, Shield equal to (30%/50%/80%) of your Max Health."
+                    "When the Sandstorm starts you take (25%/50%/75%) less damage for the rest of the fight."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -37981,7 +37992,7 @@
         [
           {
             "cardId": "d9e56b4c-8ad2-465d-b44c-45a7f2562bde",
-            "cardName": "Shock Trooper",
+            "cardName": "Annex Trooper",
             "level": 9,
             "health": 1925,
             "items": [
@@ -38121,34 +38132,34 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
+                        "Cooldown 6 seconds",
                         "Ammo 1",
-                        "Burn both players 5.",
+                        "Burn both players 10.",
                         "Slow all enemy items for 1 second(s)."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
-                        "Ammo 1",
+                        "Cooldown 6 seconds",
+                        "Ammo 2",
                         "Burn both players 10.",
-                        "Slow all enemy items for 2 second(s)."
+                        "Slow all enemy items for 1 second(s)."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
-                        "Ammo 1",
-                        "Burn both players 15.",
-                        "Slow all enemy items for 3 second(s)."
+                        "Cooldown 6 seconds",
+                        "Ammo 3",
+                        "Burn both players 10.",
+                        "Slow all enemy items for 1 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
-                        "Ammo 1",
-                        "Burn both players 20.",
-                        "Slow all enemy items for 4 second(s)."
+                        "Cooldown 6 seconds",
+                        "Ammo 4",
+                        "Burn both players 10.",
+                        "Slow all enemy items for 1 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -38235,10 +38246,10 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 9 seconds",
-                    "Ammo 1",
-                    "Burn both players (5/10/15/20).",
-                    "Slow all enemy items for (1/2/3/4) second(s)."
+                    "Cooldown 6 seconds",
+                    "Ammo (1/2/3/4)",
+                    "Burn both players 10.",
+                    "Slow all enemy items for 1 second(s)."
                   ],
                   "packId": "Dooley_Core",
                   "combatEncounters": []
@@ -38508,23 +38519,23 @@
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
+                        "Cooldown 10 seconds",
                         "Deal 50 damage.",
-                        "When you Burn, this gains 25 damage for the fight."
+                        "When you Burn, this gains 20 damage for the fight and Charge this 1 second."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
+                        "Cooldown 10 seconds",
                         "Deal 100 damage.",
-                        "When you Burn, this gains 50 damage for the fight."
+                        "When you Burn, this gains 40 damage for the fight and Charge this 1 second."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
+                        "Cooldown 10 seconds",
                         "Deal 200 damage.",
-                        "When you Burn, this gains 75 damage for the fight."
+                        "When you Burn, this gains 60 damage for the fight and Charge this 1 second."
                       ]
                     },
                     "Legendary": {
@@ -38612,9 +38623,9 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 9 seconds",
+                    "Cooldown 10 seconds",
                     "Deal (50/100/200) damage.",
-                    "When you Burn, this gains (25/50/75) damage for the fight."
+                    "When you Burn, this gains (20/40/60) damage for the fight and Charge this 1 second."
                   ],
                   "packId": "Dooley_Core",
                   "combatEncounters": []
@@ -39579,28 +39590,28 @@
                       "tooltips": [
                         "Cooldown 7 seconds",
                         "Deal 12 damage.",
-                        "Slow 1 item for 2 second(s)."
+                        "Slow 1 item(s) for 1 second(s)."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
                         "Cooldown 7 seconds",
                         "Deal 18 damage.",
-                        "Slow 1 item for 3 second(s)."
+                        "Slow 2 item(s) for 1 second(s)."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
                         "Cooldown 7 seconds",
                         "Deal 24 damage.",
-                        "Slow 1 item for 4 second(s)."
+                        "Slow 3 item(s) for 1 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
                         "Cooldown 7 seconds",
                         "Deal 32 damage.",
-                        "Slow 1 item for 5 second(s)."
+                        "Slow 4 item(s) for 1 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -39691,7 +39702,7 @@
                   "unifiedTooltips": [
                     "Cooldown 7 seconds",
                     "Deal (12/18/24/32) damage.",
-                    "Slow 1 item for (2/3/4/5) second(s)."
+                    "Slow (1/2/3/4) item(s) for 1 second(s)."
                   ],
                   "packId": "Vanessa_Core",
                   "combatEncounters": []
@@ -40237,22 +40248,22 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Your Burn items have +5% Crit Chance."
+                        "Your Burn items have +10% Crit Chance."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Your Burn items have +10% Crit Chance."
+                        "Your Burn items have +15% Crit Chance."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Your Burn items have +15% Crit Chance."
+                        "Your Burn items have +20% Crit Chance."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Your Burn items have +20% Crit Chance."
+                        "Your Burn items have +25% Crit Chance."
                       ]
                     },
                     "Legendary": {
@@ -40270,7 +40281,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_FlameWall_01",
                   "unifiedTooltips": [
-                    "Your Burn items have (+5%/+10%/+15%/+20%) Crit Chance."
+                    "Your Burn items have (+10%/+15%/+20%/+25%) Crit Chance."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -41615,26 +41626,24 @@
                 "card": {
                   "id": "55f11b65-77fa-4d70-9250-8a40d03961ad",
                   "name": "Feather",
-                  "startingTier": "Bronze",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
+                      "tooltips": []
+                    },
+                    "Silver": {
                       "tooltips": [
                         "When you sell this, reduce your items' cooldowns by 2%."
                       ]
                     },
-                    "Silver": {
+                    "Gold": {
                       "tooltips": [
                         "When you sell this, reduce your items' cooldowns by 4%."
                       ]
                     },
-                    "Gold": {
-                      "tooltips": [
-                        "When you sell this, reduce your items' cooldowns by 6%."
-                      ]
-                    },
                     "Diamond": {
                       "tooltips": [
-                        "When you sell this, reduce your items' cooldowns by 8%."
+                        "When you sell this, reduce your items' cooldowns by 6%."
                       ]
                     },
                     "Legendary": {
@@ -41707,7 +41716,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you sell this, reduce your items' cooldowns by (2%/4%/6%/8%)."
+                    "When you sell this, reduce your items' cooldowns by (2%/4%/6%)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -41744,7 +41753,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Shield",
                     "Crit",
@@ -41869,7 +41880,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "CritReference",
                     "ShieldReference",
@@ -42248,7 +42261,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "CritReference",
                     "ShieldReference",
@@ -42369,7 +42384,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Shield",
                     "Crit",
@@ -42464,26 +42481,24 @@
                 "card": {
                   "id": "55f11b65-77fa-4d70-9250-8a40d03961ad",
                   "name": "Feather",
-                  "startingTier": "Bronze",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
+                      "tooltips": []
+                    },
+                    "Silver": {
                       "tooltips": [
                         "When you sell this, reduce your items' cooldowns by 2%."
                       ]
                     },
-                    "Silver": {
+                    "Gold": {
                       "tooltips": [
                         "When you sell this, reduce your items' cooldowns by 4%."
                       ]
                     },
-                    "Gold": {
-                      "tooltips": [
-                        "When you sell this, reduce your items' cooldowns by 6%."
-                      ]
-                    },
                     "Diamond": {
                       "tooltips": [
-                        "When you sell this, reduce your items' cooldowns by 8%."
+                        "When you sell this, reduce your items' cooldowns by 6%."
                       ]
                     },
                     "Legendary": {
@@ -42556,7 +42571,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "When you sell this, reduce your items' cooldowns by (2%/4%/6%/8%)."
+                    "When you sell this, reduce your items' cooldowns by (2%/4%/6%)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -43523,7 +43538,7 @@
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you Heal, charge 1 Poison item 1 second(s)."
+                        "When you Heal or gain Regen, Charge 1 Poison item 1 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -43533,7 +43548,8 @@
                   "tags": [],
                   "hiddenTags": [
                     "Poison",
-                    "HealReference"
+                    "HealReference",
+                    "RegenReference"
                   ],
                   "customTags": [],
                   "size": "Medium",
@@ -43542,7 +43558,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_SpreadingInfection_02.png",
                   "unifiedTooltips": [
-                    "When you Heal, charge 1 Poison item 1 second(s)."
+                    "When you Heal or gain Regen, Charge 1 Poison item 1 second(s)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -43884,28 +43900,28 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
+                        "Cooldown 3 seconds",
                         "Ammo 3",
                         "Burn 4."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
+                        "Cooldown 3 seconds",
                         "Ammo 3",
                         "Burn 6."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
+                        "Cooldown 3 seconds",
                         "Ammo 3",
                         "Burn 8."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
+                        "Cooldown 3 seconds",
                         "Ammo 3",
                         "Burn 10."
                       ]
@@ -43995,7 +44011,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 4 seconds",
+                    "Cooldown 3 seconds",
                     "Ammo 3",
                     "Burn (4/6/8/10)."
                   ],
@@ -44124,28 +44140,28 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
+                        "Cooldown 3 seconds",
                         "Ammo 3",
                         "Burn 4."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
+                        "Cooldown 3 seconds",
                         "Ammo 3",
                         "Burn 6."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
+                        "Cooldown 3 seconds",
                         "Ammo 3",
                         "Burn 8."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
+                        "Cooldown 3 seconds",
                         "Ammo 3",
                         "Burn 10."
                       ]
@@ -44235,7 +44251,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 4 seconds",
+                    "Cooldown 3 seconds",
                     "Ammo 3",
                     "Burn (4/6/8/10)."
                   ],
@@ -44475,7 +44491,7 @@
                     },
                     "Silver": {
                       "tooltips": [
-                        "At the start of each fight, burn 17."
+                        "At the start of each fight, burn 15."
                       ]
                     },
                     "Gold": {
@@ -44503,7 +44519,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_Pyromania_01.png",
                   "unifiedTooltips": [
-                    "At the start of each fight, burn (17/25/35)."
+                    "At the start of each fight, burn (15/25/35)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -45184,7 +45200,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Haste"
                   ],
@@ -45390,21 +45408,24 @@
                     "Silver": {
                       "tooltips": [
                         "Cooldown 10 seconds",
-                        "Deal 30 damage for each Weapon or Tech item you have.",
+                        "Deal 30 damage.",
+                        "This has +30 damage for each other Weapon and Tech item you have.",
                         "This deals 2 times damage if it is your only friend."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 10 seconds",
-                        "Deal 40 damage for each Weapon or Tech item you have.",
+                        "Cooldown 9 seconds",
+                        "Deal 30 damage.",
+                        "This has +40 damage for each other Weapon and Tech item you have.",
                         "This deals 3 times damage if it is your only friend."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 10 seconds",
-                        "Deal 50 damage for each Weapon or Tech item you have.",
+                        "Cooldown 8 seconds",
+                        "Deal 30 damage.",
+                        "This has +50 damage for each other Weapon and Tech item you have.",
                         "This deals 4 times damage if it is your only friend."
                       ]
                     },
@@ -45417,6 +45438,7 @@
                     "Weapon"
                   ],
                   "hiddenTags": [
+                    "TechReference",
                     "Damage"
                   ],
                   "customTags": [],
@@ -45493,8 +45515,9 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 10 seconds",
-                    "Deal (30/40/50) damage for each Weapon or Tech item you have.",
+                    "Cooldown (10/9/8) seconds",
+                    "Deal 30 damage.",
+                    "This has (+30/+40/+50) damage for each other Weapon and Tech item you have.",
                     "This deals (2/3/4) times damage if it is your only friend."
                   ],
                   "packId": "Dooley_Core",
@@ -46017,7 +46040,7 @@
                       "tooltips": [
                         "Cooldown 5 seconds",
                         "Deal 50 damage.",
-                        "Reduce this item's cooldown by 10% for the fight."
+                        "Reduce this item's cooldown by 20% for the fight."
                       ]
                     },
                     "Diamond": {
@@ -46113,7 +46136,7 @@
                   "unifiedTooltips": [
                     "Cooldown 5 seconds",
                     "Deal (50/100) damage.",
-                    "Reduce this item's cooldown by (10%/20%) for the fight."
+                    "Reduce this item's cooldown by 20% for the fight."
                   ],
                   "packId": "Stelle_Core",
                   "combatEncounters": []
@@ -46126,19 +46149,21 @@
                 "card": {
                   "id": "813b4dd8-3fd3-4824-be6e-bce2b1f175a3",
                   "name": "Sharpened Steel",
-                  "startingTier": "Silver",
+                  "startingTier": "Bronze",
                   "tiers": {
                     "Bronze": {
-                      "tooltips": []
+                      "tooltips": [
+                        "When you use a Weapon, Adjacent items gain 3% Crit Chance for the fight."
+                      ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "When you use a Weapon, Adjacent items gain 4% Crit Chance for the fight."
+                        "When you use a Weapon, Adjacent items gain 6% Crit Chance for the fight."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "When you use a Weapon, Adjacent items gain 8% Crit Chance for the fight."
+                        "When you use a Weapon, Adjacent items gain 9% Crit Chance for the fight."
                       ]
                     },
                     "Diamond": {
@@ -46163,7 +46188,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_SharpenedSteel.png",
                   "unifiedTooltips": [
-                    "When you use a Weapon, Adjacent items gain (4%/8%/12%) Crit Chance for the fight."
+                    "When you use a Weapon, Adjacent items gain (3%/6%/9%/12%) Crit Chance for the fight."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -46466,6 +46491,7 @@
                     "Tech"
                   ],
                   "hiddenTags": [
+                    "TechReference",
                     "Damage"
                   ],
                   "customTags": [],
@@ -46582,7 +46608,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Haste"
                   ],
@@ -46810,12 +46838,12 @@
                     },
                     "Gold": {
                       "tooltips": [
-                        "The first time you freeze, burn, slow, poison, and haste each fight, charge 1 item(s) 2 second(s)."
+                        "The first time you Freeze, Burn, Slow, Poison, and Haste each fight, Charge 1 item 1 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "The first time you freeze, burn, slow, poison, and haste each fight, charge 1 item(s) 3 second(s)."
+                        "The first time you Freeze, Burn, Slow, Poison, and Haste each fight, Charge 1 item 2 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -46838,7 +46866,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_Neophiliac.png",
                   "unifiedTooltips": [
-                    "The first time you freeze, burn, slow, poison, and haste each fight, charge 1 item(s) (2/3) second(s)."
+                    "The first time you Freeze, Burn, Slow, Poison, and Haste each fight, Charge 1 item (1/2) second(s)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -46865,15 +46893,15 @@
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 6 seconds",
+                        "Cooldown 8 seconds",
                         "Deal 50 Damage.",
                         "Slow 1 item for 2 second(s).",
-                        "When your enemy uses an item, Charge this 1 second(s)."
+                        "When your enemy uses an item, Charge this 2 second(s)."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 6 seconds",
+                        "Cooldown 7 seconds",
                         "Deal 50 Damage.",
                         "Slow 1 item for 2 second(s).",
                         "When your enemy uses an item, Charge this 2 second(s)."
@@ -46884,7 +46912,7 @@
                         "Cooldown 6 seconds",
                         "Deal 50 Damage.",
                         "Slow 1 item for 2 second(s).",
-                        "When your enemy uses an item, Charge this 3 second(s)."
+                        "When your enemy uses an item, Charge this 2 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -46974,10 +47002,10 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 6 seconds",
+                    "Cooldown (8/7/6) seconds",
                     "Deal 50 Damage.",
                     "Slow 1 item for 2 second(s).",
-                    "When your enemy uses an item, Charge this (1/2/3) second(s)."
+                    "When your enemy uses an item, Charge this 2 second(s)."
                   ],
                   "packId": "Vanessa_Core",
                   "combatEncounters": []
@@ -47390,28 +47418,30 @@
                       "tooltips": [
                         "Cooldown 6 seconds",
                         "Slow 1 item(s) for 3 second(s).",
-                        "Your other Slow items have +1 Slow."
+                        "Your items Slow for 1 more second."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
                         "Cooldown 6 seconds",
                         "Slow 2 item(s) for 3 second(s).",
-                        "Your other Slow items have +1 Slow."
+                        "Your items Slow for 1 more second."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
                         "Cooldown 6 seconds",
                         "Slow 3 item(s) for 3 second(s).",
-                        "Your other Slow items have +1 Slow."
+                        "Your items Slow for 1 more second."
                       ]
                     },
                     "Legendary": {
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Slow"
                   ],
@@ -47485,7 +47515,7 @@
                   "unifiedTooltips": [
                     "Cooldown 6 seconds",
                     "Slow (1/2/3) item(s) for 3 second(s).",
-                    "Your other Slow items have +1 Slow."
+                    "Your items Slow for 1 more second."
                   ],
                   "packId": "Mak_Core",
                   "combatEncounters": []
@@ -47763,7 +47793,7 @@
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you slow, charge 1 item(s) 1 second(s)."
+                        "When you Slow, Charge 1 item 1 second."
                       ]
                     },
                     "Legendary": {
@@ -47782,7 +47812,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_Smack_01.png",
                   "unifiedTooltips": [
-                    "When you slow, charge 1 item(s) 1 second(s)."
+                    "When you Slow, Charge 1 item 1 second."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -48357,26 +48387,30 @@
                 "card": {
                   "id": "dccb72af-f46b-4a84-a0d1-918c8d285c4e",
                   "name": "Flamethrower",
-                  "startingTier": "Gold",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
                       "tooltips": []
                     },
                     "Silver": {
-                      "tooltips": []
+                      "tooltips": [
+                        "Cooldown 10 seconds",
+                        "Deal 2 damage.",
+                        "Burn equal to this item's damage."
+                      ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 6 seconds",
+                        "Cooldown 8 seconds",
                         "Deal 2 damage.",
-                        "Burn equal to 1 times this item's damage."
+                        "Burn equal to this item's damage."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
                         "Cooldown 6 seconds",
-                        "Deal 4 damage.",
-                        "Burn equal to 2 times this item's damage."
+                        "Deal 2 damage.",
+                        "Burn equal to this item's damage."
                       ]
                     },
                     "Legendary": {
@@ -48465,9 +48499,9 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 6 seconds",
-                    "Deal (2/4) damage.",
-                    "Burn equal to (1/2) times this item's damage."
+                    "Cooldown (10/8/6) seconds",
+                    "Deal 2 damage.",
+                    "Burn equal to this item's damage."
                   ],
                   "packId": "Dooley_Core",
                   "combatEncounters": []
@@ -48807,7 +48841,8 @@
                     }
                   },
                   "tags": [
-                    "Dragon"
+                    "Dragon",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "BurnReference"
@@ -49151,20 +49186,24 @@
                 "card": {
                   "id": "72010bea-fadf-4f64-9cba-d34bfd014388",
                   "name": "Draconic Rage",
-                  "startingTier": "Diamond",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
                       "tooltips": []
                     },
                     "Silver": {
-                      "tooltips": []
+                      "tooltips": [
+                        "When you use a Medium item, a Burn item gains +3 burn for the fight."
+                      ]
                     },
                     "Gold": {
-                      "tooltips": []
+                      "tooltips": [
+                        "When you use a Medium item, a Burn item gains +6 burn for the fight."
+                      ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you use a Medium item, one of your Burn items gains +10 burn for the fight."
+                        "When you use a Medium item, a Burn item gains +9 burn for the fight."
                       ]
                     },
                     "Legendary": {
@@ -49182,7 +49221,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_DraconicRage.png",
                   "unifiedTooltips": [
-                    "When you use a Medium item, one of your Burn items gains +10 burn for the fight."
+                    "When you use a Medium item, a Burn item gains (+3/+6/+9) burn for the fight."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -50010,24 +50049,26 @@
                 "card": {
                   "id": "a59bc243-7c8b-447a-8ab7-968f662b1c50",
                   "name": "Waters of Infinity",
-                  "startingTier": "Silver",
+                  "startingTier": "Bronze",
                   "tiers": {
                     "Bronze": {
-                      "tooltips": []
-                    },
-                    "Silver": {
                       "tooltips": [
                         "You have +10 Regen for each non-weapon item you have."
                       ]
                     },
+                    "Silver": {
+                      "tooltips": [
+                        "You have +20 Regen for each non-weapon item you have."
+                      ]
+                    },
                     "Gold": {
                       "tooltips": [
-                        "You have +15 Regen for each non-weapon item you have."
+                        "You have +30 Regen for each non-weapon item you have."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "You have +20 Regen for each non-weapon item you have."
+                        "You have +40 Regen for each non-weapon item you have."
                       ]
                     },
                     "Legendary": {
@@ -50045,7 +50086,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_WatersofInfinity.png",
                   "unifiedTooltips": [
-                    "You have (+10/+15/+20) Regen for each non-weapon item you have."
+                    "You have (+10/+20/+30/+40) Regen for each non-weapon item you have."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -50118,25 +50159,25 @@
                     {
                       "type": "Heavy",
                       "tooltips": [
-                        "When you crit with a Weapon, slow 1 item for 4 second(s)."
+                        "When you crit with a Weapon, slow 1 item for 2 second(s)."
                       ]
                     },
                     {
                       "type": "Icy",
                       "tooltips": [
-                        "When you crit with a weapon, Freeze 1 small item for 2 second(s)."
+                        "When you crit with a weapon, Freeze 1 item for 1 second(s)."
                       ]
                     },
                     {
                       "type": "Turbo",
                       "tooltips": [
-                        "When you crit with a weapon, haste 1 item for 4 second(s)."
+                        "When you crit with a weapon, haste 1 item for 2 second(s)."
                       ]
                     },
                     {
                       "type": "Shielded",
                       "tooltips": [
-                        "When you crit with a weapon, shield 40."
+                        "When you crit with a weapon, shield 60."
                       ]
                     },
                     {
@@ -50148,7 +50189,7 @@
                     {
                       "type": "Toxic",
                       "tooltips": [
-                        "When you crit with a weapon, poison 4"
+                        "When you crit with a weapon, poison 6"
                       ]
                     },
                     {
@@ -50201,14 +50242,14 @@
                       "tooltips": [
                         "Cooldown 7 seconds",
                         "Burn 4.",
-                        "For each adjacent Friend or Property, this gains +4 Burn."
+                        "For each adjacent Friend or Property, this gains +1 Multicast."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
                         "Cooldown 7 seconds",
                         "Burn 6.",
-                        "For each adjacent Friend or Property, this gains +8 Burn."
+                        "For each adjacent Friend or Property, this gains +1 Multicast."
                       ]
                     },
                     "Legendary": {
@@ -50297,7 +50338,7 @@
                   "unifiedTooltips": [
                     "Cooldown 7 seconds",
                     "Burn (4/6).",
-                    "For each adjacent Friend or Property, this gains (+4/+8) Burn."
+                    "For each adjacent Friend or Property, this gains +1 Multicast."
                   ],
                   "packId": "Vanessa_Core",
                   "combatEncounters": []
@@ -50436,28 +50477,28 @@
                   "tiers": {
                     "Bronze": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
+                        "Cooldown 3 seconds",
                         "Ammo 3",
                         "Burn 4."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
+                        "Cooldown 3 seconds",
                         "Ammo 3",
                         "Burn 6."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
+                        "Cooldown 3 seconds",
                         "Ammo 3",
                         "Burn 8."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 4 seconds",
+                        "Cooldown 3 seconds",
                         "Ammo 3",
                         "Burn 10."
                       ]
@@ -50547,7 +50588,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 4 seconds",
+                    "Cooldown 3 seconds",
                     "Ammo 3",
                     "Burn (4/6/8/10)."
                   ],
@@ -50927,7 +50968,7 @@
               {
                 "card": {
                   "id": "f76338d5-e09b-4319-8914-c35043d464fc",
-                  "name": "Nargile",
+                  "name": "Zoot Flute",
                   "startingTier": "Gold",
                   "tiers": {
                     "Bronze": {
@@ -50938,7 +50979,7 @@
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
+                        "Cooldown 7 seconds",
                         "Slow 2 items for 2 second(s).",
                         "Adjacent items have +25% Crit Chance.",
                         "When you Crit, Charge this 2 second(s)."
@@ -50946,8 +50987,8 @@
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
-                        "Slow 2 items for 3 second(s).",
+                        "Cooldown 7 seconds",
+                        "Slow 3 items for 2 second(s).",
                         "Adjacent items have +50% Crit Chance.",
                         "When you Crit, Charge this 2 second(s)."
                       ]
@@ -51020,7 +51061,7 @@
                     {
                       "type": "Deadly",
                       "tooltips": [
-                        "+25% Crit Chance"
+                        "Adjacent items have +25% Crit Chance."
                       ]
                     },
                     {
@@ -51037,8 +51078,8 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 9 seconds",
-                    "Slow 2 items for (2/3) second(s).",
+                    "Cooldown 7 seconds",
+                    "Slow (2/3) items for 2 second(s).",
                     "Adjacent items have (+25%/+50%) Crit Chance.",
                     "When you Crit, Charge this 2 second(s)."
                   ],
@@ -51859,17 +51900,21 @@
                 "card": {
                   "id": "544be6e9-ff3e-4cb6-9759-498ac2d24d71",
                   "name": "Relax Bro",
-                  "startingTier": "Gold",
+                  "startingTier": "Bronze",
                   "tiers": {
                     "Bronze": {
-                      "tooltips": []
+                      "tooltips": [
+                        "When you Slow, gain 1 Regen for the fight."
+                      ]
                     },
                     "Silver": {
-                      "tooltips": []
+                      "tooltips": [
+                        "When you Slow, gain 2 Regen for the fight."
+                      ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "When you Slow, gain 2 Regen for the fight."
+                        "When you Slow, gain 3 Regen for the fight."
                       ]
                     },
                     "Diamond": {
@@ -51895,7 +51940,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_RelaxBro.png",
                   "unifiedTooltips": [
-                    "When you Slow, gain (2/4) Regen for the fight."
+                    "When you Slow, gain (1/2/3/4) Regen for the fight."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -52677,24 +52722,26 @@
                 "card": {
                   "id": "a59bc243-7c8b-447a-8ab7-968f662b1c50",
                   "name": "Waters of Infinity",
-                  "startingTier": "Silver",
+                  "startingTier": "Bronze",
                   "tiers": {
                     "Bronze": {
-                      "tooltips": []
-                    },
-                    "Silver": {
                       "tooltips": [
                         "You have +10 Regen for each non-weapon item you have."
                       ]
                     },
+                    "Silver": {
+                      "tooltips": [
+                        "You have +20 Regen for each non-weapon item you have."
+                      ]
+                    },
                     "Gold": {
                       "tooltips": [
-                        "You have +15 Regen for each non-weapon item you have."
+                        "You have +30 Regen for each non-weapon item you have."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "You have +20 Regen for each non-weapon item you have."
+                        "You have +40 Regen for each non-weapon item you have."
                       ]
                     },
                     "Legendary": {
@@ -52712,7 +52759,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_WatersofInfinity.png",
                   "unifiedTooltips": [
-                    "You have (+10/+15/+20) Regen for each non-weapon item you have."
+                    "You have (+10/+20/+30/+40) Regen for each non-weapon item you have."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -53613,28 +53660,28 @@
                     "Bronze": {
                       "tooltips": [
                         "Cooldown 7 seconds",
-                        "Slow 1 item(s) for 3 second(s).",
+                        "Slow 1 item for 3 second(s).",
                         "At the start of each fight, use this."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
                         "Cooldown 6 seconds",
-                        "Slow 1 item(s) for 3 second(s).",
+                        "Slow 1 item for 3 second(s).",
                         "At the start of each fight, use this."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
                         "Cooldown 5 seconds",
-                        "Slow 1 item(s) for 3 second(s).",
+                        "Slow 1 item for 3 second(s).",
                         "At the start of each fight, use this."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
                         "Cooldown 4 seconds",
-                        "Slow 1 item(s) for 3 second(s).",
+                        "Slow 1 item for 3 second(s).",
                         "At the start of each fight, use this."
                       ]
                     },
@@ -53675,25 +53722,25 @@
                     {
                       "type": "Shielded",
                       "tooltips": [
-                        "Shield 30."
+                        "Shield 40."
                       ]
                     },
                     {
                       "type": "Restorative",
                       "tooltips": [
-                        "Heal 45."
+                        "Heal 200."
                       ]
                     },
                     {
                       "type": "Toxic",
                       "tooltips": [
-                        "Poison 3."
+                        "Poison 2."
                       ]
                     },
                     {
                       "type": "Fiery",
                       "tooltips": [
-                        "Burn 4."
+                        "Burn 2."
                       ]
                     },
                     {
@@ -53717,13 +53764,13 @@
                     {
                       "type": "Obsidian",
                       "tooltips": [
-                        "Deal 30 Damage."
+                        "Deal 40 Damage."
                       ]
                     }
                   ],
                   "unifiedTooltips": [
                     "Cooldown (7/6/5/4) seconds",
-                    "Slow 1 item(s) for 3 second(s).",
+                    "Slow 1 item for 3 second(s).",
                     "At the start of each fight, use this."
                   ],
                   "packId": "Vanessa_Core",
@@ -53750,7 +53797,7 @@
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you Heal, charge a Shield item 1 second(s)."
+                        "When you Heal or gain Regen, charge a Shield item 1 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -53769,7 +53816,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_RoamingIsle_01",
                   "unifiedTooltips": [
-                    "When you Heal, charge a Shield item 1 second(s)."
+                    "When you Heal or gain Regen, charge a Shield item 1 second(s)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -54023,7 +54070,7 @@
               {
                 "card": {
                   "id": "03e4c71d-5317-4c35-a0fb-5348356edc03",
-                  "name": "Powder Flask",
+                  "name": "Powder Horn",
                   "startingTier": "Bronze",
                   "tiers": {
                     "Bronze": {
@@ -54830,25 +54877,25 @@
                     {
                       "type": "Shielded",
                       "tooltips": [
-                        "At the start of each fight, Shield 60."
+                        "At the start of each fight, Shield equal to 10% of your Max Health."
                       ]
                     },
                     {
                       "type": "Restorative",
                       "tooltips": [
-                        "You have +8 Regen."
+                        "The first time you fall below half health each fight, Heal equal to 10% of your Max Health."
                       ]
                     },
                     {
                       "type": "Toxic",
                       "tooltips": [
-                        "At the start of each fight, poison 6."
+                        "At the start of each fight, poison 10."
                       ]
                     },
                     {
                       "type": "Fiery",
                       "tooltips": [
-                        "At the start of each fight, burn 6."
+                        "At the start of each fight, burn 10."
                       ]
                     },
                     {
@@ -54860,7 +54907,7 @@
                     {
                       "type": "Obsidian",
                       "tooltips": [
-                        "At the start of each fight, Deal 60 Damage."
+                        "At the start of each fight, Deal Damage equal to 10% of your Max Health."
                       ]
                     }
                   ],
@@ -55137,7 +55184,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Haste"
                   ],
@@ -55236,21 +55285,21 @@
                       "tooltips": [
                         "Cooldown 9 seconds",
                         "Deal 100 damage.",
-                        "When you use a Small item, this gains 25 damage for the fight."
+                        "When you use a Small item, Charge the core 1 second and this gains 25 damage for the fight."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
+                        "Cooldown 8 seconds",
                         "Deal 100 damage.",
-                        "When you use a Small item, this gains 50 damage for the fight."
+                        "When you use a Small item, Charge the core 1 second and this gains 50 damage for the fight."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
+                        "Cooldown 7 seconds",
                         "Deal 100 damage.",
-                        "When you use a Small item, this gains 75 damage for the fight."
+                        "When you use a Small item, Charge the core 1 second and this gains 75 damage for the fight."
                       ]
                     },
                     "Legendary": {
@@ -55338,9 +55387,9 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 9 seconds",
+                    "Cooldown (9/8/7) seconds",
                     "Deal 100 damage.",
-                    "When you use a Small item, this gains (25/50/75) damage for the fight."
+                    "When you use a Small item, Charge the core 1 second and this gains (25/50/75) damage for the fight."
                   ],
                   "packId": "Dooley_Core",
                   "combatEncounters": []
@@ -56103,7 +56152,7 @@
                 "card": {
                   "id": "b57df6d6-fc6c-4401-ad41-77f83388eabe",
                   "name": "Distributed Systems",
-                  "startingTier": "Gold",
+                  "startingTier": "Diamond",
                   "tiers": {
                     "Bronze": {
                       "tooltips": []
@@ -56112,13 +56161,11 @@
                       "tooltips": []
                     },
                     "Gold": {
-                      "tooltips": [
-                        "When you use a large item, haste 2 small items for 2 second(s)."
-                      ]
+                      "tooltips": []
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you use a large item, haste 3 small items for 3 second(s)."
+                        "When you use a Large item, Haste your small items for 1 second."
                       ]
                     },
                     "Legendary": {
@@ -56136,12 +56183,12 @@
                   ],
                   "artKey": "Icon_Skill_DistributedSystems.png",
                   "unifiedTooltips": [
-                    "When you use a large item, haste (2/3) small items for (2/3) second(s)."
+                    "When you use a Large item, Haste your small items for 1 second."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
                 },
-                "tierType": "Gold"
+                "tierType": "Diamond"
               },
               {
                 "card": {
@@ -56201,7 +56248,7 @@
           },
           {
             "cardId": "fc3dee8e-aef5-41c9-95a8-d91ad54adede",
-            "cardName": "Enclave Revenant",
+            "cardName": "Foundation Revenant",
             "level": 12,
             "health": 3200,
             "items": [
@@ -56236,7 +56283,8 @@
                     }
                   },
                   "tags": [
-                    "Apparel"
+                    "Apparel",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Poison",
@@ -56363,7 +56411,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Poison"
                   ],
@@ -56713,7 +56763,8 @@
                     }
                   },
                   "tags": [
-                    "Weapon"
+                    "Weapon",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Damage",
@@ -57237,22 +57288,24 @@
                 "card": {
                   "id": "8e02521d-4353-4a1d-9d2e-80f6f1e22f53",
                   "name": "Purifying Flame",
-                  "startingTier": "Gold",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
                       "tooltips": []
                     },
                     "Silver": {
-                      "tooltips": []
+                      "tooltips": [
+                        "When you gain Regen, a Burn item gains +1 Burn for the fight."
+                      ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "When you gain Regen, a Burn item gains 1 Burn for the fight."
+                        "When you gain Regen, a Burn item gains +2 Burn for the fight."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you gain Regen, a Burn item gains 2 Burn for the fight."
+                        "When you gain Regen, a Burn item gains +3 Burn for the fight."
                       ]
                     },
                     "Legendary": {
@@ -57271,7 +57324,7 @@
                   ],
                   "artKey": "Icon_SKILL_MON_PurifyingFlame.png",
                   "unifiedTooltips": [
-                    "When you gain Regen, a Burn item gains (1/2) Burn for the fight."
+                    "When you gain Regen, a Burn item gains (+1/+2/+3) Burn for the fight."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -57283,7 +57336,7 @@
           },
           {
             "cardId": "be75b034-f986-4cdd-b871-5e8258865c29",
-            "cardName": "Death Knight Reaper",
+            "cardName": "Void Knight",
             "level": 13,
             "health": 3675,
             "items": [
@@ -57298,30 +57351,32 @@
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
+                        "Cooldown 8 seconds",
                         "Freeze 1 item(s) for 1 second(s).",
-                        "Your other Freeze items have +1 Freeze duration."
+                        "Your items Freeze for 0.5 more seconds."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
+                        "Cooldown 8 seconds",
                         "Freeze 2 item(s) for 1 second(s).",
-                        "Your other Freeze items have +1 Freeze duration."
+                        "Your items Freeze for 0.5 more seconds."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
+                        "Cooldown 8 seconds",
                         "Freeze 3 item(s) for 1 second(s).",
-                        "Your other Freeze items have +1 Freeze duration."
+                        "Your items Freeze for 0.5 more seconds."
                       ]
                     },
                     "Legendary": {
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Freeze"
                   ],
@@ -57393,9 +57448,9 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 9 seconds",
+                    "Cooldown 8 seconds",
                     "Freeze (1/2/3) item(s) for 1 second(s).",
-                    "Your other Freeze items have +1 Freeze duration."
+                    "Your items Freeze for 0.5 more seconds."
                   ],
                   "packId": "Mak_Core",
                   "combatEncounters": []
@@ -57534,7 +57589,8 @@
                     }
                   },
                   "tags": [
-                    "Weapon"
+                    "Weapon",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Damage"
@@ -57657,7 +57713,7 @@
                   },
                   "tags": [
                     "Weapon",
-                    "Tool"
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Damage"
@@ -57786,7 +57842,8 @@
                     }
                   },
                   "tags": [
-                    "Weapon"
+                    "Weapon",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Damage"
@@ -58264,25 +58321,25 @@
                     "Bronze": {
                       "tooltips": [
                         "The weapon to the left of this has +10 damage.",
-                        "If you have exactly one weapon, reduce its cooldown by 15%."
+                        "If you have exactly one weapon, reduce its cooldown by 10%."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
                         "The weapon to the left of this has +20 damage.",
-                        "If you have exactly one weapon, reduce its cooldown by 20%."
+                        "If you have exactly one weapon, reduce its cooldown by 15%."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
                         "The weapon to the left of this has +30 damage.",
-                        "If you have exactly one weapon, reduce its cooldown by 25%."
+                        "If you have exactly one weapon, reduce its cooldown by 20%."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
                         "The weapon to the left of this has +50 damage.",
-                        "If you have exactly one weapon, reduce its cooldown by 30%."
+                        "If you have exactly one weapon, reduce its cooldown by 25%."
                       ]
                     },
                     "Legendary": {
@@ -58345,7 +58402,7 @@
                     {
                       "type": "Shiny",
                       "tooltips": [
-                        "This has double bonus damage and reduces cooldown by an additional 25%."
+                        "This has double bonus damage and double cooldown reduction."
                       ]
                     },
                     {
@@ -58363,7 +58420,7 @@
                   ],
                   "unifiedTooltips": [
                     "The weapon to the left of this has (+10/+20/+30/+50) damage.",
-                    "If you have exactly one weapon, reduce its cooldown by (15%/20%/25%/30%)."
+                    "If you have exactly one weapon, reduce its cooldown by (10%/15%/20%/25%)."
                   ],
                   "packId": "Vanessa_Core",
                   "combatEncounters": []
@@ -58934,6 +58991,7 @@
                   ],
                   "hiddenTags": [
                     "Burn",
+                    "PotionReference",
                     "AmmoReference"
                   ],
                   "customTags": [],
@@ -59945,17 +60003,17 @@
                     },
                     "Silver": {
                       "tooltips": [
-                        "You have 2 Regen for each Ammo item you have."
+                        "When one of your items runs out of ammo, gain 10 Regen for the fight."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "You have 4 Regen for each Ammo item you have."
+                        "When one of your items runs out of ammo, gain 20 Regen for the fight."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "You have 6 Regen for each Ammo item you have."
+                        "When one of your items runs out of ammo, gain 30 Regen for the fight."
                       ]
                     },
                     "Legendary": {
@@ -59974,7 +60032,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_HulkingExperiment_01",
                   "unifiedTooltips": [
-                    "You have (2/4/6) Regen for each Ammo item you have."
+                    "When one of your items runs out of ammo, gain (10/20/30) Regen for the fight."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -60205,7 +60263,8 @@
                     }
                   },
                   "tags": [
-                    "Weapon"
+                    "Weapon",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Damage"
@@ -60416,28 +60475,28 @@
                       "tooltips": [
                         "Cooldown 7 seconds",
                         "Deal 12 damage.",
-                        "Slow 1 item for 2 second(s)."
+                        "Slow 1 item(s) for 1 second(s)."
                       ]
                     },
                     "Silver": {
                       "tooltips": [
                         "Cooldown 7 seconds",
                         "Deal 18 damage.",
-                        "Slow 1 item for 3 second(s)."
+                        "Slow 2 item(s) for 1 second(s)."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
                         "Cooldown 7 seconds",
                         "Deal 24 damage.",
-                        "Slow 1 item for 4 second(s)."
+                        "Slow 3 item(s) for 1 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
                         "Cooldown 7 seconds",
                         "Deal 32 damage.",
-                        "Slow 1 item for 5 second(s)."
+                        "Slow 4 item(s) for 1 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -60528,7 +60587,7 @@
                   "unifiedTooltips": [
                     "Cooldown 7 seconds",
                     "Deal (12/18/24/32) damage.",
-                    "Slow 1 item for (2/3/4/5) second(s)."
+                    "Slow (1/2/3/4) item(s) for 1 second(s)."
                   ],
                   "packId": "Vanessa_Core",
                   "combatEncounters": []
@@ -60903,13 +60962,15 @@
                 "card": {
                   "id": "08adc2fd-986c-4e8f-914e-fda9703ace3d",
                   "name": "Assault Focus",
-                  "startingTier": "Gold",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
                       "tooltips": []
                     },
                     "Silver": {
-                      "tooltips": []
+                      "tooltips": [
+                        "When any non-weapon item is used, slow it for 1 second(s)."
+                      ]
                     },
                     "Gold": {
                       "tooltips": [
@@ -60918,7 +60979,7 @@
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When any non-weapon item is used, slow it for 4 second(s)."
+                        "When any non-weapon item is used, slow it for 3 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -60936,7 +60997,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_AssaultFocus.png",
                   "unifiedTooltips": [
-                    "When any non-weapon item is used, slow it for (2/4) second(s)."
+                    "When any non-weapon item is used, slow it for (1/2/3) second(s)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -62049,7 +62110,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Poison"
                   ],
@@ -63134,7 +63197,8 @@
                     }
                   },
                   "tags": [
-                    "Tool"
+                    "Tool",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Charge"
@@ -63521,7 +63585,7 @@
                 "card": {
                   "id": "c9c884fd-849e-4541-b770-4658c2e6e609",
                   "name": "Foreboding Winds",
-                  "startingTier": "Gold",
+                  "startingTier": "Diamond",
                   "tiers": {
                     "Bronze": {
                       "tooltips": []
@@ -63530,20 +63594,20 @@
                       "tooltips": []
                     },
                     "Gold": {
-                      "tooltips": [
-                        "When any player uses an item, all items gain 2% Crit Chance for the fight."
-                      ]
+                      "tooltips": []
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When any player uses an item, all items gain 4% Crit Chance for the fight."
+                        "Your Weapons deal double Crit damage."
                       ]
                     },
                     "Legendary": {
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Weapon"
+                  ],
                   "hiddenTags": [
                     "Crit"
                   ],
@@ -63554,12 +63618,12 @@
                   ],
                   "artKey": "Icon_Skill_MON_LordOfWastes_01.png",
                   "unifiedTooltips": [
-                    "When any player uses an item, all items gain (2%/4%) Crit Chance for the fight."
+                    "Your Weapons deal double Crit damage."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
                 },
-                "tierType": "Gold"
+                "tierType": "Diamond"
               }
             ],
             "day": 10
@@ -64056,25 +64120,25 @@
                     "Silver": {
                       "tooltips": [
                         "Cooldown 6 seconds",
-                        "Deal 36 damage.",
+                        "Deal 25 damage.",
                         "Freeze 1 for 1 second(s).",
-                        "When you Freeze, this gains 10 damage for the fight."
+                        "When you Freeze, this gains 15 damage for the fight."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
                         "Cooldown 6 seconds",
-                        "Deal 48 damage.",
+                        "Deal 25 damage.",
                         "Freeze 1 for 1 second(s).",
-                        "When you Freeze, this gains 15 damage for the fight."
+                        "When you Freeze, this gains 20 damage for the fight."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
                         "Cooldown 6 seconds",
-                        "Deal 60 damage.",
+                        "Deal 25 damage.",
                         "Freeze 1 for 1 second(s).",
-                        "When you Freeze, this gains 20 damage for the fight."
+                        "When you Freeze, this gains 25 damage for the fight."
                       ]
                     },
                     "Legendary": {
@@ -64164,9 +64228,9 @@
                   ],
                   "unifiedTooltips": [
                     "Cooldown 6 seconds",
-                    "Deal (36/48/60) damage.",
+                    "Deal 25 damage.",
                     "Freeze 1 for 1 second(s).",
-                    "When you Freeze, this gains (10/15/20) damage for the fight."
+                    "When you Freeze, this gains (15/20/25) damage for the fight."
                   ],
                   "packId": "Vanessa_Core",
                   "combatEncounters": []
@@ -64400,22 +64464,24 @@
                 "card": {
                   "id": "e2b02661-62c8-42da-be35-3b15eebdb31d",
                   "name": "Cryomastery",
-                  "startingTier": "Gold",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
                       "tooltips": []
                     },
                     "Silver": {
-                      "tooltips": []
+                      "tooltips": [
+                        "The first 2 times you Shield each fight, Freeze 1 item for 1 second."
+                      ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "The first 3 times you Shield each fight, Freeze 1 item(s) for 2 second(s)."
+                        "The first 4 times you Shield each fight, Freeze 1 item for 1 second."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "The first 6 times you Shield each fight, Freeze 1 item(s) for 2 second(s)."
+                        "The first 6 times you Shield each fight, Freeze 1 item for 1 second."
                       ]
                     },
                     "Legendary": {
@@ -64434,7 +64500,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_VolkasEnforcer_03.png",
                   "unifiedTooltips": [
-                    "The first (3/6) times you Shield each fight, Freeze 1 item(s) for 2 second(s)."
+                    "The first (2/4/6) times you Shield each fight, Freeze 1 item for 1 second."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -64612,13 +64678,18 @@
                 "card": {
                   "id": "bfb765fc-764c-4e16-aa17-0e10efda4b5b",
                   "name": "Nitrogen Hammer",
-                  "startingTier": "Gold",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
                       "tooltips": []
                     },
                     "Silver": {
-                      "tooltips": []
+                      "tooltips": [
+                        "Cooldown 10 seconds",
+                        "Deal 200 damage.",
+                        "Freeze 1 item for 1 second(s).",
+                        "When you freeze, charge this 1 second and this gains 50 damage for the fight."
+                      ]
                     },
                     "Gold": {
                       "tooltips": [
@@ -64632,7 +64703,7 @@
                       "tooltips": [
                         "Cooldown 10 seconds",
                         "Deal 200 damage.",
-                        "Freeze 1 item for 2 second(s).",
+                        "Freeze 1 item for 1 second(s).",
                         "When you freeze, charge this 1 second and this gains 200 damage for the fight."
                       ]
                     },
@@ -64723,8 +64794,8 @@
                   "unifiedTooltips": [
                     "Cooldown 10 seconds",
                     "Deal 200 damage.",
-                    "Freeze 1 item for (1/2) second(s).",
-                    "When you freeze, charge this 1 second and this gains (100/200) damage for the fight."
+                    "Freeze 1 item for 1 second(s).",
+                    "When you freeze, charge this 1 second and this gains (50/100/200) damage for the fight."
                   ],
                   "packId": "Dooley_Core",
                   "combatEncounters": []
@@ -64742,30 +64813,32 @@
                     },
                     "Silver": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
+                        "Cooldown 8 seconds",
                         "Freeze 1 item(s) for 1 second(s).",
-                        "Your other Freeze items have +1 Freeze duration."
+                        "Your items Freeze for 0.5 more seconds."
                       ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
+                        "Cooldown 8 seconds",
                         "Freeze 2 item(s) for 1 second(s).",
-                        "Your other Freeze items have +1 Freeze duration."
+                        "Your items Freeze for 0.5 more seconds."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
+                        "Cooldown 8 seconds",
                         "Freeze 3 item(s) for 1 second(s).",
-                        "Your other Freeze items have +1 Freeze duration."
+                        "Your items Freeze for 0.5 more seconds."
                       ]
                     },
                     "Legendary": {
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Freeze"
                   ],
@@ -64837,9 +64910,9 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown 9 seconds",
+                    "Cooldown 8 seconds",
                     "Freeze (1/2/3) item(s) for 1 second(s).",
-                    "Your other Freeze items have +1 Freeze duration."
+                    "Your items Freeze for 0.5 more seconds."
                   ],
                   "packId": "Mak_Core",
                   "combatEncounters": []
@@ -65210,12 +65283,12 @@
                     },
                     "Gold": {
                       "tooltips": [
-                        "The first time you use an item each fight, Freeze all non-weapon items for 2 second(s)."
+                        "The first time you use an item each fight, Freeze all non-weapon items for 1 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "The first time you use an item each fight, Freeze all non-weapon items for 3 second(s)."
+                        "The first time you use an item each fight, Freeze all non-weapon items for 2 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -65233,7 +65306,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_IcicleAmmo_03.png",
                   "unifiedTooltips": [
-                    "The first time you use an item each fight, Freeze all non-weapon items for (2/3) second(s)."
+                    "The first time you use an item each fight, Freeze all non-weapon items for (1/2) second(s)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -65441,7 +65514,8 @@
                     }
                   },
                   "tags": [
-                    "Ray"
+                    "Ray",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Burn",
@@ -65566,7 +65640,8 @@
                     }
                   },
                   "tags": [
-                    "Ray"
+                    "Ray",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Burn",
@@ -66005,7 +66080,7 @@
                     },
                     "Diamond": {
                       "tooltips": [
-                        "At the start of each fight, destroy an item on each player's board for the fight."
+                        "The first time you use an item, destroy an item on each player's board for the fight."
                       ]
                     },
                     "Legendary": {
@@ -66021,7 +66096,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_IntotheVoid.png",
                   "unifiedTooltips": [
-                    "At the start of each fight, destroy an item on each player's board for the fight."
+                    "The first time you use an item, destroy an item on each player's board for the fight."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -66075,7 +66150,7 @@
           },
           {
             "cardId": "96349563-bfb5-46ef-8dff-dbf1ff0d4196",
-            "cardName": "Veteran Octopus",
+            "cardName": "Eight Arm Davvy",
             "level": 13,
             "health": 8888,
             "items": [
@@ -67284,22 +67359,26 @@
                 "card": {
                   "id": "1c4c5aaa-6aa2-4329-a55a-ac75e987ee95",
                   "name": "Arms Race",
-                  "startingTier": "Gold",
+                  "startingTier": "Bronze",
                   "tiers": {
                     "Bronze": {
-                      "tooltips": []
-                    },
-                    "Silver": {
-                      "tooltips": []
-                    },
-                    "Gold": {
                       "tooltips": [
                         "Your items have +2% Crit Chance for each weapon you have."
                       ]
                     },
+                    "Silver": {
+                      "tooltips": [
+                        "Your items have +4% Crit Chance for each weapon you have."
+                      ]
+                    },
+                    "Gold": {
+                      "tooltips": [
+                        "Your items have +6% Crit Chance for each weapon you have."
+                      ]
+                    },
                     "Diamond": {
                       "tooltips": [
-                        "Your items have +3% Crit Chance for each weapon you have."
+                        "Your items have +8% Crit Chance for each weapon you have."
                       ]
                     },
                     "Legendary": {
@@ -67319,7 +67398,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_Lurk_02.png",
                   "unifiedTooltips": [
-                    "Your items have (+2%/+3%) Crit Chance for each weapon you have."
+                    "Your items have (+2%/+4%/+6%/+8%) Crit Chance for each weapon you have."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -67343,7 +67422,7 @@
                     },
                     "Diamond": {
                       "tooltips": [
-                        "If you have only one medium item, its cooldown is reduced by 30%."
+                        "If you have only one medium item, its cooldown is reduced by 25%."
                       ]
                     },
                     "Legendary": {
@@ -67361,7 +67440,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_Lurk_01.png",
                   "unifiedTooltips": [
-                    "If you have only one medium item, its cooldown is reduced by 30%."
+                    "If you have only one medium item, its cooldown is reduced by 25%."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -67588,7 +67667,8 @@
                     }
                   },
                   "tags": [
-                    "Weapon"
+                    "Weapon",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Shield",
@@ -67695,14 +67775,14 @@
                       "tooltips": [
                         "Cooldown 7 seconds",
                         "Shield equal to 2 times the value of your items.",
-                        "This has triple value in combat."
+                        "This has triple value during combat."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
                         "Cooldown 7 seconds",
                         "Shield equal to 3 times the value of your items.",
-                        "This has triple value in combat."
+                        "This has triple value during combat."
                       ]
                     },
                     "Legendary": {
@@ -67793,7 +67873,7 @@
                   "unifiedTooltips": [
                     "Cooldown 7 seconds",
                     "Shield equal to (2/3) times the value of your items.",
-                    "This has triple value in combat."
+                    "This has triple value during combat."
                   ],
                   "packId": "Pygmalien_Core",
                   "combatEncounters": []
@@ -67975,12 +68055,12 @@
                     },
                     "Gold": {
                       "tooltips": [
-                        "When you use a large item, haste another item for 3 second(s)."
+                        "When you use a large item, Haste your other items for 1 second(s)."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you use a large item, haste another item for 4 second(s)."
+                        "When you use a large item, Haste your other items for 2 second(s)."
                       ]
                     },
                     "Legendary": {
@@ -67998,7 +68078,7 @@
                   ],
                   "artKey": "Icon_Skill_MON_BananaBreak_01.png",
                   "unifiedTooltips": [
-                    "When you use a large item, haste another item for (3/4) second(s)."
+                    "When you use a large item, Haste your other items for (1/2) second(s)."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
@@ -68195,7 +68275,7 @@
                       "tooltips": [
                         "Cooldown 5 seconds",
                         "Deal 50 damage.",
-                        "Reduce this item's cooldown by 10% for the fight."
+                        "Reduce this item's cooldown by 20% for the fight."
                       ]
                     },
                     "Diamond": {
@@ -68291,7 +68371,7 @@
                   "unifiedTooltips": [
                     "Cooldown 5 seconds",
                     "Deal (50/100) damage.",
-                    "Reduce this item's cooldown by (10%/20%) for the fight."
+                    "Reduce this item's cooldown by 20% for the fight."
                   ],
                   "packId": "Stelle_Core",
                   "combatEncounters": []
@@ -68544,7 +68624,7 @@
                       "tooltips": [
                         "Cooldown 5 seconds",
                         "Deal 50 damage.",
-                        "Reduce this item's cooldown by 10% for the fight."
+                        "Reduce this item's cooldown by 20% for the fight."
                       ]
                     },
                     "Diamond": {
@@ -68640,7 +68720,7 @@
                   "unifiedTooltips": [
                     "Cooldown 5 seconds",
                     "Deal (50/100) damage.",
-                    "Reduce this item's cooldown by (10%/20%) for the fight."
+                    "Reduce this item's cooldown by 20% for the fight."
                   ],
                   "packId": "Stelle_Core",
                   "combatEncounters": []
@@ -68940,7 +69020,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Burn"
                   ],
@@ -69060,7 +69142,8 @@
                     }
                   },
                   "tags": [
-                    "Ray"
+                    "Ray",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Burn",
@@ -69179,7 +69262,7 @@
                     }
                   },
                   "tags": [
-                    "Tool"
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Charge"
@@ -69296,7 +69379,8 @@
                     }
                   },
                   "tags": [
-                    "Ray"
+                    "Ray",
+                    "Relic"
                   ],
                   "hiddenTags": [
                     "Burn",
@@ -69414,7 +69498,9 @@
                       "tooltips": []
                     }
                   },
-                  "tags": [],
+                  "tags": [
+                    "Relic"
+                  ],
                   "hiddenTags": [
                     "Burn",
                     "Shield"
@@ -69553,7 +69639,7 @@
                 "card": {
                   "id": "3b3b1f2b-7f43-440d-807b-61eea3a65cb0",
                   "name": "Void Rage",
-                  "startingTier": "Gold",
+                  "startingTier": "Diamond",
                   "tiers": {
                     "Bronze": {
                       "tooltips": []
@@ -69562,13 +69648,11 @@
                       "tooltips": []
                     },
                     "Gold": {
-                      "tooltips": [
-                        "When you burn, Haste an item for 1 second(s)."
-                      ]
+                      "tooltips": []
                     },
                     "Diamond": {
                       "tooltips": [
-                        "When you burn, Haste an item for 2 second(s)."
+                        "When you Burn, Haste 1 item for 1 second."
                       ]
                     },
                     "Legendary": {
@@ -69587,12 +69671,12 @@
                   ],
                   "artKey": "Icon_Skill_MON_VoidRake.png",
                   "unifiedTooltips": [
-                    "When you burn, Haste an item for (1/2) second(s)."
+                    "When you Burn, Haste 1 item for 1 second."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
                 },
-                "tierType": "Gold"
+                "tierType": "Diamond"
               }
             ],
             "day": 10
@@ -69739,14 +69823,14 @@
                       "tooltips": [
                         "Cooldown 5 seconds",
                         "Heal equal to 4 times the value of your items.",
-                        "At the start of each fight, your other items gain Value equal to this item's Value for the fight."
+                        "Your other items have +Value equal to this item's Value during combat."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
                         "Cooldown 5 seconds",
                         "Heal equal to 6 times the value of your items.",
-                        "At the start of each fight, your other items gain Value equal to this item's Value for the fight."
+                        "Your other items have +Value equal to this item's Value during combat."
                       ]
                     },
                     "Legendary": {
@@ -69843,7 +69927,7 @@
                   "unifiedTooltips": [
                     "Cooldown 5 seconds",
                     "Heal equal to (4/6) times the value of your items.",
-                    "At the start of each fight, your other items gain Value equal to this item's Value for the fight."
+                    "Your other items have +Value equal to this item's Value during combat."
                   ],
                   "packId": "Pygmalien_Core",
                   "combatEncounters": []
@@ -69906,19 +69990,19 @@
                     {
                       "type": "Heavy",
                       "tooltips": [
-                        "Slow 3 items for 2 second(s)."
+                        "Slow 2 items for 1 second(s)."
                       ]
                     },
                     {
                       "type": "Icy",
                       "tooltips": [
-                        "Freeze 3 medium or small item for 1 second(s)."
+                        "Freeze 1 medium or small item for 1 second(s)."
                       ]
                     },
                     {
                       "type": "Turbo",
                       "tooltips": [
-                        "Haste 3 items for 2 second(s)."
+                        "Haste 2 items for 1 second(s)."
                       ]
                     },
                     {
@@ -69995,13 +70079,13 @@
                     },
                     "Gold": {
                       "tooltips": [
-                        "Cooldown 12 seconds",
+                        "Cooldown 9 seconds",
                         "Use a property."
                       ]
                     },
                     "Diamond": {
                       "tooltips": [
-                        "Cooldown 9 seconds",
+                        "Cooldown 6 seconds",
                         "Use a property."
                       ]
                     },
@@ -70079,7 +70163,7 @@
                     }
                   ],
                   "unifiedTooltips": [
-                    "Cooldown (12/9) seconds",
+                    "Cooldown (9/6) seconds",
                     "Use a property."
                   ],
                   "packId": "Pygmalien_Core",
@@ -70169,55 +70253,6 @@
                   "artKey": "Icon_Skill_Trader.png",
                   "unifiedTooltips": [
                     "Your items have (+1/+2) value."
-                  ],
-                  "packId": "Pygmalien_Core",
-                  "combatEncounters": []
-                },
-                "tierType": "Diamond"
-              },
-              {
-                "card": {
-                  "id": "62154f7f-ea50-4703-aa2e-d2d4ae55e9b0",
-                  "name": "Big Numbers",
-                  "startingTier": "Gold",
-                  "tiers": {
-                    "Bronze": {
-                      "tooltips": []
-                    },
-                    "Silver": {
-                      "tooltips": []
-                    },
-                    "Gold": {
-                      "tooltips": [
-                        "Your large items have +25% crit chance"
-                      ]
-                    },
-                    "Diamond": {
-                      "tooltips": [
-                        "Your large items have +50% crit chance"
-                      ]
-                    },
-                    "Legendary": {
-                      "tooltips": []
-                    }
-                  },
-                  "tags": [],
-                  "hiddenTags": [
-                    "Crit"
-                  ],
-                  "customTags": [],
-                  "size": "Medium",
-                  "heroes": [
-                    "Pygmalien",
-                    "Vanessa",
-                    "Dooley",
-                    "Jules",
-                    "Stelle",
-                    "Mak"
-                  ],
-                  "artKey": "Icon_Skill_BigNumbers.png",
-                  "unifiedTooltips": [
-                    "Your large items have (+25%/+50%) crit chance"
                   ],
                   "packId": "Pygmalien_Core",
                   "combatEncounters": []
@@ -72305,17 +72340,19 @@
                 "card": {
                   "id": "dfe40f90-61de-46dc-b807-0da587140e9d",
                   "name": "Ambush",
-                  "startingTier": "Gold",
+                  "startingTier": "Silver",
                   "tiers": {
                     "Bronze": {
                       "tooltips": []
                     },
                     "Silver": {
-                      "tooltips": []
+                      "tooltips": [
+                        "At the start of each fight, deal damage equal to 10% of your enemy's Max Health."
+                      ]
                     },
                     "Gold": {
                       "tooltips": [
-                        "At the start of each fight, deal damage equal to 15% of your enemy's Max Health."
+                        "At the start of each fight, deal damage equal to 20% of your enemy's Max Health."
                       ]
                     },
                     "Diamond": {
@@ -72338,12 +72375,12 @@
                   ],
                   "artKey": "Icon_Skill_MON_Ambush.png",
                   "unifiedTooltips": [
-                    "At the start of each fight, deal damage equal to (15%/30%) of your enemy's Max Health."
+                    "At the start of each fight, deal damage equal to (10%/20%/30%) of your enemy's Max Health."
                   ],
                   "packId": "Core",
                   "combatEncounters": []
                 },
-                "tierType": "Gold"
+                "tierType": "Silver"
               }
             ],
             "day": "event"
