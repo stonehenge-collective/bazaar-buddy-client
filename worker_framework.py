@@ -5,7 +5,7 @@ Worker Thread Framework
 A flexible framework for managing worker threads in PyQt applications.
 """
 
-from PyQt6.QtCore import QObject, QThread, pyqtSignal, pyqtSlot, QTimer
+from PyQt6.QtCore import QObject, QThread, pyqtSignal, QTimer
 import threading
 import logging
 import uuid

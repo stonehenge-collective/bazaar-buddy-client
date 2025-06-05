@@ -1,7 +1,6 @@
 import sys
 from PyQt6.QtWidgets import QApplication
-import threading
-
+from pathlib import Path
 
 from logger import logger
 from configuration import Configuration
@@ -15,6 +14,7 @@ from bazaar_buddy import BazaarBuddy
 from worker_framework import ThreadController
 from timer_worker import TimerWorker
 from text_extractor_worker import TextExtractor, TextExtractorWorkerFactory
+from file_writer import BaseFileSystem, MacFileSystem, WindowsFileSystem, FileType
 
 
 class Container:
@@ -54,13 +54,37 @@ class Container:
             WindowsSystemHandler() if self.configuration.operating_system == "Windows" else MacSystemHandler()
         )
 
+        # File system handler for writing application data
+        self.file_system: BaseFileSystem = (
+            WindowsFileSystem(Path.home() / "AppData" / "Roaming" / "BazaarBuddy", self.configuration)
+            if self.configuration.operating_system == "Windows"
+            else MacFileSystem(Path.home() / "Library" / "Application Support" / "BazaarBuddy", self.configuration)
+        )
+
         self.update_source: BaseUpdateSource = (
             TestUpdateSource(self.logger)
             if self.configuration.update_with_test_release
             else ProductionUpdateSource(self.logger)
         )
 
-        self.overlay: Overlay = Overlay("Checking for updates…", self.configuration)
+        # Load saved overlay position
+        saved_position = None
+        try:
+            config_writer = self.file_system.get_file_writer(FileType.CONFIG)
+            if config_writer.exists():
+                config_data = config_writer.read()
+                if config_data and config_data.overlay_position:
+                    saved_position = config_data.overlay_position
+        except Exception:
+            # If loading fails, just use default position
+            pass
+
+        self.overlay: Overlay = Overlay(
+            "Checking for updates…",
+            self.configuration,
+            saved_position,
+            self.file_system.get_file_writer(FileType.CONFIG),
+        )
 
         if self.configuration.operating_system == "Windows":
             self.updater: BaseUpdater = WindowsUpdater(
