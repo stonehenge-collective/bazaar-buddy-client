@@ -67,22 +67,9 @@ class Container:
             else ProductionUpdateSource(self.logger)
         )
 
-        # Load saved overlay position
-        saved_position = None
-        try:
-            config_writer = self.file_system.get_file_writer(FileType.CONFIG)
-            if config_writer.exists():
-                config_data = config_writer.read()
-                if config_data and config_data.overlay_position:
-                    saved_position = config_data.overlay_position
-        except Exception:
-            # If loading fails, just use default position
-            pass
-
         self.overlay: Overlay = Overlay(
             "Checking for updates…",
             self.configuration,
-            saved_position,
             self.file_system.get_file_writer(FileType.CONFIG),
         )
 

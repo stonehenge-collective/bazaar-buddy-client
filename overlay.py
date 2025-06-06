@@ -34,17 +34,15 @@ class Overlay(QWidget):
     about_to_close = pyqtSignal()
 
     # ──────────────────────────  life-cycle  ─────────────────────
-    def __init__(
-        self, text: str, configuration, saved_position: Optional[Dict[str, int]] = None, file_writer=None
-    ) -> None:
+    def __init__(self, text: str, configuration, file_writer=None) -> None:
         super().__init__(flags=Qt.WindowType.WindowStaysOnTopHint | Qt.WindowType.FramelessWindowHint)
         self.setWindowOpacity(0.85)
 
         self._font = QFont("Segoe UI" if configuration.operating_system == "Windows" else "Helvetica", 12)
         self.text = text
         self._drag_pos: Optional[QPoint] = None  # start corner while dragging
-        self._saved_position = saved_position
         self._file_writer = file_writer
+        self._saved_position = self._load_saved_position()
 
         self._build_ui()
         self.label.installEventFilter(self)
@@ -302,6 +300,21 @@ class Overlay(QWidget):
             self.button_container.hide()
             self.button_container.deleteLater()
             self.button_container = None
+
+    def _load_saved_position(self) -> Optional[Dict[str, int]]:
+        """Load saved overlay position from config file."""
+        if not self._file_writer:
+            return None
+
+        try:
+            if self._file_writer.exists():
+                config_data = self._file_writer.read()
+                if config_data and config_data.overlay_position:
+                    return config_data.overlay_position
+        except Exception:
+            # If loading fails, just use default position
+            pass
+        return None
 
     def _save_position(self) -> None:
         """Save the current overlay position and size to config."""
