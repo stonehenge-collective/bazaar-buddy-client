@@ -112,12 +112,12 @@ class Overlay(QWidget):
 
     def mouseReleaseEvent(self, event: QMouseEvent) -> None:  # type: ignore[override]
         self._drag_pos = None
-        self._save_position()  # Save position after dragging
         super().mouseReleaseEvent(event)
 
     # ───────────────────────  key handling  ────────────────────
     def keyPressEvent(self, event: QKeyEvent) -> None:  # type: ignore[override]
         if event.key() in (Qt.Key.Key_Escape, Qt.Key.Key_Q):
+            self._save_position()
             self.about_to_close.emit()  # type: ignore[attr-defined]
             self.close()
         else:
@@ -135,7 +135,6 @@ class Overlay(QWidget):
         self.size_grips[3].move(self.width() - grip_w, self.height() - grip_h)
 
         self._update_button_positions()
-        self._save_position()  # Save position after resizing
         super().resizeEvent(event)
 
     # ─────────────────────────  UI building  ─────────────────────
@@ -327,5 +326,5 @@ class Overlay(QWidget):
                 pass
 
     def _handle_close(self) -> None:
-        self._save_position()  # Save position before closing
+        self._save_position()
         self.about_to_close.emit()

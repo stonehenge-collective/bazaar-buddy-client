@@ -204,14 +204,14 @@ class WindowsFileWriter(BaseFileWriter[T]):
     def write(self, data: T) -> bool:
         """Write data to file with Windows-specific optimizations."""
         try:
-            # Use atomic write - write to temp file then rename
+            # Use atomic write - write to temp file then replace
             temp_path = self.file_path.with_suffix(self.file_path.suffix + ".tmp")
 
             with open(temp_path, "w", encoding="utf-8") as f:
                 json.dump(data.model_dump(mode="json"), f, indent=2, ensure_ascii=False)
 
-            # Atomic rename on Windows
-            temp_path.rename(self.file_path)
+            # Use os.replace for atomic replacement (handles existing files)
+            os.replace(temp_path, self.file_path)
 
             return True
         except Exception as e:
