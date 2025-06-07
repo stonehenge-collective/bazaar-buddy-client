@@ -1,5 +1,5 @@
 {
-  "version": "d56a6d80",
+  "version": "a1a50bc7",
   "items": [
     {
       "id": "0efe7d3f-4f18-4667-89a3-ac915a93a9f5",
@@ -6155,25 +6155,25 @@
       "tiers": {
         "Bronze": {
           "tooltips": [
-            "Cooldown 6 seconds",
+            "Cooldown 5 seconds",
             "When you use another Relic, charge this 1 second(s)."
           ]
         },
         "Silver": {
           "tooltips": [
-            "Cooldown 6 seconds",
+            "Cooldown 5 seconds",
             "When you use another Relic, charge this 1 second(s)."
           ]
         },
         "Gold": {
           "tooltips": [
-            "Cooldown 6 seconds",
+            "Cooldown 5 seconds",
             "When you use another Relic, charge this 1 second(s)."
           ]
         },
         "Diamond": {
           "tooltips": [
-            "Cooldown 6 seconds",
+            "Cooldown 5 seconds",
             "When you use another Relic, charge this 1 second(s)."
           ]
         },
@@ -6261,7 +6261,7 @@
         }
       ],
       "unifiedTooltips": [
-        "Cooldown 6 seconds",
+        "Cooldown 5 seconds",
         "When you use another Relic, charge this 1 second(s)."
       ],
       "packId": "Mak_Lost_Treasures",
@@ -11065,7 +11065,7 @@
         {
           "type": "Obsidian",
           "tooltips": [
-            "Ajacent Weapons have +20 damage."
+            "Adjacent Weapons have +20 damage."
           ]
         }
       ],
@@ -13821,7 +13821,7 @@
         {
           "type": "Restorative",
           "tooltips": [
-            "Heal 200."
+            "Heal 40."
           ]
         },
         {
@@ -17487,28 +17487,28 @@
         "Bronze": {
           "tooltips": [
             "Cooldown 9 seconds",
-            "Deal damage equal to the highest Shield value of items you have.",
+            "Deal damage equal to the highest Shield of items you have.",
             "Your Shield items gain +2 Shield for the fight."
           ]
         },
         "Silver": {
           "tooltips": [
             "Cooldown 9 seconds",
-            "Deal damage equal to the highest Shield value of items you have.",
+            "Deal damage equal to the highest Shield of items you have.",
             "Your Shield items gain +4 Shield for the fight."
           ]
         },
         "Gold": {
           "tooltips": [
             "Cooldown 9 seconds",
-            "Deal damage equal to the highest Shield value of items you have.",
+            "Deal damage equal to the highest Shield of items you have.",
             "Your Shield items gain +6 Shield for the fight."
           ]
         },
         "Diamond": {
           "tooltips": [
             "Cooldown 9 seconds",
-            "Deal damage equal to the highest Shield value of items you have.",
+            "Deal damage equal to the highest Shield of items you have.",
             "Your Shield items gain +8 Shield for the fight."
           ]
         },
@@ -17599,7 +17599,7 @@
       ],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
-        "Deal damage equal to the highest Shield value of items you have.",
+        "Deal damage equal to the highest Shield of items you have.",
         "Your Shield items gain (+2/+4/+6/+8) Shield for the fight."
       ],
       "packId": "Core",
@@ -19289,7 +19289,7 @@
           "tooltips": [
             "Cooldown 9 seconds",
             "Deal 80 damage.",
-            "If your enemy has at least 6 items, destroy a small enemy item for the fight.",
+            "The first time you use this each fight, destroy a small or medium enemy item for the fight.",
             "When you destroy an item during combat, your Dinosaurs permanently gain 10 damage."
           ]
         },
@@ -19297,16 +19297,16 @@
           "tooltips": [
             "Cooldown 9 seconds",
             "Deal 80 damage.",
-            "If your enemy has at least 5 items, destroy a small enemy item for the fight.",
-            "When you destroy an item during combat, your Dinosaurs permanently gain 20 damage."
+            "The first time you use this each fight, destroy a small or medium enemy item for the fight.",
+            "When you destroy an item during combat, your Dinosaurs permanently gain 15 damage."
           ]
         },
         "Diamond": {
           "tooltips": [
             "Cooldown 9 seconds",
             "Deal 80 damage.",
-            "If your enemy has at least 4 items, destroy a small enemy item for the fight.",
-            "When you destroy an item during combat, your Dinosaurs permanently gain 30 damage."
+            "The first time you use this each fight, destroy a small or medium enemy item for the fight.",
+            "When you destroy an item during combat, your Dinosaurs permanently gain 20 damage."
           ]
         },
         "Legendary": {
@@ -19397,8 +19397,8 @@
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal 80 damage.",
-        "If your enemy has at least (6/5/4) items, destroy a small enemy item for the fight.",
-        "When you destroy an item during combat, your Dinosaurs permanently gain (10/20/30) damage."
+        "The first time you use this each fight, destroy a small or medium enemy item for the fight.",
+        "When you destroy an item during combat, your Dinosaurs permanently gain (10/15/20) damage."
       ],
       "packId": "Dooley_Core",
       "combatEncounters": []
@@ -24027,7 +24027,9 @@
           "tooltips": []
         }
       },
-      "tags": [],
+      "tags": [
+        "Relic"
+      ],
       "hiddenTags": [
         "Burn"
       ],
@@ -25635,29 +25637,29 @@
       "tiers": {
         "Bronze": {
           "tooltips": [
-            "Cooldown 4 seconds",
-            "Burn 3 for each Relic or Tool you have.",
+            "Cooldown 6 seconds",
+            "Burn 2 for each Relic or Tool you have.",
             "This item's cooldown is increased by 1 second for each Tech item you have."
           ]
         },
         "Silver": {
           "tooltips": [
-            "Cooldown 4 seconds",
+            "Cooldown 6 seconds",
             "Burn 4 for each Relic or Tool you have.",
             "This item's cooldown is increased by 1 second for each Tech item you have."
           ]
         },
         "Gold": {
           "tooltips": [
-            "Cooldown 4 seconds",
-            "Burn 5 for each Relic or Tool you have.",
+            "Cooldown 6 seconds",
+            "Burn 6 for each Relic or Tool you have.",
             "This item's cooldown is increased by 1 second for each Tech item you have."
           ]
         },
         "Diamond": {
           "tooltips": [
-            "Cooldown 4 seconds",
-            "Burn 6 for each Relic or Tool you have.",
+            "Cooldown 6 seconds",
+            "Burn 8 for each Relic or Tool you have.",
             "This item's cooldown is increased by 1 second for each Tech item you have."
           ]
         },
@@ -25747,8 +25749,8 @@
         }
       ],
       "unifiedTooltips": [
-        "Cooldown 4 seconds",
-        "Burn (3/4/5/6) for each Relic or Tool you have.",
+        "Cooldown 6 seconds",
+        "Burn (2/4/6/8) for each Relic or Tool you have.",
         "This item's cooldown is increased by 1 second for each Tech item you have."
       ],
       "packId": "Dooley_Primal_Dooley",
@@ -26140,7 +26142,7 @@
         "Bronze": {
           "tooltips": [
             "Cooldown 10 seconds",
-            "Deal 100 damage.",
+            "Deal 50 damage.",
             "When you use an Adjacent item, Charge this 0.5 second(s).",
             "If you have another Tool, Apparel, Tech, Weapon, or Friend, this has +25 Damage for each."
           ]
@@ -26148,7 +26150,7 @@
         "Silver": {
           "tooltips": [
             "Cooldown 10 seconds",
-            "Deal 100 damage.",
+            "Deal 50 damage.",
             "When you use an Adjacent item, Charge this 1 second(s).",
             "If you have another Tool, Apparel, Tech, Weapon, or Friend, this has +50 Damage for each."
           ]
@@ -26156,7 +26158,7 @@
         "Gold": {
           "tooltips": [
             "Cooldown 10 seconds",
-            "Deal 100 damage.",
+            "Deal 50 damage.",
             "When you use an Adjacent item, Charge this 1.5 second(s).",
             "If you have another Tool, Apparel, Tech, Weapon, or Friend, this has +100 Damage for each."
           ]
@@ -26164,7 +26166,7 @@
         "Diamond": {
           "tooltips": [
             "Cooldown 10 seconds",
-            "Deal 100 damage.",
+            "Deal 50 damage.",
             "When you use an Adjacent item, Charge this 2 second(s).",
             "If you have another Tool, Apparel, Tech, Weapon, or Friend, this has +150 Damage for each."
           ]
@@ -26257,7 +26259,7 @@
       ],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
-        "Deal 100 damage.",
+        "Deal 50 damage.",
         "When you use an Adjacent item, Charge this (0.5/1/1.5/2) second(s).",
         "If you have another Tool, Apparel, Tech, Weapon, or Friend, this has (+25/+50/+100/+150) Damage for each."
       ],
@@ -26519,25 +26521,25 @@
       "tiers": {
         "Bronze": {
           "tooltips": [
-            "Cooldown 8 seconds",
+            "Cooldown 7 seconds",
             "Freeze 1 item(s) for 1 second(s)."
           ]
         },
         "Silver": {
           "tooltips": [
-            "Cooldown 7 seconds",
+            "Cooldown 6 seconds",
             "Freeze 1 item(s) for 1 second(s)."
           ]
         },
         "Gold": {
           "tooltips": [
-            "Cooldown 6 seconds",
+            "Cooldown 5 seconds",
             "Freeze 1 item(s) for 1 second(s)."
           ]
         },
         "Diamond": {
           "tooltips": [
-            "Cooldown 5 seconds",
+            "Cooldown 4 seconds",
             "Freeze 1 item(s) for 1 second(s)."
           ]
         },
@@ -26626,7 +26628,7 @@
         }
       ],
       "unifiedTooltips": [
-        "Cooldown (8/7/6/5) seconds",
+        "Cooldown (7/6/5/4) seconds",
         "Freeze 1 item(s) for 1 second(s)."
       ],
       "packId": "Mak_Lost_Treasures",
@@ -32418,7 +32420,8 @@
         }
       },
       "tags": [
-        "Weapon"
+        "Weapon",
+        "Relic"
       ],
       "hiddenTags": [
         "Damage",
@@ -42695,7 +42698,7 @@
           "tooltips": [
             "Cooldown 9 seconds",
             "Deal 200 damage.",
-            "If your enemy has at least 6 items, destroy a small or medium enemy item for the fight.",
+            "The first time you use this each fight, destroy a small or medium enemy item for the fight.",
             "When you destroy an item during combat, your Dinosaurs permanently gain 20 damage."
           ]
         },
@@ -42703,16 +42706,16 @@
           "tooltips": [
             "Cooldown 9 seconds",
             "Deal 200 damage.",
-            "If your enemy has at least 5 items, destroy a small or medium enemy item for the fight.",
-            "When you destroy an item during combat, your Dinosaurs permanently gain 40 damage."
+            "The first time you use this each fight, destroy a small or medium enemy item for the fight.",
+            "When you destroy an item during combat, your Dinosaurs permanently gain 30 damage."
           ]
         },
         "Diamond": {
           "tooltips": [
             "Cooldown 9 seconds",
             "Deal 200 damage.",
-            "If your enemy has at least 4 items, destroy a small or medium enemy item for the fight.",
-            "When you destroy an item during combat, your Dinosaurs permanently gain 60 damage."
+            "The first time you use this each fight, destroy a small or medium enemy item for the fight.",
+            "When you destroy an item during combat, your Dinosaurs permanently gain 40 damage."
           ]
         },
         "Legendary": {
@@ -42803,8 +42806,8 @@
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal 200 damage.",
-        "If your enemy has at least (6/5/4) items, destroy a small or medium enemy item for the fight.",
-        "When you destroy an item during combat, your Dinosaurs permanently gain (20/40/60) damage."
+        "The first time you use this each fight, destroy a small or medium enemy item for the fight.",
+        "When you destroy an item during combat, your Dinosaurs permanently gain (20/30/40) damage."
       ],
       "packId": "Dooley_Core",
       "combatEncounters": []
@@ -46167,125 +46170,6 @@
         "When you gain Regen, charge this 2 second(s)."
       ],
       "packId": "Mak_Core",
-      "combatEncounters": []
-    },
-    {
-      "id": "64e3569f-e023-49a5-ab75-f9613c338d53",
-      "name": "Oinkment",
-      "startingTier": "Silver",
-      "tiers": {
-        "Bronze": {
-          "tooltips": []
-        },
-        "Silver": {
-          "tooltips": [
-            "Cooldown 6 seconds",
-            "Heal equal to 1 times your gold.",
-            "Cleanse half your Burn and Poison."
-          ]
-        },
-        "Gold": {
-          "tooltips": [
-            "Cooldown 6 seconds",
-            "Heal equal to 2 times your gold.",
-            "Cleanse half your Burn and Poison."
-          ]
-        },
-        "Diamond": {
-          "tooltips": [
-            "Cooldown 6 seconds",
-            "Heal equal to 3 times your gold.",
-            "Cleanse half your Burn and Poison."
-          ]
-        },
-        "Legendary": {
-          "tooltips": []
-        }
-      },
-      "tags": [],
-      "hiddenTags": [
-        "Heal",
-        "EconomyReference"
-      ],
-      "customTags": [],
-      "size": "Small",
-      "heroes": [
-        "Pygmalien"
-      ],
-      "enchantments": [
-        {
-          "type": "Heavy",
-          "tooltips": [
-            "Slow 1 item for 2 second(s)."
-          ]
-        },
-        {
-          "type": "Icy",
-          "tooltips": [
-            "Freeze 1 small item for 1 second(s)."
-          ]
-        },
-        {
-          "type": "Turbo",
-          "tooltips": [
-            "Haste 1 item for 2 second(s)."
-          ]
-        },
-        {
-          "type": "Shielded",
-          "tooltips": [
-            "Shield equal to this item's Heal."
-          ]
-        },
-        {
-          "type": "Restorative",
-          "tooltips": [
-            "This has double Heal."
-          ]
-        },
-        {
-          "type": "Toxic",
-          "tooltips": [
-            "Poison equal to 10% of this item's Heal."
-          ]
-        },
-        {
-          "type": "Fiery",
-          "tooltips": [
-            "Burn equal to 10% of this item's Heal."
-          ]
-        },
-        {
-          "type": "Shiny",
-          "tooltips": [
-            "This has +1 Multicast."
-          ]
-        },
-        {
-          "type": "Deadly",
-          "tooltips": [
-            "+50% Crit Chance"
-          ]
-        },
-        {
-          "type": "Radiant",
-          "tooltips": [
-            "This cannot be Frozen, Slowed or Destroyed."
-          ]
-        },
-        {
-          "type": "Obsidian",
-          "tooltips": [
-            "Deal damage equal to this item's Heal."
-          ]
-        }
-      ],
-      "unifiedTooltips": [
-        "Cooldown 6 seconds",
-        "Heal equal to (1/2/3) times your gold.",
-        "Cleanse half your Burn and Poison."
-      ],
-      "packId": "Pygmalien_Core",
       "combatEncounters": []
     },
     {
@@ -50044,7 +49928,8 @@
         }
       },
       "tags": [
-        "Weapon"
+        "Weapon",
+        "Tech"
       ],
       "hiddenTags": [
         "Damage",
@@ -51284,7 +51169,7 @@
         "Silver": {
           "tooltips": [
             "Cooldown 7 seconds",
-            "Deal 50 damage.",
+            "Deal 30 damage.",
             "Your Dinosaur and Relic Weapons gain +10 Damage for the fight.",
             "Adjacent items are Relics.",
             "When you use another Dinosaur or Relic, Charge this 1 second."
@@ -51293,7 +51178,7 @@
         "Gold": {
           "tooltips": [
             "Cooldown 6 seconds",
-            "Deal 50 damage.",
+            "Deal 30 damage.",
             "Your Dinosaur and Relic Weapons gain +20 Damage for the fight.",
             "Adjacent items are Relics.",
             "When you use another Dinosaur or Relic, Charge this 1 second."
@@ -51302,7 +51187,7 @@
         "Diamond": {
           "tooltips": [
             "Cooldown 5 seconds",
-            "Deal 50 damage.",
+            "Deal 30 damage.",
             "Your Dinosaur and Relic Weapons gain +30 Damage for the fight.",
             "Adjacent items are Relics.",
             "When you use another Dinosaur or Relic, Charge this 1 second."
@@ -51396,7 +51281,7 @@
       ],
       "unifiedTooltips": [
         "Cooldown (7/6/5) seconds",
-        "Deal 50 damage.",
+        "Deal 30 damage.",
         "Your Dinosaur and Relic Weapons gain (+10/+20/+30) Damage for the fight.",
         "Adjacent items are Relics.",
         "When you use another Dinosaur or Relic, Charge this 1 second."
@@ -51927,7 +51812,8 @@
         }
       },
       "tags": [
-        "Weapon"
+        "Weapon",
+        "Tech"
       ],
       "hiddenTags": [
         "Damage"
@@ -52767,28 +52653,28 @@
         "Bronze": {
           "tooltips": [
             "Cooldown 13 seconds",
-            "Deal 150 damage.",
+            "Deal 100 damage.",
             "When you use another Tech, charge this 2 second(s)."
           ]
         },
         "Silver": {
           "tooltips": [
             "Cooldown 12 seconds",
-            "Deal 300 damage.",
+            "Deal 250 damage.",
             "When you use another Tech, charge this 2 second(s)."
           ]
         },
         "Gold": {
           "tooltips": [
             "Cooldown 11 seconds",
-            "Deal 450 damage.",
+            "Deal 500 damage.",
             "When you use another Tech, charge this 2 second(s)."
           ]
         },
         "Diamond": {
           "tooltips": [
             "Cooldown 10 seconds",
-            "Deal 600 damage.",
+            "Deal 800 damage.",
             "When you use another Tech, charge this 2 second(s)."
           ]
         },
@@ -52879,7 +52765,7 @@
       ],
       "unifiedTooltips": [
         "Cooldown (13/12/11/10) seconds",
-        "Deal (150/300/450/600) damage.",
+        "Deal (100/250/500/800) damage.",
         "When you use another Tech, charge this 2 second(s)."
       ],
       "packId": "Dooley_Core",
@@ -53387,19 +53273,19 @@
         },
         "Silver": {
           "tooltips": [
-            "Cooldown 8 seconds",
+            "Cooldown 10 seconds",
             "Charge adjacent Large items for half their cooldown."
           ]
         },
         "Gold": {
           "tooltips": [
-            "Cooldown 7 seconds",
+            "Cooldown 9 seconds",
             "Charge adjacent Large items for half their cooldown."
           ]
         },
         "Diamond": {
           "tooltips": [
-            "Cooldown 6 seconds",
+            "Cooldown 8 seconds",
             "Charge adjacent Large items for half their cooldown."
           ]
         },
@@ -53487,7 +53373,7 @@
         }
       ],
       "unifiedTooltips": [
-        "Cooldown (8/7/6) seconds",
+        "Cooldown (10/9/8) seconds",
         "Charge adjacent Large items for half their cooldown."
       ],
       "packId": "Dooley_Core",
@@ -54615,13 +54501,13 @@
         },
         "Gold": {
           "tooltips": [
-            "Cooldown 8 seconds",
+            "Cooldown 9 seconds",
             "Use a Core."
           ]
         },
         "Diamond": {
           "tooltips": [
-            "Cooldown 6 seconds",
+            "Cooldown 8 seconds",
             "Use a Core."
           ]
         },
@@ -54707,7 +54593,7 @@
         }
       ],
       "unifiedTooltips": [
-        "Cooldown (10/8/6) seconds",
+        "Cooldown (10/9/8) seconds",
         "Use a Core."
       ],
       "packId": "Dooley_Core",
@@ -59195,21 +59081,21 @@
         "Silver": {
           "tooltips": [
             "Cooldown 2 seconds",
-            "Reduce the cooldown of your other items by 10% for this fight.",
+            "Reduce the cooldown of your other items by 8% for this fight.",
             "Increase this item's cooldown by 4 second(s) for the fight."
           ]
         },
         "Gold": {
           "tooltips": [
             "Cooldown 2 seconds",
-            "Reduce the cooldown of your other items by 10% for this fight.",
+            "Reduce the cooldown of your other items by 8% for this fight.",
             "Increase this item's cooldown by 3 second(s) for the fight."
           ]
         },
         "Diamond": {
           "tooltips": [
             "Cooldown 2 seconds",
-            "Reduce the cooldown of your other items by 10% for this fight.",
+            "Reduce the cooldown of your other items by 8% for this fight.",
             "Increase this item's cooldown by 2 second(s) for the fight."
           ]
         },
@@ -59299,7 +59185,7 @@
       ],
       "unifiedTooltips": [
         "Cooldown 2 seconds",
-        "Reduce the cooldown of your other items by 10% for this fight.",
+        "Reduce the cooldown of your other items by 8% for this fight.",
         "Increase this item's cooldown by (4/3/2) second(s) for the fight."
       ],
       "packId": "Vanessa_The_Gang",
@@ -65732,19 +65618,19 @@
         {
           "type": "Heavy",
           "tooltips": [
-            "Slow 2 items for 3 second(s)."
+            "Slow 1 items for 1 second(s)."
           ]
         },
         {
           "type": "Icy",
           "tooltips": [
-            "Freeze 1 medium or small item for 3 second(s)."
+            "Freeze 1 medium or small item for 0.5 second(s)."
           ]
         },
         {
           "type": "Turbo",
           "tooltips": [
-            "Haste 2 items for 3 second(s)."
+            "Haste 1 items for 1 second(s)."
           ]
         },
         {
@@ -66835,33 +66721,29 @@
       "tiers": {
         "Bronze": {
           "tooltips": [
-            "Cooldown 6 seconds",
-            "Deal 50 damage.",
-            "Enemy Weapons have -10 Damage.",
+            "Cooldown 8 seconds",
+            "Deal 60 damage.",
             "When one of your Dinosaurs deals damage, gain that much Shield."
           ]
         },
         "Silver": {
           "tooltips": [
-            "Cooldown 6 seconds",
-            "Deal 50 damage.",
-            "Enemy Weapons have -25 Damage.",
+            "Cooldown 7 seconds",
+            "Deal 60 damage.",
             "When one of your Dinosaurs deals damage, gain that much Shield."
           ]
         },
         "Gold": {
           "tooltips": [
             "Cooldown 6 seconds",
-            "Deal 50 damage.",
-            "Enemy Weapons have -50 Damage.",
+            "Deal 60 damage.",
             "When one of your Dinosaurs deals damage, gain that much Shield."
           ]
         },
         "Diamond": {
           "tooltips": [
-            "Cooldown 6 seconds",
-            "Deal 50 damage.",
-            "Enemy Weapons have -75 Damage.",
+            "Cooldown 5 seconds",
+            "Deal 60 damage.",
             "When one of your Dinosaurs deals damage, gain that much Shield."
           ]
         },
@@ -66952,9 +66834,8 @@
         }
       ],
       "unifiedTooltips": [
-        "Cooldown 6 seconds",
-        "Deal 50 damage.",
-        "Enemy Weapons have (-10/-25/-50/-75) Damage.",
+        "Cooldown (8/7/6/5) seconds",
+        "Deal 60 damage.",
         "When one of your Dinosaurs deals damage, gain that much Shield."
       ],
       "packId": "Dooley_Primal_Dooley",
@@ -70386,7 +70267,7 @@
             "Deal 10 damage.",
             "Burn equal to 10% of this item's damage.",
             "The first time a player falls below half Health, Destroy a small item.",
-            "When you destroy an item during a fight, this permanently gains +10 damage."
+            "When you destroy an item during combat, this permanently gains +10 damage."
           ]
         },
         "Gold": {
@@ -70395,7 +70276,7 @@
             "Deal 10 damage.",
             "Burn equal to 10% of this item's damage.",
             "The first time a player falls below half Health, Destroy a small item.",
-            "When you destroy an item during a fight, this permanently gains +20 damage."
+            "When you destroy an item during combat, this permanently gains +20 damage."
           ]
         },
         "Diamond": {
@@ -70404,7 +70285,7 @@
             "Deal 10 damage.",
             "Burn equal to 10% of this item's damage.",
             "The first time a player falls below half Health, Destroy a small item.",
-            "When you destroy an item during a fight, this permanently gains +30 damage."
+            "When you destroy an item during combat, this permanently gains +30 damage."
           ]
         },
         "Legendary": {
@@ -70499,7 +70380,7 @@
         "Deal 10 damage.",
         "Burn equal to 10% of this item's damage.",
         "The first time a player falls below half Health, Destroy a small item.",
-        "When you destroy an item during a fight, this permanently gains (+10/+20/+30) damage."
+        "When you destroy an item during combat, this permanently gains (+10/+20/+30) damage."
       ],
       "packId": "Dooley_Primal_Dooley",
       "combatEncounters": []
@@ -71375,7 +71256,7 @@
             "Cooldown 7 seconds",
             "Poison 3 for each type this has.",
             "Burn 3 for each type this has.",
-            "When you sell an item, this gains that item's type(s)."
+            "When you sell an item, this gains that item's types."
           ]
         },
         "Gold": {
@@ -71383,7 +71264,7 @@
             "Cooldown 7 seconds",
             "Poison 6 for each type this has.",
             "Burn 6 for each type this has.",
-            "When you sell an item, this gains that item's type(s)."
+            "When you sell an item, this gains that item's types."
           ]
         },
         "Diamond": {
@@ -71391,7 +71272,7 @@
             "Cooldown 7 seconds",
             "Poison 9 for each type this has.",
             "Burn 9 for each type this has.",
-            "When you sell an item, this gains that item's type(s)."
+            "When you sell an item, this gains that item's types."
           ]
         },
         "Legendary": {
@@ -71480,7 +71361,7 @@
         "Cooldown 7 seconds",
         "Poison (3/6/9) for each type this has.",
         "Burn (3/6/9) for each type this has.",
-        "When you sell an item, this gains that item's type(s)."
+        "When you sell an item, this gains that item's types."
       ],
       "packId": "Mak_Core",
       "combatEncounters": []

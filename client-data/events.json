@@ -5,7 +5,8 @@
             "Trade It for Something: Gain a Neutral Item.",
             "Sell It: Gain 4 Gold .",
             "(If you have a Bushel ) Add It to Your Bushel: Add + 3 Regen to your Bushel .",
-            "(If you are Mak) Brew a Potion: Get a small Silver-tier Potion"
+            "(If you are Mak) Brew a Potion: Get a small Silver-tier Potion",
+            "(If you are Dooley) Share It with a Friend: Gain a Small Silver-tier Friend"
         ]
     },
     {
@@ -18,80 +19,8 @@
     {
         "name": "Aerodrome",
         "options": [
-            "Aero",
-            "Aila",
-            "Ande",
-            "Artisan Dunes",
-            "B1&B2",
-            "Barkun",
-            "BazaarCON",
-            "Bjorn",
-            "Bladeborn Badlands",
-            "Burning Caldera",
-            "C4",
-            "Celestial Conduit",
-            "Chronos",
-            "Cobweb",
-            "Colt",
-            "Curio",
-            "Cymon",
-            "Dabora",
-            "Dooley's Workshop",
-            "Eating Contest",
-            "Eli",
-            "Mr. Tuskari",
-            "Finn's Big Bite",
-            "Flex",
-            "Forja",
-            "Fortis",
-            "Freiya",
-            "Frozen Tomb",
-            "Goldie",
-            "Grandmaster",
-            "Guardian's Gorge",
-            "Gumball Machine",
-            "Hef",
-            "Herma",
-            "Investment Pitch",
-            "Jay Jay",
-            "Jules' Cafe",
-            "Kev's Armory",
-            "Kina",
-            "Knightshade",
-            "Languid Dunes",
-            "Luxe",
-            "Malafang",
-            "Midsworth",
-            "Mittel",
-            "Mr. Morland",
-            "Murkwood Bayou",
-            "Mysterious Portal",
-            "Nautica",
-            "Nufu",
-            "Old Zane",
-            "Orion",
-            "Orlin",
-            "Pearl's Dig Site",
-            "Pol",
-            "Professor Riggle",
-            "Prospero",
-            "Quixel",
-            "Regenald",
-            "Ryukon",
-            "Sanguine Valley",
-            "Serafina",
-            "Shrouded Figure",
-            "Sirocco Steppe",
-            "Slohmor Lumbra",
-            "Street Festival",
-            "The Artist",
-            "The Cult",
-            "Tinker",
-            "Tok's Clocks",
-            "Tranquil Spring",
-            "Vermir",
-            "Zara",
-            "Zurphin's Safari"
+            "Visit a random location.",
+            "(20) Get an Expedition Ticket."
         ]
     },
     {
@@ -155,7 +84,7 @@
     {
         "name": "Borrow",
         "options": [
-            "\"Lose 1 Income and gain 6 Gold.\""
+            "\"Lose 1 Income and gain 7 Gold.\""
         ]
     },
     {
@@ -418,9 +347,10 @@
         "options": [
             "Grab the Loot : Gain 3 loot items.",
             "Enjoy the Scenery : Gain 3 Regeneration .",
-            "(if you are Vanessa ) Plunder for Treasure : Gain a Small Silver -tier item.",
+            "(if you are Vanessa ) Search the Bodies: Get a Small Silver-tier Weapon or Apparel from any Hero",
             "(if you are Pygmalien ) Setup Tourist Attraction : Gain 2 Income",
-            "(if you are Mak ) Hunt for Reagents : Get a Silver -tier Reagent ."
+            "(if you are Mak ) Hunt for Reagents : Get a Silver -tier Reagent .",
+            "(if you are Dooley) Search for Abandoned Tools: Get a Small Silver-tier Tool from any Hero"
         ]
     },
     {

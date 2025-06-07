@@ -54,7 +54,6 @@ ALT_TEXT_MAP: Dict[str, str] = {
 }
 
 DO_NOT_DISPLAY: Dict[str] = [
-    "Aerodrome",
     "Armory",
     "B1&B2",
     "Battlefield",

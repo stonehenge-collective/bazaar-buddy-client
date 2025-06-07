@@ -4950,6 +4950,12 @@
             "items": [
               {
                 "card": {
+                  "name": "Expedition Ticket"
+                },
+                "tierType": "Legendary"
+              },
+              {
+                "card": {
                   "id": "6ba3778c-e760-44f3-b3b4-a4b4ca267cc2",
                   "name": "Scrap",
                   "startingTier": "Bronze",
@@ -6506,6 +6512,12 @@
             "level": 3,
             "health": 300,
             "items": [
+              {
+                "card": {
+                  "name": "Expedition Ticket"
+                },
+                "tierType": "Legendary"
+              },
               {
                 "card": {
                   "id": "08bb5055-bd8d-4f86-bff6-24f8cb47f509",
@@ -8535,6 +8547,12 @@
             "items": [
               {
                 "card": {
+                  "name": "Expedition Ticket"
+                },
+                "tierType": "Legendary"
+              },
+              {
+                "card": {
                   "id": "b57d9963-d241-40c9-8f9f-f9925a2da661",
                   "name": "Red Piggles R",
                   "startingTier": "Bronze",
@@ -10133,6 +10151,12 @@
             "level": 5,
             "health": 650,
             "items": [
+              {
+                "card": {
+                  "name": "Expedition Ticket"
+                },
+                "tierType": "Legendary"
+              },
               {
                 "card": {
                   "id": "6ba3778c-e760-44f3-b3b4-a4b4ca267cc2",
@@ -14908,6 +14932,12 @@
             "items": [
               {
                 "card": {
+                  "name": "Expedition Ticket"
+                },
+                "tierType": "Legendary"
+              },
+              {
+                "card": {
                   "id": "da766a09-0352-4966-829f-20bda8da48d7",
                   "name": "Med Kit",
                   "startingTier": "Bronze",
@@ -15563,6 +15593,12 @@
             "level": 7,
             "health": 900,
             "items": [
+              {
+                "card": {
+                  "name": "Expedition Ticket"
+                },
+                "tierType": "Legendary"
+              },
               {
                 "card": {
                   "id": "9ad15f24-4def-4d82-8545-d73794cfbaf2",
@@ -20215,6 +20251,12 @@
             "items": [
               {
                 "card": {
+                  "name": "Expedition Ticket"
+                },
+                "tierType": "Legendary"
+              },
+              {
+                "card": {
                   "id": "4826832f-f3a5-4c40-b8fa-737f002074fa",
                   "name": "Insect Wing",
                   "startingTier": "Silver",
@@ -21786,6 +21828,12 @@
             "items": [
               {
                 "card": {
+                  "name": "Expedition Ticket"
+                },
+                "tierType": "Legendary"
+              },
+              {
+                "card": {
                   "id": "08bb5055-bd8d-4f86-bff6-24f8cb47f509",
                   "name": "Vial of Blood",
                   "startingTier": "Silver",
@@ -22632,6 +22680,12 @@
             "level": 3,
             "health": 1200,
             "items": [
+              {
+                "card": {
+                  "name": "Expedition Ticket"
+                },
+                "tierType": "Legendary"
+              },
               {
                 "card": {
                   "id": "dc3bf5cb-45fa-46c7-9a0e-3f3bfb01697d",
@@ -28500,6 +28554,12 @@
             "level": 8,
             "health": 1550,
             "items": [
+              {
+                "card": {
+                  "name": "Expedition Ticket"
+                },
+                "tierType": "Legendary"
+              },
               {
                 "card": {
                   "id": "562d768a-6aaf-4704-be8b-4dc9e6311b11",
@@ -36993,6 +37053,12 @@
             "level": 9,
             "health": 1700,
             "items": [
+              {
+                "card": {
+                  "name": "Expedition Ticket"
+                },
+                "tierType": "Legendary"
+              },
               {
                 "card": {
                   "id": "5ded844c-5279-4c30-9198-309fba0b651b",
