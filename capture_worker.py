@@ -3,7 +3,6 @@ from PIL import Image
 import threading
 from abc import ABC, abstractmethod
 from logging import Logger
-from configuration import Configuration
 
 
 class FailedToFindWindowError(Exception):
@@ -182,10 +181,19 @@ class MacCaptureWorker(BaseCaptureWorker):
             # Convert to numpy array
             arr = np.frombuffer(buffer, dtype=np.uint8)
             arr = arr.reshape((height, bytes_per_row // 4, 4))
-            arr = arr[:, :width, :3]  # Keep only RGB channels
+            arr = arr[:, :width, :3]  # B, G, R
+            arr = arr[..., ::-1]  # Now R, G, B to keep the image in RGB format
 
             # Convert to PIL Image
-            return Image.fromarray(arr)
+            img = Image.fromarray(arr)
+
+            """
+            we crop here because the window on mac has a black border that is always present and we don't want to capture it. From my testing, the
+            shadow always seems to be the same size, so we can just crop it off.
+            If we dont crop it off it will throw off the image cropper.
+            """
+            return img.crop((70, 60, img.width - 70, img.height - 85))
+
         except Exception as exc:
             raise Exception(f"[{threading.current_thread().name}] Capture error: {exc}")
 
