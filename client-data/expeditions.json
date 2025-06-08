@@ -1,0 +1,211 @@
+[
+    {
+        "name": "Blowguns Trap",
+        "health": 1925,
+        "items": [
+            {
+                "name": "Gold Fiery/Toxic/Obsidian Blowgun",
+                "tooltips": [
+                    "Cooldown 9 seconds",
+                    "Deal 2 damage.",
+                    "Poison equal to this item's damage.",
+                    "Fiery: Burn equal to this item's damage.",
+                    "Toxic: This has double Poison.",
+                    "Obsidian: This has double Damage."
+                ]
+            },
+            {
+                "name": "Gold Fiery/Toxic/Obsidian Blowgun",
+                "tooltips": [
+                    "Cooldown 9 seconds",
+                    "Deal 2 damage.",
+                    "Poison equal to this item's damage.",
+                    "Fiery: Burn equal to this item's damage.",
+                    "Toxic: This has double Poison.",
+                    "Obsidian: This has double Damage."
+                ]
+            },
+            {
+                "name": "Gold Fiery/Toxic/Obsidian Blowgun",
+                "tooltips": [
+                    "Cooldown 9 seconds",
+                    "Deal 2 damage.",
+                    "Poison equal to this item's damage.",
+                    "Fiery: Burn equal to this item's damage.",
+                    "Toxic: This has double Poison.",
+                    "Obsidian: This has double Damage."
+                ]
+            },
+            {
+                "name": "Gold Fiery/Toxic/Obsidian Blowgun",
+                "tooltips": [
+                    "Cooldown 9 seconds",
+                    "Deal 2 damage.",
+                    "Poison equal to this item's damage.",
+                    "Fiery: Burn equal to this item's damage.",
+                    "Toxic: This has double Poison.",
+                    "Obsidian: This has double Damage."
+                ]
+            },
+            {
+                "name": "Gold Fiery/Toxic/Obsidian Lockbox",
+                "tooltips":[
+                    "This has 30/30/20 value.",
+                    "Your weapons have + damage equal to this item's value.",
+                    "Fiery: Your Burn items have + Burn equal to 10% of this item's value.",
+                    "Toxic: Your Poison items have + Poison equal to 10% of this item's value.",
+                    "Obsidian: This has double damage bonus."
+                ]
+            },
+            {
+                "name": "Gold Fiery/Toxic/Obsidian Blowgun",
+                "tooltips": [
+                    "Cooldown 9 seconds",
+                    "Deal 2 damage.",
+                    "Poison equal to this item's damage.",
+                    "Fiery: Burn equal to this item's damage.",
+                    "Toxic: This has double Poison.",
+                    "Obsidian: This has double Damage."
+                ]
+            },
+            {
+                "name": "Gold Fiery/Toxic/Obsidian Blowgun",
+                "tooltips": [
+                    "Cooldown 9 seconds",
+                    "Deal 2 damage.",
+                    "Poison equal to this item's damage.",
+                    "Fiery: Burn equal to this item's damage.",
+                    "Toxic: This has double Poison.",
+                    "Obsidian: This has double Damage."
+                ]
+            },
+            {
+                "name": "Gold Fiery/Toxic/Obsidian Blowgun",
+                "tooltips": [
+                    "Cooldown 9 seconds",
+                    "Deal 2 damage.",
+                    "Poison equal to this item's damage.",
+                    "Fiery: Burn equal to this item's damage.",
+                    "Toxic: This has double Poison.",
+                    "Obsidian: This has double Damage."
+                ]
+            },
+            {
+                "name": "Gold Fiery/Toxic/Obsidian Blowgun",
+                "tooltips": [
+                    "Cooldown 9 seconds",
+                    "Deal 2 damage.",
+                    "Poison equal to this item's damage.",
+                    "Fiery: Burn equal to this item's damage.",
+                    "Toxic: This has double Poison.",
+                    "Obsidian: This has double Damage."
+                ]
+            }
+        ],
+        "skills": [
+        ]
+    },
+    {
+        "name": "Caltrops Trap",
+        "health": 2325,
+        "items": [
+            {
+                "name": "Gold Fiery/Toxic/Obsidian Caltrops",
+                "tooltips": [
+                    "When your enemy uses an item, deal 1 damage.",
+                    "Fiery: When your enemy uses an item, Burn equal to 10% of this item's damage.",
+                    "Toxic: When your enemy uses an item, Poison equal to 10% of this item's damage.",
+                    "Obsidian: This has double Damage."
+                ]
+            },
+            {
+                "name": "Gold Fiery/Toxic/Obsidian Caltrops",
+                "tooltips": [
+                    "When your enemy uses an item, deal 1 damage.",
+                    "Fiery: When your enemy uses an item, Burn equal to 10% of this item's damage.",
+                    "Toxic: When your enemy uses an item, Poison equal to 10% of this item's damage.",
+                    "Obsidian: This has double Damage."
+                ]
+            },
+            {
+                "name": "Gold Fiery/Toxic/Obsidian Lockbox",
+                "tooltips":[
+                    "This has 40/40/30 value.",
+                    "Your weapons have + damage equal to this item's value.",
+                    "Fiery: Your Burn items have + Burn equal to 10% of this item's value.",
+                    "Toxic: Your Poison items have + Poison equal to 10% of this item's value.",
+                    "Obsidian: This has double damage bonus."
+                ]
+            },
+            {
+                "name": "Gold Fiery/Toxic/Obsidian Caltrops",
+                "tooltips": [
+                    "When your enemy uses an item, deal 1 damage.",
+                    "Fiery: When your enemy uses an item, Burn equal to 10% of this item's damage.",
+                    "Toxic: When your enemy uses an item, Poison equal to 10% of this item's damage.",
+                    "Obsidian: This has double Damage."
+                ]
+            },
+            {
+                "name": "Gold Fiery/Toxic/Obsidian Caltrops",
+                "tooltips": [
+                    "When your enemy uses an item, deal 1 damage.",
+                    "Fiery: When your enemy uses an item, Burn equal to 10% of this item's damage.",
+                    "Toxic: When your enemy uses an item, Poison equal to 10% of this item's damage.",
+                    "Obsidian: This has double Damage."
+                ]
+            }
+        ],
+        "skills": [
+        ]
+    },
+    {
+        "name": "Boulder Trap",
+        "health": 2750,
+        "items": [
+            {
+                "name": "Gold Fiery/Toxic/Obsidian The Boulder",
+                "tooltips": [
+                    "Cooldown 20 seconds",
+                    "Ammo 1",
+                    "Deal damage equal to your enemy's max health.",
+                    "Fiery: Burn equal to 10% of this item's damage.",
+                    "Toxic: Poison equal to 10% of this item's damage.",
+                    "Obsidian: This has double Damage."
+                ]
+            },
+            {
+                "name": "Gold Fiery/Toxic/Obsidian Tripwire",
+                "tooltips": [
+                    "When your enemy uses an item, Slow it for 1 second.",
+                    "Fiery: When your enemy uses an item, Burn 4.",
+                    "Toxic: When your enemy uses an item, poison 2.",
+                    "Obsidian: When your enemy uses an item, Deal 1 Damage."
+                ]
+            },
+            {
+                "name": "Gold Fiery/Toxic/Obsidian Lockbox",
+                "tooltips":[
+                    "This has 40/40/30 value.",
+                    "Your weapons have + damage equal to this item's value.",
+                    "Fiery: Your Burn items have + Burn equal to 10% of this item's value.",
+                    "Toxic: Your Poison items have + Poison equal to 10% of this item's value.",
+                    "Obsidian: This has double damage bonus."
+                ]
+            },
+            {
+                "name": "Gold Fiery/Toxic/Obsidian The Boulder",
+                "tooltips": [
+                    "Cooldown 20 seconds",
+                    "Ammo 1",
+                    "Deal damage equal to your enemy's max health.",
+                    "Fiery: Burn equal to 10% of this item's damage.",
+                    "Toxic: Poison equal to 10% of this item's damage.",
+                    "Obsidian: This has double Damage."
+                ]
+            }
+        ],
+        "skills": [
+        ]
+    }
+]

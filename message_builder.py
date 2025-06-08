@@ -68,7 +68,8 @@ class MessageBuilder:
             self._logger.debug("No keyword found in OCR text")
             return None
 
-        pos, kw = min(hits, key=lambda item: item[0])  # earliest occurrence wins
+        # Earliest occurrence wins; if tie, choose the longer keyword/phrase
+        pos, kw = min(hits, key=lambda item: (item[0], -len(item[1])))
         self._logger.debug("Matched %r at position %d", kw, pos)
         return kw
 
@@ -135,11 +136,11 @@ if __name__ == "__main__":
     builder = MessageBuilder(cfg, logger)
 
     examples = [
-        "REPORT BUG SMALL AQUATIC TOOL APPAREL Dive Weights Se i Haste 1 items for 39 1 seconds. For each adjacent Aquatic item. reduce this item's Cooldown by 1 second. This has Multicast equal to its anil OW - lial 9 a he Hf 4 s lek o a Y4 yy - ww a Ze sy ZA 4 o vy Cz en t 4 ty a J S I A ae all - nN Version 1.0.434",
+        "REPORT BUG Caltrops Trap REWARDS",
         "MEDIUM Toxic Calcinator Burn Poison equal to this item's Burn. 4 Crit 4 When you transform a this permanently gains Burn. At the start of each day spend 3 Gold to get a Chunk of Lead. Bank amount of gold you have.",
     ]
 
-    print(builder.match_keyword(examples[1]))
+    print(builder.match_keyword(examples[0]))
     # raw_message = builder.get_message(test_ocr)
 
     # print("Matched entity message:")

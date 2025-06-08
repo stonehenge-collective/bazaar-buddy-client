@@ -122,6 +122,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 EVENTS_PATH          = CURRENT_DIR / "events.json"
 ITEMS_PATH           = CURRENT_DIR / "items.json"
 MONSTERS_PATH    = CURRENT_DIR / "monsters.json"
+EXPEDITIONS_PATH    = CURRENT_DIR / "expeditions.json"
 DECORATOR_PATH = CURRENT_DIR / "decorate.json"
 
 ENTITY_OUT_PATH      = ROOT_DIR / "entities.json"
@@ -390,6 +391,9 @@ def main() -> None:
     with MONSTERS_PATH.open(encoding="utf-8") as fp:
         monsters = json.load(fp)
 
+    with EXPEDITIONS_PATH.open(encoding="utf-8") as fp:
+        expeditions = json.load(fp)
+
     with DECORATOR_PATH.open(encoding="utf-8") as fp:
         decorate_rules = json.load(fp)
 
@@ -424,6 +428,14 @@ def main() -> None:
             "name": mon["name"],
             "type": "monster",
             "display_message": build_monster_message(mon),
+        }
+        entities.append(ent)
+
+    for expedition in expeditions:
+        ent: Dict[str, Any] = {
+            "name": expedition["name"],
+            "type": "monster",
+            "display_message": build_monster_message(expedition),
         }
         entities.append(ent)
 
