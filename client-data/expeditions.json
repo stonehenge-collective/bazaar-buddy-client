@@ -186,7 +186,7 @@
             {
                 "name": "Gold Fiery/Toxic/Obsidian Lockbox",
                 "tooltips":[
-                    "This has 40/40/30 value.",
+                    "This has 16/16/8 value.",
                     "Your weapons have + damage equal to this item's value.",
                     "Fiery: Your Burn items have + Burn equal to 10% of this item's value.",
                     "Toxic: Your Poison items have + Poison equal to 10% of this item's value.",
