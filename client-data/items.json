@@ -1,5 +1,5 @@
 {
-  "version": "a1a50bc7",
+  "version": "6383c1f4",
   "items": [
     {
       "id": "0efe7d3f-4f18-4667-89a3-ac915a93a9f5",
@@ -105,6 +105,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you use a Weapon, your items with Shield gain (+10/+20/+30) Shield for the fight.",
         "When you use a Shield item, your Weapons gain (+10/+20/+30) Damage for the fight."
@@ -217,6 +218,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (5/4) seconds",
         "Transform into 3 (Gold/Diamond) copies of the small, non-legendary item to the left of this for the fight."
@@ -337,6 +339,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Shield equal to (1x/2x) the value of the adjacent items."
@@ -463,6 +466,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Poison both players (5/10/15).",
@@ -523,6 +527,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Adjacent items have (+3%/+6%/+9%/+12%) Crit chance.",
         "When you sell this, your items gain (+1%/+2%/+3%/+4%) Crit Chance."
@@ -639,6 +644,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "At the start of each day, get a Catalyst and transform the small item to the left of this into a random Potion.",
         "When you buy this, get a Small Reagent."
@@ -759,6 +765,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal (15/20/25) damage.",
@@ -888,6 +895,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Poison (4/8/12/16).",
@@ -1003,6 +1011,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Slow (1/2/3) item(s) for 3 second(s).",
@@ -1149,6 +1158,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Heal equal to (1x/2x/3x/4x) this item's value.",
@@ -1267,6 +1277,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 13 seconds",
         "Deal damage equal to (20%/30%) of your enemy's Max Health.",
@@ -1398,6 +1409,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Deal 10 damage.",
@@ -1504,6 +1516,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (30/24) seconds",
         "Destroy this.",
@@ -1628,6 +1641,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Gain (5/10/15) Regen for the fight.",
@@ -1757,6 +1771,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Your weapons gain (6/9/12) Damage for the fight.",
@@ -1884,6 +1899,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Ammo 1",
@@ -2011,6 +2027,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (20/40/60/80) damage.",
@@ -2109,6 +2126,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, recover 5 Prestige."
       ],
@@ -2239,6 +2257,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (7/6/5) seconds",
         "Shield 20.",
@@ -2360,6 +2379,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (7/6/5) seconds",
         "Haste a non-weapon item for 2 second(s).",
@@ -2485,6 +2505,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Reload adjacent items.",
@@ -2616,6 +2637,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (9/8/7/6) seconds",
         "Deal 1 damage.",
@@ -2742,6 +2764,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 11 seconds",
         "Deal (20/30/40/50) damage.",
@@ -2875,6 +2898,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Shield equal to (1/2/3/4) times your Income.",
@@ -2994,132 +3018,13 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 1 seconds",
         "Ammo 3",
         "Increase an enemy item's cooldown by (1/2/3) second(s) for the fight."
       ],
       "packId": "Dooley_Core",
-      "combatEncounters": []
-    },
-    {
-      "id": "dd438f4e-77ea-4b7a-b59e-ae8906c49da8",
-      "name": "Augment Reagents",
-      "startingTier": "Bronze",
-      "tiers": {
-        "Bronze": {
-          "tooltips": [
-            "Cooldown 6 seconds",
-            "This is a Small Item Template."
-          ]
-        },
-        "Silver": {
-          "tooltips": [
-            "Cooldown 6 seconds",
-            "This is a Small Item Template."
-          ]
-        },
-        "Gold": {
-          "tooltips": [
-            "Cooldown 6 seconds",
-            "This is a Small Item Template."
-          ]
-        },
-        "Diamond": {
-          "tooltips": [
-            "Cooldown 6 seconds",
-            "This is a Small Item Template."
-          ]
-        },
-        "Legendary": {
-          "tooltips": []
-        }
-      },
-      "tags": [],
-      "hiddenTags": [],
-      "customTags": [],
-      "size": "Small",
-      "heroes": [
-        "Vanessa",
-        "Dooley",
-        "Jules",
-        "Stelle",
-        "Mak",
-        "Pygmalien"
-      ],
-      "enchantments": [
-        {
-          "type": "Heavy",
-          "tooltips": [
-            "Slow 1 item for 2 second(s)."
-          ]
-        },
-        {
-          "type": "Icy",
-          "tooltips": [
-            "Freeze 1 small item for 1 second(s)."
-          ]
-        },
-        {
-          "type": "Turbo",
-          "tooltips": [
-            "Haste 1 item for 2 second(s)."
-          ]
-        },
-        {
-          "type": "Shielded",
-          "tooltips": [
-            "Shield 30."
-          ]
-        },
-        {
-          "type": "Restorative",
-          "tooltips": [
-            "Heal 40."
-          ]
-        },
-        {
-          "type": "Toxic",
-          "tooltips": [
-            "Poison 6."
-          ]
-        },
-        {
-          "type": "Fiery",
-          "tooltips": [
-            "Burn 6."
-          ]
-        },
-        {
-          "type": "Shiny",
-          "tooltips": [
-            "This has +1 Multicast."
-          ]
-        },
-        {
-          "type": "Deadly",
-          "tooltips": [
-            "+50% Crit Chance"
-          ]
-        },
-        {
-          "type": "Radiant",
-          "tooltips": [
-            "This cannot be Frozen, Slowed or Destroyed."
-          ]
-        },
-        {
-          "type": "Obsidian",
-          "tooltips": [
-            "Deal 60 Damage."
-          ]
-        }
-      ],
-      "unifiedTooltips": [
-        "Cooldown 6 seconds",
-        "This is a Small Item Template."
-      ],
-      "packId": "Core",
       "combatEncounters": []
     },
     {
@@ -3238,6 +3143,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Shield 20.",
@@ -3359,6 +3265,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Shield (20/40/60).",
@@ -3396,7 +3303,9 @@
           "tooltips": []
         }
       },
-      "tags": [],
+      "tags": [
+        "Loot"
+      ],
       "hiddenTags": [],
       "customTags": [
         "Unpurchasable"
@@ -3406,6 +3315,7 @@
         "Common"
       ],
       "enchantments": [],
+      "quests": [],
       "unifiedTooltips": [
         "Sells for gold"
       ],
@@ -3524,6 +3434,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "The Property to the left of this has double value in combat and has its cooldown reduced by (5%/10%/15%)."
       ],
@@ -3646,6 +3557,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 11 seconds",
         "Ammo 2",
@@ -3767,6 +3679,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Shield 20.",
@@ -3890,6 +3803,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Heal (5/10/20/40).",
@@ -3948,6 +3862,7 @@
         "Common"
       ],
       "enchantments": [],
+      "quests": [],
       "unifiedTooltips": [
         "Sells for gold"
       ],
@@ -3962,20 +3877,12 @@
           "cardName": "Thug"
         },
         {
-          "cardId": "7b768d49-b2cc-40f8-ab0f-2d0ed36a0c56",
-          "cardName": "Treasure Turtle"
-        },
-        {
           "cardId": "85902df4-6926-40a3-affc-537c55e89b86",
           "cardName": "Bloodreef Raider"
         },
         {
           "cardId": "91e59b0c-968c-4c45-9391-5104571fee28",
           "cardName": "Outlands Dervish"
-        },
-        {
-          "cardId": "fc59e9b3-88be-450c-b2dc-65d58a33d1d0",
-          "cardName": "Lord of the Wastes"
         }
       ]
     },
@@ -4096,13 +4003,19 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (5/10/20/40) damage.",
         "This has +1 Multicast for each player with Poison."
       ],
       "packId": "Mak_Dangerous_Experiments",
-      "combatEncounters": []
+      "combatEncounters": [
+        {
+          "cardId": "a5103989-fb08-4ac6-a5e8-6a610e0b1d46",
+          "cardName": "Qomatz"
+        }
+      ]
     },
     {
       "id": "1bdbc6f6-2690-445a-877e-90dbbd5e4658",
@@ -4217,6 +4130,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Deal 10 damage.",
@@ -4341,6 +4255,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Poison 10.",
@@ -4464,6 +4379,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Shield 20.",
@@ -4589,6 +4505,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Lifesteal",
@@ -4602,12 +4519,20 @@
           "cardName": "Viper Tyrant"
         },
         {
+          "cardId": "a5103989-fb08-4ac6-a5e8-6a610e0b1d46",
+          "cardName": "Qomatz"
+        },
+        {
           "cardId": "dbc00a8b-7fae-4792-a9da-698d3cd4f578",
           "cardName": "Gorgon Noble"
         },
         {
           "cardId": "fc3dee8e-aef5-41c9-95a8-d91ad54adede",
           "cardName": "Foundation Revenant"
+        },
+        {
+          "cardId": "fc59e9b3-88be-450c-b2dc-65d58a33d1d0",
+          "cardName": "Lord of the Wastes"
         }
       ]
     },
@@ -4728,6 +4653,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Ammo 4",
@@ -4843,6 +4769,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you use the Weapon to the left of this, deal (10/15/20/25) damage."
       ],
@@ -4967,6 +4894,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Haste (2/3/4/5) Aquatic or Toy item(s) for 2 second(s)."
@@ -5097,6 +5025,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Deal (50/75/100) damage.",
@@ -5213,6 +5142,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When your enemy uses a weapon, charge your Busy Bees 2 second(s).",
         "When you buy this, get 2 Busy Bees.",
@@ -5338,6 +5268,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal 40 damage.",
@@ -5386,6 +5317,7 @@
         "Pygmalien"
       ],
       "enchantments": [],
+      "quests": [],
       "unifiedTooltips": [
         "You have (+50%/+75%/+100%) Max Health."
       ],
@@ -5494,6 +5426,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Freeze (1/2) item(s) for 1 second(s).",
@@ -5620,6 +5553,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (10/20/40) damage.",
@@ -5753,6 +5687,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Shield (200/300).",
@@ -5764,6 +5699,131 @@
         {
           "cardId": "265d1068-e90d-49c4-8013-ed2e856ead8f",
           "cardName": "Property Baron"
+        }
+      ]
+    },
+    {
+      "id": "6028b902-ccf6-4cca-bc37-de4649806460",
+      "name": "Biomerge Arm",
+      "startingTier": "Gold",
+      "tiers": {
+        "Bronze": {
+          "tooltips": []
+        },
+        "Silver": {
+          "tooltips": []
+        },
+        "Gold": {
+          "tooltips": [
+            "When an item runs out of Ammo, Deal 100 damage.",
+            "The item to the left of this has +100% Crit Chance and +1 Max Ammo.",
+            "The item to the left is an Ammo item."
+          ]
+        },
+        "Diamond": {
+          "tooltips": [
+            "When an item runs out of Ammo, Deal 200 damage.",
+            "The item to the left of this has +100% Crit Chance and +1 Max Ammo.",
+            "The item to the left is an Ammo item."
+          ]
+        },
+        "Legendary": {
+          "tooltips": []
+        }
+      },
+      "tags": [
+        "Weapon",
+        "Tool"
+      ],
+      "hiddenTags": [
+        "Damage",
+        "Crit",
+        "Ammo"
+      ],
+      "customTags": [],
+      "size": "Medium",
+      "heroes": [
+        "Common"
+      ],
+      "enchantments": [
+        {
+          "type": "Heavy",
+          "tooltips": [
+            "When an item runs out of Ammo, Slow 1 item for 1 second(s)."
+          ]
+        },
+        {
+          "type": "Icy",
+          "tooltips": [
+            "When an item runs out of Ammo, Freeze 1 item for 0.5 second(s)."
+          ]
+        },
+        {
+          "type": "Turbo",
+          "tooltips": [
+            "When an item runs out of Ammo, Haste 1 item for 1 second(s)."
+          ]
+        },
+        {
+          "type": "Shielded",
+          "tooltips": [
+            "When an item runs out of Ammo, Shield equal to this item's damage."
+          ]
+        },
+        {
+          "type": "Restorative",
+          "tooltips": [
+            "When an item runs out of Ammo, Heal equal to this item's Damage."
+          ]
+        },
+        {
+          "type": "Toxic",
+          "tooltips": [
+            "When an item runs out of Ammo, Poison equal to 10% of this item's damage."
+          ]
+        },
+        {
+          "type": "Fiery",
+          "tooltips": [
+            "When an item runs out of Ammo, Burn equal to 10% of this item's damage."
+          ]
+        },
+        {
+          "type": "Shiny",
+          "tooltips": [
+            "This has double damage."
+          ]
+        },
+        {
+          "type": "Deadly",
+          "tooltips": [
+            "The item to the right of this has +50% Crit Chance."
+          ]
+        },
+        {
+          "type": "Radiant",
+          "tooltips": [
+            "This cannot be Frozen, Slowed or Destroyed."
+          ]
+        },
+        {
+          "type": "Obsidian",
+          "tooltips": [
+            "This has double Damage."
+          ]
+        }
+      ],
+      "quests": [],
+      "unifiedTooltips": [
+        "When an item runs out of Ammo, Deal (100/200) damage.",
+        "The item to the left of this has +100% Crit Chance and +1 Max Ammo.",
+        "The item to the left is an Ammo item."
+      ],
+      "packId": "Core",
+      "combatEncounters": [
+        {
+          "cardId": "3e80e4e9-13e6-441c-b770-a82a0297ad47",
+          "cardName": "Terrorform"
         }
       ]
     },
@@ -5878,6 +5938,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Freeze (1/2/3) item(s) for 1 second(s).",
@@ -6002,6 +6063,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Multicast 2",
@@ -6131,6 +6193,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Gain 4 Regen for the fight.",
@@ -6260,6 +6323,68 @@
           ]
         }
       ],
+      "quests": [
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Poison 50 times"
+              ],
+              "rewardTooltips": [
+                "Poison (5/10/15/20)."
+              ]
+            }
+          ]
+        },
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Gain Regen 40 times"
+              ],
+              "rewardTooltips": [
+                "Gain (5/10/15/20) Regen for the fight."
+              ]
+            }
+          ]
+        },
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Burn 30 times"
+              ],
+              "rewardTooltips": [
+                "Burn (5/10/15/20)."
+              ]
+            }
+          ]
+        },
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Slow 20 times"
+              ],
+              "rewardTooltips": [
+                "Slow (1/2/3/4) items for 1 second(s)."
+              ]
+            }
+          ]
+        },
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Freeze 10 times"
+              ],
+              "rewardTooltips": [
+                "Freeze (1/2/3/4) items for 0.5 second(s)."
+              ]
+            }
+          ]
+        }
+      ],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "When you use another Relic, charge this 1 second(s)."
@@ -6385,6 +6510,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 20 seconds",
         "Shield (100/200/300/400).",
@@ -6501,6 +6627,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Burn 10.",
@@ -6624,6 +6751,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Slow (1/2/3) item(s) for 1 second(s).",
@@ -6744,6 +6872,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Burn (2/4/6/8)."
@@ -6861,6 +6990,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (9/7) seconds",
         "Deal 2 damage.",
@@ -6982,6 +7112,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Freeze (1/2/3) item(s) for 0.5 second(s).",
@@ -7086,6 +7217,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, your items gain (+1%/+2%/+3%/+4%) Crit Chance."
       ],
@@ -7206,6 +7338,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Adjacent items gain (2%/4%/6%/8%) Crit Chance for the fight."
@@ -7327,6 +7460,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "The item to the left of this gains (4%/8%/12%/16%) Crit Chance for the fight."
@@ -7457,6 +7591,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "The item to the right of this gains (4%/8%/12%/16%) Crit Chance for the fight."
@@ -7578,6 +7713,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Your items gain (+1%/+2%/+3%/+4%) Crit Chance for the fight."
@@ -7707,6 +7843,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Heal (10/20/40/80).",
@@ -7832,6 +7969,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Ammo 6",
@@ -7950,6 +8088,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (10/9) seconds",
         "Reload adjacent Potions.",
@@ -8080,6 +8219,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Ammo 2",
@@ -8211,6 +8351,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (10/8/6/4) seconds",
         "Burn 6.",
@@ -8340,6 +8481,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Freeze 1 item(s) for (1/2/3) second(s).",
@@ -8454,6 +8596,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Deal (20/30/40/50) damage.",
@@ -8572,6 +8715,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Every 50 you spend, upgrade an item of a lower tier."
       ],
@@ -8695,6 +8839,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Ammo 1",
@@ -8831,6 +8976,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Ammo 1",
@@ -8840,6 +8986,10 @@
       ],
       "packId": "Mak_Core",
       "combatEncounters": [
+        {
+          "cardId": "3e80e4e9-13e6-441c-b770-a82a0297ad47",
+          "cardName": "Terrorform"
+        },
         {
           "cardId": "492c7f84-3cb2-40bb-8a55-29355143bee2",
           "cardName": "Hulking Experiment"
@@ -8954,6 +9104,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Ammo 1",
@@ -8962,6 +9113,142 @@
       ],
       "packId": "Mak_Core",
       "combatEncounters": []
+    },
+    {
+      "id": "66132d49-d270-49b9-899f-f5be8017b989",
+      "name": "Box Cutter",
+      "startingTier": "Bronze",
+      "tiers": {
+        "Bronze": {
+          "tooltips": [
+            "Cooldown 3 seconds",
+            "Deal 10 damage.",
+            "Permanently decrease this item's damage by 1.",
+            "When you Level Up, this gains 10 damage."
+          ]
+        },
+        "Silver": {
+          "tooltips": [
+            "Cooldown 3 seconds",
+            "Deal 10 damage.",
+            "Permanently decrease this item's damage by 1.",
+            "When you Level Up, this gains 20 damage."
+          ]
+        },
+        "Gold": {
+          "tooltips": [
+            "Cooldown 3 seconds",
+            "Deal 10 damage.",
+            "Permanently decrease this item's damage by 1.",
+            "When you Level Up, this gains 30 damage."
+          ]
+        },
+        "Diamond": {
+          "tooltips": [
+            "Cooldown 3 seconds",
+            "Deal 10 damage.",
+            "Permanently decrease this item's damage by 1.",
+            "When you Level Up, this gains 40 damage."
+          ]
+        },
+        "Legendary": {
+          "tooltips": []
+        }
+      },
+      "tags": [
+        "Weapon",
+        "Tool"
+      ],
+      "hiddenTags": [
+        "Damage"
+      ],
+      "customTags": [],
+      "size": "Small",
+      "heroes": [
+        "Stelle"
+      ],
+      "enchantments": [
+        {
+          "type": "Heavy",
+          "tooltips": [
+            "Slow 1 item for 1 second(s)."
+          ]
+        },
+        {
+          "type": "Icy",
+          "tooltips": [
+            "Freeze 1 small item for 0.5 second(s)."
+          ]
+        },
+        {
+          "type": "Turbo",
+          "tooltips": [
+            "Haste 1 item for 1 second(s)."
+          ]
+        },
+        {
+          "type": "Shielded",
+          "tooltips": [
+            "Shield equal to this item's damage."
+          ]
+        },
+        {
+          "type": "Restorative",
+          "tooltips": [
+            "Heal equal to this item's Damage."
+          ]
+        },
+        {
+          "type": "Toxic",
+          "tooltips": [
+            "Poison equal to 10% of this item's damage."
+          ]
+        },
+        {
+          "type": "Fiery",
+          "tooltips": [
+            "Burn equal to 10% of this item's damage."
+          ]
+        },
+        {
+          "type": "Shiny",
+          "tooltips": [
+            "This has +1 Multicast."
+          ]
+        },
+        {
+          "type": "Deadly",
+          "tooltips": [
+            "+50% Crit Chance"
+          ]
+        },
+        {
+          "type": "Radiant",
+          "tooltips": [
+            "This cannot be Frozen, Slowed or Destroyed."
+          ]
+        },
+        {
+          "type": "Obsidian",
+          "tooltips": [
+            "This has double Damage."
+          ]
+        }
+      ],
+      "quests": [],
+      "unifiedTooltips": [
+        "Cooldown 3 seconds",
+        "Deal 10 damage.",
+        "Permanently decrease this item's damage by 1.",
+        "When you Level Up, this gains (10/20/30/40) damage."
+      ],
+      "packId": "Stelle_Core",
+      "combatEncounters": [
+        {
+          "cardId": "20863550-960f-4713-99eb-2ff2e4cfb3ef",
+          "cardName": "Morguloth"
+        }
+      ]
     },
     {
       "id": "3b924a0a-f423-4286-8d08-9ade57b2ebae",
@@ -9079,6 +9366,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Deal (8/16/24/32) damage.",
@@ -9213,6 +9501,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Shield 20.",
@@ -9344,6 +9633,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Deal (20/40/60/80) damage.",
@@ -9465,6 +9755,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Your weapons gain (4/8/12) damage for the fight.",
@@ -9475,6 +9766,10 @@
         {
           "cardId": "0f0b2074-06d7-4aea-a5aa-9e603602215a",
           "cardName": "Bounty Hunter"
+        },
+        {
+          "cardId": "41c5f103-2d76-4a51-ae28-ee294490b071",
+          "cardName": "Ventriloquist"
         },
         {
           "cardId": "78139f32-94b1-4dc6-9ef0-374c3c8863a7",
@@ -9582,6 +9877,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "You take (10%/20%) less damage.",
         "Your Shield items have +1 Multicast."
@@ -9711,6 +10007,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Heal (20/40/60/80).",
@@ -9782,6 +10079,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you visit a Merchant, this gains (1/2/3) value.",
         "For every 5 Merchants you visit, upgrade this."
@@ -9901,6 +10199,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal (10/20/30) damage."
@@ -10029,6 +10328,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Haste 1 item(s) for (1/2/3/4) second(s).",
@@ -10149,6 +10449,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Multicast (2/3/4)",
@@ -10159,6 +10460,10 @@
         {
           "cardId": "338f3c4b-9238-41d2-a0e0-0d825cded307",
           "cardName": "Elite Duelist"
+        },
+        {
+          "cardId": "41c5f103-2d76-4a51-ae28-ee294490b071",
+          "cardName": "Ventriloquist"
         }
       ]
     },
@@ -10282,6 +10587,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Burn 6.",
@@ -10413,6 +10719,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal (10/20/30/40) damage.",
@@ -10520,6 +10827,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When your enemy uses an item, deal (1/10) damage."
       ],
@@ -10645,6 +10953,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Burn (8/12/16/20).",
@@ -10709,6 +11018,7 @@
         "Common"
       ],
       "enchantments": [],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Ammo 10",
@@ -10840,6 +11150,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Ammo 2",
@@ -10961,6 +11272,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal (100/200/300) Damage.",
@@ -11069,6 +11381,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Adjacent items have (+1/+2/+3/+4) Max Ammo."
       ],
@@ -11193,6 +11506,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (7/6/5) seconds",
         "Charge adjacent items 1 second(s)."
@@ -11319,6 +11633,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Haste 1 Vehicle for (2/3/4) second(s). Charge 1 Tool (1/2/3) second(s).",
@@ -11441,6 +11756,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Haste adjacent items for (1/2/3) second(s).",
@@ -11566,6 +11882,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "A Friend gains +1 Multicast for the fight.",
@@ -11695,6 +12012,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Heal (10/15/20/25) for each type this has.",
@@ -11828,6 +12146,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal (50/100/200) damage.",
@@ -11895,6 +12214,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "At the start of each day, get 2 Spare Change."
       ],
@@ -11930,7 +12250,9 @@
           "tooltips": []
         }
       },
-      "tags": [],
+      "tags": [
+        "Loot"
+      ],
       "hiddenTags": [],
       "customTags": [
         "Unpurchasable"
@@ -11940,6 +12262,7 @@
         "Common"
       ],
       "enchantments": [],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, transform your leftmost Small item."
       ],
@@ -12069,6 +12392,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Poison 3.",
@@ -12206,6 +12530,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Burn (1/2/3) for each type this has.",
@@ -12336,6 +12661,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Reload an item.",
@@ -12456,6 +12782,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Burn (2/3/4).",
@@ -12568,6 +12895,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you use the item to the left of this, charge the item to the right of this for (1/2) second(s).",
         "When you use the Core, it gains (+20/+40) damage for the fight."
@@ -12692,6 +13020,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Poison (4/8/12/16).",
@@ -12804,6 +13133,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "At the start of each day, this gains +4 value.",
         "When you sell this, get an enchanted Friend from any hero.",
@@ -12908,6 +13238,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, permanently gain (10/20/30/40) Max Health."
       ],
@@ -13034,6 +13365,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (6/5/4/3) seconds",
         "Deal 15 damage.",
@@ -13041,6 +13373,10 @@
       ],
       "packId": "Dooley_Core",
       "combatEncounters": [
+        {
+          "cardId": "20863550-960f-4713-99eb-2ff2e4cfb3ef",
+          "cardName": "Morguloth"
+        },
         {
           "cardId": "a2baf3bc-6164-4a16-ab41-48b450f694d1",
           "cardName": "Foreman"
@@ -13160,6 +13496,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Shield (75/100).",
@@ -13284,6 +13621,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Your Aquatic items gain (+4%/+6%/+8%/+10%) Crit Chance for the fight.",
@@ -13393,6 +13731,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Sells for gold."
       ],
@@ -13503,6 +13842,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When this is transformed outside of combat, gain a Chunk of Gold."
       ],
@@ -13538,7 +13878,9 @@
           "tooltips": []
         }
       },
-      "tags": [],
+      "tags": [
+        "Loot"
+      ],
       "hiddenTags": [
         "BurnReference"
       ],
@@ -13603,6 +13945,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, your leftmost Burn item gains (+1/+2/+3/+4) Burn."
       ],
@@ -13734,6 +14077,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, permanently gain (1/2/3/4) Regen."
       ],
@@ -13861,6 +14205,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (7/6/5/4) seconds",
         "Slow 1 item for 3 second(s).",
@@ -13992,6 +14337,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Deal 20 damage.",
@@ -14113,6 +14459,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal 20 damage.",
@@ -14237,6 +14584,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Deal (10/20/30/40) Damage.",
@@ -14251,6 +14599,137 @@
         {
           "cardId": "78139f32-94b1-4dc6-9ef0-374c3c8863a7",
           "cardName": "Dire Inglet"
+        }
+      ]
+    },
+    {
+      "id": "f4bef5b2-773b-44bf-84a0-67ae325604f7",
+      "name": "Cleaver",
+      "startingTier": "Bronze",
+      "tiers": {
+        "Bronze": {
+          "tooltips": [
+            "Cooldown 6 seconds",
+            "Deal 5 damage.",
+            "At the start of each fight, this permanently gains 5 damage."
+          ]
+        },
+        "Silver": {
+          "tooltips": [
+            "Cooldown 6 seconds",
+            "Deal 15 damage.",
+            "At the start of each fight, this permanently gains 10 damage."
+          ]
+        },
+        "Gold": {
+          "tooltips": [
+            "Cooldown 6 seconds",
+            "Deal 30 damage.",
+            "At the start of each fight, this permanently gains 15 damage."
+          ]
+        },
+        "Diamond": {
+          "tooltips": [
+            "Cooldown 6 seconds",
+            "Deal 50 damage.",
+            "At the start of each fight, this permanently gains 20 damage."
+          ]
+        },
+        "Legendary": {
+          "tooltips": []
+        }
+      },
+      "tags": [
+        "Weapon",
+        "Tool"
+      ],
+      "hiddenTags": [
+        "Damage"
+      ],
+      "customTags": [],
+      "size": "Small",
+      "heroes": [
+        "Jules"
+      ],
+      "enchantments": [
+        {
+          "type": "Heavy",
+          "tooltips": [
+            "Slow 1 item for 3 second(s)."
+          ]
+        },
+        {
+          "type": "Icy",
+          "tooltips": [
+            "Freeze 1 item for 0.5 second(s)."
+          ]
+        },
+        {
+          "type": "Turbo",
+          "tooltips": [
+            "Haste 1 item for 3 second(s)."
+          ]
+        },
+        {
+          "type": "Shielded",
+          "tooltips": [
+            "Shield equal to this item's damage."
+          ]
+        },
+        {
+          "type": "Restorative",
+          "tooltips": [
+            "Heal equal to this item's Damage."
+          ]
+        },
+        {
+          "type": "Toxic",
+          "tooltips": [
+            "Poison equal to 10% of this item's damage."
+          ]
+        },
+        {
+          "type": "Fiery",
+          "tooltips": [
+            "Burn equal to 10% of this item's damage."
+          ]
+        },
+        {
+          "type": "Shiny",
+          "tooltips": [
+            "This has +1 Multicast."
+          ]
+        },
+        {
+          "type": "Deadly",
+          "tooltips": [
+            "+50% Crit Chance"
+          ]
+        },
+        {
+          "type": "Radiant",
+          "tooltips": [
+            "This cannot be Frozen, Slowed or Destroyed."
+          ]
+        },
+        {
+          "type": "Obsidian",
+          "tooltips": [
+            "This has double Damage."
+          ]
+        }
+      ],
+      "quests": [],
+      "unifiedTooltips": [
+        "Cooldown 6 seconds",
+        "Deal (5/15/30/50) damage.",
+        "At the start of each fight, this permanently gains (5/10/15/20) damage."
+      ],
+      "packId": "Jules_Core",
+      "combatEncounters": [
+        {
+          "cardId": "20863550-960f-4713-99eb-2ff2e4cfb3ef",
+          "cardName": "Morguloth"
         }
       ]
     },
@@ -14371,6 +14850,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal (20/40/80/160) damage.",
@@ -14385,6 +14865,10 @@
         {
           "cardId": "dbc00a8b-7fae-4792-a9da-698d3cd4f578",
           "cardName": "Gorgon Noble"
+        },
+        {
+          "cardId": "fc59e9b3-88be-450c-b2dc-65d58a33d1d0",
+          "cardName": "Lord of the Wastes"
         }
       ]
     },
@@ -14455,6 +14939,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "You have Regen equal to (50%/100%) of the value of adjacent properties."
       ],
@@ -14557,6 +15042,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, permanently gain (10/20/30/40) Max Health."
       ],
@@ -14681,6 +15167,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Haste 1 adjacent item for (1/2/3) second(s)."
@@ -14821,6 +15308,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Gain Regen for the fight equal to (1/2/3) times this item's value.",
@@ -14946,6 +15434,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 12 seconds",
         "Freeze (1/2/3) item(s) for 1 second(s).",
@@ -15074,6 +15563,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal (50/100/200) damage.",
@@ -15205,6 +15695,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal 30 damage.",
@@ -15332,6 +15823,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (6/5/4) seconds",
         "Haste adjacent items (2/3/4) second(s).",
@@ -15459,6 +15951,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal (30/40/50) damage.",
@@ -15582,6 +16075,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Slow 1 item(s) for (2/3/4) second(s).",
@@ -15694,6 +16188,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Freeze (1/2/3) item(s) for 1 second(s).",
@@ -15820,6 +16315,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "The Core gains (+5%/+10%/+15%) Crit Chance for the fight.",
@@ -15945,6 +16441,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (6/5/4/3) seconds",
         "Poison 3.",
@@ -16075,6 +16572,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Heal 20.",
@@ -16201,6 +16699,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Shield 50.",
@@ -16321,6 +16820,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Shield (50/100).",
@@ -16450,6 +16950,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Your Shield items gain (+10/+20/+30) Shield and your Weapons (+10/+20/+30) damage for the fight.",
@@ -16460,6 +16961,10 @@
         {
           "cardId": "723f8e17-6885-45b4-b38f-186abb3277c8",
           "cardName": "Cosmic Roc"
+        },
+        {
+          "cardId": "a5103989-fb08-4ac6-a5e8-6a610e0b1d46",
+          "cardName": "Qomatz"
         }
       ]
     },
@@ -16588,6 +17093,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Shield equal to (1x/2x/3x/4x) this item's value.",
@@ -16709,6 +17215,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Deal (60/80/100) damage.",
@@ -16829,6 +17336,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 11 seconds",
         "Deal (100/200) damage.",
@@ -16966,6 +17474,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (7/6/5) seconds",
         "Deal 50 damage.",
@@ -17093,6 +17602,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 13 seconds",
         "Ammo 1",
@@ -17216,6 +17726,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal 16 damage.",
@@ -17336,6 +17847,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Your weapons have (+20%/+40%/+60%/+80%) Crit Chance.",
         "If you have exactly one weapon, that Weapon has lifesteal."
@@ -17471,6 +17983,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (6/5/4/3) seconds",
         "Charge 1 Tech item 1 second.",
@@ -17597,6 +18110,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal damage equal to the highest Shield of items you have.",
@@ -17720,6 +18234,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Freeze this and adjacent items for 1 second(s).",
@@ -17834,6 +18349,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Freeze both players' non-Core items for (2/3) second(s)."
@@ -17900,6 +18416,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "At the start of each hour, set this item's value to a number between 0 and (5/10/20/40)."
       ],
@@ -18038,6 +18555,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Heal equal to (2/3/4) times this item's value.",
@@ -18160,6 +18678,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Burn (4/6/8).",
@@ -18278,6 +18797,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "The weapon to the right of this has (+15%/+20%/+25%) Crit Chance.",
         "If you have exactly one weapon, when you Crit with it charge a non-weapon item 1 second(s)."
@@ -18406,6 +18926,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Multicast 2",
@@ -18541,6 +19062,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (10/9/8) seconds",
         "Deal 30 damage.",
@@ -18662,6 +19184,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 25 seconds",
         "Destroy this and all smaller items for the fight.",
@@ -18775,6 +19298,20 @@
           "type": "Obsidian",
           "tooltips": [
             "This has double Damage."
+          ]
+        }
+      ],
+      "quests": [
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "A Weapon is used 50 times"
+              ],
+              "rewardTooltips": [
+                "This enchants a second item."
+              ]
+            }
           ]
         }
       ],
@@ -18895,6 +19432,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Lifesteal",
@@ -19019,6 +19557,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Burn (10/20/30).",
@@ -19142,6 +19681,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Poison 2.",
@@ -19269,6 +19809,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Haste adjacent items for (1/2/3) second(s).",
@@ -19394,6 +19935,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal 80 damage.",
@@ -19520,6 +20062,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Shield (10/20/30).",
@@ -19640,6 +20183,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Shield (30/60).",
@@ -19770,6 +20314,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Deal (10/20/30/40) damage.",
@@ -19875,17 +20420,13 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you buy this, get a non-Vanessa item.",
         "Your items from other Heroes have (+15%/+30%/+50%) Crit Chance."
       ],
       "packId": "Vanessa_Core",
-      "combatEncounters": [
-        {
-          "cardId": "21a485af-8811-4d38-bccb-be03a2dcca7f",
-          "cardName": "Ferros Khan"
-        }
-      ]
+      "combatEncounters": []
     },
     {
       "id": "027ef534-d047-4e18-8496-d9fd4773e15d",
@@ -20004,6 +20545,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Haste your tools for (1/2/3/4) second(s).",
@@ -20139,6 +20681,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Ammo 4",
@@ -20266,6 +20809,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Shield 25.",
@@ -20390,6 +20934,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (10/9/8) seconds",
         "Haste your Friends for 2 second(s).",
@@ -20509,12 +21054,17 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Slow (2/3/4) item(s) for 3 second(s)."
       ],
       "packId": "Vanessa_Core",
       "combatEncounters": [
+        {
+          "cardId": "21a485af-8811-4d38-bccb-be03a2dcca7f",
+          "cardName": "Ferros Khan"
+        },
         {
           "cardId": "608eb88e-c6d8-41c3-ac88-c20aeb185664",
           "cardName": "Radiant Corsair"
@@ -20644,6 +21194,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal (10/20/40/80) Damage",
@@ -20770,6 +21321,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Shield (75/100/125).",
@@ -20896,6 +21448,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 30 seconds",
         "Deal (1000/2000) damage.",
@@ -21007,6 +21560,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you use a friend, charge the Core (1/2) second(s) and Haste a Large item (1/2) second(s).",
         "Your Dooltron has the Core type."
@@ -21135,6 +21689,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Ammo 2",
@@ -21257,6 +21812,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 12 seconds",
         "Multicast 2",
@@ -21372,6 +21928,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 11 seconds",
         "Double the Burn of an item for the fight.",
@@ -21503,6 +22060,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Deal (10/20) damage.",
@@ -21628,6 +22186,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (10/9/8) seconds",
         "Deal 1 damage.",
@@ -21757,6 +22316,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Shield (40/60/80).",
@@ -21888,6 +22448,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Ammo 1",
@@ -21937,9 +22498,7 @@
         "Shield",
         "Slow"
       ],
-      "customTags": [
-        "Unpurchasable"
-      ],
+      "customTags": [],
       "size": "Small",
       "heroes": [
         "Dooley"
@@ -22006,6 +22565,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Slow 1 item(s) for (1/2/3) second(s).",
@@ -22048,7 +22608,9 @@
           "tooltips": []
         }
       },
-      "tags": [],
+      "tags": [
+        "Loot"
+      ],
       "hiddenTags": [
         "Crit"
       ],
@@ -22113,6 +22675,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, your leftmost item gains (5%/10%/15%/20%) Crit Chance."
       ],
@@ -22121,6 +22684,10 @@
         {
           "cardId": "38936647-a688-49d1-8e5c-9c2c79f18a18",
           "cardName": "Hoverbike Hooligan"
+        },
+        {
+          "cardId": "41c5f103-2d76-4a51-ae28-ee294490b071",
+          "cardName": "Ventriloquist"
         },
         {
           "cardId": "4a4542cd-91d8-4463-84fc-c111fc7535ee",
@@ -22255,6 +22822,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Gain (50/75/100) Max Health for the fight.",
@@ -22376,6 +22944,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Poison (1/2/3).",
@@ -22386,6 +22955,10 @@
         {
           "cardId": "1e1f7b6d-746b-44d5-9906-fff137c75ef1",
           "cardName": "Trash Titan"
+        },
+        {
+          "cardId": "4ce6d441-4aed-455b-b83f-0b057b462515",
+          "cardName": "Mythkeeper"
         },
         {
           "cardId": "69af3106-78fd-4a74-b150-ec41442cdbba",
@@ -22519,6 +23092,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (8/7/6) seconds",
         "Deal 50 Damage.",
@@ -22656,6 +23230,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (12/10/8) seconds",
         "Ammo 1",
@@ -22663,7 +23238,12 @@
         "This has +1 Multicast for each other Aquatic item you have."
       ],
       "packId": "Vanessa_Mysteries_of_the_Deep",
-      "combatEncounters": []
+      "combatEncounters": [
+        {
+          "cardId": "3e80e4e9-13e6-441c-b770-a82a0297ad47",
+          "cardName": "Terrorform"
+        }
+      ]
     },
     {
       "id": "c553a41a-1e8a-48c5-8b04-df60451b7795",
@@ -22781,6 +23361,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Poison (1/2/3/4).",
@@ -22795,6 +23376,10 @@
         {
           "cardId": "69af3106-78fd-4a74-b150-ec41442cdbba",
           "cardName": "Lich"
+        },
+        {
+          "cardId": "d1dc075f-f5d4-4bb7-9655-55591e123941",
+          "cardName": "Greenheart Guardian"
         },
         {
           "cardId": "fc3dee8e-aef5-41c9-95a8-d91ad54adede",
@@ -22909,6 +23494,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Ammo 1",
@@ -22927,6 +23513,10 @@
         {
           "cardId": "4a4542cd-91d8-4463-84fc-c111fc7535ee",
           "cardName": "Boilerroom Brawler"
+        },
+        {
+          "cardId": "fc59e9b3-88be-450c-b2dc-65d58a33d1d0",
+          "cardName": "Lord of the Wastes"
         }
       ]
     },
@@ -22986,6 +23576,7 @@
         "Common"
       ],
       "enchantments": [],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Ammo 10",
@@ -23108,12 +23699,154 @@
           ]
         }
       ],
+      "quests": [
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Buy 6 Burn items"
+              ],
+              "rewardTooltips": [
+                "When you Burn, this gains (2/4/6/8) Burn for the fight."
+              ]
+            }
+          ]
+        },
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Have 75+ Burn on this item."
+              ],
+              "rewardTooltips": [
+                "This has +1 Multicast."
+              ]
+            }
+          ]
+        }
+      ],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Burn (2/4/6/8)."
       ],
       "packId": "Mak_Lost_Treasures",
       "combatEncounters": []
+    },
+    {
+      "id": "41581a59-fd9b-42c6-a97e-9b5587b9cbdf",
+      "name": "Ethergy Conduit",
+      "startingTier": "Gold",
+      "tiers": {
+        "Bronze": {
+          "tooltips": []
+        },
+        "Silver": {
+          "tooltips": []
+        },
+        "Gold": {
+          "tooltips": [
+            "When you Poison or use a Relic, your items gain +2% crit chance for the fight.",
+            "When you Crit, Charge your Relics 1 second."
+          ]
+        },
+        "Diamond": {
+          "tooltips": [
+            "When you Poison or use a Relic, your items gain +4% crit chance for the fight.",
+            "When you Crit, Charge your Relics 1 second."
+          ]
+        },
+        "Legendary": {
+          "tooltips": []
+        }
+      },
+      "tags": [
+        "Relic"
+      ],
+      "hiddenTags": [
+        "Crit",
+        "Charge",
+        "PoisonReference"
+      ],
+      "customTags": [],
+      "size": "Large",
+      "heroes": [
+        "Common"
+      ],
+      "enchantments": [
+        {
+          "type": "Heavy",
+          "tooltips": [
+            "When you Crit, Slow 1 item for 3 second(s)."
+          ]
+        },
+        {
+          "type": "Icy",
+          "tooltips": [
+            "When you Crit, Freeze 1 item for 1 second(s)."
+          ]
+        },
+        {
+          "type": "Turbo",
+          "tooltips": [
+            "When you Crit, Haste 1 item for 3 second(s)."
+          ]
+        },
+        {
+          "type": "Shielded",
+          "tooltips": [
+            "When you Crit, Shield 75."
+          ]
+        },
+        {
+          "type": "Restorative",
+          "tooltips": [
+            "When you Crit, Heal 50."
+          ]
+        },
+        {
+          "type": "Toxic",
+          "tooltips": [
+            "When you Crit, poison 3."
+          ]
+        },
+        {
+          "type": "Fiery",
+          "tooltips": [
+            "When you Crit, burn 3."
+          ]
+        },
+        {
+          "type": "Shiny",
+          "tooltips": [
+            "This has double Crit Chance bonus.",
+            "This has double Charge amount."
+          ]
+        },
+        {
+          "type": "Deadly",
+          "tooltips": [
+            "This has double Crit Chance bonus."
+          ]
+        },
+        {
+          "type": "Obsidian",
+          "tooltips": [
+            "When you Crit, Deal 50 Damage."
+          ]
+        }
+      ],
+      "quests": [],
+      "unifiedTooltips": [
+        "When you Poison or use a Relic, your items gain (+2%/+4%) crit chance for the fight.",
+        "When you Crit, Charge your Relics 1 second."
+      ],
+      "packId": "Core",
+      "combatEncounters": [
+        {
+          "cardId": "a5103989-fb08-4ac6-a5e8-6a610e0b1d46",
+          "cardName": "Qomatz"
+        }
+      ]
     },
     {
       "id": "3f4a5b6c-7d8e-9f0a-1b2c-3d4e5f6a7b8c",
@@ -23227,6 +23960,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Charge an adjacent Relic (1/2/3) second(s).",
@@ -23294,6 +24028,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Adjacent Weapons have (+5/+10/+20/+40) damage.",
         "When you sell this, your weapons gain (2/4/6/8) damage."
@@ -23330,7 +24065,9 @@
           "tooltips": []
         }
       },
-      "tags": [],
+      "tags": [
+        "Loot"
+      ],
       "hiddenTags": [
         "PoisonReference"
       ],
@@ -23395,6 +24132,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, your leftmost Poison item gains (+1/+2/+3/+4) Poison."
       ],
@@ -23407,10 +24145,6 @@
         {
           "cardId": "25a7a800-1c64-4728-a4fe-eb5a3f3394a0",
           "cardName": "Joyful Jack"
-        },
-        {
-          "cardId": "962bf2b2-fc1b-4ad3-9526-15d76d3bb0de",
-          "cardName": "Foundation Weeper"
         },
         {
           "cardId": "b79845a7-f806-4e7a-9011-d98ebd22a323",
@@ -23518,6 +24252,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 11 seconds",
         "Destroy an enemy item for the fight.",
@@ -23643,6 +24378,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 3 seconds",
         "Deal (5/10/15/20) damage."
@@ -23672,6 +24408,10 @@
         {
           "cardId": "bb1e3506-3735-4669-be90-915a55a7ee05",
           "cardName": "Fanged Inglet"
+        },
+        {
+          "cardId": "d1dc075f-f5d4-4bb7-9655-55591e123941",
+          "cardName": "Greenheart Guardian"
         }
       ]
     },
@@ -23702,7 +24442,9 @@
           "tooltips": []
         }
       },
-      "tags": [],
+      "tags": [
+        "Loot"
+      ],
       "hiddenTags": [
         "Cooldown"
       ],
@@ -23767,6 +24509,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, reduce your items' cooldowns by (2%/4%/6%)."
       ],
@@ -23876,6 +24619,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you use your leftmost item, charge your rightmost item (1/2) second(s)."
       ],
@@ -23987,6 +24731,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Aquatic items to the left of this have their cooldowns reduced by (10%/15%/20%).",
         "Weapons to the right of this have (+25/+50/+100) damage."
@@ -24106,6 +24851,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Burn (6/9/12).",
@@ -24244,6 +24990,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Ammo 1",
@@ -24378,6 +25125,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Burn (3/4/5/6).",
@@ -24503,6 +25251,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Heal (20/30/40/50).",
@@ -24637,6 +25386,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Slow (1/2/3/4) item(s) for 3 second(s).",
@@ -24762,6 +25512,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Haste the Aquatic item to the right of this for 2 second(s).",
@@ -24892,6 +25643,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Shield equal to (1/2/3/4) times this item's value.",
@@ -25015,6 +25767,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal (50/75/100) damage.",
@@ -25144,6 +25897,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Multicast 3",
@@ -25258,18 +26012,14 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal 200 damage.",
         "This deals quadruple crit damage."
       ],
       "packId": "Core",
-      "combatEncounters": [
-        {
-          "cardId": "fc59e9b3-88be-450c-b2dc-65d58a33d1d0",
-          "cardName": "Lord of the Wastes"
-        }
-      ]
+      "combatEncounters": []
     },
     {
       "id": "8b74306e-c49c-4d0e-8329-b0267e7c6f1c",
@@ -25376,6 +26126,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Burn 5 for each Burn item you have.",
@@ -25499,6 +26250,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (10/8/6) seconds",
         "Deal 2 damage.",
@@ -25617,6 +26369,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Ammo 1",
@@ -25748,6 +26501,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Burn (2/4/6/8) for each Relic or Tool you have.",
@@ -25872,6 +26626,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal (20/40/60) damage.",
@@ -26000,6 +26755,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Shield (30/40/50).",
@@ -26126,13 +26882,19 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Poison 4.",
         "When an adjacent item slows, this gains (4/8/12) Poison for the fight."
       ],
       "packId": "Core",
-      "combatEncounters": []
+      "combatEncounters": [
+        {
+          "cardId": "4ce6d441-4aed-455b-b83f-0b057b462515",
+          "cardName": "Mythkeeper"
+        }
+      ]
     },
     {
       "id": "74d0780a-4d98-478e-b136-f1810bc88346",
@@ -26257,6 +27019,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Deal 50 damage.",
@@ -26381,6 +27144,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Shield (100/150).",
@@ -26389,6 +27153,134 @@
       ],
       "packId": "Pygmalien_Core",
       "combatEncounters": []
+    },
+    {
+      "id": "e2a09e24-d454-450f-a39a-23f505ee32fa",
+      "name": "Friendly Doll",
+      "startingTier": "Silver",
+      "tiers": {
+        "Bronze": {
+          "tooltips": []
+        },
+        "Silver": {
+          "tooltips": [
+            "Cooldown 3 seconds",
+            "Deal 5 damage.",
+            "If this is your only friend, it has +50% Crit Chance."
+          ]
+        },
+        "Gold": {
+          "tooltips": [
+            "Cooldown 3 seconds",
+            "Deal 15 damage.",
+            "If this is your only friend, it has +75% Crit Chance."
+          ]
+        },
+        "Diamond": {
+          "tooltips": [
+            "Cooldown 3 seconds",
+            "Deal 25 damage.",
+            "If this is your only friend, it has +100% Crit Chance."
+          ]
+        },
+        "Legendary": {
+          "tooltips": []
+        }
+      },
+      "tags": [
+        "Weapon",
+        "Friend",
+        "Toy"
+      ],
+      "hiddenTags": [
+        "Damage"
+      ],
+      "customTags": [],
+      "size": "Small",
+      "heroes": [
+        "Common"
+      ],
+      "enchantments": [
+        {
+          "type": "Heavy",
+          "tooltips": [
+            "Slow 1 item for 1 second(s)."
+          ]
+        },
+        {
+          "type": "Icy",
+          "tooltips": [
+            "Freeze 1 small item for 1 second(s)."
+          ]
+        },
+        {
+          "type": "Turbo",
+          "tooltips": [
+            "Haste 1 item for 1 second(s)."
+          ]
+        },
+        {
+          "type": "Shielded",
+          "tooltips": [
+            "Shield equal to this item's damage."
+          ]
+        },
+        {
+          "type": "Restorative",
+          "tooltips": [
+            "Heal equal to this item's Damage."
+          ]
+        },
+        {
+          "type": "Toxic",
+          "tooltips": [
+            "Poison equal to 10% of this item's damage."
+          ]
+        },
+        {
+          "type": "Fiery",
+          "tooltips": [
+            "Burn equal to 10% of this item's damage."
+          ]
+        },
+        {
+          "type": "Shiny",
+          "tooltips": [
+            "This has +1 Multicast."
+          ]
+        },
+        {
+          "type": "Deadly",
+          "tooltips": [
+            "This has double Crit Chance bonus."
+          ]
+        },
+        {
+          "type": "Radiant",
+          "tooltips": [
+            "This cannot be Frozen, Slowed or Destroyed."
+          ]
+        },
+        {
+          "type": "Obsidian",
+          "tooltips": [
+            "This has double Damage."
+          ]
+        }
+      ],
+      "quests": [],
+      "unifiedTooltips": [
+        "Cooldown 3 seconds",
+        "Deal (5/15/25) damage.",
+        "If this is your only friend, it has (+50%/+75%/+100%) Crit Chance."
+      ],
+      "packId": "Vanessa_Core",
+      "combatEncounters": [
+        {
+          "cardId": "41c5f103-2d76-4a51-ae28-ee294490b071",
+          "cardName": "Ventriloquist"
+        }
+      ]
     },
     {
       "id": "28db3caa-7727-4d1c-9758-df42975e4811",
@@ -26497,6 +27389,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Ammo 1",
@@ -26624,6 +27517,32 @@
           "type": "Obsidian",
           "tooltips": [
             "Deal 50 Damage."
+          ]
+        }
+      ],
+      "quests": [
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Buy 4 Freeze items"
+              ],
+              "rewardTooltips": [
+                "This has +1 Multicast."
+              ]
+            }
+          ]
+        },
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Buy 5 Relics"
+              ],
+              "rewardTooltips": [
+                "When you use another Relic, charge this 1 second(s)."
+              ]
+            }
           ]
         }
       ],
@@ -26755,6 +27674,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 13 seconds",
         "Deal (15/30/60/120) damage.",
@@ -26889,6 +27809,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Burn 8.",
@@ -27008,12 +27929,18 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Your Poison items gain (+2/+3/+4/+5) Poison for the fight."
       ],
       "packId": "Mak_Dangerous_Experiments",
-      "combatEncounters": []
+      "combatEncounters": [
+        {
+          "cardId": "4ce6d441-4aed-455b-b83f-0b057b462515",
+          "cardName": "Mythkeeper"
+        }
+      ]
     },
     {
       "id": "0229faa7-2eec-4746-9134-ade4f3aebe45",
@@ -27127,6 +28054,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Poison (4/6/8).",
@@ -27255,6 +28183,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Adjacent weapons gain (10/15/20/25) Damage for the fight.",
@@ -27377,6 +28306,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Deal (50/100) damage.",
@@ -27501,6 +28431,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal (500/1000) damage to the player with less health."
@@ -27627,6 +28558,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Ammo 2",
@@ -27676,6 +28608,7 @@
         "Common"
       ],
       "enchantments": [],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, gain access to the genie Rit."
       ],
@@ -27711,7 +28644,9 @@
           "tooltips": []
         }
       },
-      "tags": [],
+      "tags": [
+        "Loot"
+      ],
       "hiddenTags": [
         "Regen"
       ],
@@ -27776,6 +28711,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, permanently gain (1/2/3/4) Regen."
       ],
@@ -27891,6 +28827,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "At the start of each day, permanently gain (100/200/300) Max Health."
       ],
@@ -28016,6 +28953,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Shield (15/30/60/120).",
@@ -28163,6 +29101,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal 50 damage.",
@@ -28292,6 +29231,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (12/11/10) seconds",
         "Multicast 3",
@@ -28407,6 +29347,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Haste the Core for (1/2/3/4) second(s)."
@@ -28530,6 +29471,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Ammo 2",
@@ -28662,6 +29604,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal (12/18/24/32) damage.",
@@ -28779,6 +29722,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, permanently gain (10/20/30/40) Max Health."
       ],
@@ -28906,6 +29850,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Ammo 1",
@@ -29029,6 +29974,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "The weapon to the left of this gains (+10/+20/+30) damage for the fight."
@@ -29159,6 +30105,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Poison (4/6/8/10).",
@@ -29280,13 +30227,19 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Shield (40/60/80).",
         "When you Poison, charge this 1 second."
       ],
       "packId": "Core",
-      "combatEncounters": []
+      "combatEncounters": [
+        {
+          "cardId": "d1dc075f-f5d4-4bb7-9655-55591e123941",
+          "cardName": "Greenheart Guardian"
+        }
+      ]
     },
     {
       "id": "c53eff8b-0407-4e8c-adaf-70b2a66b3528",
@@ -29407,6 +30360,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Shield (10/20/30).",
@@ -29442,7 +30396,9 @@
           "tooltips": []
         }
       },
-      "tags": [],
+      "tags": [
+        "Loot"
+      ],
       "hiddenTags": [
         "AmmoReference"
       ],
@@ -29509,6 +30465,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, your leftmost Ammo item gains (1/2/3) Max Ammo."
       ],
@@ -29639,6 +30596,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal (25/50) damage.",
@@ -29764,6 +30722,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (8/7/6/5) seconds",
         "Multicast 2",
@@ -29771,6 +30730,10 @@
       ],
       "packId": "Pygmalien_Core",
       "combatEncounters": [
+        {
+          "cardId": "20863550-960f-4713-99eb-2ff2e4cfb3ef",
+          "cardName": "Morguloth"
+        },
         {
           "cardId": "8eb6cf35-27ab-4726-b9f7-05133a4b94b8",
           "cardName": "Hellbilly"
@@ -29896,6 +30859,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Deal (20/40/80) damage.",
@@ -30023,6 +30987,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Deal (15/25/35/50) damage.",
@@ -30138,6 +31103,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 13 seconds",
         "Heal (100/200).",
@@ -30272,6 +31238,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Deal (10/15/20/25) damage.",
@@ -30279,6 +31246,10 @@
       ],
       "packId": "Vanessa_Core",
       "combatEncounters": [
+        {
+          "cardId": "20863550-960f-4713-99eb-2ff2e4cfb3ef",
+          "cardName": "Morguloth"
+        },
         {
           "cardId": "55046a2f-f81e-4720-aefa-e74b14a06dad",
           "cardName": "Frost Street Challenger"
@@ -30411,6 +31382,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Ammo 2",
@@ -30543,6 +31515,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Deal (50/100/150/200) damage.",
@@ -30667,6 +31640,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (9/8/7/6) seconds",
         "Ammo 1",
@@ -30793,6 +31767,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (6/12/24/48) damage.",
@@ -30926,6 +31901,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Shield equal to (1x/2x/3x/4x) this item's value."
@@ -31049,6 +32025,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Poison (2/3/4/5).",
@@ -31176,6 +32153,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (7/6/5) seconds",
         "Heal equal to 10% of your Max Health.",
@@ -31291,6 +32269,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "At the start of each fight, transform into a (Gold/Diamond) copy of another small, non-legendary item you have for the fight."
       ],
@@ -31391,6 +32370,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "At the start of each fight, your Small items gain Haste for (1/2/3) second(s)."
       ],
@@ -31514,12 +32494,18 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "The weapon to the right of this gains (+8/+12/+16/+20) damage for the fight."
       ],
       "packId": "Vanessa_Core",
-      "combatEncounters": []
+      "combatEncounters": [
+        {
+          "cardId": "41c5f103-2d76-4a51-ae28-ee294490b071",
+          "cardName": "Ventriloquist"
+        }
+      ]
     },
     {
       "id": "c0455f22-2fb9-4ce6-a65f-e874e3d86ff0",
@@ -31629,6 +32615,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 11 seconds",
         "Burn (10/20).",
@@ -31762,6 +32749,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Heal (25/50/100/200).",
@@ -31885,6 +32873,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Burn (3/5/7/9).",
@@ -31995,10 +32984,137 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Adjacent items have their cooldowns reduced by (3%/6%/9%/12%)."
       ],
       "packId": "Mak_Core",
+      "combatEncounters": []
+    },
+    {
+      "id": "ad80a892-eddc-4856-9a62-9e8f305dd922",
+      "name": "Hydraulic Press",
+      "startingTier": "Silver",
+      "tiers": {
+        "Bronze": {
+          "tooltips": []
+        },
+        "Silver": {
+          "tooltips": [
+            "Cooldown 20 seconds",
+            "Deal 0 damage.",
+            "At the end of each fight, permanently destroy the item to the left of this, and this gains that item’s Types.",
+            "This has +damage equal to 100 times the number of Types it has."
+          ]
+        },
+        "Gold": {
+          "tooltips": [
+            "Cooldown 20 seconds",
+            "Deal 0 damage.",
+            "At the end of each fight, permanently destroy the item to the left of this, and this gains that item’s Types.",
+            "This has +damage equal to 200 times the number of Types it has."
+          ]
+        },
+        "Diamond": {
+          "tooltips": [
+            "Cooldown 20 seconds",
+            "Deal 0 damage.",
+            "At the end of each fight, permanently destroy the item to the left of this, and this gains that item’s Types.",
+            "This has +damage equal to 300 times the number of Types it has."
+          ]
+        },
+        "Legendary": {
+          "tooltips": []
+        }
+      },
+      "tags": [
+        "Weapon",
+        "Tool"
+      ],
+      "hiddenTags": [
+        "Damage"
+      ],
+      "customTags": [],
+      "size": "Large",
+      "heroes": [
+        "Dooley"
+      ],
+      "enchantments": [
+        {
+          "type": "Heavy",
+          "tooltips": [
+            "Slow 3 items for 2 second(s)."
+          ]
+        },
+        {
+          "type": "Icy",
+          "tooltips": [
+            "Freeze 1 item for 3 second(s)."
+          ]
+        },
+        {
+          "type": "Turbo",
+          "tooltips": [
+            "Haste 3 item for 2 second(s)."
+          ]
+        },
+        {
+          "type": "Shielded",
+          "tooltips": [
+            "Shield equal to this item's damage."
+          ]
+        },
+        {
+          "type": "Restorative",
+          "tooltips": [
+            "Heal equal to this item's Damage."
+          ]
+        },
+        {
+          "type": "Toxic",
+          "tooltips": [
+            "Poison equal to 10% of this item's damage."
+          ]
+        },
+        {
+          "type": "Fiery",
+          "tooltips": [
+            "Burn equal to 10% of this item's damage."
+          ]
+        },
+        {
+          "type": "Shiny",
+          "tooltips": [
+            "This has +1 Multicast."
+          ]
+        },
+        {
+          "type": "Deadly",
+          "tooltips": [
+            "+50% Crit Chance"
+          ]
+        },
+        {
+          "type": "Radiant",
+          "tooltips": [
+            "This cannot be Frozen, Slowed or Destroyed."
+          ]
+        },
+        {
+          "type": "Obsidian",
+          "tooltips": [
+            "This has double Damage."
+          ]
+        }
+      ],
+      "quests": [],
+      "unifiedTooltips": [
+        "Cooldown 20 seconds",
+        "Deal 0 damage.",
+        "At the end of each fight, permanently destroy the item to the left of this, and this gains that item’s Types.",
+        "This has +damage equal to (100/200/300) times the number of Types it has."
+      ],
+      "packId": "Dooley_Core",
       "combatEncounters": []
     },
     {
@@ -32117,6 +33233,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Deal (30/60/120) damage.",
@@ -32245,6 +33362,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Adjacent items gain (+3/+6/+9) value for the fight.",
@@ -32369,6 +33487,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Poison 9.",
@@ -32500,6 +33619,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal 50 damage.",
@@ -32623,6 +33743,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Freeze (1/2/3) item(s) for 1 second(s).",
@@ -32736,6 +33857,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Freeze 3 small items for (1/2) second(s)."
@@ -32858,6 +33980,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Ammo 1",
@@ -32984,6 +34107,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal 25 damage.",
@@ -33097,6 +34221,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When your enemy uses an item, Freeze it for (0.5/1) second(s)."
       ],
@@ -33224,6 +34349,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal (100/200/300) damage.",
@@ -33341,6 +34467,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Freeze 1 item for 1 second(s).",
@@ -33444,6 +34571,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "At the start of each fight, freeze 1 item(s) for (3/4/5/6) second(s)."
       ],
@@ -33580,6 +34708,32 @@
           ]
         }
       ],
+      "quests": [
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Buy 8 Poison items"
+              ],
+              "rewardTooltips": [
+                "When you Poison, this gains (2/4/6/8) Poison for the fight."
+              ]
+            }
+          ]
+        },
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Have 75+ Poison on this item."
+              ],
+              "rewardTooltips": [
+                "This has +1 Multicast."
+              ]
+            }
+          ]
+        }
+      ],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Poison (2/4/6/8)."
@@ -33703,6 +34857,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Freeze (1/2/3) item(s) for 1 second(s).",
@@ -33836,6 +34991,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (7/6/5) seconds",
         "Burn 4.",
@@ -33963,6 +35119,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Slow 1 item(s) for (1/2/3/4) second(s).",
@@ -34097,6 +35254,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Deal (20/40/80/160) damage.",
@@ -34213,6 +35371,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you use an adjacent item, Burn (1/2/3).",
         "Adjacent items have +1 ammo."
@@ -34348,6 +35507,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Slow (1/2/3/4) item(s) for 1 second(s).",
@@ -34355,6 +35515,10 @@
       ],
       "packId": "Mak_Core",
       "combatEncounters": [
+        {
+          "cardId": "4ce6d441-4aed-455b-b83f-0b057b462515",
+          "cardName": "Mythkeeper"
+        },
         {
           "cardId": "87ab01e1-55a7-4934-8201-b005b540616f",
           "cardName": "Oasis Guardian"
@@ -34478,6 +35642,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (7/6/5/4) seconds",
         "Shield 20.",
@@ -34604,6 +35769,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal 2 damage.",
@@ -34734,6 +35900,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Ammo 1",
@@ -34855,6 +36022,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Poison both players 5.",
@@ -34891,7 +36059,9 @@
           "tooltips": []
         }
       },
-      "tags": [],
+      "tags": [
+        "Loot"
+      ],
       "hiddenTags": [
         "Cooldown"
       ],
@@ -34956,6 +36126,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, reduce your leftmost item's cooldown by (3%/6%/9%)."
       ],
@@ -35083,6 +36254,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Ammo 1",
@@ -35200,6 +36372,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Freeze an item with a cooldown of 5 seconds or less for (1/2/3) second(s)."
@@ -35323,6 +36496,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Deal damage equal to (1x/2x) this item's value.",
@@ -35436,6 +36610,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you use a weapon, your weapons gain (3/6/9) Damage for the fight.",
         "When you use a Weapon, Haste it for (1/2/3) second(s)."
@@ -35565,6 +36740,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Multicast 2",
@@ -35691,6 +36867,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Ammo 2",
@@ -35818,6 +36995,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Poison (3/6/9/12).",
@@ -35952,6 +37130,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (10/20/30) damage.",
@@ -36088,6 +37267,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Ammo 1",
@@ -36220,6 +37400,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 11 seconds",
         "Deal (30/60/120/240) damage.",
@@ -36349,6 +37530,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 11 seconds",
         "Deal (15/30/60/100) damage for each Small item you have (including Stash)."
@@ -36482,6 +37664,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Heal (30/60/120/240).",
@@ -36607,6 +37790,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 2 seconds",
         "Deal (5/10/15/20) damage."
@@ -36723,6 +37907,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (9/6) seconds",
         "Use a property."
@@ -36848,6 +38033,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (9/8/7) seconds",
         "Deal 100 damage.",
@@ -36909,6 +38095,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "After you fight a Hero with this in play, permanently gain (100/200/300/400) Max Health."
       ],
@@ -37028,6 +38215,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (30/40/60) damage.",
@@ -37144,6 +38332,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Your items have (+10%/+20%/+30%/+40%) Crit Chance."
       ],
@@ -37268,6 +38457,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Deal 15 damage.",
@@ -37386,6 +38576,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Enchant another non-enchanted item for the fight.",
@@ -37512,6 +38703,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Shield 200.",
@@ -37643,6 +38835,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Deal 40 damage.",
@@ -37769,6 +38962,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Deal (8/16/24/32) damage."
@@ -37905,6 +39099,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal (5/10/20/40) damage.",
@@ -38017,6 +39212,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell 10 items, adjacent items gain (3/5/7) value."
       ],
@@ -38145,6 +39341,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Lifesteal",
@@ -38278,6 +39475,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (12/11/10) seconds",
         "Gain Regen equal to 5% of your Max Health for the fight.",
@@ -38396,6 +39594,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Charge the Tech item to the right of this (1/2) second(s).",
@@ -38525,6 +39724,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Crit Chance (100%/125%/150%/175%)",
@@ -38532,7 +39732,12 @@
         "This loses 25% Crit Chance for the fight."
       ],
       "packId": "Mak_Core",
-      "combatEncounters": []
+      "combatEncounters": [
+        {
+          "cardId": "fc59e9b3-88be-450c-b2dc-65d58a33d1d0",
+          "cardName": "Lord of the Wastes"
+        }
+      ]
     },
     {
       "id": "cc25c553-c676-4b7b-a6a0-509da0512614",
@@ -38634,6 +39839,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "ALL Weapon cooldowns are increased by (+1/+2) second(s).",
         "Your non-weapon items' cooldowns are decreased by (1/2) second(s)."
@@ -38751,6 +39957,32 @@
           "type": "Obsidian",
           "tooltips": [
             "Deal damage equal to 10 times this item's Regen."
+          ]
+        }
+      ],
+      "quests": [
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Buy 8 Regen items"
+              ],
+              "rewardTooltips": [
+                "When you Regen, this gains (2/4/6/8) Regen for the fight."
+              ]
+            }
+          ]
+        },
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Have 75+ Regen on this item."
+              ],
+              "rewardTooltips": [
+                "This has +1 Multicast."
+              ]
+            }
           ]
         }
       ],
@@ -38878,6 +40110,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Shield (10/20/40/80).",
@@ -38997,6 +40230,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Your weapons gain (1/2/3/4) damage for the fight.",
@@ -39117,6 +40351,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (5/4/3) seconds",
         "Charge the Tech item to the right of this 1 second(s).",
@@ -39242,6 +40477,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 3 seconds",
         "Burn (2/4/6/8)."
@@ -39376,6 +40612,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (10/8/6) seconds",
         "Burn 20.",
@@ -39500,6 +40737,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 11 seconds",
         "Deal (10/20) damage.",
@@ -39623,6 +40861,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal damage equal to (10%/20%) of your Max Health.",
@@ -39742,12 +40981,18 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you win a fight, this gains (3/6/9) value.",
         "Your weapons have + damage equal to this item's value."
       ],
       "packId": "Vanessa_Core",
-      "combatEncounters": []
+      "combatEncounters": [
+        {
+          "cardId": "20863550-960f-4713-99eb-2ff2e4cfb3ef",
+          "cardName": "Morguloth"
+        }
+      ]
     },
     {
       "id": "234ae6aa-b94b-456d-a2fb-f0cbcaa9c655",
@@ -39799,6 +41044,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Your Small items have (+1/+2) value."
       ],
@@ -39926,6 +41172,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Multicast 2",
@@ -40064,6 +41311,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Burn equal to this item's value.",
@@ -40173,6 +41421,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "The first time you would die each fight, Heal for (25%/50%) of your Max Health.",
         "Your Heal and Regen items have +1 Multicast."
@@ -40297,6 +41546,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (50/100/150/200) Damage.",
@@ -40345,6 +41595,7 @@
         "Common"
       ],
       "enchantments": [],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, upgrade your leftmost item."
       ],
@@ -40439,6 +41690,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "At the start of each fight, Burn (6/9/12/15)."
       ],
@@ -40571,6 +41823,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (5/15/30/50) damage.",
@@ -40693,6 +41946,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (17/15/13) seconds",
         "Deal 300 damage.",
@@ -40811,6 +42065,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Poison 5 for each Poison item you have.",
@@ -40928,6 +42183,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Slow 1 item(s) for (1/2/3/4) second(s).",
@@ -41042,6 +42298,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (7/6/5) seconds",
         "Slow 1 item(s) for 1 second(s).",
@@ -41179,6 +42436,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Ammo 2",
@@ -41187,7 +42445,12 @@
         "When you slow, this gains (+10/+15/+20/+25) damage and (+2/+4/+6/+8) burn for the fight."
       ],
       "packId": "Vanessa_Mysteries_of_the_Deep",
-      "combatEncounters": []
+      "combatEncounters": [
+        {
+          "cardId": "3e80e4e9-13e6-441c-b770-a82a0297ad47",
+          "cardName": "Terrorform"
+        }
+      ]
     },
     {
       "id": "a3d3bf9c-5b26-405d-881d-c9aa6283f142",
@@ -41305,6 +42568,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Shield (20/60/120/200).",
@@ -41429,6 +42693,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Slow 1 item(s) for (1/2/3/4) second(s).",
@@ -41489,6 +42754,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "At the start of each hour, this gains (1/2/3) value."
       ],
@@ -41609,6 +42875,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Burn (4/5/6/7).",
@@ -41735,6 +43002,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal (50/75/100) damage.",
@@ -41773,7 +43041,9 @@
           "tooltips": []
         }
       },
-      "tags": [],
+      "tags": [
+        "Loot"
+      ],
       "hiddenTags": [
         "HealReference"
       ],
@@ -41838,6 +43108,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, your leftmost Heal item gains (5/10/20/40) Heal."
       ],
@@ -41953,6 +43224,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "The first time you would die each fight, Heal for 1 and take no damage for (1/2) second(s)."
       ],
@@ -42082,6 +43354,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "This gains 1 Value.",
@@ -42188,6 +43461,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you use an adjacent item, Haste the other adjacent item for (1/2/3) second(s)."
       ],
@@ -42310,6 +43584,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Burn (6/8/10/12).",
@@ -42427,6 +43702,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Transform into a (Gold/Diamond) copy of the medium, non-legendary item to the left of this for the fight."
@@ -42554,6 +43830,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Ammo 1",
@@ -42678,6 +43955,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Shield (30/40/50).",
@@ -42803,6 +44081,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal 200 damage.",
@@ -42940,6 +44219,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 3 seconds",
         "Heal equal to double this item's Value.",
@@ -43062,6 +44342,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Poison 5.",
@@ -43187,6 +44468,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Shield equal to (1x/2x/3x) your gold."
@@ -43307,6 +44589,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Lifesteal",
@@ -43441,6 +44724,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Your Lifesteal Weapons gain (+10/+15/+20/+25) damage for the fight.",
@@ -43569,6 +44853,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Haste adjacent items for (1/2/3) second(s).",
@@ -43693,6 +44978,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Slow 1 item(s) for (1/2/3/4) second(s).",
@@ -43816,6 +45102,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Shield 10.",
@@ -43941,6 +45228,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Haste 1 item for (1/2/3/4) second(s).",
@@ -44074,6 +45362,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Ammo 1",
@@ -44200,18 +45489,14 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Gain (1/3/5/7) Regen for the fight.",
         "When this is transformed, enchant it with Restorative if able."
       ],
       "packId": "Mak_Core",
-      "combatEncounters": [
-        {
-          "cardId": "fc59e9b3-88be-450c-b2dc-65d58a33d1d0",
-          "cardName": "Lord of the Wastes"
-        }
-      ]
+      "combatEncounters": []
     },
     {
       "id": "764ad6f5-f9a0-4edc-8692-fa166abe2ba3",
@@ -44328,6 +45613,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (15/20/25) damage for each Friend you have.",
@@ -44449,6 +45735,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (15/20/25) damage for each Friend you have.",
@@ -44570,6 +45857,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (15/20/25) damage for each Friend you have.",
@@ -44691,6 +45979,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (15/20/25) damage for each Friend you have.",
@@ -44812,6 +46101,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (15/20/25) damage for each Friend you have.",
@@ -44934,6 +46224,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Deal (10/20/30/40) damage."
@@ -45054,6 +46345,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Poison 10.",
@@ -45184,6 +46476,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 2 seconds",
         "Ammo 8",
@@ -45287,6 +46580,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you use an adjacent Weapon, Slow 1 item(s) for (1/2/3) second(s)."
       ],
@@ -45420,6 +46714,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Poison 6.",
@@ -45551,6 +46846,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Burn both players (4/6/8).",
@@ -45684,6 +46980,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Deal 200 damage.",
@@ -45815,6 +47112,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Ammo 1",
@@ -45922,6 +47220,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When any player uses an item, Freeze it 1 second(s).",
         "When any item gains Freeze, remove all Freeze from it.",
@@ -46038,6 +47337,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Multicast 8",
@@ -46164,6 +47464,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (10/9/8) seconds",
         "Burn 10.",
@@ -46288,6 +47589,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Damage 10.",
@@ -46413,6 +47715,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Deal (5/10/20/40) damage.",
@@ -46420,6 +47723,10 @@
       ],
       "packId": "Core",
       "combatEncounters": [
+        {
+          "cardId": "41c5f103-2d76-4a51-ae28-ee294490b071",
+          "cardName": "Ventriloquist"
+        },
         {
           "cardId": "b93f5b44-ba9f-4196-a94e-c5de17ab5c5d",
           "cardName": "Boarrior"
@@ -46538,6 +47845,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Burn (4/6/8).",
@@ -46610,6 +47918,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Weapon Properties adjacent to this have + Damage equal to (50%/100%) of the value of your highest value item.",
         "Shield Properties adjacent to this have + Shield equal to (50%/100%) of the value of your highest value item."
@@ -46724,6 +48033,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "At the start of each fight, Poison yourself (4/8/12/16).",
         "The item to the left of this has + Crit Chance equal to your Poison."
@@ -46848,6 +48158,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (11/10/9/8) seconds",
         "Your weapons gain +10 damage for the fight.",
@@ -46965,6 +48276,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Adjacent Weapons gain (5/10) Damage for the fight.",
@@ -47095,6 +48407,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Poison (4/6/8).",
@@ -47233,6 +48546,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Haste 1 item(s) for (2/3/4) second(s).",
@@ -47347,6 +48661,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Your items have (+15%/+30%/+50%) Crit Chance.",
         "When you Crit with an item, reduce its cooldown by (4%/8%/12%) for the fight."
@@ -47447,6 +48762,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell an item, this gains (1/2/3) value.",
         "You have increased max health equal to (10/15/20) times this item's value."
@@ -47574,6 +48890,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (8/7/6/5) seconds",
         "Gain 2 Regen for the fight.",
@@ -47699,6 +49016,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Shield (10/20/30/40).",
@@ -47741,7 +49059,9 @@
           "tooltips": []
         }
       },
-      "tags": [],
+      "tags": [
+        "Loot"
+      ],
       "hiddenTags": [],
       "customTags": [],
       "size": "Small",
@@ -47749,6 +49069,7 @@
         "Common"
       ],
       "enchantments": [],
+      "quests": [],
       "unifiedTooltips": [
         "Sells for gold"
       ],
@@ -47871,6 +49192,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you use an adjacent item, charge the other adjacent item for (1/2) second(s)."
       ],
@@ -47992,6 +49314,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 2 seconds",
         "Your items gain (+3/+4/+5) value for the fight."
@@ -48116,6 +49439,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (10/15/20/25) damage.",
@@ -48237,6 +49561,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Burn (4/6).",
@@ -48369,6 +49694,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (8/16/24/32) damage.",
@@ -48502,6 +49828,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Gain 1 Regen for the fight.",
@@ -48509,7 +49836,12 @@
         "When you buy this, get a Catalyst."
       ],
       "packId": "Mak_Core",
-      "combatEncounters": []
+      "combatEncounters": [
+        {
+          "cardId": "a5103989-fb08-4ac6-a5e8-6a610e0b1d46",
+          "cardName": "Qomatz"
+        }
+      ]
     },
     {
       "id": "b6afda86-9dec-4580-b1e3-4d1cc59c3029",
@@ -48607,6 +49939,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "The item to the left of this has its cooldown reduced by (20%/40%)."
       ],
@@ -48711,6 +50044,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you use a Friend, Haste it for (1/2) second(s).",
         "Adjacent items are Friends."
@@ -48826,6 +50160,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 11 seconds",
         "Burn (5/10).",
@@ -48941,6 +50276,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Freeze (1/2) item(s) for 1 second(s).",
@@ -49069,6 +50405,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Charge adjacent Small items (1/2/3/4) second(s).",
@@ -49146,6 +50483,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, get Spare Change equal to its value.",
         "At the start of each hour, spend 2 gold to gain 1 value."
@@ -49247,6 +50585,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, get 3 Chocolate Bars."
       ],
@@ -49376,6 +50715,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Crit Chance 20%",
@@ -49384,6 +50724,10 @@
       ],
       "packId": "Vanessa_Core",
       "combatEncounters": [
+        {
+          "cardId": "3e80e4e9-13e6-441c-b770-a82a0297ad47",
+          "cardName": "Terrorform"
+        },
         {
           "cardId": "5253c1ef-af51-43ac-a307-4e707e5747a6",
           "cardName": "Prince Marianas"
@@ -49505,6 +50849,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Ammo 3",
@@ -49624,6 +50969,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Deal (50/75/100/125) damage.",
@@ -49746,6 +51092,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Lifesteal",
@@ -49876,6 +51223,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Ammo (1/2/3/4)",
@@ -50008,6 +51356,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Deal (50/100/200) damage.",
@@ -50138,6 +51487,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 3 seconds",
         "Ammo 3",
@@ -50259,6 +51609,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you use a Weapon, Poison (4/5/6).",
         "Your Weapons have + Damage equal to (50%/75%/100%) of the Poison on your enemy."
@@ -50268,6 +51619,10 @@
         {
           "cardId": "25a7a800-1c64-4728-a4fe-eb5a3f3394a0",
           "cardName": "Joyful Jack"
+        },
+        {
+          "cardId": "d1dc075f-f5d4-4bb7-9655-55591e123941",
+          "cardName": "Greenheart Guardian"
         }
       ]
     },
@@ -50384,6 +51739,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Reload all your items (1/2/3) Ammo and charge them 1 second(s).",
@@ -50506,6 +51862,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Your Potions have (+1/+2/+3) Ammo.",
         "Your Potions have their cooldowns reduced by (10%/15%/20%).",
@@ -50628,6 +51985,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 2 seconds",
         "Ammo 1",
@@ -50748,6 +52106,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Reload the item to the right of this (1/2/3/4) Ammo."
@@ -50881,6 +52240,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 20 seconds",
         "Deal damage equal to (30%/40%/50%) of your enemy's Max Health and destroy this.",
@@ -51016,6 +52376,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (15/14/13/12) seconds",
         "Deal 100 damage.",
@@ -51141,6 +52502,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Haste the item to the right of this for (1/2/3/4) second(s).",
@@ -51279,6 +52641,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (7/6/5) seconds",
         "Deal 30 damage.",
@@ -51403,6 +52766,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Burn (8/12).",
@@ -51502,6 +52866,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you Slow, deal (8/12/16) damage."
       ],
@@ -51633,6 +52998,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Haste your Vehicles for (3/4/5) second(s).",
@@ -51761,6 +53127,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Poison (10/20/30).",
@@ -51891,6 +53258,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Deal (10/20/30/40) damage.",
@@ -52025,6 +53393,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (11/9/7) seconds",
         "Your weapons gain Damage equal to this item's value for the fight.",
@@ -52146,6 +53515,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Slow 1 item(s) for (1/2/3) second(s).",
@@ -52267,6 +53637,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Shield (75/150).",
@@ -52380,6 +53751,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 3 seconds",
         "Transform into a (Silver/Gold/Diamond) copy of another small, non-legendary item you have for the fight."
@@ -52508,6 +53880,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Poison (1/2/3/4).",
@@ -52632,6 +54005,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal (90/120/150) damage",
@@ -52763,6 +54137,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (13/12/11/10) seconds",
         "Deal (100/250/500/800) damage.",
@@ -52893,6 +54268,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Ammo 1",
@@ -53031,6 +54407,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Reload adjacent Ammo items 1 Ammo.",
@@ -53145,6 +54522,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you poison yourself, Poison (4/8/12).",
         "When you use an adjacent item, Poison yourself (4/8/12) and gain (2/4/6) Regen for the fight."
@@ -53257,6 +54635,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you use a Potion, transform it into a Potion for the fight and gain (3/6/9) Regen for the fight."
       ],
@@ -53372,6 +54751,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (10/9/8) seconds",
         "Charge adjacent Large items for half their cooldown."
@@ -53475,6 +54855,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, your weapons gain (1/2/3/4) damage."
       ],
@@ -53595,6 +54976,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Adjacent weapons (+3/+6/+9/+12) damage for the fight."
@@ -53716,6 +55098,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "The weapon to the left of this gains (+4/+8/+12/+16) damage for the fight."
@@ -53837,6 +55220,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "The weapon to the right of this gains (+4/+8/+12/+16) damage for the fight."
@@ -53963,6 +55347,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Your weapons gain (1/2/3/4) damage for the fight."
@@ -54093,6 +55478,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Burn (4/6/8/10).",
@@ -54221,6 +55607,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal 20 damage.",
@@ -54356,6 +55743,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal (10/20/40/80) damage.",
@@ -54477,6 +55865,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Ammo 1",
@@ -54592,6 +55981,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (10/9/8) seconds",
         "Use a Core."
@@ -54715,6 +56105,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Ammo 6",
@@ -54844,6 +56235,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Poison 6.",
@@ -54979,6 +56371,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Ammo 6",
@@ -55058,6 +56451,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you visit a Merchant, this and the item to the left of this gains (1/2/3/4) value."
       ],
@@ -55178,6 +56572,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 15 seconds",
         "Deal 100 damage.",
@@ -55300,6 +56695,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Burn (5/10/15).",
@@ -55429,6 +56825,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 3 seconds",
         "Ammo 1",
@@ -55566,6 +56963,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Multicast 2",
@@ -55685,13 +57083,19 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (9/7) seconds",
         "Deal 2 damage.",
         "Gain Regen for the fight equal to this item's damage."
       ],
       "packId": "Mak_Core",
-      "combatEncounters": []
+      "combatEncounters": [
+        {
+          "cardId": "20863550-960f-4713-99eb-2ff2e4cfb3ef",
+          "cardName": "Morguloth"
+        }
+      ]
     },
     {
       "id": "ae6ddbd0-d007-482a-8d2a-d3f6a5a1b29e",
@@ -55803,6 +57207,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Deal (20/40) Damage.",
@@ -55932,13 +57337,19 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (7/6/5/4) seconds",
         "Shield 100.",
         "When you use an adjacent item, charge this 1 second(s)."
       ],
       "packId": "Pygmalien_Core",
-      "combatEncounters": []
+      "combatEncounters": [
+        {
+          "cardId": "4ce6d441-4aed-455b-b83f-0b057b462515",
+          "cardName": "Mythkeeper"
+        }
+      ]
     },
     {
       "id": "11a5306d-f114-4f8d-abcc-442c3a979317",
@@ -56035,6 +57446,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Your Friends have +1 Multicast."
       ],
@@ -56152,6 +57564,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Haste adjacent items for (1/2/3/4) second(s).",
@@ -56287,6 +57700,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Multicast 3",
@@ -56419,6 +57833,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 11 seconds",
         "Deal (10/20/40/80) Damage",
@@ -56538,6 +57953,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Charge adjacent items (1/2/3) second(s).",
@@ -56662,6 +58078,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Burn (3/6/9/12).",
@@ -56796,6 +58213,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Deal (15/30/60/120) damage.",
@@ -56916,6 +58334,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (12/10) seconds",
         "Lifesteal",
@@ -57045,6 +58464,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Multicast 2",
@@ -57174,6 +58594,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Multicast 2",
@@ -57305,6 +58726,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 11 seconds",
         "Lifesteal",
@@ -57435,6 +58857,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Ammo (1/2/3)",
@@ -57483,6 +58906,7 @@
         "Pygmalien"
       ],
       "enchantments": [],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, get 3 Spare Change."
       ],
@@ -57610,6 +59034,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Burn (4/6/8/10).",
@@ -57732,6 +59157,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 3 seconds",
         "Adjacent items gain (+10%/+15%/+20%) crit chance for the fight."
@@ -57743,6 +59169,152 @@
           "cardName": "Yerdan"
         }
       ]
+    },
+    {
+      "id": "0c1d2e3f-4a5b-6c7d-8e9f-0a1b2c3d4e5f",
+      "name": "Sands of Time",
+      "startingTier": "Bronze",
+      "tiers": {
+        "Bronze": {
+          "tooltips": [
+            "Cooldown 6 seconds",
+            "Slow 1 item(s) for 1 second(s)."
+          ]
+        },
+        "Silver": {
+          "tooltips": [
+            "Cooldown 6 seconds",
+            "Slow 2 item(s) for 1 second(s)."
+          ]
+        },
+        "Gold": {
+          "tooltips": [
+            "Cooldown 6 seconds",
+            "Slow 3 item(s) for 1 second(s)."
+          ]
+        },
+        "Diamond": {
+          "tooltips": [
+            "Cooldown 6 seconds",
+            "Slow 4 item(s) for 1 second(s)."
+          ]
+        },
+        "Legendary": {
+          "tooltips": []
+        }
+      },
+      "tags": [
+        "Relic"
+      ],
+      "hiddenTags": [
+        "Slow",
+        "Quest"
+      ],
+      "customTags": [],
+      "size": "Medium",
+      "heroes": [
+        "Mak"
+      ],
+      "enchantments": [
+        {
+          "type": "Heavy",
+          "tooltips": [
+            "This has double Slow duration."
+          ]
+        },
+        {
+          "type": "Icy",
+          "tooltips": [
+            "Freeze 1 item for 1 second(s)."
+          ]
+        },
+        {
+          "type": "Turbo",
+          "tooltips": [
+            "Haste 2 items for 1 second(s)."
+          ]
+        },
+        {
+          "type": "Shielded",
+          "tooltips": [
+            "Shield 50."
+          ]
+        },
+        {
+          "type": "Restorative",
+          "tooltips": [
+            "Heal 50."
+          ]
+        },
+        {
+          "type": "Toxic",
+          "tooltips": [
+            "Poison 5."
+          ]
+        },
+        {
+          "type": "Fiery",
+          "tooltips": [
+            "Burn 5."
+          ]
+        },
+        {
+          "type": "Deadly",
+          "tooltips": [
+            "Your items have +20% Crit Chance."
+          ]
+        },
+        {
+          "type": "Shiny",
+          "tooltips": [
+            "This has +1 Multicast."
+          ]
+        },
+        {
+          "type": "Radiant",
+          "tooltips": [
+            "This cannot be Frozen, Slowed or Destroyed."
+          ]
+        },
+        {
+          "type": "Obsidian",
+          "tooltips": [
+            "Deal 50 Damage."
+          ]
+        }
+      ],
+      "quests": [
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Buy 6 Slow items"
+              ],
+              "rewardTooltips": [
+                "This has +1 Multicast."
+              ]
+            }
+          ]
+        },
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Buy 5 Relics"
+              ],
+              "rewardTooltips": [
+                "When you use another Relic, charge this 1 second(s)."
+              ]
+            }
+          ]
+        }
+      ],
+      "unifiedTooltips": [
+        "Cooldown 6 seconds",
+        "Slow (1/2/3/4) item(s) for 1 second(s)."
+      ],
+      "packId": "Mak_Lost_Treasures",
+      "combatEncounters": []
     },
     {
       "id": "447c40e6-7aec-4391-8be7-df4952815d40",
@@ -57850,6 +59422,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Freeze (1/2/3) item(s) for 1 second(s).",
@@ -57983,6 +59556,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Haste the Friend to the right of this for (2/2/2/5) second(s).",
@@ -58108,6 +59682,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (8/7/6) seconds",
         "Reload 2 items.",
@@ -58231,6 +59806,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Burn (4/5/6).",
@@ -58341,6 +59917,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Charge adjacent items (1/2) second(s).",
@@ -58455,6 +60032,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you Level Up, get a Tech item."
       ],
@@ -58490,7 +60068,9 @@
           "tooltips": []
         }
       },
-      "tags": [],
+      "tags": [
+        "Loot"
+      ],
       "hiddenTags": [
         "ShieldReference"
       ],
@@ -58555,6 +60135,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, your leftmost Shield item gains (+3/+6/+12/+24) Shield."
       ],
@@ -58688,6 +60269,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, upgrade The Core. (/and reduce its cooldown by 1 second(s).)"
       ],
@@ -58800,6 +60382,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 11 seconds",
         "Deal damage equal to a third of your enemy's max health."
@@ -58924,6 +60507,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Shield (10/15/20/25) for each Aquatic item you have."
@@ -59061,6 +60645,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (6/5/4) seconds",
         "Haste 1 item for 2 second(s).",
@@ -59183,6 +60768,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 2 seconds",
         "Reduce the cooldown of your other items by 8% for this fight.",
@@ -59307,6 +60893,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Heal 20.",
@@ -59440,6 +61027,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (10/8) seconds",
         "Gain (5/10) Regen for the fight.",
@@ -59569,6 +61157,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Shield (50/75/100/125).",
@@ -59682,6 +61271,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you Crit, Haste 1 item(s) for (1/2/3) second(s).",
         "Adjacent items have (+15%/+30%/+50%) Crit Chance."
@@ -59786,6 +61376,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you use the item to the right of this, Haste it for (1/2/3/4) second(s). If it is a weapon, it also gains (+3/+5/+7/+9) damage for the fight."
       ],
@@ -59934,6 +61525,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Lifesteal",
@@ -60064,6 +61656,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Deal (10/20/30/40) damage.",
@@ -60193,6 +61786,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal 40 damage.",
@@ -60235,7 +61829,9 @@
           "tooltips": []
         }
       },
-      "tags": [],
+      "tags": [
+        "Loot"
+      ],
       "hiddenTags": [
         "DamageReference"
       ],
@@ -60300,6 +61896,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, your leftmost Weapon gains (5/10/15/20) Damage."
       ],
@@ -60308,6 +61905,10 @@
         {
           "cardId": "04b60df4-91d9-4065-94e0-f9f462a3b104",
           "cardName": "Tempest Bravo"
+        },
+        {
+          "cardId": "41c5f103-2d76-4a51-ae28-ee294490b071",
+          "cardName": "Ventriloquist"
         },
         {
           "cardId": "4a4542cd-91d8-4463-84fc-c111fc7535ee",
@@ -60437,6 +62038,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, get 3 Small items from any hero."
       ],
@@ -60542,6 +62144,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Your Aquatic items have +1 Multicast."
       ],
@@ -60665,6 +62268,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Crit Chance (15%/30%/50%/100%)",
@@ -60679,10 +62283,6 @@
         {
           "cardId": "91e59b0c-968c-4c45-9391-5104571fee28",
           "cardName": "Outlands Dervish"
-        },
-        {
-          "cardId": "fc59e9b3-88be-450c-b2dc-65d58a33d1d0",
-          "cardName": "Lord of the Wastes"
         }
       ]
     },
@@ -60801,6 +62401,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Ammo (2/3/4)",
@@ -60808,7 +62409,12 @@
         "Slow your items for 1 second(s)."
       ],
       "packId": "Vanessa_The_Gang",
-      "combatEncounters": []
+      "combatEncounters": [
+        {
+          "cardId": "3e80e4e9-13e6-441c-b770-a82a0297ad47",
+          "cardName": "Terrorform"
+        }
+      ]
     },
     {
       "id": "7d55da10-108e-43b6-bf86-4893f5b9060d",
@@ -60927,6 +62533,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Deal (50/75/100/125) damage.",
@@ -61050,6 +62657,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Burn 3.",
@@ -61176,6 +62784,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "If you have 3 or more Weapons, they gain (+15/+25/+35/+50) Damage for the fight.",
@@ -61284,6 +62893,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Ammo 1",
@@ -61336,6 +62946,7 @@
         "Mak"
       ],
       "enchantments": [],
+      "quests": [],
       "unifiedTooltips": [
         "At the start of each day, get a Catalyst.",
         "When you sell Catalyst, gain (1/2/3) Regen."
@@ -61400,6 +63011,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "At the start of each hour, permanently gain (10/20/30) Max Health.",
         "You have (+1/+2/+3) Income."
@@ -61512,6 +63124,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "The weapon to the left of this has (+10/+20/+30/+50) damage.",
         "If you have exactly one weapon, reduce its cooldown by (10%/15%/20%/25%)."
@@ -61646,6 +63259,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Shield (10/20/40/80).",
@@ -61756,6 +63370,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Destroy a small enemy item for the fight."
@@ -61882,6 +63497,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Slow 1 item(s) for (1/2/3) second(s).",
@@ -62008,6 +63624,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Burn (4/6/8).",
@@ -62129,6 +63746,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal damage equal to 3 times the value of your items.",
@@ -62253,6 +63871,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Ammo 1",
@@ -62394,6 +64013,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Ammo 0",
@@ -62518,6 +64138,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 30 seconds",
         "Deal (75/100) damage.",
@@ -62635,6 +64256,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Slow 1 item(s) for (1/2/3/4) second(s).",
@@ -62755,6 +64377,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 11 seconds",
         "Deal 100 damage.",
@@ -62881,6 +64504,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Freeze 1 item for (1/1.5/2) second(s).",
@@ -62917,7 +64541,9 @@
           "tooltips": []
         }
       },
-      "tags": [],
+      "tags": [
+        "Loot"
+      ],
       "hiddenTags": [],
       "customTags": [
         "Unpurchasable"
@@ -62982,6 +64608,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, your leftmost Freeze item gains +0.5 Freeze duration."
       ],
@@ -63111,6 +64738,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (8/7/6) seconds",
         "Deal 20 damage.",
@@ -63238,6 +64866,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Haste your other items for (1/2/3) second(s).",
@@ -63367,6 +64996,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Burn (1/2/3).",
@@ -63484,6 +65114,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 13 seconds",
         "Shield equal to your current Health.",
@@ -63607,6 +65238,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Poison equal to your Regen.",
@@ -63623,6 +65255,164 @@
           "cardName": "Foundation Revenant"
         }
       ]
+    },
+    {
+      "id": "2e3f4a5b-6c7d-8e9f-0a1b-2c3d4e5f6a7b",
+      "name": "Soulstone",
+      "startingTier": "Silver",
+      "tiers": {
+        "Bronze": {
+          "tooltips": []
+        },
+        "Silver": {
+          "tooltips": [
+            "Cooldown 4 seconds",
+            "Gain 3 Regen for the fight."
+          ]
+        },
+        "Gold": {
+          "tooltips": [
+            "Cooldown 4 seconds",
+            "Gain 6 Regen for the fight."
+          ]
+        },
+        "Diamond": {
+          "tooltips": [
+            "Cooldown 4 seconds",
+            "Gain 9 Regen for the fight."
+          ]
+        },
+        "Legendary": {
+          "tooltips": []
+        }
+      },
+      "tags": [
+        "Relic"
+      ],
+      "hiddenTags": [
+        "Regen"
+      ],
+      "customTags": [],
+      "size": "Small",
+      "heroes": [
+        "Mak"
+      ],
+      "enchantments": [
+        {
+          "type": "Heavy",
+          "tooltips": [
+            "This has double Slow duration."
+          ]
+        },
+        {
+          "type": "Icy",
+          "tooltips": [
+            "This has double Freeze duration."
+          ]
+        },
+        {
+          "type": "Turbo",
+          "tooltips": [
+            "Haste 1 item for 3 second(s)."
+          ]
+        },
+        {
+          "type": "Shielded",
+          "tooltips": [
+            "Shield equal to 10 times this item's Regen."
+          ]
+        },
+        {
+          "type": "Restorative",
+          "tooltips": [
+            "Heal equal to 10 times this item's Regen."
+          ]
+        },
+        {
+          "type": "Toxic",
+          "tooltips": [
+            "This has double Poison."
+          ]
+        },
+        {
+          "type": "Fiery",
+          "tooltips": [
+            "This has double Burn."
+          ]
+        },
+        {
+          "type": "Shiny",
+          "tooltips": [
+            "This has +1 Multicast."
+          ]
+        },
+        {
+          "type": "Radiant",
+          "tooltips": [
+            "This cannot be Frozen, Slowed or Destroyed."
+          ]
+        },
+        {
+          "type": "Deadly",
+          "tooltips": [
+            "+50% Crit Chance"
+          ]
+        },
+        {
+          "type": "Obsidian",
+          "tooltips": [
+            "Deal damage equal to 10 times this item's Regen."
+          ]
+        }
+      ],
+      "quests": [
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Buy 8 Poison items"
+              ],
+              "rewardTooltips": [
+                "Poison ({abilityq1}/3/6/9)."
+              ]
+            },
+            {
+              "tooltips": [
+                "Buy 8 Burn items"
+              ],
+              "rewardTooltips": [
+                "Burn ({abilityq2}/3/6/9)."
+              ]
+            }
+          ]
+        },
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Buy 4 Slow items"
+              ],
+              "rewardTooltips": [
+                "Slow ({abilityq3targets}/1/2/3). items for ({abilityq3}/1/1/1). second(s)."
+              ]
+            },
+            {
+              "tooltips": [
+                "Buy 4 Freeze items"
+              ],
+              "rewardTooltips": [
+                "Freeze ({abilityq4targets}/1/2/3). items for ({abilityq4}/0.5/0.5/0.5). second(s)."
+              ]
+            }
+          ]
+        }
+      ],
+      "unifiedTooltips": [
+        "Cooldown 4 seconds",
+        "Gain (3/6/9) Regen for the fight."
+      ],
+      "packId": "Mak_Lost_Treasures",
+      "combatEncounters": []
     },
     {
       "id": "40d8b44a-8e2f-4081-8163-043d76ddbafa",
@@ -63734,6 +65524,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Shield equal to (2/3) times the value of your items.",
@@ -63788,6 +65579,7 @@
         "Common"
       ],
       "enchantments": [],
+      "quests": [],
       "unifiedTooltips": [
         "Sells for gold"
       ],
@@ -63912,6 +65704,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Charge 1 non-Toy item(s) (1/2/3) second(s).",
@@ -64023,6 +65816,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Ammo 1",
@@ -64161,6 +65955,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Deal (10/20/30/40) Damage.",
@@ -64290,6 +66085,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal (10/20/40/80) damage.",
@@ -64416,6 +66212,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Shield (10/15/20/25).",
@@ -64525,6 +66322,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "At the start of each fight, Enchant 1 non-enchanted item on each player's board for the fight.",
         "When an enemy uses an Enchanted Item, charge 1 Enchanted item 2 seconds."
@@ -64633,6 +66431,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Adjacent items have (+25%/+50%) Crit Chance.",
         "At the start of each fight, an enemy item has its cooldown increased by (3/6) second(s)."
@@ -64754,6 +66553,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Multicast 2",
@@ -64818,6 +66618,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you win a fight with Stained Glass Window in play, your Properties in play gain (5/10) value.",
         "When you lose a fight with Stained Glass Window in play, permanently destroy this.",
@@ -64934,6 +66735,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Adjacent items have (+10%/+15%/+20%/+25%) Crit Chance.",
         "Adjacent items have their cooldown reduced by (10%/15%/20%/25%)."
@@ -65058,6 +66860,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Burn 2.",
@@ -65187,6 +66990,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Lifesteal",
@@ -65306,6 +67110,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 11 seconds",
         "Freeze both players' items for (1/2) second(s)."
@@ -65431,6 +67236,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Ammo 1",
@@ -65555,6 +67361,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Deal (50/75/100) damage.",
@@ -65682,6 +67489,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (24/36/48) damage.",
@@ -65807,6 +67615,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Heal equal to (4/6) times the value of your items.",
@@ -65934,6 +67743,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Heal (1/2/3/4).",
@@ -66067,6 +67877,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Burn (2/3/4/5).",
@@ -66191,6 +68002,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Deal (10/20/30/40) damage.",
@@ -66322,6 +68134,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (12/11/10) seconds",
         "Deal damage equal to the Regen plus the Burn on both players.",
@@ -66392,6 +68205,7 @@
         "Common"
       ],
       "enchantments": [],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Ammo 10",
@@ -66456,6 +68270,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Adjacent items have (+25%/+50%) Crit Chance.",
         "Adjacent items have bonus damage, heal, or shield equal to their Crit Chance."
@@ -66579,13 +68394,19 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal (30/45/60/75) damage.",
         "When you use an adjacent Weapon, it gains (+3/+6/+9/+12) damage for the fight."
       ],
       "packId": "Vanessa_Core",
-      "combatEncounters": []
+      "combatEncounters": [
+        {
+          "cardId": "41c5f103-2d76-4a51-ae28-ee294490b071",
+          "cardName": "Ventriloquist"
+        }
+      ]
     },
     {
       "id": "dab80323-ad8e-4874-a333-0c4e50a55b2a",
@@ -66706,6 +68527,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Deal (10/15/20/25) damage.",
@@ -66713,6 +68535,125 @@
       ],
       "packId": "Mak_Core",
       "combatEncounters": []
+    },
+    {
+      "id": "e5af5b7c-2e8f-4135-8e14-8d1ea71908de",
+      "name": "Sword of Swords",
+      "startingTier": "Legendary",
+      "tiers": {
+        "Bronze": {
+          "tooltips": []
+        },
+        "Silver": {
+          "tooltips": []
+        },
+        "Gold": {
+          "tooltips": []
+        },
+        "Diamond": {
+          "tooltips": []
+        },
+        "Legendary": {
+          "tooltips": [
+            "Cooldown 7 seconds",
+            "Deal 100 damage.",
+            "This has +1 Multicast for each other item you have from a different Hero."
+          ]
+        }
+      },
+      "tags": [
+        "Weapon",
+        "Relic"
+      ],
+      "hiddenTags": [
+        "Damage"
+      ],
+      "customTags": [],
+      "size": "Medium",
+      "heroes": [
+        "Common"
+      ],
+      "enchantments": [
+        {
+          "type": "Heavy",
+          "tooltips": [
+            "Slow 1 item for 1 second(s)."
+          ]
+        },
+        {
+          "type": "Icy",
+          "tooltips": [
+            "Freeze 1 item for 0.5 second(s)."
+          ]
+        },
+        {
+          "type": "Turbo",
+          "tooltips": [
+            "Haste 1 item for 1 second(s)."
+          ]
+        },
+        {
+          "type": "Shielded",
+          "tooltips": [
+            "Shield equal to this item's damage."
+          ]
+        },
+        {
+          "type": "Restorative",
+          "tooltips": [
+            "Heal equal to this item's Damage."
+          ]
+        },
+        {
+          "type": "Toxic",
+          "tooltips": [
+            "Poison equal to 10% of this item's damage."
+          ]
+        },
+        {
+          "type": "Fiery",
+          "tooltips": [
+            "Burn equal to 10% of this item's damage."
+          ]
+        },
+        {
+          "type": "Shiny",
+          "tooltips": [
+            "This has +1 Multicast."
+          ]
+        },
+        {
+          "type": "Deadly",
+          "tooltips": [
+            "+50% Crit Chance"
+          ]
+        },
+        {
+          "type": "Radiant",
+          "tooltips": [
+            "This cannot be Frozen, Slowed or Destroyed."
+          ]
+        },
+        {
+          "type": "Obsidian",
+          "tooltips": [
+            "This has double Damage."
+          ]
+        }
+      ],
+      "quests": [],
+      "unifiedTooltips": [
+        "Cooldown 7 seconds",
+        "Deal 100 damage.",
+        "This has +1 Multicast for each other item you have from a different Hero."
+      ],
+      "packId": "Core",
+      "combatEncounters": [
+        {
+          "cardId": "20863550-960f-4713-99eb-2ff2e4cfb3ef",
+          "cardName": "Morguloth"
+        }
+      ]
     },
     {
       "id": "2aaf673d-b44d-4e50-95c2-939bedb07184",
@@ -66833,6 +68774,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (8/7/6/5) seconds",
         "Deal 60 damage.",
@@ -66960,6 +68902,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (5/10/15/20) damage.",
@@ -67084,6 +69027,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Heal equal to (5%/10%) of your Max Health.",
@@ -67204,6 +69148,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Multicast 2",
@@ -67213,6 +69158,91 @@
       ],
       "packId": "Core",
       "combatEncounters": []
+    },
+    {
+      "id": "77c8ef2d-62c8-4214-993d-648915c93e83",
+      "name": "Temple Expedition Ticket",
+      "startingTier": "Legendary",
+      "tiers": {
+        "Bronze": {
+          "tooltips": []
+        },
+        "Silver": {
+          "tooltips": []
+        },
+        "Gold": {
+          "tooltips": []
+        },
+        "Diamond": {
+          "tooltips": []
+        },
+        "Legendary": {
+          "tooltips": [
+            "On Day 9, allows you to embark on the Temple Expedition."
+          ]
+        }
+      },
+      "tags": [
+        "Loot"
+      ],
+      "hiddenTags": [],
+      "customTags": [],
+      "size": "Small",
+      "heroes": [
+        "Common"
+      ],
+      "enchantments": [],
+      "quests": [],
+      "unifiedTooltips": [
+        "On Day 9, allows you to embark on the Temple Expedition."
+      ],
+      "packId": "Core",
+      "combatEncounters": [
+        {
+          "cardId": "325c88c3-9496-44bf-b900-4adf1f84bf2f",
+          "cardName": "Eccentric Etherwright"
+        },
+        {
+          "cardId": "4101117c-9cb0-480e-bfac-814da069ec80",
+          "cardName": "Street Gamer"
+        },
+        {
+          "cardId": "5253c1ef-af51-43ac-a307-4e707e5747a6",
+          "cardName": "Prince Marianas"
+        },
+        {
+          "cardId": "54bd46ca-2dec-4fbf-bae9-4cfff1c80043",
+          "cardName": "Kyver Commander"
+        },
+        {
+          "cardId": "7b768d49-b2cc-40f8-ab0f-2d0ed36a0c56",
+          "cardName": "Treasure Turtle"
+        },
+        {
+          "cardId": "8e389a21-9e14-49c4-bdf3-24183f9f9295",
+          "cardName": "Dabbling Apprentice"
+        },
+        {
+          "cardId": "8eb6cf35-27ab-4726-b9f7-05133a4b94b8",
+          "cardName": "Hellbilly"
+        },
+        {
+          "cardId": "962bf2b2-fc1b-4ad3-9526-15d76d3bb0de",
+          "cardName": "Foundation Weeper"
+        },
+        {
+          "cardId": "9c167a0c-d348-4e09-8f6b-be0ac65d3cda",
+          "cardName": "Trashtown Mayor"
+        },
+        {
+          "cardId": "b93f5b44-ba9f-4196-a94e-c5de17ab5c5d",
+          "cardName": "Boarrior"
+        },
+        {
+          "cardId": "dbc00a8b-7fae-4792-a9da-698d3cd4f578",
+          "cardName": "Gorgon Noble"
+        }
+      ]
     },
     {
       "id": "8659e6da-45a8-433b-8d91-35c0d2ccb912",
@@ -67336,6 +69366,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Haste adjacent items for (1/2/3) second(s).",
@@ -67461,6 +69492,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Shield (10/20/40/80).",
@@ -67588,6 +69620,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (60/90/120) damage.",
@@ -67718,6 +69751,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (9/7/5) seconds",
         "Deal 50 damage.",
@@ -67842,6 +69876,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Heal equal to your Shield.",
@@ -67965,6 +70000,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (20/16) seconds",
         "Ammo 1",
@@ -68093,6 +70129,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (6/5/4) seconds",
         "Deal 50 damage.",
@@ -68211,6 +70248,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 15 seconds",
         "Use all your other items.",
@@ -68325,6 +70363,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you transform a Reagent, permanently gain (5/10/15) Regen."
       ],
@@ -68444,6 +70483,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Burn 5.",
@@ -68490,6 +70530,7 @@
         "Common"
       ],
       "enchantments": [],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, gain access to the Thieves Guild."
       ],
@@ -68613,6 +70654,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Ammo 3",
@@ -68727,6 +70769,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Slow 1 item(s) for (2/3) second(s).",
@@ -68840,6 +70883,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "The item to the left of this is a Vehicle and has its cooldown reduced by (5%/10%/15%)."
       ],
@@ -68973,6 +71017,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Burn (3/5/7/9).",
@@ -69113,6 +71158,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Multicast 2",
@@ -69240,6 +71286,32 @@
           ]
         }
       ],
+      "quests": [
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Complete 1 quest on another item"
+              ],
+              "rewardTooltips": [
+                "Poison ({abilityq1}/5/10/15)."
+              ]
+            }
+          ]
+        },
+        {
+          "entries": [
+            {
+              "tooltips": [
+                "Complete 2 quests on other items"
+              ],
+              "rewardTooltips": [
+                "Freeze ({abilityq2targets}/1/1/1). items for ({abilityq2}/0.5/0.5/0.5). second(s)."
+              ]
+            }
+          ]
+        }
+      ],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Gain (5/10/15) Regen for the fight.",
@@ -69355,6 +71427,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 3 seconds",
         "Ammo 50",
@@ -69485,6 +71558,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Shield (10/30/50/100).",
@@ -69619,6 +71693,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Ammo 1",
@@ -69627,7 +71702,12 @@
         "If the item is Large, Reload 1 Ammo."
       ],
       "packId": "Vanessa_Core",
-      "combatEncounters": []
+      "combatEncounters": [
+        {
+          "cardId": "3e80e4e9-13e6-441c-b770-a82a0297ad47",
+          "cardName": "Terrorform"
+        }
+      ]
     },
     {
       "id": "f8a38ad1-5e5a-4c95-9bd1-55c81c31b117",
@@ -69748,6 +71828,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (14/12/10) seconds",
         "Deal (200/400/800) damage.",
@@ -69874,6 +71955,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Shield (20/40/80/160).",
@@ -69998,6 +72080,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Poison (1/2/3/4).",
@@ -70137,6 +72220,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Deal (40/60/80/100) damage.",
@@ -70247,6 +72331,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When your enemy uses an item, Slow it for (1/2) second(s)."
       ],
@@ -70375,6 +72460,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal 10 damage.",
@@ -70487,6 +72573,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you Slow, gain (5/10) Regen for the fight.",
         "At the start of each hour, get a Coconut or Citrus."
@@ -70602,6 +72689,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, your leftmost item (+1/+2/+3/+4) value."
       ],
@@ -70718,6 +72806,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Shield 25.",
@@ -70855,6 +72944,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Multicast 2",
@@ -70896,7 +72986,9 @@
           "tooltips": []
         }
       },
-      "tags": [],
+      "tags": [
+        "Loot"
+      ],
       "hiddenTags": [],
       "customTags": [
         "Unpurchasable"
@@ -70979,6 +73071,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, upgrade your leftmost (Bronze/Silver/Gold) (or lower)-tier item."
       ],
@@ -71101,6 +73194,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Heal (20/30/40/50).",
@@ -71226,6 +73320,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 2 seconds",
         "Ammo (6/8/10/12)",
@@ -71357,6 +73452,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Poison (3/6/9) for each type this has.",
@@ -71458,6 +73554,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "At the start of each day, get a Chocolate Bar, Spare Change and Truffle."
       ],
@@ -71558,6 +73655,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you use the weapon to the left of this, Poison (2/3/4/5)."
       ],
@@ -71570,6 +73668,10 @@
         {
           "cardId": "224ba8a9-3781-4403-8bfc-527b4e64b8aa",
           "cardName": "Viper Tyrant"
+        },
+        {
+          "cardId": "d1dc075f-f5d4-4bb7-9655-55591e123941",
+          "cardName": "Greenheart Guardian"
         }
       ]
     },
@@ -71690,6 +73792,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Poison (1/2/3/4).",
@@ -71822,13 +73925,19 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Poison both players (2/4/6/8).",
         "Gain Regen for the fight equal to this item's Poison."
       ],
       "packId": "Mak_Dangerous_Experiments",
-      "combatEncounters": []
+      "combatEncounters": [
+        {
+          "cardId": "4ce6d441-4aed-455b-b83f-0b057b462515",
+          "cardName": "Mythkeeper"
+        }
+      ]
     },
     {
       "id": "fd35f65b-8e2a-4a6c-8e85-20d0fd5b8fc1",
@@ -71935,6 +74044,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you use a potion, deal (15/30/45) damage.",
         "When you Reload or transform a potion, this gains (+15/+30/+45) damage for the fight."
@@ -71969,7 +74079,9 @@
           "tooltips": []
         }
       },
-      "tags": [],
+      "tags": [
+        "Loot"
+      ],
       "hiddenTags": [
         "Experience"
       ],
@@ -71988,6 +74100,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, gain (1/2/3) XP."
       ],
@@ -72127,6 +74240,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Heal 200.",
@@ -72255,6 +74369,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Haste adjacent Properties for (1/2/3) second(s).",
@@ -72376,6 +74491,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Deal 25 damage.",
@@ -72383,7 +74499,12 @@
         "A Regen item gains + Regen equal to (15%/25%) of this item's damage for the fight."
       ],
       "packId": "Mak_Core",
-      "combatEncounters": []
+      "combatEncounters": [
+        {
+          "cardId": "a5103989-fb08-4ac6-a5e8-6a610e0b1d46",
+          "cardName": "Qomatz"
+        }
+      ]
     },
     {
       "id": "020a0ec0-21e6-41af-899f-063573ba9ca5",
@@ -72501,6 +74622,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (9/8/7/6) seconds",
         "Poison yourself (1/2/3/4) for each Virus on your board.",
@@ -72618,6 +74740,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 11 seconds",
         "Ammo 1",
@@ -72745,6 +74868,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Multicast 2",
@@ -72870,6 +74994,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Gain Shield equal to your enemy's burn.",
@@ -72999,6 +75124,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Multicast 3",
@@ -73123,6 +75249,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Shield 10.",
@@ -73237,6 +75364,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (10/9/8) seconds",
         "Permanently gain (10/15/20) Max Health.",
@@ -73346,12 +75474,17 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Charge your other non-weapon items (1/2) second(s)."
       ],
       "packId": "Core",
       "combatEncounters": [
+        {
+          "cardId": "4ce6d441-4aed-455b-b83f-0b057b462515",
+          "cardName": "Mythkeeper"
+        },
         {
           "cardId": "69af3106-78fd-4a74-b150-ec41442cdbba",
           "cardName": "Lich"
@@ -73460,6 +75593,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you win a fight against a Hero, gain 1 XP. If you had Wanted Poster in play, gain 1 additional XP.",
         "Your items have (10%/20%/30%) Crit Chance."
@@ -73585,6 +75719,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (8/7/6) seconds",
         "Haste your other items for 2 second(s).",
@@ -73711,6 +75846,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Your weapons gain (+5/+10/+15/+20) damage for the fight.",
@@ -73852,6 +75988,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (7/6/5) seconds",
         "Deal 20 damage.",
@@ -73974,6 +76111,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Freeze 1 item(s) for (1/2/3) second(s).",
@@ -74100,6 +76238,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Burn (4/6/8).",
@@ -74228,6 +76367,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Burn (4/6).",
@@ -74359,6 +76499,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Your weapons gain (+10/+15/+20/+25) Damage and your Heal items gain (+10/+15/+20/+25) Heal for the fight.",
@@ -74489,6 +76630,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Shield (10/20/30/40).",
@@ -74619,6 +76761,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown (7/6/5/4) seconds",
         "Burn 8.",
@@ -74737,6 +76880,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When a player uses a Weapon, Poison that player (3/4/5).",
         "When you use a non-Weapon item, gain (3/4/5) Regen for the fight."
@@ -74848,6 +76992,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Charge adjacent items 1 second(s).",
@@ -74971,6 +77116,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Deal (10/20) damage.",
@@ -75098,6 +77244,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Adjacent items gain (+5/+10/+15/+20) Shield for the fight.",
@@ -75202,6 +77349,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "When you sell this, your Shield items gain (1/2/3/4) Shield."
       ],
@@ -75322,6 +77470,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Adjacent Shield items (+2/+4/+6/+8) Shield for the fight."
@@ -75443,6 +77592,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Your Shield item to the left of this gains (+4/+8/+12/+16) Shield for the fight."
@@ -75564,6 +77714,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Your Shield item to the right of this gains (+4/+8/+12/+16) Shield for the fight."
@@ -75685,6 +77836,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Your Shield items gain (1/2/3/4) Shield for the fight."
@@ -75804,6 +77956,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 10 seconds",
         "Deal (1000/1500) damage.",
@@ -75931,6 +78084,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Freeze 1 item(s) for 1 second(s).",
@@ -76052,6 +78206,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Haste (2/3/4) item(s) for 1 second(s).",
@@ -76177,6 +78332,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 4 seconds",
         "Deal 1 damage.",
@@ -76309,6 +78465,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Shield (75/100/125).",
@@ -76438,6 +78595,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Deal (75/100/125) damage.",
@@ -76572,6 +78730,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Deal (20/30/40/50) damage.",
@@ -76692,6 +78851,7 @@
           ]
         }
       ],
+      "quests": [],
       "unifiedTooltips": [
         "Cooldown 7 seconds",
         "Slow (2/3) items for 2 second(s).",
@@ -76700,6 +78860,10 @@
       ],
       "packId": "Core",
       "combatEncounters": [
+        {
+          "cardId": "4ce6d441-4aed-455b-b83f-0b057b462515",
+          "cardName": "Mythkeeper"
+        },
         {
           "cardId": "a44c3d18-8968-4956-b3a2-5cbf3b4c12c2",
           "cardName": "Yerdan"
