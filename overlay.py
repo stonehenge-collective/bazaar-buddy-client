@@ -15,6 +15,7 @@ from PyQt6.QtWidgets import (
     QVBoxLayout,
     QWidget,
     QLineEdit,
+    QToolButton,
 )
 
 # ──────────────────────────  constants  ──────────────────────────
@@ -199,6 +200,17 @@ class Overlay(QWidget):
         )
         self.close_button.raise_()
 
+        self.toggle_button = QToolButton(self)
+        self.toggle_button.setCheckable(True)
+        self.toggle_button.setChecked(False)
+        self.toggle_button.setFixedSize(24, 24)
+        self.toggle_button.clicked.connect(self._toggle_content)
+        self.toggle_button.setStyleSheet(
+            "QToolButton{color:white;background:rgba(255,255,255,0);border:none;font-weight:bold;}"
+            "QToolButton:hover{background:rgba(255,255,255,0.2);}"
+        )
+        self.toggle_button.setText("-")
+
         # ── custom scroll-bar style ──
         bar = self.scroll_area.verticalScrollBar()
         bar.setStyleSheet(  # type: ignore
@@ -206,7 +218,7 @@ class Overlay(QWidget):
             QScrollBar:vertical {{
                 background:transparent;
                 width:12px;
-                margin:0px 0 0px 0;
+                margin:12px 0 0px 0;
                 border:none;
             }}
             QScrollBar::handle:vertical {{
@@ -256,9 +268,10 @@ class Overlay(QWidget):
         # ── position the two buttons ──
         right_edge = self.width() - PADDING // 2
         self.close_button.move(right_edge - self.close_button.width(), self.search_bar.y())
+        self.toggle_button.move(self.close_button.x() - self.toggle_button.width(), self.search_bar.y())
 
         # ── keep the search bar clear of the buttons ──
-        available_w = self.close_button.x() - PADDING - 2  # leave the normal left margin
+        available_w = self.toggle_button.x() - PADDING - 2  # leave the normal left margin
         self.search_bar.setFixedWidth(available_w)
 
     def set_message(self, text: str) -> None:
@@ -268,6 +281,20 @@ class Overlay(QWidget):
         self.label.setTextFormat(Qt.TextFormat.RichText)
         self.label.setText(text)
         self.scroll_area.verticalScrollBar().setValue(0)  # type: ignore
+
+    def _toggle_content(self) -> None:
+        if self.toggle_button.isChecked():
+            self.scroll_area.hide()
+            self._collapsed_height = self.height()
+            self.setFixedHeight(self.search_bar.height())# + PADDING*2)
+            self.toggle_button.setText("+")
+        else:
+            if hasattr(self, "_collapsed_height"):
+                self.scroll_area.show()
+                self.setFixedHeight(self._collapsed_height)
+                self.setMinimumHeight(0)
+                self.setMaximumHeight(16777215)
+            self.toggle_button.setText("-")
 
     # ───── prompt-button public API ─────
     def show_prompt_buttons(self, question: str, yes_text: str | None = None, no_text: str | None = None) -> None:

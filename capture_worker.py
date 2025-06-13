@@ -5,7 +5,6 @@ from abc import ABC, abstractmethod
 from logging import Logger
 from configuration import Configuration
 
-
 class FailedToFindWindowError(Exception):
     pass
 
@@ -41,80 +40,40 @@ class WindowsCaptureWorkerV2(BaseCaptureWorker):
         self._cap = WindowsCapture(
             window_name=window_identifier, cursor_capture=False, draw_border=False if supports_borderless else None
         )
-        self._control: CaptureControl | None = None
-        self._capture_event = threading.Event()
+        self._logger.info(f"[{threading.current_thread().name}] Starting capture event loop")
         self._capture_image: Image.Image | None = None
         self._capture_error: str | None = None
+        self._control: CaptureControl | None = None
 
         @self._cap.event  # type: ignore
         def on_frame_arrived(frame: Frame, control: CaptureControl):
             try:
                 # BGRA -> RGB ndarray -> PIL.Image
-                self._logger.info(f"[{threading.current_thread().name}] Frame arrived, converting to RGB")
+                #self._logger.info(f"[{threading.current_thread().name}] Frame arrived, converting to RGB")
                 rgb = frame.convert_to_bgr().frame_buffer[..., ::-1].copy()
-                self._logger.info(f"[{threading.current_thread().name}] Converted to RGB, creating PIL.Image")
+                #self._logger.info(f"[{threading.current_thread().name}] Converted to RGB, creating PIL.Image")
                 image = Image.fromarray(rgb)
                 self._capture_image = image
-                self._logger.info(f"[{threading.current_thread().name}] PIL.Image created, setting capture image")
+                #self._logger.info(f"[{threading.current_thread().name}] PIL.Image created, setting capture image")
             except Exception as exc:
                 self._capture_error = str(exc)
-            finally:
-                self._capture_event.set()
 
         @self._cap.event  # type: ignore
         def on_closed():
             self._logger.info("Capture worker closed")
             self._control = None
 
+
+
     def capture_image_sync(self, timeout: float = 2.5) -> Image.Image | None:
         with self._capture_lock:
-            self._logger.info(f"[{threading.current_thread().name}] Acquiring capture lock")
-            if self._control is not None:
-                # already capturing
-                return None
-
-            # reset state
-            self._capture_event.clear()
-            self._capture_error = None
-            self._capture_image = None
-
-            try:
-                self._logger.info(f"[{threading.current_thread().name}] Starting capture event loop")
-                self._control = self._cap.start_free_threaded()
-
-                if self._capture_event.wait(timeout):
-                    if self._capture_error is not None:
-                        raise Exception(f"Capture failed: {self._capture_error}")
-                    self._logger.info(
-                        f"[{threading.current_thread().name}] Capture event loop completed, returning image"
-                    )
-                    if self._control:
-                        self._control.stop()
-                        self._control = None
-                    return self._capture_image
-                else:
-                    self._logger.info(f"[{threading.current_thread().name}] Capture event loop timed out")
-                    # timeout occurred
-                    if self._control:
-                        self._control.stop()
-                        self._control = None
-                    return None
-            except Exception as exc:
-                if self._control:
-                    self._control.stop()
-                    self._control = None
-                if "Failed To Find Window" in str(exc):
-                    self._logger.info(
-                        f"[{threading.current_thread().name}] Failed to find window, raising FailedToFindWindowError"
-                    )
-                    raise FailedToFindWindowError()
-                if "Failed to convert item to GraphicsCaptureItem" in str(exc):
-                    self._logger.info(
-                        f"[{threading.current_thread().name}] Graphics capture failed - window may be minimized or transitioning"
-                    )
-                    raise FailedToFindWindowError()
-                self._logger.error(f"[{threading.current_thread().name}] Capture failed: {exc}")
-                raise exc
+            if not self._control:
+                try:
+                    self._control = self._cap.start_free_threaded()
+                except Exception as e:
+                    if "Failed To Find Window" in str(e):
+                        raise FailedToFindWindowError
+            return self._capture_image
 
 
 class MacCaptureWorker(BaseCaptureWorker):

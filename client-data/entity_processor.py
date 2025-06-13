@@ -51,6 +51,7 @@ def cleanup_display_message(text: str) -> str:
 ALT_TEXT_MAP: Dict[str, str] = {
     "Frost Street Champion": ["Frost Street Champiox", "Frost Street Champio"],
     "Tempest Flamedancer": ["Tempest Flamedancex"],
+    "Greenheart Guardian": ["Greenheart"]
 }
 
 DO_NOT_DISPLAY: Dict[str] = [

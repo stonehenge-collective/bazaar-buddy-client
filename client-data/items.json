@@ -1,5 +1,5 @@
 {
-  "version": "6383c1f4",
+  "version": "445270cc",
   "items": [
     {
       "id": "0efe7d3f-4f18-4667-89a3-ac915a93a9f5",
@@ -4169,8 +4169,8 @@
           "tooltips": [
             "Cooldown 8 seconds",
             "Poison 10.",
-            "When you Freeze, Poison, or Burn, your Relics gain +10 Poison for the fight.",
-            "When you use another Relic, charge this 1 second."
+            "When you Freeze, Poison, or Burn, your items gain +5 Poison for the fight.",
+            "When you use an adjacent Relic, charge this 1 second."
           ]
         }
       },
@@ -4259,8 +4259,8 @@
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Poison 10.",
-        "When you Freeze, Poison, or Burn, your Relics gain +10 Poison for the fight.",
-        "When you use another Relic, charge this 1 second."
+        "When you Freeze, Poison, or Burn, your items gain +5 Poison for the fight.",
+        "When you use an adjacent Relic, charge this 1 second."
       ],
       "packId": "Core",
       "combatEncounters": []
@@ -6219,25 +6219,25 @@
         "Bronze": {
           "tooltips": [
             "Cooldown 5 seconds",
-            "When you use another Relic, charge this 1 second(s)."
+            "When you use an adjacent Relic, charge this 1 second(s)."
           ]
         },
         "Silver": {
           "tooltips": [
             "Cooldown 5 seconds",
-            "When you use another Relic, charge this 1 second(s)."
+            "When you use an adjacent Relic, charge this 1 second(s)."
           ]
         },
         "Gold": {
           "tooltips": [
             "Cooldown 5 seconds",
-            "When you use another Relic, charge this 1 second(s)."
+            "When you use an adjacent Relic, charge this 1 second(s)."
           ]
         },
         "Diamond": {
           "tooltips": [
             "Cooldown 5 seconds",
-            "When you use another Relic, charge this 1 second(s)."
+            "When you use an adjacent Relic, charge this 1 second(s)."
           ]
         },
         "Legendary": {
@@ -6379,7 +6379,7 @@
                 "Freeze 10 times"
               ],
               "rewardTooltips": [
-                "Freeze (1/2/3/4) items for 0.5 second(s)."
+                "Freeze 1 items for 0.5 second(s)."
               ]
             }
           ]
@@ -6387,7 +6387,7 @@
       ],
       "unifiedTooltips": [
         "Cooldown 5 seconds",
-        "When you use another Relic, charge this 1 second(s)."
+        "When you use an adjacent Relic, charge this 1 second(s)."
       ],
       "packId": "Mak_Lost_Treasures",
       "combatEncounters": []
@@ -6541,8 +6541,8 @@
           "tooltips": [
             "Cooldown 8 seconds",
             "Burn 10.",
-            "When you Freeze, Poison, or Burn, your Relics gain +10 Burn for the fight.",
-            "When you use another Relic, charge this 1 second."
+            "When you Freeze, Poison, or Burn, your items gain +5 Burn for the fight.",
+            "When you use adjacent relic, charge this 1 second."
           ]
         }
       },
@@ -6631,8 +6631,8 @@
       "unifiedTooltips": [
         "Cooldown 8 seconds",
         "Burn 10.",
-        "When you Freeze, Poison, or Burn, your Relics gain +10 Burn for the fight.",
-        "When you use another Relic, charge this 1 second."
+        "When you Freeze, Poison, or Burn, your items gain +5 Burn for the fight.",
+        "When you use adjacent relic, charge this 1 second."
       ],
       "packId": "Core",
       "combatEncounters": []
@@ -11655,21 +11655,21 @@
           "tooltips": [
             "Cooldown 5 seconds",
             "Haste adjacent items for 1 second(s).",
-            "If you have a Vehicle or Large item, reduce this item's cooldown by 50%."
+            "If you have a Vehicle or Large item, reduce this item's cooldown by 1 seconds."
           ]
         },
         "Gold": {
           "tooltips": [
             "Cooldown 5 seconds",
             "Haste adjacent items for 2 second(s).",
-            "If you have a Vehicle or Large item, reduce this item's cooldown by 50%."
+            "If you have a Vehicle or Large item, reduce this item's cooldown by 1 seconds."
           ]
         },
         "Diamond": {
           "tooltips": [
             "Cooldown 5 seconds",
             "Haste adjacent items for 3 second(s).",
-            "If you have a Vehicle or Large item, reduce this item's cooldown by 50%."
+            "If you have a Vehicle or Large item, reduce this item's cooldown by 1 seconds."
           ]
         },
         "Legendary": {
@@ -11760,7 +11760,7 @@
       "unifiedTooltips": [
         "Cooldown 5 seconds",
         "Haste adjacent items for (1/2/3) second(s).",
-        "If you have a Vehicle or Large item, reduce this item's cooldown by 50%."
+        "If you have a Vehicle or Large item, reduce this item's cooldown by 1 seconds."
       ],
       "packId": "Vanessa_Core",
       "combatEncounters": [
@@ -16214,21 +16214,21 @@
           "tooltips": [
             "Cooldown 6 seconds",
             "The Core gains +5% Crit Chance for the fight.",
-            "While either player has Burn, this item's cooldown is reduced by 50%."
+            "While either player has Burn, this item's cooldown is reduced by 3 seconds."
           ]
         },
         "Gold": {
           "tooltips": [
             "Cooldown 6 seconds",
             "The Core gains +10% Crit Chance for the fight.",
-            "While either player has Burn, this item's cooldown is reduced by 50%."
+            "While either player has Burn, this item's cooldown is reduced by 3 seconds."
           ]
         },
         "Diamond": {
           "tooltips": [
             "Cooldown 6 seconds",
             "The Core gains +15% Crit Chance for the fight.",
-            "While either player has Burn, this item's cooldown is reduced by 50%."
+            "While either player has Burn, this item's cooldown is reduced by 3 seconds."
           ]
         },
         "Legendary": {
@@ -16319,7 +16319,7 @@
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "The Core gains (+5%/+10%/+15%) Crit Chance for the fight.",
-        "While either player has Burn, this item's cooldown is reduced by 50%."
+        "While either player has Burn, this item's cooldown is reduced by 3 seconds."
       ],
       "packId": "Dooley_Core",
       "combatEncounters": []
@@ -19308,9 +19308,7 @@
               "tooltips": [
                 "A Weapon is used 50 times"
               ],
-              "rewardTooltips": [
-                "This enchants a second item."
-              ]
+              "rewardTooltips": []
             }
           ]
         }
@@ -19830,7 +19828,7 @@
           "tooltips": [
             "Cooldown 9 seconds",
             "Deal 80 damage.",
-            "The first time you use this each fight, destroy a small or medium enemy item for the fight.",
+            "The first time you use this each fight, destroy a small enemy item for the fight.",
             "When you destroy an item during combat, your Dinosaurs permanently gain 10 damage."
           ]
         },
@@ -19838,7 +19836,7 @@
           "tooltips": [
             "Cooldown 9 seconds",
             "Deal 80 damage.",
-            "The first time you use this each fight, destroy a small or medium enemy item for the fight.",
+            "The first time you use this each fight, destroy a small enemy item for the fight.",
             "When you destroy an item during combat, your Dinosaurs permanently gain 15 damage."
           ]
         },
@@ -19846,7 +19844,7 @@
           "tooltips": [
             "Cooldown 9 seconds",
             "Deal 80 damage.",
-            "The first time you use this each fight, destroy a small or medium enemy item for the fight.",
+            "The first time you use this each fight, destroy a small enemy item for the fight.",
             "When you destroy an item during combat, your Dinosaurs permanently gain 20 damage."
           ]
         },
@@ -19939,7 +19937,7 @@
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Deal 80 damage.",
-        "The first time you use this each fight, destroy a small or medium enemy item for the fight.",
+        "The first time you use this each fight, destroy a small enemy item for the fight.",
         "When you destroy an item during combat, your Dinosaurs permanently gain (10/15/20) damage."
       ],
       "packId": "Dooley_Core",
@@ -20200,30 +20198,30 @@
       "tiers": {
         "Bronze": {
           "tooltips": [
-            "Cooldown 5 seconds",
+            "Cooldown 6 seconds",
             "Deal 10 damage.",
-            "This item's cooldown is reduced by 50% if you have at least 4 other Dinosaurs, Tools or Relics."
+            "This item's cooldown is reduced by 3 seconds if you have at least 4 other Dinosaurs, Tools or Relics."
           ]
         },
         "Silver": {
           "tooltips": [
-            "Cooldown 5 seconds",
+            "Cooldown 6 seconds",
             "Deal 20 damage.",
-            "This item's cooldown is reduced by 50% if you have at least 4 other Dinosaurs, Tools or Relics."
+            "This item's cooldown is reduced by 3 seconds if you have at least 4 other Dinosaurs, Tools or Relics."
           ]
         },
         "Gold": {
           "tooltips": [
-            "Cooldown 5 seconds",
+            "Cooldown 6 seconds",
             "Deal 30 damage.",
-            "This item's cooldown is reduced by 50% if you have at least 4 other Dinosaurs, Tools or Relics."
+            "This item's cooldown is reduced by 3 seconds if you have at least 4 other Dinosaurs, Tools or Relics."
           ]
         },
         "Diamond": {
           "tooltips": [
-            "Cooldown 5 seconds",
+            "Cooldown 6 seconds",
             "Deal 40 damage.",
-            "This item's cooldown is reduced by 50% if you have at least 4 other Dinosaurs, Tools or Relics."
+            "This item's cooldown is reduced by 3 seconds if you have at least 4 other Dinosaurs, Tools or Relics."
           ]
         },
         "Legendary": {
@@ -20316,9 +20314,9 @@
       ],
       "quests": [],
       "unifiedTooltips": [
-        "Cooldown 5 seconds",
+        "Cooldown 6 seconds",
         "Deal (10/20/30/40) damage.",
-        "This item's cooldown is reduced by 50% if you have at least 4 other Dinosaurs, Tools or Relics."
+        "This item's cooldown is reduced by 3 seconds if you have at least 4 other Dinosaurs, Tools or Relics."
       ],
       "packId": "Dooley_Primal_Dooley",
       "combatEncounters": []
@@ -23860,21 +23858,21 @@
           "tooltips": [
             "Cooldown 6 seconds",
             "Charge an adjacent Relic 1 second(s).",
-            "If you have a Quest item, reduce this item's cooldown by 50%."
+            "If you have a Quest item, reduce this item's cooldown by 3 seconds."
           ]
         },
         "Gold": {
           "tooltips": [
             "Cooldown 6 seconds",
             "Charge an adjacent Relic 2 second(s).",
-            "If you have a Quest item, reduce this item's cooldown by 50%."
+            "If you have a Quest item, reduce this item's cooldown by 3 seconds."
           ]
         },
         "Diamond": {
           "tooltips": [
             "Cooldown 6 seconds",
             "Charge an adjacent Relic 3 second(s).",
-            "If you have a Quest item, reduce this item's cooldown by 50%."
+            "If you have a Quest item, reduce this item's cooldown by 3 seconds."
           ]
         },
         "Legendary": {
@@ -23964,7 +23962,7 @@
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Charge an adjacent Relic (1/2/3) second(s).",
-        "If you have a Quest item, reduce this item's cooldown by 50%."
+        "If you have a Quest item, reduce this item's cooldown by 3 seconds."
       ],
       "packId": "Mak_Lost_Treasures",
       "combatEncounters": []
@@ -27414,26 +27412,26 @@
       "tiers": {
         "Bronze": {
           "tooltips": [
-            "Cooldown 7 seconds",
-            "Freeze 1 item(s) for 1 second(s)."
+            "Cooldown 8 seconds",
+            "Freeze 1 item(s) for 0.5 second(s)."
           ]
         },
         "Silver": {
           "tooltips": [
-            "Cooldown 6 seconds",
-            "Freeze 1 item(s) for 1 second(s)."
+            "Cooldown 7 seconds",
+            "Freeze 1 item(s) for 0.5 second(s)."
           ]
         },
         "Gold": {
           "tooltips": [
-            "Cooldown 5 seconds",
-            "Freeze 1 item(s) for 1 second(s)."
+            "Cooldown 6 seconds",
+            "Freeze 1 item(s) for 0.5 second(s)."
           ]
         },
         "Diamond": {
           "tooltips": [
-            "Cooldown 4 seconds",
-            "Freeze 1 item(s) for 1 second(s)."
+            "Cooldown 5 seconds",
+            "Freeze 1 item(s) for 0.5 second(s)."
           ]
         },
         "Legendary": {
@@ -27540,15 +27538,15 @@
                 "Buy 5 Relics"
               ],
               "rewardTooltips": [
-                "When you use another Relic, charge this 1 second(s)."
+                "When you use an adjacent Relic, charge this 1 second(s)."
               ]
             }
           ]
         }
       ],
       "unifiedTooltips": [
-        "Cooldown (7/6/5/4) seconds",
-        "Freeze 1 item(s) for 1 second(s)."
+        "Cooldown (8/7/6/5) seconds",
+        "Freeze 1 item(s) for 0.5 second(s)."
       ],
       "packId": "Mak_Lost_Treasures",
       "combatEncounters": []
@@ -34385,8 +34383,8 @@
         "Legendary": {
           "tooltips": [
             "Cooldown 8 seconds",
-            "Freeze 1 item for 1 second(s).",
-            "Charge adjacent Relics 1 second(s).",
+            "Freeze 1 item for 0.5 second(s).",
+            "Charge adjacent items 1 second(s).",
             "When you Freeze, Poison, or Burn, charge this 1 second(s)."
           ]
         }
@@ -34470,8 +34468,8 @@
       "quests": [],
       "unifiedTooltips": [
         "Cooldown 8 seconds",
-        "Freeze 1 item for 1 second(s).",
-        "Charge adjacent Relics 1 second(s).",
+        "Freeze 1 item for 0.5 second(s).",
+        "Charge adjacent items 1 second(s).",
         "When you Freeze, Poison, or Burn, charge this 1 second(s)."
       ],
       "packId": "Core",
@@ -41468,7 +41466,8 @@
       },
       "tags": [
         "Vehicle",
-        "Weapon"
+        "Weapon",
+        "Relic"
       ],
       "hiddenTags": [
         "Damage"
@@ -47471,6 +47470,126 @@
         "When you gain Regen, charge this 2 second(s)."
       ],
       "packId": "Mak_Core",
+      "combatEncounters": []
+    },
+    {
+      "id": "64e3569f-e023-49a5-ab75-f9613c338d53",
+      "name": "Oinkment",
+      "startingTier": "Silver",
+      "tiers": {
+        "Bronze": {
+          "tooltips": []
+        },
+        "Silver": {
+          "tooltips": [
+            "Cooldown 6 seconds",
+            "Heal equal to 1 times your gold.",
+            "Cleanse half your Burn and Poison."
+          ]
+        },
+        "Gold": {
+          "tooltips": [
+            "Cooldown 6 seconds",
+            "Heal equal to 2 times your gold.",
+            "Cleanse half your Burn and Poison."
+          ]
+        },
+        "Diamond": {
+          "tooltips": [
+            "Cooldown 6 seconds",
+            "Heal equal to 3 times your gold.",
+            "Cleanse half your Burn and Poison."
+          ]
+        },
+        "Legendary": {
+          "tooltips": []
+        }
+      },
+      "tags": [],
+      "hiddenTags": [
+        "Heal",
+        "EconomyReference"
+      ],
+      "customTags": [],
+      "size": "Small",
+      "heroes": [
+        "Pygmalien"
+      ],
+      "enchantments": [
+        {
+          "type": "Heavy",
+          "tooltips": [
+            "Slow 1 item for 2 second(s)."
+          ]
+        },
+        {
+          "type": "Icy",
+          "tooltips": [
+            "Freeze 1 small item for 1 second(s)."
+          ]
+        },
+        {
+          "type": "Turbo",
+          "tooltips": [
+            "Haste 1 item for 2 second(s)."
+          ]
+        },
+        {
+          "type": "Shielded",
+          "tooltips": [
+            "Shield equal to this item's Heal."
+          ]
+        },
+        {
+          "type": "Restorative",
+          "tooltips": [
+            "This has double Heal."
+          ]
+        },
+        {
+          "type": "Toxic",
+          "tooltips": [
+            "Poison equal to 10% of this item's Heal."
+          ]
+        },
+        {
+          "type": "Fiery",
+          "tooltips": [
+            "Burn equal to 10% of this item's Heal."
+          ]
+        },
+        {
+          "type": "Shiny",
+          "tooltips": [
+            "This has +1 Multicast."
+          ]
+        },
+        {
+          "type": "Deadly",
+          "tooltips": [
+            "+50% Crit Chance"
+          ]
+        },
+        {
+          "type": "Radiant",
+          "tooltips": [
+            "This cannot be Frozen, Slowed or Destroyed."
+          ]
+        },
+        {
+          "type": "Obsidian",
+          "tooltips": [
+            "Deal damage equal to this item's Heal."
+          ]
+        }
+      ],
+      "quests": [],
+      "unifiedTooltips": [
+        "Cooldown 6 seconds",
+        "Heal equal to (1/2/3) times your gold.",
+        "Cleanse half your Burn and Poison."
+      ],
+      "packId": "Pygmalien_Core",
       "combatEncounters": []
     },
     {
@@ -57854,21 +57973,21 @@
           "tooltips": [
             "Cooldown 9 seconds",
             "Charge adjacent items 1 second(s).",
-            "If you have 5 or more unique Types, this item's cooldown is reduced by 50%."
+            "If you have 5 or more unique Types, this item's cooldown is reduced by 4.5 Seconds."
           ]
         },
         "Gold": {
           "tooltips": [
             "Cooldown 9 seconds",
             "Charge adjacent items 2 second(s).",
-            "If you have 5 or more unique Types, this item's cooldown is reduced by 50%."
+            "If you have 5 or more unique Types, this item's cooldown is reduced by 4.5 Seconds."
           ]
         },
         "Diamond": {
           "tooltips": [
             "Cooldown 9 seconds",
             "Charge adjacent items 3 second(s).",
-            "If you have 5 or more unique Types, this item's cooldown is reduced by 50%."
+            "If you have 5 or more unique Types, this item's cooldown is reduced by 4.5 Seconds."
           ]
         },
         "Legendary": {
@@ -57957,7 +58076,7 @@
       "unifiedTooltips": [
         "Cooldown 9 seconds",
         "Charge adjacent items (1/2/3) second(s).",
-        "If you have 5 or more unique Types, this item's cooldown is reduced by 50%."
+        "If you have 5 or more unique Types, this item's cooldown is reduced by 4.5 Seconds."
       ],
       "packId": "Vanessa_Core",
       "combatEncounters": []
@@ -59303,7 +59422,7 @@
                 "Buy 5 Relics"
               ],
               "rewardTooltips": [
-                "When you use another Relic, charge this 1 second(s)."
+                "When you use an adjacent Relic, charge this 1 second(s)."
               ]
             }
           ]
@@ -63027,25 +63146,25 @@
         "Bronze": {
           "tooltips": [
             "The weapon to the left of this has +10 damage.",
-            "If you have exactly one weapon, reduce its cooldown by 10%."
+            "If you have exactly one weapon, reduce its cooldown by 5%."
           ]
         },
         "Silver": {
           "tooltips": [
             "The weapon to the left of this has +20 damage.",
-            "If you have exactly one weapon, reduce its cooldown by 15%."
+            "If you have exactly one weapon, reduce its cooldown by 10%."
           ]
         },
         "Gold": {
           "tooltips": [
             "The weapon to the left of this has +30 damage.",
-            "If you have exactly one weapon, reduce its cooldown by 20%."
+            "If you have exactly one weapon, reduce its cooldown by 15%."
           ]
         },
         "Diamond": {
           "tooltips": [
             "The weapon to the left of this has +50 damage.",
-            "If you have exactly one weapon, reduce its cooldown by 25%."
+            "If you have exactly one weapon, reduce its cooldown by 20%."
           ]
         },
         "Legendary": {
@@ -63127,7 +63246,7 @@
       "quests": [],
       "unifiedTooltips": [
         "The weapon to the left of this has (+10/+20/+30/+50) damage.",
-        "If you have exactly one weapon, reduce its cooldown by (10%/15%/20%/25%)."
+        "If you have exactly one weapon, reduce its cooldown by (5%/10%/15%/20%)."
       ],
       "packId": "Vanessa_Core",
       "combatEncounters": [
@@ -65290,7 +65409,8 @@
         "Relic"
       ],
       "hiddenTags": [
-        "Regen"
+        "Regen",
+        "Quest"
       ],
       "customTags": [],
       "size": "Small",
@@ -65373,7 +65493,7 @@
                 "Buy 8 Poison items"
               ],
               "rewardTooltips": [
-                "Poison ({abilityq1}/3/6/9)."
+                "Poison (3/6/9)."
               ]
             },
             {
@@ -65381,7 +65501,7 @@
                 "Buy 8 Burn items"
               ],
               "rewardTooltips": [
-                "Burn ({abilityq2}/3/6/9)."
+                "Burn (3/6/9)."
               ]
             }
           ]
@@ -65393,7 +65513,7 @@
                 "Buy 4 Slow items"
               ],
               "rewardTooltips": [
-                "Slow ({abilityq3targets}/1/2/3). items for ({abilityq3}/1/1/1). second(s)."
+                "Slow (1/2/3) items for 1 second(s)."
               ]
             },
             {
@@ -65401,7 +65521,7 @@
                 "Buy 4 Freeze items"
               ],
               "rewardTooltips": [
-                "Freeze ({abilityq4targets}/1/2/3). items for ({abilityq4}/0.5/0.5/0.5). second(s)."
+                "Freeze (1/2/3) items for 0.5 second(s)."
               ]
             }
           ]
@@ -65876,7 +65996,8 @@
         }
       },
       "tags": [
-        "Weapon"
+        "Weapon",
+        "Relic"
       ],
       "hiddenTags": [
         "Damage",
@@ -66876,7 +66997,7 @@
       "tiers": {
         "Bronze": {
           "tooltips": [
-            "Cooldown 10 seconds",
+            "Cooldown 7 seconds",
             "Lifesteal",
             "Deal 5 damage.",
             "Slow 1 item for 1 second(s)."
@@ -66884,26 +67005,26 @@
         },
         "Silver": {
           "tooltips": [
-            "Cooldown 10 seconds",
+            "Cooldown 7 seconds",
             "Lifesteal",
             "Deal 10 damage.",
-            "Slow 1 item for 2 second(s)."
+            "Slow 2 item for 1 second(s)."
           ]
         },
         "Gold": {
           "tooltips": [
-            "Cooldown 10 seconds",
+            "Cooldown 7 seconds",
             "Lifesteal",
             "Deal 20 damage.",
-            "Slow 1 item for 3 second(s)."
+            "Slow 3 item for 1 second(s)."
           ]
         },
         "Diamond": {
           "tooltips": [
-            "Cooldown 10 seconds",
+            "Cooldown 7 seconds",
             "Lifesteal",
             "Deal 40 damage.",
-            "Slow 1 item for 4 second(s)."
+            "Slow 4 item for 1 second(s)."
           ]
         },
         "Legendary": {
@@ -66992,10 +67113,10 @@
       ],
       "quests": [],
       "unifiedTooltips": [
-        "Cooldown 10 seconds",
+        "Cooldown 7 seconds",
         "Lifesteal",
         "Deal (5/10/20/40) damage.",
-        "Slow 1 item for (1/2/3/4) second(s)."
+        "Slow (1/2/3/4) item for 1 second(s)."
       ],
       "packId": "Core",
       "combatEncounters": [
@@ -67383,7 +67504,7 @@
             "Cooldown 6 seconds",
             "Deal 24 damage.",
             "Shield equal to this item's damage.",
-            "If you have another vehicle or large item, reduce this item's cooldown by 50%."
+            "If you have another vehicle or large item, reduce this item's cooldown by 3 seconds."
           ]
         },
         "Gold": {
@@ -67391,7 +67512,7 @@
             "Cooldown 6 seconds",
             "Deal 36 damage.",
             "Shield equal to this item's damage.",
-            "If you have another vehicle or large item, reduce this item's cooldown by 50%."
+            "If you have another vehicle or large item, reduce this item's cooldown by 3 seconds."
           ]
         },
         "Diamond": {
@@ -67399,7 +67520,7 @@
             "Cooldown 6 seconds",
             "Deal 48 damage.",
             "Shield equal to this item's damage.",
-            "If you have another vehicle or large item, reduce this item's cooldown by 50%."
+            "If you have another vehicle or large item, reduce this item's cooldown by 3 seconds."
           ]
         },
         "Legendary": {
@@ -67494,7 +67615,7 @@
         "Cooldown 6 seconds",
         "Deal (24/36/48) damage.",
         "Shield equal to this item's damage.",
-        "If you have another vehicle or large item, reduce this item's cooldown by 50%."
+        "If you have another vehicle or large item, reduce this item's cooldown by 3 seconds."
       ],
       "packId": "Vanessa_Mysteries_of_the_Deep",
       "combatEncounters": []
@@ -69256,7 +69377,7 @@
           "tooltips": [
             "Cooldown 6 seconds",
             "Haste adjacent items for 1 second(s).",
-            "If this is your only Tech item, its cooldown is reduced by 50%.",
+            "If this is your only Tech item, its cooldown is reduced by 3 seconds.",
             "At the start of each day, get a Relic from any hero."
           ]
         },
@@ -69264,7 +69385,7 @@
           "tooltips": [
             "Cooldown 6 seconds",
             "Haste adjacent items for 2 second(s).",
-            "If this is your only Tech item, its cooldown is reduced by 50%.",
+            "If this is your only Tech item, its cooldown is reduced by 3 seconds.",
             "At the start of each day, get a Relic from any hero."
           ]
         },
@@ -69272,7 +69393,7 @@
           "tooltips": [
             "Cooldown 6 seconds",
             "Haste adjacent items for 3 second(s).",
-            "If this is your only Tech item, its cooldown is reduced by 50%.",
+            "If this is your only Tech item, its cooldown is reduced by 3 seconds.",
             "At the start of each day, get a Relic from any hero."
           ]
         },
@@ -69370,7 +69491,7 @@
       "unifiedTooltips": [
         "Cooldown 6 seconds",
         "Haste adjacent items for (1/2/3) second(s).",
-        "If this is your only Tech item, its cooldown is reduced by 50%.",
+        "If this is your only Tech item, its cooldown is reduced by 3 seconds.",
         "At the start of each day, get a Relic from any hero."
       ],
       "packId": "Dooley_Primal_Dooley",
@@ -71211,7 +71332,8 @@
         "Property"
       ],
       "hiddenTags": [
-        "Regen"
+        "Regen",
+        "Quest"
       ],
       "customTags": [],
       "size": "Large",
@@ -71294,7 +71416,7 @@
                 "Complete 1 quest on another item"
               ],
               "rewardTooltips": [
-                "Poison ({abilityq1}/5/10/15)."
+                "Poison (5/10/15)."
               ]
             }
           ]
@@ -71306,7 +71428,7 @@
                 "Complete 2 quests on other items"
               ],
               "rewardTooltips": [
-                "Freeze ({abilityq2targets}/1/1/1). items for ({abilityq2}/0.5/0.5/0.5). second(s)."
+                "Freeze 1 items for 0.5 second(s)."
               ]
             }
           ]
@@ -76653,28 +76775,28 @@
           "tooltips": [
             "Cooldown 7 seconds",
             "Burn 8.",
-            "While you have Shield, this item's cooldown is reduced by 50%."
+            "While you have Shield, this item's cooldown is reduced by 2 seconds."
           ]
         },
         "Silver": {
           "tooltips": [
             "Cooldown 6 seconds",
             "Burn 8.",
-            "While you have Shield, this item's cooldown is reduced by 50%."
+            "While you have Shield, this item's cooldown is reduced by 2 seconds."
           ]
         },
         "Gold": {
           "tooltips": [
             "Cooldown 5 seconds",
             "Burn 8.",
-            "While you have Shield, this item's cooldown is reduced by 50%."
+            "While you have Shield, this item's cooldown is reduced by 2 seconds."
           ]
         },
         "Diamond": {
           "tooltips": [
             "Cooldown 4 seconds",
             "Burn 8.",
-            "While you have Shield, this item's cooldown is reduced by 50%."
+            "While you have Shield, this item's cooldown is reduced by 2 seconds."
           ]
         },
         "Legendary": {
@@ -76765,7 +76887,7 @@
       "unifiedTooltips": [
         "Cooldown (7/6/5/4) seconds",
         "Burn 8.",
-        "While you have Shield, this item's cooldown is reduced by 50%."
+        "While you have Shield, this item's cooldown is reduced by 2 seconds."
       ],
       "packId": "Dooley_Core",
       "combatEncounters": [
